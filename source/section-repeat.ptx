@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-repeat" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The <tag>repeat</tag> element</title>
+
+  <p>Some diagrams contain a number of components that are similar and
+  differ only in a few attributes.  For example, <xref
+  ref="diagram-diffeq-repeat"/> shows several solutions to a
+  differential equation with different initial values.
+  </p>
+
+  <figure xml:id="diagram-diffeq-repeat">
+    <sidebyside width="60%">
+      <image source="images/diffeqs"/>
+    </sidebyside>
+    <caption>Several solutions to a differential equation.</caption>
+  </figure>
+
+  <p>Of course, we could simply include a <tag>plot-de-solution</tag>
+  element for each one, but this could be difficult to maintain if we
+  decide to make some small change.  Instead, PreFigure offers a
+  <tag>repeat</tag> element that can streamline this process, as
+  illustrated by the PreFigure source code in <xref
+  ref="listing-diffeq-repeat"/>.
+  </p>
+
+  <listing xml:id="listing-diffeq-repeat">
+    <program line-numbers="yes">
+      <input><xi:include href="code/diffeqs.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-diffeq-repeat"/>.</caption>
+  </listing>
+
+  <p>Line 7 contains a <tag>repeat</tag> element with the attribute
+  <attr>parameter="k=-4..4"</attr>.  This places the parameter name
+  <c>k</c> into the user namespace with the value of -4 and adds the
+  <tag>plot-de-solution</tag> and <tag>point</tag> elements contained
+  within the <tag>repeat</tag> element.  This repeats with the values
+  <m>k=-4,-3,-2,\ldots,3,4</m>.
+  </p>
+
+  <p>The annotations included in <xref ref="listing-diffeq-repeat"/>
+  show how the handles within the <tag>repeat</tag> element are
+  generated.  If an element inside a <tat>repeat</tat> element has a
+  handle <attr>at="handle"</attr>, then the graphical component
+  generated when the parameter is, say, <c>param=value</c> is given
+  the handle <attr>at="handle-param=value"</attr>.  For example, when
+  <c>k=2</c>, the solution has the handle
+  <attr>at="solution-k=2"</attr>.  There is not yet a repeat feature
+  for annotations.
+  </p>
+
+  <p>A second example, given in <xref ref="diagram-unity"/>, shows how
+  labels can be managed within a 
+  <tag>repeat</tag> element.
+  </p>
+
+  <figure xml:id="diagram-unity">
+    <sidebyside width="60%">
+      <image source="images/roots_of_unity"/>
+    </sidebyside>
+    <caption>The <m>8^{th}</m> roots of unity.</caption>
+  </figure>
+
+  <listing xml:id="listing-unity">
+    <program line-numbers="yes">
+      <input><xi:include href="code/roots_of_unity.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-unity"/>.</caption>
+  </listing>
+
+  <p>Lines 5 through 7 define a set of labels, one for each of the
+  eight points.  Remember that ^ is usually interpreted as the
+  numerical exponentiation operator.  Since we wish to preserve this
+  character for the label, we include the attribute
+  <attr>substitution="no"</attr> to prevent ^ being reinterpreted.
+  Notice that the label is given as <c>${labels[k]}</c> since anything
+  inside <c>${...}</c> is evaluated in the user namespace.
+  </p>
+
+  <p>We can also nest <tag>repeat</tag> elements as illustrated in
+  <xref ref="diagram-nested-repeat"/> and PreFigure source <xref
+  ref="listing-nested-repeat"/>.
+  </p>
+
+  <figure xml:id="diagram-nested-repeat">
+    <sidebyside width="60%">
+      <image source="images/nested-repeat"/>
+    </sidebyside>
+    <caption>A <tag>repeat</tag> nested inside another.</caption>
+  </figure>
+
+  <listing xml:id="listing-nested-repeat">
+    <program line-numbers="yes">
+      <input><xi:include href="code/nested-repeat.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-nested-repeat"/>.</caption>
+  </listing>
+
+  <p>A typical handle for one of these rectangles is
+  <attr>at="rectangle-row=2-col=1"</attr>.
+  </p>
+
+
+</section>
+

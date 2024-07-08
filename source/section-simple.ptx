@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-simple" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Points, lines, and polygons</title>
+
+  <introduction>
+    <p>In this section, we will begin to introduce some simple graphical
+    components, such as points, lines, vectors, and polygons.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-points">
+    <title>Points</title>
+
+    <p><xref ref="diagram-points"/> shows a collection of points and
+    various attributes describing them.  The PreFigure source follows
+    in <xref ref="listing-points"/>.
+    </p>
+
+    <figure xml:id="diagram-points">
+      <sidebyside width="60%">
+	<image source="images/points"/>
+      </sidebyside>
+      <caption>A collection of points.</caption>
+    </figure>
+
+    <listing xml:id="listing-points">
+      <program>
+	<input><xi:include href="code/points.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-points"/>.</caption> 
+    </listing>
+
+    <p>In the usual way, a point will have stroke and fill
+    attributes.  There are additional attributes that specify its
+    appearance. 
+    <dl>
+      <li><title>p</title>
+      <p>The <attr>p</attr> gives the location at which the point will
+      be centered.
+      </p>
+      </li>
+
+      <li><title>style</title>
+      <p>This attribute controls the shape of the point.  There are
+      three options:  <attr>style="box", "diamond", "circle"</attr>
+      with "circle" being the default.
+      </p>
+      </li>
+
+      <li><title>size</title>
+      <p>This attribute specifies the size of the point in SVG units.
+      </p>
+      </li>
+    </dl>
+    </p>
+
+    <p>Notice that a label may be attached to a point by including the
+    label's text within the <tag>point</tag> element.  In this case,
+    attributes may be added to the point, such as
+    <attr>alignment</attr> and <attr>offset</attr>, to control the
+    positioning of the label.  Behind the scenes, the label and point
+    are placed within a <tag>group</tag> element, and the point's
+    handle transferred to the <tag>group</tag> for annotating.</p>
+
+  </subsection>
+
+  <subsection>
+    <title>Lines</title>
+
+    <p>A few lines are shown in <xref ref="diagram-lines"/> with the
+    PreFigure source presented in <xref ref="listing-lines"/>.
+    </p>
+
+    <figure xml:id="diagram-lines">
+      <sidebyside width="60%">
+	<image source="images/lines"/>
+      </sidebyside>
+      <caption>A collection of lines.</caption>
+    </figure>
+
+    <listing xml:id="listing-lines">
+      <program>
+	<input><xi:include href="code/lines.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-lines"/>.</caption> 
+    </listing>
+
+    <p>Any stroke attributes can be added to a line though fill
+    attributes do no apply.
+    <dl>
+      <li><title>endpoints</title>
+      <p>The endpoints of a line may be specified together using the
+      <attr>endpoints</attr> attribute or separately using
+      <attr>p1</attr> and <attr>p2</attr>.
+      </p>
+      </li>
+
+      <li><title>infinite</title>
+      <p>If <attr>infinite="yes"</attr>, then the line is drawn as if
+      it were infinite in extent.
+      </p>
+      </li>
+
+      <li><title>arrows</title>
+      <p>If <attr>arrows="1"</attr>, then an arrow is drawn at the
+      second endpoint.  If <attr>arrows="2"</attr>, then an arrow is
+      drawn at both endpoints.
+      </p>
+      </li>
+
+      <li><title>endpoint-offsets</title>
+      <p>Sometimes you may want the line to begin or end near, but not
+      exactly, at the given endpoints.  The bottom line in <xref
+      ref="diagram-lines"/> is an example in that the line is
+      connecting two labels placed at two endpoints.  We move the
+      endpoints slightly so that the line does not interfere with the
+      label.  In this case, the endpoint offsets are a pair of
+      vectors, each of which moves an endpoint by the given vector in
+      SVG units.
+      </p>
+      <p>Another line in the figure shows a second use of offsets.  In
+      this case, the offsets are a single pair of SVG units.  The
+      direction of the line is preserved but each endpoint is moved
+      along the line by the given offset.  This could be helpful when
+      drawing arrows since the arrow head will extend slightly beyond
+      the endpoint of the line.
+      </p>
+      </li>
+    </dl>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Vectors</title>
+
+    <p>In some sense, <tag>vector</tag>s are a redundant element since
+    we can always draw lines and attach arrows.  However, a goal of
+    PreFigure is to facilitate authors thinking mathematically about
+    the exposition so <tag>vector</tag> should be used when including
+    a vector in a diagram.  Vectors are also drawn with a default
+    thickness that differentiates them from lines drawn with their
+    default attributes.
+    </p>
+
+    <figure xml:id="diagram-vectors">
+      <sidebyside width="60%">
+	<image source="images/vectors"/>
+      </sidebyside>
+      <caption>A collection of vectors.</caption>
+    </figure>
+
+    <listing xml:id="listing-vectors">
+      <program>
+	<input><xi:include href="code/vectors.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-vectors"/>.</caption> 
+    </listing>
+
+    <p>In addition to stroke attributes, a vector supports the
+    following attributes. 
+      <dl>
+	<li><title>v</title>
+	<p>The attribute <attr>v</attr> is the 2-dimensional
+	mathematical vector.
+	</p>
+	</li>
+	<li><title>tail</title>
+	<p>The attribute <attr>tail</attr> represents the tail of the
+	vector.
+	</p>
+	</li>
+	<li><title>scale</title>
+	<p>The value of <attr>scale</attr> acts as scalar
+	multiplication on <attr>v</attr>.
+	</p>
+	</li>
+	<li><title>head-location</title>
+	<p>Usually, the head of a vector is placed at the tip of the
+	vector.  There may be occasions, however, when you want to
+	place the head somewhere else along the shaft.  Specifying
+	<attr>head-location="0.8"</attr> places the arrow head at a
+	location 80% of
+	the way from the tail to the tip.
+	</p>
+	</li>
+      </dl>
+    </p>
+
+  </subsection>
+    
+  <subsection>
+    <title>Polygons</title>
+
+    <p>Polygons are paths drawn by connecting a set of points by line
+    segments.  The effect is different from drawing a set of line
+    segments, however, since the ends of the line segments will be
+    joined to form a whole.  For example, the shape on the left of
+    <xref ref="diagram-polygon-v-line"/> is drawn with two
+    <tag>line</tag>s while that on the right is a <tag>polygon</tag>.
+    </p>
+
+    <figure xml:id="diagram-polygon-v-line">
+      <sidebyside width="60%">
+	<image source="images/polygon-v-line"/>
+      </sidebyside>
+      <caption>Two line segments on the left and a polygon on the
+      right.</caption>
+    </figure>
+
+    <p><tag>polygon</tag>s are quite versatile and should more
+    properly be thought of as a polygonal path having both stroke and
+    fill attributes.  <xref ref="diagram-polygon"/> demonstrates some
+    possibilities with the PreFigure soure given in <xref
+    ref="listing-polygon"/>.</p>
+
+    <figure xml:id="diagram-polygon">
+      <sidebyside width="60%">
+	<image source="images/polygon"/>
+      </sidebyside>
+      <caption>Some sample polygons.</caption>
+    </figure>
+
+    <listing xml:id="listing-polygon">
+      <program>
+	<input><xi:include href="code/polygon.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-polygon"/>.</caption>
+    </listing>
+
+    <p>A <tag>polygon</tag> requires a set of points given by the
+    <attr>points</attr> attributes.  While you may simply list the
+    points, PreFigure also allows you to provide a rule for generating
+    the list of points.
+    <dl>
+      <li><title>points</title>
+      <p>The value of the <attr>points</attr> attribute may be a list
+      of points or a single point containing a named parameter.
+      </p>
+      </li>
+      <li><title>parameter</title>
+      <p>The <attr>parameter</attr> attribute gives a range of values
+      for generating the list of points.  The format is
+      <attr>parameter="parameter_name=start..stop"</attr>.
+      </p>
+      </li>
+      <li><title>closed</title>
+      <p>By default, polygons are not closed, but
+      <attr>closed="yes"</attr> will close a polygon.
+      </p>
+      </li>
+      <li><title>arrows</title>
+      <p>To place arrows at the end of a polygonal path, use
+      <attr>arrows="1"</attr> to add an arrow at the end and
+      <attr>arrows="2"</attr> to also add an arrow at the
+      beginning. </p>
+      </li>
+      <li><title>corner-radius</title>
+      <p>A polygonal path can be smoothed out using the
+      <attr>corner-radius</attr> attribute.  The value of this
+      attribute should be a positive number of SVG units.
+      </p>
+      </li>
+    </dl>
+    </p>
+  </subsection>
+
+</section>
+

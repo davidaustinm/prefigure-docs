@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-circles" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Circles, ellipses, and rectangles</title>
+
+  <introduction>
+    <p>This section demonstrates some PreFigure elements that generate
+    circles, rectangles, and associated shapes.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-circles">
+    <title>Circles</title>
+
+    <p>Circles and ellipses are fairly simple.  In addition to
+    specifying the center and dimensions, there are only stroke and
+    fill attributes.  In contrast to polygons, these shapes are always
+    closed.
+    </p>
+
+    <figure xml:id="diagram-circle">
+      <sidebyside width="60%">
+	<image source="images/circle"/>
+      </sidebyside>
+      <caption>A circle and ellipse.</caption> 
+    </figure>
+
+    <listing xml:id="listing-circle">
+      <program>
+	<input><xi:include href="code/circle.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-circle"/>.</caption> 
+    </listing>
+
+    <p>If an ellipse has the attribute <attr>axes="(a,b)"</attr>, then
+    the ellipse is a translate of
+    <me>
+      \frac{x^2}{a^2} + \frac{y^2}{b^2}=1
+    </me>.  Notice that ellipse may be rotated with the
+    <attr>rotate</attr> attribute.
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>Arcs</title>
+
+    <p>An <tag>arc</tag> represents a section of a circle and has
+    stroke and fill attributes.  There are a number of different ways
+    to specify the arc, however, as seen in <xref
+    ref="diagram-arc"/>.</p> 
+
+    <figure xml:id="diagram-arc">
+      <sidebyside width="60%">
+	<image source="images/arc"/>
+      </sidebyside>
+      <caption>A collection of arcs.</caption> 
+    </figure>
+
+    <listing xml:id="listing-arc">
+      <program>
+	<input><xi:include href="code/arc.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-arc"/>.</caption> 
+    </listing>
+
+    <p>To define an arc, we need a center, a radius, and an angular
+    extent.  Every arc needs a <attr>radius</attr> attribute.
+    There are two ways to specify the center and angular extent:
+    <ul>
+      <li><p>Use the <attr>center</attr> and <attr>range</attr>
+      attributes. The <attr>degrees="no"</attr> means that the
+      value of <attr>range</attr> is expressed in radians.</p>
+      </li>
+      <li><p>If a list of three points are given in the
+      <attr>points</attr> attribute, then the center of the circle is
+      the second point in the list and the angular extent is defined
+      by vectors from the center to the other two points.</p></li>
+    </ul>
+    Other attributes include
+    <dl>
+      <li><title>arrows</title>
+      <p>The possible values are <attr>arrows="0", "1", "2"</attr>
+      depending on whether the arc has no arrows, one arrow at the
+      end of the angular extent, or two arrows on both ends.</p></li>
+      <li><title>sector</title>
+      <p>If <attr>sector="yes"</attr>, then the sector is filled with
+      the value of <attr>fill</attr>.
+      </p></li>
+    </dl>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Angle markers</title>
+
+    <p>Angle markers are used to indicate angles between two line
+    segments, such as two sides of a triangle.
+    </p>
+    
+    <figure xml:id="diagram-angle-marker">
+      <sidebyside width="60%">
+	<image source="images/angle-marker"/>
+      </sidebyside>
+      <caption>A collection of angle marers.</caption> 
+    </figure>
+
+    <listing xml:id="listing-angle-marker">
+      <program>
+	<input><xi:include href="code/angle-marker.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-angle-marker"/>.</caption> 
+    </listing>
+
+    <p>An Angle marker is defined by a list of three points that define
+    two line segments meeting at the center of the angle marker.  The
+    angle is defined in the counter-clockwise direction between the
+    two sides.
+    <dl>
+      <li><title>points</title>
+      <p>The value of <attr>points</attr> must be a list of three
+      points. </p></li>
+      <li><title>radius</title>
+      <p>The <attr>radius</attr> attribute defines the radius of the
+      circular arc in SVG units.  This is an optional attribute as
+      PreFigure will determine a radius if one is not given.  Smaller
+      angles will have a larger radius.
+      </p></li>
+      <li><title>arrow</title>
+      <p>An arrow can be added by declaring <attr>arrow="yes"</attr>.
+      </p></li>
+      <li><title>label</title>
+      <p>Notice that a label can be attached to an angle marker by
+      enclosing the text within the <tag>angle-marker</tag> element.
+      The positioning of the label will be determined by PreFigure,
+      but <attr>alignment</attr> and <attr>offset</attr> attributes
+      given to the <tag>angle-marker</tag> element will take
+      precedence.
+      </p></li>
+    </dl>
+    </p>
+
+    <p>Notice the use of the <c>roll</c> operator which rolls the
+    elements in a list:  <c>roll((a,b,c)) = (b,c,a)</c>.
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>Rectangles</title>
+
+    <p>A rectangle is defined by specifying either its center or
+    its lower-left corner as well as its dimensions.  The corners can
+    be rounded by setting the <attr>corner-radius</attr> attribute to
+    the desired radius in SVG units.
+    </p>
+
+    <figure xml:id="diagram-rectangle">
+      <sidebyside width="60%">
+	<image source="images/rectangle"/>
+      </sidebyside>
+      <caption>Two rectangles.</caption> 
+    </figure>
+
+    <listing xml:id="listing-rectangle">
+      <program>
+	<input><xi:include href="code/rectangle.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-rectangle"/>.</caption> 
+    </listing>
+
+  </subsection>
+
+
+</section>
+

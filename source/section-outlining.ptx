@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-outlining" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Outlining and <tag>group</tag>s</title>
+
+  <introduction>
+    <p>On occasion, you may want a graphical component, such as the
+    graph of a function or a point, to stand out from the background.
+    This can be accomplished using the <attr>outline</attr> attribute.
+    In fact, all components of a tactile diagram are automatically
+    outlined.
+    </p>
+    
+    <p>In some sense, this section is about another stroke
+    characteristic.  However, the ability to outline informs some
+    PreFigure design features that open up some new possibilities.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Outlining</title>
+
+    <p>To place an outline behind a component, set the attribute
+    <attr>outline="yes"</attr>.  In <xref ref="diagram-outline"/>,
+    both the graph and the point have been outlined, which produces
+    some white space around each element.
+    </p>
+
+    <figure xml:id="diagram-outline">
+      <sidebyside width="60%">
+	<image source="images/outline"/>
+      </sidebyside>
+      <caption>Outlining a graph and a point</caption>
+    </figure>
+
+    <listing xml:id="listing-outline">
+      <program>
+	<input><xi:include href="code/outline.xml"
+	parse="text"/></input>
+      </program>
+      <caption>
+	The PreFigure source for <xref ref="diagram-outline"/>.
+      </caption>
+    </listing>
+
+    <p>The outlines produced in tactile diagrams, which are added
+    regardless of the value of <attr>outline</attr>, are 
+    <m>1/8^{th}</m> of an inch, as demonstrated in <xref
+    ref="diagram-outline-tactile"/>.  
+    </p>
+
+    <figure xml:id="diagram-outline-tactile">
+      <sidebyside width="60%">
+	<image source="images/outline-tactile"/>
+      </sidebyside>
+      <caption>The tactile version of <xref ref="listing-outline"/>.</caption>
+    </figure>
+
+  </subsection>
+
+  <subsection>
+    <title>Groups</title>
+
+    <p> When a component is stroked or filled, the paint applied
+    covers up anything that has already been painted in the overlap.
+    For tactile diagrams especially, this can lead to some undesirable
+    behavior, as seen in <xref ref="diagram-outline-de"/>. Here we see
+    two solutions to a differential equation.  Notice how
+    the outline of one solution obscures the second and the fact
+    that these two solutions have the same asymptotic behavior.
+    </p>
+
+    <figure xml:id="diagram-outline-de">
+      <sidebyside width="60%">
+	<image source="images/outline-de"/>
+      </sidebyside>
+      <caption>Two solutions to a differential equation rendered
+      tactilely.</caption> 
+    </figure>
+
+    <p> PreFigure's <tag>group</tag> element provides an alternative.
+    More specifically, it allows us to group components together and
+    place all their outlines before placing the components themselves.
+    <xref 
+    ref="diagram-outline-group"/> shows a different version of the
+    previous diagram in which the two solutions have been included in
+    a <tag>group</tag> element.  
+    </p>
+
+    <figure xml:id="diagram-outline-group">
+      <sidebyside width="60%">
+	<image source="images/outline-group"/>
+      </sidebyside>
+      <caption>Employing a group to control outlining.</caption>
+    </figure>
+
+    <p><xref ref="listing-outline-group"/> gives the PreFigure source
+    for <xref ref="diagram-outline-group"/>.  Notce how the two
+    solution curves are placed in a <tag>group</tag>, which is given
+    the attribute <attr>outline="always"</attr>.  This has the effect
+    of drawing all the outlines in the group first and then drawing
+    all the components.  The value <c>always</c> causes this
+    behavior regardless of the output format.  Setting
+    <attr>outline="tactile"</attr> requests this behavior only for
+    tactile diagrams.
+    </p>
+
+    <listing xml:id="listing-outline-group">
+      <program>
+	<input><xi:include href="code/outline-group.xml"
+	parse="text"/></input>
+      </program>
+      <caption>
+	The PreFigure source for <xref ref="diagram-outline-group"/>.
+      </caption>
+    </listing>
+
+    <p>A second reason to group elements together is to facilitate
+    annotations.  A <tag>group</tag> element can be given a handle and
+    then annotated as in <xref ref="listing-group-handle"/>.  When the
+    focus goes to this node of the annotation tree, the screen reader
+    will zoom in on the region containing both the line and the
+    label.  
+    </p>
+    <listing xml:id="listing-group-handle">
+      <program>
+	<input><xi:include href="code/group-handle.xml" parse="text"/>
+	</input>
+      </program>
+    </listing>
+
+    <p>Groups provide a means of organizing the graphical components
+    in a diagram that reflects the structure of the diagram.  
+    Behind the scenes, for instance, a grid is a collection of
+    lines that are placed in a group since we wish to call attention
+    to the collection rather than each individual line.
+    </p>
+
+  </subsection>
+  
+</section>
+

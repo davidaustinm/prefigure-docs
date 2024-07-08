@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-diffeqs" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Differential equations</title>
+
+  <introduction>
+    <p>There are a few elements for creating diagrams containing
+    solutions to differential equations.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-slope-field">
+    <title>Slope Fields</title>
+    <p>
+      Slope fields for a 1-variable ordinary differential equation and
+      for autonomous <m>2\times2</m> systems can be drawn using the
+      <tag>slope-field</tag> element.  On the left of <xref
+      ref="diagram-slope-field"/> is shown a slope field for the equation
+      <me>\frac{dy}{dt}=t-y</me> while the right shows the slope field
+      for the autonomous system
+      <me>\frac{d}{dt}\twovec{y_0}{y_1} = \twovec{y_1}{-y_0}.
+      </me>
+    </p>
+
+     <figure xml:id="diagram-slope-field">
+      <sidebyside widths="45% 45%">
+	<image source="images/slope-field"/>
+	<image source="images/slope-field-2"/>
+      </sidebyside>
+      <caption>The slope fields for two differential equations.</caption>
+     </figure>
+
+     <p>The PreFigure source input for the left diagram in <xref
+     ref="diagram-slope-field"/> is given in <xref
+     ref="listing-slope-field"/>. </p>
+
+     <listing xml:id="listing-slope-field">
+       <program>
+	 <input><xi:include href="code/slope-field.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for the slope field of a
+       1-variable differential equation</caption> 
+     </listing>
+
+     <p>The grid on which the slope field is drawn can be changed
+     using the <attr>spacings</attr> attribute similar to that of the
+     <xref ref="subsec-grid" text="custom">grid element</xref>.
+     </p>
+
+     <p>To obtain the slope field for an autonomous system, include
+     the attribute <attr>system="yes"</attr> in the
+     <tag>slope-field</tag> element.  Notice that the function
+     defining the differential equation is naturally vector-valued now.
+     </p>
+     
+     <listing xml:id="listing-slope-field-2">
+       <program>
+	 <input><xi:include href="code/slope-field-2.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for the slope field of an
+       autonomous sytem.</caption>
+     </listing>
+
+  </subsection>
+  
+  <subsection xml:id="subsec-de-solutions">
+    <title>Solutions to differential equations</title>
+
+    <p>PreFigure provides an element <tag>de-solve</tag> that
+    generates and saves the solution of a differential equation.  You
+    could think of this as a definition that can be reused possibly
+    several times.
+    </p>
+
+    <p>Solutions are then plotted using the
+    <tag>plot-de-solution</tag> element.  <xref
+    ref="diagram-de-plot"/> demonstrates how to use these elements.
+    </p>
+    
+     <figure xml:id="diagram-de-plot">
+      <sidebyside width="60%">
+	<image source="images/de-plot"/>
+      </sidebyside>
+      <caption>Some solutions to a differential equation.</caption>
+     </figure>
+
+     <listing xml:id="listing-de-plot">
+       <program line-numbers="yes">
+	 <input><xi:include href="code/de-plot.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for <xref
+       ref="diagram-de-plot"/>.</caption> 
+     </listing>
+
+     <p><xref ref="listing-de-plot"/> shows two ways in which a
+     solution to the differential equation can be plotted.  In Line 5,
+     we solve the differential equation with initial value
+     <m>y(t_0)=y_0</m> over the interval <m>t_0\leq t\leq t_1</m>.
+     This interval is broken into <attr>N=100</attr> steps by default,
+     but this value can be modified using the <attr>N</attr>
+     attribute.  This solution is also given an attribute
+     <attr>name="linear"</attr>.
+     To plot the solution, we use a <tag>plot-de-solution</tag>
+     element in
+     Line 7 passing the name of the solution as an attribute.</p>
+
+     <p>Alernatively, these two elements can be combined into a single
+     <tag>plot-de-solution</tag> element, as shown in Line 8.  Most
+     likely, you will use this second method more frequently since it
+     involves a single element.
+     </p>
+
+     <p>There are more possibilities when solving a system.  <xref
+     ref="diagram-de-plot-2"/> shows a solution to a
+     <m>2\times2</m> autonomous system.</p>
+
+     <figure xml:id="diagram-de-plot-2">
+      <sidebyside width="60%">
+	<image source="images/de-plot-2"/>
+      </sidebyside>
+      <caption>Solutions <m>y_0(t)</m> and <m>y_1(t)</m> to a system
+      of differential equations.</caption>
+     </figure>
+
+     <listing xml:id="listing-de-plot-2">
+       <program line-numbers="yes">
+	 <input><xi:include href="code/de-plot-2.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for <xref
+       ref="diagram-de-plot-2"/>.</caption> 
+     </listing>
+
+     <p>
+       Notice how we generate a solution in Line 5 of <xref
+       ref="listing-de-plot-2"/> and save it with the
+       <attr>name="oscillator"</attr>.  Then we reuse this solution to
+       plot the components <m>y_0</m> and <m>y_1</m> as functions of
+       <m>t</m> in Line 6 and 7.  There are now three quantities
+       involved, <m>t</m>, <m>y_0</m>, and <m>y_1</m>, so we use the
+       <attr>axes</attr> attribute to state which of these quantities
+       will appear on the horizontal and vertical axis.  This notation
+       for the axes holds no matter what variables are used to define
+       the function <m>f</m> on the right side of the differential
+       equation.
+     </p>
+
+     <p> We can also create phase portraits as in <xref
+     ref="diagram-de-phase"/>.
+     </p>
+
+     <figure xml:id="diagram-de-phase">
+      <sidebyside width="60%">
+	<image source="images/de-phase"/>
+      </sidebyside>
+      <caption>A few trajectories in the phase plane of an autonomous
+      system. </caption>
+     </figure>
+
+     <listing xml:id="listing-de-phase">
+       <program line-numbers="yes">
+	 <input><xi:include href="code/de-phase.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for <xref
+       ref="diagram-de-phase"/>.</caption> 
+     </listing>
+
+    
+  </subsection>
+
+</section>
+

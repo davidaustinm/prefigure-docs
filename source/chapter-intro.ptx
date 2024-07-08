@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chap-introduction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction</title>
+
+  <introduction>
+    <p> PreFigure is an authoring system for creating mathematical
+    diagrams that is inspired by the
+    <url href="http://pretextbook.org/" visual="pretextbook.org"
+	 target="_blank">
+      <pretext/> authoring system 
+    </url>
+    for creating scholarly documents.  In particular, <pretext/> is
+    guided by a <url
+    href="https://pretextbook.org/doc/guide/html/philosophy.html#list-principles"
+    target="blank">set of principles</url> that similarly inform the
+    design of PreFigure.
+    </p>
+
+    <p> This introductory chapter explains some of PreFigure's
+    features and why an author might choose to use it.  Later chapters
+    provide more details for authors as well as discussion of best
+    practices for designing diagrams.
+    </p>
+
+  </introduction>
+
+  <section xml:id="sec-example">
+    <title> An example diagram </title>
+
+    <p> <xref ref="diagram-tangent"/> contains a diagram that could
+    appear in a calculus textook and that is
+    authored in PreFigure.
+    </p>
+
+    <figure xml:id="diagram-tangent">
+      <caption> A calculus diagram created with PreFigure</caption>
+      <sidebyside width="60%">
+	<image source="images/tangent"/>
+      </sidebyside>
+    </figure>
+
+    <p> Like <pretext/>, PreFigure is a markup language that is
+    designed to reflect the structure of mathematical diagrams.  
+    The PreFigure source for creating
+    this diagram is given in <xref ref="listing-tangent"/>.
+    </p>
+
+    <listing xml:id="listing-tangent">
+      <program>
+	<input><xi:include href="code/tangent.xml" parse="text"/>
+	</input>
+      </program>
+      <caption> The PreFigure source to produce
+      <xref ref="diagram-tangent"/>
+      </caption>
+    </listing>
+    
+    <p> PreFigure provides an XML vocabulary that allows an author to
+    describe the components of a mathematical diagram and how they
+    relate to one another in an intuitive way.  The <tag>diagram</tag>
+    element delimits all of the PreFigure input.
+    </p>
+
+    <p>
+    Notice that
+    the graphical components of the diagram in <xref
+    ref="diagram-tangent"/> include a grid, two 
+    axes, the graph of a function, the tangent line to the function at
+    some point, and the point itself.  The PreFigure source includes
+    an XML element for each of these components.
+    </p>
+
+    <p>
+    The <tag>coordinates</tag> element defines our window into the
+    <m>xy</m>-plane while the label is included inside the
+    <tag>point</tag> element to which it is attached and wrapped in an
+    <tag>m</tag> element so that it will be processed by MathJax.
+    </p>
+
+    <p> In addition, authors may define mathematical objects, such as
+    a real number <m>a</m> and a function <m>f(x)</m>, which are to be
+    used in the construction of subsequent graphical components.
+    </p>
+
+    <p> Following the <pretext/> paradigm, PreFigure makes stylistic
+    decisions about the appearance of graphical components so that
+    authors can focus on the structure of their diagram.  
+    Authors can, however, override these decisions to modify
+    the visual appearance of a diagram.  Authors may also provide a
+    publisher file setting their own defaults so that, for instance,
+    all the diagrams in a textbook have a common visual style (yet to
+    be implemented).
+    </p>
+
+    <p> PreFigure XML source is processed by a Python package to
+    create output images in the SVG format.  As a result, diagrams
+    will scale to an appropriate size when included in a document
+    without sacrifiing quality or visual information.
+    </p>
+
+  </section>
+
+  <section xml:id="sec-accessibility">
+    <title> Accessibility </title>
+
+    <p>
+      PreFigure prioritizes the creation of accessible mathematical
+      diagrams.  In particular, authors can easily include annotations
+      that control how a reader can navigate a diagram using a screen
+      reader.
+    </p>
+
+    <figure xml:id="diagram-tangent-annotate">
+      <sidebyside width="60%">
+	<image source="images/tangent-annotate"/>
+      </sidebyside>
+      <caption> An annotated version of <xref ref="diagram-tangent"/>
+      </caption>
+    </figure>
+
+    <p> (To be implemented) A reader may explore <xref
+    ref="diagram-tangent-annotate"/> using a screen reader by first
+    sending the focus to the diagram by either clicking in the diagram
+    or pressing the tab key sufficiently many times.  The arrow keys
+    are then used to explore the diagram in more detail.  For
+    instance, the Down and Up arrow keys produce more or less detail
+    while the Left and Right arrow keys focus on components at the
+    same level.  The annotations are read using the <c>diagcess</c>
+    library created by
+    <url
+	href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/sorge-volker"
+	target="blank"> Volker Sorge</url>.
+    </p>
+      
+    <p> The modifications to the PreFigure source needed to produce
+    the annotations are shown in <xref
+    ref="listing-tangent-annotate"/>.
+    </p>
+
+    <listing xml:id="listing-tangent-annotate">
+      <program>
+	<input><xi:include href="code/tangent-annotate.xml" parse="text"/>
+	</input>
+	<caption> The PreFigure source for the annotated diagram
+	</caption>
+      </program>
+    </listing>
+
+    <p> Notice that important graphical components are given an
+    <attr>at</attr> attribute, which serves as a handle to be used by the
+    annotations.  The <tag>annotations</tag> element contains a tree
+    of <tag>annotations</tag> whose structure specifies how the screen
+    reader will respond to arrow presses.  An <tag>annotation</tag>
+    element contains a reference to the handle of a graphical
+    component, which specifies how the components are highlighted.
+    </p>
+
+    <p>
+      Furthermore, as seen in <xref
+      ref="diagram-tangent-tactile"/> authors can create, from the
+      same XML source, tactile versions of diagrams, including braille
+      labels, suitable for embossing and including in a braille
+      document.
+    </p>
+
+    <figure xml:id="diagram-tangent-tactile">
+      <sidebyside width="80%">
+	<image source="images/tangent-tactile"/>
+      </sidebyside>
+      <caption> A tactile version produced from the XML source in
+      <xref ref="listing-tangent"/>.
+      </caption>
+    </figure>
+
+    <p> Indeed, the difficulty in creating tactile diagrams that
+    emboss well was one of the original motivations of the PreFigure
+    project.
+    </p>
+      
+  </section>
+
+  <section xml:id="sec-gallery">
+    <title> A gallery of diagrams </title>
+
+    <p> We include a sampling of diagrams created with PreFigure to
+    give a sense of the possibilities.
+    </p>
+
+    <figure>
+      <sbsgroup>
+	<sidebyside widths="45% 45%">
+	  <image source="images/derivatives"/>
+	  <image source="images/implicit"/>
+	</sidebyside>
+	<sidebyside widths="45% 45%">
+	  <image source="images/diffeqs"/>
+	  <image source="images/projection"/>
+	</sidebyside>
+	<sidebyside widths="45% 45%">
+	  <image source="images/roots_of_unity"/>
+	  <image source="images/network"/>
+	</sidebyside>
+	<sidebyside width="60%">
+	  <image source="images/riemann"/>
+	</sidebyside>
+      </sbsgroup>
+    </figure>
+
+  </section>
+
+  <section xml:id="sec-installation">
+    <title> Installation and use </title>
+
+    <p> PreFigure, which is written in the Python programming
+    language, may be installed by visiting the
+    <url href="https://github.com/davidaustinm/prefigure"
+	 target="_blank">
+      GitHub repository 
+      </url> and following the installation instructions given there. 
+    </p>
+
+    <p> Once again, PreFigure can be called from the command line.  If
+    <c>foo.xml</c> contains a PreFigure XML diagram description, then
+    </p>
+
+    <console>
+      <input>
+	python parse.py foo.xml
+      </input>
+    </console>
+
+    <p>
+    will create the output files <c>output/foo.svg</c> and
+    <c>output/foo.xml</c>, where the second is an XML file
+    used by a screen reader to navigate the diagram with the arrow
+    keys.  To create a tactile version of the diagram, use
+    </p>
+
+    <console>
+      <input>
+	python parse.py -f tactile foo.xml
+      </input>
+    </console>
+  </section>
+
+</chapter>

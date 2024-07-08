@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chap-start" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Getting Started</title>
+
+  <introduction>
+    <p> This chapter will describe a few features that will help you
+    get started authoring diagrams with PreFigure.  In the next
+    chapter, we'll introduce graphical components that can be added
+    into a diagram.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-diagram">
+    <title>The <tag>diagram</tag>element</title>
+
+    <p> Every PreFigure XML description is contained within a
+    <tag>diagram</tag> element.  The required <attr>dimensions</attr>
+    attribute determines the dimensions of the drawing surface in SVG
+    coordinates. For instance, <attr>dimensions="(300, 200)"</attr>
+    sets up a drawing surface that is 300 units wide and 200 units
+    high.
+    </p>
+
+    <p> Authors may additionally use a <attr>margins</attr> attribute
+    to add some space around the drawing surface into which some
+    components of the diagram, perhaps a label, may spill.  By
+    default, margins are set to 0.  However, <attr>margins="5"</attr>
+    adds a margin of 5 units around all four sides of the drawing
+    surface.  Specifying <attr>margins="(20, 5, 10, 15)"</attr> adds
+    20 units to the left, 5 to the bottom, 10 to the right, and 15 to
+    the top.
+    </p>
+
+    <p> Of course, SVG images scale well so we could, in principle,
+    create diagrams of whatever size we wish and assume they will be
+    scaled appropriately when placed in a surrounding document.
+    However, when an SVG image is scaled, all the dimensions in the
+    image, such as the thickness of lines and the size of labels,
+    are scaled as well.  It is therefore a good practice to set the
+    dimensions to something roughly similar to what you hope to see in
+    your document.  Declaring that <attr>dimensions="(300, 300)"</attr>
+    produces an image whose labels closely match the size of
+    surrounding text when included in a <pretext/> document.
+    </p>
+
+    <p> Similarly, setting the margins to some positive value means
+    that lines drawn on the boundary of the drawing surface are not
+    unintentionally clipped.  The diagram shown in <xref
+    ref="diagram-margins"/> was constructed with
+    <attr>margins="0"</attr>.  Some of the grid lines appear on the
+    boundary of the drawing surface and we only see the half of those
+    lines that are in the drawing surface.  This effect is apparent
+    even in lines that are relatively thin.
+    </p>
+
+    <figure xml:id="diagram-margins">
+      <sidebyside width="60%">
+	<image source="images/margins"/>
+      </sidebyside>
+      <caption>A grid drawn without margins</caption>
+    </figure>
+
+  </section>
+
+  <section xml:id="sec-coordinates">
+    <title>The <tag>coordinates</tag> element</title>
+
+    <p> Once the dimensions of the diagram are established in the
+    opening <tag>diagram</tag> element, there is a default coordinate
+    system provided.  For instance, if we begin with <tag>diagram
+    dimensions="(300, 200)" margins="10"</tag>, we obtain a coordinate
+    system as shown in <xref ref="diagram-coordinates"/>.  
+    </p>
+
+    <figure xml:id="diagram-coordinates">
+      <sidebyside width="60%">
+	<image source="images/coordinates"/>
+      </sidebyside>
+      <caption> The default coordinate system </caption>
+    </figure>
+
+    <p> Some authors may know that SVG's internal coordinate system
+    places the origin in the 
+    upper-left corner of the image and the positive <m>y</m>-axis
+    points down.  PreFigure, however, encourages authors to think
+    mathematically so that all graphical components are described in
+    terms of a mathematical coordinate system, such as that shown in
+    <xref ref="diagram-coordinates"/>.  PreFigure will handle
+    the necessary coordinate transforms between mathematical
+    coordinates and SVG's internal coordinate system.
+    </p>
+
+    <p> It is possible to describe diagrams using the default
+    coordinate system seen in <xref ref="diagram-coordinates"/>.
+    More likely, however, an author intends us to view a
+    specific region in the Cartesian plane.  The
+    <tag>coordinates</tag> element allows us to set a mathematical
+    bounding box that lies over the drawing surface.  For instance,
+    <tag>coordinates bbox="(-3,-2,9,6)"</tag> results in the
+    coordinate system shown in <xref ref="diagram-coordinates-2"/>.
+    Any elements placed under this <tag>coordinates</tag> element will
+    be drawn in this coordinate system.
+    </p>
+
+    <figure xml:id="diagram-coordinates-2">
+      <sidebyside width="60%">
+	<image source="images/coordinates-2"/>
+      </sidebyside>
+      <caption> A mathematical coordinate system defined using a
+      <tag> coordinates</tag> element </caption>
+    </figure>
+
+    <p> This use of <tag>coordinates</tag> is possibly all you will
+    ever use.  However, a <tag>coordinates</tag> element can be given
+    a <attr>destination</attr> attribute that describes a region
+    inside the current bounding box where the new bounding box should
+    reside.  For example, the PreFigure source in <xref
+    ref="listing-sidebyside"/> produces two rectangles placed side by
+    side as seen in <xref ref="diagram-sidebyside"/>
+    </p>
+
+    <listing xml:id="listing-sidebyside">
+      <program>
+	<input><xi:include href="code/sidebyside.xml"
+	parse="text"/>
+	</input>
+      </program>
+      <caption> The PreFigure source for <xref
+      ref="diagram-sidebyside"/>
+      </caption>
+    </listing>
+
+    <figure xml:id="diagram-sidebyside">
+      <sidebyside width="60%">
+	<image source="images/sidebyside"/>
+      </sidebyside>
+      <caption> The use of two coordinate systems </caption>
+    </figure>
+
+    <p> There are some appropriate applications of this construction,
+    such as diagrams that describe functions from the plane to the
+    plane as you might see in linear algebra or complex analysis.
+    However, this use of <tag>coordinates</tag> is generally
+    discouraged.  If you intend to place two, possibly related
+    diagrams side by side in a <pretext/> document, you should create
+    two separate diagrams and place them next to each other using a
+    <tag>sidebyside</tag>.  This is particularly important for the
+    production of braille documents from <pretext/> source.
+    </p>
+
+    <p> A second, possibly more legitimate, use of
+    <tag>coordinates</tag> elements is to nest one inside another.
+    For instance, we may wish to zoom in on a region in the diagram,
+    as shown in <xref ref="diagram-zoom"/>
+    </p>
+	      
+    <figure xml:id="diagram-zoom">
+      <sidebyside width="60%">
+	<image source="images/zoom"/>
+      </sidebyside>
+      <caption> Using coordinate systems to zoom </caption>
+    </figure>
+
+    <p> The PreFigure source is given in <xref ref="listing-zoom"/>.
+    The background coordinate system is established by the
+    <tag>coordinate</tag> element in Line 5.  Then we include a few
+    graphical components, such as the graph, tangent line, and point,
+    drawn in that coordinate system.  Then a second, nested
+    <tag>coordinate</tag> element appears in Line 12 and we draw the
+    graph, tangent line, and point again in the new coordinate system.
+    </p>
+    
+    <listing xml:id="listing-zoom">
+      <program line-numbers="yes">
+	<input><xi:include href="code/zoom.xml"
+	parse="text"/>
+	</input>
+      </program>
+      <caption> The PreFigure source for <xref
+      ref="diagram-zoom"/>
+      </caption>
+    </listing>
+
+  </section>
+  
+  <section xml:id="sec-definition">
+    <title>The <tag>definition</tag> element and user namespace</title>
+
+    <p> Most diagrams will contain some graphical components that are
+    related to one another.  For instance, our example diagram in
+    <xref ref="diagram-tangent"/> contains the tangent line to a graph
+    at a point <m>a</m> and the point <m>(a,f(a))</m>.
+    </p>
+
+    <figure xml:id="diagram-tangent-2">
+      <sidebyside width="60%">
+	<image source="images/tangent"/>
+      </sidebyside>
+      <caption> The example from <xref ref="sec-example"/></caption>
+    </figure>
+
+    <p> To help coordinate these relationships, PreFigure provides
+    authors with a namespace in which to store important pieces of
+    data (this is not to be confused with an XML namespace).  The
+    PreText source is again given in <xref 
+    ref="listing-tangent-2"/>.  
+    </p>
+
+    <listing xml:id="listing-tangent-2">
+      <program line-numbers="yes">
+	<input><xi:include href="code/tangent.xml" parse="text"/>
+	</input>
+      </program>
+      <caption> The PreFigure source </caption>
+    </listing>
+
+    <p>Notice that Line 2 includes an element
+    that defines a quantity <m>a=1</m>.  This has the effect of
+    assigning the value <m>1</m> to the symbol <c>a</c> and provides
+    the capability to refer to this symbol again in later elements.
+    For example, Lines 7 and 8 introduce the tangent line and the
+    point in terms of <c>a</c>.  </p>
+
+    <p>Furthermore, Line 3 includes the definition of the function
+    <m>f(x)</m> that is reused in constructing both the graph and the
+    tangent line.
+    </p>
+
+    <p> Behind the scenes, everything to the right of the equals sign
+    in a <tag>definition</tag> is interpreted as an expression from a
+    small subset of the Python programming language with the exception
+    that a ^ is interpreted as exponentation.  Expressions are
+    validated to make sure they do not introduce malicious code.
+    </p>
+
+    <p> The left side of the equals sign is interpreted as a
+    symbol that refers to the result of evaluating the expression on
+    the right side of the equals sign.</p>
+
+    <p> Lists and tuples are interpreted as <c>numpy</c> arrays, which
+    enables authors to perform vector operations. Matrix
+    multiplication is represented by <c>@</c>.  <xref
+    ref="diagram-linear-comb"/> demonstrates with a linear combination
+    of two vectors.
+    </p>
+
+    <figure xml:id="diagram-linear-comb">
+      <sidebyside width="60%">
+	<image source="images/linear-comb"/>
+      </sidebyside>
+      <caption>A linear combination of vectors</caption>
+    </figure>
+
+    <p>The PreFigure source is shown in <xref
+    ref="listing-linear-comb"/>.  Notice how the vectors <m>{\mathbf
+    v}</m> and <m>{\mathbf w}</m> are defined and then combined in
+    Line 4 to form the vector <c>comb</c>.
+    </p>
+
+    <listing xml:id="listing-linear-comb">
+      <program line-numbers="yes">
+	<input><xi:include href="code/linear-comb.xml" parse="text"/>
+	</input>
+      </program>
+      <caption> The PreFigure source for <xref
+      ref="diagram-linear-comb"/>
+      </caption>
+    </listing>
+
+    <p>Another type of definition is given by the
+    <tag>derivative</tag> tag as demonstrated by the following diagram
+    and its PreFigure source.
+    </p>
+
+    <figure xml:id="diagram-derivative">
+      <sidebyside width="60%">
+	<image source="images/derivative"/>
+      </sidebyside>
+      <caption>A function and its derivative</caption>
+    </figure>
+
+    <listing xml:id="listing-derivative">
+      <program>
+	<input><xi:include href="code/derivative.xml" parse="text"/>
+	</input>
+      </program>
+      <caption> The PreFigure source for <xref
+      ref="diagram-derivative"/>
+      </caption>
+    </listing>
+
+  </section>
+  
+
+</chapter>

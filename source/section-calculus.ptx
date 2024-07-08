@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-calculus" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Calculus components</title>
+
+  <introduction>
+    <p>There is a collection of graphical components to facilitate
+    diagrams that could appear in a calculus or precalculus course.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-graph">
+    <title>Graphs and tangent lines</title>
+
+    <p>To include the graph of a function, the function first needs to
+    be defined inside a <tag>definition</tag>.  By default, the domain
+    of the function is assumed to be the horizontal extend of the
+    current bounding box.  The <attr>domain</attr> attribute can
+    modify this, however.
+    </p>
+    
+    <figure xml:id="diagram-graph">
+      <sidebyside width="60%">
+	<image source="images/graph"/>
+      </sidebyside>
+      <caption>The graphs of two functions.</caption>
+    </figure>
+
+    <listing xml:id="listing-graph">
+      <program>
+	<input><xi:include href="code/graph.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-graph"/>.</caption> 
+    </listing>
+
+    <p>By default, a graph is drawn by connecting <attr>N="100"</attr>
+    short line segments.  You may sometimes need to increase
+    <attr>N</attr> if the graph varies a lot.
+    </p>
+
+    <p>Tangent lines are similar except a <attr>point</attr> attribute
+    should be included to define the point at which the tangent line
+    will appear.  As with functions, the tangent line will be drawn
+    across the length of the bounding box unless modified using the
+    <attr>domain</attr> attribute.
+    </p>
+
+    <figure xml:id="diagram-tangent-line">
+      <sidebyside width="60%">
+	<image source="images/tangent-line"/>
+      </sidebyside>
+      <caption>A graph with tangent lines.</caption>
+    </figure>
+
+    <listing xml:id="listing-tangent-line">
+      <program>
+	<input><xi:include href="code/tangent-line.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-tangent-line"/>.</caption> 
+    </listing>
+
+  </subsection>
+
+  <subsection>
+    <title>Parametric curves</title>
+
+    <p>The <tag>parametric-curve</tag> tag includes the plot of a
+    function defined parametrically.
+    </p>
+
+    <figure xml:id="diagram-parametric">
+      <sidebyside width="60%">
+	<image source="images/parametric"/>
+      </sidebyside>
+      <caption>Two parametric curves.</caption>
+    </figure>
+
+    <listing xml:id="listing-parametric">
+      <program>
+	<input><xi:include href="code/parametric.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-parametric"/>.</caption> 
+    </listing>
+
+    <p>Notice that a parametric curves needs a <attr>domain</attr>
+    attribute and may be closed with <attr>closed="yes"</attr>.
+    Some curves may require a larger value of <attr>N</attr> for a
+    smoother appearence.
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>Implicit curves</title>
+
+    <p>The solutions to an equation <m>f(x,y)=k</m> can be plotted
+    with the <tag>implicit-curve</tag> tag.
+    </p>
+
+    <figure xml:id="diagram-implicit-curve">
+      <sidebyside width="60%">
+	<image source="images/implicit-curve"/>
+      </sidebyside>
+      <caption>Two implicit curves defined by
+      <m>f(x,y)=y^2-x^3+x=k.</m>
+      </caption>
+    </figure>
+
+    <listing xml:id="listing-implicit-curve">
+      <program>
+	<input><xi:include href="code/implicit-curve.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-implicit-curve"/>.</caption> 
+    </listing>
+
+    <p>Two required attributes are <attr>function</attr> and
+    <attr>k</attr>.  The algorithm relies on breaking the current
+    bounding box into smaller rectangles and looking for solutions to
+    <m>f(x,y)=k</m> recursively.  For some complicated functions, 
+    the algorithm may miss a component of the curve.  In this case,
+    set the attribute <attr>initial-depth</attr> to a value higher
+    than its default of 4.  If two components are incorrectly joined,
+    increase the depth to which the algorithm may recurse by raising
+    <attr>depth</attr> beyond its default of 8. 
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>Areas</title>
+
+    <p>The area under a curve and between curves are drawn with
+    <tag>area-under-curve</tag> and <tag>area-between-curves</tag>.
+    </p>
+
+    <figure xml:id="diagram-area">
+      <sidebyside widths="45% 45%">
+	<image source="images/area-under"/>
+	<image source="images/area-between"/>
+      </sidebyside>
+      <caption>The area under a curve and between two curves</caption>
+    </figure>
+	
+    <listing xml:id="listing-area">
+      <program>
+	<input><xi:include href="code/area-under.xml" parse="text"/></input>
+      </program>
+      <program>
+	<input><xi:include href="code/area-between.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the diagrams in<xref
+      ref="diagram-area"/>.</caption> 
+    </listing>
+
+    <p>As with the other graphs we have seen in this section, the value
+    of <attr>N</attr> can be increased to produce smoother graphs, in
+    some cases.  </p>
+  </subsection>
+
+  <subsection>
+    <title>Riemann sums</title>
+
+    <p>Finally, there is a <tag>riemann-sum</tag> element.
+    </p>
+
+    <figure xml:id="diagram-riemann-sum">
+      <sidebyside width="60%">
+	<image source="images/riemann-sum"/>
+      </sidebyside>
+      <caption>A Riemann sum</caption>
+    </figure>
+	
+    <listing xml:id="listing-riemann-sum">
+      <program>
+	<input><xi:include href="code/riemann-sum.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the diagrams in<xref
+      ref="diagram-riemann-sum"/>.</caption> 
+    </listing>
+
+    <p>The possible values for <attr>rule</attr> are
+    <attr>rule="left", "right", "mid"</attr>.
+    </p>
+    
+  </subsection>
+
+</section>
+

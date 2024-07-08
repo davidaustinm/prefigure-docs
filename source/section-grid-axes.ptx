@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-grid-axes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Grid and Axes</title>
+
+  <introduction>
+    <p> We'll begin our discussion of graphical elements by looking at
+    grids and axes, which will typically be in the background of a
+    diagram.  Since these are commonly used elements, there are many
+    features that can be customized by an author.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-grid-axes">
+    <title><tag>grid-axes</tag></title>
+
+    <p>The simplest way to include a grid and axes in a diagram is
+    with the <tag>grid-axes</tag> element, which is demonstrated in
+    <xref ref="diagram-grid-axes"/>.
+    </p>
+
+    <figure xml:id="diagram-grid-axes">
+      <sidebyside width="60%">
+	<image source="images/grid-axes"/>
+      </sidebyside>
+      <caption>The use of a <tag>grid-axes</tag> element.</caption>
+    </figure>
+
+    <listing>
+      <program>
+	<input><xi:include href="code/grid-axes.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-grid-axes"/>.</caption> 
+    </listing>
+
+    <p>Notice that PreFigure makes choices about the spacing of the
+    grid lines and the locations at which labels are added to the
+    axes.  All of these features can be modified as will be described
+    in the next two subsections, <xref ref="subsec-grid"/> and <xref
+    ref="subsec-axes"/>.  
+    </p>
+
+    <p>The <attr>xlabel</attr> and <attr>ylabel</attr> tags are
+    optional but provide a simple way to label the axes.  We will have
+    a lot more to say about labels later, but these particular labels
+    will be processed by MathJax as if they were contained in an
+    <attr>m</attr> element.
+    </p>
+
+    <p>We will also discuss annotations in more depth later, but it is
+    worth mentioning now that a <tag>grid-axes</tag> element will
+    automatically annotate itself as the first component in the
+    annotation tree.
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="subsec-grid">
+    <title>Grids</title>
+
+    <p>The <tag>grid</tag> element provides a grid without adding
+    axes.  Without any attributes, this element will choose horizontal
+    and vertical spacings and draw the grid lines
+    <attr>stroke="lightgray"</attr> and <attr>thickness="1"</attr>.
+    The stroke attributes can be modified as can the spacings using the
+    <attr>spacings</attr> attribute.  The value of the
+    <attr>spacings</attr> consists of two lists, one for each of the
+    horizontal  and vertical grid lines,
+    with each list having the form <c>(start, space, end)</c>.
+    <xref ref="diagram-grid"/>
+    provides an example.
+    </p>
+
+    <figure xml:id="diagram-grid">
+      <sidebyside width="60%">
+	<image source="images/grid"/>
+      </sidebyside>
+      <caption>The attributes of a <tag>grid</tag> element.</caption>
+    </figure>
+
+    <listing>
+      <program>
+	<input><xi:include href="code/grid.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-grid"/>.</caption> 
+    </listing>
+
+    <p>Including a <attr>basis</attr> attribute will produce a grid
+    drawn in the given basis, as shown in
+    <xref ref="diagram-grid-basis"/>.
+    </p>
+
+    <figure xml:id="diagram-grid-basis">
+      <sidebyside width="60%">
+	<image source="images/grid-basis"/>
+      </sidebyside>
+      <caption>The result of <attr>basis="((2,1),(1,2))"</attr>.</caption>
+    </figure>
+
+    <p>When included in a <tag>grid-axes</tag> element, these
+    attributes will be inherited by the resulting grid.
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="subsec-axes">
+    <title>Axes</title>
+
+    <p>Axes are a bit more involved since there is a wider range of
+    properties they possess.  For instance, an <tag>axes</tag> tag
+    with no attributes will produce axes similar to those seen in <xref
+    ref="diagram-axes"/>.  In addition to the axes, we see that there
+    are tick marks and labels as well.  The positions of the tick
+    marks and labels are automatically generated.
+    </p>
+
+    <figure xml:id="diagram-axes">
+      <sidebyside width="60%">
+	<image source="images/axes"/>
+      </sidebyside>
+      <caption>An <tag>axes</tag> element without
+      attributes.</caption> 
+    </figure>
+
+    <p> There are attributes that may be used to change this
+    default behavior.
+    <dl>
+      <li><title>decorations</title>
+
+      <p> Setting <attr>decorations="no"</attr> suppresses the
+      automatic inclusion of tick marks and labels and produces
+      unadorned axes.  Regardless of the value of this attribute,
+      features may be customized and added to the axes
+      by including some of the following attributes.
+      </p>
+      </li>
+
+      <li><title>xlabel and ylabel</title>
+
+      <p>As we have seen <attr>xlabel="t"</attr> and
+      <attr>ylabel="f(t)"</attr> will place labels on the horizontal
+      and vertical axes.  These labels will be automatically wrapped
+      in <tag>m</tag> elements and processed as <latex/> by MathJax.
+      </p>
+      </li>
+
+      <li><title>hticks and vticks</title>
+
+      <p>These attributes specify the position of tick marks on the
+      axes.  For instance, <attr>hticks="(-2,2,4)"</attr> will place
+      tick marks on the horizontal axis beginning at -2 and ending at
+      4 with a spacing of two units.
+      </p>
+      </li>
+
+      <li><title>hlabels and vlabels</title>
+
+      <p>These attributes are similar to <attr>hticks</attr> and
+      <attr>vticks</attr> except they specify the position of labels
+      on the axes.  
+      </p>
+      </li>
+
+      <li><title>arrows</title>
+
+      <p>Arrows may be placed on ends of the axes by setting the
+      <attr>arrows</attr> attribute.  If <attr>arrows="1"</attr>, then
+      arrows will be included in the direction of increasing
+      coordinates.  <attr>arrows="2"</attr> includes arrows at each
+      end of the axes.
+      </p>
+      </li>
+
+    </dl>
+    </p>
+    
+    <p><xref ref="diagram-axes-example"/> illustrates the use of some
+    of these attributes.
+    </p>
+    
+    <figure xml:id="diagram-axes-example">
+      <sidebyside width="60%">
+	<image source="images/axes-example"/>
+      </sidebyside>
+      <caption>The effect of some attributes of an <tag>axes</tag>
+      element.</caption> 
+    </figure>
+
+    <listing>
+      <program>
+	<input><xi:include href="code/axes-example.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-axes-example"/>.</caption> 
+    </listing>
+
+    <p>As with grids, these attributes may be included in a
+    <tag>grid-axes</tag> element and inherited by the resulting axes.
+    </p>
+
+  </subsection>
+
+</section>
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-labels" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Labels</title>
+
+  <p>The <tag>label</tag> element provides a way of adding text to a
+  diagram.  Labels are composed of plain text, mathematics, or a
+  combination of both.  Mathematics is written in
+  <latex/> and enclosed in an <tag>m</tag> element.  <xref
+  ref="diagram-label-example"/> demonstrates some possibilities with
+  the PreFigure source given in <xref ref="listing-label-example"/>.
+  </p>
+
+  <figure xml:id="diagram-label-example">
+    <sidebyside width="60%">
+      <image source="images/label-example"/>
+    </sidebyside>
+    <caption>Some sample labels.</caption>
+  </figure>
+
+  <listing xml:id="listing-label-example">
+    <program>
+      <input><xi:include href="code/label-example.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-label-example"/>.</caption>
+  </listing>
+
+  <p> Here are some important attributes that determine the placement
+  of labels.
+  <dl>
+    <li><title>anchor</title>
+
+    <p>The label is placed relative to an <attr>anchor</attr> point
+    with the default being <attr>anchor="(0,0)"</attr>.
+    </p>
+    </li>
+
+    <li><title>alignment</title>
+    <p> The <attr>alignment</attr> attribute specifies how the label
+    is positioned relative to the anchor point.  <xref
+    ref="diagram-alignments"/> demonstrates the nine possibilities.
+    Each alignment has a 1- or 2-character abbreviation so, for
+    example, <attr>alignment="se"</attr> is equivalent to
+    <attr>alignment="southeast"</attr>.
+    </p>
+
+    <figure xml:id="diagram-alignments">
+      <sidebyside width="100%">
+	<image source="images/labels"/>
+      </sidebyside>
+      <caption>Aligning text to an anchor point.</caption>
+    </figure>
+    </li>
+
+    <li><title>offset</title>
+
+    <p>PreFigure inclues some padding between the anchor and the
+    label, but you will sometimes find that you need to fine tune the
+    position of a label using the <attr>offset</attr> label.  Stating
+    <attr>offset="(2,-3)"</attr> will move the label two SVG units to
+    the right and three units down from the position determined by the
+    anchor and the alignment.
+    </p>
+    </li>
+
+    <li><title>clear-background</title>
+
+    <p>Setting <attr>clear-background="yes"</attr> causes a white
+    rectangle to be filled behind the label so that it stands out from
+    the background, as seen in <xref ref="diagram-clear-background"/>.
+    </p>
+
+    <figure xml:id="diagram-clear-background">
+      <sidebyside width="100%">
+	<image source="images/label-clear-background"/>
+      </sidebyside>
+      <caption>Setting <attr>clear-background="yes"</attr></caption>
+    </figure>
+    </li>
+
+    <li><title>scale, rotate</title>
+
+    <p>As illustrated in <xref ref="diagram-label-example"/>, labels
+    can be scaled and rotated.
+    </p>
+    </li>
+  </dl>
+  </p>
+
+  <p> We remind authors of one exception in that the <attr>xlabel</attr>
+  and <attr>ylabel</attr> attributes of an <tag>axes</tag> element are
+  interpreted as <latex/> expressions and automatically wrapped in an
+  <tag>m</tag> element.
+  </p>
+
+  <p>Authors should think carefully about the use of labels in their
+  diagrams.  In particular, it can be tempting to include lots of
+  labels, possibly even long, complicated labels, in a diagram.
+  However, diagrams should always be carefully integrated into a
+  larger document, which means that the surrounding exposition and
+  caption should help readers interpret the meaning of a diagram.
+  Labels should mainly refer to graphical components and serve as a
+  connection to the surrounding text.  This is especially important
+  for the production of tactile diagrams, in which labels that appear
+  relatively short in print can become quite long when parsed into
+  Nemeth braille.  So even though Cauchy's formula is indeed
+  beautiful, you should never include it in a diagram.
+  </p>
+
+
+</section>
+
