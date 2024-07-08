@@ -1,3 +1,3 @@
-# My Great Book
+# Documentation for PreFigure
 
-Visit <https://pretextbook.org/documentation.html> to learn more.
+This repository contains a PreText project documenting PreFigure.
