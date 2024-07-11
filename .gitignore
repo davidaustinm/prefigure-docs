@@ -6,7 +6,7 @@
 
 # don't track unpublished builds or stage
 output
-
+.github
 # don't track assets generated from source
 generated-assets
 
