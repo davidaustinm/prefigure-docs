@@ -66,4 +66,6 @@
     </g>
     <circle id="circle-2" cx="185.0" cy="245.0" r="10" stroke="black" stroke-width="2" fill="red" type="point"/>
   </g>
+  <path id="circle-3" d="M 59.4 250.6L 70.6 239.4M 70.6 250.6L 59.4 239.4" stroke="black" stroke-width="3" fill="red" type="point"/>
+  <path id="circle-4" d="M 239.4 65.0L 250.6 65.0M 245.0 70.6L 245.0 59.4" stroke="black" stroke-width="3" fill="red" type="point"/>
 </svg>

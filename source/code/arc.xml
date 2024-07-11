@@ -2,7 +2,7 @@
   <coordinates bbox="(-5,-5,5,5)">
     <grid/>
     <arc center="(-2,2)" radius="2" range="(270,45)" arrows="1"
-	 stroke="orange" thickness="5"/>
+	 stroke="orange" thickness="5" reverse="yes"/>
     <definition>points=((4,-2),(1,-2),(3,2))</definition>
     <arc points="points" radius="2"
 	 sector="yes" fill="lightgray"/>

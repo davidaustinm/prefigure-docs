@@ -87,6 +87,9 @@
       <p>The possible values are <attr>arrows="0", "1", "2"</attr>
       depending on whether the arc has no arrows, one arrow at the
       end of the angular extent, or two arrows on both ends.</p></li>
+      <li><title>reverse</title>
+      <p>Setting <attr>reverse="yes"</attr> changes the direction of
+      the arc, but is only relevant when adding arrows.</p></li>
       <li><title>sector</title>
       <p>If <attr>sector="yes"</attr>, then the sector is filled with
       the value of <attr>fill</attr>.
@@ -135,6 +138,9 @@
       <li><title>arrow</title>
       <p>An arrow can be added by declaring <attr>arrow="yes"</attr>.
       </p></li>
+      <li><title>reverse</title>
+      <p>Setting <attr>reverse="yes"</attr> changes the direction of
+      the angle marker when attaching an arrow.</p></li>
       <li><title>label</title>
       <p>Notice that a label can be attached to an angle marker by
       enclosing the text within the <tag>angle-marker</tag> element.

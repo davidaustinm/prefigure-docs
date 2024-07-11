@@ -5,5 +5,7 @@
     <point p="(2.5, 2.5)" size="15" style="diamond"
 	   fill="blue" stroke="none"/>
     <point p="(3,1)" size="10"> <m>(a,(f(a))</m> </point>
+    <point p="(1,1)" style="cross" thickness="3"/>
+    <point p="(4,4)" style="plus" thickness="3"/>
   </coordinates>
 </diagram>

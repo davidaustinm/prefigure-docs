@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreFigure</title>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+
+  <body style="display:flex; background:#eee">
+
+    <!-- main div for content -->
+    <div class="main">
+      <!-- div for top matter -->
+      <div class="container" style="padding-top:20px;
+				    padding-bottom:20px;
+				    border-bottom:2px solid">
+
+	<div class="logo">
+	  <img src="logo.svg" width="80%"
+	       alt="PreFigure logo" />
+	</div>
+	<div class="title">
+	  <div class="prefigure">
+	    <h1 style="font-weight:bold; margin-top:0; margin-bottom:0">
+	      PreFigure
+	    </h1>
+	  </div>
+	  <div class="description">
+	    <h3 style="font-weight:normal;margin-top:0; margin-bottom:0">
+	      An authoring system for accessible mathematical diagrams
+	    </h3>
+	  </div>
+	</div>
+      </div>
+
+      <div class="section" id="diagrams" style="padding-top:20px">
+	<p>PreFigure is a system for creating mathematical diagrams to
+	  include in scholarly documents, such as research
+	  articles, textbooks, and other instructional materials.  
+	  PreFigure is to figures what 
+	  <a href="http://pretextbook.org"
+	     target="_blank"> PreTeXt</a> is to text.
+	</p>
+
+	<p>
+	  <ul>
+	    <li>
+	      <a href="docs/index.html">Documentation</a>
+	    </li>
+	    <li>
+	      <a href="https://github.com/davidaustinm/prefigure">
+		Installation
+	      </a>
+	    </li>
+	  </ul>
+	</p>
+
+	<p>
+	  Among its features, PreFigure:
+	  <ul style="margin-bottom:0">
+	    <li style="padding-bottom:10px">provides an intuitive
+	      language for describing diagrams so that authors focus
+	      on the meaning of their diagrams rather than the details
+	      of their construction and visual appearance,
+	    </li>
+	    <li style="padding-bottom:10px">encourages the use of
+	      established design principles for effective
+	      communication,</li>
+	    <li style="padding-bottom:10px">facilitates the creation
+	      of accessible diagrams that may be easily navigated with
+	      a screen reader or rendered in a tactile format, and
+	    </li>
+	    <li style="margin-bottom:10px">will always be free to use
+	      and open-source.
+	    </li>
+	  </ul>
+	</p>
+
+	<p style="margin-bottom:10px">
+	  To illustrate, here is the type of diagram that could appear
+	  in a calculus textbook.  On the left is a typical image for
+	  including either on a web page or in print.  Annotations can
+	  easily be added to enable a screen reader to navigate
+	  through the diagram.  On the right is a tactile version of
+	  the diagram that could be embossed and included in a braille
+	  edition of the same document.
+	</p>
+
+	<div class="images">
+	  <div style="max-width:50%;flex-basis:50%">
+	    <img src="tangent.svg"
+		 style="max-width:100%;margin:auto;display:block"/>
+	  </div>
+	  <div style="max-width:50%;flex-basis:50%">
+	    <img src="tangent-tactile.svg" 
+		 style="max-width:100%;margin:auto;display:block"/>
+	  </div>
+	</div>
+
+	<p>Both images are created from the same PreFigure source.
+	  Notice how this source reflects the mathematial
+	  structure of the diagram rather than the visual appearance.
+	</p>
+
+	<div style="margin:left">
+	  <pre style="font-size:16px">
+&lt;diagram dimensions="(300,300)" margins="5">
+  &lt;definition> f(x) = exp(x/3)*cos(x) &lt;/definition>
+  &lt;definition> a = 1 &lt;/definition>
+  &lt;coordinates bbox="(-4,-4,4,4)">
+    &lt;grid-axes xlabel="x" ylabel="y"/>    
+    &lt;graph function="f"/>
+    &lt;tangent-line function="f" point="a"/>
+    &lt;point p="(a,f(a))">
+      &lt;m>(a,f(a))&lt;/m>
+    &lt;/point>
+  &lt;/coordinates>
+&lt/diagram>
+	  </pre>
+	</div>
+
+	<div style="border-top:2px solid; padding-bottom:20px">
+	  <h2>Acknowledgments</h2>
+
+	  <p>
+	    PreFigure began at a workshop at the
+	    <a href="https://nfb.org/">National Federation
+	      of the Blind</a> in July 2022 and has been partially
+	    supported by the
+	    <a href="https://utmost.aimath.org/">UTMOST project</a>.
+	    Among others, thanks are particularly due to
+	    <ul>
+	      <li style="padding-bottom:10px">
+		<a href="http://buzzard.ups.edu/"> Rob Beezer</a>, the
+		founder and lead developer of PreTeXt,
+	      </li>
+	      <li style="padding-bottom:10px">
+		<a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/sorge-volker">Volker
+		  Sorge</a>
+	      </li>
+	      <li style="padding-bottom:0px">
+		<a href="https://www.towson.edu/fcsm/departments/mathematics/facultystaff/akolesnikov.html">Alexei
+		  Kolenikov</a>
+	      </li>
+	    </ul>
+	</div>
+
+	<div style="border-top:2px solid; padding-bottom:20px">
+	  <h2>Additional resources</h2>
+
+	  <p>
+	    <ul>
+	      <li style="padding-bottom:10px">
+		<a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html">
+		  Authoring Web-accessible Mathematical Diagrams</a>, with
+		Volker Sorge.
+	      </li>
+	      <li>
+		<a href="http://raisedmathematics.org/"> Raised
+		mathematics</a>, Research and dissemination for
+		accessible STEM materials
+	      </li>
+	    </ul>
+	  </p>
+	</div>
+
+	<div style="border-top:2px solid; padding-bottom:20px">
+	  <h2>Contact</h2>
+
+	  <p>
+	    <a href="https://davidaustinm.github.io"> David
+	      Austin</a>,
+	    austind at gvsu dot edu
+	  </p>
+	</div>
+
+      </div>
+	
+    </div> <!-- main div-->
+  </body>
+</html>
+

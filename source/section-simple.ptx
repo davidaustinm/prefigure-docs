@@ -44,7 +44,8 @@
 
       <li><title>style</title>
       <p>This attribute controls the shape of the point.  There are
-      three options:  <attr>style="box", "diamond", "circle"</attr>
+      five options:  <attr>style="box", "diamond", "circle", "cross",
+      "plus"</attr>  
       with "circle" being the default.
       </p>
       </li>
@@ -110,7 +111,9 @@
       drawn at both endpoints.
       </p>
       </li>
-
+      <li><title>reverse</title>
+      <p>Setting <attr>reverse="yes"</attr>
+      changes the direction of the line when adding arrows.</p></li>
       <li><title>endpoint-offsets</title>
       <p>Sometimes you may want the line to begin or end near, but not
       exactly, at the given endpoints.  The bottom line in <xref
@@ -259,6 +262,9 @@
       <attr>arrows="2"</attr> to also add an arrow at the
       beginning. </p>
       </li>
+      <li><title>reverse</title>
+      <p>Setting <attr>reverse="yes"</attr> changes the direction of
+      the polygonal path when attaching arrows. </p></li>
       <li><title>corner-radius</title>
       <p>A polygonal path can be smoothed out using the
       <attr>corner-radius</attr> attribute.  The value of this
