@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreFigure</title>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+
+  <body style="display:flex; background:#cccccc">
+
+    <!-- main div for content -->
+    <div style="max-width:900px; background:white; margin:auto; flex:0 1 100%">
+      <!-- div for top matter -->
+      <div class="container">
+
+	<!-- left div for contact -->
+	<div class="about">
+	  <h2 style="font-weight:bold">
+	    PreFigure
+	  </h2>
+	  <h3>
+	    austind at gvsu dot edu
+	  </h3>
+	  
+	</div>
+	<!-- image div -->
+	<div class="photo">
+	  <img src="david-austin.jpg" width="250"
+	       alt="David Austin" />
+	</div>
+      </div>
+
+      <div style="padding-top:5px; padding-bottom:20px">
+	<ul class="navigation">
+	  <li><a href="#textbooks">Open textbooks</a></li>
+	  <li><a href="#diagrams"> Accessible diagrams</a></li>
+	  <li><a href="#indigenous">Indigenous mathematicians</a></li>
+	  <li><a href="#pic">PIC Math</a></li>
+	  <li><a href="#feature">Feature Column</a></li>
+	</ul>
+      </div>
+
+      <div class="section" id="textbooks">
+	<h3 style="font-weight:bold">
+	  Open textbooks
+	</h3>
+
+	<p>
+	  I am invested in making sure that high-quality educational
+	  resources are accessible to all students.  Here are a few
+	  things that I'm involved in.
+	</p>
+
+	<div style="padding-left:20px; padding-right:20px">
+	  <p>
+	    I am the author of 
+	    <a href="http://gvsu.edu/s/0Ck" target=_blank>
+	      Understanding Linear Algebra,
+	    </a>
+	    an open-access linear algebra textbook written in
+	    <a href="https://pretextbook.org/" target=blank>
+	      PreTeXt
+	    </a>
+	    and endorsed by the
+	    <a href="https://aimath.org/textbooks/" target=_blank>
+	      Open Textbook Initiative.
+	    </a>
+	  </p>
+	</div>
+	
+	<div style="padding-left:20px; padding-right:20px">
+	  <p>
+	    You should also check out
+	    <a href="https://activecalculus.org/" target=_blank>
+	      Active Calculus,
+	    </a>
+	    the amazing open-access calculus text from
+	    <a href="https://faculty.gvsu.edu/boelkinm/Home/MB.html"
+	       target=_blank> Matt Boelkins
+	    </a>
+	  </p>
+	</div>
+
+	<div style="padding-left:20px; padding-right:20px">
+	  <p>
+	    I currently serve as the Director of the
+	    <a href="https://aimath.org/textbooks/" target=_blank>
+	      Open Textbook Initiative,
+	    </a>
+	    sponsored by the
+	    <a href="https://aimath.org/" target=_blank>
+	      American Institute of Mathematics,
+	    </a>
+	    with a mission to promote the use of open-access
+	    mathematics textbooks.
+	  </p>
+	</div>
+
+	<div style="padding-left:20px; padding-right:20px; padding-bottom:5px">
+	  <p>
+	    <a href="https://www.tandfonline.com/doi/epdf/10.1080/00029890.2023.2180981"
+	       target=_blank>
+	      The Mathematical Community Working to Create Better (And
+	      Free!) Textbooks,
+	    </a>
+	    a paper I recently wrote for the
+	    <a href="https://www.tandfonline.com/journals/uamm20" target=_blank>
+	      American Mathematical Monthly.
+	    </a>
+	  </p>
+	</div>
+      </div>
+      
+      <div class="section" id="diagrams">
+	<h3 style="font-weight:bold">
+	  Accessible mathematical diagrams
+	</h3>
+
+	<p>
+	  I am currently developing software to enable authors to
+	  easily create accessible mathematical diagrams.
+	</p>
+
+	<div style="padding-left:20px; padding-right:20px">
+	  <p>
+	    <a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html" target=_blank>
+	      Authoring Web-accessible Mathematical Diagrams,
+	    </a>
+	    a paper co-authored with
+	    <a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/sorge-volker.aspx" target=_blank>
+	      Volker Sorge.
+	    </a>
+	    This paper was awarded the prize for Best Communication
+	    Paper at the
+	    <a href="https://www.w4a.info/2023/" target=_blank>
+	      Web4All 2023 Conference,
+	    </a> sponsored by the Association of Computing Machinery.
+	  </p>
+	</div>
+	
+	<div style="padding-left:20px; padding-right:20px">
+	  <p>
+	    <a href="https://drive.google.com/file/d/1sG82-paBqN9mRz2Y5ibKTzH7cpdkw8E4/view?usp=drive_link"
+	       target=_blank>
+	      Authoring Web-accessible Mathematical Diagrams,
+	    </a>
+	    our video submission to the Accessibility Challenge at the
+	    Web4All 2023 conference.  
+	  <p>
+	</div>
+
+	<div style="padding-left:20px; padding-right:20px">
+	  <p>
+	    Current work is focused on creating tactile mathematical
+	    diagrams for visually-impaired readers.  In addition to
+	    developing general tools for tactile mathematical
+	    illustration, I have created tactile diagrams to accompany
+	    a braille version of Matt Boelkins'
+	    <a href="https://activecalculus.org/apc/" target=_blank>
+	      Active Prelude to Calculus
+	    </a>
+	    and am now illustrating <
+	    <a href="https://activecalculus.org/single/" target=_blank>
+	      Active Calculus.
+	    </a>
+	  </p>
+	</div>
+
+	<div style="padding-left:20px; padding-right:20px">
+	  <p>
+	    A recent post on Matt's
+	    <a href="https://activecalculus.org/2023/09/01/math-with-all-the-feels/"
+	       target=_blank>
+	      Active Calculus blog
+	    </a>
+	    gives some details.  
+	  </p>
+	</div>
+
+      </div>
+      
+      <div class="section" id="indigenous">
+	<h3 style="font-weight:bold">
+	  Indigenous Mathematicians
+	</h3>
+	
+	<p>
+	  I belong to the
+	  <a href="https://www.choctawnation.com/" target=_blank>
+	    Choctaw Nation of Oklahoma
+	  </a>
+	  and encourage you to explore these
+	  <a href="http://www.indigenousmathematicians.org/profiles"
+	     target=_blank>  
+	    Profiles of Indigenous Mathematicians.
+	  </a>
+	</p>
+
+	<p>
+	  As an
+	  Indigenous mathematician, I am working to build connections and
+	  provide mathematical opportunities for Indigenous
+	  students that respect Indigenous culture.
+	  I am currently serving as a co-chair of the Broadening
+	  Participation Advisory Committee at
+	  <a href="https://www.msri.org/" target="blank">
+	    SLMath.
+	  </a>
+	</p>
+      </div>
+
+      <div class="section" id="pic">
+	<h3 style="font-weight:bold">
+	  PIC Math and GVSU's applied math capstone
+	</h3>
+
+	<p>
+	  As an outgrowth of the
+	  <a href="https://www.maa.org/programs-and-communities/professional-development/pic-math" target=_blank>
+	    MAA's PIC Math program,
+	  </a>
+	  I helped developed MTH 498, the math department's applied
+	  math capstone course.  We have developed a number of
+	  wonderful partnerships with local businesses, governments, and
+	  non-profits.  One partnership has been with the
+	  <a href="https://www.grandrapidsmi.gov/Home" target=_blank>
+	    City of Grand Rapids, Michigan
+	  </a>
+	  making use of their open data portal
+	  <a href="https://grdata-grandrapids.opendata.arcgis.com/"
+	     target=_blank>
+	    GRData.
+	  </a>
+	</p>
+	
+	<p>
+	  Here are some student projects I have supervised:
+	  
+	  <ul>
+	    <li>
+	      <a href="https://data.grandrapidsmi.gov/stories/s/dvrm-uht8"
+		 target=_blank>
+		Understanding Impacts of Development on the Cost
+		of Living,
+	      </a>
+	      an exploration of Area Median Income (AMI),
+	      housing affordability, and the role of development
+	      in the displacement of People of Color in some Grand
+	      Rapids' neighborhoods.
+	    </li>
+	    <li>
+	      <a href="LeadRemediationProjectReport.pdf" target=_blank>
+		  Grand Rapids Lead Abatement,
+	      </a>
+	      recommendations to the City for making effective use
+	      of a $4.2M grant to provide assistance to homeowners
+	      for lead abatement in West Side
+	      neighborhoods.
+	    </li>
+	    <li>
+	      Grand Rapids 311 Call Center,
+	      an analysis of calls to the Grand Rapid Customer
+	      Service Department aiming to improve equity in
+	      access to City services.  Ongoing.
+	    </li>
+	    <li>
+	      Parking Revenue in Downtown Grand Rapids,
+	      an analysis of the impact that COVID-19 has had on
+	      parking revenue and projections for future revenue.
+	      Ongoing.
+	    </li>
+	  </ul>
+	</p>
+      </div>
+
+      <div class="section" id="feature">
+	<h3 style="font-weight:bold">
+	  AMS Feature Column
+	</h3>
+
+	<p>
+	  The American
+	  Mathematical Society's
+	  <a href="https://www.ams.org/featurecolumn" target=_blank>
+	    Feature Column
+	  </a>
+	  is a monthly column written for a general audience and
+	  published by the AMS Public Awareness Office.
+	  I wrote on a variety of topics for
+	  <a href="ams-fc.html">
+	    the Feature Column
+	  </a>
+	  from 2005 to 2022.
+	</p>
+
+	
+    </div> <!-- main div-->
+  </body>
+</html>
+
