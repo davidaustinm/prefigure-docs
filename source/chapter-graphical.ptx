@@ -309,6 +309,7 @@
   <xi:include href="section-calculus.ptx"/>
   <xi:include href="section-diffeqs.ptx"/>
   <xi:include href="section-repeat.ptx"/>
+  <xi:include href="section-publication.ptx"/>
 
 <!--
   

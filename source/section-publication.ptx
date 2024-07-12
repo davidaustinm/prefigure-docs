@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-publication" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The publication file</title>
+
+  <introduction>
+    <p>
+    </p>
+  </introduction>
+
+  <p>When illustrating a large project such as a book, you will likely want
+  to create diagrams that have a consistent style.  PreFigure constructs
+  some components with default values for the attributes.  For
+  instance, a <tag>graph</tag> is stroked blue by default and a
+  <tag>point</tag> is filled red.  You may, however, wish to
+  change these default behaviors with a publication file, as shown in
+  <xref ref="listing-pub-file"/>
+  </p>
+
+  <listing xml:id="listing-pub-file">
+    <program>
+      <input><xi:include href="code/pub_file.ptx"
+      parse="text"/></input>
+    </program>
+    <caption>A sample publication file</caption>
+  </listing>
+
+  <p>The publication file begins with a <tag>prefigure</tag> element
+  whose children describe desired default behaviors for a few
+  graphical components.  For instance,
+  this publication file asks that a <tag>graph</tag> be stroked
+  green and that a <tag>point</tag> has a few default attributes.
+  Notice that the publication file also includes a list of <latex/>
+  macros, given in the <tag>macros</tag> element, that can be used in
+  labels.</p> 
+
+  <p>To illustrate, <xref ref="diagram-publication"/> contains a
+  diagram created using this publication file with <xref
+  ref="listing-publication"/> showing the PreFigure source.</p>
+
+  <figure xml:id="diagram-publication">
+    <sidebyside width="60%">
+      <image source="images/pub_test"/>
+    </sidebyside>
+    <caption>A diagram created using the publication file in <xref
+    ref="listing-pub-file"/></caption>
+  </figure>
+
+  <listing xml:id="listing-publication">
+    <program>
+      <input><xi:include href="code/pub_test.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-publication"/>. </caption>
+  </listing>
+
+  <p>Because the publication file sets the <attr>stroke</attr>
+  attribute of <tag>graph</tag> to be green, the graph of the function
+  is stroked green by default.  The <tag>point</tag>s on the graph are
+  also created using the attributes given in the publication file.
+  Notice that any attributes given in one of these tags, such as the
+  <tag>point</tag> that is filled red, take precedence over the values
+  in the publication file.  This example also demonstrates the use of
+  <latex/> macros in the labels.</p>
+
+  <p>To apply the publication file <c>pub_file.xml</c> to a diagram,
+  use the <c>-p</c> switch when compiling:
+  <cd>
+python parse.py -p pub_file.xml foo.xml    
+  </cd>
+  </p>
+
+</section>
+
