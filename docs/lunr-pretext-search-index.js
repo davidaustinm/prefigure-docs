@@ -982,6 +982,42 @@ var ptx_lunr_docs = [
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
+  "id": "sec-publication",
+  "level": "1",
+  "url": "sec-publication.html",
+  "type": "Section",
+  "number": "3.10",
+  "title": "The publication file",
+  "body": " The publication file      When illustrating a large project such as a book, you will likely want to create diagrams that have a consistent style. PreFigure constructs some components with default values for the attributes. For instance, a <graph> is stroked blue by default and a <point> is filled red. You may, however, wish to change these default behaviors with a publication file, as shown in     <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file   The publication file begins with a <prefigure> element whose children describe desired default behaviors for a few graphical components. For instance, this publication file asks that a <graph> be stroked green and that a <point> has a few default attributes. Notice that the publication file also includes a list of latex macros, given in the <macros> element, that can be used in labels.  To illustrate, contains a diagram created using this publication file with showing the PreFigure source.      A diagram created using the publication file in     <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Because the publication file sets the stroke attribute of <graph> to be green, the graph of the function is stroked green by default. The <point> s on the graph are also created using the attributes given in the publication file. Notice that any attributes given in one of these tags, such as the <point> that is filled red, take precedence over the values in the publication file. This example also demonstrates the use of latex macros in the labels.  To apply the publication file pub_file.xml to a diagram, use the -p switch when compiling: python parse.py -p pub_file.xml foo.xml   "
+},
+{
+  "id": "listing-pub-file",
+  "level": "2",
+  "url": "sec-publication.html#listing-pub-file",
+  "type": "Listing",
+  "number": "3.10.1",
+  "title": "",
+  "body": "  <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file  "
+},
+{
+  "id": "diagram-publication",
+  "level": "2",
+  "url": "sec-publication.html#diagram-publication",
+  "type": "Figure",
+  "number": "3.10.2",
+  "title": "",
+  "body": "    A diagram created using the publication file in  "
+},
+{
+  "id": "listing-publication",
+  "level": "2",
+  "url": "sec-publication.html#listing-publication",
+  "type": "Listing",
+  "number": "3.10.3",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",

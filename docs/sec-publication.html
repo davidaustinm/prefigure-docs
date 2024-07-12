@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Colophon</title>
+<title>The publication file</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -109,7 +109,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-repeat.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap-graphical.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
@@ -142,9 +142,9 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-definition.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;definition&gt;</code> element and user namespace</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chap-graphical.html" class="internal"><span class="codenumber">3</span> <span class="title">Graphical components</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-graphical-attr.html" class="internal"><span class="codenumber">3.1</span> <span class="title">General attributes</span></a></div>
 <ul class="structural toc-item-list">
@@ -206,17 +206,52 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">3.9</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">3.10</span> <span class="title">The publication file</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">3.10</span> <span class="title">The publication file</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter contains-active"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="colophon" id="backmatter-2"><h2 class="heading hide-type">
-<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-publication"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.10</span><span class="space"> </span><span class="title">The publication file</span>
 </h2>
-<div class="para" id="backmatter-2-1">This work was authored in PreTeXt.</div></section></div>
+<section class="introduction" id="sec-publication-2"><div class="para" id="sec-publication-2-1"></div></section><div class="para" id="sec-publication-3">When illustrating a large project such as a book, you will likely want to create diagrams that have a consistent style.  PreFigure constructs some components with default values for the attributes.  For instance, a <code class="code-inline tex2jax_ignore">&lt;graph&gt;</code> is stroked blue by default and a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> is filled red.  You may, however, wish to change these default behaviors with a publication file, as shown in <a href="sec-publication.html#listing-pub-file" class="xref" data-knowl="./knowl/xref/listing-pub-file.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.10.1">Listing 3.10.1</a>
+</div>
+<figure class="listing figure-like" id="listing-pub-file"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;prefigure&gt;
+  &lt;graph stroke="green"/&gt;
+  &lt;point style="diamond" size="5" fill="blue" outline="yes"/&gt;
+  &lt;macros&gt;
+    \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
+    \newcommand{\real}{\Bbb R}
+  &lt;/macros&gt;
+&lt;/prefigure&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.10.1<span class="period">.</span></span><span class="space"> </span>A sample publication file</figcaption></figure><div class="para" id="sec-publication-5">The publication file begins with a <code class="code-inline tex2jax_ignore">&lt;prefigure&gt;</code> element whose children describe desired default behaviors for a few graphical components.  For instance, this publication file asks that a <code class="code-inline tex2jax_ignore">&lt;graph&gt;</code> be stroked green and that a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> has a few default attributes. Notice that the publication file also includes a list of <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> macros, given in the <code class="code-inline tex2jax_ignore">&lt;macros&gt;</code> element, that can be used in labels.</div>
+<div class="para" id="sec-publication-6">To illustrate, <a href="sec-publication.html#diagram-publication" class="xref" data-knowl="./knowl/xref/diagram-publication.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.10.2">Figure 3.10.2</a> contains a diagram created using this publication file with <a href="sec-publication.html#listing-publication" class="xref" data-knowl="./knowl/xref/listing-publication.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.10.3">Listing 3.10.3</a> showing the PreFigure source.</div>
+<figure class="figure figure-like" id="diagram-publication"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/pub_test.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.10.2<span class="period">.</span></span><span class="space"> </span>A diagram created using the publication file in <a href="sec-publication.html#listing-pub-file" class="xref" data-knowl="./knowl/xref/listing-pub-file.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.10.1">Listing 3.10.1</a></figcaption></figure><figure class="listing figure-like" id="listing-publication"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+  &lt;definition&gt;f(x)=exp(x/3)*cos(x)&lt;/definition&gt;
+  &lt;coordinates bbox="(-4,-4,4,4)"&gt;
+    &lt;grid-axes ylabel="\real^2"/&gt;
+    &lt;graph function="f"/&gt;
+    &lt;repeat parameter="k=-3..3"&gt;
+      &lt;point p="(k,f(k))"/&gt;
+    &lt;/repeat&gt;
+    &lt;label p="(2,2)" clear-background="yes"&gt;
+      &lt;m&gt;\deriv{y}{x}&lt;/m&gt;
+    &lt;/label&gt;
+    &lt;point p="(-2,2)" fill="red" size="4"/&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.10.3<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-publication.html#diagram-publication" class="xref" data-knowl="./knowl/xref/diagram-publication.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.10.2">Figure 3.10.2</a>.</figcaption></figure><div class="para" id="sec-publication-9">Because the publication file sets the <code class="code-inline tex2jax_ignore">@stroke</code> attribute of <code class="code-inline tex2jax_ignore">&lt;graph&gt;</code> to be green, the graph of the function is stroked green by default.  The <code class="code-inline tex2jax_ignore">&lt;point&gt;</code>s on the graph are also created using the attributes given in the publication file. Notice that any attributes given in one of these tags, such as the <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> that is filled red, take precedence over the values in the publication file.  This example also demonstrates the use of <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> macros in the labels.</div>
+<div class="para logical" id="sec-publication-10">
+<div class="para">To apply the publication file <code class="code-inline tex2jax_ignore">pub_file.xml</code> to a diagram, use the <code class="code-inline tex2jax_ignore">-p</code> switch when compiling:</div>
+<pre class="code-display tex2jax_ignore">
+python parse.py -p pub_file.xml foo.xml    
+  </pre>
+</div></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="sec-repeat.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
