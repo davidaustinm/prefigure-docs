@@ -105,7 +105,7 @@
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
     <css
         style="default"
-        colors="red_blue"
+        colors="blue_green"
         knowls="default"
         toc="default"
         banner="default"
