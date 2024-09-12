@@ -97,7 +97,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Installation and use",
-  "body": " Installation and use  PreFigure, which is written in the Python programming language, may be installed by visiting the GitHub repository and following the installation instructions given there.  Once again, PreFigure can be called from the command line. If foo.xml contains a PreFigure XML diagram description, then   python parse.py foo.xml   will create the output files output\/foo.svg and output\/foo.xml , where the second is an XML file used by a screen reader to navigate the diagram with the arrow keys. To create a tactile version of the diagram, use   python parse.py -f tactile foo.xml   "
+  "body": " Installation and use  PreFigure may be used in two different ways.   PreFigure is available in a GitHub Codespace. For many users, this will be a convenient way to create figures since it provides a fully configured authoring environment. More information is available at that link.    PreFigure may also be installed as a Python package on your own machine. There are, however, a few additional steps required so be sure to follow the instructions given here.      From a codespace or once installed, PreFigure can be called from the command line. General help is available with  prefig --help   and help for specific commands can be found with, for instance, prefig build --help .    To compile a PreFigure source file foo.xml into a diagram, use  prefig build foo.xml  A tactile version of the diagram is created with prefig build -f tactile foo.xml . In either case, the output image will appear in output\/foo.svg while annotations read by a screen reader are in output\/foo.xml .    Once an image is built, it may be viewed with prefig view foo If the diagram contains annotations, this will provide a means of exploring the diagram and annotations using the diagcess library. To view the diagram without annotations, use prefig view -i foo to ignore the annotations.    To make a PDF from a diagram that has already been built, use prefig pdf foo . Including the -b flag will cause the diagram to be built first: prefig pdf -b foo .    It is not essential to do this, but if PreFigure is installed locally, you may want to begin with prefig init , which has the effect of installing some MathJax libraries (PreFigure will try to install these later when needed) as well as the Braille29 font.  If you would like to explore the set of included examples, use prefig examples to copy the set of examples into the current directory.  You may initialize a new PreFigure project with prefig new . This copies a simple publication file and the diagcess library files into the current directory. PreFigure work done within this directory and any subdirectories will be able to find these when needed.     "
 },
 {
   "id": "sec-diagram",
@@ -835,7 +835,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.8",
   "title": "Differential equations",
-  "body": " Differential equations   There are a few elements for creating diagrams containing solutions to differential equations.    Slope Fields  Slope fields for a 1-variable ordinary differential equation and for autonomous systems can be drawn using the <slope-field> element. On the left of is shown a slope field for the equation while the right shows the slope field for the autonomous system        The slope fields for two differential equations.   The PreFigure source input for the left diagram in is given in .    <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of a 1-variable differential equation   The grid on which the slope field is drawn can be changed using the spacings attribute similar to that of the grid element .  To obtain the slope field for an autonomous system, include the attribute system=\"yes\" in the <slope-field> element. Notice that the function defining the differential equation is naturally vector-valued now.    <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of an autonomous sytem.     Solutions to differential equations  PreFigure provides an element <de-solve> that generates and saves the solution of a differential equation. You could think of this as a definition that can be reused possibly several times.  Solutions are then plotted using the <plot-de-solution> element. demonstrates how to use these elements.      Some solutions to a differential equation.     <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes\/> <slope-field function=\"f\"\/> <de-solve function=\"f\" t0=\"0\" y0=\"3\" t1=\"4\" name=\"linear\"\/> <plot-de-solution solution=\"linear\" stroke=\"red\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"-2\" t1=\"4\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   shows two ways in which a solution to the differential equation can be plotted. In Line 5, we solve the differential equation with initial value over the interval . This interval is broken into N=100 steps by default, but this value can be modified using the N attribute. This solution is also given an attribute name=\"linear\" . To plot the solution, we use a <plot-de-solution> element in Line 7 passing the name of the solution as an attribute.  Alernatively, these two elements can be combined into a single <plot-de-solution> element, as shown in Line 8. Most likely, you will use this second method more frequently since it involves a single element.  There are more possibilities when solving a system. shows a solution to a autonomous system.      Solutions and to a system of differential equations.     <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-1,-4,6,4]\"> <grid-axes\/> <de-solve function=\"f\" t0=\"0\" t1=\"6\" y0=\"(3,0)\" name=\"oscillator\"\/> <plot-de-solution solution=\"oscillator\" axes=\"(t,y0)\"\/> <plot-de-solution solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Notice how we generate a solution in Line 5 of and save it with the name=\"oscillator\" . Then we reuse this solution to plot the components and as functions of in Line 6 and 7. There are now three quantities involved, , , and , so we use the axes attribute to state which of these quantities will appear on the horizontal and vertical axis. This notation for the axes holds no matter what variables are used to define the function on the right side of the differential equation.  We can also create phase portraits as in .      A few trajectories in the phase plane of an autonomous system.     <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" stroke=\"darkorange\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"(1,0)\" t1=\"2*pi\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"(2,0)\" t1=\"2*pi\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"(3,0)\" t1=\"2*pi\" axes=\"(y0,y1)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .    "
+  "body": " Differential equations   There are a few elements for creating diagrams containing solutions to differential equations.    Slope Fields  Slope fields for a 1-variable ordinary differential equation and for autonomous systems can be drawn using the <slope-field> element. On the left of is shown a slope field for the equation while the right shows the slope field for the autonomous system        The slope fields for two differential equations.   The PreFigure source input for the left diagram in is given in .    <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of a 1-variable differential equation   The grid on which the slope field is drawn can be changed using the spacings attribute similar to that of the grid element .  To obtain the slope field for an autonomous system, include the attribute system=\"yes\" in the <slope-field> element. Also, arrows are added to the <slope-field> using the arrows=\"yes\" attribute. Notice that the function defining the differential equation is naturally vector-valued now.    <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" arrows=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of an autonomous sytem.     Solutions to differential equations  PreFigure provides an element <de-solve> that generates and saves the solution of a differential equation. You could think of this as a definition that can be reused possibly several times.  Solutions are then plotted using the <plot-de-solution> element. demonstrates how to use these elements.      Some solutions to a differential equation.     <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes\/> <slope-field function=\"f\"\/> <de-solve function=\"f\" t0=\"0\" y0=\"3\" t1=\"4\" name=\"linear\"\/> <plot-de-solution solution=\"linear\" stroke=\"red\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"-2\" t1=\"4\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   shows two ways in which a solution to the differential equation can be plotted. In Line 5, we solve the differential equation with initial value over the interval . This interval is broken into N=100 steps by default, but this value can be modified using the N attribute. This solution is also given an attribute name=\"linear\" . To plot the solution, we use a <plot-de-solution> element in Line 7 passing the name of the solution as an attribute.  Alernatively, these two elements can be combined into a single <plot-de-solution> element, as shown in Line 8. Most likely, you will use this second method more frequently since it involves a single element.  There are more possibilities when solving a system. shows a solution to a autonomous system.      Solutions and to a system of differential equations.     <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-1,-4,6,4]\"> <grid-axes\/> <de-solve function=\"f\" t0=\"0\" t1=\"6\" y0=\"(3,0)\" name=\"oscillator\"\/> <plot-de-solution solution=\"oscillator\" axes=\"(t,y0)\"\/> <plot-de-solution solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Notice how we generate a solution in Line 5 of and save it with the name=\"oscillator\" . Then we reuse this solution to plot the components and as functions of in Line 6 and 7. There are now three quantities involved, , , and , so we use the axes attribute to state which of these quantities will appear on the horizontal and vertical axis. This notation for the axes holds no matter what variables are used to define the function on the right side of the differential equation.  We can also create phase portraits as in . The source code demonstrates how a method can be supplied to the differential equation solver. Differential equations are solved numerically using a Python package that presents a choice of methods. Most of the time, the default \"RK45\" method will suffice, but \"LSODA\" may be helpful when working with stiff equations.      A few trajectories in the phase plane of an autonomous system.     <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" stroke=\"darkorange\" arrows=\"yes\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" y0=\"(1,0)\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" method=\"RK23\" y0=\"(2,0)\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" method=\"LSODA\" y0=\"(3,0)\" axes=\"(y0,y1)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .    "
 },
 {
   "id": "diagram-slope-field",
@@ -862,7 +862,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "3.8.3",
   "title": "",
-  "body": "  <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of an autonomous sytem.  "
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" arrows=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of an autonomous sytem.  "
 },
 {
   "id": "diagram-de-plot",
@@ -916,14 +916,230 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "3.8.9",
   "title": "",
-  "body": "  <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" stroke=\"darkorange\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"(1,0)\" t1=\"2*pi\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"(2,0)\" t1=\"2*pi\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"(3,0)\" t1=\"2*pi\" axes=\"(y0,y1)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" stroke=\"darkorange\" arrows=\"yes\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" y0=\"(1,0)\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" method=\"RK23\" y0=\"(2,0)\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" method=\"LSODA\" y0=\"(3,0)\" axes=\"(y0,y1)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "sec-paths",
+  "level": "1",
+  "url": "sec-paths.html",
+  "type": "Section",
+  "number": "3.9",
+  "title": "Paths",
+  "body": " Paths   The <path> tag provides authors with the means to create more complicated objects by concatenating simpler ones. As a preview, notice that there are two <path> s in . The simpler path, in red, is a single quadratic Bézier curve. The more complicated path, in blue, is composed of line segments, a circular arc, and a cubic Bézier curve, with one of the line segments decorated with a zig-zag pattern.      The graphical result of two <path> s.     Defining paths  We will first focus on how a <path> is defined by concatenating simpler pieces. Throughout the definition of a path, there is always a current point that is used to construct the next piece of the path. For this reason, a <path> tag must always have a start attribute, which serves as the initial point of the path.   shows two paths and the PreFigure source given in .      The graphical result of two <path> s.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,1)\" stroke=\"blue\" arrows=\"1\"> <lineto point=\"(3,2)\"\/> <moveto point=\"(4,2)\"\/> <horizontal distance=\"2\"\/> <vertical distance=\"4\"\/> <arc center=\"(7.5,6)\" radius=\"1.5\" range=\"(180,0)\"\/> <cubic-bezier controls=\"((9,2), (8,2), (7,2))\"\/> <\/path> <path start=\"(1,5)\" stroke=\"red\" arrows=\"2\"> <quadratic-bezier controls=\"((1,8),(5,8))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the paths in   The first path in blue, defined by lines 4 through 11, demonstrates many options that are available when defining a path.   lineto  The <lineto> tag has a point attribute, as seen in line 5. This has the effect of adding to the path a line segment from the current point to the point and updating the current point.    moveto  The <moveto> tag, shown in line 6, simply updates the current point to the given point without adding a line segment. In effect, it is like picking up your pen.    horizontal  The <horizontal> tag is like a <lineto> where the new endpoint is a given horizontal distance from the current point.    arc  An <arc> tag adds a circular arc to the path with a specific center , radius , and angular range . If the first point of the arc is not the same as the current point, then a line segment from the current point to the first point is added.    cubic-bezier and quadratic bezier  Bézier curves are smooth curves defined in terms of a set of control points . Mathematically, Bézier curves are parametric curves whose coordinate functions are polynomials. PreFigure provides access to both cubic and quadratic Bézier curves through the tags <cubic-bezier> and <quadratic-bezier> .  shows two paths consisting only of Bézier curves. The lower path consists of two cubic Bézier curves. The labeled point is the starting point while , , and are the three given control points. The final control point, , is the endpoint of the first Bézier curve while the control points and define the initial and final velocities of the curve.      The graphical result of two <path> s.   A quadratic Bézier curve, the upper curve in , is similar but is defined by only two control points.  shows the PreFigure source, omitting some of the details, of .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,3)\" stroke=\"blue\"> <cubic-bezier controls=\"((2,5),(4,5),(5,3))\"\/> <cubic-bezier controls=\"((6,1),(8,1),(9,3))\"\/> <\/path> <path start=\"(5,7)\" stroke=\"red\"> <quadratic-bezier controls=\"((4,9),(8,9))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in     Repeat  A <repeat> tag can be included inside a <path> as long as its children are allowed in a <path> . See for more details.    Other constructions  Some familiar constructions, such as <graph> , <parametric_curve> , and <polygon> can also be placed inside of a <path> . Ths is demonstrated in and its accompanying .      The graphical result of two <path> s.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <definition>f(x)=3*sin((x-1)\/8*pi)+5<\/definition> <path start=\"(1,1)\" stroke=\"blue\" closed=\"yes\"> <vertical distance=\"4\"\/> <graph function=\"f\" domain=\"(1,5)\"\/> <lineto point=\"(5,1)\"\/> <\/path> <definition>f(t)=(8-0.25*sin(2*(t-1)*pi),t)<\/definition> <path start=\"(8,1)\" stroke=\"red\"> <parametric-curve function=\"f\" domain=\"(1,6)\"\/> <polygon points=\"((8,6),(9,8),(8,9),(7,8),(8,6))\"\/> <moveto point=\"(7,8)\"\/> <horizontal distance=\"2\"\/> <moveto point=\"(8,6)\"\/> <vertical distance=\"3\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in      A <path> may have an attribute closed=\"yes\" that closes the path. You will need to be explicit about how the <path> is displayed by specifying a stroke and\/or fill .    Decorations  Line segments within a <path> defined by a <lineto> , <horizontal> , or <vertical> may be decorated in a variety of ways using a decoration attribute. The value of this attribute is a set of parameters separated by semicolons, the first of which is the type of decoration, either coil , zigzag , or capacitor .  The coil decoration resembles a spring. You can specify the number of coils on the line segment, the dimensions , and the center .  The dimensions parameter is an ordered pair whose values are interepreted in SVG coordinate lengths. The first number gives the horizontal distance traversed by one coil while the second gives the maximum vertical displacement from the undecorated line segment.  The center parameter is a number between 0 and 1, interpreted as a fraction of the length of the line segment, that indicates where the center of the coils lies. The value of this parameter is 0.5 by default, which centers the coil on the line segment.  shows some examples with the source code in .      Some coil decorations.     <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,-0.5,5,2.5)\"> <path start=\"(0,0)\" stroke=\"black\"> <lineto point=\"(5,0)\" decoration=\"coil; number=5; dimensions=(10,10); center=0.7\"\/> <\/path> <path start=\"(0,1)\" stroke=\"black\"> <horizontal distance=\"5\" decoration=\"coil; number=10; dimensions=(10,5)\"\/> <\/path> <path start=\"(0,2)\" stroke=\"black\"> <lineto point=\"(5,2)\" decoration=\"coil; number=5; dimensions=(5,10)\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .   demonstrates the use of some coils.      Using decorations to represent a spring. Adapted from Tom Judson's Ordinary Differential Equations Project .     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,160,300,300)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(3.5,1)\" decoration=\"coil; number=5 ; dimensions=(15,10)\"\/> <\/path> <rectangle center=\"(4,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,10,300,150)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(2,1)\" decoration=\"coil; number=5 ; dimensions=(6,10)\"\/> <\/path> <rectangle center=\"(2.5,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   The zigzag decoration has the same parameters as a coil while the capacitor decoration has a center parameter, which again defaults to 0.5, and a dimensions parameter, which controls the horizontal gap and vertical length      An RLC circuit. Adapted from Tom Judson's Ordinary Differential Equations Project .     <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,9)\"> <path start=\"(1,1)\" stroke=\"black\"> <lineto point=\"(1,8)\"\/> <lineto point=\"(9,8)\" decoration=\"coil; number=5; dimensions=(10,10)\"\/> <lineto point=\"(9,1)\" decoration=\"capacitor; dimensions=(12,15)\"\/> <lineto point=\"(1,1)\" decoration=\"zigzag; number=5; dimensions=(10,10)\"\/> <\/path> <point p=\"(1,4.5)\" size=\"20\" fill=\"white\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .    "
+},
+{
+  "id": "diagram-path-preview",
+  "level": "2",
+  "url": "sec-paths.html#diagram-path-preview",
+  "type": "Figure",
+  "number": "3.9.1",
+  "title": "",
+  "body": "    The graphical result of two <path> s.  "
+},
+{
+  "id": "diagram-paths",
+  "level": "2",
+  "url": "sec-paths.html#diagram-paths",
+  "type": "Figure",
+  "number": "3.9.2",
+  "title": "",
+  "body": "    The graphical result of two <path> s.  "
+},
+{
+  "id": "listing-paths",
+  "level": "2",
+  "url": "sec-paths.html#listing-paths",
+  "type": "Listing",
+  "number": "3.9.3",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,1)\" stroke=\"blue\" arrows=\"1\"> <lineto point=\"(3,2)\"\/> <moveto point=\"(4,2)\"\/> <horizontal distance=\"2\"\/> <vertical distance=\"4\"\/> <arc center=\"(7.5,6)\" radius=\"1.5\" range=\"(180,0)\"\/> <cubic-bezier controls=\"((9,2), (8,2), (7,2))\"\/> <\/path> <path start=\"(1,5)\" stroke=\"red\" arrows=\"2\"> <quadratic-bezier controls=\"((1,8),(5,8))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the paths in  "
+},
+{
+  "id": "diagram-bezier",
+  "level": "2",
+  "url": "sec-paths.html#diagram-bezier",
+  "type": "Figure",
+  "number": "3.9.4",
+  "title": "",
+  "body": "    The graphical result of two <path> s.  "
+},
+{
+  "id": "listing-bezier",
+  "level": "2",
+  "url": "sec-paths.html#listing-bezier",
+  "type": "Listing",
+  "number": "3.9.5",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,3)\" stroke=\"blue\"> <cubic-bezier controls=\"((2,5),(4,5),(5,3))\"\/> <cubic-bezier controls=\"((6,1),(8,1),(9,3))\"\/> <\/path> <path start=\"(5,7)\" stroke=\"red\"> <quadratic-bezier controls=\"((4,9),(8,9))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in  "
+},
+{
+  "id": "diagram-more-paths",
+  "level": "2",
+  "url": "sec-paths.html#diagram-more-paths",
+  "type": "Figure",
+  "number": "3.9.6",
+  "title": "",
+  "body": "    The graphical result of two <path> s.  "
+},
+{
+  "id": "listing-more-paths",
+  "level": "2",
+  "url": "sec-paths.html#listing-more-paths",
+  "type": "Listing",
+  "number": "3.9.7",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <definition>f(x)=3*sin((x-1)\/8*pi)+5<\/definition> <path start=\"(1,1)\" stroke=\"blue\" closed=\"yes\"> <vertical distance=\"4\"\/> <graph function=\"f\" domain=\"(1,5)\"\/> <lineto point=\"(5,1)\"\/> <\/path> <definition>f(t)=(8-0.25*sin(2*(t-1)*pi),t)<\/definition> <path start=\"(8,1)\" stroke=\"red\"> <parametric-curve function=\"f\" domain=\"(1,6)\"\/> <polygon points=\"((8,6),(9,8),(8,9),(7,8),(8,6))\"\/> <moveto point=\"(7,8)\"\/> <horizontal distance=\"2\"\/> <moveto point=\"(8,6)\"\/> <vertical distance=\"3\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in  "
+},
+{
+  "id": "diagram-coils",
+  "level": "2",
+  "url": "sec-paths.html#diagram-coils",
+  "type": "Figure",
+  "number": "3.9.8",
+  "title": "",
+  "body": "    Some coil decorations.  "
+},
+{
+  "id": "listing-coils",
+  "level": "2",
+  "url": "sec-paths.html#listing-coils",
+  "type": "Listing",
+  "number": "3.9.9",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,-0.5,5,2.5)\"> <path start=\"(0,0)\" stroke=\"black\"> <lineto point=\"(5,0)\" decoration=\"coil; number=5; dimensions=(10,10); center=0.7\"\/> <\/path> <path start=\"(0,1)\" stroke=\"black\"> <horizontal distance=\"5\" decoration=\"coil; number=10; dimensions=(10,5)\"\/> <\/path> <path start=\"(0,2)\" stroke=\"black\"> <lineto point=\"(5,2)\" decoration=\"coil; number=5; dimensions=(5,10)\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .  "
+},
+{
+  "id": "diagram-mass-spring",
+  "level": "2",
+  "url": "sec-paths.html#diagram-mass-spring",
+  "type": "Figure",
+  "number": "3.9.10",
+  "title": "",
+  "body": "    Using decorations to represent a spring. Adapted from Tom Judson's Ordinary Differential Equations Project .  "
+},
+{
+  "id": "listing-mass-spring",
+  "level": "2",
+  "url": "sec-paths.html#listing-mass-spring",
+  "type": "Listing",
+  "number": "3.9.11",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,160,300,300)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(3.5,1)\" decoration=\"coil; number=5 ; dimensions=(15,10)\"\/> <\/path> <rectangle center=\"(4,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,10,300,150)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(2,1)\" decoration=\"coil; number=5 ; dimensions=(6,10)\"\/> <\/path> <rectangle center=\"(2.5,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "diagram-rcl-circuit",
+  "level": "2",
+  "url": "sec-paths.html#diagram-rcl-circuit",
+  "type": "Figure",
+  "number": "3.9.12",
+  "title": "",
+  "body": "    An RLC circuit. Adapted from Tom Judson's Ordinary Differential Equations Project .  "
+},
+{
+  "id": "listing-rcl-circuit",
+  "level": "2",
+  "url": "sec-paths.html#listing-rcl-circuit",
+  "type": "Listing",
+  "number": "3.9.13",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,9)\"> <path start=\"(1,1)\" stroke=\"black\"> <lineto point=\"(1,8)\"\/> <lineto point=\"(9,8)\" decoration=\"coil; number=5; dimensions=(10,10)\"\/> <lineto point=\"(9,1)\" decoration=\"capacitor; dimensions=(12,15)\"\/> <lineto point=\"(1,1)\" decoration=\"zigzag; number=5; dimensions=(10,10)\"\/> <\/path> <point p=\"(1,4.5)\" size=\"20\" fill=\"white\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "sec-shapes",
+  "level": "1",
+  "url": "sec-shapes.html",
+  "type": "Section",
+  "number": "3.10",
+  "title": "Shape constructions and clipping",
+  "body": " Shape constructions and clipping   This section introduces shapes and some things you can do with them. A shape is any graphical component that defines a two-dimensional region, such as a <circle> , <rectangle> , <polygon> , or <path> . The tags <graph> or <parametric-curve> also define shapes as, behind the scenes, PreFigure will close the paths they define.    Defining shapes  Shapes are defined within a special <define-shapes> tag, which make them available for later use. , and the accompanying PreFigure source in , provides a simple example.      A simple use of the <shape> tag.     <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <\/define-shapes> <shape shape=\"A\" fill=\"magenta\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in   Note the use of the <define-shapes> tag in lines 3 through 5. Within this tag, we define a circle with the handle at=\"A\" . Any stroke or fill attributes will be ignored in the definition since we mean to focus solely on the geometric shape. Also, it is important that shapes be defined within a <coordinates> tag as the definitions become invalid once we leave this coordinate system.  We then recall the shape in line 7 and supply attributes for filling and stroking it within that element. Notice that the attribute shape=\"A\" serves as a reference to the previously defined shape. As we will see, we sometimes want to recall two or more shapes at once, which we could do with a comma-separated list. For this reason, PreFigure accepts either the attribute shapes (note the plural) or shape as a convenience.    Shape Constructions  Of course, we could easily have created the diagram in with a single <circle> tag. Shapes, however, provide us with access to some set operations, such as intersections, unions, and differences. For example, demonstrates how we can define the difference of two sets .      The difference of two sets.     <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <circle at=\"B\" center=\"(6,3)\" radius=\"2\"\/> <\/define-shapes> <shape shapes=\"A,B\" operation=\"difference\" fill=\"magenta\" stroke=\"black\"\/> <shape shape=\"A\" stroke=\"black\"\/> <shape shape=\"B\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <label anchor=\"(2,3)\" alignment=\"nw\"><m>A<\/m><\/label> <label anchor=\"(8,3)\" alignment=\"ne\"><m>B<\/m><\/label> <label anchor=\"(5,0.5)\"><m>A\\setminus B<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in   In this example, we define two sets and in the <define-shapes> tag. We then construct and display their intersection using the <shape> tag in lines 8 and 9. Notice that we use the shapes attribute to recall the two shapes (though shape=\"A,B\" would also suffice). The attribute operation=\"difference\" declares that this set should be constructed as the difference of the two sets. In this case, shapes=\"B,A\" would yield the difference .  Other operations include operation=\"union\" , operation=\"intersection\" , and operation=\"symmetric-difference\" or \"sym-diff\" . These four operations are demonstrated in .             Four sets operations.   Intersections, unions, and symmetric differences can take any number of sets, while a difference requires exactly two.  A fifth operation is operation=\"convex-hull\" , which produces the convex hull of the union of the given shapes. includes a demonstration, with the convex hull of two sets outlined in red. This is not an especially realistic diagram, but it does demonstrate some of the possibilities when working with shapes.      The convex hull of the union of two shapes.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <circle at=\"circle\" center=\"(6,7)\" radius=\"2\"\/> <rectangle at=\"lower-rectangle\" center=\"(4,4)\" dimensions=\"(5,4)\" corner-radius=\"10\"\/> <rectangle at=\"upper-rectangle\" center=\"(4,7.5)\" dimensions=\"(5,1)\" corner-radius=\"10\"\/> <shape shapes=\"circle,lower-rectangle,upper-rectangle\" operation=\"sym-diff\" at=\"sym-diff\"\/> <circle at=\"right-circle\" center=\"(8.5,8.5)\" radius=\"1\"\/> <\/define-shapes> <grid-axes decorations=\"no\"\/> <shape shapes=\"sym-diff,right-circle\" operation=\"convex-hull\" stroke=\"red\" thickness=\"8\"\/> <shape shapes=\"sym-diff\" fill=\"magenta\" stroke=\"black\"\/> <shape shapes=\"circle\" stroke=\"black\"\/> <shape shapes=\"upper-rectangle\" stroke=\"black\"\/> <shape shapes=\"lower-rectangle\" stroke=\"black\"\/> <shape shape=\"right-circle\" fill=\"blue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in     Clipping  A second use of shapes is to clip a diagram with the <clip> tag. provides a demonstration. Notice that the clipping shape is applied only to elements that are children of the <clip> tag.      Using the <clip> tag.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <rectangle at=\"square1\" center=\"(4,4)\" dimensions=\"(3,3)\" corner-radius=\"10\"\/> <rectangle at=\"square2\" center=\"(3,6)\" dimensions=\"(2,2)\" corner-radius=\"5\"\/> <shape at=\"clip\" shapes=\"square1, square2\" operation=\"union\"\/> <circle at=\"circle\" center=\"(6,6)\" radius=\"3\"\/> <\/define-shapes> <shape shape=\"circle\" fill=\"lightgray\" stroke=\"gray\"\/> <clip shape=\"clip\"> <shape shape=\"circle\" fill=\"blue\" stroke=\"black\"\/> <\/clip> <shape shape=\"clip\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,10)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in    "
+},
+{
+  "id": "diagram-shape-start",
+  "level": "2",
+  "url": "sec-shapes.html#diagram-shape-start",
+  "type": "Figure",
+  "number": "3.10.1",
+  "title": "",
+  "body": "    A simple use of the <shape> tag.  "
+},
+{
+  "id": "listing-shape-start",
+  "level": "2",
+  "url": "sec-shapes.html#listing-shape-start",
+  "type": "Listing",
+  "number": "3.10.2",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <\/define-shapes> <shape shape=\"A\" fill=\"magenta\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
+},
+{
+  "id": "diagram-shape-difference",
+  "level": "2",
+  "url": "sec-shapes.html#diagram-shape-difference",
+  "type": "Figure",
+  "number": "3.10.3",
+  "title": "",
+  "body": "    The difference of two sets.  "
+},
+{
+  "id": "listing-shape-difference",
+  "level": "2",
+  "url": "sec-shapes.html#listing-shape-difference",
+  "type": "Listing",
+  "number": "3.10.4",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <circle at=\"B\" center=\"(6,3)\" radius=\"2\"\/> <\/define-shapes> <shape shapes=\"A,B\" operation=\"difference\" fill=\"magenta\" stroke=\"black\"\/> <shape shape=\"A\" stroke=\"black\"\/> <shape shape=\"B\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <label anchor=\"(2,3)\" alignment=\"nw\"><m>A<\/m><\/label> <label anchor=\"(8,3)\" alignment=\"ne\"><m>B<\/m><\/label> <label anchor=\"(5,0.5)\"><m>A\\setminus B<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
+},
+{
+  "id": "diagram-shape-construct",
+  "level": "2",
+  "url": "sec-shapes.html#diagram-shape-construct",
+  "type": "Figure",
+  "number": "3.10.5",
+  "title": "",
+  "body": "           Four sets operations.  "
+},
+{
+  "id": "diagram-shape-convex",
+  "level": "2",
+  "url": "sec-shapes.html#diagram-shape-convex",
+  "type": "Figure",
+  "number": "3.10.6",
+  "title": "",
+  "body": "    The convex hull of the union of two shapes.  "
+},
+{
+  "id": "listing-shape-convex",
+  "level": "2",
+  "url": "sec-shapes.html#listing-shape-convex",
+  "type": "Listing",
+  "number": "3.10.7",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <circle at=\"circle\" center=\"(6,7)\" radius=\"2\"\/> <rectangle at=\"lower-rectangle\" center=\"(4,4)\" dimensions=\"(5,4)\" corner-radius=\"10\"\/> <rectangle at=\"upper-rectangle\" center=\"(4,7.5)\" dimensions=\"(5,1)\" corner-radius=\"10\"\/> <shape shapes=\"circle,lower-rectangle,upper-rectangle\" operation=\"sym-diff\" at=\"sym-diff\"\/> <circle at=\"right-circle\" center=\"(8.5,8.5)\" radius=\"1\"\/> <\/define-shapes> <grid-axes decorations=\"no\"\/> <shape shapes=\"sym-diff,right-circle\" operation=\"convex-hull\" stroke=\"red\" thickness=\"8\"\/> <shape shapes=\"sym-diff\" fill=\"magenta\" stroke=\"black\"\/> <shape shapes=\"circle\" stroke=\"black\"\/> <shape shapes=\"upper-rectangle\" stroke=\"black\"\/> <shape shapes=\"lower-rectangle\" stroke=\"black\"\/> <shape shape=\"right-circle\" fill=\"blue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
+},
+{
+  "id": "diagram-shape-clip",
+  "level": "2",
+  "url": "sec-shapes.html#diagram-shape-clip",
+  "type": "Figure",
+  "number": "3.10.8",
+  "title": "",
+  "body": "    Using the <clip> tag.  "
+},
+{
+  "id": "listing-shape-clip",
+  "level": "2",
+  "url": "sec-shapes.html#listing-shape-clip",
+  "type": "Listing",
+  "number": "3.10.9",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <rectangle at=\"square1\" center=\"(4,4)\" dimensions=\"(3,3)\" corner-radius=\"10\"\/> <rectangle at=\"square2\" center=\"(3,6)\" dimensions=\"(2,2)\" corner-radius=\"5\"\/> <shape at=\"clip\" shapes=\"square1, square2\" operation=\"union\"\/> <circle at=\"circle\" center=\"(6,6)\" radius=\"3\"\/> <\/define-shapes> <shape shape=\"circle\" fill=\"lightgray\" stroke=\"gray\"\/> <clip shape=\"clip\"> <shape shape=\"circle\" fill=\"blue\" stroke=\"black\"\/> <\/clip> <shape shape=\"clip\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,10)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
 {
   "id": "sec-repeat",
   "level": "1",
   "url": "sec-repeat.html",
   "type": "Section",
-  "number": "3.9",
+  "number": "4.1",
   "title": "The <code class=\"code-inline tex2jax_ignore\"><repeat><\/code> element",
   "body": " The <repeat> element  Some diagrams contain a number of components that are similar and differ only in a few attributes. For example, shows several solutions to a differential equation with different initial values.      Several solutions to a differential equation.   Of course, we could simply include a <plot-de-solution> element for each one, but this could be difficult to maintain if we decide to make some small change. Instead, PreFigure offers a <repeat> element that can streamline this process, as illustrated by the PreFigure source code in .    <diagram width=\"300\" height=\"300\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\"\/> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" domain=\"[0,4]\" stroke=\"orange\" \/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\" \/> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Solutions to the differential equation dy dt = t - y\"> <annotation ref=\"grid\" text=\"The coordinate grid\"\/> <annotation ref=\"axes\" text=\"The coordinate axes\"\/> <annotation ref=\"slope-field\" text=\"The slope field\"\/> <annotation ref=\"solutions\" text=\"A collection of solution curves\"> <annotation ref=\"solution-k=-4\" text=\"The solution with initial value -4\"\/> <annotation ref=\"solution-k=-3\" text=\"The solution with initial value -3\"\/> <annotation ref=\"solution-k=-2\" text=\"The solution with initial value -2\"\/> <annotation ref=\"solution-k=-1\" text=\"The solution with initial value -1\"\/> <annotation ref=\"solution-k=0\" text=\"The solution with initial value 0\"\/> <annotation ref=\"solution-k=1\" text=\"The solution with initial value 1\"\/> <annotation ref=\"solution-k=2\" text=\"The solution with initial value 2\"\/> <annotation ref=\"solution-k=3\" text=\"The solution with initial value 3\"\/> <annotation ref=\"solution-k=4\" text=\"The solution with initial value 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   Line 7 contains a <repeat> element with the attribute parameter=\"k=-4..4\" . This places the parameter name k into the user namespace with the value of -4 and adds the <plot-de-solution> and <point> elements contained within the <repeat> element. This repeats with the values .  The annotations included in show how the handles within the <repeat> element are generated. If an element inside a repeat element has a handle at=\"handle\" , then the graphical component generated when the parameter is, say, param=value is given the handle at=\"handle-param=value\" . For example, when k=2 , the solution has the handle at=\"solution-k=2\" . There is not yet a repeat feature for annotations.  A second example, given in , shows how labels can be managed within a <repeat> element.      The roots of unity.     <diagram width=\"300\" height=\"300\" margins=\"5\"> <definition> alignments=['ne','ne','ne','nw','nw','sw','se','se'] <\/definition> <definition substitution=\"no\"> labels=['1','\\omega','i','\\omega^3','-1','\\omega^5','-i','\\omega^7'] <\/definition> <definition>f(t)=(cos(pi*t\/4),sin(pi*t\/4))<\/definition> <coordinates bbox=\"[-1.4,-1.4,1.4,1.4]\"> <grid at=\"grid\" \/> <axes at=\"axes\" labels=\"no\" \/> <circle at=\"unit-circle\" center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <repeat parameter=\"k=0..7\"> <point at=\"point\" p=\"f(k)\" alignment=\"alignments[k]\"> <m>${labels[k]}<\/m> <\/point> <\/repeat> <\/coordinates> <annotations> <annotation id=\"figure\" text=\"The eighth roots of unity\"> <annotation id=\"axes\" text=\"The coordinate axes\" \/> <annotation id=\"grid\" text=\"The coordinate grid\" \/> <annotation id=\"unit-circle\" text=\"The unit circle\" circular=\"true\"> <annotation id=\"point-k=0\" text=\"The primitive eighth root of unity to the power zero\" speech=\"one\"\/> <annotation id=\"point-k=1\" text=\"The primitive eighth root of unity\" speech=\"omega\"\/> <annotation id=\"point-k=2\" text=\"The primitive eighth root of unity squared\" speech=\"i\"\/> <annotation id=\"point-k=3\" text=\"The primitive eighth root of unity cubed\" speech=\"omega cubed\"\/> <annotation id=\"point-k=4\" text=\"The primitive eighth root of unity to the fourth\" speech=\"minus one\"\/> <annotation id=\"point-k=5\" text=\"The primitive eighth root of unity to the fifth\" speech=\"omega to the fifth\"\/> <annotation id=\"point-k=6\" text=\"The primitive eighth root of unity to the sixth\" speech=\"minus i\"\/> <annotation id=\"point-k=7\" text=\"The primitive eighth root of unity to the seventh\" speech=\"omega to the seventh\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   Lines 5 through 7 define a set of labels, one for each of the eight points. Remember that ^ is usually interpreted as the numerical exponentiation operator. Since we wish to preserve this character for the label, we include the attribute substitution=\"no\" to prevent ^ being reinterpreted. Notice that the label is given as ${labels[k]} since anything inside ${...} is evaluated in the user namespace.  We can also nest <repeat> elements as illustrated in and PreFigure source .      A <repeat> nested inside another.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .   A typical handle for one of these rectangles is at=\"rectangle-row=2-col=1\" .  "
 },
@@ -932,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-repeat.html#diagram-diffeq-repeat",
   "type": "Figure",
-  "number": "3.9.1",
+  "number": "4.1.1",
   "title": "",
   "body": "    Several solutions to a differential equation.  "
 },
@@ -941,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-repeat.html#listing-diffeq-repeat",
   "type": "Listing",
-  "number": "3.9.2",
+  "number": "4.1.2",
   "title": "",
   "body": "  <diagram width=\"300\" height=\"300\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\"\/> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" domain=\"[0,4]\" stroke=\"orange\" \/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\" \/> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Solutions to the differential equation dy dt = t - y\"> <annotation ref=\"grid\" text=\"The coordinate grid\"\/> <annotation ref=\"axes\" text=\"The coordinate axes\"\/> <annotation ref=\"slope-field\" text=\"The slope field\"\/> <annotation ref=\"solutions\" text=\"A collection of solution curves\"> <annotation ref=\"solution-k=-4\" text=\"The solution with initial value -4\"\/> <annotation ref=\"solution-k=-3\" text=\"The solution with initial value -3\"\/> <annotation ref=\"solution-k=-2\" text=\"The solution with initial value -2\"\/> <annotation ref=\"solution-k=-1\" text=\"The solution with initial value -1\"\/> <annotation ref=\"solution-k=0\" text=\"The solution with initial value 0\"\/> <annotation ref=\"solution-k=1\" text=\"The solution with initial value 1\"\/> <annotation ref=\"solution-k=2\" text=\"The solution with initial value 2\"\/> <annotation ref=\"solution-k=3\" text=\"The solution with initial value 3\"\/> <annotation ref=\"solution-k=4\" text=\"The solution with initial value 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
@@ -950,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-repeat.html#diagram-unity",
   "type": "Figure",
-  "number": "3.9.3",
+  "number": "4.1.3",
   "title": "",
   "body": "    The roots of unity.  "
 },
@@ -959,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-repeat.html#listing-unity",
   "type": "Listing",
-  "number": "3.9.4",
+  "number": "4.1.4",
   "title": "",
   "body": "  <diagram width=\"300\" height=\"300\" margins=\"5\"> <definition> alignments=['ne','ne','ne','nw','nw','sw','se','se'] <\/definition> <definition substitution=\"no\"> labels=['1','\\omega','i','\\omega^3','-1','\\omega^5','-i','\\omega^7'] <\/definition> <definition>f(t)=(cos(pi*t\/4),sin(pi*t\/4))<\/definition> <coordinates bbox=\"[-1.4,-1.4,1.4,1.4]\"> <grid at=\"grid\" \/> <axes at=\"axes\" labels=\"no\" \/> <circle at=\"unit-circle\" center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <repeat parameter=\"k=0..7\"> <point at=\"point\" p=\"f(k)\" alignment=\"alignments[k]\"> <m>${labels[k]}<\/m> <\/point> <\/repeat> <\/coordinates> <annotations> <annotation id=\"figure\" text=\"The eighth roots of unity\"> <annotation id=\"axes\" text=\"The coordinate axes\" \/> <annotation id=\"grid\" text=\"The coordinate grid\" \/> <annotation id=\"unit-circle\" text=\"The unit circle\" circular=\"true\"> <annotation id=\"point-k=0\" text=\"The primitive eighth root of unity to the power zero\" speech=\"one\"\/> <annotation id=\"point-k=1\" text=\"The primitive eighth root of unity\" speech=\"omega\"\/> <annotation id=\"point-k=2\" text=\"The primitive eighth root of unity squared\" speech=\"i\"\/> <annotation id=\"point-k=3\" text=\"The primitive eighth root of unity cubed\" speech=\"omega cubed\"\/> <annotation id=\"point-k=4\" text=\"The primitive eighth root of unity to the fourth\" speech=\"minus one\"\/> <annotation id=\"point-k=5\" text=\"The primitive eighth root of unity to the fifth\" speech=\"omega to the fifth\"\/> <annotation id=\"point-k=6\" text=\"The primitive eighth root of unity to the sixth\" speech=\"minus i\"\/> <annotation id=\"point-k=7\" text=\"The primitive eighth root of unity to the seventh\" speech=\"omega to the seventh\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
@@ -968,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-repeat.html#diagram-nested-repeat",
   "type": "Figure",
-  "number": "3.9.5",
+  "number": "4.1.5",
   "title": "",
   "body": "    A <repeat> nested inside another.  "
 },
@@ -977,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-repeat.html#listing-nested-repeat",
   "type": "Listing",
-  "number": "3.9.6",
+  "number": "4.1.6",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -986,16 +1202,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-publication.html",
   "type": "Section",
-  "number": "3.10",
+  "number": "4.2",
   "title": "The publication file",
-  "body": " The publication file      When illustrating a large project such as a book, you will likely want to create diagrams that have a consistent style. PreFigure constructs some components with default values for the attributes. For instance, a <graph> is stroked blue by default and a <point> is filled red. You may, however, wish to change these default behaviors with a publication file, as shown in     <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file   The publication file begins with a <prefigure> element whose children describe desired default behaviors for a few graphical components. For instance, this publication file asks that a <graph> be stroked green and that a <point> has a few default attributes. Notice that the publication file also includes a list of latex macros, given in the <macros> element, that can be used in labels.  To illustrate, contains a diagram created using this publication file with showing the PreFigure source.      A diagram created using the publication file in     <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Because the publication file sets the stroke attribute of <graph> to be green, the graph of the function is stroked green by default. The <point> s on the graph are also created using the attributes given in the publication file. Notice that any attributes given in one of these tags, such as the <point> that is filled red, take precedence over the values in the publication file. This example also demonstrates the use of latex macros in the labels.  To apply the publication file pub_file.xml to a diagram, use the -p switch when compiling: python parse.py -p pub_file.xml foo.xml   "
+  "body": " The publication file  When illustrating a large project such as a book, you will likely want to create diagrams that have a consistent style. PreFigure constructs some components with default values for the attributes. For instance, a <graph> is stroked blue by default and a <point> is filled red. You may, however, wish to change these default behaviors with a publication file, as shown in     <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file   The publication file begins with a <prefigure> element whose children describe desired default behaviors for a few graphical components. For instance, this publication file asks that a <graph> be stroked green and that a <point> has a few default attributes. Notice that the publication file also includes a list of latex macros, given in the <macros> element, that can be used in labels.  To illustrate, contains a diagram created using this publication file with showing the PreFigure source.      A diagram created using the publication file in     <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Because the publication file sets the stroke attribute of <graph> to be green, the graph of the function is stroked green by default. The <point> s on the graph are also created using the attributes given in the publication file. Notice that any attributes given in one of these tags, such as the <point> that is filled red, take precedence over the values in the publication file. This example also demonstrates the use of latex macros in the labels.  To apply the publication file pub_file.xml to a diagram, use the -p switch when compiling: prefig build -p pub_file.xml foo.xml   A good way to get started using a publication file for a large project is to say prefig new which has the effect of copying an empty publication pf_publication.xml and the diagcess tools into the current directory. If you do not specify a publication file in a build command, PreFigure will look for a pf_publication.xml in the current directory or a parent directory. To disable the use of any publication file, use the -i or --ignore_publication flag with the build command: prefig build -i foo.xml   "
 },
 {
   "id": "listing-pub-file",
   "level": "2",
   "url": "sec-publication.html#listing-pub-file",
   "type": "Listing",
-  "number": "3.10.1",
+  "number": "4.2.1",
   "title": "",
   "body": "  <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file  "
 },
@@ -1004,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-publication.html#diagram-publication",
   "type": "Figure",
-  "number": "3.10.2",
+  "number": "4.2.2",
   "title": "",
   "body": "    A diagram created using the publication file in  "
 },
@@ -1013,9 +1229,72 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-publication.html#listing-publication",
   "type": "Listing",
-  "number": "3.10.3",
+  "number": "4.2.3",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "sec-arrows",
+  "level": "1",
+  "url": "sec-arrows.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Arrows",
+  "body": " Arrows  Arrows can appear in many different contexts within a PreFigure diagram. For instance, a <vector> will be drawn with an arrowhead, usually at its tip, as seen in . Most graphical components that define a path, such as a <polygon> and <parametric-curve> , can be decorated with arrows.      Arrows that decorate vectors.   In constrast, a <slope-field> may have many arrows, one on the end of each line segment, as shown in .      Adapted from Tom Judson's Ordinary Differential Equations Project .   As a result, it is possible to adjust the relative size and shape of arrowheads. Before describing the possibilities, however, it is important to recognize that the size of arrowheads is scaled by the thickness attribute so, for instance, the arrowhead on a line whose thickness=3 will be three times the size as one on a line whose thickness=1 .   shows a variety of choices for defining the appearance of arrowheads. Notice that there are two attributes, arrow-width and arrow-angles , that can be specified and that are described more fully below.      A collection of arrows demonstrating various options.     <diagram dimensions=\"(400,400)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes labels=\"no\"\/> <!-- left side arrows --> <line endpoints=\"((1,9),(4,9))\" arrows=\"2\"\/> <line endpoints=\"((1,8),(4,8))\" arrows=\"2\" arrow-width=\"5\"\/> <line endpoints=\"((1,7),(4,7))\" arrows=\"2\" arrow-width=\"6\"\/> <line endpoints=\"((1,6),(4,6))\" arrows=\"2\" arrow-width=\"7\"\/> <line endpoints=\"((1,5),(4,5))\" arrows=\"2\" arrow-width=\"8\"\/> <line endpoints=\"((1,4),(4,4))\" arrows=\"2\" arrow-width=\"9\"\/> <!-- right side arrows --> <line endpoints=\"((6,9),(9,9))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(35,60)\"\/> <line endpoints=\"((6,8),(9,8))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(40,60)\"\/> <line endpoints=\"((6,7),(9,7))\" arrows=\"2\" arrow-width=\"6\" arrow-angles=\"(45,60)\"\/> <line endpoints=\"((6,6),(9,6))\" arrows=\"2\" arrow-width=\"7\" arrow-angles=\"(35,80)\"\/> <line endpoints=\"((6,5),(9,5))\" arrows=\"2\" arrow-width=\"8\" arrow-angles=\"(40,80)\"\/> <line endpoints=\"((6,4),(9,4))\" stroke=\"red\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(40,80)\"\/> <!-- longer line at the bottom --> <line endpoints=\"((1,3),(9,3))\" arrows=\"2\" additional-arrows=\"(0.7,0.5)\" arrow-width=\"9\" arrow-angles=\"(60,90)\"\/> <line endpoints=\"((1,2),(9,2))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(30,80)\"\/> <line endpoints=\"((1,1),(9,1))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(10,90)\" additional-arrows=\"0.5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Notice that a <line> has an additional-arrows attribute that allows one to include arrowheads at various locations along the line. The locations are given as a number between 0 and 1 specifying the relative distance along the line segment.  The shape of an arrowhead and how it is attached to the end of a path is shown in . Once again, the size of the arrowhead is scaled by the thickness of the path. (This style of arrowhead is adapted from Bill Casselman's PiScript package.)      The shape of an arrowhead and its attachment to the path.   shows the meaning of the angle-width and angle-angles attributes. The angle-width , whose value is in SVG coordinates and whose default is 4, controls how far from the path the arrowhead extends. The angle-angles attribute is a pair of angles , given in degrees. The default values are .      The definitions of arrow-width=w and arrow-angles=(A,B) .   Defining these attributes in a publication file allows them to be applied to all the diagrams in a project.  As we will see later, these attributes are ignored when placing arrowheads in a tactile diagram since the shape of the arrowheads is a convention within the braille community.  "
+},
+{
+  "id": "diagram-arrows-vector",
+  "level": "2",
+  "url": "sec-arrows.html#diagram-arrows-vector",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": "    Arrows that decorate vectors.  "
+},
+{
+  "id": "diagram-arrows-slope",
+  "level": "2",
+  "url": "sec-arrows.html#diagram-arrows-slope",
+  "type": "Figure",
+  "number": "4.3.2",
+  "title": "",
+  "body": "    Adapted from Tom Judson's Ordinary Differential Equations Project .  "
+},
+{
+  "id": "diagram-arrow-properties",
+  "level": "2",
+  "url": "sec-arrows.html#diagram-arrow-properties",
+  "type": "Figure",
+  "number": "4.3.3",
+  "title": "",
+  "body": "    A collection of arrows demonstrating various options.  "
+},
+{
+  "id": "listing-arrow-properties",
+  "level": "2",
+  "url": "sec-arrows.html#listing-arrow-properties",
+  "type": "Listing",
+  "number": "4.3.4",
+  "title": "",
+  "body": "  <diagram dimensions=\"(400,400)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes labels=\"no\"\/> <!-- left side arrows --> <line endpoints=\"((1,9),(4,9))\" arrows=\"2\"\/> <line endpoints=\"((1,8),(4,8))\" arrows=\"2\" arrow-width=\"5\"\/> <line endpoints=\"((1,7),(4,7))\" arrows=\"2\" arrow-width=\"6\"\/> <line endpoints=\"((1,6),(4,6))\" arrows=\"2\" arrow-width=\"7\"\/> <line endpoints=\"((1,5),(4,5))\" arrows=\"2\" arrow-width=\"8\"\/> <line endpoints=\"((1,4),(4,4))\" arrows=\"2\" arrow-width=\"9\"\/> <!-- right side arrows --> <line endpoints=\"((6,9),(9,9))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(35,60)\"\/> <line endpoints=\"((6,8),(9,8))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(40,60)\"\/> <line endpoints=\"((6,7),(9,7))\" arrows=\"2\" arrow-width=\"6\" arrow-angles=\"(45,60)\"\/> <line endpoints=\"((6,6),(9,6))\" arrows=\"2\" arrow-width=\"7\" arrow-angles=\"(35,80)\"\/> <line endpoints=\"((6,5),(9,5))\" arrows=\"2\" arrow-width=\"8\" arrow-angles=\"(40,80)\"\/> <line endpoints=\"((6,4),(9,4))\" stroke=\"red\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(40,80)\"\/> <!-- longer line at the bottom --> <line endpoints=\"((1,3),(9,3))\" arrows=\"2\" additional-arrows=\"(0.7,0.5)\" arrow-width=\"9\" arrow-angles=\"(60,90)\"\/> <line endpoints=\"((1,2),(9,2))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(30,80)\"\/> <line endpoints=\"((1,1),(9,1))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(10,90)\" additional-arrows=\"0.5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "diagram-arrow-defs",
+  "level": "2",
+  "url": "sec-arrows.html#diagram-arrow-defs",
+  "type": "Figure",
+  "number": "4.3.5",
+  "title": "",
+  "body": "    The shape of an arrowhead and its attachment to the path.  "
+},
+{
+  "id": "diagram-arrow-angle-def",
+  "level": "2",
+  "url": "sec-arrows.html#diagram-arrow-angle-def",
+  "type": "Figure",
+  "number": "4.3.6",
+  "title": "",
+  "body": "    The definitions of arrow-width=w and arrow-angles=(A,B) .  "
 },
 {
   "id": "backmatter-2",

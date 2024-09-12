@@ -205,8 +205,29 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-de-solutions" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Solutions to differential equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">3.9</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">3.10</span> <span class="title">The publication file</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-paths.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Paths</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paths.html#sec-paths-3" class="internal"><span class="codenumber">3.9.1</span> <span class="title">Defining paths</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paths.html#sec-paths-4" class="internal"><span class="codenumber">3.9.2</span> <span class="title">Decorations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-shapes.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Shape constructions and clipping</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-3" class="internal"><span class="codenumber">3.10.1</span> <span class="title">Defining shapes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-4" class="internal"><span class="codenumber">3.10.2</span> <span class="title">Shape Constructions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-5" class="internal"><span class="codenumber">3.10.3</span> <span class="title">Clipping</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chap-next-steps.html" class="internal"><span class="codenumber">4</span> <span class="title">Next steps</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The publication file</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Arrows</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -214,13 +235,30 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-installation"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Installation and use</span>
 </h2>
-<div class="para" id="sec-installation-2">PreFigure, which is written in the Python programming language, may be installed by visiting the <a class="external" href="https://github.com/davidaustinm/prefigure" target="_blank">GitHub repository</a><details class="ptx-footnote" aria-live="polite" id="sec-installation-2-2"><summary class="ptx-footnote__number" title="Footnote 1.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-installation-2-2"><code class="code-inline tex2jax_ignore">github.com/davidaustinm/prefigure</code></div></details> and following the installation instructions given there.</div>
-<div class="para" id="sec-installation-3">Once again, PreFigure can be called from the command line.  If <code class="code-inline tex2jax_ignore">foo.xml</code> contains a PreFigure XML diagram description, then</div>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><span class="prompt unselectable">$ </span><b>python parse.py foo.xml
-</b></pre></div>
-<div class="para" id="sec-installation-5">will create the output files <code class="code-inline tex2jax_ignore">output/foo.svg</code> and <code class="code-inline tex2jax_ignore">output/foo.xml</code>, where the second is an XML file used by a screen reader to navigate the diagram with the arrow keys.  To create a tactile version of the diagram, use</div>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><span class="prompt unselectable">$ </span><b>python parse.py -f tactile foo.xml
-</b></pre></div></section></div>
+<div class="para logical" id="sec-installation-2">
+<div class="para">PreFigure may be used in two different ways.</div>
+<ol class="decimal">
+<li id="sec-installation-2-1-1"><div class="para" id="sec-installation-2-1-1-1">PreFigure is available in a <a class="external" href="https://github.com/davidaustinm/prefigure-codespace" target="_blank">GitHub Codespace.</a><details class="ptx-footnote" aria-live="polite" id="sec-installation-2-1-1-1-2"><summary class="ptx-footnote__number" title="Footnote 1.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-installation-2-1-1-1-2"><code class="code-inline tex2jax_ignore">github.com/davidaustinm/prefigure-codespace</code></div></details>  For many users, this will be a convenient way to create figures since it provides a fully configured authoring environment.  More information is available at that link.</div></li>
+<li id="sec-installation-2-1-2"><div class="para" id="sec-installation-2-1-2-1">PreFigure may also be installed as a Python package on your own machine. There are, however, a few additional steps required so be sure to follow the <a class="external" href="https://github.com/davidaustinm/prefigure" target="_blank">instructions given here.</a><details class="ptx-footnote" aria-live="polite" id="sec-installation-2-1-2-1-2"><summary class="ptx-footnote__number" title="Footnote 1.4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-installation-2-1-2-1-2"><code class="code-inline tex2jax_ignore">github.com/davidaustinm/prefigure</code></div></details>
+</div></li>
+</ol>
+</div>
+<div class="para logical" id="sec-installation-3">
+<div class="para">From a codespace or once installed, PreFigure can be called from the command line.  General help is available with <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><span class="prompt unselectable">$ </span><b>prefig --help
+</b></pre></div> <div class="para" id="sec-installation-3-2">and help for specific commands can be found with, for instance, <code class="code-inline tex2jax_ignore">prefig build --help</code>.</div>
+</div>
+<ul class="disc">
+<li id="sec-installation-3-3-1"><div class="para" id="sec-installation-3-3-1-1">To compile a PreFigure source file <code class="code-inline tex2jax_ignore">foo.xml</code> into a diagram, use <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><span class="prompt unselectable">$ </span><b>prefig build foo.xml
+</b></pre></div> A tactile version of the diagram is created with <code class="code-inline tex2jax_ignore">prefig build -f tactile foo.xml</code>. In either case, the output image will appear in <code class="code-inline tex2jax_ignore">output/foo.svg</code> while annotations read by a screen reader are in <code class="code-inline tex2jax_ignore">output/foo.xml</code>.</div></li>
+<li id="sec-installation-3-3-2"><div class="para" id="sec-installation-3-3-2-1">Once an image is built, it may be viewed with <code class="code-inline tex2jax_ignore">prefig view foo</code> If the diagram contains annotations, this will provide a means of exploring the diagram and annotations using the <code class="code-inline tex2jax_ignore">diagcess</code> library.  To view the diagram without annotations, use <code class="code-inline tex2jax_ignore">prefig view -i foo</code> to ignore the annotations.</div></li>
+<li id="sec-installation-3-3-3"><div class="para" id="sec-installation-3-3-3-1">To make a PDF from a diagram that has already been built, use <code class="code-inline tex2jax_ignore">prefig pdf foo</code>. Including the <code class="code-inline tex2jax_ignore">-b</code> flag will cause the diagram to be built first: <code class="code-inline tex2jax_ignore">prefig pdf -b foo</code>.</div></li>
+<li id="sec-installation-3-3-4">
+<div class="para" id="sec-installation-3-3-4-1">It is not essential to do this, but if PreFigure is installed locally, you may want to begin with <code class="code-inline tex2jax_ignore">prefig init</code>, which has the effect of installing some MathJax libraries (PreFigure will try to install these later when needed) as well as the Braille29 font.</div>
+<div class="para" id="sec-installation-3-3-4-2">If you would like to explore the set of included examples, use <code class="code-inline tex2jax_ignore">prefig examples</code> to copy the set of examples into the current directory.</div>
+<div class="para" id="sec-installation-3-3-4-3">You may initialize a new PreFigure project with <code class="code-inline tex2jax_ignore">prefig new</code>. This copies a simple publication file and the diagcess library files into the current directory.  PreFigure work done within this directory and any subdirectories will be able to find these when needed.</div>
+</li>
+</ul>
+</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-gallery.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chap-start.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
