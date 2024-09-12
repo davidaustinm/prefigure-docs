@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-arrows" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Arrows</title>
+
+  <p>Arrows can appear in many different contexts within a PreFigure
+  diagram.  For instance, a <tag>vector</tag> will be drawn with an
+  arrowhead, usually at its tip, as seen in <xref
+  ref="diagram-arrows-vector"/>.  Most graphical components that
+  define a path, such as a <tag>polygon</tag> and
+  <tag>parametric-curve</tag>, can be decorated with arrows.
+  </p>
+
+  <figure xml:id="diagram-arrows-vector">
+    <sidebyside widths="50%">
+      <image source="images/vectors"/>
+    </sidebyside>
+    <caption>
+      Arrows that decorate vectors.
+    </caption>
+  </figure>
+
+  <p>In constrast, a <tag>slope-field</tag> may have
+  many arrows, one on the end of each line segment, as shown in <xref
+  ref="diagram-arrows-slope"/> .
+  </p>
+
+  <figure xml:id="diagram-arrows-slope">
+    <sidebyside widths="80%">
+      <image source="images/judson-slope-field"/>
+    </sidebyside>
+    <caption> Adapted from Tom Judson's
+      <url href="https://judsonbooks.org/ode-project/"
+           target="_blank"> Ordinary Differential Equations
+      Project</url>.
+      </caption>
+  </figure>
+
+  <p> As a result, it is possible to adjust the relative size and
+  shape of arrowheads.  Before describing the possibilities, however,
+  it is important to recognize that the size of arrowheads is scaled
+  by the <attr>thickness</attr> attribute so, for instance, the
+  arrowhead on a line whose <attr>thickness=3</attr> will be three
+  times the size as one on a line whose <attr>thickness=1</attr>.
+  </p>
+
+  <p>
+  <xref ref="diagram-arrow-properties"/> shows a variety of choices
+  for defining the appearance of arrowheads.  Notice that there are
+  two attributes, <attr>arrow-width</attr> and
+  <attr>arrow-angles</attr>, that can be specified and that are
+  described more fully below.
+  </p>
+
+  <figure xml:id="diagram-arrow-properties">
+    <sidebyside width="80%">
+      <image source="images/arrow_properties"/>
+    </sidebyside>
+    <caption>A collection of arrows demonstrating various options.
+    </caption>
+  </figure>
+
+  <listing xml:id="listing-arrow-properties">
+    <program>
+      <input><xi:include href="code/arrow_properties.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-arrow-properties"/>. </caption>
+  </listing>
+
+  <p> Notice that a <tag>line</tag> has an
+  <attr>additional-arrows</attr> attribute that allows one to include
+  arrowheads at various locations along the line.  The locations are
+  given as a number between 0 and 1 specifying the relative distance
+  along the line segment.
+  </p>
+
+  <p>The shape of an arrowhead and how it is attached to the end of a
+  path is shown in <xref 
+  ref="diagram-arrow-defs"/>.  Once again, the size of the arrowhead
+  is scaled by the <attr>thickness</attr> of the path.  
+  (This style of arrowhead is adapted
+  from Bill Casselman's <url
+  ref="https://personal.math.ubc.ca/~cass/piscript/" target="_blank">
+  PiScript</url> package.)
+  </p>
+  
+  <figure xml:id="diagram-arrow-defs">
+    <sidebyside width="60%">
+      <image source="images/arrow_def"/>
+    </sidebyside>
+    <caption>The shape of an arrowhead and its attachment to the
+    path. 
+    </caption>
+  </figure>
+
+  <p><xref ref="diagram-arrow-angle-def"/> shows the meaning of the
+  <attr>angle-width</attr> and <attr>angle-angles</attr> attributes.
+  The <attr>angle-width</attr>, whose value is in SVG coordinates and
+  whose default is 4, controls how far from the path the arrowhead
+  extends.  The <attr>angle-angles</attr> attribute is a pair of
+  angles <m>(A,B)</m>, given in degrees.  The default values are
+  <m>(24,60)</m>.
+  </p>
+
+  <figure xml:id="diagram-arrow-angle-def">
+    <sidebyside width="60%">
+      <image source="images/arrow_angle_def"/>
+    </sidebyside>
+    <caption>The definitions of <attr>arrow-width=w</attr> and
+    <attr>arrow-angles=(A,B)</attr>.
+    </caption>
+  </figure>
+
+  <p>Defining these attributes in a publication file allows them to be
+  applied to all the diagrams in a project.
+  </p>
+
+  <p> As we will see later, these attributes are ignored when placing
+  arrowheads in a tactile diagram since the shape of the arrowheads is
+  a convention within the braille community.
+  </p>
+  
+</section>
+

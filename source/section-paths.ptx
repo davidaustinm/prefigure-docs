@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-paths" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Paths</title>
+
+  <introduction>
+    <p>The <tag>path</tag> tag provides authors with the means to
+    create more complicated objects by concatenating simpler ones.  As
+    a preview, notice that there are two <tag>path</tag>s in <xref
+    ref="diagram-path-preview"/>.  The simpler path, in red, is a
+    single quadratic B&#x00E9;zier curve.  The more complicated path, in
+    blue, is composed of line segments, a circular arc, and a cubic
+    B&#x00E9;zier curve, with one of the line segments decorated with a
+    zig-zag pattern.
+    </p>
+
+    <figure xml:id="diagram-path-preview">
+      <sidebyside width="60%">
+	<image source="images/paths-preview"/>
+      </sidebyside>
+      <caption>The graphical result of two <tag>path</tag>s.</caption>
+    </figure>
+  </introduction>
+
+  <subsection>
+    <title> Defining paths </title>
+
+    <p>We will first focus on how a <tag>path</tag> is defined by
+    concatenating simpler pieces.  Throughout the definition of a
+    path, there is always a current point that is used to construct
+    the next piece of the path.  For this reason, a <tag>path</tag>
+    tag must always have a <attr>start</attr> attribute, which serves
+    as the initial point of the path.  
+    </p>
+
+    <p> <xref ref="diagram-paths"/> shows two paths and the PreFigure
+    source given in <xref ref="listing-paths"/>. </p>
+
+    <figure xml:id="diagram-paths">
+      <sidebyside width="60%">
+	<image source="images/paths"/>
+      </sidebyside>
+      <caption>The graphical result of two <tag>path</tag>s.</caption>
+    </figure>
+
+    <listing xml:id="listing-paths">
+      <program line-numbers="yes">
+	<input><xi:include href="code/paths.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the paths in
+      <xref ref="diagram-paths"/></caption> 
+    </listing>
+    
+    <p> The first path in blue, defined by lines 4 through 11,
+    demonstrates many options that are available when defining a path.
+    <dl>
+      <li>
+	<title>lineto</title>
+	<p>The <tag>lineto</tag> tag has a <attr>point</attr>
+	attribute, as seen in line 5.  This has the effect of adding
+	to the path a line segment from the current point to the
+	<attr>point</attr> and updating the current point.
+	</p>
+      </li>
+      <li>
+	<title>moveto</title>
+	<p>The <tag>moveto</tag> tag, shown in line 6, simply updates
+	the current point to the given <attr>point</attr> without
+	adding a line segment.  In effect, it is like picking up your
+	pen. 
+	</p>
+      </li>
+      <li>
+	<title>horizontal</title>
+	<p>The <tag>horizontal</tag> tag is like a <tag>lineto</tag>
+	where the new endpoint is a given horizontal
+	<attr>distance</attr> from the current point.
+	</p>
+      </li>
+      <li>
+	<title>arc</title>
+	<p>An <tag>arc</tag> tag adds a circular arc to the path with
+	a specific <attr>center</attr>, <attr>radius</attr>, and
+	angular <attr>range</attr>.  If the first point of the arc is
+	not the same as the current point, then a line segment from
+	the current point to the first point is added.
+	</p>
+      </li>
+      <li>
+	<title>cubic-bezier and quadratic bezier</title>
+	<p>B&#x00E9;zier curves are smooth curves defined in terms of a set
+	of <em>control points</em>.  Mathematically,
+	B&#x00E9;zier curves are parametric curves whose coordinate
+	functions are polynomials.  PreFigure provides access to both
+	cubic and quadratic B&#x00E9;zier curves through the tags
+	<tag>cubic-bezier</tag> and <tag>quadratic-bezier</tag>.
+	</p>
+
+	<p><xref ref="diagram-bezier"/> shows two paths consisting
+	only of B&#x00E9;zier curves.  The lower path consists of two cubic
+	B&#x00E9;zier curves.  The labeled point <m>P_0</m> is the starting
+	point while <m>P_1</m>, <m>P_2</m>, and <m>P_3</m> are the three
+	given control points.  The final control point, <m>P_3</m>, is
+	the endpoint of the first B&#x00E9;zier curve while the control points
+	<m>P_1</m> and <m>P_2</m> define the initial and final
+	velocities of the curve.
+	</p>
+
+	<figure xml:id="diagram-bezier">
+	  <sidebyside width="80%">
+	    <image source="images/bezier"/>
+	  </sidebyside>
+	  <caption>The graphical result of two <tag>path</tag>s.</caption>
+	</figure>
+
+	<p>A quadratic B&#x00E9;zier curve, the upper curve in <xref
+	ref="diagram-bezier"/>, is similar but is defined by only two
+	control points.
+	</p>
+
+	<p><xref ref="listing-bezier"/> shows the PreFigure source,
+	omitting some of the details, of <xref ref="diagram-bezier"/>.
+	</p>
+
+	<listing xml:id="listing-bezier">
+	  <program line-numbers="yes">
+	    <input><xi:include href="code/bezier-edit.xml" parse="text"/></input>
+	  </program>
+	  <caption>The PreFigure source for the B&#x00E9;zier curves in
+	  <xref ref="diagram-bezier"/></caption> 
+	</listing>
+      </li>
+
+      <li>
+	<title>Repeat</title>
+
+	<p>A <tag>repeat</tag> tag can be included inside a
+	<tag>path</tag> as long as its children are allowed in a
+	<tag>path</tag>.  See <xref ref="sec-repeat"/> for more
+	details. 
+	</p>
+      </li>
+
+      <li>
+	<title>Other constructions</title>
+
+	<p> Some familiar constructions, such as <tag>graph</tag>,
+	<tag>parametric_curve</tag>, and <tag>polygon</tag> can also
+	be placed inside of a <tag>path</tag>.  Ths is demonstrated in
+	<xref ref="diagram-more-paths"/> and its accompanying
+	<xref ref="listing-more-paths"/>.
+	</p>
+
+	<figure xml:id="diagram-more-paths">
+	  <sidebyside width="80%">
+	    <image source="images/more-paths"/>
+	  </sidebyside>
+	  <caption>The graphical result of two <tag>path</tag>s.</caption>
+	</figure>
+
+	<listing xml:id="listing-more-paths">
+	  <program line-numbers="yes">
+	    <input><xi:include href="code/more-paths.xml" parse="text"/></input>
+	  </program>
+	  <caption>The PreFigure source for the B&#x00E9;zier curves in
+	  <xref ref="diagram-bezier"/></caption> 
+	</listing>
+      </li>
+    </dl>
+
+    </p>
+
+    <p>A <tag>path</tag> may have an attribute
+    <attr>closed="yes"</attr> that closes the path.  You will need to
+    be explicit about how the <tag>path</tag> is displayed by
+    specifying a <attr>stroke</attr> and/or <attr>fill</attr>.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title> Decorations</title>
+
+    <p>Line segments within a <tag>path</tag> defined by a
+    <tag>lineto</tag>, <tag>horizontal</tag>, or <tag>vertical</tag>
+    may be decorated in a variety of ways using a
+    <attr>decoration</attr> attribute.  The value of this attribute is
+    a set of parameters separated by semicolons, the first of which is
+    the type of decoration, either <c>coil</c>, <c>zigzag</c>, or
+    <c>capacitor</c>. 
+    </p>
+
+    <p>The <c>coil</c> decoration resembles a spring.  You can
+    specify the <c>number</c> of coils on the line segment, the
+    <c>dimensions</c>, and the <c>center</c>.
+    </p>
+    
+    <p>The <c>dimensions</c> parameter is an ordered pair whose
+    values are interepreted in SVG coordinate lengths.  The first
+    number gives the horizontal distance traversed by one coil
+    while the second gives the maximum vertical displacement from
+    the undecorated line segment.</p>
+    
+    <p>The <c>center</c> parameter is a number between 0 and 1,
+    interpreted as a fraction of the length of the line segment,
+    that indicates where the center of the coils lies.  The value of
+    this parameter is 0.5 by default, which centers the coil on the
+    line segment.
+    </p>
+
+    <p><xref ref="diagram-coils"/> shows some examples with the
+    source code in <xref ref="listing-coils"/>.
+    </p>
+    
+    <figure xml:id="diagram-coils">
+      <sidebyside width="60%">
+	<image source="images/coils"/>
+      </sidebyside>
+      <caption>Some <c>coil</c> decorations.</caption>
+    </figure>
+    
+    <listing xml:id="listing-coils">
+      <program line-numbers="yes">
+	<input><xi:include href="code/coils.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the coils in
+      <xref ref="diagram-coils"/>.</caption> 
+    </listing>
+
+    <p><xref ref="diagram-mass-spring"/> demonstrates the use of some
+    coils. </p>
+    
+    <figure xml:id="diagram-mass-spring">
+      <sidebyside width="60%">
+	<image source="images/mass-spring"/>
+      </sidebyside>
+      <caption>Using decorations to represent a spring.  Adapted from
+      Tom Judson's
+      <url href="https://judsonbooks.org/ode-project/"
+	   target="_blank"> Ordinary Differential Equations
+      Project</url>.      
+      </caption>
+    </figure>
+
+    <listing xml:id="listing-mass-spring">
+      <program line-numbers="yes">
+	<input><xi:include href="code/mass-spring.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for 
+      <xref ref="diagram-mass-spring"/>.</caption> 
+    </listing>
+    
+    <p>The <c>zigzag</c> decoration has the same parameters as a
+    <c>coil</c> while the <c>capacitor</c> decoration has a <c>center</c>
+    parameter, which again defaults to 0.5, and a <c>dimensions</c>
+    parameter, which controls the horizontal gap and vertical length
+    </p>
+    
+    <figure xml:id="diagram-rcl-circuit">
+      <sidebyside width="60%">
+	<image source="images/rcl-circuit"/>
+      </sidebyside>
+      <caption>An RLC circuit.  Adapted from Tom Judson's
+      <url href="https://judsonbooks.org/ode-project/"
+	   target="_blank"> Ordinary Differential Equations
+      Project</url>.
+      </caption>
+    </figure>
+    
+    <listing xml:id="listing-rcl-circuit">
+      <program line-numbers="yes">
+	<input><xi:include href="code/rcl-circuit.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for 
+      <xref ref="diagram-rcl-circuit"/>.</caption> 
+    </listing>
+    
+  </subsection>
+
+</section>
+

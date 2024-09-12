@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-shapes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Shape constructions and clipping</title>
+
+  <introduction>
+    <p>This section introduces shapes and some things you can do with
+    them. A shape is any graphical component that defines a
+    two-dimensional region, such as a <tag>circle</tag>,
+    <tag>rectangle</tag>, <tag>polygon</tag>, or <tag>path</tag>.  The
+    tags <tag>graph</tag> or <tag>parametric-curve</tag> also define
+    shapes as, behind the scenes, PreFigure will close the paths they
+    define.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title> Defining shapes </title>
+
+    <p>Shapes are defined within a special <tag>define-shapes</tag>
+    tag, which make them available for later use.  <xref
+    ref="diagram-shape-start"/>, and the accompanying PreFigure source
+    in <xref ref="listing-shape-start"/>, provides a simple example.
+    </p>
+
+    <figure xml:id="diagram-shape-start">
+      <sidebyside width="60%">
+	<image source="images/shape_start"/>
+      </sidebyside>
+      <caption>A simple use of the <tag>shape</tag> tag.</caption>
+    </figure>
+
+    <listing xml:id="listing-shape-start">
+      <program line-numbers="yes">
+	<input><xi:include href="code/shape_start.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the diagram in
+      <xref ref="diagram-shape-start"/></caption> 
+    </listing>
+
+    <p>Note the use of the <tag>define-shapes</tag> tag in lines 3
+    through 5.  Within this tag, we define a circle with the handle
+    <attr>at="A"</attr>.  Any <attr>stroke</attr> or <attr>fill</attr>
+    attributes will be ignored in the definition since we mean to
+    focus solely on the geometric shape.  Also, it is important that
+    shapes be defined within a <tag>coordinates</tag> tag as the
+    definitions become invalid once we leave this coordinate system.
+    </p>
+
+    <p>We then recall the shape in line 7 and supply attributes
+    for filling and stroking it within that element.  Notice that the
+    attribute <attr>shape="A"</attr> serves as a reference to the
+    previously defined shape.  As we will see, we sometimes want to
+    recall two or more shapes at once, which we could do with a
+    comma-separated list.  For this reason, PreFigure accepts either the
+    attribute <attr>shapes</attr> (note the plural) or
+    <attr>shape</attr> as a convenience.
+    </p>
+    
+  </subsection>
+
+  <subsection>
+    <title> Shape Constructions</title>
+
+    <p>Of course, we could easily have created the diagram in <xref
+    ref="diagram-shape-start"/> with a single <tag>circle</tag>
+    tag. Shapes, however, provide us with access to some set
+    operations, such as intersections, unions, and differences.  For
+    example, <xref ref="diagram-shape-difference"/> demonstrates how
+    we can define the difference of two sets <m>A\setminus B</m>.
+    </p>
+
+    <figure xml:id="diagram-shape-difference">
+      <sidebyside width="60%">
+	<image source="images/shape_difference"/>
+      </sidebyside>
+      <caption>The difference of two sets.</caption>
+    </figure>
+
+    <listing xml:id="listing-shape-difference">
+      <program line-numbers="yes">
+	<input><xi:include href="code/shape_difference.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the diagram in
+      <xref ref="diagram-shape-difference"/></caption> 
+    </listing>
+
+    <p>In this example, we define two sets <m>A</m> and <m>B</m> in
+    the <tag>define-shapes</tag> tag.  We then construct and display
+    their intersection using the <tag>shape</tag> tag in lines 8 and
+    9.  Notice that we use the <attr>shapes</attr> attribute to recall
+    the two shapes (though <attr>shape="A,B"</attr> would also
+    suffice).  The attribute <attr>operation="difference"</attr>
+    declares that this set should be constructed as the difference of
+    the two sets.  In this case, <attr>shapes="B,A"</attr> would yield
+    the difference <m>B\setminus A</m>.
+    </p>
+
+    <p> Other operations include <attr>operation="union"</attr>,
+    <attr>operation="intersection"</attr>, and
+    <attr>operation="symmetric-difference" or "sym-diff"</attr>.
+    These four operations are demonstrated in <xref
+    ref="diagram-shape-construct"/>.
+    </p>
+    
+    <figure xml:id="diagram-shape-construct">
+      <sbgroup>
+	<sidebyside widths="45% 45%">
+	<image source="images/shape_union"/>
+	<image source="images/shape_intersection"/>
+      </sidebyside>
+      <sidebyside widths="45% 45%">
+	<image source="images/shape_difference"/>
+	<image source="images/shape_xor"/>
+      </sidebyside>
+      </sbgroup>
+      <caption>Four sets operations.</caption>
+    </figure>
+
+    <p>Intersections, unions, and symmetric differences can take any
+    number of sets, while a difference requires exactly two.
+    </p>
+
+    <p>A fifth operation is <attr>operation="convex-hull"</attr>,
+    which produces the convex hull of the union of the given shapes.
+    <xref ref="diagram-shape-convex"/> includes a demonstration, with
+    the convex hull of two sets outlined in red.
+    This is not an especially realistic diagram, but it does demonstrate
+    some of the possibilities when working with shapes.
+    </p>
+
+    <figure xml:id="diagram-shape-convex">
+      <sidebyside width="60%">
+	<image source="images/shape_convex"/>
+      </sidebyside>
+      <caption>The convex hull of the union of two shapes.</caption>
+    </figure>
+
+    <listing xml:id="listing-shape-convex">
+      <program>
+	<input><xi:include href="code/shape_convex.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the diagram in
+      <xref ref="diagram-shape-convex"/></caption> 
+    </listing>
+
+  </subsection>
+
+  <subsection>
+    <title> Clipping </title>
+
+    <p>A second use of shapes is to clip a diagram with the
+    <tag>clip</tag> tag.  <xref ref="diagram-shape-clip"/> provides a
+    demonstration.  Notice that the clipping shape is applied only to
+    elements that are children of the <tag>clip</tag> tag.
+    </p>
+
+    <figure xml:id="diagram-shape-clip">
+      <sidebyside width="60%">
+	<image source="images/shape_clip"/>
+      </sidebyside>
+      <caption>Using the <tag>clip</tag> tag.</caption>
+    </figure>
+
+    <listing xml:id="listing-shape-clip">
+      <program>
+	<input><xi:include href="code/shape_clip.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the diagram in
+      <xref ref="diagram-shape-clip"/></caption> 
+    </listing>
+
+  </subsection>
+
+</section>
+

@@ -3,11 +3,6 @@
 <section xml:id="sec-publication" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The publication file</title>
 
-  <introduction>
-    <p>
-    </p>
-  </introduction>
-
   <p>When illustrating a large project such as a book, you will likely want
   to create diagrams that have a consistent style.  PreFigure constructs
   some components with default values for the attributes.  For
@@ -67,9 +62,26 @@
   <p>To apply the publication file <c>pub_file.xml</c> to a diagram,
   use the <c>-p</c> switch when compiling:
   <cd>
-python parse.py -p pub_file.xml foo.xml    
+prefig build -p pub_file.xml foo.xml    
   </cd>
   </p>
 
+  <p>A good way to get started using a publication file for a large
+  project is to say
+  <cd>
+prefig new    
+  </cd>
+  which has the effect of copying an empty publication
+  <c>pf_publication.xml</c> and the diagcess tools into the current
+  directory.  If you do not specify a publication file in a 
+  <c>build</c> command, PreFigure will look for a
+  <c>pf_publication.xml</c> in the current directory or a parent
+  directory.  To disable the use of any publication file, use the
+  <c>-i</c> or <c>--ignore_publication</c> flag with the build
+  command:
+  <cd>
+prefig build -i foo.xml
+  </cd>
+  </p>
 </section>
 

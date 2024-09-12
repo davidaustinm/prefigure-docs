@@ -10,6 +10,12 @@ output
 # don't track assets generated from source
 generated-assets
 
+# don't track virtual environments or other PreFigure ancillaries
+.venv
+diagcess.js
+diagcess.html
+pf_publication.xml
+
 # don't track the executables.ptx file
 executables.ptx
 

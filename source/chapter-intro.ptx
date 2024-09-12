@@ -212,36 +212,109 @@
   <section xml:id="sec-installation">
     <title> Installation and use </title>
 
-    <p> PreFigure, which is written in the Python programming
-    language, may be installed by visiting the
-    <url href="https://github.com/davidaustinm/prefigure"
-	 target="_blank">
-      GitHub repository 
-      </url> and following the installation instructions given there. 
-    </p>
-
-    <p> Once again, PreFigure can be called from the command line.  If
-    <c>foo.xml</c> contains a PreFigure XML diagram description, then
-    </p>
-
-    <console>
-      <input>
-	python parse.py foo.xml
-      </input>
-    </console>
-
     <p>
-    will create the output files <c>output/foo.svg</c> and
-    <c>output/foo.xml</c>, where the second is an XML file
-    used by a screen reader to navigate the diagram with the arrow
-    keys.  To create a tactile version of the diagram, use
+      PreFigure may be used in two different ways.
+      <ol>
+	<li>
+	  <p>PreFigure is available in a
+	  <url href="https://github.com/davidaustinm/prefigure-codespace"
+	       target="_blank"> GitHub Codespace.</url>  For many
+	  users, this will be a convenient way to create figures since
+	  it provides a fully configured authoring environment.  More
+	  information is available at that link.
+	  </p>
+	</li>
+	<li>
+	  <p>PreFigure may also be installed as a Python package on
+	  your own machine. There are, however, a few additional
+	  steps required so be sure to follow the
+	  <url href="https://github.com/davidaustinm/prefigure"
+	       target="_blank">
+	    instructions given here.
+	  </url>
+	  </p>
+	</li>
+      </ol>
     </p>
+
+    <p> From a codespace or once installed, PreFigure can be called
+    from the command line.  General help is available with
 
     <console>
       <input>
-	python parse.py -f tactile foo.xml
+	prefig --help
       </input>
     </console>
+
+    <p> and help for specific commands can be found with, for instance,
+    <c>prefig build --help</c>.
+    </p>
+
+    <ul>
+      <li>
+	<p> To compile a PreFigure source file <c>foo.xml</c>
+	into a diagram, use
+	<console>
+	  <input>
+	    prefig build foo.xml
+	  </input>
+	</console>
+	A tactile version of the diagram is created with
+	<c>prefig build -f tactile foo.xml</c>.
+	In either case, the output image will appear in
+	<c>output/foo.svg</c> while annotations read by a screen
+	reader are in
+	<c>output/foo.xml</c>. 
+	</p>
+      </li>
+
+      <li>
+	<p> Once an image is built, it may be viewed with
+	<c>prefig view foo</c>
+	If the diagram contains annotations, this will provide a means
+	of exploring the diagram and annotations using the
+	<c>diagcess</c> library.  To view the diagram without
+	annotations, use
+	<c>prefig view -i foo</c>
+	to ignore the annotations.
+	</p>
+      </li>
+
+      <li>
+	<p> To make a PDF from a diagram that has already been built,
+	use 
+	<c>prefig pdf foo</c>.
+	Including the <c>-b</c> flag will cause the diagram to be
+	built first:
+	<c>prefig pdf -b foo</c>.
+	</p>
+      </li>
+
+      <li>
+	<p>It is not essential to do this, but if PreFigure is
+	installed locally, you may want to begin with
+	<c>prefig init</c>,
+	which has the effect of installing some MathJax libraries
+	(PreFigure will try to install these later when needed) as
+	well as the Braille29 font.
+	</p>
+
+	<p>If you would like to explore the set of included examples,
+	use 
+	<c>prefig examples</c>
+	to copy the set of examples into the current directory.
+	</p>
+	
+	<p>You may initialize a new PreFigure project with
+	<c>prefig new</c>.
+	This copies a simple publication file and the diagcess library
+	files into the current directory.  PreFigure work done within
+	this directory and any subdirectories will be able to find
+	these when needed.
+	</p>
+      </li>
+    </ul>
+    </p>	
   </section>
 
 </chapter>

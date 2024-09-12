@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chap-next-steps" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Next steps</title>
+
+  <introduction>
+    <p> PreFigure's basic graphical components, introduced in <xref
+    ref="chap-graphical"/>, will suffice for many of your
+    diagrams.  With those components as a foundation, this chapter
+    will introduce some ways to improve your authoring experience.
+    </p>
+
+    <p>In particular, we will see how to make many copies of a
+    component that differ only slightly using a <tag>repeat</tag>
+    tag.  Stylistic choices, such as the color of a <tag>graph</tag>,
+    can be applied to all diagrams in a project using a publication
+    file.  Also, arrows have many uses in diagrams so we will see how
+    to fine tune their appearance for different applications.
+    </p>
+
+  </introduction>
+
+  <xi:include href="section-repeat.ptx"/>
+  <xi:include href="section-publication.ptx"/>
+  <xi:include href="section-arrows.ptx"/>
+</chapter>

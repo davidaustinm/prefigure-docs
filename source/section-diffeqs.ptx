@@ -49,7 +49,9 @@
 
      <p>To obtain the slope field for an autonomous system, include
      the attribute <attr>system="yes"</attr> in the
-     <tag>slope-field</tag> element.  Notice that the function
+     <tag>slope-field</tag> element.  Also, arrows are added to the
+     <tag>slope-field</tag> using the <attr>arrows="yes"</attr>
+     attribute.  Notice that the function
      defining the differential equation is naturally vector-valued now.
      </p>
      
@@ -145,7 +147,16 @@
      </p>
 
      <p> We can also create phase portraits as in <xref
-     ref="diagram-de-phase"/>.
+     ref="diagram-de-phase"/>.  The source code demonstrates how a
+     <attr>method</attr> can be supplied to the differential equation
+     solver.  Differential equations are solved numerically using a
+     <url
+	 href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html"
+	 target="_blank">
+       Python package
+     </url> that presents a choice of methods.  Most of the time, the
+     default "RK45" method will suffice, but "LSODA" may be helpful
+     when working with stiff equations.
      </p>
 
      <figure xml:id="diagram-de-phase">

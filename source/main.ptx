@@ -14,7 +14,7 @@
     <xi:include href="./chapter-intro.ptx" />
     <xi:include href="./chapter-start.ptx" />
     <xi:include href="./chapter-graphical.ptx" />
-
+    <xi:include href="./chapter-next-steps.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
