@@ -502,7 +502,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.4",
   "title": "Labels",
-  "body": " Labels  The <label> element provides a way of adding text to a diagram. Labels are composed of plain text, mathematics, or a combination of both. Mathematics is written in latex and enclosed in an <m> element. demonstrates some possibilities with the PreFigure source given in .      Some sample labels.     <diagram dimensions=\"(250,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\"> <label anchor=\"(1,3)\" alignment=\"east\"> <m>\\displaystyle f(a)=\\frac{1}{2\\pi i}\\oint_C \\frac{f(z)}{z-a}~dz<\/m> <\/label> <label anchor=\"(1,2)\" alignment=\"east\"> Temperature <\/label> <label anchor=\"(0.5,1)\" alignment=\"east\" rotate=\"90\" scale=\"1.5\"> Time <m>t<\/m> (sec) <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .   Here are some important attributes that determine the placement of labels.  anchor  The label is placed relative to an anchor point with the default being anchor=\"(0,0)\" .   alignment  The alignment attribute specifies how the label is positioned relative to the anchor point. demonstrates the nine possibilities. Each alignment has a 1- or 2-character abbreviation so, for example, alignment=\"se\" is equivalent to alignment=\"southeast\" .      Aligning text to an anchor point.    offset  PreFigure inclues some padding between the anchor and the label, but you will sometimes find that you need to fine tune the position of a label using the offset label. Stating offset=\"(2,-3)\" will move the label two SVG units to the right and three units down from the position determined by the anchor and the alignment.   clear-background  Setting clear-background=\"yes\" causes a white rectangle to be filled behind the label so that it stands out from the background, as seen in .      Setting clear-background=\"yes\"    scale, rotate  As illustrated in , labels can be scaled and rotated.     We remind authors of one exception in that the xlabel and ylabel attributes of an <axes> element are interpreted as latex expressions and automatically wrapped in an <m> element.  Authors should think carefully about the use of labels in their diagrams. In particular, it can be tempting to include lots of labels, possibly even long, complicated labels, in a diagram. However, diagrams should always be carefully integrated into a larger document, which means that the surrounding exposition and caption should help readers interpret the meaning of a diagram. Labels should mainly refer to graphical components and serve as a connection to the surrounding text. This is especially important for the production of tactile diagrams, in which labels that appear relatively short in print can become quite long when parsed into Nemeth braille. So even though Cauchy's formula is indeed beautiful, you should never include it in a diagram.  "
+  "body": " Labels  The <label> element provides a way of adding text to a diagram. Labels are composed of plain text, mathematics, or a combination of both. Mathematics is written in latex and enclosed in an <m> element. demonstrates some possibilities with the PreFigure source given in .      Some sample labels.     <diagram dimensions=\"(250,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\"> <label anchor=\"(1,3)\" alignment=\"east\"> <m>\\displaystyle f(a)=\\frac{1}{2\\pi i}\\oint_C \\frac{f(z)}{z-a}~dz<\/m> <\/label> <label anchor=\"(1,2)\" alignment=\"east\"> Temperature <\/label> <label anchor=\"(0.5,1)\" alignment=\"east\" rotate=\"90\" scale=\"1.5\"> Time <m>t<\/m> (sec) <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .   Labels can span multiple lines and include bold and italic fonts, as shown in and .      Some sample labels.     <diagram dimensions=\"(350,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,5)\"> <grid\/> <label anchor=\"(1,4)\" alignment=\"e\" justify=\"left\" clear-background=\"yes\"> This is a <b>bold<\/b> statement <newline\/> but we can have <it>itatics<\/it> <newline\/> and <it>italicized <b>bold<\/b><\/it> as well <\/label> <label anchor=\"(5,2)\" alignment=\"c\" justify=\"center\" clear-background=\"yes\" interline=\"10\"> Math can still appear: <newline\/> The <it>derivative<\/it> of <m>e^x<\/m> is <m>e^x<\/m> <\/label> <label anchor=\"(1,1)\" alignment=\"se\" scale=\"0.6\" clear-background=\"yes\"> Use the @scale attribute to change the font size. <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .   Here are some important attributes that determine the placement of labels.  anchor  The label is placed relative to an anchor point with the default being anchor=\"(0,0)\" .   alignment  The alignment attribute specifies how the label is positioned relative to the anchor point. demonstrates the nine possibilities. Each alignment has a 1- or 2-character abbreviation so, for example, alignment=\"se\" is equivalent to alignment=\"southeast\" .      Aligning text to an anchor point.    offset  PreFigure inclues some padding between the anchor and the label, but you will sometimes find that you need to fine tune the position of a label using the offset label. Stating offset=\"(2,-3)\" will move the label two SVG units to the right and three units down from the position determined by the anchor and the alignment.   clear-background  Setting clear-background=\"yes\" causes a white rectangle to be filled behind the label so that it stands out from the background, as seen in .      Setting clear-background=\"yes\"    scale, rotate  As illustrated in , labels can be scaled and rotated.   justify  If a label includes more than one line, this attribute determines how the lines are spaced horizontally. The possible values are justify=\"center\", \"left\", \"right\" with center being the default.   interline  This attribute will have a numerical value that determines the vertical space, in SVG units, between lines. The default is interline=\"3\" .     We remind authors of one exception in that the xlabel and ylabel attributes of an <axes> element are interpreted as latex expressions and automatically wrapped in an <m> element.   Best practices  Authors should think carefully about the use of labels in their diagrams. In particular, it can be tempting to include lots of labels, possibly even long, complicated labels, in a diagram. However, diagrams should always be carefully integrated into a larger document, which means that the surrounding exposition and caption should help readers interpret the meaning of a diagram. Labels should mainly refer to graphical components and serve as a connection to the surrounding text. This is especially important for the production of tactile diagrams, in which labels that appear relatively short in print can become quite long when parsed into braille. So even though Cauchy's formula is indeed beautiful, you should probably not include it in a diagram.   "
 },
 {
   "id": "diagram-label-example",
@@ -523,11 +523,29 @@ var ptx_lunr_docs = [
   "body": "  <diagram dimensions=\"(250,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\"> <label anchor=\"(1,3)\" alignment=\"east\"> <m>\\displaystyle f(a)=\\frac{1}{2\\pi i}\\oint_C \\frac{f(z)}{z-a}~dz<\/m> <\/label> <label anchor=\"(1,2)\" alignment=\"east\"> Temperature <\/label> <label anchor=\"(0.5,1)\" alignment=\"east\" rotate=\"90\" scale=\"1.5\"> Time <m>t<\/m> (sec) <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
+  "id": "diagram-labels-lines",
+  "level": "2",
+  "url": "sec-labels.html#diagram-labels-lines",
+  "type": "Figure",
+  "number": "3.4.3",
+  "title": "",
+  "body": "    Some sample labels.  "
+},
+{
+  "id": "listing-labels-lines",
+  "level": "2",
+  "url": "sec-labels.html#listing-labels-lines",
+  "type": "Listing",
+  "number": "3.4.4",
+  "title": "",
+  "body": "  <diagram dimensions=\"(350,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,5)\"> <grid\/> <label anchor=\"(1,4)\" alignment=\"e\" justify=\"left\" clear-background=\"yes\"> This is a <b>bold<\/b> statement <newline\/> but we can have <it>itatics<\/it> <newline\/> and <it>italicized <b>bold<\/b><\/it> as well <\/label> <label anchor=\"(5,2)\" alignment=\"c\" justify=\"center\" clear-background=\"yes\" interline=\"10\"> Math can still appear: <newline\/> The <it>derivative<\/it> of <m>e^x<\/m> is <m>e^x<\/m> <\/label> <label anchor=\"(1,1)\" alignment=\"se\" scale=\"0.6\" clear-background=\"yes\"> Use the @scale attribute to change the font size. <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
   "id": "diagram-alignments",
   "level": "2",
   "url": "sec-labels.html#diagram-alignments",
   "type": "Figure",
-  "number": "3.4.3",
+  "number": "3.4.5",
   "title": "",
   "body": "    Aligning text to an anchor point.  "
 },
@@ -536,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-labels.html#diagram-clear-background",
   "type": "Figure",
-  "number": "3.4.4",
+  "number": "3.4.6",
   "title": "",
   "body": "    Setting clear-background=\"yes\"  "
 },

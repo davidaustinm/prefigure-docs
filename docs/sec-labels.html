@@ -236,7 +236,7 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Labels</span>
 </h2>
 <div class="para" id="sec-labels-2">The <code class="code-inline tex2jax_ignore">&lt;label&gt;</code> element provides a way of adding text to a diagram.  Labels are composed of plain text, mathematics, or a combination of both.  Mathematics is written in <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> and enclosed in an <code class="code-inline tex2jax_ignore">&lt;m&gt;</code> element.  <a href="sec-labels.html#diagram-label-example" class="xref" data-knowl="./knowl/xref/diagram-label-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.1">Figure 3.4.1</a> demonstrates some possibilities with the PreFigure source given in <a href="sec-labels.html#listing-label-example" class="xref" data-knowl="./knowl/xref/listing-label-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.4.2">Listing 3.4.2</a>.</div>
-<figure class="figure figure-like" id="diagram-label-example"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/label-example.svg" role="img" class="contained"></div></div></div>
+<figure class="figure figure-like" id="diagram-label-example"><div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/label-example.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span>Some sample labels.</figcaption></figure><figure class="listing figure-like" id="listing-label-example"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(250,200)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,5,4)"&gt;
     &lt;label anchor="(1,3)" alignment="east"&gt;
@@ -251,31 +251,64 @@ window.MathJax = {
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-labels.html#diagram-label-example" class="xref" data-knowl="./knowl/xref/diagram-label-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.1">Figure 3.4.1</a>.</figcaption></figure><div class="para logical" id="sec-labels-5">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-labels.html#diagram-label-example" class="xref" data-knowl="./knowl/xref/diagram-label-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.1">Figure 3.4.1</a>.</figcaption></figure><div class="para" id="sec-labels-5">Labels can span multiple lines and include bold and italic fonts, as shown in <a href="sec-labels.html#diagram-labels-lines" class="xref" data-knowl="./knowl/xref/diagram-labels-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.3">Figure 3.4.3</a> and <a href="sec-labels.html#listing-labels-lines" class="xref" data-knowl="./knowl/xref/listing-labels-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.4.4">Listing 3.4.4</a>.</div>
+<figure class="figure figure-like" id="diagram-labels-lines"><div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/labels-lines.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span>Some sample labels.</figcaption></figure><figure class="listing figure-like" id="listing-labels-lines"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(350,200)" margins="5"&gt;
+  &lt;coordinates bbox="(0,0,10,5)"&gt;
+    &lt;grid/&gt;
+    &lt;label anchor="(1,4)" alignment="e" justify="left"
+	   clear-background="yes"&gt;
+      This is a &lt;b&gt;bold&lt;/b&gt; statement
+      &lt;newline/&gt;
+      but we can have &lt;it&gt;itatics&lt;/it&gt;
+      &lt;newline/&gt;
+      and &lt;it&gt;italicized &lt;b&gt;bold&lt;/b&gt;&lt;/it&gt; as well
+    &lt;/label&gt;
+
+    &lt;label anchor="(5,2)" alignment="c" justify="center"
+	   clear-background="yes" interline="10"&gt;
+      Math can still appear:
+      &lt;newline/&gt;
+      The &lt;it&gt;derivative&lt;/it&gt; of &lt;m&gt;e^x&lt;/m&gt; is &lt;m&gt;e^x&lt;/m&gt;
+    &lt;/label&gt;
+
+    &lt;label anchor="(1,1)" alignment="se" scale="0.6"
+	   clear-background="yes"&gt;
+      Use the @scale attribute to change the font size.
+    &lt;/label&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-labels.html#diagram-label-example" class="xref" data-knowl="./knowl/xref/diagram-label-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.1">Figure 3.4.1</a>.</figcaption></figure><div class="para logical" id="sec-labels-8">
 <div class="para">Here are some important attributes that determine the placement of labels.</div>
 <dl class="description-list">
-<dt id="sec-labels-5-1-1">anchor</dt>
-<dd><div class="para" id="sec-labels-5-1-1-2">The label is placed relative to an <code class="code-inline tex2jax_ignore">@anchor</code> point with the default being <code class="code-inline tex2jax_ignore">@anchor="(0,0)"</code>.</div></dd>
-<dt id="sec-labels-5-1-2">alignment</dt>
+<dt id="sec-labels-8-1-1">anchor</dt>
+<dd><div class="para" id="sec-labels-8-1-1-2">The label is placed relative to an <code class="code-inline tex2jax_ignore">@anchor</code> point with the default being <code class="code-inline tex2jax_ignore">@anchor="(0,0)"</code>.</div></dd>
+<dt id="sec-labels-8-1-2">alignment</dt>
 <dd>
-<div class="para" id="sec-labels-5-1-2-2">The <code class="code-inline tex2jax_ignore">@alignment</code> attribute specifies how the label is positioned relative to the anchor point.  <a href="sec-labels.html#diagram-alignments" class="xref" data-knowl="./knowl/xref/diagram-alignments.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.3">Figure 3.4.3</a> demonstrates the nine possibilities. Each alignment has a 1- or 2-character abbreviation so, for example, <code class="code-inline tex2jax_ignore">@alignment="se"</code> is equivalent to <code class="code-inline tex2jax_ignore">@alignment="southeast"</code>.</div>
+<div class="para" id="sec-labels-8-1-2-2">The <code class="code-inline tex2jax_ignore">@alignment</code> attribute specifies how the label is positioned relative to the anchor point.  <a href="sec-labels.html#diagram-alignments" class="xref" data-knowl="./knowl/xref/diagram-alignments.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.5">Figure 3.4.5</a> demonstrates the nine possibilities. Each alignment has a 1- or 2-character abbreviation so, for example, <code class="code-inline tex2jax_ignore">@alignment="se"</code> is equivalent to <code class="code-inline tex2jax_ignore">@alignment="southeast"</code>.</div>
 <figure class="figure figure-like" id="diagram-alignments"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/labels.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span>Aligning text to an anchor point.</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>Aligning text to an anchor point.</figcaption></figure>
 </dd>
-<dt id="sec-labels-5-1-3">offset</dt>
-<dd><div class="para" id="sec-labels-5-1-3-2">PreFigure inclues some padding between the anchor and the label, but you will sometimes find that you need to fine tune the position of a label using the <code class="code-inline tex2jax_ignore">@offset</code> label.  Stating <code class="code-inline tex2jax_ignore">@offset="(2,-3)"</code> will move the label two SVG units to the right and three units down from the position determined by the anchor and the alignment.</div></dd>
-<dt id="sec-labels-5-1-4">clear-background</dt>
+<dt id="sec-labels-8-1-3">offset</dt>
+<dd><div class="para" id="sec-labels-8-1-3-2">PreFigure inclues some padding between the anchor and the label, but you will sometimes find that you need to fine tune the position of a label using the <code class="code-inline tex2jax_ignore">@offset</code> label.  Stating <code class="code-inline tex2jax_ignore">@offset="(2,-3)"</code> will move the label two SVG units to the right and three units down from the position determined by the anchor and the alignment.</div></dd>
+<dt id="sec-labels-8-1-4">clear-background</dt>
 <dd>
-<div class="para" id="sec-labels-5-1-4-2">Setting <code class="code-inline tex2jax_ignore">@clear-background="yes"</code> causes a white rectangle to be filled behind the label so that it stands out from the background, as seen in <a href="sec-labels.html#diagram-clear-background" class="xref" data-knowl="./knowl/xref/diagram-clear-background.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.4">Figure 3.4.4</a>.</div>
+<div class="para" id="sec-labels-8-1-4-2">Setting <code class="code-inline tex2jax_ignore">@clear-background="yes"</code> causes a white rectangle to be filled behind the label so that it stands out from the background, as seen in <a href="sec-labels.html#diagram-clear-background" class="xref" data-knowl="./knowl/xref/diagram-clear-background.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.6">Figure 3.4.6</a>.</div>
 <figure class="figure figure-like" id="diagram-clear-background"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/label-clear-background.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>Setting <code class="code-inline tex2jax_ignore">@clear-background="yes"</code></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.6<span class="period">.</span></span><span class="space"> </span>Setting <code class="code-inline tex2jax_ignore">@clear-background="yes"</code></figcaption></figure>
 </dd>
-<dt id="sec-labels-5-1-5">scale, rotate</dt>
-<dd><div class="para" id="sec-labels-5-1-5-2">As illustrated in <a href="sec-labels.html#diagram-label-example" class="xref" data-knowl="./knowl/xref/diagram-label-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.1">Figure 3.4.1</a>, labels can be scaled and rotated.</div></dd>
+<dt id="sec-labels-8-1-5">scale, rotate</dt>
+<dd><div class="para" id="sec-labels-8-1-5-2">As illustrated in <a href="sec-labels.html#diagram-label-example" class="xref" data-knowl="./knowl/xref/diagram-label-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.1">Figure 3.4.1</a>, labels can be scaled and rotated.</div></dd>
+<dt id="sec-labels-8-1-6">justify</dt>
+<dd><div class="para" id="sec-labels-8-1-6-2">If a label includes more than one line, this attribute determines how the lines are spaced horizontally.  The possible values are <code class="code-inline tex2jax_ignore">@justify="center", "left", "right"</code> with <code class="code-inline tex2jax_ignore">center</code> being the default.</div></dd>
+<dt id="sec-labels-8-1-7">interline</dt>
+<dd><div class="para" id="sec-labels-8-1-7-2">This attribute will have a numerical value that determines the vertical space, in SVG units, between lines.  The default is <code class="code-inline tex2jax_ignore">@interline="3"</code>.</div></dd>
 </dl>
 </div>
-<div class="para" id="sec-labels-6">We remind authors of one exception in that the <code class="code-inline tex2jax_ignore">@xlabel</code> and <code class="code-inline tex2jax_ignore">@ylabel</code> attributes of an <code class="code-inline tex2jax_ignore">&lt;axes&gt;</code> element are interpreted as <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> expressions and automatically wrapped in an <code class="code-inline tex2jax_ignore">&lt;m&gt;</code> element.</div>
-<div class="para" id="sec-labels-7">Authors should think carefully about the use of labels in their diagrams.  In particular, it can be tempting to include lots of labels, possibly even long, complicated labels, in a diagram. However, diagrams should always be carefully integrated into a larger document, which means that the surrounding exposition and caption should help readers interpret the meaning of a diagram. Labels should mainly refer to graphical components and serve as a connection to the surrounding text.  This is especially important for the production of tactile diagrams, in which labels that appear relatively short in print can become quite long when parsed into Nemeth braille.  So even though Cauchy’s formula is indeed beautiful, you should never include it in a diagram.</div></section></div>
+<div class="para" id="sec-labels-9">We remind authors of one exception in that the <code class="code-inline tex2jax_ignore">@xlabel</code> and <code class="code-inline tex2jax_ignore">@ylabel</code> attributes of an <code class="code-inline tex2jax_ignore">&lt;axes&gt;</code> element are interpreted as <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> expressions and automatically wrapped in an <code class="code-inline tex2jax_ignore">&lt;m&gt;</code> element.</div>
+<article class="assemblage assemblage-like" id="sec-labels-10"><h3 class="heading"><span class="title">Best practices.</span></h3>
+<div class="para" id="sec-labels-10-2">Authors should think carefully about the use of labels in their diagrams.  In particular, it can be tempting to include lots of labels, possibly even long, complicated labels, in a diagram. However, diagrams should always be carefully integrated into a larger document, which means that the surrounding exposition and caption should help readers interpret the meaning of a diagram. Labels should mainly refer to graphical components and serve as a connection to the surrounding text.  This is especially important for the production of tactile diagrams, in which labels that appear relatively short in print can become quite long when parsed into braille.  So even though Cauchy’s formula is indeed beautiful, you should probably not include it in a diagram.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-grid-axes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simple.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
