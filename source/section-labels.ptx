@@ -12,7 +12,7 @@
   </p>
 
   <figure xml:id="diagram-label-example">
-    <sidebyside width="60%">
+    <sidebyside width="50%">
       <image source="images/label-example"/>
     </sidebyside>
     <caption>Some sample labels.</caption>
@@ -21,6 +21,26 @@
   <listing xml:id="listing-label-example">
     <program>
       <input><xi:include href="code/label-example.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-label-example"/>.</caption>
+  </listing>
+
+  <p>Labels can span multiple lines and include bold and italic fonts,
+  as shown in <xref ref="diagram-labels-lines"/> and <xref
+  ref="listing-labels-lines"/>. </p>
+
+  <figure xml:id="diagram-labels-lines">
+    <sidebyside width="70%">
+      <image source="images/labels-lines"/>
+    </sidebyside>
+    <caption>Some sample labels.</caption>
+  </figure>
+
+  <listing xml:id="listing-labels-lines">
+    <program>
+      <input><xi:include href="code/labels-lines.xml"
       parse="text"/></input>
     </program>
     <caption>The PreFigure source for <xref
@@ -86,6 +106,24 @@
     can be scaled and rotated.
     </p>
     </li>
+
+    <li><title>justify</title>
+
+    <p> If a label includes more than one line, this attribute
+    determines how the lines are spaced horizontally.  The possible
+    values are <attr>justify="center", "left", "right"</attr> with
+    <c>center</c> being the default.
+    </p>
+    </li>
+
+    <li><title>interline</title>
+
+    <p>This attribute will have a numerical value that determines the
+    vertical space, in SVG units, between lines.  The default is
+    <attr>interline="3"</attr>.
+    </p>
+    </li>
+    
   </dl>
   </p>
 
@@ -95,20 +133,23 @@
   <tag>m</tag> element.
   </p>
 
-  <p>Authors should think carefully about the use of labels in their
-  diagrams.  In particular, it can be tempting to include lots of
-  labels, possibly even long, complicated labels, in a diagram.
-  However, diagrams should always be carefully integrated into a
-  larger document, which means that the surrounding exposition and
-  caption should help readers interpret the meaning of a diagram.
-  Labels should mainly refer to graphical components and serve as a
-  connection to the surrounding text.  This is especially important
-  for the production of tactile diagrams, in which labels that appear
-  relatively short in print can become quite long when parsed into
-  Nemeth braille.  So even though Cauchy's formula is indeed
-  beautiful, you should never include it in a diagram.
-  </p>
-
+  <assemblage>
+    <title>Best practices</title>
+    
+    <p>Authors should think carefully about the use of labels in their
+    diagrams.  In particular, it can be tempting to include lots of
+    labels, possibly even long, complicated labels, in a diagram.
+    However, diagrams should always be carefully integrated into a
+    larger document, which means that the surrounding exposition and
+    caption should help readers interpret the meaning of a diagram.
+    Labels should mainly refer to graphical components and serve as a
+    connection to the surrounding text.  This is especially important
+    for the production of tactile diagrams, in which labels that appear
+    relatively short in print can become quite long when parsed into
+    braille.  So even though Cauchy's formula is indeed
+    beautiful, you should probably not include it in a diagram.
+    </p>
+  </assemblage>
 
 </section>
 
