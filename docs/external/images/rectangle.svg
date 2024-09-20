@@ -31,6 +31,6 @@
     <line id="line-20" x1="5.0" y1="35.0" x2="305.0" y2="35.0" type="horizontal grid"/>
     <line id="line-21" x1="5.0" y1="5.0" x2="305.0" y2="5.0" type="horizontal grid"/>
   </g>
-  <rect id="rect-0" x="35.0" y="65.0" width="120.0" height="90.0" stroke="none" stroke-width="2" fill="green" type="rectangle"/>
-  <rect id="rect-1" x="185.0" y="155.0" width="60.0" height="120.0" ry="10.0" stroke="blue" stroke-width="5" fill="white" type="rectangle"/>
+  <path id="path-0" d="M 35.0 155.0 L 155.0 155.0 L 155.0 65.0 L 35.0 65.0 Z" stroke="none" stroke-width="2" fill="green" type="rectangle"/>
+  <path id="path-1" d="M 277.0 227.7 Q 282.0 219.0 273.3 214.0 L 186.7 164.0 Q 178.0 159.0 173.0 167.7 L 153.0 202.3 Q 148.0 211.0 156.7 216.0 L 243.3 266.0 Q 252.0 271.0 257.0 262.3 Z" stroke="blue" stroke-width="5" fill="white" type="rectangle"/>
 </svg>

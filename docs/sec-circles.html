@@ -169,7 +169,13 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#subsec-axes" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Axes</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-labels.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Labels</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-labels.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Labels</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-labels.html#sec-labels-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Creating labels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-labels.html#sec-labels-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Legends</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simple.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Points, lines, and polygons</span></a></div>
 <ul class="structural toc-item-list">
@@ -337,14 +343,14 @@ window.MathJax = {
 <div class="para" id="sec-circles-5-6">Notice the use of the <code class="code-inline tex2jax_ignore">roll</code> operator which rolls the elements in a list:  <code class="code-inline tex2jax_ignore">roll((a,b,c)) = (b,c,a)</code>.</div></section><section class="subsection" id="sec-circles-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="space"> </span><span class="title">Rectangles</span>
 </h3>
-<div class="para" id="sec-circles-6-2">A rectangle is defined by specifying either its center or its lower-left corner as well as its dimensions.  The corners can be rounded by setting the <code class="code-inline tex2jax_ignore">@corner-radius</code> attribute to the desired radius in SVG units.</div>
+<div class="para" id="sec-circles-6-2">A rectangle is defined by specifying either its center or its lower-left corner as well as its dimensions.  The corners can be rounded by setting the <code class="code-inline tex2jax_ignore">@corner-radius</code> attribute to the desired radius in SVG units, and the rectangle can be rotated about its center using the <code class="code-inline tex2jax_ignore">@rotate</code> attribute.</div>
 <figure class="figure figure-like" id="diagram-rectangle"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/rectangle.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.7<span class="period">.</span></span><span class="space"> </span>Two rectangles.</figcaption></figure><figure class="listing figure-like" id="listing-rectangle"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(-5,-5,5,5)"&gt;
     &lt;grid/&gt;
     &lt;rectangle lower-left="(-4,0)" dimensions="(4,3)"
 	       fill="green"/&gt;
-    &lt;rectangle center="(2,-2)" dimensions="(2,4)"
+    &lt;rectangle center="(2,-2)" dimensions="(2,4)" rotate="60"
 	       stroke="blue" thickness="5" fill="white"
 	       corner-radius="10"/&gt;
   &lt;/coordinates&gt;
