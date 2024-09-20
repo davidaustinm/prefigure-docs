@@ -3,6 +3,19 @@
 <section xml:id="sec-labels" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Labels</title>
 
+  <introduction>
+    <p> It can be helpful to label a graphical component in a diagram
+    to call attention to that component and to connect it to the
+    exposition in the surrounding text.  PreFigure allows authors to
+    add labels to a diagram and provides some options for their
+    display.  
+    </p>
+
+  </introduction>
+
+  <subsection>
+    <title> Creating labels </title>
+
   <p>The <tag>label</tag> element provides a way of adding text to a
   diagram.  Labels are composed of plain text, mathematics, or a
   combination of both.  Mathematics is written in
@@ -29,7 +42,11 @@
 
   <p>Labels can span multiple lines and include bold and italic fonts,
   as shown in <xref ref="diagram-labels-lines"/> and <xref
-  ref="listing-labels-lines"/>. </p>
+  ref="listing-labels-lines"/>.  While this provides a lot of
+  flexibility, authors should use these features judiciously and make
+  sure text that more properly belongs in surrounding paragraphs
+  does not creep into a diagram.
+  </p>
 
   <figure xml:id="diagram-labels-lines">
     <sidebyside width="70%">
@@ -150,6 +167,82 @@
     beautiful, you should probably not include it in a diagram.
     </p>
   </assemblage>
+</subsection>
+
+<subsection>
+  <title> Legends </title>
+
+  <p> PreFigure allows authors to include a legend with a diagram, as
+  seen in <xref ref="diagram-legend"/> and <xref
+  ref="listing-legend"/>.  A variety of graphical components may be
+  included in a legend, including paths, such as the graph of a
+  function, points, two-dimensional regions.  While legends will be
+  faithfully rendered in a tactile diagram, it is likely they will not
+  be as informative as their appearance in a non-tactile diagram.  In
+  general, a
+  better practice may be to place individual labels next to the
+  components themselves.
+  </p>
+
+  <figure xml:id="diagram-legend">
+    <sidebyside width="60%">
+      <image source="images/legend"/>
+    </sidebyside>
+    <caption>Including a legend.</caption>
+  </figure>
+
+  <p>A <tag>legend</tag> tag defines a legend with
+  <tag>item</tag> tags inside to declare the graphical components to
+  include in the legend.  An <tag>item</tag> tag must include a
+  <attr>ref</attr> attribute that refers to the desired graphical
+  component with the attached label inside the <tag>item</tag> tag.
+  </p>
+
+  <listing xml:id="listing-legend">
+    <program>
+      <input><xi:include href="code/legend.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-legend"/>.</caption>
+  </listing>
+
+  <p> There are a number of ways to decorate a legend:
+  <dl>
+    <li><title> anchor </title>
+    <p>The required <attr>anchor</attr>
+    attribute defines the location of the legend.</p>
+    </li>
+
+    <li><title> alignment </title>
+    <p>The <attr>alignment</attr>
+    attribute declares how the legend is aligned relative to the
+    anchor.</p>
+    </li>
+
+    <li><title> stroke </title>
+    <p>This attribute, whose value could be <c>"none"</c>, defines the
+    color of the legend's border.</p>
+    </li>
+
+    <li><title> scale </title>
+    <p>This attribute scales the entire legend.</p>
+    </li>
+    
+    <li><title> vertical-skip </title>
+    <p>The <attr>vertical-skip</attr>
+    attribute defines the space between legend items.  The default is
+    7 SVG units.</p>
+    </li>
+    
+    <li><title> opacity </title>
+    <p>This controls the opacity of the legend's white background.
+    </p>
+    </li>
+  </dl>
+</p>    
+
+</subsection>
 
 </section>
 

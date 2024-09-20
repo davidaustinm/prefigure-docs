@@ -63,11 +63,24 @@
 	</p>
       </li>
       <li>
+	<title>rlineto</title>
+	<p>This is similar to a <tag>line</tag> tag except that the
+	<attr>point</attr> attribute is interpreted as a relative
+	change from the current point.
+	</p>
+      </li>
+      <li>
 	<title>moveto</title>
 	<p>The <tag>moveto</tag> tag, shown in line 6, simply updates
 	the current point to the given <attr>point</attr> without
 	adding a line segment.  In effect, it is like picking up your
 	pen. 
+	</p>
+      </li>
+      <li>
+	<title>rmoveto</title>
+	<p>This tag interpretes the <attr>point</attr> as a relative
+	change in the current point.
 	</p>
       </li>
       <li>
@@ -181,13 +194,30 @@
     <title> Decorations</title>
 
     <p>Line segments within a <tag>path</tag> defined by a
-    <tag>lineto</tag>, <tag>horizontal</tag>, or <tag>vertical</tag>
+    <tag>lineto</tag>, <tag>rlineto</tag>, <tag>horizontal</tag>, or
+    <tag>vertical</tag> 
     may be decorated in a variety of ways using a
     <attr>decoration</attr> attribute.  The value of this attribute is
     a set of parameters separated by semicolons, the first of which is
-    the type of decoration, either <c>coil</c>, <c>zigzag</c>, or
-    <c>capacitor</c>. 
+    the type of decoration, either <c>coil</c>, <c>wave</c>,
+    <c>zigzag</c>, or <c>capacitor</c>, as shown in <xref
+    ref="diagram-path-decorations"/> 
     </p>
+
+    <figure xml:id="diagram-path-decorations">
+      <sidebyside width="60%">
+	<image source="images/path_decorations"/>
+      </sidebyside>
+      <caption>Some <c>path</c> decorations.</caption>
+    </figure>
+    
+    <listing xml:id="listing-path-decorations">
+      <program line-numbers="yes">
+	<input><xi:include href="code/path_decorations.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the coils in
+      <xref ref="diagram-path-decorations"/>.</caption> 
+    </listing>
 
     <p>The <c>coil</c> decoration resembles a spring.  You can
     specify the <c>number</c> of coils on the line segment, the

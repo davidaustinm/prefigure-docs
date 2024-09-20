@@ -164,7 +164,8 @@
     <p>A rectangle is defined by specifying either its center or
     its lower-left corner as well as its dimensions.  The corners can
     be rounded by setting the <attr>corner-radius</attr> attribute to
-    the desired radius in SVG units.
+    the desired radius in SVG units, and the rectangle can be rotated
+    about its center using the <attr>rotate</attr> attribute.
     </p>
 
     <figure xml:id="diagram-rectangle">
