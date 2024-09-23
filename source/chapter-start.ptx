@@ -182,6 +182,55 @@
       </caption>
     </listing>
 
+    <p>The <tag>coordinates</tag> tag enables authors to specify the
+    diagram's aspect ratio using the <attr>aspect-ratio</attr>
+    attribute.  For example, if the aspect ratio is not 1, then a
+    <tag>circle</tag> will appear as an ellipse and a right angle will
+    not appear to be <m>90^\circ</m>.  <xref ref="diagram-triangle"/>
+    demonstrates the use of <attr>aspect-ratio</attr>.
+    </p>
+
+    <figure xml:id="diagram-triangle">
+      <sidebyside width="60%">
+	<image source="images/triangle"/>
+      </sidebyside>
+      <caption> Use of the <attr>aspect-ratio</attr> attribute </caption>
+    </figure>
+
+    <listing xml:id="listing-triangle">
+      <program line-numbers="yes">
+	<input><xi:include href="code/triangle.xml"
+	parse="text"/>
+	</input>
+      </program>
+      <caption> The PreFigure source for <xref
+      ref="diagram-triangle"/>
+      </caption>
+    </listing>
+
+    <p>Notice that the height of the diagram is 90% of the
+    width though the <tag>cooordinates</tag> tag sets a
+    mathematical bounding box having the same width and height.
+    By specifying that <attr>aspect-ratio="1"</attr>, we request that
+    the scales in horizontal and vertical directions be equal.
+    </p>
+
+    <p>More generally, the aspect ratio sets the ratio of the
+    horizontal to the vertical scale.  For instance, setting
+    <attr>aspect-ratio="2"</attr> means that moving one SVG coordinate
+    to the right moves us twice as far mathematically compared to
+    moving one SVG coordinate up.
+    </p>
+
+    <p>By default, the horizontal extent of the mathematical bounding
+    box is preserved and the vertical extent is adjusted according to
+    the aspect ratio.  The result is that the vertical extent of
+    resulting bounding box 
+    in <xref ref="diagram-triangle"/> is <m>[0,9]</m>.  Use
+    <attr>preserve-y-range="yes"</attr> to preserve the vertical
+    extent of the given bounding box instead.
+    </p>
+
   </section>
   
   <section xml:id="sec-definition">

@@ -23,4 +23,5 @@
   <xi:include href="section-repeat.ptx"/>
   <xi:include href="section-publication.ptx"/>
   <xi:include href="section-arrows.ptx"/>
+  <xi:include href="section-math.ptx"/>
 </chapter>

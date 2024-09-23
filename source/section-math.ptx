@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-math" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Mathematical operations</title>
+
+  <introduction>
+  <p>As we've seen, PreFigure allows us to define some quantities,
+  often using mathematical operations, and then reuse them.  Here we
+  summarize the set of mathematical operations that are possible.
+  PreFigure is written in Python, and authors who are familiar with that
+  language may be able to imagine what is possible.
+  </p>
+  </introduction>
+
+  <subsection>
+    <title>Math operations</title>
+
+    <p>PreFigure provides access to Python's <c>math</c> module, which
+    means that constants such as <c>pi</c> and <c>e</c> are available,
+    as well as functions such as <c>sin</c>, <c>cos</c>, <c>acos</c>,
+    <c>atan</c>, and <c>atan2</c>.  By default, any trigonometric
+    functions use radians, but the functions
+    <c>degrees</c> and <c>radians</c> will convert back and forth.
+    </p>
+
+    <p>Some operations from discrete math, such as <c>comb(n,k)</c>
+    for <m>n\choose k</m>, are also available.
+    </p>
+    
+    <p> These functions are available without the <c>math.</c> prefix
+    so that we could say, for instance, <c>cos(pi/6)</c>.
+    See the <url href="https://docs.python.org/3/library/math.html">
+    Python documentation</url> for a full list of functions that are
+    available.
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>Vector operations</title>
+
+    <p>Vector operations may be defined on previously-defined lists or
+    tuples.  For instance, if we define
+    <c>u=(1,2)</c> and <c>v=(-2,4)</c>, we can later say <c>u+v</c>
+    and <c>-3*u</c>.
+    (Behind the scenes, any list or tuple that is defined is
+    interpreted as a <c>numpy</c> array.)
+    </p>
+
+    <p>Similarly, a <m>2\times2</m> matrix may be defined with
+    <cd>
+A = [[1,2],[2,1]]      
+    </cd>
+    and then used to multiply a vector with <c>A @ v</c>.
+    </p>
+
+    <p>Some additional operations include:
+    <dl>
+      <li><title>length</title>
+      <p><c>length(u)</c> finds the length of the vector <c>u</c>.
+      </p>
+      </li>
+
+      <li><title>normalize</title>
+      <p><c>normalize(u)</c> gives a vector paralle to <c>u</c> and
+      having unit length.
+      </p>
+      </li>
+
+      <li><title>dot</title>
+      <p><c>dot(u, v)</c> finds the dot product of <c>u</c> and
+      <c>v</c>.
+      </p>
+      </li>
+
+      <li><title>midpoint</title>
+      <p><c>midpoint(u, v)</c> gives the midpoint of the line segment
+      from <c>u</c> to <c>v</c>.
+      </p>
+      </li>
+
+      <li><title>angle</title>
+      <p><c>angle(u)</c> finds the angle, in radians, between the
+      vector and the positive <m>x</m>-axis.
+      </p>
+      </li>
+
+    </dl>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>List operations</title>
+
+    <p>It can be convenient to modify existing lists.  For instance,
+    to add an element <c>a</c> to an existing <c>list</c>, we could say
+    <c>append(list, a)</c>.  This could be used, for instance, to
+    implement Euler's method, as shown in <xref ref="diagram-euler"/>.
+    </p>
+
+    <figure xml:id="diagram-euler">
+      <sidebyside width="60%">
+	<image source="images/euler"/>
+      </sidebyside>
+      <caption>An implementation of Euler's method</caption>
+    </figure>
+
+    <listing xml:id="listing-euler">
+      <program>
+	<input><xi:include href="code/euler.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-euler"/>.</caption>
+    </listing>
+  
+    <p>If <c>list=(a,b,c)</c>, then <c>roll(list)</c> will be the list
+    <c>(b,c,a)</c>.  This can be useful for visiting each of the
+    vertices in a polygon, for instance, as shown in <xref
+    ref="diagram-roll"/>.  
+    </p>
+
+    <figure xml:id="diagram-roll">
+      <sidebyside width="60%">
+	<image source="images/roll"/>
+      </sidebyside>
+      <caption>Adding angle markers to a polygon</caption>
+    </figure>
+
+    <listing xml:id="listing-roll">
+      <program>
+	<input><xi:include href="code/roll.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-roll"/>.</caption>
+    </listing>
+
+  </subsection>
+
+</section>
+

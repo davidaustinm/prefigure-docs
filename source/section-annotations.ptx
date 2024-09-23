@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-annotations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Annotating a diagram</title>
+
+  <introduction>
+    <p>As we saw in <xref ref="sec-accessibility"/>, authors can include
+    annotations within their PreFigure source that describe how a reader
+    will explore the diagram using the <c>diagcess</c> library.  
+    </p>
+  </introduction>
+  
+  <subsection>
+    <title>The <c>diagcess</c> library</title>
+
+    <p>Since annotations will be read by the <c>diagcess</c> library,
+    let's take a moment to consider how a reader will interact with
+    the annotations in a diagram.  As we will see momentarily, the
+    annotations will essentially form what mathematicians call a tree.
+    That is, there is a top-level description of the entire diagram
+    with the ability to explore various components in greater detail.
+    Readers will navigate this tree using the arrow keys.  The Down
+    arrow requests more details on the component currently being
+    explored while the Right arrow asks for the next detail of the
+    current component.  When an arrow key is pressed, a beep called
+    an <q>earcon</q> notifies the reader that there are no more details
+    available at that level.
+    </p>
+
+    <p>The two most common key presses are <q>O</q>, which will sonify
+    an element if the author has enabled this feature, and <q>X</q>,
+    which toggles expert mode, about which more will be said later.
+    </p>
+
+    <p>When designing annotations, an author is well served by
+    considering their audience.  For instance, many blind readers are
+    fairly experienced navigating an HTML page with a screenreader.
+    The <c>diagcess</c> library provides screenreading capabilities
+    for included PreFigure diagrams.  As an author, how will you
+    verbally describe the diagram succinctly and completely?  How will
+    you organize the components of a diagram into groups that
+    contribute to communicating the diagram's intended meaning?  How
+    will you explain the structure of such a group?
+    </p>
+
+    <p>In addition, low-vision readers may not be able to interpret
+    the meaning of a diagram in the same way that a 
+    sighted reader might.  However, the <c>diagcess</c> library
+    highlights the component currently being explored by zooming in on
+    it and outlining it in yellow so that other elements move into the
+    background.  In this way,  many low-vision readers can perceive
+    the individual components of a diagram and how they fit together
+    into a whole. 
+    </p>
+
+    <p>Even for sighted readers, annotations can provide more details
+    about a diagram and call attention to specific components of the
+    diagram so that their meaning is not overlooked.  Considering the
+    needs of these different audiences can be a challenge but will
+    inevitably lead to more effective diagrams.
+    </p>
+
+    <p>While annotations are included in the same PreFigure source,
+    their authoring is typically a separate process from creating the
+    graphical content.  One reason for this is that graphical
+    components lie on top of one another in the order in which they
+    are added to the diagram.  For example, we usually want a point to
+    lie on top of a line passing through that point so we will include
+    the line and then the point when creating the graphical
+    components.  However, when annotating the diagram, we may wish to
+    call attention to the point first and then the line later.
+    Keeping the annotations separate from the graphical content gives
+    us more flexibilty in annotating a diagram.</p>
+
+    <p>Perhaps more importantly, however, experience shows that
+    annotating a diagram really should feel like a separate process.
+    When creating the graphical content, we may, for instance, add a
+    line in a particular orientation so that it doesn't overlap with
+    another part of the diagram and stroke it with a particular color
+    to create constrast with other elements.  When creating the
+    annotations, we are thinking about the mathematical meaning of that
+    line, why we have included it at all, and how it is related to the
+    other elements in the diagram.  These are two different sets of
+    questions, and authors are well served by addressing them
+    separately. 
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>The annotation tree</title>
+
+    <p> To begin describing the annotation tree, let's return to the
+    example we considered in <xref ref="sec-accessibility"/>, which is
+    shown again, with annotations, in <xref ref="diagram-tangent-2"/>.
+    </p>
+
+    <figure xml:id="diagram-tangent-3">
+      <sidebyside width="60%">
+	<image source="images/tangent-3"/>
+      </sidebyside>
+      <caption>A calculus diagram</caption>
+    </figure>
+
+    <listing xml:id="listing-tangent-3">
+      <program line-numbers="no">
+	<input><xi:include href="code/tangent-3.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-tangent-3"/>.</caption>
+    </listing>
+
+    <p>This example illustrates some important points.
+    <ul>
+      <li> <p>All the annotations are under a single
+      <tag>annotations</tag> element, and each nested
+      <tag>annotation</tag> element corresponds to a node in the
+      annotations tree.</p>
+      </li>
+
+      <li> <p>There is a single top-level <tag>annotation</tag> element,
+      which has the attribute <attr>ref="figure"</attr>.  In general,
+      the <attr>ref</attr> attribute should point to a handle in the
+      tree of graphical components.  The handle <c>"figure"</c> is
+      implicit in the top-level <tag>diagram</tag> element.  The
+      <attr>text</attr> attribute gives a piece of text that will be
+      displayed and vocalized when the focus goes to the diagram.  You
+      may view this as alt-text for the entire diagram so it should be
+      a concise, yet thorough, description of the diagram.
+      </p>
+      </li>
+
+      <li><p>The <tag>grid-axes</tag> element does not have a handle
+      or an associated annotation node, but a set of annotations for
+      it will be automatically added to the annnotations tree, if such
+      a tree is included in the PreFigure source.  There is a node for
+      the <tag>grid-axes</tag> and then two child nodes, one for the
+      grid and one for the axes.  </p></li>
+
+      <li><p>The second node that is on the same level as the
+      <tag>grid-axes</tag> annotation has
+      <attr>ref="graph-tangent</attr>.  In this case, there is no
+      graphical component with this handle, which shows that the
+      <attr>ref</attr> attribute need not point to a specific
+      graphical component.  This annotation node, however, has
+      children, each with a <attr>ref</attr> value that points to a
+      graphical component.  Therefore, when the focus goes to the
+      node with <attr>ref="graph-tangent"</attr>, all the components
+      referenced by a child will be highlighted.
+      </p></li>
+
+      <li><p>When we descend from the node with
+      <attr>ref="graph-tangent"</attr>, there are three children that
+      point to the graph, the point, and the tangent line.  Notice
+      that the node with attribute <attr>ref="point"</attr> refers to
+      a <tag>group</tag> that includes both the point and the label.
+      When the focus goes to this node, both of those components will
+      be highlighted.  While this example illustrates the general
+      behavior of a <tag>group</tag> referenced by an annotation, the
+      same effect is produced by including a label inside the point as
+      demonstrated in <xref ref="sec-simple"/>.
+      </p></li>
+
+      <li><p>The graph is sonified with <attr>sonify="yes"</attr>.
+      When the focus goes to this node and the reader presses
+      <q>O</q>, an aural rendering of the graph will be played.
+      </p></li>
+
+      <li><p>The node that points to the tangent line has a
+      <attr>speech</attr> attribute, which has more details about the
+      line.  When the reader presses <q>X</q>, then the value of this
+      attribute replaces the value of the <attr>text</attr> attribute
+      and is displayed and vocalized.
+      </p></li>
+
+      <li><p>While it is not included in this example, an
+      <tag>annotation</tag> element can have the attribute
+      <attr>circular="yes"</attr>.  When exploring the children of
+      such a node, the focus will return to the first child after we
+      have explored the last child.
+      </p></li>
+    </ul>
+    </p>
+
+    <p>Authors should note that everything that is visible is
+    annotated and will, at some point, be highlighted.  This is a good
+    practice that should generally be adopted.  Suppose, for instance,
+    that the <tag>graph-axes</tag> element is not annotated.  A
+    low-vision reader may percevie the presence of these components
+    without being provided an explanation of their purpose.
+    </p>
+
+    <p>Also notice how the tree-like structure of the annotations
+    allows a reader to delve into different features with increasing
+    detail.  This allows the reader to skip over a branch of the
+    tree, if desired, and go on to features that are of greater
+    interest. </p>
+
+  </subsection>
+
+  <subsection>
+    <title>Annotations within repeat elements</title>
+
+    <p>We said earlier that the process of creating annotations should
+    generally be separate from the process of illustrating.  One
+    exception to this is within a <tag>repeat</tag> element.</p>
+
+    <p>Suppose we have a <tag>repeat</tag> element with
+    <attr>parameter="k=5..7"</attr> and inside this element is a
+    <tag>point</tag> with handle <attr>at="point"</attr>.  This will
+    produce three points for each iteration of the <tag>repeat</tag>
+    element, and these points will be given handles
+    <attr>at="point-k=5</attr>, <attr>at="point-k=6</attr>, and
+    <attr>at="point-k=7</attr>.  In this way, one could annotate these
+    three points.</p>
+
+    <p>More complicated uses of the <tag>repeat</tag> element,
+    however, can make annotations tedious and difficult to maintain.
+    For this reason, annotations can be added to graphical components
+    and referenced from the annotation tree.  This can ease the
+    process of annotating components inside a <tag>repeat</tag>, as
+    seen in <xref ref="diagram-repeat-annotate"/>.</p>
+
+    <figure xml:id="diagram-repeat-annotate">
+      <sidebyside width="60%">
+	<image source="images/repeat-annotate"/>
+      </sidebyside>
+      <caption>Annotating a diagram with a <tag>repeat</tag> element.</caption>
+    </figure>
+
+    <listing xml:id="listing-repeat-annotate">
+      <program line-numbers="no">
+	<input><xi:include href="code/repeat-annotate.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-repeat-annotate"/>.</caption>
+    </listing>
+
+    <p>This leads to relatively simple and easy to maintain source
+    if, say, we want to add or remove a column of squares.  Here is
+    how this works:
+    <ul>
+      <li><p>Notice that some elements are supplied with an attribute
+      <attr>annotate="yes"</attr>.  When the graphical component is
+      created, an <tag>annotation</tag> is created that can be
+      referenced using its handle.  The annotation attributes, such as
+      <attr>text</attr> and <attr>circular</attr>, included in the
+      graphical component are passed on to the resulting
+      <tag>annotation</tag>. </p></li>
+
+      <li><p>In this case, the two <tag>repeat</tag> elements are both
+      given this attrbute along with the child <tag>rectangle</tag>
+      element.  Behind the scenes, the <tag>repeat</tag> element
+      creates a <tag>group</tag> with the resulting components added.
+      Annotating the <tag>repeat</tag> element is therefore the same
+      as annotating a <tag>group</tag> as we saw above.</p></li>
+
+      <li><p>Notice how the <attr>text</attr> attributes can respond
+      to the different values of the parameters by including pieces of
+      text inside <c>${...}</c>, which are then evaluted in the
+      current namespace. </p></li>
+
+      <li><p>The resulting annotations naturally inherit the tree-like
+      structure from the graphical components that define them.  We
+      can therefore reference this entire sub-tree by simply referring
+      to the handle <attr>ref="array"</attr> of the top-level
+      node.</p></li> 
+
+      <li><p>This example illustrates the use of the
+      <attr>circular</attr> attribute.  Once we have examined all the
+      squares in a column, we return to the first one and begin
+      anew.</p></li>
+
+    </ul>
+    </p>
+
+    <p>While any graphical component can be annotated in this way,
+    this feature is included primarily as a way to ease the annotation
+    of diagrams created with a <tag>repeat</tag> element.  As mentioned
+    earlier, we encourage authors to separate the processes
+    of illustrating and annotating.</p>
+      
+
+  </subsection>
+
+</section>
+

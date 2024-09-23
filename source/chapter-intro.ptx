@@ -245,22 +245,23 @@
 	prefig --help
       </input>
     </console>
+    </p>
 
     <p> and help for specific commands can be found with, for instance,
     <c>prefig build --help</c>.
     </p>
 
-    <ul>
-      <li>
+    <p> These are the available PreFigure commands:
+    <dl>
+      <li><title>build</title>
+      
 	<p> To compile a PreFigure source file <c>foo.xml</c>
-	into a diagram, use
-	<console>
-	  <input>
-	    prefig build foo.xml
-	  </input>
-	</console>
-	A tactile version of the diagram is created with
-	<c>prefig build -f tactile foo.xml</c>.
+	into a diagram, use either
+	<cd>
+prefig build foo.xml
+prefig build -f tactile foo.xml
+	</cd>
+	where the second command builds a tactile version.
 	In either case, the output image will appear in
 	<c>output/foo.svg</c> while annotations read by a screen
 	reader are in
@@ -268,9 +269,12 @@
 	</p>
       </li>
 
-      <li>
-	<p> Once an image is built, it may be viewed with
-	<c>prefig view foo</c>
+      <li><title>view</title>
+	<p> Once an image is built, it may be viewed in a web browser
+	with 
+	<cd>
+prefig view foo
+	</cd>
 	If the diagram contains annotations, this will provide a means
 	of exploring the diagram and annotations using the
 	<c>diagcess</c> library.  To view the diagram without
@@ -278,33 +282,59 @@
 	<c>prefig view -i foo</c>
 	to ignore the annotations.
 	</p>
+
+	<p>The view command offers some flexibility since the
+	PreFigure source and the SVG output appear 
+	in different directories.  For instance, if the PreFigure
+	source appears in, say, <c>examples/tangent.xml</c>, we can
+	use
+	<cd>
+prefig build examples/tangent.xml	  
+prefig view tangent
+	</cd>
+	PreFigure looks for <c>tangent.svg</c> in the current
+	directory or some subdirectory.  Alternatively, you could say
+	<cd>
+prefig view examples/tangent.xml
+	</cd>
+	</p>
+	  
       </li>
 
-      <li>
+      <li><title>pdf</title>
 	<p> To make a PDF from a diagram that has already been built,
 	use 
-	<c>prefig pdf foo</c>.
+	<cd>
+prefig pdf foo
+	</cd>
 	Including the <c>-b</c> flag will cause the diagram to be
 	built first:
 	<c>prefig pdf -b foo</c>.
 	</p>
+
+	<p>Use of <c>prefig pdf</c> assumes that <c>rsvg-convert</c>
+	is installed, which it provided in a codespace.  The use of
+	<c>rsvg-convert</c> ensures that tactile diagrams are
+	well suited for embossing.  There are
+	options for choosing the resolution of the resulting PDF, but
+	tactile diagrams should always be converted with a resolution
+	of 72 dpi, which is the default.
+	</p>
       </li>
 
-      <li>
+      <li><title>init</title>
 	<p>It is not essential to do this, but if PreFigure is
 	installed locally, you may want to begin with
 	<c>prefig init</c>,
 	which has the effect of installing some MathJax libraries
 	(PreFigure will try to install these later when needed) as
-	well as the Braille29 font.
+	well as the Braille29 font, which is required to create
+	tactile diagrams for embossing.
 	</p>
+      </li>
 
-	<p>If you would like to explore the set of included examples,
-	use 
-	<c>prefig examples</c>
-	to copy the set of examples into the current directory.
-	</p>
-	
+      <li><title>new</title>
+
 	<p>You may initialize a new PreFigure project with
 	<c>prefig new</c>.
 	This copies a simple publication file and the diagcess library
@@ -313,8 +343,16 @@
 	these when needed.
 	</p>
       </li>
-    </ul>
-    </p>	
+
+      <li><title>examples</title>
+	<p>If you would like to explore the set of included examples,
+	use 
+	<c>prefig examples</c>
+	to copy the set of examples into the current directory.
+	</p>
+      </li>
+    </dl>
+    </p>
   </section>
 
 </chapter>

@@ -275,5 +275,72 @@
     </p>
   </subsection>
 
+  <subsection>
+    <title>Triangles</title>
+
+    <p>For convenience, PreFigure offers a <tag>triangle</tag> as
+    illustrated in <xref ref="diagram-triangle-intro"/>.
+    </p>
+
+    <figure xml:id="diagram-triangle-intro">
+      <sidebyside width="60%">
+	<image source="images/triangle-intro"/>
+      </sidebyside>
+      <caption>Two triangles</caption>
+    </figure>
+
+    <listing xml:id="listing-triangle-intro">
+      <program>
+	<input><xi:include href="code/triangle-intro.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-triangle-intro"/>.</caption>
+    </listing>
+
+    <p> A <tag>triangle</tag> has the same attributes as a
+    <tag>polygon</tag>, except that the vertices are listed with the
+    <attr>vertices</attr> attribute and the attribute <attr>closed</attr>
+    is always set to <c>"yes"</c> for a <tag>triangle</tag>.  There
+    are some additional attributes of note.
+    </p>
+
+    <p>
+      <dl>
+	<li><title>labels</title>
+
+	<p> You may provide labels for each of the vertices by setting
+	this attribute to a comma-separated list of three labels.
+	Each label will be wrapped in an <tag>m</tag> tag and
+	processed by MathJax.
+	</p>
+	</li>
+
+	<li><title>angle-markers</title>
+
+	<p>Set this to <c>"yes"</c> to place an
+	<tag>angle-marker</tag> in each of 
+	the interior angles.
+	</p>
+	</li>
+	
+	<li>
+	  <title>show-vertices</title>
+
+	  <p>This attribute will place a <tag>point</tag> on each
+	  vertex if set to <c>"yes"</c>.
+	  </p>
+	</li>
+
+	<li>
+	  <title>point-fill</title>
+
+	  <p>Use this to specify the fill of each <tag>point</tag> if
+	  <attr>show-vertices="yes"</attr>.
+	  </p>
+	</li>
+      </dl>
+    </p>
+
+  </subsection>
 </section>
 

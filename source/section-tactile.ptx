@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-tactile" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Tactile diagrams</title>
+
+  <introduction>
+    <p>The original motivation for PreFigure arose from the
+    difficulties in creating tactile diagrams from other
+    source, such as TikZ.
+    </p>
+
+    <p>Tactile diagrams, at least the kind that <pretext/> and
+    PreFigure authors will want to create, are a <url
+    href="https://www.technologyreview.com/2023/06/15/1074036/ending-image-poverty/">
+    relatively new medium,</url> and, as such, there are still some
+    conventions that are not yet firmly established.  Ongoing research
+    with blind and low-vision readers is determing best practices for
+    the creation of tactile diagrams, and PreFigure will always
+    implement these practices without demand on an author's attention.
+    </p>
+
+    <p>It cannot be stated strongly enough that attention to tactile
+    diagrams will lead to the design of better diagrams for sighted
+    readers.  Authors are strongly encouraged to create and explore
+    tactile versions of their PreFigure diagrams and strive for a
+    clean design.  There really is no excuse not to:  it's as easy as
+    adding <c>-f tactile</c> to the PreFigure bulid command.
+    </p>
+  </introduction>
+  
+  <subsection>
+    <title>Anatomy of a tactile diagram</title>
+
+    <p>Before we examine a tactile diagram, we should first consider the
+    medium used to produce them.
+    <ul>
+      <li><p>While tactile diagrams may be rendered in a variety of
+      ways, PreFigure diagrams will be produced by an embosser on
+      11"<m>\times</m>11.5" paper.  More specifically, the tactile
+      diagrams created by PreFigure are optimized to be embossed on a
+      <url href="https://viewplus.com/">ViewPlus
+      embosser.</url></p></li>
+
+      <li><p>Think of an embosser as a very low-resolution printer, 20
+      dots per inch to be precise (compared to 300 dpi for a
+      standard printer).  An embossers works by raising the
+      paper at a collection of these dots, each of which has a diameter of
+      0.057 inches.  Dots can, however, be raised to a small number of
+      different heights to simulate shading from white to gray to
+      black.</p></li>
+
+      <li><p>Text in a tactile diagram will be rendered in braille.
+      Each braille cell is a 3<m>\times</m>2 array of dots, and the
+      interline spacing between braille cells is 0.4 inches. This
+      means that a typical page has about 25<m>\times</m>40 cells or
+      roughly 1000 cells.  While a cell does not exactly correspond to
+      a character of written text (some common words have braille
+      contractions and some cells contain formatting information, such
+      as a transition to italics), this figure speaks to the
+      limitations of what can be conveyed in a tactile format.  While
+      authors may initially view this as a restriction, experienced
+      authors will see this as a feature that encourages good
+      design.</p></li>
+
+      <li><p>Mathematics is rendered in Nemeth braille by MathJax
+      while regular text is converted by <c>liblouis</c> into UEB.  It
+      is essential that <c>liblouis</c> be installed if you wish to
+      build tactile diagrams on your local PreFigure installation. A
+      PreFigure codespace takes care of this automatically.</p></li>
+
+      <li><p>Labels are embedded with the Braille29 font, which is
+      included with PreFigure.  Issuing the <c>prefig init</c> command
+      will install this font on Linux or Mac-OS, and this happens
+      automatically when a codespace is created.</p></li>
+
+      <li><p>The command <c>prefig pdf foo</c> will create a PDF that
+      embosses well on a ViewPlus embosser provided that 
+      <c>rsvg-convert</c> is available.  Again, this is provided in a
+      codespace.  The resolution given to <c>rsvg-convert</c> should
+      always be 72, which is the PreFigure default.</p></li>
+    </ul>
+    </p>
+
+    <p>With that said, let's explore a tactile version of the ubiquitous
+    tangent line figure, shown in <xref
+    ref="diagram-tangent-3-tactile"/>.
+    </p>
+
+    <figure xml:id="diagram-tangent-3-tactile">
+      <sidebyside width="90%">
+	<image source="images/tangent-3-tactile"/>
+      </sidebyside>
+      <caption>A calculus diagram</caption>
+    </figure>
+
+    <p>There is no need to show the PreFigure source for this diagram
+    since it is the same that we saw earlier in <xref
+    ref="listing-tangent-3"/>.  Again, PreFigure adopts the <pretext/>
+    motto:  <em>write once, read anywhere.</em>  Here are some things
+    you may notice, however.
+
+    <ul>
+      <li><p> Foreground elements, such as the graph, tangent, and
+      point, have a clear, white outline of 1/8".  This is based on
+      the experience of blind readers' experience with PreFigure
+      diagrams. </p></li>
+
+      <li><p> Labels sit on top of a clear, white rectangle so that
+      they stand out from other elements.  In fact, all labels are
+      drawn last so that they sit on top of everything else.</p></li>
+
+      <li><p>Labels on axes are aligned with tick marks according to
+      guidelines published by <url
+      ref="https://www.brailleauthority.org/tg/"> The Braille
+      Authority of North America.</url></p></li>
+
+      <li><p>Colors are not informative in a tactile diagram so
+      defaults are chosen to render well on an embosser.  Filled
+      regions will be rendered as lightgray and the stroke on, say,
+      graphs will be changed to black.</p></li>
+
+      <li><p>The point is rendered with a radius of 9 SVG units, which
+      translates into 1/8" when embossed.  As with the white outline
+      described above,
+      authors should think of this distance as a good rule of thumb.
+      </p></li>
+
+      <li><p>While this may not be apparent in this figure, labels are
+      carefully positioned so that the braille cells in the resulting
+      PDF will lie on top of the 20 dpi embossing grid.  As a result,
+      authors may
+      sometimes notice that labels are not exactly where they expect
+      since they will internally snap onto this grid.</p></li>
+    </ul>
+    </p>
+
+    <p>Finally, notice the amount of space taken up by the braille
+    label on the point, which translates into <m>(a,f(a))</m>.
+    It is not uncommon for the labels you produce to be surprisingly
+    long when rendered in braille.  This should lead authors to aspire
+    to brevity in their use of labels, which is a design principle for
+    better sighted diagrams as well.  Reading text and processing
+    graphical information use different parts of our brains so be
+    economical when using text in your diagrams.  Instead, use a
+    diagram's caption and surrounding text to provide additional
+    context. </p>
+  </subsection>
+
+  <subsection>
+    <title>PreFigure considerations for tactile diagrams</title>
+
+    <p>With all of that said, attaining the goal of <q>write once, read
+    anywhere</q> is aspirational, and authors will likely find that
+    producing good tactile diagrams requires a bit of tweaking.
+    </p>
+
+    <p>First off, any attribute in a PreFigure element can be overridden
+    in tactile form by prepending <c>tactile-</c> before it.  While this
+    applies to any attribute, there are likely two attributes
+    where this is most important.
+    </p>
+
+    <p>Since color cannot be used to disambiguate elements from one
+    another, authors should consider stroking some features will a
+    dashed line in a tactile diagram.  To do so, set
+    <attr>tactile-dash="9 9"</attr> in a component to be stroked with
+    a dash in a tactile diagram
+    </p>
+
+    <figure xml:id="diagram-judson-system">
+      <sbsgroup>
+	<sidebyside width="60%">
+	  <image source="images/judson-system"/>
+	</sidebyside>
+	<sidebyside width="80%">
+	  <image source="images/judson-system-tactile"/>
+	</sidebyside>
+      </sbsgroup>
+      <caption>An ordinary and tactile diagram from the same PreFigure
+      source.  Adapted from
+      Tom Judson's
+      <url href="https://judsonbooks.org/ode-project/"
+           target="_blank"> Ordinary Differential Equations
+      Project</url>.      
+      </caption>
+    </figure>
+
+    <p>In the source given below, notice how one of the solution
+    curves has both attributes <attr>stroke="red"</attr> and
+    <attr>tactile-dash="9 9"</attr>.  The stroke attribute will 
+    be automaticaly overridden to <c>"black"</c> in a tactile diagram.
+    Setting the 
+    dash to <c>"9 9"</c> produces dashes that alternate 1/8" of stroke
+    and 1/8" empty.</p>
+
+    <listing xml:id="listing-judson-system">
+      <program line-numbers="no">
+	<input><xi:include href="code/judson-system.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-judson-system"/>.</caption>
+    </listing>
+
+    <p>The other attribute you may wish to override in tactile form
+    is the <attr>offset</attr> attribute of labels.  PreFigure tries
+    to place labels appropriately so that they don't overlap with
+    other elements, but an author will sometimes need to push a label
+    a bit away from its default location.  Setting
+    <c>tactile-offset="(4,4)"</c> will push the label an additional four
+    units horiztonally and vertically before snapping onto the 20 dpi
+    embossing grid.
+    </p>
+
+  </subsection>
+
+</section>
+

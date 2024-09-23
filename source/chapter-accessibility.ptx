@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chap-accessibility" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Accessibility</title>
+
+  <introduction>
+    <p>PreFigure is designed to facilitate the creation of accessible
+    mathematical diagrams.  In particular, diagrams can be annotated
+    so that they may be effectively navigated with a screen reader,
+    and tactile versions of diagrams may be created from the same
+    PreFigure source.  This chapter will describe features of
+    annotations and tactile diagrams in more detail.
+    </p>
+
+    <p>While these accessibility features are primarily intended to
+    benefit low-vision and blind readers, attention to these features
+    will help authors create better traditional diagrams for sighted
+    readers.  Annotating a diagram requires an author to focus on the
+    meaning of the diagram and how well the individual components
+    contribute to clearly communicating that meaning.  Periodically
+    building tactile versions of diagrams will illuminate ways in
+    which authors might simplify the design of their diagrams so that
+    their ideas are more clearly expressed.  It is often said that
+    attention to accessibility issues improves the experience of
+    everyone, and this is certainly true for the creation of
+    mathematical diagrams.
+    </p>
+
+  </introduction>
+
+  <xi:include href="section-annotations.ptx"/>
+  <xi:include href="section-tactile.ptx"/>
+</chapter>
