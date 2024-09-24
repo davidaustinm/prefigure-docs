@@ -140,7 +140,7 @@
     long when rendered in braille.  This should lead authors to aspire
     to brevity in their use of labels, which is a design principle for
     better sighted diagrams as well.  Reading text and processing
-    graphical information use different parts of our brains so be
+    graphical information are different cognitive tasks so be
     economical when using text in your diagrams.  Instead, use a
     diagram's caption and surrounding text to provide additional
     context. </p>
@@ -210,6 +210,30 @@
     units horiztonally and vertically before snapping onto the 20 dpi
     embossing grid.
     </p>
+
+    <p>Finally, as discussed in <xref ref="sec-outlining"/>, since
+    every foreground component in a tactile diagram 
+    is outlined, you may need to put components in a <tag>group</tag>
+    and the attribute <attr>outline="tactile"</attr>, which will first
+    paint all the outlines in the group before painting the components
+    themselves. </p>
+
+    <figure xml:id="diagram-outline-tactile-2">
+      <sidebyside width="60%">
+	<image source="images/outline-tactile-2"/>
+      </sidebyside>
+      <caption>Outlining two graphs inside a group with
+      <attr>outline="tactile"</attr>. 
+      </caption>
+    </figure>
+
+    <listing xml:id="listing-outline-tactile">
+      <program line-numbers="no">
+	<input><xi:include href="code/outline-tactile.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-outline-tactile"/>.</caption>
+    </listing>
 
   </subsection>
 

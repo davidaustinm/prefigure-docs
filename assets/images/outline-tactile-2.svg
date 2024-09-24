@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="diagram" width="828.0" height="792">
+  <defs>
+    <clipPath id="clipPath-0">
+      <rect x="90.0" y="72.0" width="648.0" height="648.0"/>
+    </clipPath>
+    <clipPath id="clipPath-1">
+      <rect x="90.0" y="72.0" width="648.0" height="648.0"/>
+    </clipPath>
+    <path id="graph-1-outline" d="M 90.0 102.4 L 96.5 119.5 L 103.0 135.6 L 109.4 150.8 L 115.9 165.1 L 122.4 178.5 L 128.9 191.2 L 135.4 203.1 L 141.8 214.3 L 148.3 224.9 L 154.8 234.9 L 161.3 244.3 L 167.8 253.1 L 174.2 261.4 L 180.7 269.3 L 187.2 276.6 L 193.7 283.6 L 200.2 290.1 L 206.6 296.3 L 213.1 302.1 L 219.6 307.6 L 226.1 312.7 L 232.6 317.6 L 239.0 322.1 L 245.5 326.4 L 252.0 330.5 L 258.5 334.3 L 265.0 337.9 L 271.4 341.3 L 277.9 344.5 L 284.4 347.5 L 290.9 350.3 L 297.4 353.0 L 303.8 355.5 L 310.3 357.8 L 316.8 360.0 L 323.3 362.1 L 329.8 364.1 L 336.2 366.0 L 342.7 367.7 L 349.2 369.4 L 355.7 370.9 L 362.2 372.4 L 368.6 373.8 L 375.1 375.1 L 381.6 376.3 L 388.1 377.4 L 394.6 378.5 L 401.0 379.5 L 407.5 380.5 L 414.0 381.4 L 420.5 382.2 L 427.0 383.0 L 433.4 383.8 L 439.9 384.5 L 446.4 385.2 L 452.9 385.8 L 459.4 386.4 L 465.8 387.0 L 472.3 387.5 L 478.8 388.0 L 485.3 388.4 L 491.8 388.9 L 498.2 389.3 L 504.7 389.7 L 511.2 390.1 L 517.7 390.4 L 524.2 390.7 L 530.6 391.0 L 537.1 391.3 L 543.6 391.6 L 550.1 391.9 L 556.6 392.1 L 563.0 392.3 L 569.5 392.5 L 576.0 392.7 L 582.5 392.9 L 589.0 393.1 L 595.4 393.3 L 601.9 393.4 L 608.4 393.6 L 614.9 393.7 L 621.4 393.9 L 627.8 394.0 L 634.3 394.1 L 640.8 394.2 L 647.3 394.3 L 653.8 394.4 L 660.2 394.5 L 666.7 394.6 L 673.2 394.7 L 679.7 394.8 L 686.2 394.8 L 692.6 394.9 L 699.1 395.0 L 705.6 395.0 L 712.1 395.1 L 718.6 395.1 L 725.0 395.2 L 731.5 395.2 L 738.0 395.3" type="function-graph" clip-path="url(#clipPath-1)"/>
+    <path id="graph-3-outline" d="M 90.0 689.6 L 96.5 672.5 L 103.0 656.4 L 109.4 641.2 L 115.9 626.9 L 122.4 613.5 L 128.9 600.8 L 135.4 588.9 L 141.8 577.7 L 148.3 567.1 L 154.8 557.1 L 161.3 547.7 L 167.8 538.9 L 174.2 530.6 L 180.7 522.7 L 187.2 515.4 L 193.7 508.4 L 200.2 501.9 L 206.6 495.7 L 213.1 489.9 L 219.6 484.4 L 226.1 479.3 L 232.6 474.4 L 239.0 469.9 L 245.5 465.6 L 252.0 461.5 L 258.5 457.7 L 265.0 454.1 L 271.4 450.7 L 277.9 447.5 L 284.4 444.5 L 290.9 441.7 L 297.4 439.0 L 303.8 436.5 L 310.3 434.2 L 316.8 432.0 L 323.3 429.9 L 329.8 427.9 L 336.2 426.0 L 342.7 424.3 L 349.2 422.6 L 355.7 421.1 L 362.2 419.6 L 368.6 418.2 L 375.1 416.9 L 381.6 415.7 L 388.1 414.6 L 394.6 413.5 L 401.0 412.5 L 407.5 411.5 L 414.0 410.6 L 420.5 409.8 L 427.0 409.0 L 433.4 408.2 L 439.9 407.5 L 446.4 406.8 L 452.9 406.2 L 459.4 405.6 L 465.8 405.0 L 472.3 404.5 L 478.8 404.0 L 485.3 403.6 L 491.8 403.1 L 498.2 402.7 L 504.7 402.3 L 511.2 401.9 L 517.7 401.6 L 524.2 401.3 L 530.6 401.0 L 537.1 400.7 L 543.6 400.4 L 550.1 400.1 L 556.6 399.9 L 563.0 399.7 L 569.5 399.5 L 576.0 399.3 L 582.5 399.1 L 589.0 398.9 L 595.4 398.7 L 601.9 398.6 L 608.4 398.4 L 614.9 398.3 L 621.4 398.1 L 627.8 398.0 L 634.3 397.9 L 640.8 397.8 L 647.3 397.7 L 653.8 397.6 L 660.2 397.5 L 666.7 397.4 L 673.2 397.3 L 679.7 397.2 L 686.2 397.2 L 692.6 397.1 L 699.1 397.0 L 705.6 397.0 L 712.1 396.9 L 718.6 396.9 L 725.0 396.8 L 731.5 396.8 L 738.0 396.7" type="function-graph" clip-path="url(#clipPath-1)"/>
+  </defs>
+  <g id="grid-axes">
+    <g id="grid" stroke="#ccc" stroke-width="1">
+      <line id="line-0" x1="90.0" y1="720.0" x2="90.0" y2="72.0" type="vertical grid"/>
+      <line id="line-1" x1="198.0" y1="720.0" x2="198.0" y2="72.0" type="vertical grid"/>
+      <line id="line-2" x1="306.0" y1="720.0" x2="306.0" y2="72.0" type="vertical grid"/>
+      <line id="line-3" x1="414.0" y1="720.0" x2="414.0" y2="72.0" type="vertical grid"/>
+      <line id="line-4" x1="522.0" y1="720.0" x2="522.0" y2="72.0" type="vertical grid"/>
+      <line id="line-5" x1="630.0" y1="720.0" x2="630.0" y2="72.0" type="vertical grid"/>
+      <line id="line-6" x1="738.0" y1="720.0" x2="738.0" y2="72.0" type="vertical grid"/>
+      <line id="line-7" x1="90.0" y1="720.0" x2="738.0" y2="720.0" type="horizontal grid"/>
+      <line id="line-8" x1="90.0" y1="612.0" x2="738.0" y2="612.0" type="horizontal grid"/>
+      <line id="line-9" x1="90.0" y1="504.0" x2="738.0" y2="504.0" type="horizontal grid"/>
+      <line id="line-10" x1="90.0" y1="396.0" x2="738.0" y2="396.0" type="horizontal grid"/>
+      <line id="line-11" x1="90.0" y1="288.0" x2="738.0" y2="288.0" type="horizontal grid"/>
+      <line id="line-12" x1="90.0" y1="180.0" x2="738.0" y2="180.0" type="horizontal grid"/>
+      <line id="line-13" x1="90.0" y1="72.0" x2="738.0" y2="72.0" type="horizontal grid"/>
+    </g>
+    <g id="axes" stroke="black" stroke-width="2">
+      <line id="line-14" x1="90.0" y1="612.0" x2="738.0" y2="612.0" type="horizontal axis" stroke-width="2"/>
+      <line id="line-15" x1="198.0" y1="720.0" x2="198.0" y2="72.0" type="vertical axis" stroke-width="2"/>
+      <g type="horizontal ticks" id="g-0">
+        <line id="line-16" x1="414.0" y1="630.0" x2="414.0" y2="612.0" type="tick on horizontal axis"/>
+        <line id="line-17" x1="630.0" y1="630.0" x2="630.0" y2="612.0" type="tick on horizontal axis"/>
+      </g>
+      <g type="vertical ticks" id="g-1">
+        <line id="line-18" x1="180.0" y1="396.0" x2="198.0" y2="396.0" type="tick on vertical axis"/>
+        <line id="line-19" x1="180.0" y1="180.0" x2="198.0" y2="180.0" type="tick on vertical axis"/>
+      </g>
+    </g>
+  </g>
+  <g id="g-2">
+    <use fill="none" stroke-width="20" stroke="white" xlink:href="#graph-1-outline"/>
+    <use fill="none" stroke-width="20" stroke="white" xlink:href="#graph-3-outline"/>
+  </g>
+  <g id="g-3">
+    <use id="graph-1" fill="none" stroke-width="2" stroke="black" stroke-dasharray="none" xlink:href="#graph-1-outline"/>
+    <use id="graph-3" fill="none" stroke-width="2" stroke="black" stroke-dasharray="none" xlink:href="#graph-3-outline"/>
+  </g>
+  <g id="background-group">
+    <rect id="label-0-background" x="390.6" y="653.4" width="36.0" height="36.0" stroke="none" fill="white"/>
+    <rect id="label-1-background" x="606.6" y="653.4" width="36.0" height="36.0" stroke="none" fill="white"/>
+    <rect id="label-2-background" x="117.0" y="376.2" width="36.0" height="36.0" stroke="none" fill="white"/>
+    <rect id="label-3-background" x="117.0" y="160.2" width="36.0" height="36.0" stroke="none" fill="white"/>
+  </g>
+  <g id="braille-group">
+    <g id="label-0" transform="translate(399.6,680.4)">
+      <text x="0.0" y="0.0" font-family="Braille29" font-size="29px">⠆</text>
+    </g>
+    <g id="label-1" transform="translate(615.6,680.4)">
+      <text x="0.0" y="0.0" font-family="Braille29" font-size="29px">⠲</text>
+    </g>
+    <g id="label-2" transform="translate(126.0,403.2)">
+      <text x="0.0" y="0.0" font-family="Braille29" font-size="29px">⠆</text>
+    </g>
+    <g id="label-3" transform="translate(126.0,187.2)">
+      <text x="0.0" y="0.0" font-family="Braille29" font-size="29px">⠲</text>
+    </g>
+  </g>
+</svg>
