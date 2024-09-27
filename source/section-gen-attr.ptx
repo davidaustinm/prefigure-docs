@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-graphical-attr">
-  <title> General attributes</title>
+  <title> Stroke, fill, and other graphical attributes</title>
 
   <introduction>  
     <p> We begin this chapter with a 
@@ -249,7 +249,7 @@
 	<sidebyside width="100%">
 	  <image source="images/fill-rule"/>
 	</sidebyside>
-	<caption>Squares filled with
+	<caption>Shapes filled with
 	<attr>fill-rule="nonzero"</attr>, the default, and evenodd.
 	</caption>
       </figure>
@@ -279,7 +279,7 @@
     </p>
     
     <p>As we now begin to describe different types of graphical
-    components, we will sometimes need to describe how a component's
+    components, we will occasionally need to describe how a component's
     handle is processed.
     </p>
     

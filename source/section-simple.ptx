@@ -5,7 +5,7 @@
 
   <introduction>
     <p>In this section, we will begin to introduce some simple graphical
-    components, such as points, lines, vectors, and polygons.
+    components, such as points, lines, vectors, and polygons.  
     </p>
   </introduction>
 
@@ -71,7 +71,9 @@
     <title>Lines</title>
 
     <p>A few lines are shown in <xref ref="diagram-lines"/> with the
-    PreFigure source presented in <xref ref="listing-lines"/>.
+    PreFigure source presented in <xref ref="listing-lines"/>.  Please
+    note that a <tag>vector</tag> element can be used for including
+    vectors in a diagram, as explained in <xref ref="subsec-vectors"/>.
     </p>
 
     <figure xml:id="diagram-lines">
@@ -89,8 +91,11 @@
       ref="diagram-lines"/>.</caption> 
     </listing>
 
-    <p>Any stroke attributes can be added to a line though fill
-    attributes do no apply.
+    <p> It is important to remember that lines, along with the other
+    components introduced in this and later sections, support the
+    graphical attributes explained in <xref
+    ref="sec-graphical-attr"/>.  In particular, any stroke attributes
+    can be added to a line though fill attributes do not apply.
     <dl>
       <li><title>endpoints</title>
       <p>The endpoints of a line may be specified together using the
@@ -136,7 +141,7 @@
     </p>
   </subsection>
 
-  <subsection>
+  <subsection xml:id="subsec-vectors">
     <title>Vectors</title>
 
     <p>In some sense, <tag>vector</tag>s are a redundant element since
