@@ -146,7 +146,7 @@ window.MathJax = {
 <div class="toc-title-box"><a href="chap-graphical.html" class="internal"><span class="codenumber">3</span> <span class="title">Graphical components</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-graphical-attr.html" class="internal"><span class="codenumber">3.1</span> <span class="title">General attributes</span></a></div>
+<div class="toc-title-box"><a href="sec-graphical-attr.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Stroke, fill, and other graphical attributes</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphical-attr.html#subsec-colors" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Colors</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphical-attr.html#subsec-stroke-attributes" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Stroke attributes</span></a></div></li>
@@ -181,7 +181,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#subsec-points" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Points</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-4" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Lines</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-5" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#subsec-vectors" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Vectors</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-6" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Polygons</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-7" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Triangles</span></a></div></li>
 </ul>
@@ -302,7 +302,7 @@ window.MathJax = {
 <div class="para" id="subsec-points-6">Notice that a label may be attached to a point by including the label’s text within the <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> element.  In this case, attributes may be added to the point, such as <code class="code-inline tex2jax_ignore">@alignment</code> and <code class="code-inline tex2jax_ignore">@offset</code>, to control the positioning of the label.  Behind the scenes, the label and point are placed within a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> element, and the point’s handle transferred to the <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> for annotating.</div></section><section class="subsection" id="sec-simple-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="space"> </span><span class="title">Lines</span>
 </h3>
-<div class="para" id="sec-simple-4-2">A few lines are shown in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> with the PreFigure source presented in <a href="sec-simple.html#listing-lines" class="xref" data-knowl="./knowl/xref/listing-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.4">Listing 3.5.4</a>.</div>
+<div class="para" id="sec-simple-4-2">A few lines are shown in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> with the PreFigure source presented in <a href="sec-simple.html#listing-lines" class="xref" data-knowl="./knowl/xref/listing-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.4">Listing 3.5.4</a>.  Please note that a <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> element can be used for including vectors in a diagram, as explained in <a href="sec-simple.html#subsec-vectors" class="internal" title="Subsection 3.5.3: Vectors">Subsection 3.5.3</a>.</div>
 <figure class="figure figure-like" id="diagram-lines"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/lines.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span>A collection of lines.</figcaption></figure><figure class="listing figure-like" id="listing-lines"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,5,5)"&gt;
@@ -322,26 +322,26 @@ window.MathJax = {
 &lt;/diagram&gt;
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a>.</figcaption></figure><div class="para logical" id="sec-simple-4-5">
-<div class="para">Any stroke attributes can be added to a line though fill attributes do no apply.</div>
+<div class="para">It is important to remember that lines, along with the other components introduced in this and later sections, support the graphical attributes explained in <a href="sec-graphical-attr.html" class="internal" title="Section 3.1: Stroke, fill, and other graphical attributes">Section 3.1</a>.  In particular, any stroke attributes can be added to a line though fill attributes do not apply.</div>
 <dl class="description-list">
-<dt id="sec-simple-4-5-1-1">endpoints</dt>
-<dd><div class="para" id="sec-simple-4-5-1-1-2">The endpoints of a line may be specified together using the <code class="code-inline tex2jax_ignore">@endpoints</code> attribute or separately using <code class="code-inline tex2jax_ignore">@p1</code> and <code class="code-inline tex2jax_ignore">@p2</code>.</div></dd>
-<dt id="sec-simple-4-5-1-2">infinite</dt>
-<dd><div class="para" id="sec-simple-4-5-1-2-2">If <code class="code-inline tex2jax_ignore">@infinite="yes"</code>, then the line is drawn as if it were infinite in extent.</div></dd>
-<dt id="sec-simple-4-5-1-3">arrows</dt>
-<dd><div class="para" id="sec-simple-4-5-1-3-2">If <code class="code-inline tex2jax_ignore">@arrows="1"</code>, then an arrow is drawn at the second endpoint.  If <code class="code-inline tex2jax_ignore">@arrows="2"</code>, then an arrow is drawn at both endpoints.</div></dd>
-<dt id="sec-simple-4-5-1-4">reverse</dt>
-<dd><div class="para" id="sec-simple-4-5-1-4-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the line when adding arrows.</div></dd>
-<dt id="sec-simple-4-5-1-5">endpoint-offsets</dt>
+<dt id="sec-simple-4-5-2-1">endpoints</dt>
+<dd><div class="para" id="sec-simple-4-5-2-1-2">The endpoints of a line may be specified together using the <code class="code-inline tex2jax_ignore">@endpoints</code> attribute or separately using <code class="code-inline tex2jax_ignore">@p1</code> and <code class="code-inline tex2jax_ignore">@p2</code>.</div></dd>
+<dt id="sec-simple-4-5-2-2">infinite</dt>
+<dd><div class="para" id="sec-simple-4-5-2-2-2">If <code class="code-inline tex2jax_ignore">@infinite="yes"</code>, then the line is drawn as if it were infinite in extent.</div></dd>
+<dt id="sec-simple-4-5-2-3">arrows</dt>
+<dd><div class="para" id="sec-simple-4-5-2-3-2">If <code class="code-inline tex2jax_ignore">@arrows="1"</code>, then an arrow is drawn at the second endpoint.  If <code class="code-inline tex2jax_ignore">@arrows="2"</code>, then an arrow is drawn at both endpoints.</div></dd>
+<dt id="sec-simple-4-5-2-4">reverse</dt>
+<dd><div class="para" id="sec-simple-4-5-2-4-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the line when adding arrows.</div></dd>
+<dt id="sec-simple-4-5-2-5">endpoint-offsets</dt>
 <dd>
-<div class="para" id="sec-simple-4-5-1-5-2">Sometimes you may want the line to begin or end near, but not exactly, at the given endpoints.  The bottom line in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> is an example in that the line is connecting two labels placed at two endpoints.  We move the endpoints slightly so that the line does not interfere with the label.  In this case, the endpoint offsets are a pair of vectors, each of which moves an endpoint by the given vector in SVG units.</div>
-<div class="para" id="sec-simple-4-5-1-5-3">Another line in the figure shows a second use of offsets.  In this case, the offsets are a single pair of SVG units.  The direction of the line is preserved but each endpoint is moved along the line by the given offset.  This could be helpful when drawing arrows since the arrow head will extend slightly beyond the endpoint of the line.</div>
+<div class="para" id="sec-simple-4-5-2-5-2">Sometimes you may want the line to begin or end near, but not exactly, at the given endpoints.  The bottom line in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> is an example in that the line is connecting two labels placed at two endpoints.  We move the endpoints slightly so that the line does not interfere with the label.  In this case, the endpoint offsets are a pair of vectors, each of which moves an endpoint by the given vector in SVG units.</div>
+<div class="para" id="sec-simple-4-5-2-5-3">Another line in the figure shows a second use of offsets.  In this case, the offsets are a single pair of SVG units.  The direction of the line is preserved but each endpoint is moved along the line by the given offset.  This could be helpful when drawing arrows since the arrow head will extend slightly beyond the endpoint of the line.</div>
 </dd>
 </dl>
-</div></section><section class="subsection" id="sec-simple-5"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsec-vectors"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="space"> </span><span class="title">Vectors</span>
 </h3>
-<div class="para" id="sec-simple-5-2">In some sense, <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code>s are a redundant element since we can always draw lines and attach arrows.  However, a goal of PreFigure is to facilitate authors thinking mathematically about the exposition so <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> should be used when including a vector in a diagram.  Vectors are also drawn with a default thickness that differentiates them from lines drawn with their default attributes.</div>
+<div class="para" id="subsec-vectors-2">In some sense, <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code>s are a redundant element since we can always draw lines and attach arrows.  However, a goal of PreFigure is to facilitate authors thinking mathematically about the exposition so <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> should be used when including a vector in a diagram.  Vectors are also drawn with a default thickness that differentiates them from lines drawn with their default attributes.</div>
 <figure class="figure figure-like" id="diagram-vectors"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/vectors.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>A collection of vectors.</figcaption></figure><figure class="listing figure-like" id="listing-vectors"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
   &lt;coordinates bbox="(-1,-1,5,5)"&gt;
@@ -352,17 +352,17 @@ window.MathJax = {
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-vectors" class="xref" data-knowl="./knowl/xref/diagram-vectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.5">Figure 3.5.5</a>.</figcaption></figure><div class="para logical" id="sec-simple-5-5">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-vectors" class="xref" data-knowl="./knowl/xref/diagram-vectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.5">Figure 3.5.5</a>.</figcaption></figure><div class="para logical" id="subsec-vectors-5">
 <div class="para">In addition to stroke attributes, a vector supports the following attributes.</div>
 <dl class="description-list">
-<dt id="sec-simple-5-5-1-1">v</dt>
-<dd><div class="para" id="sec-simple-5-5-1-1-2">The attribute <code class="code-inline tex2jax_ignore">@v</code> is the 2-dimensional mathematical vector.</div></dd>
-<dt id="sec-simple-5-5-1-2">tail</dt>
-<dd><div class="para" id="sec-simple-5-5-1-2-2">The attribute <code class="code-inline tex2jax_ignore">@tail</code> represents the tail of the vector.</div></dd>
-<dt id="sec-simple-5-5-1-3">scale</dt>
-<dd><div class="para" id="sec-simple-5-5-1-3-2">The value of <code class="code-inline tex2jax_ignore">@scale</code> acts as scalar multiplication on <code class="code-inline tex2jax_ignore">@v</code>.</div></dd>
-<dt id="sec-simple-5-5-1-4">head-location</dt>
-<dd><div class="para" id="sec-simple-5-5-1-4-2">Usually, the head of a vector is placed at the tip of the vector.  There may be occasions, however, when you want to place the head somewhere else along the shaft.  Specifying <code class="code-inline tex2jax_ignore">@head-location="0.8"</code> places the arrow head at a location 80% of the way from the tail to the tip.</div></dd>
+<dt id="subsec-vectors-5-1-1">v</dt>
+<dd><div class="para" id="subsec-vectors-5-1-1-2">The attribute <code class="code-inline tex2jax_ignore">@v</code> is the 2-dimensional mathematical vector.</div></dd>
+<dt id="subsec-vectors-5-1-2">tail</dt>
+<dd><div class="para" id="subsec-vectors-5-1-2-2">The attribute <code class="code-inline tex2jax_ignore">@tail</code> represents the tail of the vector.</div></dd>
+<dt id="subsec-vectors-5-1-3">scale</dt>
+<dd><div class="para" id="subsec-vectors-5-1-3-2">The value of <code class="code-inline tex2jax_ignore">@scale</code> acts as scalar multiplication on <code class="code-inline tex2jax_ignore">@v</code>.</div></dd>
+<dt id="subsec-vectors-5-1-4">head-location</dt>
+<dd><div class="para" id="subsec-vectors-5-1-4-2">Usually, the head of a vector is placed at the tip of the vector.  There may be occasions, however, when you want to place the head somewhere else along the shaft.  Specifying <code class="code-inline tex2jax_ignore">@head-location="0.8"</code> places the arrow head at a location 80% of the way from the tail to the tip.</div></dd>
 </dl>
 </div></section><section class="subsection" id="sec-simple-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="space"> </span><span class="title">Polygons</span>
