@@ -176,7 +176,108 @@
      </listing>
 
     
-  </subsection>
+   </subsection>
+
+   <subsection>
+     <title>Discontinuities</title>
+
+     <p>We sometimes want to solve differential equations
+     <m>\frac{dy}{dt}=f(t,y)</m> for which the defining function
+     <m>f(t,y)</m> is discontinuous.  Here's an example that could
+     model an electric circuit with a switch.
+     <me>
+       \frac{dy}{dt} = \begin{cases}
+       10 - y \amp \text{if } 0\leq t \leq 4 \\
+       -y \amp \text{if } t > 4
+       \end{cases}
+     </me>.
+     </p>
+
+     <p>To define <m>f(t,y)</m> in such a case, we can use
+     <m>\chi_{[a,b]}</m>, the
+     characteristic function of an interval <m>[a,b]</m>.  In
+     PreFigure, this comes in four flavors.
+     <dl>
+       <li><title><c>chi_oo</c></title>
+
+	 <p><c>chi_oo(a,b,t)</c> is 1 if <m>a \lt t \lt b</m> and 0
+	 otherwise.
+	 </p>
+       </li>
+       <li><title><c>chi_oc</c></title>
+
+	 <p><c>chi_oc(a,b,t)</c> is 1 if <m>a \lt t \leq b</m> and 0
+	 otherwise.
+	 </p>
+       </li>
+       <li><title><c>chi_co</c></title>
+
+	 <p><c>chi_co(a,b,t)</c> is 1 if <m>a \leq t \lt b</m> and 0
+	 otherwise.
+	 </p>
+       </li>
+       <li><title><c>chi_cc</c></title>
+
+	 <p><c>chi_cc(a,b,t)</c> is 1 if <m>a \leq t \leq b</m> and 0
+	 otherwise.
+	 </p>
+       </li>
+     </dl>
+     </p>
+
+     <p><xref ref="diagram-de-pulse"/> illustrates how this could be
+     used.
+     </p>
+
+     <figure xml:id="diagram-de-pulse">
+      <sidebyside width="60%">
+	<image source="images/de-pulse"/>
+      </sidebyside>
+      <caption>Solving a differential equation with a discontinuity.</caption>
+     </figure>
+
+     <listing xml:id="listing-de-pulse">
+       <program line-numbers="no">
+	 <input><xi:include href="code/de-pulse.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for <xref
+       ref="diagram-de-pulse"/>.</caption> 
+     </listing>
+
+     <p>There are two additional things to note.  First, <c>inf</c>
+     can be used to represent <m>\infty</m>, which allows us to define
+     the interval <m>(-\infty, 4)</m>.  Second, the differential
+     solver used by PreFigure has a hard time with discontinuities
+     unless we specify a maximum step size for the solver to take.
+     Notice the attribute <attr>max-step="0.1"</attr> in the
+     <tag>plot-de-solution</tag> elements.
+     </p>
+   </subsection>
+
+   <subsection xml:id="subsec-euler">
+     <title>Euler's method</title>
+
+     <p>There is a function <c>eulers_method(f, t0, y0, t1, N)</c>
+     that returns the set of points that are the result of applying
+     Euler's method with the given parameters.  <xref
+     ref="diagram-eulers-method"/> demonstrates.
+     </p>
+
+     <figure xml:id="diagram-eulers-method">
+      <sidebyside width="60%">
+	<image source="images/eulers_method"/>
+      </sidebyside>
+      <caption>Demonstrating Euler's method.</caption>
+     </figure>
+
+     <listing xml:id="listing-eulers-method">
+       <program line-numbers="no">
+	 <input><xi:include href="code/eulers_method.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for <xref
+       ref="diagram-eulers-method"/>.</caption> 
+     </listing>
+   </subsection>
 
 </section>
 

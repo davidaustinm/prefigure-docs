@@ -96,6 +96,9 @@ A = [[1,2],[2,1]]
     to add an element <c>a</c> to an existing <c>list</c>, we could say
     <c>append(list, a)</c>.  This could be used, for instance, to
     implement Euler's method, as shown in <xref ref="diagram-euler"/>.
+    Of course, <xref ref="subsec-euler"/> provides an easier way to
+    illustrate Euler's method, but authors will undoubtedly find uses
+    for the <c>append</c> function.
     </p>
 
     <figure xml:id="diagram-euler">
