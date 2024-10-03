@@ -39,12 +39,20 @@
       11"<m>\times</m>11.5" paper.  More specifically, the tactile
       diagrams created by PreFigure are optimized to be embossed on a
       <url href="https://viewplus.com/">ViewPlus
-      embosser.</url></p></li>
+      embosser.</url></p>
 
-      <li><p>Think of an embosser as a very low-resolution printer, 20
-      dots per inch to be precise (compared to 300 dpi for a
-      standard printer).  An embossers works by raising the
-      paper at a collection of these dots, each of which has a diameter of
+      <p>A tactile diagram produced by PreFigure is meant to use as
+      much of the page as possible.  In particular, the diagram will
+      most likely be scaled from the <attr>dimensions</attr> provided
+      in the <tag>diagram</tag> element in such a way as to preserve
+      the aspect ratio of the <attr>dimensions</attr>.
+      </p>
+      </li>
+
+      <li><p>You may think of an embosser as a very low-resolution
+      printer, 20 dots per inch to be precise (compared to 300 dpi for
+      a standard printer).  An embossers works by raising the paper at
+      a collection of these dots, each of which has a diameter of
       0.057 inches.  Dots can, however, be raised to a small number of
       different heights to simulate shading from white to gray to
       black.</p></li>
