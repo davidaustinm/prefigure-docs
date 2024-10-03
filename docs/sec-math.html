@@ -210,6 +210,8 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-slope-field" class="internal"><span class="codenumber">3.8.1</span> <span class="title">Slope Fields</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-de-solutions" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Solutions to differential equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#sec-diffeqs-5" class="internal"><span class="codenumber">3.8.3</span> <span class="title">Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-euler" class="internal"><span class="codenumber">3.8.4</span> <span class="title">Euler’s method</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -308,7 +310,7 @@ A = [[1,2],[2,1]]
 </div></section><section class="subsection" id="sec-math-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="space"> </span><span class="title">List operations</span>
 </h3>
-<div class="para" id="sec-math-5-2">It can be convenient to modify existing lists.  For instance, to add an element <code class="code-inline tex2jax_ignore">a</code> to an existing <code class="code-inline tex2jax_ignore">list</code>, we could say <code class="code-inline tex2jax_ignore">append(list, a)</code>.  This could be used, for instance, to implement Euler’s method, as shown in <a href="sec-math.html#diagram-euler" class="xref" data-knowl="./knowl/xref/diagram-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.1">Figure 4.4.1</a>.</div>
+<div class="para" id="sec-math-5-2">It can be convenient to modify existing lists.  For instance, to add an element <code class="code-inline tex2jax_ignore">a</code> to an existing <code class="code-inline tex2jax_ignore">list</code>, we could say <code class="code-inline tex2jax_ignore">append(list, a)</code>.  This could be used, for instance, to implement Euler’s method, as shown in <a href="sec-math.html#diagram-euler" class="xref" data-knowl="./knowl/xref/diagram-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.1">Figure 4.4.1</a>. Of course, <a href="sec-diffeqs.html#subsec-euler" class="internal" title="Subsection 3.8.4: Euler’s method">Subsection 3.8.4</a> provides an easier way to illustrate Euler’s method, but authors will undoubtedly find uses for the <code class="code-inline tex2jax_ignore">append</code> function.</div>
 <figure class="figure figure-like" id="diagram-euler"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/euler.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.1<span class="period">.</span></span><span class="space"> </span>An implementation of Euler’s method</figcaption></figure><figure class="listing figure-like" id="listing-euler"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="20"&gt;
   &lt;coordinates bbox="(-1,-1,10,8)"&gt;

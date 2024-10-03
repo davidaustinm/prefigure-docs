@@ -210,6 +210,8 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-slope-field" class="internal"><span class="codenumber">3.8.1</span> <span class="title">Slope Fields</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-de-solutions" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Solutions to differential equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#sec-diffeqs-5" class="internal"><span class="codenumber">3.8.3</span> <span class="title">Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-euler" class="internal"><span class="codenumber">3.8.4</span> <span class="title">Euler’s method</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -360,7 +362,80 @@ window.MathJax = {
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.9<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-diffeqs.html#diagram-de-phase" class="xref" data-knowl="./knowl/xref/diagram-de-phase.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.8">Figure 3.8.8</a>.</figcaption></figure></section></section></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.9<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-diffeqs.html#diagram-de-phase" class="xref" data-knowl="./knowl/xref/diagram-de-phase.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.8">Figure 3.8.8</a>.</figcaption></figure></section><section class="subsection" id="sec-diffeqs-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.8.3</span><span class="space"> </span><span class="title">Discontinuities</span>
+</h3>
+<div class="para logical" id="sec-diffeqs-5-2">
+<div class="para">We sometimes want to solve differential equations <span class="process-math">\(\frac{dy}{dt}=f(t,y)\)</span> for which the defining function <span class="process-math">\(f(t,y)\)</span> is discontinuous.  Here’s an example that could model an electric circuit with a switch.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dt} = \begin{cases}
+10 - y \amp \text{if } 0\leq t \leq 4 \\
+-y \amp \text{if } t &gt; 4
+\end{cases}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="sec-diffeqs-5-3">
+<div class="para">To define <span class="process-math">\(f(t,y)\)</span> in such a case, we can use <span class="process-math">\(\chi_{[a,b]}\text{,}\)</span> the characteristic function of an interval <span class="process-math">\([a,b]\text{.}\)</span>  In PreFigure, this comes in four flavors.</div>
+<dl class="description-list">
+<dt id="sec-diffeqs-5-3-4-1"><code class="code-inline tex2jax_ignore">chi_oo</code></dt>
+<dd><div class="para" id="sec-diffeqs-5-3-4-1-2">
+<code class="code-inline tex2jax_ignore">chi_oo(a,b,t)</code> is 1 if <span class="process-math">\(a \lt t \lt b\)</span> and 0 otherwise.</div></dd>
+<dt id="sec-diffeqs-5-3-4-2"><code class="code-inline tex2jax_ignore">chi_oc</code></dt>
+<dd><div class="para" id="sec-diffeqs-5-3-4-2-2">
+<code class="code-inline tex2jax_ignore">chi_oc(a,b,t)</code> is 1 if <span class="process-math">\(a \lt t \leq b\)</span> and 0 otherwise.</div></dd>
+<dt id="sec-diffeqs-5-3-4-3"><code class="code-inline tex2jax_ignore">chi_co</code></dt>
+<dd><div class="para" id="sec-diffeqs-5-3-4-3-2">
+<code class="code-inline tex2jax_ignore">chi_co(a,b,t)</code> is 1 if <span class="process-math">\(a \leq t \lt b\)</span> and 0 otherwise.</div></dd>
+<dt id="sec-diffeqs-5-3-4-4"><code class="code-inline tex2jax_ignore">chi_cc</code></dt>
+<dd><div class="para" id="sec-diffeqs-5-3-4-4-2">
+<code class="code-inline tex2jax_ignore">chi_cc(a,b,t)</code> is 1 if <span class="process-math">\(a \leq t \leq b\)</span> and 0 otherwise.</div></dd>
+</dl>
+</div>
+<div class="para" id="sec-diffeqs-5-4">
+<a href="sec-diffeqs.html#diagram-de-pulse" class="xref" data-knowl="./knowl/xref/diagram-de-pulse.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.10">Figure 3.8.10</a> illustrates how this could be used.</div>
+<figure class="figure figure-like" id="diagram-de-pulse"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/de-pulse.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.10<span class="period">.</span></span><span class="space"> </span>Solving a differential equation with a discontinuity.</figcaption></figure><figure class="listing figure-like" id="listing-de-pulse"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="(20,5,20,25)"&gt;
+  &lt;coordinates bbox="[-0.5,-2,8,20]"&gt;
+    &lt;definition&gt;f(t,y)=chi_oc(-inf,4,t)*10-y&lt;/definition&gt;
+    &lt;grid-axes /&gt;
+    &lt;slope-field function="f" arrows="yes" stroke="gray"/&gt;
+    &lt;plot-de-solution function="f" t0="0" y0="0" t1="bbox[2]"
+		      max-step="0.1"/&gt;
+    &lt;plot-de-solution function="f" t0="0" y0="20" t1="bbox[2]"
+		      max-step="0.1"
+		      stroke="red"/&gt;
+
+    &lt;label anchor="(bbox[2],0)" alignment="ne" offset="(4,0)"&gt;
+      &lt;m&gt;t&lt;/m&gt;
+    &lt;/label&gt;
+    &lt;label anchor="(0,bbox[3])" alignment="ne"&gt;&lt;m&gt;y(t)&lt;/m&gt;&lt;/label&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.11<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-diffeqs.html#diagram-de-pulse" class="xref" data-knowl="./knowl/xref/diagram-de-pulse.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.10">Figure 3.8.10</a>.</figcaption></figure><div class="para" id="sec-diffeqs-5-7">There are two additional things to note.  First, <code class="code-inline tex2jax_ignore">inf</code> can be used to represent <span class="process-math">\(\infty\text{,}\)</span> which allows us to define the interval <span class="process-math">\((-\infty, 4)\text{.}\)</span>  Second, the differential solver used by PreFigure has a hard time with discontinuities unless we specify a maximum step size for the solver to take. Notice the attribute <code class="code-inline tex2jax_ignore">@max-step="0.1"</code> in the <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> elements.</div></section><section class="subsection" id="subsec-euler"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.8.4</span><span class="space"> </span><span class="title">Euler’s method</span>
+</h3>
+<div class="para" id="subsec-euler-2">There is a function <code class="code-inline tex2jax_ignore">eulers_method(f, t0, y0, t1, N)</code> that returns the set of points that are the result of applying Euler’s method with the given parameters.  <a href="sec-diffeqs.html#diagram-eulers-method" class="xref" data-knowl="./knowl/xref/diagram-eulers-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.12">Figure 3.8.12</a> demonstrates.</div>
+<figure class="figure figure-like" id="diagram-eulers-method"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/eulers_method.svg" role="img" class="contained"></div></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.12<span class="period">.</span></span><span class="space"> </span>Demonstrating Euler’s method.</figcaption></figure><figure class="listing figure-like" id="listing-eulers-method"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="20"&gt;
+  &lt;coordinates bbox="(-1,-1,10,8)"&gt;
+    &lt;definition&gt;f(t,y) = 0.1*y*(6-y)&lt;/definition&gt;
+    &lt;definition&gt;N=5&lt;/definition&gt;
+    &lt;definition&gt;points = eulers_method(f,0,1,bbox[2],N)&lt;/definition&gt;
+
+    &lt;grid-axes xlabel="t" ylabel="y"/&gt;
+    &lt;slope-field function="f" stroke="cornflowerblue"/&gt;
+    &lt;polygon points="points" stroke="red"/&gt;
+
+    &lt;repeat parameter="k=0..N"&gt;
+      &lt;point p="points[k]"/&gt;
+    &lt;/repeat&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.8.13<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-diffeqs.html#diagram-eulers-method" class="xref" data-knowl="./knowl/xref/diagram-eulers-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.12">Figure 3.8.12</a>.</figcaption></figure></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-calculus.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-paths.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
