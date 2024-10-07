@@ -1027,11 +1027,119 @@ var ptx_lunr_docs = [
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"20\"> <coordinates bbox=\"(-1,-1,10,8)\"> <definition>f(t,y) = 0.1*y*(6-y)<\/definition> <definition>N=5<\/definition> <definition>points = eulers_method(f,0,1,bbox[2],N)<\/definition> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\" stroke=\"cornflowerblue\"\/> <polygon points=\"points\" stroke=\"red\"\/> <repeat parameter=\"k=0..N\"> <point p=\"points[k]\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
+  "id": "sec-networks",
+  "level": "1",
+  "url": "sec-networks.html",
+  "type": "Section",
+  "number": "3.9",
+  "title": "Networks",
+  "body": " Networks   PreFigure enables authors to create diagrams of networks, such as that shown in . Mathematicians sometimes refer to these as graphs , but we will use the term network to distinguish them from graphs of functions. There is quite a bit of flexibility as will be explained in the remainder of this section.      A simple network.     Getting started  Let's begin by discussing . Notice that it is a directed network and that there are multiple edges between two of the vertices. The PreFigure source is in .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   The network is defined by the dictionary in line 2 where each key in the dictionary defines a node in the network and the corresponding value lists the nodes connected by edges. Notice that node 1 is connected to node 5 by two edges, as seen in the diagram.  The <network> element then constructs the graphical representation of the network. There are quite a few attributes for that element so let's take a moment to consider them.  graph  The graph attribute tells PreFigure about the dictionary that defines the structure of the network.   directed  The attribute directed=\"yes\" declares this to be a directed network, which means that the edges have a direction indicated by arrows. If this attribute is set to \"no\" , which is the default, then no arrows are placed on the edges.   labels  Use labels=\"yes\" to include labels inside the nodes.   scale  The nodes will fit just inside the bounding box defined by the current coordinate system so the value of scale can be used to pull the nodes in toward the center. The default is scale=\"0.8\" .   node-fill  The node-fill attribute defines the color to use when filling the nodes. This is part of a collection of attributes that control the visual appearance of the network. Each <node> will generate a <point> so other attributes include node-stroke , node-thickness , node-size , node-style .  Similarly, an edge will generate a <path> so some path attributes can be applied, such as edge-stroke , edge-thickness , and edge-dash .   seed  The algorithm that determines the positions of the nodes uses a random seed. To ensure consistent behavior while you are developing a diagram, set the value of the seed attribute so that the nodes will stay in the same position from one compilation to the next. If you are not satisfied with the appearance of the network, you could try using a different seed.       A more verbose network  A second way of defining the same network is shown in . In this case, we do not define the structure of the network using a dictionary. Instead, we include <node> elements as children of <network> . The edges attribute for each node defines the edges connecting that node to others. . As we will see shortly, we can mix these two approaches to defining the network for more flexibility.    <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <node at=\"1\" edges=\"[3,4,5,5]\"\/> <node at=\"2\" edges=\"[4,5]\"\/> <node at=\"3\" edges=\"[4,5]\"\/> <node at=\"4\"\/> <node at=\"5\"\/> <node at=\"6\" edges=\"[2,4]\"\/> <\/network> <\/coordinates> <\/diagram>   Another PreFigure source for .     Positioning the nodes  PreFigure relies on the Python package networkx to determine the positions of the nodes, a process referred to as layout . This subsection shows some examples that demonstrate the possibilities.  First, we may explicitly declare where we would like the nodes to be by including a p attribute for each node.      The complete graph on 5 vertices.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\" edges=\"[1,2,3,4]\"\/> <node at=\"1\" p=\"f(1)\" edges=\"[2,3,4]\"\/> <node at=\"2\" p=\"f(2)\" edges=\"[3,4]\"\/> <node at=\"3\" p=\"f(3)\" edges=\"[4]\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   Alternatively, we can define the structure of the graph by including a graph attribute inside the <network> element and then using <node> elements to set the positions. This is seen in .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[1,2,3,4], 1:[2,3,4], 2:[3,4], 3:[4]}<\/definition> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" graph=\"graph\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\"\/> <node at=\"1\" p=\"f(1)\"\/> <node at=\"2\" p=\"f(2)\"\/> <node at=\"3\" p=\"f(3)\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   A second source for .   Nodes are created when they are referenced in the dictionary defined by the graph attribute. When a <node> element is encountered inside the <network> element, PreFigure checks to see if the node has already been defined. If not, it will add it to the graph using the edges attribute to append more structure to the network. While this is allowed, it is not necessary and could be confusing to author and maintain a network defined like this.  In these last two examples, we have specified the position of the nodes as an attribute inside the <node> element. If we would like networkx to position the nodes, we have some more options.  By default, PreFigure will use the spring layout defined by networkx . Two other options are bfs , a shorthand for breadth-first, and spectral . Interested authors are encouraged to consult the networkx documentation for more information.  We can prescribe a different layout method using the layout of the <network> element. The diagram in illustrates how the layout=\"bfs\" can be used to illustrate a binary tree.      A binary tree.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition> graph={0:[1,2],1:[3,4],2:[5,6],3:[7,8],4:[9,10],5:[11,12],6:[13,14]} <\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <rectangle center=\"(0,0)\" dimensions=\"(2,2)\" stroke=\"black\"\/> <network layout=\"bfs\" start=\"0\" graph=\"graph\" node-fill=\"orange\" rotate=\"-90\" scale=\"0.8\"> <node at=\"0\" fill=\"red\"\/> <edge vertices=\"[0,1]\" stroke=\"blue\" thickness=\"4\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   There are a couple of features to notice here. If we use the bfs algorithm for the layout, we need to specify a node at which to start . This is an attribute of the <network> element.  The bfs algorithm produces a tree that moves from left to right. To depict the tree with the root at the top, we use rotate=\"-90\" to rotate the graph.  Since we would like the root to be colored differently, we use a <node> element to specify the color of that node.  In the same way, we use an <edge> element to modify the appearance of a particular edge that has already been added to the graph structure. If the edge has not been added previously, then it will be added to the structure of the graph.    Putting everything together  Networks have a lot of features so it may be worthwhile to show an example that illustrates how these features can be used in mathematical exposition. Suppose that we would like to explain the idea of a spanning tree as a subgraph of a graph . On the left of is the graph with a collection of dashed edges. If we remove those edges, we obtain a spanning tree as shown on the right. To make the point clear, we would like the nodes to be in the same positions in both diagrams.       A graph with some edges indicated on the left. When those edges are removed, we have a spanning tree as seen on the right.     <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" dash=\"9 9\"\/> <edge vertices=\"[1,4]\" dash=\"9 9\"\/> <edge vertices=\"[4,6]\" dash=\"9 9\"\/> <edge vertices=\"[2,4]\" dash=\"9 9\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the left of .   The PreFigure source for is shown in . Notice how the structure of the graph is defined using a dictionary with instructions given to draw some edges as dashed lines.  The PreFigure source to create the diagram on the right is quite similar except that we replace dash=\"9 9\" in the <edge> elements with stroke=\"none\" .    <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" stroke=\"none\"\/> <edge vertices=\"[1,4]\" stroke=\"none\"\/> <edge vertices=\"[4,6]\" stroke=\"none\"\/> <edge vertices=\"[2,4]\" stroke=\"none\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the right of .    "
+},
+{
+  "id": "diagram-network-intro",
+  "level": "2",
+  "url": "sec-networks.html#diagram-network-intro",
+  "type": "Figure",
+  "number": "3.9.1",
+  "title": "",
+  "body": "    A simple network.  "
+},
+{
+  "id": "listing-network-intro",
+  "level": "2",
+  "url": "sec-networks.html#listing-network-intro",
+  "type": "Listing",
+  "number": "3.9.2",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "listing-network-verbose",
+  "level": "2",
+  "url": "sec-networks.html#listing-network-verbose",
+  "type": "Listing",
+  "number": "3.9.3",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <node at=\"1\" edges=\"[3,4,5,5]\"\/> <node at=\"2\" edges=\"[4,5]\"\/> <node at=\"3\" edges=\"[4,5]\"\/> <node at=\"4\"\/> <node at=\"5\"\/> <node at=\"6\" edges=\"[2,4]\"\/> <\/network> <\/coordinates> <\/diagram>   Another PreFigure source for .  "
+},
+{
+  "id": "diagram-network-manual",
+  "level": "2",
+  "url": "sec-networks.html#diagram-network-manual",
+  "type": "Figure",
+  "number": "3.9.4",
+  "title": "",
+  "body": "    The complete graph on 5 vertices.  "
+},
+{
+  "id": "listing-network-manual",
+  "level": "2",
+  "url": "sec-networks.html#listing-network-manual",
+  "type": "Listing",
+  "number": "3.9.5",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\" edges=\"[1,2,3,4]\"\/> <node at=\"1\" p=\"f(1)\" edges=\"[2,3,4]\"\/> <node at=\"2\" p=\"f(2)\" edges=\"[3,4]\"\/> <node at=\"3\" p=\"f(3)\" edges=\"[4]\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "listing-network-manual-2",
+  "level": "2",
+  "url": "sec-networks.html#listing-network-manual-2",
+  "type": "Listing",
+  "number": "3.9.6",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[1,2,3,4], 1:[2,3,4], 2:[3,4], 3:[4]}<\/definition> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" graph=\"graph\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\"\/> <node at=\"1\" p=\"f(1)\"\/> <node at=\"2\" p=\"f(2)\"\/> <node at=\"3\" p=\"f(3)\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   A second source for .  "
+},
+{
+  "id": "diagram-network-tree",
+  "level": "2",
+  "url": "sec-networks.html#diagram-network-tree",
+  "type": "Figure",
+  "number": "3.9.7",
+  "title": "",
+  "body": "    A binary tree.  "
+},
+{
+  "id": "listing-network-tree",
+  "level": "2",
+  "url": "sec-networks.html#listing-network-tree",
+  "type": "Listing",
+  "number": "3.9.8",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition> graph={0:[1,2],1:[3,4],2:[5,6],3:[7,8],4:[9,10],5:[11,12],6:[13,14]} <\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <rectangle center=\"(0,0)\" dimensions=\"(2,2)\" stroke=\"black\"\/> <network layout=\"bfs\" start=\"0\" graph=\"graph\" node-fill=\"orange\" rotate=\"-90\" scale=\"0.8\"> <node at=\"0\" fill=\"red\"\/> <edge vertices=\"[0,1]\" stroke=\"blue\" thickness=\"4\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "diagram-network-spanning",
+  "level": "2",
+  "url": "sec-networks.html#diagram-network-spanning",
+  "type": "Figure",
+  "number": "3.9.9",
+  "title": "",
+  "body": "     A graph with some edges indicated on the left. When those edges are removed, we have a spanning tree as seen on the right.  "
+},
+{
+  "id": "listing-network-spanning",
+  "level": "2",
+  "url": "sec-networks.html#listing-network-spanning",
+  "type": "Listing",
+  "number": "3.9.10",
+  "title": "",
+  "body": "  <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" dash=\"9 9\"\/> <edge vertices=\"[1,4]\" dash=\"9 9\"\/> <edge vertices=\"[4,6]\" dash=\"9 9\"\/> <edge vertices=\"[2,4]\" dash=\"9 9\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the left of .  "
+},
+{
+  "id": "listing-network-spanning-2",
+  "level": "2",
+  "url": "sec-networks.html#listing-network-spanning-2",
+  "type": "Listing",
+  "number": "3.9.11",
+  "title": "",
+  "body": "  <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" stroke=\"none\"\/> <edge vertices=\"[1,4]\" stroke=\"none\"\/> <edge vertices=\"[4,6]\" stroke=\"none\"\/> <edge vertices=\"[2,4]\" stroke=\"none\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the right of .  "
+},
+{
   "id": "sec-paths",
   "level": "1",
   "url": "sec-paths.html",
   "type": "Section",
-  "number": "3.9",
+  "number": "3.10",
   "title": "Paths",
   "body": " Paths   The <path> tag provides authors with the means to create more complicated objects by concatenating simpler ones. As a preview, notice that there are two <path> s in . The simpler path, in red, is a single quadratic Bézier curve. The more complicated path, in blue, is composed of line segments, a circular arc, and a cubic Bézier curve, with one of the line segments decorated with a zig-zag pattern.      The graphical result of two <path> s.     Defining paths  We will first focus on how a <path> is defined by concatenating simpler pieces. Throughout the definition of a path, there is always a current point that is used to construct the next piece of the path. For this reason, a <path> tag must always have a start attribute, which serves as the initial point of the path.   shows two paths and the PreFigure source given in .      The graphical result of two <path> s.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,1)\" stroke=\"blue\" arrows=\"1\"> <lineto point=\"(3,2)\"\/> <moveto point=\"(4,2)\"\/> <horizontal distance=\"2\"\/> <vertical distance=\"4\"\/> <arc center=\"(7.5,6)\" radius=\"1.5\" range=\"(180,0)\"\/> <cubic-bezier controls=\"((9,2), (8,2), (7,2))\"\/> <\/path> <path start=\"(1,5)\" stroke=\"red\" arrows=\"2\"> <quadratic-bezier controls=\"((1,8),(5,8))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the paths in   The first path in blue, defined by lines 4 through 11, demonstrates many options that are available when defining a path.   lineto  The <lineto> tag has a point attribute, as seen in line 5. This has the effect of adding to the path a line segment from the current point to the point and updating the current point.    rlineto  This is similar to a <line> tag except that the point attribute is interpreted as a relative change from the current point.    moveto  The <moveto> tag, shown in line 6, simply updates the current point to the given point without adding a line segment. In effect, it is like picking up your pen.    rmoveto  This tag interpretes the point as a relative change in the current point.    horizontal  The <horizontal> tag is like a <lineto> where the new endpoint is a given horizontal distance from the current point.    arc  An <arc> tag adds a circular arc to the path with a specific center , radius , and angular range . If the first point of the arc is not the same as the current point, then a line segment from the current point to the first point is added.    cubic-bezier and quadratic bezier  Bézier curves are smooth curves defined in terms of a set of control points . Mathematically, Bézier curves are parametric curves whose coordinate functions are polynomials. PreFigure provides access to both cubic and quadratic Bézier curves through the tags <cubic-bezier> and <quadratic-bezier> .  shows two paths consisting only of Bézier curves. The lower path consists of two cubic Bézier curves. The labeled point is the starting point while , , and are the three given control points. The final control point, , is the endpoint of the first Bézier curve while the control points and define the initial and final velocities of the curve.      The graphical result of two <path> s.   A quadratic Bézier curve, the upper curve in , is similar but is defined by only two control points.  shows the PreFigure source, omitting some of the details, of .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,3)\" stroke=\"blue\"> <cubic-bezier controls=\"((2,5),(4,5),(5,3))\"\/> <cubic-bezier controls=\"((6,1),(8,1),(9,3))\"\/> <\/path> <path start=\"(5,7)\" stroke=\"red\"> <quadratic-bezier controls=\"((4,9),(8,9))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in     Repeat  A <repeat> tag can be included inside a <path> as long as its children are allowed in a <path> . See for more details.    Other constructions  Some familiar constructions, such as <graph> , <parametric_curve> , and <polygon> can also be placed inside of a <path> . Ths is demonstrated in and its accompanying .      The graphical result of two <path> s.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <definition>f(x)=3*sin((x-1)\/8*pi)+5<\/definition> <path start=\"(1,1)\" stroke=\"blue\" closed=\"yes\"> <vertical distance=\"4\"\/> <graph function=\"f\" domain=\"(1,5)\"\/> <lineto point=\"(5,1)\"\/> <\/path> <definition>f(t)=(8-0.25*sin(2*(t-1)*pi),t)<\/definition> <path start=\"(8,1)\" stroke=\"red\"> <parametric-curve function=\"f\" domain=\"(1,6)\"\/> <polygon points=\"((8,6),(9,8),(8,9),(7,8),(8,6))\"\/> <moveto point=\"(7,8)\"\/> <horizontal distance=\"2\"\/> <moveto point=\"(8,6)\"\/> <vertical distance=\"3\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in      A <path> may have an attribute closed=\"yes\" that closes the path. You will need to be explicit about how the <path> is displayed by specifying a stroke and\/or fill .    Decorations  Line segments within a <path> defined by a <lineto> , <rlineto> , <horizontal> , or <vertical> may be decorated in a variety of ways using a decoration attribute. The value of this attribute is a set of parameters separated by semicolons, the first of which is the type of decoration, either coil , wave , zigzag , or capacitor , as shown in       Some path decorations.     <diagram dimensions=\"(400,200)\" margins=\"5\"> <coordinates bbox=\"(-3,2,10,10)\"> <path start=\"(1,9)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"coil; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,9)\" alignment=\"w\">coil<\/label> <path start=\"(1,7)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"wave; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,7)\" alignment=\"w\">wave<\/label> <path start=\"(1,5)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"capacitor; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,5)\" alignment=\"w\">capacitor<\/label> <path start=\"(1,3)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"zigzag; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,3)\" alignment=\"w\">zigzag<\/label> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .   The coil decoration resembles a spring. You can specify the number of coils on the line segment, the dimensions , and the center .  The dimensions parameter is an ordered pair whose values are interepreted in SVG coordinate lengths. The first number gives the horizontal distance traversed by one coil while the second gives the maximum vertical displacement from the undecorated line segment.  The center parameter is a number between 0 and 1, interpreted as a fraction of the length of the line segment, that indicates where the center of the coils lies. The value of this parameter is 0.5 by default, which centers the coil on the line segment.  shows some examples with the source code in .      Some coil decorations.     <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,-0.5,5,2.5)\"> <path start=\"(0,0)\" stroke=\"black\"> <lineto point=\"(5,0)\" decoration=\"coil; number=5; dimensions=(10,10); center=0.7\"\/> <\/path> <path start=\"(0,1)\" stroke=\"black\"> <horizontal distance=\"5\" decoration=\"coil; number=10; dimensions=(10,5)\"\/> <\/path> <path start=\"(0,2)\" stroke=\"black\"> <lineto point=\"(5,2)\" decoration=\"coil; number=5; dimensions=(5,10)\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .   demonstrates the use of some coils.      Using decorations to represent a spring. Adapted from Tom Judson's Ordinary Differential Equations Project .     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,160,300,300)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(3.5,1)\" decoration=\"coil; number=5 ; dimensions=(15,10)\"\/> <\/path> <rectangle center=\"(4,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,10,300,150)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(2,1)\" decoration=\"coil; number=5 ; dimensions=(6,10)\"\/> <\/path> <rectangle center=\"(2.5,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   The zigzag decoration has the same parameters as a coil while the capacitor decoration has a center parameter, which again defaults to 0.5, and a dimensions parameter, which controls the horizontal gap and vertical length      An RLC circuit. Adapted from Tom Judson's Ordinary Differential Equations Project .     <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,9)\"> <path start=\"(1,1)\" stroke=\"black\"> <lineto point=\"(1,8)\"\/> <lineto point=\"(9,8)\" decoration=\"coil; number=5; dimensions=(10,10)\"\/> <lineto point=\"(9,1)\" decoration=\"capacitor; dimensions=(12,15)\"\/> <lineto point=\"(1,1)\" decoration=\"zigzag; number=5; dimensions=(10,10)\"\/> <\/path> <point p=\"(1,4.5)\" size=\"20\" fill=\"white\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .    "
 },
@@ -1040,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-path-preview",
   "type": "Figure",
-  "number": "3.9.1",
+  "number": "3.10.1",
   "title": "",
   "body": "    The graphical result of two <path> s.  "
 },
@@ -1049,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-paths",
   "type": "Figure",
-  "number": "3.9.2",
+  "number": "3.10.2",
   "title": "",
   "body": "    The graphical result of two <path> s.  "
 },
@@ -1058,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#listing-paths",
   "type": "Listing",
-  "number": "3.9.3",
+  "number": "3.10.3",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,1)\" stroke=\"blue\" arrows=\"1\"> <lineto point=\"(3,2)\"\/> <moveto point=\"(4,2)\"\/> <horizontal distance=\"2\"\/> <vertical distance=\"4\"\/> <arc center=\"(7.5,6)\" radius=\"1.5\" range=\"(180,0)\"\/> <cubic-bezier controls=\"((9,2), (8,2), (7,2))\"\/> <\/path> <path start=\"(1,5)\" stroke=\"red\" arrows=\"2\"> <quadratic-bezier controls=\"((1,8),(5,8))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the paths in  "
 },
@@ -1067,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-bezier",
   "type": "Figure",
-  "number": "3.9.4",
+  "number": "3.10.4",
   "title": "",
   "body": "    The graphical result of two <path> s.  "
 },
@@ -1076,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#listing-bezier",
   "type": "Listing",
-  "number": "3.9.5",
+  "number": "3.10.5",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decortions=\"no\"\/> <path start=\"(1,3)\" stroke=\"blue\"> <cubic-bezier controls=\"((2,5),(4,5),(5,3))\"\/> <cubic-bezier controls=\"((6,1),(8,1),(9,3))\"\/> <\/path> <path start=\"(5,7)\" stroke=\"red\"> <quadratic-bezier controls=\"((4,9),(8,9))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in  "
 },
@@ -1085,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-more-paths",
   "type": "Figure",
-  "number": "3.9.6",
+  "number": "3.10.6",
   "title": "",
   "body": "    The graphical result of two <path> s.  "
 },
@@ -1094,7 +1202,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#listing-more-paths",
   "type": "Listing",
-  "number": "3.9.7",
+  "number": "3.10.7",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <definition>f(x)=3*sin((x-1)\/8*pi)+5<\/definition> <path start=\"(1,1)\" stroke=\"blue\" closed=\"yes\"> <vertical distance=\"4\"\/> <graph function=\"f\" domain=\"(1,5)\"\/> <lineto point=\"(5,1)\"\/> <\/path> <definition>f(t)=(8-0.25*sin(2*(t-1)*pi),t)<\/definition> <path start=\"(8,1)\" stroke=\"red\"> <parametric-curve function=\"f\" domain=\"(1,6)\"\/> <polygon points=\"((8,6),(9,8),(8,9),(7,8),(8,6))\"\/> <moveto point=\"(7,8)\"\/> <horizontal distance=\"2\"\/> <moveto point=\"(8,6)\"\/> <vertical distance=\"3\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in  "
 },
@@ -1103,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-path-decorations",
   "type": "Figure",
-  "number": "3.9.8",
+  "number": "3.10.8",
   "title": "",
   "body": "    Some path decorations.  "
 },
@@ -1112,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#listing-path-decorations",
   "type": "Listing",
-  "number": "3.9.9",
+  "number": "3.10.9",
   "title": "",
   "body": "  <diagram dimensions=\"(400,200)\" margins=\"5\"> <coordinates bbox=\"(-3,2,10,10)\"> <path start=\"(1,9)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"coil; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,9)\" alignment=\"w\">coil<\/label> <path start=\"(1,7)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"wave; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,7)\" alignment=\"w\">wave<\/label> <path start=\"(1,5)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"capacitor; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,5)\" alignment=\"w\">capacitor<\/label> <path start=\"(1,3)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"zigzag; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,3)\" alignment=\"w\">zigzag<\/label> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .  "
 },
@@ -1121,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-coils",
   "type": "Figure",
-  "number": "3.9.10",
+  "number": "3.10.10",
   "title": "",
   "body": "    Some coil decorations.  "
 },
@@ -1130,7 +1238,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#listing-coils",
   "type": "Listing",
-  "number": "3.9.11",
+  "number": "3.10.11",
   "title": "",
   "body": "  <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,-0.5,5,2.5)\"> <path start=\"(0,0)\" stroke=\"black\"> <lineto point=\"(5,0)\" decoration=\"coil; number=5; dimensions=(10,10); center=0.7\"\/> <\/path> <path start=\"(0,1)\" stroke=\"black\"> <horizontal distance=\"5\" decoration=\"coil; number=10; dimensions=(10,5)\"\/> <\/path> <path start=\"(0,2)\" stroke=\"black\"> <lineto point=\"(5,2)\" decoration=\"coil; number=5; dimensions=(5,10)\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .  "
 },
@@ -1139,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-mass-spring",
   "type": "Figure",
-  "number": "3.9.12",
+  "number": "3.10.12",
   "title": "",
   "body": "    Using decorations to represent a spring. Adapted from Tom Judson's Ordinary Differential Equations Project .  "
 },
@@ -1148,7 +1256,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#listing-mass-spring",
   "type": "Listing",
-  "number": "3.9.13",
+  "number": "3.10.13",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,160,300,300)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(3.5,1)\" decoration=\"coil; number=5 ; dimensions=(15,10)\"\/> <\/path> <rectangle center=\"(4,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,10,300,150)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(2,1)\" decoration=\"coil; number=5 ; dimensions=(6,10)\"\/> <\/path> <rectangle center=\"(2.5,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1157,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#diagram-rcl-circuit",
   "type": "Figure",
-  "number": "3.9.14",
+  "number": "3.10.14",
   "title": "",
   "body": "    An RLC circuit. Adapted from Tom Judson's Ordinary Differential Equations Project .  "
 },
@@ -1166,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paths.html#listing-rcl-circuit",
   "type": "Listing",
-  "number": "3.9.15",
+  "number": "3.10.15",
   "title": "",
   "body": "  <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,9)\"> <path start=\"(1,1)\" stroke=\"black\"> <lineto point=\"(1,8)\"\/> <lineto point=\"(9,8)\" decoration=\"coil; number=5; dimensions=(10,10)\"\/> <lineto point=\"(9,1)\" decoration=\"capacitor; dimensions=(12,15)\"\/> <lineto point=\"(1,1)\" decoration=\"zigzag; number=5; dimensions=(10,10)\"\/> <\/path> <point p=\"(1,4.5)\" size=\"20\" fill=\"white\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1175,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-shapes.html",
   "type": "Section",
-  "number": "3.10",
+  "number": "3.11",
   "title": "Shape constructions and clipping",
   "body": " Shape constructions and clipping   This section introduces shapes and some things you can do with them. A shape is any graphical component that defines a two-dimensional region, such as a <circle> , <rectangle> , <polygon> , or <path> . The tags <graph> or <parametric-curve> also define shapes as, behind the scenes, PreFigure will close the paths they define.    Defining shapes  Shapes are defined within a special <define-shapes> tag, which make them available for later use. , and the accompanying PreFigure source in , provides a simple example.      A simple use of the <shape> tag.     <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <\/define-shapes> <shape shape=\"A\" fill=\"magenta\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in   Note the use of the <define-shapes> tag in lines 3 through 5. Within this tag, we define a circle with the handle at=\"A\" . Any stroke or fill attributes will be ignored in the definition since we mean to focus solely on the geometric shape. Also, it is important that shapes be defined within a <coordinates> tag as the definitions become invalid once we leave this coordinate system.  We then recall the shape in line 7 and supply attributes for filling and stroking it within that element. Notice that the attribute shape=\"A\" serves as a reference to the previously defined shape. As we will see, we sometimes want to recall two or more shapes at once, which we could do with a comma-separated list. For this reason, PreFigure accepts either the attribute shapes (note the plural) or shape as a convenience.    Shape Constructions  Of course, we could easily have created the diagram in with a single <circle> tag. Shapes, however, provide us with access to some set operations, such as intersections, unions, and differences. For example, demonstrates how we can define the difference of two sets .      The difference of two sets.     <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <circle at=\"B\" center=\"(6,3)\" radius=\"2\"\/> <\/define-shapes> <shape shapes=\"A,B\" operation=\"difference\" fill=\"magenta\" stroke=\"black\"\/> <shape shape=\"A\" stroke=\"black\"\/> <shape shape=\"B\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <label anchor=\"(2,3)\" alignment=\"nw\"><m>A<\/m><\/label> <label anchor=\"(8,3)\" alignment=\"ne\"><m>B<\/m><\/label> <label anchor=\"(5,0.5)\"><m>A\\setminus B<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in   In this example, we define two sets and in the <define-shapes> tag. We then construct and display their intersection using the <shape> tag in lines 8 and 9. Notice that we use the shapes attribute to recall the two shapes (though shape=\"A,B\" would also suffice). The attribute operation=\"difference\" declares that this set should be constructed as the difference of the two sets. In this case, shapes=\"B,A\" would yield the difference .  Other operations include operation=\"union\" , operation=\"intersection\" , and operation=\"symmetric-difference\" or \"sym-diff\" . These four operations are demonstrated in .             Four sets operations.   Intersections, unions, and symmetric differences can take any number of sets, while a difference requires exactly two.  A fifth operation is operation=\"convex-hull\" , which produces the convex hull of the union of the given shapes. includes a demonstration, with the convex hull of two sets outlined in red. This is not an especially realistic diagram, but it does demonstrate some of the possibilities when working with shapes.      The convex hull of the union of two shapes.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <circle at=\"circle\" center=\"(6,7)\" radius=\"2\"\/> <rectangle at=\"lower-rectangle\" center=\"(4,4)\" dimensions=\"(5,4)\" corner-radius=\"10\"\/> <rectangle at=\"upper-rectangle\" center=\"(4,7.5)\" dimensions=\"(5,1)\" corner-radius=\"10\"\/> <shape shapes=\"circle,lower-rectangle,upper-rectangle\" operation=\"sym-diff\" at=\"sym-diff\"\/> <circle at=\"right-circle\" center=\"(8.5,8.5)\" radius=\"1\"\/> <\/define-shapes> <grid-axes decorations=\"no\"\/> <shape shapes=\"sym-diff,right-circle\" operation=\"convex-hull\" stroke=\"red\" thickness=\"8\"\/> <shape shapes=\"sym-diff\" fill=\"magenta\" stroke=\"black\"\/> <shape shapes=\"circle\" stroke=\"black\"\/> <shape shapes=\"upper-rectangle\" stroke=\"black\"\/> <shape shapes=\"lower-rectangle\" stroke=\"black\"\/> <shape shape=\"right-circle\" fill=\"blue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in     Clipping  A second use of shapes is to clip a diagram with the <clip> tag. provides a demonstration. Notice that the clipping shape is applied only to elements that are children of the <clip> tag.      Using the <clip> tag.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <rectangle at=\"square1\" center=\"(4,4)\" dimensions=\"(3,3)\" corner-radius=\"10\"\/> <rectangle at=\"square2\" center=\"(3,6)\" dimensions=\"(2,2)\" corner-radius=\"5\"\/> <shape at=\"clip\" shapes=\"square1, square2\" operation=\"union\"\/> <circle at=\"circle\" center=\"(6,6)\" radius=\"3\"\/> <\/define-shapes> <shape shape=\"circle\" fill=\"lightgray\" stroke=\"gray\"\/> <clip shape=\"clip\"> <shape shape=\"circle\" fill=\"blue\" stroke=\"black\"\/> <\/clip> <shape shape=\"clip\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,10)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in    "
 },
@@ -1184,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#diagram-shape-start",
   "type": "Figure",
-  "number": "3.10.1",
+  "number": "3.11.1",
   "title": "",
   "body": "    A simple use of the <shape> tag.  "
 },
@@ -1193,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#listing-shape-start",
   "type": "Listing",
-  "number": "3.10.2",
+  "number": "3.11.2",
   "title": "",
   "body": "  <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <\/define-shapes> <shape shape=\"A\" fill=\"magenta\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
@@ -1202,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#diagram-shape-difference",
   "type": "Figure",
-  "number": "3.10.3",
+  "number": "3.11.3",
   "title": "",
   "body": "    The difference of two sets.  "
 },
@@ -1211,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#listing-shape-difference",
   "type": "Listing",
-  "number": "3.10.4",
+  "number": "3.11.4",
   "title": "",
   "body": "  <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <circle at=\"B\" center=\"(6,3)\" radius=\"2\"\/> <\/define-shapes> <shape shapes=\"A,B\" operation=\"difference\" fill=\"magenta\" stroke=\"black\"\/> <shape shape=\"A\" stroke=\"black\"\/> <shape shape=\"B\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <label anchor=\"(2,3)\" alignment=\"nw\"><m>A<\/m><\/label> <label anchor=\"(8,3)\" alignment=\"ne\"><m>B<\/m><\/label> <label anchor=\"(5,0.5)\"><m>A\\setminus B<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
@@ -1220,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#diagram-shape-construct",
   "type": "Figure",
-  "number": "3.10.5",
+  "number": "3.11.5",
   "title": "",
   "body": "           Four sets operations.  "
 },
@@ -1229,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#diagram-shape-convex",
   "type": "Figure",
-  "number": "3.10.6",
+  "number": "3.11.6",
   "title": "",
   "body": "    The convex hull of the union of two shapes.  "
 },
@@ -1238,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#listing-shape-convex",
   "type": "Listing",
-  "number": "3.10.7",
+  "number": "3.11.7",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <circle at=\"circle\" center=\"(6,7)\" radius=\"2\"\/> <rectangle at=\"lower-rectangle\" center=\"(4,4)\" dimensions=\"(5,4)\" corner-radius=\"10\"\/> <rectangle at=\"upper-rectangle\" center=\"(4,7.5)\" dimensions=\"(5,1)\" corner-radius=\"10\"\/> <shape shapes=\"circle,lower-rectangle,upper-rectangle\" operation=\"sym-diff\" at=\"sym-diff\"\/> <circle at=\"right-circle\" center=\"(8.5,8.5)\" radius=\"1\"\/> <\/define-shapes> <grid-axes decorations=\"no\"\/> <shape shapes=\"sym-diff,right-circle\" operation=\"convex-hull\" stroke=\"red\" thickness=\"8\"\/> <shape shapes=\"sym-diff\" fill=\"magenta\" stroke=\"black\"\/> <shape shapes=\"circle\" stroke=\"black\"\/> <shape shapes=\"upper-rectangle\" stroke=\"black\"\/> <shape shapes=\"lower-rectangle\" stroke=\"black\"\/> <shape shape=\"right-circle\" fill=\"blue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
@@ -1247,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#diagram-shape-clip",
   "type": "Figure",
-  "number": "3.10.8",
+  "number": "3.11.8",
   "title": "",
   "body": "    Using the <clip> tag.  "
 },
@@ -1256,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-shapes.html#listing-shape-clip",
   "type": "Listing",
-  "number": "3.10.9",
+  "number": "3.11.9",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <rectangle at=\"square1\" center=\"(4,4)\" dimensions=\"(3,3)\" corner-radius=\"10\"\/> <rectangle at=\"square2\" center=\"(3,6)\" dimensions=\"(2,2)\" corner-radius=\"5\"\/> <shape at=\"clip\" shapes=\"square1, square2\" operation=\"union\"\/> <circle at=\"circle\" center=\"(6,6)\" radius=\"3\"\/> <\/define-shapes> <shape shape=\"circle\" fill=\"lightgray\" stroke=\"gray\"\/> <clip shape=\"clip\"> <shape shape=\"circle\" fill=\"blue\" stroke=\"black\"\/> <\/clip> <shape shape=\"clip\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,10)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
