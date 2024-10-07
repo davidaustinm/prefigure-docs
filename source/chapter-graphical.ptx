@@ -23,6 +23,7 @@
   <xi:include href="section-circles.ptx"/>
   <xi:include href="section-calculus.ptx"/>
   <xi:include href="section-diffeqs.ptx"/>
+  <xi:include href="section-networks.ptx"/>
   <xi:include href="section-paths.ptx"/>
   <xi:include href="section-shapes.ptx"/>
 

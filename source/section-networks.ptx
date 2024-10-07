@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-networks" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Networks</title>
+
+  <introduction>
+    <p>PreFigure enables authors to create diagrams of networks, such
+    as that shown in <xref ref="diagram-network-intro"/>.
+    Mathematicians sometimes refer to these as <em>graphs</em>, but we
+    will use the term network to distinguish them from graphs of
+    functions.  There is quite a bit of flexibility as will be
+    explained in the remainder of this section.
+    </p>
+
+     <figure xml:id="diagram-network-intro">
+      <sidebyside width="60%">
+	<image source="images/network-intro"/>
+      </sidebyside>
+      <caption>A simple network.</caption>
+     </figure>
+  </introduction>
+
+  <subsection>
+    <title>Getting started</title>
+
+    <p>Let's begin by discussing <xref ref="diagram-network-intro"/>.
+    Notice that it is a directed network and that there are multiple
+    edges between two of the vertices.  The PreFigure source is in
+    <xref ref="listing-network-intro"/>.
+    </p>
+
+    <listing xml:id="listing-network-intro">
+      <program line-numbers="yes">
+	<input><xi:include href="code/network-intro.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref ref="diagram-network-intro"/>.
+      </caption>
+    </listing>
+
+    <p> The network is defined by the dictionary in line 2 where each
+    key in the dictionary defines a node in the network and the
+    corresponding value lists the nodes connected by edges.  Notice
+    that node 1 is connected to node 5 by two edges, as seen in the
+    diagram.</p>
+
+    <p>The <tag>network</tag> element then constructs the graphical
+    representation of the network.  There are quite a few attributes
+    for that element so let's take a moment to consider them.
+
+    <dl>
+      <li><title>graph</title>
+      <p>The <attr>graph</attr> attribute tells PreFigure about the
+      dictionary that defines the structure of the network.
+      </p>
+      </li>
+      
+      <li><title>directed</title>
+      <p>The attribute <attr>directed="yes"</attr> declares this to be
+      a directed network, which means that the edges have a direction
+      indicated by arrows.  If this attribute is set to <c>"no"</c>,
+      which is the default, then no arrows are placed on the edges.
+      </p>
+      </li>
+
+      <li><title>labels</title>
+      <p>Use <attr>labels="yes"</attr> to include labels inside the
+      nodes.
+      </p>
+      </li>
+
+      <li><title>scale</title>
+      <p>The nodes will fit just inside the bounding box defined by
+      the current coordinate system so the value of <attr>scale</attr>
+      can be used to pull the nodes in toward the center.  The default
+      is <attr>scale="0.8"</attr>.
+      </p>
+      </li>
+	
+      <li><title>node-fill</title>
+      <p>The <attr>node-fill</attr> attribute defines the color to
+      use when filling the nodes.  This is part of a collection of
+      attributes that control the visual appearance of the network.
+      Each <tag>node</tag> will generate a <tag>point</tag> so 
+      other attributes include <attr>node-stroke</attr>,
+      <attr>node-thickness</attr>, <attr>node-size</attr>,
+      <attr>node-style</attr>.</p>
+
+      <p>Similarly, an edge will generate a
+      <tag>path</tag> so some path attributes can be applied, such as 
+      <attr>edge-stroke</attr>, <attr>edge-thickness</attr>, and
+      <attr>edge-dash</attr>.
+      </p>
+      </li>
+
+      <li><title>seed</title>
+      <p>The algorithm that determines the positions of the nodes uses
+      a random seed.  To ensure consistent behavior while you are
+      developing a diagram, set the value of the <attr>seed</attr>
+      attribute so that the nodes will stay in the same position from
+      one compilation to the next.  If you are not satisfied with the
+      appearance of the network, you could try using a different seed.
+      </p>
+      </li>
+    </dl>
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>A more verbose network</title>
+
+    <p>A second way of defining the same network is shown in <xref
+    ref="listing-network-verbose"/>.  In this case, we do not define
+    the structure of the network using a dictionary.  Instead, we
+    include <tag>node</tag> elements as children of
+    <tag>network</tag>.  The <attr>edges</attr> attribute for each
+    node defines the edges connecting that node to others.</p>.
+
+    <p>As we will see shortly, we can mix these two approaches to
+    defining the network for
+    more flexibility.</p>
+
+    <listing xml:id="listing-network-verbose">
+      <program line-numbers="no">
+	<input><xi:include href="code/network-verbose.xml" parse="text"/></input>
+      </program>
+      <caption>Another PreFigure source for <xref ref="diagram-network-intro"/>.
+      </caption>
+    </listing>
+
+  </subsection>
+
+  <subsection>
+    <title>Positioning the nodes</title>
+
+    <p>PreFigure relies on the Python package <c>networkx</c> to
+    determine the positions of the nodes, a process referred to as
+    <em>layout</em>.  This subsection shows some examples that 
+    demonstrate the possibilities.</p>
+
+    <p>First, we may explicitly declare where we would like the nodes
+    to be by including a <attr>p</attr> attribute for each node.</p>
+
+    <figure xml:id="diagram-network-manual">
+      <sidebyside width="60%">
+	<image source="images/network-manual"/>
+      </sidebyside>
+      <caption>The complete graph on 5 vertices.</caption>
+    </figure>
+
+    <listing xml:id="listing-network-manual">
+      <program line-numbers="no">
+	<input><xi:include href="code/network-manual.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref ref="diagram-network-manual"/>.
+      </caption>
+    </listing>
+
+    <p>Alternatively, we can define the structure of the graph 
+    by including a <attr>graph</attr> attribute inside the
+    <tag>network</tag> element and then using <tag>node</tag> elements
+    to set the positions.  This is seen in <xref
+    ref="listing-network-manual-2"/>.
+    </p>
+      
+    <listing xml:id="listing-network-manual-2">
+      <program line-numbers="no">
+	<input><xi:include href="code/network-manual-2.xml" parse="text"/></input>
+      </program>
+      <caption>A second source for <xref ref="diagram-network-manual"/>.
+      </caption>
+    </listing>
+
+    <p> Nodes are created when they are referenced in the dictionary
+    defined by the <attr>graph</attr> attribute.  When a
+    <tag>node</tag> element is encountered inside the
+    <tag>network</tag> element, PreFigure checks to see if the node
+    has already been defined.  If not, it will add it to the graph
+    using the <attr>edges</attr> attribute to append more structure to
+    the network.  While this is allowed, it is not necessary and
+    could be confusing to author and maintain a network defined like
+    this. 
+    </p>
+
+    <p>In these last two examples, we have specified the position of
+    the nodes as an attribute inside the <tag>node</tag> element.  If
+    we would like <c>networkx</c> to position the nodes, we have some
+    more options.
+    </p>
+
+    <p>By default, PreFigure will use the <c>spring</c> layout defined
+    by <c>networkx</c>.  Two other options are <c>bfs</c>, a shorthand
+    for breadth-first, and <c>spectral</c>.  Interested authors are
+    encouraged to consult the <c>networkx</c> documentation for more
+    information.  </p>
+
+    <p>We can prescribe a different layout method using the
+    <attr>layout</attr> of the <tag>network</tag> element.  The
+    diagram in <xref ref="diagram-network-tree"/> illustrates how the
+    <attr>layout="bfs"</attr> can be used to illustrate a binary tree.
+    </p>
+
+    <figure xml:id="diagram-network-tree">
+      <sidebyside width="60%">
+	<image source="images/network-tree"/>
+      </sidebyside>
+      <caption>A binary tree.</caption>
+    </figure>
+
+    <listing xml:id="listing-network-tree">
+      <program line-numbers="no">
+	<input><xi:include href="code/network-tree.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref ref="diagram-network-tree"/>.
+      </caption>
+    </listing>
+
+    <p>There are a couple of features to notice here.  If we use the 
+    <c>bfs</c> algorithm for the layout, we need to specify a node at
+    which to <attr>start</attr>.  This is an attribute of the
+    <tag>network</tag> element.</p>
+
+    <p>The <c>bfs</c> algorithm produces a tree that moves from left
+    to right.  To depict the tree with the root at the top, we use
+    <attr>rotate="-90"</attr> to rotate the graph. </p>
+
+    <p>Since we would like the root to be colored differently, we use
+    a <tag>node</tag> element to specify the color of that node.  
+    </p>
+
+    <p>In the same way, we use an <tag>edge</tag> element to modify
+    the appearance of a particular edge that has already been added
+    to the graph structure.  If the edge has not been added
+    previously, then it will be added to the structure of the graph.
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <title>Putting everything together</title>
+
+    <p>Networks have a lot of features so it may be worthwhile to show
+    an example that illustrates how these features can be used in
+    mathematical exposition.  Suppose that we would like to explain
+    the idea of a spanning tree as a subgraph of a graph <m>G</m>.  On
+    the left of <xref ref="diagram-network-spanning"/> is the graph
+    <m>G</m> with a collection of dashed edges.  If we remove those
+    edges, we obtain a spanning tree as shown on the right.  To make
+    the point clear, we would like the nodes to be in the same
+    positions in both diagrams.
+    </p>
+
+    <figure xml:id="diagram-network-spanning">
+      <sidebyside widths="45% 45%">
+	<image source="images/network-spanning-1"/>
+	<image source="images/network-spanning-2"/>
+      </sidebyside>
+      <caption>A graph <m>G</m> with some edges indicated on the
+      left.  When those edges are removed, we have a spanning tree as
+      seen on the right.
+      </caption>
+    </figure>
+
+    <listing xml:id="listing-network-spanning">
+      <program line-numbers="no">
+	<input><xi:include href="code/network-spanning-1.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the left of
+      <xref ref="diagram-network-spanning"/>.
+      </caption>
+    </listing>
+
+    <p>The PreFigure source for <xref ref="diagram-network-spanning"/>
+    is shown in <xref ref="listing-network-spanning"/>.  Notice how
+    the structure of the graph is defined using a dictionary with
+    instructions given to draw some edges as dashed lines.
+    </p>
+
+    <p>The PreFigure source to create the diagram on the right is
+    quite similar except that we replace <attr>dash="9 9"</attr> in the
+    <tag>edge</tag> elements with <attr>stroke="none"</attr>.
+    </p>
+
+    <listing xml:id="listing-network-spanning-2">
+      <program line-numbers="no">
+	<input><xi:include href="code/network-spanning-2.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for the right of
+      <xref ref="diagram-network-spanning"/>.
+      </caption>
+    </listing>
+
+  </subsection>
+
+</section>
+
