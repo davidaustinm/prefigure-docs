@@ -303,7 +303,7 @@ window.MathJax = {
 prefig build foo.xml
 prefig build -f tactile foo.xml
 	</pre>
-<div class="para">where the second command builds a tactile version. In either case, the output image will appear in <code class="code-inline tex2jax_ignore">output/foo.svg</code> while annotations read by a screen reader are in <code class="code-inline tex2jax_ignore">output/foo.xml</code>.</div>
+<div class="para">where the second command builds a tactile version. In either case, the output image will appear in <code class="code-inline tex2jax_ignore">output/foo.svg</code> while annotations read by a screen reader are in <code class="code-inline tex2jax_ignore">output/foo.xml</code>.  If PreFigure is called from within PreTeXt, then the annotations will appear in <code class="code-inline tex2jax_ignore">foo-annotations.xml</code>.</div>
 </div></dd>
 <dt id="sec-installation-5-1-2">view</dt>
 <dd>
@@ -337,12 +337,20 @@ prefig pdf foo
 </div>
 <div class="para" id="sec-installation-5-1-3-3">Use of <code class="code-inline tex2jax_ignore">prefig pdf</code> assumes that <code class="code-inline tex2jax_ignore">rsvg-convert</code> is installed, which it provided in a codespace.  The use of <code class="code-inline tex2jax_ignore">rsvg-convert</code> ensures that tactile diagrams are well suited for embossing.  There are options for choosing the resolution of the resulting PDF, but tactile diagrams should always be converted with a resolution of 72 dpi, which is the default.</div>
 </dd>
-<dt id="sec-installation-5-1-4">init</dt>
-<dd><div class="para" id="sec-installation-5-1-4-2">It is not essential to do this, but if PreFigure is installed locally, you may want to begin with <code class="code-inline tex2jax_ignore">prefig init</code>, which has the effect of installing some MathJax libraries (PreFigure will try to install these later when needed) as well as the Braille29 font, which is required to create tactile diagrams for embossing.</div></dd>
-<dt id="sec-installation-5-1-5">new</dt>
-<dd><div class="para" id="sec-installation-5-1-5-2">You may initialize a new PreFigure project with <code class="code-inline tex2jax_ignore">prefig new</code>. This copies a simple publication file and the diagcess library files into the current directory.  PreFigure work done within this directory and any subdirectories will be able to find these when needed.</div></dd>
-<dt id="sec-installation-5-1-6">examples</dt>
-<dd><div class="para" id="sec-installation-5-1-6-2">If you would like to explore the set of included examples, use <code class="code-inline tex2jax_ignore">prefig examples</code> to copy the set of examples into the current directory.</div></dd>
+<dt id="sec-installation-5-1-4">png</dt>
+<dd><div class="para logical" id="sec-installation-5-1-4-2">
+<div class="para">To make a PNG from a diagram that has already been built, use</div>
+<pre class="code-display tex2jax_ignore">
+prefig png foo
+	</pre>
+<div class="para">Including the <code class="code-inline tex2jax_ignore">-b</code> flag will cause the diagram to be built first: <code class="code-inline tex2jax_ignore">prefig pdf -b foo</code>.</div>
+</div></dd>
+<dt id="sec-installation-5-1-5">init</dt>
+<dd><div class="para" id="sec-installation-5-1-5-2">It is not essential to do this, but if PreFigure is installed locally, you may want to begin with <code class="code-inline tex2jax_ignore">prefig init</code>, which has the effect of installing some MathJax libraries (PreFigure will try to install these later when needed) as well as the Braille29 font, which is required to create tactile diagrams for embossing.</div></dd>
+<dt id="sec-installation-5-1-6">new</dt>
+<dd><div class="para" id="sec-installation-5-1-6-2">You may initialize a new PreFigure project with <code class="code-inline tex2jax_ignore">prefig new</code>. This copies a simple publication file and the diagcess library files into the current directory.  PreFigure work done within this directory and any subdirectories will be able to find these when needed.</div></dd>
+<dt id="sec-installation-5-1-7">examples</dt>
+<dd><div class="para" id="sec-installation-5-1-7-2">If you would like to explore the set of included examples, use <code class="code-inline tex2jax_ignore">prefig examples</code> to copy the set of examples into the current directory.</div></dd>
 </dl>
 </div></section></div>
 <div class="ptx-content-footer">
