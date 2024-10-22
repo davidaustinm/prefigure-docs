@@ -265,7 +265,9 @@ prefig build -f tactile foo.xml
 	In either case, the output image will appear in
 	<c>output/foo.svg</c> while annotations read by a screen
 	reader are in
-	<c>output/foo.xml</c>. 
+	<c>output/foo.xml</c>.  If PreFigure is called from within
+	<pretext/>, then the annotations will appear in
+	<c>foo-annotations.xml</c>. 
 	</p>
       </li>
 
@@ -319,6 +321,18 @@ prefig pdf foo
 	options for choosing the resolution of the resulting PDF, but
 	tactile diagrams should always be converted with a resolution
 	of 72 dpi, which is the default.
+	</p>
+      </li>
+
+      <li><title>png</title>
+	<p> To make a PNG from a diagram that has already been built,
+	use 
+	<cd>
+prefig png foo
+	</cd>
+	Including the <c>-b</c> flag will cause the diagram to be
+	built first:
+	<c>prefig pdf -b foo</c>.
 	</p>
       </li>
 
