@@ -42,6 +42,31 @@
     ref="subsec-axes"/>.  
     </p>
 
+    <p>To place the grid lines and label locations at multiples of
+    <m>\pi</m>, add the attributes <attr>h-pi-format="yes"</attr> or
+    <attr>v-pi-format="yes"</attr>, as illustrated in <xref
+    ref="diagram-pi-format"/>.  These attributes may be individually
+    applied to a <tag>grid</tag> or <tag>axes</tag> element.
+    </p>
+
+    <figure xml:id="diagram-pi-format">
+      <sidebyside width="60%">
+	<image source="images/pi-format"/>
+      </sidebyside>
+      <caption>The use of <attr>h-pi-format</attr> and
+      <attr>v-pi-format</attr> attributes.
+      </caption>
+    </figure>
+
+    <listing>
+      <program>
+	<input><xi:include href="code/pi-format.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-pi-format"/>.</caption> 
+    </listing>
+
     <p>The <attr>xlabel</attr> and <attr>ylabel</attr> tags are
     optional but provide a simple way to label the axes.  We will have
     a lot more to say about labels later, but these particular labels

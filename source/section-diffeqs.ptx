@@ -175,6 +175,11 @@
        ref="diagram-de-phase"/>.</caption> 
      </listing>
 
+     <p>To place an arrow at the end of a trajectory, add the
+     attribute <attr>arrow="yes"</attr> to the
+     <tag>plot-de-solution</tag> element.
+     </p>
+
     
    </subsection>
 
