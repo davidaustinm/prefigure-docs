@@ -91,6 +91,11 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#sec-installation-2-1 { counter-set: sec-installation-2-1 0; }
+#sec-installation-2-1 > li::marker { content: ""counter(sec-installation-2-1,decimal)"."; }
+#sec-installation-2-1 > li { counter-increment: sec-installation-2-1; }
+</style>
 </head>
 <body id="prefigure" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -245,13 +250,14 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The publication file</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Arrows</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pretext.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Authoring diagrams within PreTeXt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Arrows</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Mathematical operations</span></a></div>
+<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.4.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Math operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -310,7 +316,7 @@ window.MathJax = {
 
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="sec-accessibility-7">Notice that important graphical components are given an <code class="code-inline tex2jax_ignore">@at</code> attribute, which serves as a handle to be used by the annotations.  The <code class="code-inline tex2jax_ignore">&lt;annotations&gt;</code> element contains a tree of <code class="code-inline tex2jax_ignore">&lt;annotations&gt;</code> whose structure specifies how the screen reader will respond to arrow presses.  An <code class="code-inline tex2jax_ignore">&lt;annotation&gt;</code> element contains a reference to the handle of a graphical component, which specifies how the components are highlighted.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the annotated diagram</figcaption></figure><div class="para" id="sec-accessibility-7">Notice that important graphical components are given an <code class="code-inline tex2jax_ignore">@at</code> attribute, which serves as a handle to be used by the annotations.  The <code class="code-inline tex2jax_ignore">&lt;annotations&gt;</code> element contains a tree of <code class="code-inline tex2jax_ignore">&lt;annotations&gt;</code> whose structure specifies how the screen reader will respond to arrow presses.  An <code class="code-inline tex2jax_ignore">&lt;annotation&gt;</code> element contains a reference to the handle of a graphical component, which specifies how the components are highlighted.</div>
 <div class="para" id="sec-accessibility-8">Furthermore, as seen in <a href="sec-accessibility.html#diagram-tangent-tactile" class="xref" data-knowl="./knowl/xref/diagram-tangent-tactile.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.2.3">Figure 1.2.3</a> authors can create, from the same XML source, tactile versions of diagrams, including braille labels, suitable for embossing and including in a braille document.</div>
 <figure class="figure figure-like" id="diagram-tangent-tactile"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/tangent-tactile.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.3<span class="period">.</span></span><span class="space"> </span>A tactile version produced from the XML source in <a href="sec-example.html#listing-tangent" class="xref" data-knowl="./knowl/xref/listing-tangent.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 1.1.2">Listing 1.1.2</a>.</figcaption></figure><div class="para" id="sec-accessibility-10">Indeed, the difficulty in creating tactile diagrams that emboss well was one of the original motivations of the PreFigure project.</div></section></div>

@@ -91,6 +91,11 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#sec-installation-2-1 { counter-set: sec-installation-2-1 0; }
+#sec-installation-2-1 > li::marker { content: ""counter(sec-installation-2-1,decimal)"."; }
+#sec-installation-2-1 > li { counter-increment: sec-installation-2-1; }
+</style>
 </head>
 <body id="prefigure" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -245,13 +250,14 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The publication file</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Arrows</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pretext.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Authoring diagrams within PreTeXt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Arrows</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Mathematical operations</span></a></div>
+<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.4.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Math operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -281,7 +287,8 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-outlining"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Outlining and <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>s</span>
 </h2>
-<section class="introduction" id="sec-outlining-2"><div class="para" id="sec-outlining-2-1">On occasion, you may want a graphical component, such as the graph of a function or a point, to stand out from the background. This can be accomplished using the <code class="code-inline tex2jax_ignore">@outline</code> attribute. In fact, all components of a tactile diagram are automatically outlined.</div> <div class="para" id="sec-outlining-2-2">In some sense, this section is about another stroke characteristic.  However, the ability to outline informs some PreFigure design features that open up some new possibilities.</div></section><section class="subsection" id="sec-outlining-3"><h3 class="heading hide-type">
+<section class="introduction" id="sec-outlining-2"><div class="para" id="sec-outlining-2-1">On occasion, you may want a graphical component, such as the graph of a function or a point, to stand out from the background. This can be accomplished using the <code class="code-inline tex2jax_ignore">@outline</code> attribute. In fact, all components of a tactile diagram are automatically outlined.</div>
+<div class="para" id="sec-outlining-2-2">In some sense, this section is about another stroke characteristic.  However, the ability to outline informs some PreFigure design features that open up some new possibilities.</div></section><section class="subsection" id="sec-outlining-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="space"> </span><span class="title">Outlining</span>
 </h3>
 <div class="para" id="sec-outlining-3-2">To place an outline behind a component, set the attribute <code class="code-inline tex2jax_ignore">@outline="yes"</code>.  In <a href="sec-outlining.html#diagram-outline" class="xref" data-knowl="./knowl/xref/diagram-outline.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.1">Figure 3.2.1</a>, both the graph and the point have been outlined, which produces some white space around each element.</div>

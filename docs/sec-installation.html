@@ -91,6 +91,11 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#sec-installation-2-1 { counter-set: sec-installation-2-1 0; }
+#sec-installation-2-1 > li::marker { content: ""counter(sec-installation-2-1,decimal)"."; }
+#sec-installation-2-1 > li { counter-increment: sec-installation-2-1; }
+</style>
 </head>
 <body id="prefigure" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -245,13 +250,14 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The publication file</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Arrows</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pretext.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Authoring diagrams within PreTeXt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Arrows</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Mathematical operations</span></a></div>
+<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.4.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Math operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -283,7 +289,7 @@ window.MathJax = {
 </h2>
 <div class="para logical" id="sec-installation-2">
 <div class="para">PreFigure may be used in two different ways.</div>
-<ol class="decimal">
+<ol class="decimal" id="sec-installation-2-1">
 <li id="sec-installation-2-1-1"><div class="para" id="sec-installation-2-1-1-1">PreFigure is available in a <a class="external" href="https://github.com/davidaustinm/prefigure-codespace" target="_blank">GitHub Codespace.</a><details class="ptx-footnote" aria-live="polite" id="sec-installation-2-1-1-1-2"><summary class="ptx-footnote__number" title="Footnote 1.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-installation-2-1-1-1-2"><code class="code-inline tex2jax_ignore">github.com/davidaustinm/prefigure-codespace</code></div></details>  For many users, this will be a convenient way to create figures since it provides a fully configured authoring environment.  More information is available at that link.</div></li>
 <li id="sec-installation-2-1-2"><div class="para" id="sec-installation-2-1-2-1">PreFigure may also be installed as a Python package on your own machine. There are, however, a few additional steps required so be sure to follow the <a class="external" href="https://github.com/davidaustinm/prefigure" target="_blank">instructions given here.</a><details class="ptx-footnote" aria-live="polite" id="sec-installation-2-1-2-1-2"><summary class="ptx-footnote__number" title="Footnote 1.4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-installation-2-1-2-1-2"><code class="code-inline tex2jax_ignore">github.com/davidaustinm/prefigure</code></div></details>
 </div></li>

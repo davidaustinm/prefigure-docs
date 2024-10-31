@@ -91,6 +91,11 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#sec-installation-2-1 { counter-set: sec-installation-2-1 0; }
+#sec-installation-2-1 > li::marker { content: ""counter(sec-installation-2-1,decimal)"."; }
+#sec-installation-2-1 > li { counter-increment: sec-installation-2-1; }
+</style>
 </head>
 <body id="prefigure" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -245,13 +250,14 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The publication file</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Arrows</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pretext.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Authoring diagrams within PreTeXt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Arrows</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Mathematical operations</span></a></div>
+<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.4.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Math operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -333,7 +339,7 @@ window.MathJax = {
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.1.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-annotations.html#diagram-tangent-3" class="xref" data-knowl="./knowl/xref/diagram-tangent-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.1">Figure 5.1.1</a>.</figcaption></figure><div class="para logical" id="sec-annotations-4-5">
 <div class="para">This example illustrates some important points.</div>
-<ul class="disc">
+<ul class="disc" id="sec-annotations-4-5-1">
 <li id="sec-annotations-4-5-1-1"><div class="para" id="sec-annotations-4-5-1-1-1">All the annotations are under a single <code class="code-inline tex2jax_ignore">&lt;annotations&gt;</code> element, and each nested <code class="code-inline tex2jax_ignore">&lt;annotation&gt;</code> element corresponds to a node in the annotations tree.</div></li>
 <li id="sec-annotations-4-5-1-2"><div class="para" id="sec-annotations-4-5-1-2-1">There is a single top-level <code class="code-inline tex2jax_ignore">&lt;annotation&gt;</code> element, which has the attribute <code class="code-inline tex2jax_ignore">@ref="figure"</code>.  In general, the <code class="code-inline tex2jax_ignore">@ref</code> attribute should point to a handle in the tree of graphical components.  The handle <code class="code-inline tex2jax_ignore">"figure"</code> is implicit in the top-level <code class="code-inline tex2jax_ignore">&lt;diagram&gt;</code> element.  The <code class="code-inline tex2jax_ignore">@text</code> attribute gives a piece of text that will be displayed and vocalized when the focus goes to the diagram.  You may view this as alt-text for the entire diagram so it should be a concise, yet thorough, description of the diagram.</div></li>
 <li id="sec-annotations-4-5-1-3"><div class="para" id="sec-annotations-4-5-1-3-1">The <code class="code-inline tex2jax_ignore">&lt;grid-axes&gt;</code> element does not have a handle or an associated annotation node, but a set of annotations for it will be automatically added to the annnotations tree, if such a tree is included in the PreFigure source.  There is a node for the <code class="code-inline tex2jax_ignore">&lt;grid-axes&gt;</code> and then two child nodes, one for the grid and one for the axes.</div></li>
@@ -383,7 +389,7 @@ window.MathJax = {
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.1.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-annotations.html#diagram-repeat-annotate" class="xref" data-knowl="./knowl/xref/diagram-repeat-annotate.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.3">Figure 5.1.3</a>.</figcaption></figure><div class="para logical" id="sec-annotations-5-7">
 <div class="para">This leads to relatively simple and easy to maintain source if, say, we want to add or remove a column of squares.  Here is how this works:</div>
-<ul class="disc">
+<ul class="disc" id="sec-annotations-5-7-1">
 <li id="sec-annotations-5-7-1-1"><div class="para" id="sec-annotations-5-7-1-1-1">Notice that some elements are supplied with an attribute <code class="code-inline tex2jax_ignore">@annotate="yes"</code>.  When the graphical component is created, an <code class="code-inline tex2jax_ignore">&lt;annotation&gt;</code> is created that can be referenced using its handle.  The annotation attributes, such as <code class="code-inline tex2jax_ignore">@text</code> and <code class="code-inline tex2jax_ignore">@circular</code>, included in the graphical component are passed on to the resulting <code class="code-inline tex2jax_ignore">&lt;annotation&gt;</code>.</div></li>
 <li id="sec-annotations-5-7-1-2"><div class="para" id="sec-annotations-5-7-1-2-1">In this case, the two <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> elements are both given this attrbute along with the child <code class="code-inline tex2jax_ignore">&lt;rectangle&gt;</code> element.  Behind the scenes, the <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element creates a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> with the resulting components added. Annotating the <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element is therefore the same as annotating a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> as we saw above.</div></li>
 <li id="sec-annotations-5-7-1-3"><div class="para" id="sec-annotations-5-7-1-3-1">Notice how the <code class="code-inline tex2jax_ignore">@text</code> attributes can respond to the different values of the parameters by including pieces of text inside <code class="code-inline tex2jax_ignore">${...}</code>, which are then evaluted in the current namespace.</div></li>

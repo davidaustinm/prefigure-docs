@@ -91,6 +91,11 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#sec-installation-2-1 { counter-set: sec-installation-2-1 0; }
+#sec-installation-2-1 > li::marker { content: ""counter(sec-installation-2-1,decimal)"."; }
+#sec-installation-2-1 > li { counter-increment: sec-installation-2-1; }
+</style>
 </head>
 <body id="prefigure" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -245,13 +250,14 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The publication file</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Arrows</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pretext.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Authoring diagrams within PreTeXt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Arrows</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Mathematical operations</span></a></div>
+<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.4.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Math operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -281,7 +287,8 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="chap-accessibility"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">5</span><span class="space"> </span><span class="title">Accessibility</span>
 </h2>
-<section class="introduction" id="chap-accessibility-2"><div class="para" id="chap-accessibility-2-1">PreFigure is designed to facilitate the creation of accessible mathematical diagrams.  In particular, diagrams can be annotated so that they may be effectively navigated with a screen reader, and tactile versions of diagrams may be created from the same PreFigure source.  This chapter will describe features of annotations and tactile diagrams in more detail.</div> <div class="para" id="chap-accessibility-2-2">While these accessibility features are primarily intended to benefit low-vision and blind readers, attention to these features will help authors create better traditional diagrams for sighted readers.  Annotating a diagram requires an author to focus on the meaning of the diagram and how well the individual components contribute to clearly communicating that meaning.  Periodically building tactile versions of diagrams will illuminate ways in which authors might simplify the design of their diagrams so that their ideas are more clearly expressed.  It is often said that attention to accessibility issues improves the experience of everyone, and this is certainly true for the creation of mathematical diagrams.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="chap-accessibility-2"><div class="para" id="chap-accessibility-2-1">PreFigure is designed to facilitate the creation of accessible mathematical diagrams.  In particular, diagrams can be annotated so that they may be effectively navigated with a screen reader, and tactile versions of diagrams may be created from the same PreFigure source.  This chapter will describe features of annotations and tactile diagrams in more detail.</div>
+<div class="para" id="chap-accessibility-2-2">While these accessibility features are primarily intended to benefit low-vision and blind readers, attention to these features will help authors create better traditional diagrams for sighted readers.  Annotating a diagram requires an author to focus on the meaning of the diagram and how well the individual components contribute to clearly communicating that meaning.  Periodically building tactile versions of diagrams will illuminate ways in which authors might simplify the design of their diagrams so that their ideas are more clearly expressed.  It is often said that attention to accessibility issues improves the experience of everyone, and this is certainly true for the creation of mathematical diagrams.</div></section><nav class="summary-links"><ul>
 <li><a href="sec-annotations.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Annotating a diagram</span></a></li>
 <li><a href="sec-tactile.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Tactile diagrams</span></a></li>
 </ul></nav></section></div>

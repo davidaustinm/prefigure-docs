@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "frontmatter-2",
+  "id": "front-colophon",
   "level": "1",
-  "url": "frontmatter-2.html",
+  "url": "front-colophon.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",
-  "body": "  Website   copyright  "
+  "body": ""
 },
 {
   "id": "sec-example",
@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Accessibility",
-  "body": " Accessibility  PreFigure prioritizes the creation of accessible mathematical diagrams. In particular, authors can easily include annotations that control how a reader can navigate a diagram using a screen reader.      An annotated version of    (To be implemented) A reader may explore using a screen reader by first sending the focus to the diagram by either clicking in the diagram or pressing the tab key sufficiently many times. The arrow keys are then used to explore the diagram in more detail. For instance, the Down and Up arrow keys produce more or less detail while the Left and Right arrow keys focus on components at the same level. The annotations are read using the diagcess library created by Volker Sorge .  The modifications to the PreFigure source needed to produce the annotations are shown in .    <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x) = exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"graph\" function='f' \/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <point at=\"point\" p=\"(a, f(a))\"> <m>(a,f(a))<\/m> <\/point> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"graph\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>  The PreFigure source for the annotated diagram    Notice that important graphical components are given an at attribute, which serves as a handle to be used by the annotations. The <annotations> element contains a tree of <annotations> whose structure specifies how the screen reader will respond to arrow presses. An <annotation> element contains a reference to the handle of a graphical component, which specifies how the components are highlighted.  Furthermore, as seen in authors can create, from the same XML source, tactile versions of diagrams, including braille labels, suitable for embossing and including in a braille document.      A tactile version produced from the XML source in .   Indeed, the difficulty in creating tactile diagrams that emboss well was one of the original motivations of the PreFigure project.  "
+  "body": " Accessibility  PreFigure prioritizes the creation of accessible mathematical diagrams. In particular, authors can easily include annotations that control how a reader can navigate a diagram using a screen reader.      An annotated version of    (To be implemented) A reader may explore using a screen reader by first sending the focus to the diagram by either clicking in the diagram or pressing the tab key sufficiently many times. The arrow keys are then used to explore the diagram in more detail. For instance, the Down and Up arrow keys produce more or less detail while the Left and Right arrow keys focus on components at the same level. The annotations are read using the diagcess library created by Volker Sorge .  The modifications to the PreFigure source needed to produce the annotations are shown in .    <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x) = exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"graph\" function='f' \/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <point at=\"point\" p=\"(a, f(a))\"> <m>(a,f(a))<\/m> <\/point> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"graph\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for the annotated diagram   Notice that important graphical components are given an at attribute, which serves as a handle to be used by the annotations. The <annotations> element contains a tree of <annotations> whose structure specifies how the screen reader will respond to arrow presses. An <annotation> element contains a reference to the handle of a graphical component, which specifies how the components are highlighted.  Furthermore, as seen in authors can create, from the same XML source, tactile versions of diagrams, including braille labels, suitable for embossing and including in a braille document.      A tactile version produced from the XML source in .   Indeed, the difficulty in creating tactile diagrams that emboss well was one of the original motivations of the PreFigure project.  "
 },
 {
   "id": "diagram-tangent-annotate",
@@ -61,7 +61,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "1.2.2",
   "title": "",
-  "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x) = exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"graph\" function='f' \/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <point at=\"point\" p=\"(a, f(a))\"> <m>(a,f(a))<\/m> <\/point> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"graph\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>  The PreFigure source for the annotated diagram   "
+  "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x) = exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"graph\" function='f' \/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <point at=\"point\" p=\"(a, f(a))\"> <m>(a,f(a))<\/m> <\/point> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"graph\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for the annotated diagram  "
 },
 {
   "id": "diagram-tangent-tactile",
@@ -1486,11 +1486,47 @@ var ptx_lunr_docs = [
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
+  "id": "sec-pretext",
+  "level": "1",
+  "url": "sec-pretext.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Authoring diagrams within PreTeXt",
+  "body": " Authoring diagrams within PreTeXt  PreTeXt authors will notice that the design of is very much inspired by PreTeXt . In fact, it is possible to write source directly inside a PreTeXt document. There are just a few things to be aware of.  The diagram in was created inside a PreTeXt document, as we will explain.      A diagram created inside a PreTeXt document as shown in .   shows a portion of a PreTeXt document containing source. First, notice that we use a PreTeXt  <image> element and place a PreTeXt  <prefigure> element inside of it. The <prefigure> element needs to have the attribute xmlns=\"https:\/\/prefigure.org\" , which serves to effectively isolate any source from the rest of the document, and a label giving the diagram a name.    <image width=\"60%\"> <prefigure xmlns=\"https:\/\/prefigure.org\" label=\"prefigure-rectangle\"> <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes\/> <rectangle center=\"(5,5)\" dimensions=\"(6,6)\"\/> <label anchor=\"(0.5,0.5)\" alignment=\"ne\" clear-background=\"yes\"> The derivative is <m>\\deriv{y}{x}<\/m>. <\/label> <\/coordinates> <\/diagram> <\/prefigure> <\/image>    source inside a PreTeXt document.   Rather than a publication file, as described in , default behaviors can be specified in the PreTeXt  <docinfo> element as shown in . Including this has the effect of applying the publication file given in .    <docinfo> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <prefigure-preamble xmlns=\"https:\/\/prefigure.org\"> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <\/prefigure-preamble> <\/docinfo>   Within a PreTeXt document, publication data is included inside <docinfo> .   Notice that the latex macros defined inside <docinfo\/macros> , which are available throughout the entire PreTeXt document, are also made available for creating labels. In addition, you may add a <prefigure-preamable> element inside <docinfo> to change the default appearance of specified graphical components. The <prefigure-preamble> element needs the same namespace attribute xmlns=\"https:\/\/prefigure.org\" as the <prefigure> element.  The PreTeXt document that created has a <prefigure-preamble> with a single <rectangle> element having attributes stroke=\"black\" and fill=\"green\" . The <macros> includes the latex macro to create the label .  "
+},
+{
+  "id": "diagram-pretext",
+  "level": "2",
+  "url": "sec-pretext.html#diagram-pretext",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": "    A diagram created inside a PreTeXt document as shown in .  "
+},
+{
+  "id": "listing-pretext",
+  "level": "2",
+  "url": "sec-pretext.html#listing-pretext",
+  "type": "Listing",
+  "number": "4.3.2",
+  "title": "",
+  "body": "  <image width=\"60%\"> <prefigure xmlns=\"https:\/\/prefigure.org\" label=\"prefigure-rectangle\"> <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes\/> <rectangle center=\"(5,5)\" dimensions=\"(6,6)\"\/> <label anchor=\"(0.5,0.5)\" alignment=\"ne\" clear-background=\"yes\"> The derivative is <m>\\deriv{y}{x}<\/m>. <\/label> <\/coordinates> <\/diagram> <\/prefigure> <\/image>    source inside a PreTeXt document.  "
+},
+{
+  "id": "listing-docinfo",
+  "level": "2",
+  "url": "sec-pretext.html#listing-docinfo",
+  "type": "Listing",
+  "number": "4.3.3",
+  "title": "",
+  "body": "  <docinfo> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <prefigure-preamble xmlns=\"https:\/\/prefigure.org\"> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <\/prefigure-preamble> <\/docinfo>   Within a PreTeXt document, publication data is included inside <docinfo> .  "
+},
+{
   "id": "sec-arrows",
   "level": "1",
   "url": "sec-arrows.html",
   "type": "Section",
-  "number": "4.3",
+  "number": "4.4",
   "title": "Arrows",
   "body": " Arrows  Arrows can appear in many different contexts within a PreFigure diagram. For instance, a <vector> will be drawn with an arrowhead, usually at its tip, as seen in . Most graphical components that define a path, such as a <polygon> and <parametric-curve> , can be decorated with arrows.      Arrows that decorate vectors.   In constrast, a <slope-field> may have many arrows, one on the end of each line segment, as shown in .      Adapted from Tom Judson's Ordinary Differential Equations Project .   As a result, it is possible to adjust the relative size and shape of arrowheads. Before describing the possibilities, however, it is important to recognize that the size of arrowheads is scaled by the thickness attribute so, for instance, the arrowhead on a line whose thickness=3 will be three times the size as one on a line whose thickness=1 .   shows a variety of choices for defining the appearance of arrowheads. Notice that there are two attributes, arrow-width and arrow-angles , that can be specified and that are described more fully below.      A collection of arrows demonstrating various options.     <diagram dimensions=\"(400,400)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes labels=\"no\"\/> <!-- left side arrows --> <line endpoints=\"((1,9),(4,9))\" arrows=\"2\"\/> <line endpoints=\"((1,8),(4,8))\" arrows=\"2\" arrow-width=\"5\"\/> <line endpoints=\"((1,7),(4,7))\" arrows=\"2\" arrow-width=\"6\"\/> <line endpoints=\"((1,6),(4,6))\" arrows=\"2\" arrow-width=\"7\"\/> <line endpoints=\"((1,5),(4,5))\" arrows=\"2\" arrow-width=\"8\"\/> <line endpoints=\"((1,4),(4,4))\" arrows=\"2\" arrow-width=\"9\"\/> <!-- right side arrows --> <line endpoints=\"((6,9),(9,9))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(35,60)\"\/> <line endpoints=\"((6,8),(9,8))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(40,60)\"\/> <line endpoints=\"((6,7),(9,7))\" arrows=\"2\" arrow-width=\"6\" arrow-angles=\"(45,60)\"\/> <line endpoints=\"((6,6),(9,6))\" arrows=\"2\" arrow-width=\"7\" arrow-angles=\"(35,80)\"\/> <line endpoints=\"((6,5),(9,5))\" arrows=\"2\" arrow-width=\"8\" arrow-angles=\"(40,80)\"\/> <line endpoints=\"((6,4),(9,4))\" stroke=\"red\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(40,80)\"\/> <!-- longer line at the bottom --> <line endpoints=\"((1,3),(9,3))\" arrows=\"2\" additional-arrows=\"(0.7,0.5)\" arrow-width=\"9\" arrow-angles=\"(60,90)\"\/> <line endpoints=\"((1,2),(9,2))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(30,80)\"\/> <line endpoints=\"((1,1),(9,1))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(10,90)\" additional-arrows=\"0.5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Notice that a <line> has an additional-arrows attribute that allows one to include arrowheads at various locations along the line. The locations are given as a number between 0 and 1 specifying the relative distance along the line segment.  The shape of an arrowhead and how it is attached to the end of a path is shown in . Once again, the size of the arrowhead is scaled by the thickness of the path. (This style of arrowhead is adapted from Bill Casselman's PiScript package.)      The shape of an arrowhead and its attachment to the path.   shows the meaning of the angle-width and angle-angles attributes. The angle-width , whose value is in SVG coordinates and whose default is 4, controls how far from the path the arrowhead extends. The angle-angles attribute is a pair of angles , given in degrees. The default values are .      The definitions of arrow-width=w and arrow-angles=(A,B) .   Defining these attributes in a publication file allows them to be applied to all the diagrams in a project.  As we will see later, these attributes are ignored when placing arrowheads in a tactile diagram since the shape of the arrowheads is a convention within the braille community.  "
 },
@@ -1499,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrows-vector",
   "type": "Figure",
-  "number": "4.3.1",
+  "number": "4.4.1",
   "title": "",
   "body": "    Arrows that decorate vectors.  "
 },
@@ -1508,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrows-slope",
   "type": "Figure",
-  "number": "4.3.2",
+  "number": "4.4.2",
   "title": "",
   "body": "    Adapted from Tom Judson's Ordinary Differential Equations Project .  "
 },
@@ -1517,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrow-properties",
   "type": "Figure",
-  "number": "4.3.3",
+  "number": "4.4.3",
   "title": "",
   "body": "    A collection of arrows demonstrating various options.  "
 },
@@ -1526,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#listing-arrow-properties",
   "type": "Listing",
-  "number": "4.3.4",
+  "number": "4.4.4",
   "title": "",
   "body": "  <diagram dimensions=\"(400,400)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes labels=\"no\"\/> <!-- left side arrows --> <line endpoints=\"((1,9),(4,9))\" arrows=\"2\"\/> <line endpoints=\"((1,8),(4,8))\" arrows=\"2\" arrow-width=\"5\"\/> <line endpoints=\"((1,7),(4,7))\" arrows=\"2\" arrow-width=\"6\"\/> <line endpoints=\"((1,6),(4,6))\" arrows=\"2\" arrow-width=\"7\"\/> <line endpoints=\"((1,5),(4,5))\" arrows=\"2\" arrow-width=\"8\"\/> <line endpoints=\"((1,4),(4,4))\" arrows=\"2\" arrow-width=\"9\"\/> <!-- right side arrows --> <line endpoints=\"((6,9),(9,9))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(35,60)\"\/> <line endpoints=\"((6,8),(9,8))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(40,60)\"\/> <line endpoints=\"((6,7),(9,7))\" arrows=\"2\" arrow-width=\"6\" arrow-angles=\"(45,60)\"\/> <line endpoints=\"((6,6),(9,6))\" arrows=\"2\" arrow-width=\"7\" arrow-angles=\"(35,80)\"\/> <line endpoints=\"((6,5),(9,5))\" arrows=\"2\" arrow-width=\"8\" arrow-angles=\"(40,80)\"\/> <line endpoints=\"((6,4),(9,4))\" stroke=\"red\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(40,80)\"\/> <!-- longer line at the bottom --> <line endpoints=\"((1,3),(9,3))\" arrows=\"2\" additional-arrows=\"(0.7,0.5)\" arrow-width=\"9\" arrow-angles=\"(60,90)\"\/> <line endpoints=\"((1,2),(9,2))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(30,80)\"\/> <line endpoints=\"((1,1),(9,1))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(10,90)\" additional-arrows=\"0.5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1535,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrow-defs",
   "type": "Figure",
-  "number": "4.3.5",
+  "number": "4.4.5",
   "title": "",
   "body": "    The shape of an arrowhead and its attachment to the path.  "
 },
@@ -1544,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrow-angle-def",
   "type": "Figure",
-  "number": "4.3.6",
+  "number": "4.4.6",
   "title": "",
   "body": "    The definitions of arrow-width=w and arrow-angles=(A,B) .  "
 },
@@ -1553,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-math.html",
   "type": "Section",
-  "number": "4.4",
+  "number": "4.5",
   "title": "Mathematical operations",
   "body": " Mathematical operations   As we've seen, PreFigure allows us to define some quantities, often using mathematical operations, and then reuse them. Here we summarize the set of mathematical operations that are possible. PreFigure is written in Python, and authors who are familiar with that language may be able to imagine what is possible.    Math operations  PreFigure provides access to Python's math module, which means that constants such as pi and e are available, as well as functions such as sin , cos , acos , atan , and atan2 . By default, any trigonometric functions use radians, but the functions degrees and radians will convert back and forth.  Some operations from discrete math, such as comb(n,k) for , are also available.  These functions are available without the math. prefix so that we could say, for instance, cos(pi\/6) . See the Python documentation for a full list of functions that are available.    Vector operations  Vector operations may be defined on previously-defined lists or tuples. For instance, if we define u=(1,2) and v=(-2,4) , we can later say u+v and -3*u . (Behind the scenes, any list or tuple that is defined is interpreted as a numpy array.)  Similarly, a matrix may be defined with A = [[1,2],[2,1]] and then used to multiply a vector with A @ v .  Some additional operations include:  length  length(u) finds the length of the vector u .   normalize  normalize(u) gives a vector paralle to u and having unit length.   dot  dot(u, v) finds the dot product of u and v .   midpoint  midpoint(u, v) gives the midpoint of the line segment from u to v .   angle  angle(u) finds the angle, in radians, between the vector and the positive -axis.       List operations  It can be convenient to modify existing lists. For instance, to add an element a to an existing list , we could say append(list, a) . This could be used, for instance, to implement Euler's method, as shown in . Of course, provides an easier way to illustrate Euler's method, but authors will undoubtedly find uses for the append function.      An implementation of Euler's method     <diagram dimensions=\"(300,300)\" margins=\"20\"> <coordinates bbox=\"(-1,-1,10,8)\"> <definition>f(t,y) = 0.1*y*(6-y)<\/definition> <definition>N=5<\/definition> <definition>h=10\/N<\/definition> <definition>points = [[0,1]]<\/definition> <repeat parameter=\"k=1..N\"> <definition>t=points[-1][0]<\/definition> <definition>y=points[-1][1]<\/definition> <definition>points=append(points, [t+h, y+h*f(t,y)])<\/definition> <\/repeat> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\" stroke=\"orange\"\/> <polygon points=\"points\" stroke=\"blue\"\/> <repeat parameter=\"k=0..N\"> <point p=\"points[k]\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .   If list=(a,b,c) , then roll(list) will be the list (b,c,a) . This can be useful for visiting each of the vertices in a polygon, for instance, as shown in .      Adding angle markers to a polygon     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <definition>points = ((1,1),(2,6),(6,9),(9,5),(7,2))<\/definition> <grid-axes decorations=\"no\"\/> <repeat parameter=\"k=1..5\"> <angle-marker points=\"points\"\/> <definition>points=roll(points)<\/definition> <\/repeat> <polygon points=\"points\" closed=\"yes\" stroke=\"blue\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .    "
 },
@@ -1562,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#diagram-euler",
   "type": "Figure",
-  "number": "4.4.1",
+  "number": "4.5.1",
   "title": "",
   "body": "    An implementation of Euler's method  "
 },
@@ -1571,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#listing-euler",
   "type": "Listing",
-  "number": "4.4.2",
+  "number": "4.5.2",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"20\"> <coordinates bbox=\"(-1,-1,10,8)\"> <definition>f(t,y) = 0.1*y*(6-y)<\/definition> <definition>N=5<\/definition> <definition>h=10\/N<\/definition> <definition>points = [[0,1]]<\/definition> <repeat parameter=\"k=1..N\"> <definition>t=points[-1][0]<\/definition> <definition>y=points[-1][1]<\/definition> <definition>points=append(points, [t+h, y+h*f(t,y)])<\/definition> <\/repeat> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\" stroke=\"orange\"\/> <polygon points=\"points\" stroke=\"blue\"\/> <repeat parameter=\"k=0..N\"> <point p=\"points[k]\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1580,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#diagram-roll",
   "type": "Figure",
-  "number": "4.4.3",
+  "number": "4.5.3",
   "title": "",
   "body": "    Adding angle markers to a polygon  "
 },
@@ -1589,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#listing-roll",
   "type": "Listing",
-  "number": "4.4.4",
+  "number": "4.5.4",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <definition>points = ((1,1),(2,6),(6,9),(9,5),(7,2))<\/definition> <grid-axes decorations=\"no\"\/> <repeat parameter=\"k=1..5\"> <angle-marker points=\"points\"\/> <definition>points=roll(points)<\/definition> <\/repeat> <polygon points=\"points\" closed=\"yes\" stroke=\"blue\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
