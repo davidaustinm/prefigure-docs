@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-pretext" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Authoring diagrams within <pretext/></title>
+
+  <p><pretext/> authors will notice that the design of <prefigure/>
+  is very much inspired by <pretext/>.  In fact, it is possible to
+  write <prefigure/> source directly inside a <pretext/> document.
+  There are just a few things to be aware of.
+  </p>
+  
+  <p>The diagram in <xref ref="diagram-pretext"/> was created inside
+  a <pretext/> document, as we will explain.
+  </p>
+  
+  <figure xml:id="diagram-pretext">
+    <sidebyside width="60%">
+      <image source="images/pretext-example"/>
+    </sidebyside>
+    <caption> A <prefigure/> diagram created inside a <pretext/>
+    document as shown in <xref ref="listing-pretext"/>.
+    </caption>
+  </figure>
+  
+  <p><xref ref="listing-pretext"/> shows a portion of a <pretext/>
+  document containing <prefigure/> source.  First, notice that
+  we use a <pretext/> <tag>image</tag> element and place a
+  <pretext/> <tag>prefigure</tag> element inside of it.  The
+  <tag>prefigure</tag> element needs to have the attribute
+  <attr>xmlns="https://prefigure.org"</attr>, which serves to
+  effectively isolate any <prefigure/> source from the rest of the
+  document, and a <attr>label</attr> giving the diagram a name.
+  </p>
+  
+  <listing xml:id="listing-pretext">
+    <program>
+      <input><xi:include href="code/pretext-example.xml" parse="text"/>
+      </input>
+    </program>
+    <caption> <prefigure/> source inside a <pretext/> document.
+    </caption>
+  </listing>
+  
+  <p>Rather than a publication file, as described in <xref
+  ref="sec-publication"/>, default behaviors can be specified in the
+  <pretext/> <tag>docinfo</tag> element as shown in <xref
+  ref="listing-docinfo"/>.  Including this has the effect of applying
+  the publication file given in <xref ref="listing-pub-file"/>.
+  </p>
+
+  <listing xml:id="listing-docinfo">
+    <program>
+      <input><xi:include href="code/pretext-docinfo.xml" parse="text"/>
+      </input>
+    </program>
+    <caption> Within a <pretext/> document, <prefigure/> publication
+    data is included inside <tag>docinfo</tag>.
+    </caption>
+  </listing>
+  
+  <p>Notice that the <latex/> macros defined inside
+  <tag>docinfo/macros</tag>, which are available throughout the entire
+  <pretext/> document, are also made available 
+  for creating <prefigure/> labels.  In addition, you may
+  add a <tag>prefigure-preamable</tag> element inside
+  <tag>docinfo</tag> to change the default appearance of specified
+  graphical components.  The <tag>prefigure-preamble</tag> element
+  needs the same namespace attribute
+  <attr>xmlns="https://prefigure.org"</attr> as the
+  <tag>prefigure</tag> element.
+  </p>
+  
+  <p>The <pretext/> document that created <xref
+  ref="diagram-pretext"/> has a <tag>prefigure-preamble</tag> with a single
+  <tag>rectangle</tag> element having attributes
+  <attr>stroke="black"</attr> and <attr>fill="green"</attr>.  The
+  <tag>macros</tag> includes the <latex/> macro to create the label
+  <m>\frac{dy}{dx}</m>. 
+  </p>
+  
+</section>
+

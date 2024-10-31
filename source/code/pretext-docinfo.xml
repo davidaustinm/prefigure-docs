@@ -1,0 +1,10 @@
+<docinfo>
+  <macros>
+    \newcommand{\deriv}[2]{\displaystyle \frac{d#1}{d#2}}
+    \newcommand{\real}{\Bbb R}
+  </macros>
+  <prefigure-preamble xmlns="https://prefigure.org">
+    <graph stroke="green"/>
+    <point style="diamond" size="5" fill="blue" outline="yes"/>
+  </prefigure-preamble>
+</docinfo>

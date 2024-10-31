@@ -142,9 +142,9 @@
       <program>
 	<input><xi:include href="code/tangent-annotate.xml" parse="text"/>
 	</input>
-	<caption> The PreFigure source for the annotated diagram
-	</caption>
       </program>
+      <caption> The PreFigure source for the annotated diagram
+      </caption>
     </listing>
 
     <p> Notice that important graphical components are given an
