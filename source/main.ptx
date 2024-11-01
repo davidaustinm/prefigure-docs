@@ -14,6 +14,7 @@
     <xi:include href="./chapter-intro.ptx" />
     <xi:include href="./chapter-start.ptx" />
     <xi:include href="./chapter-graphical.ptx" />
+    <xi:include href="./chapter-project.ptx" />
     <xi:include href="./chapter-next-steps.ptx" />
     <xi:include href="./chapter-accessibility.ptx" />
 

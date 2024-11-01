@@ -61,7 +61,14 @@
   <p>Notice that the <latex/> macros defined inside
   <tag>docinfo/macros</tag>, which are available throughout the entire
   <pretext/> document, are also made available 
-  for creating <prefigure/> labels.  In addition, you may
+  for creating <prefigure/> labels.  In addition, three more macros
+  will be automatically added:
+  <cd>
+<xi:include href="code/macros" parse="text"/>
+  </cd>
+  </p>  
+
+  <p>Furthermore, you may
   add a <tag>prefigure-preamable</tag> element inside
   <tag>docinfo</tag> to change the default appearance of specified
   graphical components.  The <tag>prefigure-preamble</tag> element

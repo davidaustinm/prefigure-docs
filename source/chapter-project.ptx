@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chap-project" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Managing a <prefigure/> project</title>
+
+  <introduction>
+    <p> Up to this point, we have focused on creating individual
+    diagrams.  Most likely, however, authors will want to create a
+    collection of diagrams for a document, such as a book or article,
+    and will want to maintain some consistency across diagrams.  This
+    chapter describes how a publication file can be used for this
+    purpose.  In addition, we will describe how to author <prefigure/>
+    diagrams within a <pretext/> document.
+    </p>
+
+  </introduction>
+
+  <xi:include href="section-publication.ptx"/>
+  <xi:include href="section-pretext.ptx"/>
+</chapter>
