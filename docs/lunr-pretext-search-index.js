@@ -1387,74 +1387,11 @@ var ptx_lunr_docs = [
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <rectangle at=\"square1\" center=\"(4,4)\" dimensions=\"(3,3)\" corner-radius=\"10\"\/> <rectangle at=\"square2\" center=\"(3,6)\" dimensions=\"(2,2)\" corner-radius=\"5\"\/> <shape at=\"clip\" shapes=\"square1, square2\" operation=\"union\"\/> <circle at=\"circle\" center=\"(6,6)\" radius=\"3\"\/> <\/define-shapes> <shape shape=\"circle\" fill=\"lightgray\" stroke=\"gray\"\/> <clip shape=\"clip\"> <shape shape=\"circle\" fill=\"blue\" stroke=\"black\"\/> <\/clip> <shape shape=\"clip\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,10)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
 {
-  "id": "sec-repeat",
-  "level": "1",
-  "url": "sec-repeat.html",
-  "type": "Section",
-  "number": "4.1",
-  "title": "The <code class=\"code-inline tex2jax_ignore\"><repeat><\/code> element",
-  "body": " The <repeat> element  Some diagrams contain a number of components that are similar and differ only in a few attributes. For example, shows several solutions to a differential equation with different initial values.      Several solutions to a differential equation.   Of course, we could simply include a <plot-de-solution> element for each one, but this could be difficult to maintain if we decide to make some small change. Instead, PreFigure offers a <repeat> element that can streamline this process, as illustrated by the PreFigure source code in .    <diagram width=\"300\" height=\"300\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\"\/> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" domain=\"[0,4]\" stroke=\"orange\" \/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\" \/> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Solutions to the differential equation dy dt = t - y\"> <annotation ref=\"grid\" text=\"The coordinate grid\"\/> <annotation ref=\"axes\" text=\"The coordinate axes\"\/> <annotation ref=\"slope-field\" text=\"The slope field\"\/> <annotation ref=\"solutions\" text=\"A collection of solution curves\"> <annotation ref=\"solution-k=-4\" text=\"The solution with initial value -4\"\/> <annotation ref=\"solution-k=-3\" text=\"The solution with initial value -3\"\/> <annotation ref=\"solution-k=-2\" text=\"The solution with initial value -2\"\/> <annotation ref=\"solution-k=-1\" text=\"The solution with initial value -1\"\/> <annotation ref=\"solution-k=0\" text=\"The solution with initial value 0\"\/> <annotation ref=\"solution-k=1\" text=\"The solution with initial value 1\"\/> <annotation ref=\"solution-k=2\" text=\"The solution with initial value 2\"\/> <annotation ref=\"solution-k=3\" text=\"The solution with initial value 3\"\/> <annotation ref=\"solution-k=4\" text=\"The solution with initial value 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   Line 7 contains a <repeat> element with the attribute parameter=\"k=-4..4\" . This places the parameter name k into the user namespace with the value of -4 and adds the <plot-de-solution> and <point> elements contained within the <repeat> element. This repeats with the values .  The annotations included in show how the handles within the <repeat> element are generated. If an element inside a repeat element has a handle at=\"handle\" , then the graphical component generated when the parameter is, say, param=value is given the handle at=\"handle-param=value\" . For example, when k=2 , the solution has the handle at=\"solution-k=2\" . There is not yet a repeat feature for annotations.  A second example, given in , shows how labels can be managed within a <repeat> element.      The roots of unity.     <diagram width=\"300\" height=\"300\" margins=\"5\"> <definition> alignments=['ne','ne','ne','nw','nw','sw','se','se'] <\/definition> <definition substitution=\"no\"> labels=['1','\\omega','i','\\omega^3','-1','\\omega^5','-i','\\omega^7'] <\/definition> <definition>f(t)=(cos(pi*t\/4),sin(pi*t\/4))<\/definition> <coordinates bbox=\"[-1.4,-1.4,1.4,1.4]\"> <grid at=\"grid\" \/> <axes at=\"axes\" labels=\"no\" \/> <circle at=\"unit-circle\" center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <repeat parameter=\"k=0..7\"> <point at=\"point\" p=\"f(k)\" alignment=\"alignments[k]\"> <m>${labels[k]}<\/m> <\/point> <\/repeat> <\/coordinates> <annotations> <annotation id=\"figure\" text=\"The eighth roots of unity\"> <annotation id=\"axes\" text=\"The coordinate axes\" \/> <annotation id=\"grid\" text=\"The coordinate grid\" \/> <annotation id=\"unit-circle\" text=\"The unit circle\" circular=\"true\"> <annotation id=\"point-k=0\" text=\"The primitive eighth root of unity to the power zero\" speech=\"one\"\/> <annotation id=\"point-k=1\" text=\"The primitive eighth root of unity\" speech=\"omega\"\/> <annotation id=\"point-k=2\" text=\"The primitive eighth root of unity squared\" speech=\"i\"\/> <annotation id=\"point-k=3\" text=\"The primitive eighth root of unity cubed\" speech=\"omega cubed\"\/> <annotation id=\"point-k=4\" text=\"The primitive eighth root of unity to the fourth\" speech=\"minus one\"\/> <annotation id=\"point-k=5\" text=\"The primitive eighth root of unity to the fifth\" speech=\"omega to the fifth\"\/> <annotation id=\"point-k=6\" text=\"The primitive eighth root of unity to the sixth\" speech=\"minus i\"\/> <annotation id=\"point-k=7\" text=\"The primitive eighth root of unity to the seventh\" speech=\"omega to the seventh\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   Lines 5 through 7 define a set of labels, one for each of the eight points. Remember that ^ is usually interpreted as the numerical exponentiation operator. Since we wish to preserve this character for the label, we include the attribute substitution=\"no\" to prevent ^ being reinterpreted. Notice that the label is given as ${labels[k]} since anything inside ${...} is evaluated in the user namespace.  We can also nest <repeat> elements as illustrated in and PreFigure source .      A <repeat> nested inside another.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .   A typical handle for one of these rectangles is at=\"rectangle-row=2-col=1\" .  "
-},
-{
-  "id": "diagram-diffeq-repeat",
-  "level": "2",
-  "url": "sec-repeat.html#diagram-diffeq-repeat",
-  "type": "Figure",
-  "number": "4.1.1",
-  "title": "",
-  "body": "    Several solutions to a differential equation.  "
-},
-{
-  "id": "listing-diffeq-repeat",
-  "level": "2",
-  "url": "sec-repeat.html#listing-diffeq-repeat",
-  "type": "Listing",
-  "number": "4.1.2",
-  "title": "",
-  "body": "  <diagram width=\"300\" height=\"300\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\"\/> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" domain=\"[0,4]\" stroke=\"orange\" \/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\" \/> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Solutions to the differential equation dy dt = t - y\"> <annotation ref=\"grid\" text=\"The coordinate grid\"\/> <annotation ref=\"axes\" text=\"The coordinate axes\"\/> <annotation ref=\"slope-field\" text=\"The slope field\"\/> <annotation ref=\"solutions\" text=\"A collection of solution curves\"> <annotation ref=\"solution-k=-4\" text=\"The solution with initial value -4\"\/> <annotation ref=\"solution-k=-3\" text=\"The solution with initial value -3\"\/> <annotation ref=\"solution-k=-2\" text=\"The solution with initial value -2\"\/> <annotation ref=\"solution-k=-1\" text=\"The solution with initial value -1\"\/> <annotation ref=\"solution-k=0\" text=\"The solution with initial value 0\"\/> <annotation ref=\"solution-k=1\" text=\"The solution with initial value 1\"\/> <annotation ref=\"solution-k=2\" text=\"The solution with initial value 2\"\/> <annotation ref=\"solution-k=3\" text=\"The solution with initial value 3\"\/> <annotation ref=\"solution-k=4\" text=\"The solution with initial value 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
-},
-{
-  "id": "diagram-unity",
-  "level": "2",
-  "url": "sec-repeat.html#diagram-unity",
-  "type": "Figure",
-  "number": "4.1.3",
-  "title": "",
-  "body": "    The roots of unity.  "
-},
-{
-  "id": "listing-unity",
-  "level": "2",
-  "url": "sec-repeat.html#listing-unity",
-  "type": "Listing",
-  "number": "4.1.4",
-  "title": "",
-  "body": "  <diagram width=\"300\" height=\"300\" margins=\"5\"> <definition> alignments=['ne','ne','ne','nw','nw','sw','se','se'] <\/definition> <definition substitution=\"no\"> labels=['1','\\omega','i','\\omega^3','-1','\\omega^5','-i','\\omega^7'] <\/definition> <definition>f(t)=(cos(pi*t\/4),sin(pi*t\/4))<\/definition> <coordinates bbox=\"[-1.4,-1.4,1.4,1.4]\"> <grid at=\"grid\" \/> <axes at=\"axes\" labels=\"no\" \/> <circle at=\"unit-circle\" center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <repeat parameter=\"k=0..7\"> <point at=\"point\" p=\"f(k)\" alignment=\"alignments[k]\"> <m>${labels[k]}<\/m> <\/point> <\/repeat> <\/coordinates> <annotations> <annotation id=\"figure\" text=\"The eighth roots of unity\"> <annotation id=\"axes\" text=\"The coordinate axes\" \/> <annotation id=\"grid\" text=\"The coordinate grid\" \/> <annotation id=\"unit-circle\" text=\"The unit circle\" circular=\"true\"> <annotation id=\"point-k=0\" text=\"The primitive eighth root of unity to the power zero\" speech=\"one\"\/> <annotation id=\"point-k=1\" text=\"The primitive eighth root of unity\" speech=\"omega\"\/> <annotation id=\"point-k=2\" text=\"The primitive eighth root of unity squared\" speech=\"i\"\/> <annotation id=\"point-k=3\" text=\"The primitive eighth root of unity cubed\" speech=\"omega cubed\"\/> <annotation id=\"point-k=4\" text=\"The primitive eighth root of unity to the fourth\" speech=\"minus one\"\/> <annotation id=\"point-k=5\" text=\"The primitive eighth root of unity to the fifth\" speech=\"omega to the fifth\"\/> <annotation id=\"point-k=6\" text=\"The primitive eighth root of unity to the sixth\" speech=\"minus i\"\/> <annotation id=\"point-k=7\" text=\"The primitive eighth root of unity to the seventh\" speech=\"omega to the seventh\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
-},
-{
-  "id": "diagram-nested-repeat",
-  "level": "2",
-  "url": "sec-repeat.html#diagram-nested-repeat",
-  "type": "Figure",
-  "number": "4.1.5",
-  "title": "",
-  "body": "    A <repeat> nested inside another.  "
-},
-{
-  "id": "listing-nested-repeat",
-  "level": "2",
-  "url": "sec-repeat.html#listing-nested-repeat",
-  "type": "Listing",
-  "number": "4.1.6",
-  "title": "",
-  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
-},
-{
   "id": "sec-publication",
   "level": "1",
   "url": "sec-publication.html",
   "type": "Section",
-  "number": "4.2",
+  "number": "4.1",
   "title": "The publication file",
   "body": " The publication file  When illustrating a large project such as a book, you will likely want to create diagrams that have a consistent style. PreFigure constructs some components with default values for the attributes. For instance, a <graph> is stroked blue by default and a <point> is filled red. You may, however, wish to change these default behaviors with a publication file, as shown in     <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file   The publication file begins with a <prefigure> element whose children describe desired default behaviors for a few graphical components. For instance, this publication file asks that a <graph> be stroked green and that a <point> has a few default attributes. Notice that the publication file also includes a list of latex macros, given in the <macros> element, that can be used in labels.  To illustrate, contains a diagram created using this publication file with showing the PreFigure source.      A diagram created using the publication file in     <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Because the publication file sets the stroke attribute of <graph> to be green, the graph of the function is stroked green by default. The <point> s on the graph are also created using the attributes given in the publication file. Notice that any attributes given in one of these tags, such as the <point> that is filled red, take precedence over the values in the publication file. This example also demonstrates the use of latex macros in the labels.  To apply the publication file pub_file.xml to a diagram, use the -p switch when compiling: prefig build -p pub_file.xml foo.xml   A good way to get started using a publication file for a large project is to say prefig new which has the effect of copying an empty publication pf_publication.xml and the diagcess tools into the current directory. If you do not specify a publication file in a build command, PreFigure will look for a pf_publication.xml in the current directory or a parent directory. To disable the use of any publication file, use the -i or --ignore_publication flag with the build command: prefig build -i foo.xml   "
 },
@@ -1463,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-publication.html#listing-pub-file",
   "type": "Listing",
-  "number": "4.2.1",
+  "number": "4.1.1",
   "title": "",
   "body": "  <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file  "
 },
@@ -1472,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-publication.html#diagram-publication",
   "type": "Figure",
-  "number": "4.2.2",
+  "number": "4.1.2",
   "title": "",
   "body": "    A diagram created using the publication file in  "
 },
@@ -1481,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-publication.html#listing-publication",
   "type": "Listing",
-  "number": "4.2.3",
+  "number": "4.1.3",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1490,16 +1427,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-pretext.html",
   "type": "Section",
-  "number": "4.3",
+  "number": "4.2",
   "title": "Authoring diagrams within PreTeXt",
-  "body": " Authoring diagrams within PreTeXt  PreTeXt authors will notice that the design of is very much inspired by PreTeXt . In fact, it is possible to write source directly inside a PreTeXt document. There are just a few things to be aware of.  The diagram in was created inside a PreTeXt document, as we will explain.      A diagram created inside a PreTeXt document as shown in .   shows a portion of a PreTeXt document containing source. First, notice that we use a PreTeXt  <image> element and place a PreTeXt  <prefigure> element inside of it. The <prefigure> element needs to have the attribute xmlns=\"https:\/\/prefigure.org\" , which serves to effectively isolate any source from the rest of the document, and a label giving the diagram a name.    <image width=\"60%\"> <prefigure xmlns=\"https:\/\/prefigure.org\" label=\"prefigure-rectangle\"> <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes\/> <rectangle center=\"(5,5)\" dimensions=\"(6,6)\"\/> <label anchor=\"(0.5,0.5)\" alignment=\"ne\" clear-background=\"yes\"> The derivative is <m>\\deriv{y}{x}<\/m>. <\/label> <\/coordinates> <\/diagram> <\/prefigure> <\/image>    source inside a PreTeXt document.   Rather than a publication file, as described in , default behaviors can be specified in the PreTeXt  <docinfo> element as shown in . Including this has the effect of applying the publication file given in .    <docinfo> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <prefigure-preamble xmlns=\"https:\/\/prefigure.org\"> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <\/prefigure-preamble> <\/docinfo>   Within a PreTeXt document, publication data is included inside <docinfo> .   Notice that the latex macros defined inside <docinfo\/macros> , which are available throughout the entire PreTeXt document, are also made available for creating labels. In addition, you may add a <prefigure-preamable> element inside <docinfo> to change the default appearance of specified graphical components. The <prefigure-preamble> element needs the same namespace attribute xmlns=\"https:\/\/prefigure.org\" as the <prefigure> element.  The PreTeXt document that created has a <prefigure-preamble> with a single <rectangle> element having attributes stroke=\"black\" and fill=\"green\" . The <macros> includes the latex macro to create the label .  "
+  "body": " Authoring diagrams within PreTeXt  PreTeXt authors will notice that the design of is very much inspired by PreTeXt . In fact, it is possible to write source directly inside a PreTeXt document. There are just a few things to be aware of.  The diagram in was created inside a PreTeXt document, as we will explain.      A diagram created inside a PreTeXt document as shown in .   shows a portion of a PreTeXt document containing source. First, notice that we use a PreTeXt  <image> element and place a PreTeXt  <prefigure> element inside of it. The <prefigure> element needs to have the attribute xmlns=\"https:\/\/prefigure.org\" , which serves to effectively isolate any source from the rest of the document, and a label giving the diagram a name.    <image width=\"60%\"> <prefigure xmlns=\"https:\/\/prefigure.org\" label=\"prefigure-rectangle\"> <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes\/> <rectangle center=\"(5,5)\" dimensions=\"(6,6)\"\/> <label anchor=\"(0.5,0.5)\" alignment=\"ne\" clear-background=\"yes\"> The derivative is <m>\\deriv{y}{x}<\/m>. <\/label> <\/coordinates> <\/diagram> <\/prefigure> <\/image>    source inside a PreTeXt document.   Rather than a publication file, as described in , default behaviors can be specified in the PreTeXt  <docinfo> element as shown in . Including this has the effect of applying the publication file given in .    <docinfo> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <prefigure-preamble xmlns=\"https:\/\/prefigure.org\"> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <\/prefigure-preamble> <\/docinfo>   Within a PreTeXt document, publication data is included inside <docinfo> .   Notice that the latex macros defined inside <docinfo\/macros> , which are available throughout the entire PreTeXt document, are also made available for creating labels. In addition, three more macros will be automatically added: \\newcommand{\\lt}{&lt;} \\newcommand{\\gt}{&gt;} \\newcommand{\\amp}{&amp;}   Furthermore, you may add a <prefigure-preamable> element inside <docinfo> to change the default appearance of specified graphical components. The <prefigure-preamble> element needs the same namespace attribute xmlns=\"https:\/\/prefigure.org\" as the <prefigure> element.  The PreTeXt document that created has a <prefigure-preamble> with a single <rectangle> element having attributes stroke=\"black\" and fill=\"green\" . The <macros> includes the latex macro to create the label .  "
 },
 {
   "id": "diagram-pretext",
   "level": "2",
   "url": "sec-pretext.html#diagram-pretext",
   "type": "Figure",
-  "number": "4.3.1",
+  "number": "4.2.1",
   "title": "",
   "body": "    A diagram created inside a PreTeXt document as shown in .  "
 },
@@ -1508,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pretext.html#listing-pretext",
   "type": "Listing",
-  "number": "4.3.2",
+  "number": "4.2.2",
   "title": "",
   "body": "  <image width=\"60%\"> <prefigure xmlns=\"https:\/\/prefigure.org\" label=\"prefigure-rectangle\"> <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes\/> <rectangle center=\"(5,5)\" dimensions=\"(6,6)\"\/> <label anchor=\"(0.5,0.5)\" alignment=\"ne\" clear-background=\"yes\"> The derivative is <m>\\deriv{y}{x}<\/m>. <\/label> <\/coordinates> <\/diagram> <\/prefigure> <\/image>    source inside a PreTeXt document.  "
 },
@@ -1517,16 +1454,79 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pretext.html#listing-docinfo",
   "type": "Listing",
-  "number": "4.3.3",
+  "number": "4.2.3",
   "title": "",
   "body": "  <docinfo> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <prefigure-preamble xmlns=\"https:\/\/prefigure.org\"> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <\/prefigure-preamble> <\/docinfo>   Within a PreTeXt document, publication data is included inside <docinfo> .  "
+},
+{
+  "id": "sec-repeat",
+  "level": "1",
+  "url": "sec-repeat.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "The <code class=\"code-inline tex2jax_ignore\"><repeat><\/code> element",
+  "body": " The <repeat> element  Some diagrams contain a number of components that are similar and differ only in a few attributes. For example, shows several solutions to a differential equation with different initial values.      Several solutions to a differential equation.   Of course, we could simply include a <plot-de-solution> element for each one, but this could be difficult to maintain if we decide to make some small change. Instead, PreFigure offers a <repeat> element that can streamline this process, as illustrated by the PreFigure source code in .    <diagram width=\"300\" height=\"300\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\"\/> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" domain=\"[0,4]\" stroke=\"orange\" \/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\" \/> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Solutions to the differential equation dy dt = t - y\"> <annotation ref=\"grid\" text=\"The coordinate grid\"\/> <annotation ref=\"axes\" text=\"The coordinate axes\"\/> <annotation ref=\"slope-field\" text=\"The slope field\"\/> <annotation ref=\"solutions\" text=\"A collection of solution curves\"> <annotation ref=\"solution-k=-4\" text=\"The solution with initial value -4\"\/> <annotation ref=\"solution-k=-3\" text=\"The solution with initial value -3\"\/> <annotation ref=\"solution-k=-2\" text=\"The solution with initial value -2\"\/> <annotation ref=\"solution-k=-1\" text=\"The solution with initial value -1\"\/> <annotation ref=\"solution-k=0\" text=\"The solution with initial value 0\"\/> <annotation ref=\"solution-k=1\" text=\"The solution with initial value 1\"\/> <annotation ref=\"solution-k=2\" text=\"The solution with initial value 2\"\/> <annotation ref=\"solution-k=3\" text=\"The solution with initial value 3\"\/> <annotation ref=\"solution-k=4\" text=\"The solution with initial value 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   Line 7 contains a <repeat> element with the attribute parameter=\"k=-4..4\" . This places the parameter name k into the user namespace with the value of -4 and adds the <plot-de-solution> and <point> elements contained within the <repeat> element. This repeats with the values .  The annotations included in show how the handles within the <repeat> element are generated. If an element inside a repeat element has a handle at=\"handle\" , then the graphical component generated when the parameter is, say, param=value is given the handle at=\"handle-param=value\" . For example, when k=2 , the solution has the handle at=\"solution-k=2\" . There is not yet a repeat feature for annotations.  A second example, given in , shows how labels can be managed within a <repeat> element.      The roots of unity.     <diagram width=\"300\" height=\"300\" margins=\"5\"> <definition> alignments=['ne','ne','ne','nw','nw','sw','se','se'] <\/definition> <definition substitution=\"no\"> labels=['1','\\omega','i','\\omega^3','-1','\\omega^5','-i','\\omega^7'] <\/definition> <definition>f(t)=(cos(pi*t\/4),sin(pi*t\/4))<\/definition> <coordinates bbox=\"[-1.4,-1.4,1.4,1.4]\"> <grid at=\"grid\" \/> <axes at=\"axes\" labels=\"no\" \/> <circle at=\"unit-circle\" center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <repeat parameter=\"k=0..7\"> <point at=\"point\" p=\"f(k)\" alignment=\"alignments[k]\"> <m>${labels[k]}<\/m> <\/point> <\/repeat> <\/coordinates> <annotations> <annotation id=\"figure\" text=\"The eighth roots of unity\"> <annotation id=\"axes\" text=\"The coordinate axes\" \/> <annotation id=\"grid\" text=\"The coordinate grid\" \/> <annotation id=\"unit-circle\" text=\"The unit circle\" circular=\"true\"> <annotation id=\"point-k=0\" text=\"The primitive eighth root of unity to the power zero\" speech=\"one\"\/> <annotation id=\"point-k=1\" text=\"The primitive eighth root of unity\" speech=\"omega\"\/> <annotation id=\"point-k=2\" text=\"The primitive eighth root of unity squared\" speech=\"i\"\/> <annotation id=\"point-k=3\" text=\"The primitive eighth root of unity cubed\" speech=\"omega cubed\"\/> <annotation id=\"point-k=4\" text=\"The primitive eighth root of unity to the fourth\" speech=\"minus one\"\/> <annotation id=\"point-k=5\" text=\"The primitive eighth root of unity to the fifth\" speech=\"omega to the fifth\"\/> <annotation id=\"point-k=6\" text=\"The primitive eighth root of unity to the sixth\" speech=\"minus i\"\/> <annotation id=\"point-k=7\" text=\"The primitive eighth root of unity to the seventh\" speech=\"omega to the seventh\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   Lines 5 through 7 define a set of labels, one for each of the eight points. Remember that ^ is usually interpreted as the numerical exponentiation operator. Since we wish to preserve this character for the label, we include the attribute substitution=\"no\" to prevent ^ being reinterpreted. Notice that the label is given as ${labels[k]} since anything inside ${...} is evaluated in the user namespace.  We can also nest <repeat> elements as illustrated in and PreFigure source .      A <repeat> nested inside another.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .   A typical handle for one of these rectangles is at=\"rectangle-row=2-col=1\" .  "
+},
+{
+  "id": "diagram-diffeq-repeat",
+  "level": "2",
+  "url": "sec-repeat.html#diagram-diffeq-repeat",
+  "type": "Figure",
+  "number": "5.1.1",
+  "title": "",
+  "body": "    Several solutions to a differential equation.  "
+},
+{
+  "id": "listing-diffeq-repeat",
+  "level": "2",
+  "url": "sec-repeat.html#listing-diffeq-repeat",
+  "type": "Listing",
+  "number": "5.1.2",
+  "title": "",
+  "body": "  <diagram width=\"300\" height=\"300\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\"\/> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" domain=\"[0,4]\" stroke=\"orange\" \/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\" \/> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Solutions to the differential equation dy dt = t - y\"> <annotation ref=\"grid\" text=\"The coordinate grid\"\/> <annotation ref=\"axes\" text=\"The coordinate axes\"\/> <annotation ref=\"slope-field\" text=\"The slope field\"\/> <annotation ref=\"solutions\" text=\"A collection of solution curves\"> <annotation ref=\"solution-k=-4\" text=\"The solution with initial value -4\"\/> <annotation ref=\"solution-k=-3\" text=\"The solution with initial value -3\"\/> <annotation ref=\"solution-k=-2\" text=\"The solution with initial value -2\"\/> <annotation ref=\"solution-k=-1\" text=\"The solution with initial value -1\"\/> <annotation ref=\"solution-k=0\" text=\"The solution with initial value 0\"\/> <annotation ref=\"solution-k=1\" text=\"The solution with initial value 1\"\/> <annotation ref=\"solution-k=2\" text=\"The solution with initial value 2\"\/> <annotation ref=\"solution-k=3\" text=\"The solution with initial value 3\"\/> <annotation ref=\"solution-k=4\" text=\"The solution with initial value 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "diagram-unity",
+  "level": "2",
+  "url": "sec-repeat.html#diagram-unity",
+  "type": "Figure",
+  "number": "5.1.3",
+  "title": "",
+  "body": "    The roots of unity.  "
+},
+{
+  "id": "listing-unity",
+  "level": "2",
+  "url": "sec-repeat.html#listing-unity",
+  "type": "Listing",
+  "number": "5.1.4",
+  "title": "",
+  "body": "  <diagram width=\"300\" height=\"300\" margins=\"5\"> <definition> alignments=['ne','ne','ne','nw','nw','sw','se','se'] <\/definition> <definition substitution=\"no\"> labels=['1','\\omega','i','\\omega^3','-1','\\omega^5','-i','\\omega^7'] <\/definition> <definition>f(t)=(cos(pi*t\/4),sin(pi*t\/4))<\/definition> <coordinates bbox=\"[-1.4,-1.4,1.4,1.4]\"> <grid at=\"grid\" \/> <axes at=\"axes\" labels=\"no\" \/> <circle at=\"unit-circle\" center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <repeat parameter=\"k=0..7\"> <point at=\"point\" p=\"f(k)\" alignment=\"alignments[k]\"> <m>${labels[k]}<\/m> <\/point> <\/repeat> <\/coordinates> <annotations> <annotation id=\"figure\" text=\"The eighth roots of unity\"> <annotation id=\"axes\" text=\"The coordinate axes\" \/> <annotation id=\"grid\" text=\"The coordinate grid\" \/> <annotation id=\"unit-circle\" text=\"The unit circle\" circular=\"true\"> <annotation id=\"point-k=0\" text=\"The primitive eighth root of unity to the power zero\" speech=\"one\"\/> <annotation id=\"point-k=1\" text=\"The primitive eighth root of unity\" speech=\"omega\"\/> <annotation id=\"point-k=2\" text=\"The primitive eighth root of unity squared\" speech=\"i\"\/> <annotation id=\"point-k=3\" text=\"The primitive eighth root of unity cubed\" speech=\"omega cubed\"\/> <annotation id=\"point-k=4\" text=\"The primitive eighth root of unity to the fourth\" speech=\"minus one\"\/> <annotation id=\"point-k=5\" text=\"The primitive eighth root of unity to the fifth\" speech=\"omega to the fifth\"\/> <annotation id=\"point-k=6\" text=\"The primitive eighth root of unity to the sixth\" speech=\"minus i\"\/> <annotation id=\"point-k=7\" text=\"The primitive eighth root of unity to the seventh\" speech=\"omega to the seventh\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "diagram-nested-repeat",
+  "level": "2",
+  "url": "sec-repeat.html#diagram-nested-repeat",
+  "type": "Figure",
+  "number": "5.1.5",
+  "title": "",
+  "body": "    A <repeat> nested inside another.  "
+},
+{
+  "id": "listing-nested-repeat",
+  "level": "2",
+  "url": "sec-repeat.html#listing-nested-repeat",
+  "type": "Listing",
+  "number": "5.1.6",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
   "id": "sec-arrows",
   "level": "1",
   "url": "sec-arrows.html",
   "type": "Section",
-  "number": "4.4",
+  "number": "5.2",
   "title": "Arrows",
   "body": " Arrows  Arrows can appear in many different contexts within a PreFigure diagram. For instance, a <vector> will be drawn with an arrowhead, usually at its tip, as seen in . Most graphical components that define a path, such as a <polygon> and <parametric-curve> , can be decorated with arrows.      Arrows that decorate vectors.   In constrast, a <slope-field> may have many arrows, one on the end of each line segment, as shown in .      Adapted from Tom Judson's Ordinary Differential Equations Project .   As a result, it is possible to adjust the relative size and shape of arrowheads. Before describing the possibilities, however, it is important to recognize that the size of arrowheads is scaled by the thickness attribute so, for instance, the arrowhead on a line whose thickness=3 will be three times the size as one on a line whose thickness=1 .   shows a variety of choices for defining the appearance of arrowheads. Notice that there are two attributes, arrow-width and arrow-angles , that can be specified and that are described more fully below.      A collection of arrows demonstrating various options.     <diagram dimensions=\"(400,400)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes labels=\"no\"\/> <!-- left side arrows --> <line endpoints=\"((1,9),(4,9))\" arrows=\"2\"\/> <line endpoints=\"((1,8),(4,8))\" arrows=\"2\" arrow-width=\"5\"\/> <line endpoints=\"((1,7),(4,7))\" arrows=\"2\" arrow-width=\"6\"\/> <line endpoints=\"((1,6),(4,6))\" arrows=\"2\" arrow-width=\"7\"\/> <line endpoints=\"((1,5),(4,5))\" arrows=\"2\" arrow-width=\"8\"\/> <line endpoints=\"((1,4),(4,4))\" arrows=\"2\" arrow-width=\"9\"\/> <!-- right side arrows --> <line endpoints=\"((6,9),(9,9))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(35,60)\"\/> <line endpoints=\"((6,8),(9,8))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(40,60)\"\/> <line endpoints=\"((6,7),(9,7))\" arrows=\"2\" arrow-width=\"6\" arrow-angles=\"(45,60)\"\/> <line endpoints=\"((6,6),(9,6))\" arrows=\"2\" arrow-width=\"7\" arrow-angles=\"(35,80)\"\/> <line endpoints=\"((6,5),(9,5))\" arrows=\"2\" arrow-width=\"8\" arrow-angles=\"(40,80)\"\/> <line endpoints=\"((6,4),(9,4))\" stroke=\"red\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(40,80)\"\/> <!-- longer line at the bottom --> <line endpoints=\"((1,3),(9,3))\" arrows=\"2\" additional-arrows=\"(0.7,0.5)\" arrow-width=\"9\" arrow-angles=\"(60,90)\"\/> <line endpoints=\"((1,2),(9,2))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(30,80)\"\/> <line endpoints=\"((1,1),(9,1))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(10,90)\" additional-arrows=\"0.5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Notice that a <line> has an additional-arrows attribute that allows one to include arrowheads at various locations along the line. The locations are given as a number between 0 and 1 specifying the relative distance along the line segment.  The shape of an arrowhead and how it is attached to the end of a path is shown in . Once again, the size of the arrowhead is scaled by the thickness of the path. (This style of arrowhead is adapted from Bill Casselman's PiScript package.)      The shape of an arrowhead and its attachment to the path.   shows the meaning of the angle-width and angle-angles attributes. The angle-width , whose value is in SVG coordinates and whose default is 4, controls how far from the path the arrowhead extends. The angle-angles attribute is a pair of angles , given in degrees. The default values are .      The definitions of arrow-width=w and arrow-angles=(A,B) .   Defining these attributes in a publication file allows them to be applied to all the diagrams in a project.  As we will see later, these attributes are ignored when placing arrowheads in a tactile diagram since the shape of the arrowheads is a convention within the braille community.  "
 },
@@ -1535,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrows-vector",
   "type": "Figure",
-  "number": "4.4.1",
+  "number": "5.2.1",
   "title": "",
   "body": "    Arrows that decorate vectors.  "
 },
@@ -1544,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrows-slope",
   "type": "Figure",
-  "number": "4.4.2",
+  "number": "5.2.2",
   "title": "",
   "body": "    Adapted from Tom Judson's Ordinary Differential Equations Project .  "
 },
@@ -1553,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrow-properties",
   "type": "Figure",
-  "number": "4.4.3",
+  "number": "5.2.3",
   "title": "",
   "body": "    A collection of arrows demonstrating various options.  "
 },
@@ -1562,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#listing-arrow-properties",
   "type": "Listing",
-  "number": "4.4.4",
+  "number": "5.2.4",
   "title": "",
   "body": "  <diagram dimensions=\"(400,400)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes labels=\"no\"\/> <!-- left side arrows --> <line endpoints=\"((1,9),(4,9))\" arrows=\"2\"\/> <line endpoints=\"((1,8),(4,8))\" arrows=\"2\" arrow-width=\"5\"\/> <line endpoints=\"((1,7),(4,7))\" arrows=\"2\" arrow-width=\"6\"\/> <line endpoints=\"((1,6),(4,6))\" arrows=\"2\" arrow-width=\"7\"\/> <line endpoints=\"((1,5),(4,5))\" arrows=\"2\" arrow-width=\"8\"\/> <line endpoints=\"((1,4),(4,4))\" arrows=\"2\" arrow-width=\"9\"\/> <!-- right side arrows --> <line endpoints=\"((6,9),(9,9))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(35,60)\"\/> <line endpoints=\"((6,8),(9,8))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(40,60)\"\/> <line endpoints=\"((6,7),(9,7))\" arrows=\"2\" arrow-width=\"6\" arrow-angles=\"(45,60)\"\/> <line endpoints=\"((6,6),(9,6))\" arrows=\"2\" arrow-width=\"7\" arrow-angles=\"(35,80)\"\/> <line endpoints=\"((6,5),(9,5))\" arrows=\"2\" arrow-width=\"8\" arrow-angles=\"(40,80)\"\/> <line endpoints=\"((6,4),(9,4))\" stroke=\"red\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(40,80)\"\/> <!-- longer line at the bottom --> <line endpoints=\"((1,3),(9,3))\" arrows=\"2\" additional-arrows=\"(0.7,0.5)\" arrow-width=\"9\" arrow-angles=\"(60,90)\"\/> <line endpoints=\"((1,2),(9,2))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(30,80)\"\/> <line endpoints=\"((1,1),(9,1))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(10,90)\" additional-arrows=\"0.5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1571,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrow-defs",
   "type": "Figure",
-  "number": "4.4.5",
+  "number": "5.2.5",
   "title": "",
   "body": "    The shape of an arrowhead and its attachment to the path.  "
 },
@@ -1580,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-arrows.html#diagram-arrow-angle-def",
   "type": "Figure",
-  "number": "4.4.6",
+  "number": "5.2.6",
   "title": "",
   "body": "    The definitions of arrow-width=w and arrow-angles=(A,B) .  "
 },
@@ -1589,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-math.html",
   "type": "Section",
-  "number": "4.5",
+  "number": "5.3",
   "title": "Mathematical operations",
   "body": " Mathematical operations   As we've seen, PreFigure allows us to define some quantities, often using mathematical operations, and then reuse them. Here we summarize the set of mathematical operations that are possible. PreFigure is written in Python, and authors who are familiar with that language may be able to imagine what is possible.    Math operations  PreFigure provides access to Python's math module, which means that constants such as pi and e are available, as well as functions such as sin , cos , acos , atan , and atan2 . By default, any trigonometric functions use radians, but the functions degrees and radians will convert back and forth.  Some operations from discrete math, such as comb(n,k) for , are also available.  These functions are available without the math. prefix so that we could say, for instance, cos(pi\/6) . See the Python documentation for a full list of functions that are available.    Vector operations  Vector operations may be defined on previously-defined lists or tuples. For instance, if we define u=(1,2) and v=(-2,4) , we can later say u+v and -3*u . (Behind the scenes, any list or tuple that is defined is interpreted as a numpy array.)  Similarly, a matrix may be defined with A = [[1,2],[2,1]] and then used to multiply a vector with A @ v .  Some additional operations include:  length  length(u) finds the length of the vector u .   normalize  normalize(u) gives a vector paralle to u and having unit length.   dot  dot(u, v) finds the dot product of u and v .   midpoint  midpoint(u, v) gives the midpoint of the line segment from u to v .   angle  angle(u) finds the angle, in radians, between the vector and the positive -axis.       List operations  It can be convenient to modify existing lists. For instance, to add an element a to an existing list , we could say append(list, a) . This could be used, for instance, to implement Euler's method, as shown in . Of course, provides an easier way to illustrate Euler's method, but authors will undoubtedly find uses for the append function.      An implementation of Euler's method     <diagram dimensions=\"(300,300)\" margins=\"20\"> <coordinates bbox=\"(-1,-1,10,8)\"> <definition>f(t,y) = 0.1*y*(6-y)<\/definition> <definition>N=5<\/definition> <definition>h=10\/N<\/definition> <definition>points = [[0,1]]<\/definition> <repeat parameter=\"k=1..N\"> <definition>t=points[-1][0]<\/definition> <definition>y=points[-1][1]<\/definition> <definition>points=append(points, [t+h, y+h*f(t,y)])<\/definition> <\/repeat> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\" stroke=\"orange\"\/> <polygon points=\"points\" stroke=\"blue\"\/> <repeat parameter=\"k=0..N\"> <point p=\"points[k]\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .   If list=(a,b,c) , then roll(list) will be the list (b,c,a) . This can be useful for visiting each of the vertices in a polygon, for instance, as shown in .      Adding angle markers to a polygon     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <definition>points = ((1,1),(2,6),(6,9),(9,5),(7,2))<\/definition> <grid-axes decorations=\"no\"\/> <repeat parameter=\"k=1..5\"> <angle-marker points=\"points\"\/> <definition>points=roll(points)<\/definition> <\/repeat> <polygon points=\"points\" closed=\"yes\" stroke=\"blue\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .    "
 },
@@ -1598,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#diagram-euler",
   "type": "Figure",
-  "number": "4.5.1",
+  "number": "5.3.1",
   "title": "",
   "body": "    An implementation of Euler's method  "
 },
@@ -1607,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#listing-euler",
   "type": "Listing",
-  "number": "4.5.2",
+  "number": "5.3.2",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"20\"> <coordinates bbox=\"(-1,-1,10,8)\"> <definition>f(t,y) = 0.1*y*(6-y)<\/definition> <definition>N=5<\/definition> <definition>h=10\/N<\/definition> <definition>points = [[0,1]]<\/definition> <repeat parameter=\"k=1..N\"> <definition>t=points[-1][0]<\/definition> <definition>y=points[-1][1]<\/definition> <definition>points=append(points, [t+h, y+h*f(t,y)])<\/definition> <\/repeat> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\" stroke=\"orange\"\/> <polygon points=\"points\" stroke=\"blue\"\/> <repeat parameter=\"k=0..N\"> <point p=\"points[k]\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1616,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#diagram-roll",
   "type": "Figure",
-  "number": "4.5.3",
+  "number": "5.3.3",
   "title": "",
   "body": "    Adding angle markers to a polygon  "
 },
@@ -1625,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-math.html#listing-roll",
   "type": "Listing",
-  "number": "4.5.4",
+  "number": "5.3.4",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <definition>points = ((1,1),(2,6),(6,9),(9,5),(7,2))<\/definition> <grid-axes decorations=\"no\"\/> <repeat parameter=\"k=1..5\"> <angle-marker points=\"points\"\/> <definition>points=roll(points)<\/definition> <\/repeat> <polygon points=\"points\" closed=\"yes\" stroke=\"blue\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1634,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-annotations.html",
   "type": "Section",
-  "number": "5.1",
+  "number": "6.1",
   "title": "Annotating a diagram",
   "body": " Annotating a diagram   As we saw in , authors can include annotations within their PreFigure source that describe how a reader will explore the diagram using the diagcess library.    The diagcess library  Since annotations will be read by the diagcess library, let's take a moment to consider how a reader will interact with the annotations in a diagram. As we will see momentarily, the annotations will essentially form what mathematicians call a tree. That is, there is a top-level description of the entire diagram with the ability to explore various components in greater detail. Readers will navigate this tree using the arrow keys. The Down arrow requests more details on the component currently being explored while the Right arrow asks for the next detail of the current component. When an arrow key is pressed, a beep called an earcon notifies the reader that there are no more details available at that level.  The two most common key presses are O , which will sonify an element if the author has enabled this feature, and X , which toggles expert mode, about which more will be said later.  When designing annotations, an author is well served by considering their audience. For instance, many blind readers are fairly experienced navigating an HTML page with a screenreader. The diagcess library provides screenreading capabilities for included PreFigure diagrams. As an author, how will you verbally describe the diagram succinctly and completely? How will you organize the components of a diagram into groups that contribute to communicating the diagram's intended meaning? How will you explain the structure of such a group?  In addition, low-vision readers may not be able to interpret the meaning of a diagram in the same way that a sighted reader might. However, the diagcess library highlights the component currently being explored by zooming in on it and outlining it in yellow so that other elements move into the background. In this way, many low-vision readers can perceive the individual components of a diagram and how they fit together into a whole.  Even for sighted readers, annotations can provide more details about a diagram and call attention to specific components of the diagram so that their meaning is not overlooked. Considering the needs of these different audiences can be a challenge but will inevitably lead to more effective diagrams.  While annotations are included in the same PreFigure source, their authoring is typically a separate process from creating the graphical content. One reason for this is that graphical components lie on top of one another in the order in which they are added to the diagram. For example, we usually want a point to lie on top of a line passing through that point so we will include the line and then the point when creating the graphical components. However, when annotating the diagram, we may wish to call attention to the point first and then the line later. Keeping the annotations separate from the graphical content gives us more flexibilty in annotating a diagram.  Perhaps more importantly, however, experience shows that annotating a diagram really should feel like a separate process. When creating the graphical content, we may, for instance, add a line in a particular orientation so that it doesn't overlap with another part of the diagram and stroke it with a particular color to create constrast with other elements. When creating the annotations, we are thinking about the mathematical meaning of that line, why we have included it at all, and how it is related to the other elements in the diagram. These are two different sets of questions, and authors are well served by addressing them separately.    The annotation tree  To begin describing the annotation tree, let's return to the example we considered in , which is shown again, with annotations, in .      A calculus diagram     <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x)=exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"function\" function=\"f\"\/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <group at=\"point\"> <point p=\"(a, f(a))\"\/> <label anchor=\"(a,f(a))\" alignment=\"ne\"> <m>(a,f(a))<\/m> <\/label> <\/group> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"function\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\" sonify=\"yes\" speech=\"This line is y equals f of a plus the derivative at a times the quantity x minus a\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   This example illustrates some important points.   All the annotations are under a single <annotations> element, and each nested <annotation> element corresponds to a node in the annotations tree.    There is a single top-level <annotation> element, which has the attribute ref=\"figure\" . In general, the ref attribute should point to a handle in the tree of graphical components. The handle \"figure\" is implicit in the top-level <diagram> element. The text attribute gives a piece of text that will be displayed and vocalized when the focus goes to the diagram. You may view this as alt-text for the entire diagram so it should be a concise, yet thorough, description of the diagram.   The <grid-axes> element does not have a handle or an associated annotation node, but a set of annotations for it will be automatically added to the annnotations tree, if such a tree is included in the PreFigure source. There is a node for the <grid-axes> and then two child nodes, one for the grid and one for the axes.  The second node that is on the same level as the <grid-axes> annotation has ref=\"graph-tangent . In this case, there is no graphical component with this handle, which shows that the ref attribute need not point to a specific graphical component. This annotation node, however, has children, each with a ref value that points to a graphical component. Therefore, when the focus goes to the node with ref=\"graph-tangent\" , all the components referenced by a child will be highlighted.  When we descend from the node with ref=\"graph-tangent\" , there are three children that point to the graph, the point, and the tangent line. Notice that the node with attribute ref=\"point\" refers to a <group> that includes both the point and the label. When the focus goes to this node, both of those components will be highlighted. While this example illustrates the general behavior of a <group> referenced by an annotation, the same effect is produced by including a label inside the point as demonstrated in .  The graph is sonified with sonify=\"yes\" . When the focus goes to this node and the reader presses O , an aural rendering of the graph will be played.  The node that points to the tangent line has a speech attribute, which has more details about the line. When the reader presses X , then the value of this attribute replaces the value of the text attribute and is displayed and vocalized.  While it is not included in this example, an <annotation> element can have the attribute circular=\"yes\" . When exploring the children of such a node, the focus will return to the first child after we have explored the last child.    Authors should note that everything that is visible is annotated and will, at some point, be highlighted. This is a good practice that should generally be adopted. Suppose, for instance, that the <graph-axes> element is not annotated. A low-vision reader may percevie the presence of these components without being provided an explanation of their purpose.  Also notice how the tree-like structure of the annotations allows a reader to delve into different features with increasing detail. This allows the reader to skip over a branch of the tree, if desired, and go on to features that are of greater interest.    Annotations within repeat elements  We said earlier that the process of creating annotations should generally be separate from the process of illustrating. One exception to this is within a <repeat> element.  Suppose we have a <repeat> element with parameter=\"k=5..7\" and inside this element is a <point> with handle at=\"point\" . This will produce three points for each iteration of the <repeat> element, and these points will be given handles at=\"point-k=5 , at=\"point-k=6 , and at=\"point-k=7 . In this way, one could annotate these three points.  More complicated uses of the <repeat> element, however, can make annotations tedious and difficult to maintain. For this reason, annotations can be added to graphical components and referenced from the annotation tree. This can ease the process of annotating components inside a <repeat> , as seen in .      Annotating a diagram with a <repeat> element.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,5,5)\"> <definition>ordinals=['first', 'second', 'third', 'fourth', 'fifth']<\/definition> <grid at=\"grid\"\/> <repeat at=\"array\" parameter=\"col=0..4\" annotate=\"yes\" text=\"The array of squares\"> <repeat at=\"column\" parameter=\"row=0..4-col\" annotate=\"yes\" circular=\"yes\" text=\"A column of ${5-col} squares\"> <rectangle at=\"square\" center=\"(col, row)\" dimensions=\"(0.5,0.5)\" stroke=\"black\" fill=\"green\" annotate=\"yes\" text=\"The ${ordinals[row]} square in the ${ordinals[col]} column\"\/> <\/repeat> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"A triangular array of squares\"> <annotation ref=\"grid\" text=\"A rectangular grid\"\/> <annotation ref=\"array\"\/> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .   This leads to relatively simple and easy to maintain source if, say, we want to add or remove a column of squares. Here is how this works:  Notice that some elements are supplied with an attribute annotate=\"yes\" . When the graphical component is created, an <annotation> is created that can be referenced using its handle. The annotation attributes, such as text and circular , included in the graphical component are passed on to the resulting <annotation> .  In this case, the two <repeat> elements are both given this attrbute along with the child <rectangle> element. Behind the scenes, the <repeat> element creates a <group> with the resulting components added. Annotating the <repeat> element is therefore the same as annotating a <group> as we saw above.  Notice how the text attributes can respond to the different values of the parameters by including pieces of text inside ${...} , which are then evaluted in the current namespace.  The resulting annotations naturally inherit the tree-like structure from the graphical components that define them. We can therefore reference this entire sub-tree by simply referring to the handle ref=\"array\" of the top-level node.  This example illustrates the use of the circular attribute. Once we have examined all the squares in a column, we return to the first one and begin anew.    While any graphical component can be annotated in this way, this feature is included primarily as a way to ease the annotation of diagrams created with a <repeat> element. As mentioned earlier, we encourage authors to separate the processes of illustrating and annotating.   "
 },
@@ -1643,7 +1643,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-annotations.html#diagram-tangent-3",
   "type": "Figure",
-  "number": "5.1.1",
+  "number": "6.1.1",
   "title": "",
   "body": "    A calculus diagram  "
 },
@@ -1652,7 +1652,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-annotations.html#listing-tangent-3",
   "type": "Listing",
-  "number": "5.1.2",
+  "number": "6.1.2",
   "title": "",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x)=exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"function\" function=\"f\"\/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <group at=\"point\"> <point p=\"(a, f(a))\"\/> <label anchor=\"(a,f(a))\" alignment=\"ne\"> <m>(a,f(a))<\/m> <\/label> <\/group> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"function\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\" sonify=\"yes\" speech=\"This line is y equals f of a plus the derivative at a times the quantity x minus a\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
@@ -1661,7 +1661,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-annotations.html#diagram-repeat-annotate",
   "type": "Figure",
-  "number": "5.1.3",
+  "number": "6.1.3",
   "title": "",
   "body": "    Annotating a diagram with a <repeat> element.  "
 },
@@ -1670,7 +1670,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-annotations.html#listing-repeat-annotate",
   "type": "Listing",
-  "number": "5.1.4",
+  "number": "6.1.4",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,5,5)\"> <definition>ordinals=['first', 'second', 'third', 'fourth', 'fifth']<\/definition> <grid at=\"grid\"\/> <repeat at=\"array\" parameter=\"col=0..4\" annotate=\"yes\" text=\"The array of squares\"> <repeat at=\"column\" parameter=\"row=0..4-col\" annotate=\"yes\" circular=\"yes\" text=\"A column of ${5-col} squares\"> <rectangle at=\"square\" center=\"(col, row)\" dimensions=\"(0.5,0.5)\" stroke=\"black\" fill=\"green\" annotate=\"yes\" text=\"The ${ordinals[row]} square in the ${ordinals[col]} column\"\/> <\/repeat> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"A triangular array of squares\"> <annotation ref=\"grid\" text=\"A rectangular grid\"\/> <annotation ref=\"array\"\/> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
@@ -1679,7 +1679,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-tactile.html",
   "type": "Section",
-  "number": "5.2",
+  "number": "6.2",
   "title": "Tactile diagrams",
   "body": " Tactile diagrams   The original motivation for PreFigure arose from the difficulties in creating tactile diagrams from other source, such as TikZ.  Tactile diagrams, at least the kind that PreTeXt and PreFigure authors will want to create, are a relatively new medium, and, as such, there are still some conventions that are not yet firmly established. Ongoing research with blind and low-vision readers is determining best practices for the creation of tactile diagrams, and PreFigure will always implement these practices without demand on an author's attention.  It cannot be stated strongly enough that attention to tactile diagrams will lead to the design of better diagrams for sighted readers. Authors are strongly encouraged to create and explore tactile versions of their PreFigure diagrams and strive for a clean design. There really is no excuse not to: it's as easy as adding -f tactile to the PreFigure bulid command.    Anatomy of a tactile diagram  Before we examine a tactile diagram, we should first consider the medium used to produce them.  While tactile diagrams may be rendered in a variety of ways, PreFigure diagrams will be produced by an embosser on 11\" 11.5\" paper. More specifically, the tactile diagrams created by PreFigure are optimized to be embossed on a ViewPlus embosser.  A tactile diagram produced by PreFigure is meant to use as much of the page as possible. In particular, the diagram will most likely be scaled from the dimensions provided in the <diagram> element in such a way as to preserve the aspect ratio of the dimensions .   You may think of an embosser as a very low-resolution printer, 20 dots per inch to be precise (compared to 300 dpi for a standard printer). An embossers works by raising the paper at a collection of these dots, each of which has a diameter of 0.057 inches. Dots can, however, be raised to a small number of different heights to simulate shading from white to gray to black.  Text in a tactile diagram will be rendered in braille. Each braille cell is a 3 2 array of dots, and the interline spacing between braille cells is 0.4 inches. This means that a typical page has about 25 40 cells or roughly 1000 cells. While a cell does not exactly correspond to a character of written text (some common words have braille contractions and some cells contain formatting information, such as a transition to italics), this figure speaks to the limitations of what can be conveyed in a tactile format. While authors may initially view this as a restriction, experienced authors will see this as a feature that encourages good design.  Mathematics is rendered in Nemeth braille by MathJax while regular text is converted by liblouis into UEB. It is essential that liblouis be installed if you wish to build tactile diagrams on your local PreFigure installation. A PreFigure codespace takes care of this automatically.  Labels are embedded with the Braille29 font, which is included with PreFigure. Issuing the prefig init command will install this font on Linux or Mac-OS, and this happens automatically when a codespace is created.  The command prefig pdf foo will create a PDF that embosses well on a ViewPlus embosser provided that rsvg-convert is available. Again, this is provided in a codespace. The resolution given to rsvg-convert should always be 72, which is the PreFigure default.    With that said, let's explore a tactile version of the ubiquitous tangent line figure, shown in .      A calculus diagram   There is no need to show the PreFigure source for this diagram since it is the same that we saw earlier in . Again, PreFigure adopts the PreTeXt motto: write once, read anywhere. Here are some things you may notice, however.  Foreground elements, such as the graph, tangent, and point, have a clear, white outline of 1\/8\". This is based on the experience of blind readers' experience with PreFigure diagrams.  Labels sit on top of a clear, white rectangle so that they stand out from other elements. In fact, all labels are drawn last so that they sit on top of everything else.  Labels on axes are aligned with tick marks according to guidelines published by The Braille Authority of North America.  Colors are not informative in a tactile diagram so defaults are chosen to render well on an embosser. Filled regions will be rendered as lightgray and the stroke on, say, graphs will be changed to black.  The point is rendered with a radius of 9 SVG units, which translates into 1\/8\" when embossed. As with the white outline described above, authors should think of this distance as a good rule of thumb.  While this may not be apparent in this figure, labels are carefully positioned so that the braille cells in the resulting PDF will lie on top of the 20 dpi embossing grid. As a result, authors may sometimes notice that labels are not exactly where they expect since they will internally snap onto this grid.    Finally, notice the amount of space taken up by the braille label on the point, which translates into . It is not uncommon for the labels you produce to be surprisingly long when rendered in braille. This should lead authors to aspire to brevity in their use of labels, which is a design principle for better sighted diagrams as well. Reading text and processing graphical information are different cognitive tasks so be economical when using text in your diagrams. Instead, use a diagram's caption and surrounding text to provide additional context.    PreFigure considerations for tactile diagrams  With all of that said, attaining the goal of write once, read anywhere is aspirational, and authors will likely find that producing good tactile diagrams requires a bit of tweaking.  First off, any attribute in a PreFigure element can be overridden in tactile form by prepending tactile- before it. While this applies to any attribute, there are likely two attributes where this is most important.  Since color cannot be used to disambiguate elements from one another, authors should consider stroking some features will a dashed line in a tactile diagram. To do so, set tactile-dash=\"9 9\" in a component to be stroked with a dash in a tactile diagram           An ordinary and tactile diagram from the same PreFigure source. Adapted from Tom Judson's Ordinary Differential Equations Project .   In the source given below, notice how one of the solution curves has both attributes stroke=\"red\" and tactile-dash=\"9 9\" . The stroke attribute will be automaticaly overridden to \"black\" in a tactile diagram. Setting the dash to \"9 9\" produces dashes that alternate 1\/8\" of stroke and 1\/8\" empty.    <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t,y) = (0.4*y[0] - 0.01*y[0]*y[1],-0.3*y[1] + 0.005*y[0]*y[1])<\/definition> <coordinates bbox=\"[-15,-15,70,100]\"> <grid-axes xlabel=\"t\"\/> <de-solve function=\"f\" t0=\"0\" t1=\"100\" y0=\"(70,50)\" name=\"oscillator\" N=\"200\"\/> <plot-de-solution at=\"lynx\" solution=\"oscillator\" axes=\"(t,y0)\" \/> <plot-de-solution at=\"snowshoe\" tactile-dash=\"9 9\" solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\"\/> <legend at=\"legend\" anchor=\"(bbox[2], bbox[3])\" alignment=\"sw\" scale=\"0.8\" opacity=\"0.5\"> <item ref=\"lynx\"><m>F(t)<\/m><\/item> <item ref=\"snowshoe\"><m>H(t)<\/m><\/item> <\/legend> <\/coordinates> <\/diagram>   The PreFigure source for .   The other attribute you may wish to override in tactile form is the offset attribute of labels. PreFigure tries to place labels appropriately so that they don't overlap with other elements, but an author will sometimes need to push a label a bit away from its default location. Setting tactile-offset=\"(4,4)\" will push the label an additional four units horiztonally and vertically before snapping onto the 20 dpi embossing grid.  Finally, as discussed in , since every foreground component in a tactile diagram is outlined, you may need to put components in a <group> and the attribute outline=\"tactile\" , which will first paint all the outlines in the group before painting the components themselves.      Outlining two graphs inside a group with outline=\"tactile\" .     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,5,5)\"> <definition>f(x) = exp(-x) + 2<\/definition> <definition>g(x) = -exp(-x) + 2<\/definition> <grid-axes\/> <group outline=\"tactile\"> <graph function=\"f\"\/> <graph function=\"g\"\/> <\/group> <\/coordinates> <\/diagram>   The PreFigure source for .    "
 },
@@ -1688,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-tactile.html#diagram-tangent-3-tactile",
   "type": "Figure",
-  "number": "5.2.1",
+  "number": "6.2.1",
   "title": "",
   "body": "    A calculus diagram  "
 },
@@ -1697,7 +1697,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-tactile.html#diagram-judson-system",
   "type": "Figure",
-  "number": "5.2.2",
+  "number": "6.2.2",
   "title": "",
   "body": "         An ordinary and tactile diagram from the same PreFigure source. Adapted from Tom Judson's Ordinary Differential Equations Project .  "
 },
@@ -1706,7 +1706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-tactile.html#listing-judson-system",
   "type": "Listing",
-  "number": "5.2.3",
+  "number": "6.2.3",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t,y) = (0.4*y[0] - 0.01*y[0]*y[1],-0.3*y[1] + 0.005*y[0]*y[1])<\/definition> <coordinates bbox=\"[-15,-15,70,100]\"> <grid-axes xlabel=\"t\"\/> <de-solve function=\"f\" t0=\"0\" t1=\"100\" y0=\"(70,50)\" name=\"oscillator\" N=\"200\"\/> <plot-de-solution at=\"lynx\" solution=\"oscillator\" axes=\"(t,y0)\" \/> <plot-de-solution at=\"snowshoe\" tactile-dash=\"9 9\" solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\"\/> <legend at=\"legend\" anchor=\"(bbox[2], bbox[3])\" alignment=\"sw\" scale=\"0.8\" opacity=\"0.5\"> <item ref=\"lynx\"><m>F(t)<\/m><\/item> <item ref=\"snowshoe\"><m>H(t)<\/m><\/item> <\/legend> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -1715,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-tactile.html#diagram-outline-tactile-2",
   "type": "Figure",
-  "number": "5.2.4",
+  "number": "6.2.4",
   "title": "",
   "body": "    Outlining two graphs inside a group with outline=\"tactile\" .  "
 },
@@ -1724,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-tactile.html#listing-outline-tactile",
   "type": "Listing",
-  "number": "5.2.5",
+  "number": "6.2.5",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,5,5)\"> <definition>f(x) = exp(-x) + 2<\/definition> <definition>g(x) = -exp(-x) + 2<\/definition> <grid-axes\/> <group outline=\"tactile\"> <graph function=\"f\"\/> <graph function=\"g\"\/> <\/group> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
