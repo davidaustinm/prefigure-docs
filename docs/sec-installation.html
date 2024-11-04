@@ -356,12 +356,18 @@ prefig png foo
 	</pre>
 <div class="para">Including the <code class="code-inline tex2jax_ignore">-b</code> flag will cause the diagram to be built first: <code class="code-inline tex2jax_ignore">prefig pdf -b foo</code>.</div>
 </div></dd>
-<dt id="sec-installation-5-1-5">init</dt>
-<dd><div class="para" id="sec-installation-5-1-5-2">It is not essential to do this, but if PreFigure is installed locally, you may want to begin with <code class="code-inline tex2jax_ignore">prefig init</code>, which has the effect of installing some MathJax libraries (PreFigure will try to install these later when needed) as well as the Braille29 font, which is required to create tactile diagrams for embossing.</div></dd>
-<dt id="sec-installation-5-1-6">new</dt>
-<dd><div class="para" id="sec-installation-5-1-6-2">You may initialize a new PreFigure project with <code class="code-inline tex2jax_ignore">prefig new</code>. This copies a simple publication file and the diagcess library files into the current directory.  PreFigure work done within this directory and any subdirectories will be able to find these when needed.</div></dd>
-<dt id="sec-installation-5-1-7">examples</dt>
-<dd><div class="para" id="sec-installation-5-1-7-2">If you would like to explore the set of included examples, use <code class="code-inline tex2jax_ignore">prefig examples</code> to copy the set of examples into the current directory.</div></dd>
+<dt id="sec-installation-5-1-5">validate</dt>
+<dd><div class="para logical" id="sec-installation-5-1-5-2">
+<div class="para">The PreFigure schema defines the structure of PreFigure source.  To validate a PreFigure XML source file against the schema, use</div>
+<pre class="code-display tex2jax_ignore">prefig validate foo.xml</pre>
+<div class="para">.</div>
+</div></dd>
+<dt id="sec-installation-5-1-6">init</dt>
+<dd><div class="para" id="sec-installation-5-1-6-2">It is not essential to do this, but if PreFigure is installed locally, you may want to begin with <code class="code-inline tex2jax_ignore">prefig init</code>, which has the effect of installing some MathJax libraries (PreFigure will try to install these later when needed) as well as the Braille29 font, which is required to create tactile diagrams for embossing.</div></dd>
+<dt id="sec-installation-5-1-7">new</dt>
+<dd><div class="para" id="sec-installation-5-1-7-2">You may initialize a new PreFigure project with <code class="code-inline tex2jax_ignore">prefig new</code>. This copies a simple publication file and the diagcess library files into the current directory.  PreFigure work done within this directory and any subdirectories will be able to find these when needed.</div></dd>
+<dt id="sec-installation-5-1-8">examples</dt>
+<dd><div class="para" id="sec-installation-5-1-8-2">If you would like to explore the set of included examples, use <code class="code-inline tex2jax_ignore">prefig examples</code> to copy the set of examples into the current directory.</div></dd>
 </dl>
 </div></section></div>
 <div class="ptx-content-footer">
