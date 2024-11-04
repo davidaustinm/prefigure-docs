@@ -4,7 +4,7 @@
   <definition>controls2=((6,1),(8,1),(9,3))</definition>
   <definition>controls3=((4,9),(8,9))</definition>
   <coordinates bbox="(0,0,10,10)">
-    <grid-axes decortions="no"/>
+    <grid-axes decorations="no"/>
     <path start="start" stroke="gray">
       <lineto point="controls1[0]"/>
       <moveto point="controls1[1]"/>

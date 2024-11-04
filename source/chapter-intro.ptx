@@ -336,6 +336,14 @@ prefig png foo
 	</p>
       </li>
 
+      <li><title>validate</title>
+      <p>The <prefigure/> schema defines the structure of <prefigure/>
+      source.  To validate a <prefigure/> XML source file against the
+      schema, use
+      <cd>prefig validate foo.xml</cd>.
+      </p>
+      </li>
+
       <li><title>init</title>
 	<p>It is not essential to do this, but if PreFigure is
 	installed locally, you may want to begin with
