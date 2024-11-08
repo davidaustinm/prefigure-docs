@@ -112,21 +112,56 @@
     </p>
 
     <figure xml:id="diagram-tangent-annotate">
-      <sidebyside width="60%">
-	<image source="images/tangent-annotate"/>
-      </sidebyside>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-tangent">
+          <diagram dimensions="(300,300)" margins="5">
+            <definition>a=1</definition>
+            <definition>f(x) = exp(x/3)*cos(x)</definition>
+            <coordinates bbox="[-4,-4,4,4]">
+              <grid-axes xlabel="x" ylabel="y"/>
+                <graph at="graph" function="f" />
+                <tangent-line at="tangent" function="f" point="a"
+		              infinite="yes"/>
+                <point at="point" p="(a, f(a))">
+	          <m>(a,f(a))</m>
+                </point>
+            </coordinates>
+            
+            <annotations>
+              <annotation ref="figure"
+                          text="The graph of a function and its tangent line at the point a equals 1">
+                <annotation ref="graph-tangent"
+                            text="The graph and its tangent line">
+                  <annotation ref="graph"
+                              text="The graph of the function f"
+                              sonify="yes"/>
+                  <annotation ref="point"
+                              text="The point a comma f of a"/>
+                  <annotation ref="tangent"
+                              text="The tangent line to the graph of f at the point"/>
+                </annotation>
+              </annotation>
+            </annotations>
+            
+          </diagram>
+
+        </prefigure>
+      </image>
       <caption> An annotated version of <xref ref="diagram-tangent"/>
       </caption>
     </figure>
 
-    <p> (To be implemented) A reader may explore <xref
+    <p> A reader may explore <xref
     ref="diagram-tangent-annotate"/> using a screen reader by first
     sending the focus to the diagram by either clicking in the diagram
     or pressing the tab key sufficiently many times.  The arrow keys
     are then used to explore the diagram in more detail.  For
     instance, the Down and Up arrow keys produce more or less detail
     while the Left and Right arrow keys focus on components at the
-    same level.  The annotations are read using the <c>diagcess</c>
+    same level.  When the focus is on the graph, pressing "O" will
+    play a sonification of the graph.
+    The annotations are read using the <c>diagcess</c>
     library created by
     <url
 	href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/sorge-volker"
