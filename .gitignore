@@ -15,6 +15,7 @@ generated-assets
 diagcess.js
 diagcess.html
 pf_publication.xml
+logo
 
 # don't track the executables.ptx file
 executables.ptx
