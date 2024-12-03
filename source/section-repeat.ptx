@@ -82,6 +82,30 @@
   inside <c>${...}</c> is evaluated in the user namespace.
   </p>
 
+  <p>It is also possible to define the <attr>parameter</attr>
+  attribute so that we iterate over a list.  For instance
+  <attr>parameter="point in [[0,0],[3,0],[0,4]]"</attr> the elements
+  inside the <tag>repeat</tag> will be visited three times with the
+  value of <c>point</c> being set to each of the points in the list.
+  This is demonstrated in <xref ref="diagram-repeat-iterator"/>.</p>
+
+  <figure xml:id="diagram-repeat-iterator">
+    <caption>Using a <tag>repeat</tag> to iterate over the elements in
+    a list.</caption>
+    <image width="60%" source="images/iterator"/>
+  </figure>
+
+  <listing xml:id="listing-repeat-iterator">
+    <program line-numbers="no">
+      <input><xi:include href="code/iterator.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-repeat-iterator"/>.</caption>
+  </listing>
+
+  
+
   <p>We can also nest <tag>repeat</tag> elements as illustrated in
   <xref ref="diagram-nested-repeat"/> and PreFigure source <xref
   ref="listing-nested-repeat"/>.

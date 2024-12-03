@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-transforms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Transforms</title>
+
+  <p>The <tag>coordinates</tag> element, as described in <xref
+  ref="sec-coordinates"/>, sets up a coordinate transformation that
+  translates between the mathematical coordinates used to describe
+  graphical components and the underlying SVG coordinate system.  In
+  some situations, it can be convenient to temporarily modify this
+  coordinate transformation.  This is accomplished
+  using the <tag>transform</tag> element.</p>
+
+  <p><xref ref="diagram-transform-1"/> illustrates the use of the
+  <tag>transform</tag> and related elements.</p>
+
+  <figure xml:id="diagram-transform-1">
+    <caption>Changing the coordinate transformation with a
+    <tag>transform</tag> and a <tag>translate</tag> element.
+    </caption>
+    <image width="60%" source="images/transform-1"/>
+  </figure>
+
+  <listing xml:id="listing-transform-1">
+    <program line-numbers="yes">
+      <input><xi:include href="code/transform-1.xml" parse="text"/></input>
+    </program>
+    <caption>The <prefigure/> source for <xref
+    ref="diagram-transform-1"/>.</caption>
+  </listing>
+
+  <p>In line 4, we first fill a blue rectangle whose lower-left corner
+  is at the point <m>(2,2)</m>.  Notice that Lines 6-10 are within a
+  <tag>transform</tag> element.  The following line, Line 7, uses a
+  <tag>translate</tag> element to move the origin of the coordinate
+  system to the former point <m>(2,4)</m>.  We then fill a green
+  rectangle having the same lower-left corner <m>(2,2)</m>.  Because
+  we have translated the coordinate system, the green rectangle has
+  been translated by <m>(2,4)</m>.  When we are outside of the
+  <tag>transform</tag> element, then the original coordinate
+  transformation is applied.  Therefore, the circle defined in Line 11
+  is drawn in the original coordinate system.</p>
+
+  <p>The following elements will produce changes in the coordinate
+  system.
+  <dl>
+    <li><title><tag>translate</tag></title>
+    <p>This produces a translation by the value of the
+    <attr>by</attr> attribute.</p></li>
+    <li><title><tag>rotate</tag></title>
+    <p>This produces a rotation about the origin by an angle given by
+    the <attr>by</attr> attribute.  By default, the angle is
+    interpreted to be in degrees, but this can be changed by setting
+    <attr>degrees="no"</attr>.  To
+    rotate about a point other than the origin, such as <m>(-1,2)</m>,
+    use <attr>about="(-1,2)"</attr>.</p></li>
+    <li><title><tag>scale</tag></title>
+    <p>This scales the axes by the value of the <attr>by</attr>
+    attribute.  For instance, <attr>scale="(1,2)"</attr> produces a
+    vertical stretch by a factor of 2.</p></li>
+  </dl>
+  </p>
+
+  <p>In <xref ref="diagram-transform-2"/>, the same rectangle is drawn
+  three times in three different coordinate systems.  Notice that
+  multiple uses of the <tag>transform</tag> element are shown.
+  </p>
+    
+  <figure xml:id="diagram-transform-2">
+    <caption>Using <tag>translate</tag>, <tag>rotate</tag>, and
+    <tag>scale</tag>. </caption>
+    <image width="60%" source="images/transform-2"/>
+  </figure>
+
+  <listing xml:id="listing-transform-2">
+    <program line-numbers="no">
+      <input><xi:include href="code/transform-2.xml" parse="text"/></input>
+    </program>
+    <caption>The <prefigure/> source for <xref
+    ref="diagram-transform-2"/>.</caption>
+  </listing>
+
+  <p>The following two diagrams illustrate how the use of coordinate
+  changes can be useful.  First is a proof of the Pythagorean theorem
+  in <xref ref="diagram-pythagoras"/>.</p>
+
+  <figure xml:id="diagram-pythagoras">
+    <caption>This illustration of the Pythagorean is made easier by
+    the use of a <tag>rotate</tag> element.</caption>
+    <image width="50%" source="images/pythagoras"/>
+  </figure>
+
+  <listing xml:id="listing-pythagoras">
+    <program line-numbers="no">
+      <input><xi:include href="code/pythagoras.xml" parse="text"/></input>
+    </program>
+    <caption>The <prefigure/> source for <xref
+    ref="diagram-pythagoras"/>.</caption>
+  </listing>
+
+  <p>It sometimes happens that we want to create many copies of the
+  same graphical component with different coordinate transformations
+  applied.  Using transform elements inside a <tag>repeat</tag> element
+  can be a simple way to do that.  Consider <xref
+  ref="diagram-fibonacci-tiling"/>, which illustrates three Fibonacci
+  tilings, with each tiling obtained by a process called deflation,
+  from the one above.  Here are two important facts:
+  <ul>
+    <li><p>Within each tiling, there are two types a tiling, a long
+    tile and a short tile, and the ratio of their lengths is the
+    golden ratio <m>\phi</m>.</p></li>
+    <li><p>The lengths of the tiles in one tiling are scaled by
+    <m>\phi</m> compared to the tiles in the tiling below.</p></li>
+  </ul>
+  </p>
+
+  <figure xml:id="diagram-fibonacci-tiling">
+    <caption>A sequence of three Fibonacci tilings in the inflation
+    hierarchy.</caption>
+    <image width="50%" source="images/fibonacci"/>
+  </figure>
+
+  <listing xml:id="listing-fibonacci">
+    <program line-numbers="no">
+      <input><xi:include href="code/fibonacci.xml" parse="text"/></input>
+    </program>
+    <caption>The <prefigure/> source for <xref
+    ref="diagram-fibonacci-tiling"/>.</caption>
+  </listing>
+
+
+
+  
+</section>
+

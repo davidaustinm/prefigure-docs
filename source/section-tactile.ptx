@@ -245,5 +245,47 @@
 
   </subsection>
 
+  <subsection xml:id="subsec-tactile-captions">
+    <title>Captions in tactile diagrams</title>
+
+    <p><prefigure/> tactile diagrams can, of course, be included in a
+    <pretext/> document.  When a braille version of the document is
+    created, the diagrams will be distributed as a set of PDFs
+    separate from the rest of the document.  To help locate a given
+    diagram within the document, <pretext/> adds a caption along the
+    top of the diagram, which says something like <q>Figure 3.2.1</q>,
+    as indicated in <xref ref="diagram-tactile-caption"/>.  This is
+    meant to assist the person assembling the complete document.</p>
+
+    <figure xml:id="diagram-tactile-caption">
+      <caption>A tactile diagram with a caption added by
+      <pretext/></caption>
+      <image width="70%" source="images/de-system"/>
+    </figure>
+
+    <p>Since <pretext/> automatically adds the caption, you will most
+    likely never need to worry about it.  However, should you want to
+    add a caption manually, you can place a <tag>caption</tag> element
+    as a child of the <tag>diagram</tag> as seen in <xref
+    ref="listing-tactile-caption"/>. </p>
+
+    <listing xml:id="listing-tactile-caption">
+      <program line-numbers="no">
+	<input><xi:include href="code/de-system.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-tactile-caption"/>.</caption>
+    </listing>
+
+  <p>Captions are ignored except when generating a tactile version of
+  the diagram.  If a diagram has a <tag>caption</tag> element, perhaps
+  added by <pretext/>, its inclusion in a tactile version can be
+  suppressed by including the <c>-s</c> flag in the build command:
+  <cd>
+    prefig build -f tactile -s foo.xml
+  </cd>
+  </p>
+
+  </subsection>
 </section>
 
