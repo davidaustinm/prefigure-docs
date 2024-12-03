@@ -259,12 +259,13 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Arrows</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-transforms.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Transforms</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Mathematical operations</span></a></div>
+<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">5.3.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Math operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -285,6 +286,7 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-tactile.html#sec-tactile-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Anatomy of a tactile diagram</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-tactile.html#sec-tactile-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">PreFigure considerations for tactile diagrams</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-tactile.html#subsec-tactile-captions" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Captions in tactile diagrams</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -401,9 +403,22 @@ window.MathJax = {
 &lt;/diagram&gt;
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.1.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-repeat.html#diagram-unity" class="xref" data-knowl="./knowl/xref/diagram-unity.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.3">Figure 5.1.3</a>.</figcaption></figure><div class="para" id="sec-repeat-11">Lines 5 through 7 define a set of labels, one for each of the eight points.  Remember that ^ is usually interpreted as the numerical exponentiation operator.  Since we wish to preserve this character for the label, we include the attribute <code class="code-inline tex2jax_ignore">@substitution="no"</code> to prevent ^ being reinterpreted. Notice that the label is given as <code class="code-inline tex2jax_ignore">${labels[k]}</code> since anything inside <code class="code-inline tex2jax_ignore">${...}</code> is evaluated in the user namespace.</div>
-<div class="para" id="sec-repeat-12">We can also nest <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> elements as illustrated in <a href="sec-repeat.html#diagram-nested-repeat" class="xref" data-knowl="./knowl/xref/diagram-nested-repeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.5">Figure 5.1.5</a> and PreFigure source <a href="sec-repeat.html#listing-nested-repeat" class="xref" data-knowl="./knowl/xref/listing-nested-repeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 5.1.6">Listing 5.1.6</a>.</div>
+<div class="para" id="sec-repeat-12">It is also possible to define the <code class="code-inline tex2jax_ignore">@parameter</code> attribute so that we iterate over a list.  For instance <code class="code-inline tex2jax_ignore">@parameter="point in [[0,0],[3,0],[0,4]]"</code> the elements inside the <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> will be visited three times with the value of <code class="code-inline tex2jax_ignore">point</code> being set to each of the points in the list. This is demonstrated in <a href="sec-repeat.html#diagram-repeat-iterator" class="xref" data-knowl="./knowl/xref/diagram-repeat-iterator.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.5">Figure 5.1.5</a>.</div>
+<figure class="figure figure-like" id="diagram-repeat-iterator"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/iterator.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.5<span class="period">.</span></span><span class="space"> </span>Using a <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> to iterate over the elements in a list.</figcaption></figure><figure class="listing figure-like" id="listing-repeat-iterator"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+  &lt;coordinates bbox="(0,0,10,10)"&gt;
+    &lt;definition&gt;centers=((2,2),(3,7),(6,4),(8,7))&lt;/definition&gt;
+    &lt;grid-axes decorations="no"/&gt;
+    &lt;repeat parameter="center in centers"&gt;
+      &lt;circle center="center" radius="1"
+              fill="springgreen" stroke="black"/&gt;
+    &lt;/repeat&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.1.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-repeat.html#diagram-repeat-iterator" class="xref" data-knowl="./knowl/xref/diagram-repeat-iterator.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.5">Figure 5.1.5</a>.</figcaption></figure><div class="para" id="sec-repeat-15">We can also nest <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> elements as illustrated in <a href="sec-repeat.html#diagram-nested-repeat" class="xref" data-knowl="./knowl/xref/diagram-nested-repeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.7">Figure 5.1.7</a> and PreFigure source <a href="sec-repeat.html#listing-nested-repeat" class="xref" data-knowl="./knowl/xref/listing-nested-repeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 5.1.8">Listing 5.1.8</a>.</div>
 <figure class="figure figure-like" id="diagram-nested-repeat"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/nested-repeat.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.5<span class="period">.</span></span><span class="space"> </span>A <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> nested inside another.</figcaption></figure><figure class="listing figure-like" id="listing-nested-repeat"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.7<span class="period">.</span></span><span class="space"> </span>A <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> nested inside another.</figcaption></figure><figure class="listing figure-like" id="listing-nested-repeat"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="[-1,-1,5,5]"&gt;
     &lt;grid/&gt;
     &lt;repeat parameter="row=0..4"&gt;
@@ -415,7 +430,7 @@ window.MathJax = {
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.1.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-repeat.html#diagram-nested-repeat" class="xref" data-knowl="./knowl/xref/diagram-nested-repeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.5">Figure 5.1.5</a>.</figcaption></figure><div class="para" id="sec-repeat-15">A typical handle for one of these rectangles is <code class="code-inline tex2jax_ignore">@at="rectangle-row=2-col=1"</code>.</div></section></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.1.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-repeat.html#diagram-nested-repeat" class="xref" data-knowl="./knowl/xref/diagram-nested-repeat.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.7">Figure 5.1.7</a>.</figcaption></figure><div class="para" id="sec-repeat-18">A typical handle for one of these rectangles is <code class="code-inline tex2jax_ignore">@at="rectangle-row=2-col=1"</code>.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="chap-next-steps.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-arrows.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
