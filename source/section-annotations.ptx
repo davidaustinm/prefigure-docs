@@ -213,6 +213,16 @@
     <attr>at="point-k=7</attr>.  In this way, one could annotate these
     three points.</p>
 
+    <p>If a <tag>repeat</tag> element is instead meant to iterate over
+    a list, the behavior is slightly different.  Suppose the
+    <tag>repeat</tag> element is defined with <attr>parameter="p in
+    ((0,0),(1,2),(0,4))"</attr> and that inside the <tag>repeat</tag>
+    there is a <tag>point</tag> with handle <attr>at="point"</attr>.
+    In this case, the times through the iteration are numbered so that
+    the three resulting points have handles
+    <attr>at="point-p=0"</attr>, <attr>at="point-p=1"</attr>, and
+    <attr>at="point-p=2"</attr>.</p>
+
     <p>More complicated uses of the <tag>repeat</tag> element,
     however, can make annotations tedious and difficult to maintain.
     For this reason, annotations can be added to graphical components
