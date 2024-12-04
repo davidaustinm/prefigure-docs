@@ -399,13 +399,12 @@ window.MathJax = {
   &lt;definition&gt;tiling2=[0,1,0,0,1]&lt;/definition&gt;
   &lt;definition&gt;tiling1=[0,1,0,0,1,0,1,0]&lt;/definition&gt;
   &lt;definition&gt;tiling0=[0,1,0,0,1,0,1,0,0,1,0,0,1]&lt;/definition&gt;
-  &lt;definition&gt;tilings={0:tiling0, 1:tiling1, 2:tiling2}&lt;/definition&gt;
-  &lt;definition&gt;types={0:'long', 1:'short'}&lt;/definition&gt;
+  &lt;definition&gt;tilings=[tiling0, tiling1, tiling2]&lt;/definition&gt;
   &lt;coordinates bbox="(0,-0.5,width,2.5)"&gt;
     &lt;transform&gt;
-      &lt;repeat parameter="row in [0,1,2]"&gt;
+      &lt;repeat parameter="tiling in tilings"&gt;
         &lt;transform&gt;
-          &lt;repeat parameter="type in tilings[row]"&gt;
+          &lt;repeat parameter="type in tiling"&gt;
             &lt;rectangle lower-left="(0,0)"
                        dimensions="(widths[type], height)"
                        fill="${colors[type]}" stroke="black"/&gt;
