@@ -7,13 +7,12 @@
   <definition>tiling2=[0,1,0,0,1]</definition>
   <definition>tiling1=[0,1,0,0,1,0,1,0]</definition>
   <definition>tiling0=[0,1,0,0,1,0,1,0,0,1,0,0,1]</definition>
-  <definition>tilings={0:tiling0, 1:tiling1, 2:tiling2}</definition>
-  <definition>types={0:'long', 1:'short'}</definition>
+  <definition>tilings=[tiling0, tiling1, tiling2]</definition>
   <coordinates bbox="(0,-0.5,width,2.5)">
     <transform>
-      <repeat parameter="row in [0,1,2]">
+      <repeat parameter="tiling in tilings">
         <transform>
-          <repeat parameter="type in tilings[row]">
+          <repeat parameter="type in tiling">
             <rectangle lower-left="(0,0)"
                        dimensions="(widths[type], height)"
                        fill="${colors[type]}" stroke="black"/>
