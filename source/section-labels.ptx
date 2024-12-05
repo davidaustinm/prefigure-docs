@@ -150,6 +150,32 @@
   <tag>m</tag> element.
   </p>
 
+  <p><prefigure/> supports the use of color in labels, though you are
+  encouraged to use it sparingly.  <xref ref="diagram-color-labels"/>
+  illustrates this feature.  First off, notice that is possible to
+  color the entire label by given the <tag>label</tag> a
+  <attr>color</attr> attribute. 
+  However, individual parts of a label, including <tag>m</tag>
+  elements, may be given a <attr>color</attr> attribute as well.
+  Notice that there is a <tag>plain</tag> element that can be used to
+  give color to text that is neither italicized nor bolded.</p>
+
+  <figure xml:id="diagram-color-labels">
+    <sidebyside width="80%">
+      <image source="images/color_labels"/>
+    </sidebyside>
+    <caption>Some labels with color added.</caption>
+  </figure>
+
+  <listing xml:id="listing-color-labels">
+    <program>
+      <input><xi:include href="code/color_labels.xml"
+      parse="text"/></input>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-color-labels"/>.</caption>
+  </listing>
+
   <assemblage>
     <title>Best practices</title>
     
