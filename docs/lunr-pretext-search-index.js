@@ -439,7 +439,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Grid and Axes",
-  "body": " Grid and Axes   We'll begin our discussion of graphical elements by looking at grids and axes, which will typically be in the background of a diagram. Since these are commonly used elements, there are many features that can be customized by an author.    <grid-axes>  The simplest way to include a grid and axes in a diagram is with the <grid-axes> element, which is demonstrated in .      The use of a <grid-axes> element.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-2,-2,5,5)\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Notice that PreFigure makes choices about the spacing of the grid lines and the locations at which labels are added to the axes. All of these features can be modified as will be described in the next two subsections, and .  To place the grid lines and label locations at multiples of , add the attributes h-pi-format=\"yes\" or v-pi-format=\"yes\" , as illustrated in . These attributes may be individually applied to a <grid> or <axes> element.      The use of h-pi-format and v-pi-format attributes.     <diagram dimensions=\"(300,250)\" margins=\"(30,5,5,5)\"> <coordinates bbox=\"(-pi, -pi, 10*pi, pi)\"> <definition>f(x)=2*cos(x\/4-1)<\/definition> <grid-axes h-pi-format=\"yes\" v-pi-format=\"yes\"\/> <graph function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   The xlabel and ylabel tags are optional but provide a simple way to label the axes. We will have a lot more to say about labels later, but these particular labels will be processed by MathJax as if they were contained in an m element.  We will also discuss annotations in more depth later, but it is worth mentioning now that a <grid-axes> element will automatically annotate itself as the first component in the annotation tree.    Grids  The <grid> element provides a grid without adding axes. Without any attributes, this element will choose horizontal and vertical spacings and draw the grid lines stroke=\"lightgray\" and thickness=\"1\" . The stroke attributes can be modified as can the spacings using the spacings attribute. The value of the spacings consists of two lists, one for each of the horizontal and vertical grid lines, with each list having the form (start, space, end) . provides an example.      The attributes of a <grid> element.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid spacings=\"((0,1,10),(0,1\/2,10))\" stroke=\"blue\" thickness=\"2\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Including a basis attribute will produce a grid drawn in the given basis, as shown in .      The result of basis=\"((2,1),(1,2))\" .   When included in a <grid-axes> element, these attributes will be inherited by the resulting grid.    Axes  Axes are a bit more involved since there is a wider range of properties they possess. For instance, an <axes> tag with no attributes will produce axes similar to those seen in . In addition to the axes, we see that there are tick marks and labels as well. The positions of the tick marks and labels are automatically generated.      An <axes> element without attributes.   There are attributes that may be used to change this default behavior.  decorations  Setting decorations=\"no\" suppresses the automatic inclusion of tick marks and labels and produces unadorned axes. Regardless of the value of this attribute, features may be customized and added to the axes by including some of the following attributes.   xlabel and ylabel  As we have seen xlabel=\"t\" and ylabel=\"f(t)\" will place labels on the horizontal and vertical axes. These labels will be automatically wrapped in <m> elements and processed as latex by MathJax.   hticks and vticks  These attributes specify the position of tick marks on the axes. For instance, hticks=\"(-2,2,4)\" will place tick marks on the horizontal axis beginning at -2 and ending at 4 with a spacing of two units.   hlabels and vlabels  These attributes are similar to hticks and vticks except they specify the position of labels on the axes.   arrows  Arrows may be placed on ends of the axes by setting the arrows attribute. If arrows=\"1\" , then arrows will be included in the direction of increasing coordinates. arrows=\"2\" includes arrows at each end of the axes.     illustrates the use of some of these attributes.      The effect of some attributes of an <axes> element.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-2,-2,5,5)\"> <axes xlabel=\"\\alpha\" ylabel=\"g(\\alpha)\" hticks=\"(-2,1,5)\" hlabels=\"(-2,1,5)\" arrows=\"1\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   As with grids, these attributes may be included in a <grid-axes> element and inherited by the resulting axes.   "
+  "body": " Grid and Axes   We'll begin our discussion of graphical elements by looking at grids and axes, which will typically be in the background of a diagram. Since these are commonly used elements, there are many features that can be customized by an author.    <grid-axes>  The simplest way to include a grid and axes in a diagram is with the <grid-axes> element, which is demonstrated in . This element is convenient way to add both a <grid> and <axes> , which are both described below. The attributes given to a <grid-axes> element will be passed on the <grid> and <axes> .      The use of a <grid-axes> element.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-2,-2,5,5)\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Notice that PreFigure makes choices about the spacing of the grid lines and the locations at which labels are added to the axes. All of these features can be modified as will be described in the next two subsections, and .  To place the grid lines and label locations at multiples of , add the attributes h-pi-format=\"yes\" or v-pi-format=\"yes\" , as illustrated in . These attributes may be individually applied to a <grid> or <axes> element.      The use of h-pi-format and v-pi-format attributes.     <diagram dimensions=\"(300,250)\" margins=\"(30,5,5,5)\"> <coordinates bbox=\"(-pi, -pi, 10*pi, pi)\"> <definition>f(x)=2*cos(x\/4-1)<\/definition> <grid-axes h-pi-format=\"yes\" v-pi-format=\"yes\"\/> <graph function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   The xlabel and ylabel tags are optional but provide a simple way to label the axes. We will have a lot more to say about labels later, but these particular labels will be processed by MathJax as if they were contained in an m element.  If a diagram has a lot of graphical components, you may want the axes to appear on the outside of the diagram rather than where and . You can use the h-frame and v-frame attributes to do this, as illustrated in . The possible values h-frame=\"bottom\",\"top\" and v-frame=\"left\",\"right\" .      The axes may be drawn on the outside of the diagram with the attributes h-frame and v-frame .     <diagram dimensions=\"(300,250)\" margins=\"(35,30,50,30)\"> <coordinates bbox=\"(-4, -4, 4, 4)\"> <grid-axes h-frame=\"bottom\" v-frame=\"left\"\/> <axes decorations=\"no\"> <xlabel>Time <m>t<\/m><\/xlabel> <ylabel alignment=\"ne\">Temperature <m>F<\/m><\/ylabel> <\/axes> <\/coordinates> <\/diagram>   The PreFigure source for .   We will also discuss annotations in more depth later, but it is worth mentioning now that a <grid-axes> element will automatically annotate itself as the first component in the annotation tree.    Grids  The <grid> element provides a grid without adding axes. Without any attributes, this element will choose horizontal and vertical spacings and draw the grid lines stroke=\"lightgray\" and thickness=\"1\" . The stroke attributes can be modified as can the spacings using the spacings attribute. The value of the spacings consists of two lists, one for each of the horizontal and vertical grid lines, with each list having the form (start, space, end) . provides an example.      The attributes of a <grid> element.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid spacings=\"((0,1,10),(0,1\/2,10))\" stroke=\"blue\" thickness=\"2\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   Including a basis attribute will produce a grid drawn in the given basis, as shown in .      The result of basis=\"((2,1),(1,2))\" .   When included in a <grid-axes> element, these attributes will be inherited by the resulting grid.    Axes  Axes are a bit more involved since there is a wider range of properties they possess. For instance, an <axes> tag with no attributes will produce axes similar to those seen in . In addition to the axes, we see that there are tick marks and labels as well. The positions of the tick marks and labels are automatically generated.      An <axes> element without attributes.   There are attributes that may be used to change this default behavior.  decorations  Setting decorations=\"no\" suppresses the automatic inclusion of tick marks and labels and produces unadorned axes. Regardless of the value of this attribute, features may be customized and added to the axes by including some of the following attributes.   xlabel and ylabel  As we have seen xlabel=\"t\" and ylabel=\"f(t)\" will place labels on the horizontal and vertical axes. These labels will be automatically wrapped in <m> elements and processed as latex by MathJax.   hticks and vticks  These attributes specify the position of tick marks on the axes. For instance, hticks=\"(-2,2,4)\" will place tick marks on the horizontal axis beginning at -2 and ending at 4 with a spacing of two units.   hlabels and vlabels  These attributes are similar to hticks and vticks except they specify the position of labels on the axes.   arrows  Arrows may be placed on ends of the axes by setting the arrows attribute. If arrows=\"1\" , then arrows will be included in the direction of increasing coordinates. arrows=\"2\" includes arrows at each end of the axes.     illustrates the use of some of these attributes.      The effect of some attributes of an <axes> element.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-2,-2,5,5)\"> <axes xlabel=\"\\alpha\" ylabel=\"g(\\alpha)\" hticks=\"(-2,1,5)\" hlabels=\"(-2,1,5)\" arrows=\"1\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .   As with grids, these attributes may be included in a <grid-axes> element and inherited by the resulting axes.  The xlabel and ylabel attributes are included so that simple labels may be added to the axes with ease. More complicated labels can be added with <xlabel> and <ylabel> elements inside of an <axes> or <grid-axes> element. By default, these will be place to the right of the horizontal axis and directly above the vertical axis, as seen in . This behavior can be modified using the usual <label> attributes described in .      Adding labels to an <axes> element.     <diagram dimensions=\"(300,250)\" margins=\"(35,30,50,30)\"> <coordinates bbox=\"(-4, -4, 4, 4)\"> <axes decorations=\"no\"> <xlabel>Time <m>t<\/m><\/xlabel> <ylabel alignment=\"ne\">Temperature <m>F<\/m><\/ylabel> <\/axes> <\/coordinates> <\/diagram>   The PreFigure source for .    "
 },
 {
   "id": "diagram-grid-axes",
@@ -478,11 +478,29 @@ var ptx_lunr_docs = [
   "body": "  <diagram dimensions=\"(300,250)\" margins=\"(30,5,5,5)\"> <coordinates bbox=\"(-pi, -pi, 10*pi, pi)\"> <definition>f(x)=2*cos(x\/4-1)<\/definition> <grid-axes h-pi-format=\"yes\" v-pi-format=\"yes\"\/> <graph function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
+  "id": "diagram-axes-framed",
+  "level": "2",
+  "url": "sec-grid-axes.html#diagram-axes-framed",
+  "type": "Figure",
+  "number": "3.3.5",
+  "title": "",
+  "body": "    The axes may be drawn on the outside of the diagram with the attributes h-frame and v-frame .  "
+},
+{
+  "id": "subsec-grid-axes-12",
+  "level": "2",
+  "url": "sec-grid-axes.html#subsec-grid-axes-12",
+  "type": "Listing",
+  "number": "3.3.6",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,250)\" margins=\"(35,30,50,30)\"> <coordinates bbox=\"(-4, -4, 4, 4)\"> <grid-axes h-frame=\"bottom\" v-frame=\"left\"\/> <axes decorations=\"no\"> <xlabel>Time <m>t<\/m><\/xlabel> <ylabel alignment=\"ne\">Temperature <m>F<\/m><\/ylabel> <\/axes> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
   "id": "diagram-grid",
   "level": "2",
   "url": "sec-grid-axes.html#diagram-grid",
   "type": "Figure",
-  "number": "3.3.5",
+  "number": "3.3.7",
   "title": "",
   "body": "    The attributes of a <grid> element.  "
 },
@@ -491,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-grid-axes.html#subsec-grid-4",
   "type": "Listing",
-  "number": "3.3.6",
+  "number": "3.3.8",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid spacings=\"((0,1,10),(0,1\/2,10))\" stroke=\"blue\" thickness=\"2\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
@@ -500,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-grid-axes.html#diagram-grid-basis",
   "type": "Figure",
-  "number": "3.3.7",
+  "number": "3.3.9",
   "title": "",
   "body": "    The result of basis=\"((2,1),(1,2))\" .  "
 },
@@ -509,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-grid-axes.html#diagram-axes",
   "type": "Figure",
-  "number": "3.3.8",
+  "number": "3.3.10",
   "title": "",
   "body": "    An <axes> element without attributes.  "
 },
@@ -518,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-grid-axes.html#diagram-axes-example",
   "type": "Figure",
-  "number": "3.3.9",
+  "number": "3.3.11",
   "title": "",
   "body": "    The effect of some attributes of an <axes> element.  "
 },
@@ -527,9 +545,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-grid-axes.html#subsec-axes-7",
   "type": "Listing",
-  "number": "3.3.10",
+  "number": "3.3.12",
   "title": "",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-2,-2,5,5)\"> <axes xlabel=\"\\alpha\" ylabel=\"g(\\alpha)\" hticks=\"(-2,1,5)\" hlabels=\"(-2,1,5)\" arrows=\"1\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "diagram-axes-x-y-label",
+  "level": "2",
+  "url": "sec-grid-axes.html#diagram-axes-x-y-label",
+  "type": "Figure",
+  "number": "3.3.13",
+  "title": "",
+  "body": "    Adding labels to an <axes> element.  "
+},
+{
+  "id": "subsec-axes-11",
+  "level": "2",
+  "url": "sec-grid-axes.html#subsec-axes-11",
+  "type": "Listing",
+  "number": "3.3.14",
+  "title": "",
+  "body": "  <diagram dimensions=\"(300,250)\" margins=\"(35,30,50,30)\"> <coordinates bbox=\"(-4, -4, 4, 4)\"> <axes decorations=\"no\"> <xlabel>Time <m>t<\/m><\/xlabel> <ylabel alignment=\"ne\">Temperature <m>F<\/m><\/ylabel> <\/axes> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
   "id": "sec-labels",
