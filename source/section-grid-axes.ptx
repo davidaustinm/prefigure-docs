@@ -16,7 +16,11 @@
 
     <p>The simplest way to include a grid and axes in a diagram is
     with the <tag>grid-axes</tag> element, which is demonstrated in
-    <xref ref="diagram-grid-axes"/>.
+    <xref ref="diagram-grid-axes"/>.  This element is convenient way
+    to add both a <tag>grid</tag> and <tag>axes</tag>, which
+    are both described below.  The attributes given to a
+    <tag>grid-axes</tag> element will be passed on the <tag>grid</tag>
+    and <tag>axes</tag>. 
     </p>
 
     <figure xml:id="diagram-grid-axes">
@@ -73,6 +77,33 @@
     will be processed by MathJax as if they were contained in an
     <attr>m</attr> element.
     </p>
+
+    <p>If a diagram has a lot of graphical components, you may want
+    the axes to appear on the outside of the diagram rather than where
+    <m>y=0</m> and <m>x=0</m>.  You can use the <attr>h-frame</attr>
+    and <attr>v-frame</attr> attributes to do this, as illustrated in
+    <xref ref="diagram-axes-framed"/>.  The possible values 
+    <attr>h-frame="bottom","top"</attr> and
+    <attr>v-frame="left","right"</attr>.</p>
+
+    <figure xml:id="diagram-axes-framed">
+      <sidebyside width="70%">
+	<image source="images/axes-framed"/>
+      </sidebyside>
+      <caption>The axes may be drawn on the outside of the diagram
+      with the attributes <attr>h-frame</attr> and
+      <attr>v-frame</attr>. 
+      </caption>
+    </figure>
+
+    <listing>
+      <program>
+	<input><xi:include href="code/axes-framed.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-axes-framed"/>.</caption> 
+    </listing>
 
     <p>We will also discuss annotations in more depth later, but it is
     worth mentioning now that a <tag>grid-axes</tag> element will
@@ -227,6 +258,33 @@
     <p>As with grids, these attributes may be included in a
     <tag>grid-axes</tag> element and inherited by the resulting axes.
     </p>
+
+    <p>The <attr>xlabel</attr> and <attr>ylabel</attr> attributes are
+    included so that simple labels may be added to the axes with ease.
+    More complicated labels can be added with <tag>xlabel</tag> and
+    <tag>ylabel</tag> elements inside of an <tag>axes</tag> or
+    <tag>grid-axes</tag> element.  By default, these will be place to
+    the right of the horizontal axis and directly above the vertical
+    axis, as seen in <xref ref="diagram-axes-x-y-label"/>.  This
+    behavior can be modified using the usual <tag>label</tag>
+    attributes described in <xref ref="sec-labels"/>.</p>
+
+    <figure xml:id="diagram-axes-x-y-label">
+      <sidebyside width="60%">
+	<image source="images/axes-x-y-label"/>
+      </sidebyside>
+      <caption>Adding labels to an <tag>axes</tag>
+      element.</caption> 
+    </figure>
+
+    <listing>
+      <program>
+	<input><xi:include href="code/axes-x-y-label.xml" parse="text"/>
+	</input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-axes-x-y-label"/>.</caption> 
+    </listing>
 
   </subsection>
 
