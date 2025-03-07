@@ -259,6 +259,44 @@
      </p>
    </subsection>
 
+   <subsection xml:id="subsec-delta">
+     <title>Delta functions</title>
+
+     <p>It is possible to define a differential equation that includes
+     the Dirac delta function.  For example, here is the solution to
+     the initial value problem:
+     <md>
+       <mrow>y''+y'+y \amp = 5\delta_{-2}(t) + 3\delta_1(t)</mrow>
+       <mrow>y(-4) \amp = 0</mrow>
+       <mrow>y'(-4) \amp = 0</mrow>
+     </md>
+     </p>
+
+     <figure xml:id="diagram-de-delta">
+      <sidebyside width="60%">
+	<image source="images/delta"/>
+      </sidebyside>
+      <caption>Solving a differential equation with delta functions.</caption>
+     </figure>
+
+     <listing xml:id="listing-de-delta">
+       <program line-numbers="no">
+	 <input><xi:include href="code/delta.xml" parse="text"/></input>
+       </program>
+       <caption>The PreFigure source for <xref
+       ref="diagram-de-delta"/>.</caption> 
+     </listing>
+
+     <p>Notice that the delta function takes two arguments, the first
+     of which should correspond to the time variable and the second of
+     which should describe the support of the delta function in the
+     time variable.  Unpredictable, and most likely incorrect,
+     behavior will result if the second parameter involves the value
+     of <m>y</m>.
+     </p>
+   </subsection>
+     
+
    <subsection xml:id="subsec-euler">
      <title>Euler's method</title>
 

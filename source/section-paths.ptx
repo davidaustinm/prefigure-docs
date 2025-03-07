@@ -61,6 +61,12 @@
 	to the path a line segment from the current point to the
 	<attr>point</attr> and updating the current point.
 	</p>
+        <p>Alternatively, the new point may be specified in polar
+        coordinates using the attributes <attr>distance</attr>,
+        <attr>heading</attr>, and <attr>degrees</attr>, which says
+        whether the heading should be interpreted in degrees, which is
+        the default, or radians.
+        </p>
       </li>
       <li>
 	<title>rlineto</title>
@@ -68,6 +74,10 @@
 	<attr>point</attr> attribute is interpreted as a relative
 	change from the current point.
 	</p>
+        <p>The relative point can also be specified using the
+        attributes <attr>distance</attr>, <attr>heading</attr>, and
+        <attr>degrees</attr>.
+        </p>
       </li>
       <li>
 	<title>moveto</title>
@@ -76,12 +86,20 @@
 	adding a line segment.  In effect, it is like picking up your
 	pen. 
 	</p>
+        <p>The point can also be specified using the
+        attributes <attr>distance</attr>, <attr>heading</attr>, and
+        <attr>degrees</attr>.
+        </p>
       </li>
       <li>
 	<title>rmoveto</title>
 	<p>This tag interpretes the <attr>point</attr> as a relative
 	change in the current point.
 	</p>
+        <p>The relative point can also be specified using the
+        attributes <attr>distance</attr>, <attr>heading</attr>, and
+        <attr>degrees</attr>.
+        </p>
       </li>
       <li>
 	<title>horizontal</title>
@@ -158,7 +176,8 @@
 	<title>Other constructions</title>
 
 	<p> Some familiar constructions, such as <tag>graph</tag>,
-	<tag>parametric_curve</tag>, and <tag>polygon</tag> can also
+	<tag>parametric_curve</tag>, <tag>polygon</tag>, and
+        <tag>spline</tag> can also 
 	be placed inside of a <tag>path</tag>.  Ths is demonstrated in
 	<xref ref="diagram-more-paths"/> and its accompanying
 	<xref ref="listing-more-paths"/>.

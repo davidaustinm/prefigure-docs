@@ -280,6 +280,61 @@
     </p>
   </subsection>
 
+  <subsection xml:id="subsec-splines">
+    <title>Splines</title>
+
+    <p>PreFigure can create cubic splines from a sequence of
+    points. <xref ref="diagram-splines"/> illustrates a number of
+    possibilities.
+    </p>
+
+    <figure xml:id="diagram-splines">
+      <sidebyside width="60%">
+	<image source="images/splines"/>
+      </sidebyside>
+      <caption>A number of cubic splines</caption>
+    </figure>
+
+    <listing xml:id="listing-splines">
+      <program line-numbers="yes">
+	<input><xi:include href="code/splines.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-splines"/>.</caption>
+    </listing>
+
+    <p>The <tag>spline</tag> defined in line 6 is a simple
+    one-dimensional spline formed from a sequence of <m>y</m>-values.
+    By default, PreFigure assumes that the corresponding <m>t</m>
+    values are 0, 1, 2, 3, 4.  This can be modified using the
+    <attr>t-values</attr> attribute.
+    </p>
+
+    <p>The second <tag>spline</tag> defined on lines 7-9 is given by a
+    sequence of 2-dimensional points.  An accompanying sequence of
+    <attr>t-values</attr> is also defined.  The attribute
+    <attr>closed="yes"</attr> asks that the spline be closed and a
+    periodic boundary condition imposed.  In this case, it is
+    important that the last point agree with the first point.  
+    </p>
+
+    <p>If the spline is not to be closed, then boundary conditions can
+    be specified using the <attr>bc</attr> attribute.  The default
+    value is <c>not-a-knot</c>, but other possibilities can be found
+    in the <c>scipy.interpolar.CubicSpline</c> documentation.
+    </p>
+
+    <p>Since a <tag>spline</tag> is constructed from a sequence of
+    points, a <tag>spline</tag> shares many attributes with a
+    <tag>polygon</tag>.  For instance, the spline defined in line 10
+    shows how the sequence of points can be defined using a
+    <attr>parameter</attr>.  In addition, a <tag>spline</tag> can have
+    a <attr>stroke</attr> and <attr>fill</attr> attribute, and
+    <attr>arrows</attr> can be
+    used to add arrows.
+    </p>
+  </subsection>
+
   <subsection>
     <title>Triangles</title>
 

@@ -7,7 +7,8 @@
     <p>This section introduces shapes and some things you can do with
     them. A shape is any graphical component that defines a
     two-dimensional region, such as a <tag>circle</tag>,
-    <tag>rectangle</tag>, <tag>polygon</tag>, or <tag>path</tag>.  The
+    <tag>rectangle</tag>, <tag>polygon</tag>, <tag>path</tag>, or
+    <tag>spline</tag>.  The
     tags <tag>graph</tag> or <tag>parametric-curve</tag> also define
     shapes as, behind the scenes, PreFigure will close the paths they
     define.
