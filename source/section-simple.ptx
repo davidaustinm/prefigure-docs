@@ -331,8 +331,36 @@
     <attr>parameter</attr>.  In addition, a <tag>spline</tag> can have
     a <attr>stroke</attr> and <attr>fill</attr> attribute, and
     <attr>arrows</attr> can be
-    used to add arrows.
+    used to add arrows. 
     </p>
+
+    <p>It can be helpful to remember that splines are parametrized
+    curves, which presents two opportunities.  First, you can specify
+    a portion of the spline using the <attr>domain</attr> attribute.
+    Second, the location of an ending arrow, requested with
+    <attr>arrows="1"</attr>, can be moved to another location with
+    <attr>arrow-location</attr>.  This can be particularly helpful
+    when the spline is closed, since the direction of the arrow is not
+    well defined in this case.  These features are illustrated in
+    <xref ref="diagram-spline-domain"/>.</p>
+    
+    <figure xml:id="diagram-spline-domain">
+      <sidebyside width="60%">
+	<image source="images/spline-domain"/>
+      </sidebyside>
+      <caption>Specifying the domain of a spline and moving an
+      arrow.</caption> 
+    </figure>
+
+    <listing xml:id="listing-spline-domain">
+      <program>
+	<input><xi:include href="code/spline-domain.xml" parse="text"/></input>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-spline-domain"/>.</caption>
+    </listing>
+
+
   </subsection>
 
   <subsection>
