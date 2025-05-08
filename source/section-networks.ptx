@@ -62,6 +62,13 @@
       </p>
       </li>
 
+      <li><title>arrows</title>
+      <p>For a directed graph, this attribute controls where the
+      arrowheads appear.  There are two values,
+      <attr>arrows="end"</attr> and <attr>arrows="middle"</attr> with
+      <q>middle</q> being the default.
+      </p></li>
+
       <li><title>labels</title>
       <p>Use <attr>labels="yes"</attr> to include labels inside the
       nodes.
@@ -116,15 +123,103 @@
     <tag>network</tag>.  The <attr>edges</attr> attribute for each
     node defines the edges connecting that node to others.</p>.
 
-    <p>As we will see shortly, we can mix these two approaches to
-    defining the network for
-    more flexibility.</p>
-
     <listing xml:id="listing-network-verbose">
       <program line-numbers="no">
-	<input><xi:include href="code/network-verbose.xml" parse="text"/></input>
+	<code><xi:include href="code/network-verbose.xml" parse="text"/></code>
       </program>
       <caption>Another PreFigure source for <xref ref="diagram-network-intro"/>.
+      </caption>
+    </listing>
+
+    <p>In fact, we can mix these two approaches to
+    defining the network for
+    more flexibility as demonstrated by the next example.
+    </p>
+
+    <figure xml:id="diagram-network-combination">
+      <sidebyside width="60%">
+	<image source="images/network-combination"/>
+      </sidebyside>
+      <caption>Using different features to define the network
+      structure.</caption> 
+    </figure>
+
+    <listing xml:id="listing-network-combination">
+      <program line-numbers="no">
+	<code><xi:include href="code/network-combination.xml" parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref ref="diagram-network-combination"/>.
+      </caption>
+    </listing>
+
+    <p>First notice that a subgraph is defined by the
+    <attr>graph</attr> attribute of the <tag>network</tag> element.
+    Furthermore, a third node is defined 
+    using a <tag>node</tag>, which enables us to change some
+    properties of this node, such as its style and its label.  Some
+    edges are added using <tag>edge</tag> elements, and one
+    edge, which was added to the graph through the <attr>graph</attr>
+    attribute, is given a label and the location of the label
+    specified by the <attr>label-location</attr> attribute, which is a
+    value between 0 and 1.</p>
+
+    <p>There are some general principles at play:
+    <ul>
+      <li><p>Nodes and edges can be defined through the
+      network's <attr>graph</attr> attribute.  Network
+      features defined in this way inherit the properties, such as
+      node style, defined as an attribute of the <tag>network</tag>
+      element.</p></li>
+      <li><p>A <tag>node</tag> element should be defined with a handle
+      given by its <attr>at</attr> attribute.  If the handle already
+      exists in the graph as defined through the network's
+      <attr>graph</attr> 
+      attribute, then this element will act as a replacement.  If the
+      handle is a new one, then this element is added to the graph
+      structure.  Edges defined through
+      a node's <attr>edges</attr> attribute are considered to be new
+      edges and so are added to the graph and drawn with the default
+      appearance. </p></li> 
+      <li><p>An <tag>edge</tag> element also obeys the previous
+      principle.  This provides a way to override the appearance of
+      previously defined edges or to define new edges and their
+      appearance. </p></li>
+    </ul>
+    </p>
+
+    <p>A loop is just an edge that connects a node with itself.
+    By default, a loop will be drawn approximately as a circle whose
+    radius depends on the size of the node.  As demonstrated in <xref
+    ref="diagram-network-combination"/>, loops will be drawn centered
+    in the largest gap between a node's outgoing and incoming edges.
+    However, the <attr>loop-orientation</attr> attribute of a node can
+    be used to change this behavior.  The value of this attribute is
+    an angle, given in degrees.</p>
+
+    <p>The dimensions of a loop can be controlled using the
+    <attr>loop-scale</attr> attribute of the <tag>edge</tag> element.
+    The value of this attribute is an ordered pair of scaling factors,
+    with the first scaling radially and the second tranversally, that
+    are applied to the loop.</p>
+
+    <p>These last two attributes are demonstrated in <xref
+    ref="diagram-network-loops"/>.</p>
+
+    <figure xml:id="diagram-network-loops">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="network-loops">
+          <xi:include href="prefigure/network-loops.xml"/>
+        </prefigure>
+      </image>
+      <caption>Some attributes to control the appearance of loops.</caption> 
+    </figure>
+
+    <listing xml:id="listing-network-loops">
+      <program line-numbers="no">
+	<code><xi:include href="prefigure/network-loops.xml" parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref ref="diagram-network-loops"/>.
       </caption>
     </listing>
 

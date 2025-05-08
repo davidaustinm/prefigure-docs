@@ -44,8 +44,8 @@
 
       <li><title>style</title>
       <p>This attribute controls the shape of the point.  There are
-      five options:  <attr>style="box", "diamond", "circle", "cross",
-      "plus"</attr>  
+      six options:  <ul><li>"box"</li><li>"diamond"</li><li>"circle"</li>
+      <li>"double-circle"</li><li>"cross"</li><li>"plus"</li></ul>
       with "circle" being the default.
       </p>
       </li>

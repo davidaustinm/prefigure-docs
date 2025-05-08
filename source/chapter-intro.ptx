@@ -48,8 +48,7 @@
 
     <listing xml:id="listing-tangent">
       <program>
-	<input><xi:include href="code/tangent.xml" parse="text"/>
-	</input>
+        <code><xi:include href="code/tangent.xml" parse="text"/></code>
       </program>
       <caption> The PreFigure source to produce
       <xref ref="diagram-tangent"/>

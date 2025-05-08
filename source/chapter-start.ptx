@@ -258,8 +258,8 @@
 
     <listing xml:id="listing-tangent-2">
       <program line-numbers="yes">
-	<input><xi:include href="code/tangent.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/tangent.xml" parse="text"/>
+	</code>
       </program>
       <caption> The PreFigure source </caption>
     </listing>
