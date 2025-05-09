@@ -23,7 +23,7 @@
 
   <listing xml:id="listing-transform-1">
     <program line-numbers="yes">
-      <input><xi:include href="code/transform-1.xml" parse="text"/></input>
+      <code><xi:include href="code/transform-1.xml" parse="text"/></code>
     </program>
     <caption>The <prefigure/> source for <xref
     ref="diagram-transform-1"/>.</caption>
@@ -74,7 +74,7 @@
 
   <listing xml:id="listing-transform-2">
     <program line-numbers="no">
-      <input><xi:include href="code/transform-2.xml" parse="text"/></input>
+      <code><xi:include href="code/transform-2.xml" parse="text"/></code>
     </program>
     <caption>The <prefigure/> source for <xref
     ref="diagram-transform-2"/>.</caption>
@@ -92,7 +92,7 @@
 
   <listing xml:id="listing-pythagoras">
     <program line-numbers="no">
-      <input><xi:include href="code/pythagoras.xml" parse="text"/></input>
+      <code><xi:include href="code/pythagoras.xml" parse="text"/></code>
     </program>
     <caption>The <prefigure/> source for <xref
     ref="diagram-pythagoras"/>.</caption>
@@ -122,7 +122,7 @@
 
   <listing xml:id="listing-fibonacci">
     <program line-numbers="no">
-      <input><xi:include href="code/fibonacci.xml" parse="text"/></input>
+      <code><xi:include href="code/fibonacci.xml" parse="text"/></code>
     </program>
     <caption>The <prefigure/> source for <xref
     ref="diagram-fibonacci-tiling"/>.</caption>

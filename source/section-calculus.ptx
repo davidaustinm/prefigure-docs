@@ -28,7 +28,7 @@
 
     <listing xml:id="listing-graph">
       <program>
-	<input><xi:include href="code/graph.xml" parse="text"/></input>
+	<code><xi:include href="code/graph.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-graph"/>.</caption> 
@@ -55,7 +55,7 @@
 
     <listing xml:id="listing-tangent-line">
       <program>
-	<input><xi:include href="code/tangent-line.xml" parse="text"/></input>
+	<code><xi:include href="code/tangent-line.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-tangent-line"/>.</caption> 
@@ -79,7 +79,7 @@
 
     <listing xml:id="listing-parametric">
       <program>
-	<input><xi:include href="code/parametric.xml" parse="text"/></input>
+	<code><xi:include href="code/parametric.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-parametric"/>.</caption> 
@@ -111,7 +111,7 @@
 
     <listing xml:id="listing-implicit-curve">
       <program>
-	<input><xi:include href="code/implicit-curve.xml" parse="text"/></input>
+	<code><xi:include href="code/implicit-curve.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-implicit-curve"/>.</caption> 
@@ -147,10 +147,10 @@
 	
     <listing xml:id="listing-area">
       <program>
-	<input><xi:include href="code/area-under.xml" parse="text"/></input>
+	<code><xi:include href="code/area-under.xml" parse="text"/></code>
       </program>
       <program>
-	<input><xi:include href="code/area-between.xml" parse="text"/></input>
+	<code><xi:include href="code/area-between.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the diagrams in<xref
       ref="diagram-area"/>.</caption> 
@@ -176,7 +176,7 @@
 	
     <listing xml:id="listing-riemann-sum">
       <program>
-	<input><xi:include href="code/riemann-sum.xml" parse="text"/></input>
+	<code><xi:include href="code/riemann-sum.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the diagrams in<xref
       ref="diagram-riemann-sum"/>.</caption> 

@@ -174,8 +174,8 @@
 
     <listing xml:id="listing-tangent-annotate">
       <program>
-	<input><xi:include href="code/tangent-annotate.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/tangent-annotate.xml" parse="text"/>
+	</code>
       </program>
       <caption> The PreFigure source for the annotated diagram
       </caption>

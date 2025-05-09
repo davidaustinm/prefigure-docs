@@ -203,7 +203,7 @@
 
     <listing xml:id="listing-judson-system">
       <program line-numbers="no">
-	<input><xi:include href="code/judson-system.xml" parse="text"/></input>
+	<code><xi:include href="code/judson-system.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-judson-system"/>.</caption>
@@ -237,7 +237,7 @@
 
     <listing xml:id="listing-outline-tactile">
       <program line-numbers="no">
-	<input><xi:include href="code/outline-tactile.xml" parse="text"/></input>
+	<code><xi:include href="code/outline-tactile.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-outline-tactile"/>.</caption>
@@ -271,7 +271,7 @@
 
     <listing xml:id="listing-tactile-caption">
       <program line-numbers="no">
-	<input><xi:include href="code/de-system.xml" parse="text"/></input>
+	<code><xi:include href="code/de-system.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-tactile-caption"/>.</caption>

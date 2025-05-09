@@ -26,8 +26,8 @@
 
   <listing xml:id="listing-diffeq-repeat">
     <program line-numbers="yes">
-      <input><xi:include href="code/diffeqs.xml"
-      parse="text"/></input>
+      <code><xi:include href="code/diffeqs.xml"
+      parse="text"/></code>
     </program>
     <caption>The PreFigure source for <xref
     ref="diagram-diffeq-repeat"/>.</caption>
@@ -66,8 +66,8 @@
 
   <listing xml:id="listing-unity">
     <program line-numbers="yes">
-      <input><xi:include href="code/roots_of_unity.xml"
-      parse="text"/></input>
+      <code><xi:include href="code/roots_of_unity.xml"
+      parse="text"/></code>
     </program>
     <caption>The PreFigure source for <xref
     ref="diagram-unity"/>.</caption>
@@ -97,8 +97,8 @@
 
   <listing xml:id="listing-repeat-iterator">
     <program line-numbers="no">
-      <input><xi:include href="code/iterator.xml"
-      parse="text"/></input>
+      <code><xi:include href="code/iterator.xml"
+      parse="text"/></code>
     </program>
     <caption>The PreFigure source for <xref
     ref="diagram-repeat-iterator"/>.</caption>
@@ -120,8 +120,8 @@
 
   <listing xml:id="listing-nested-repeat">
     <program line-numbers="yes">
-      <input><xi:include href="code/nested-repeat.xml"
-      parse="text"/></input>
+      <code><xi:include href="code/nested-repeat.xml"
+      parse="text"/></code>
     </program>
     <caption>The PreFigure source for <xref
     ref="diagram-nested-repeat"/>.</caption>

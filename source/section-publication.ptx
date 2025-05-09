@@ -14,8 +14,8 @@
 
   <listing xml:id="listing-pub-file">
     <program>
-      <input><xi:include href="code/pub_file.ptx"
-      parse="text"/></input>
+      <code><xi:include href="code/pub_file.ptx"
+      parse="text"/></code>
     </program>
     <caption>A sample publication file</caption>
   </listing>
@@ -43,8 +43,8 @@
 
   <listing xml:id="listing-publication">
     <program>
-      <input><xi:include href="code/pub_test.xml"
-      parse="text"/></input>
+      <code><xi:include href="code/pub_test.xml"
+      parse="text"/></code>
     </program>
     <caption>The PreFigure source for <xref
     ref="diagram-publication"/>. </caption>

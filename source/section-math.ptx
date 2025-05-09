@@ -110,7 +110,7 @@ A = [[1,2],[2,1]]
 
     <listing xml:id="listing-euler">
       <program>
-	<input><xi:include href="code/euler.xml" parse="text"/></input>
+	<code><xi:include href="code/euler.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-euler"/>.</caption>
@@ -131,7 +131,7 @@ A = [[1,2],[2,1]]
 
     <listing xml:id="listing-roll">
       <program>
-	<input><xi:include href="code/roll.xml" parse="text"/></input>
+	<code><xi:include href="code/roll.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-roll"/>.</caption>

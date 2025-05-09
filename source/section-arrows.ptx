@@ -62,8 +62,8 @@
 
   <listing xml:id="listing-arrow-properties">
     <program>
-      <input><xi:include href="code/arrow_properties.xml"
-      parse="text"/></input>
+      <code><xi:include href="code/arrow_properties.xml"
+      parse="text"/></code>
     </program>
     <caption>The PreFigure source for <xref
     ref="diagram-arrow-properties"/>. </caption>

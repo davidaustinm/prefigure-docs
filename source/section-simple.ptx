@@ -26,7 +26,7 @@
 
     <listing xml:id="listing-points">
       <program>
-	<input><xi:include href="code/points.xml" parse="text"/></input>
+	<code><xi:include href="code/points.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-points"/>.</caption> 
@@ -85,7 +85,7 @@
 
     <listing xml:id="listing-lines">
       <program>
-	<input><xi:include href="code/lines.xml" parse="text"/></input>
+	<code><xi:include href="code/lines.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-lines"/>.</caption> 
@@ -162,7 +162,7 @@
 
     <listing xml:id="listing-vectors">
       <program>
-	<input><xi:include href="code/vectors.xml" parse="text"/></input>
+	<code><xi:include href="code/vectors.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-vectors"/>.</caption> 
@@ -234,7 +234,7 @@
 
     <listing xml:id="listing-polygon">
       <program>
-	<input><xi:include href="code/polygon.xml" parse="text"/></input>
+	<code><xi:include href="code/polygon.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-polygon"/>.</caption>
@@ -297,7 +297,7 @@
 
     <listing xml:id="listing-splines">
       <program line-numbers="yes">
-	<input><xi:include href="code/splines.xml" parse="text"/></input>
+	<code><xi:include href="code/splines.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-splines"/>.</caption>
@@ -354,7 +354,7 @@
 
     <listing xml:id="listing-spline-domain">
       <program>
-	<input><xi:include href="code/spline-domain.xml" parse="text"/></input>
+	<code><xi:include href="code/spline-domain.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-spline-domain"/>.</caption>
@@ -379,7 +379,7 @@
 
     <listing xml:id="listing-triangle-intro">
       <program>
-	<input><xi:include href="code/triangle-intro.xml" parse="text"/></input>
+	<code><xi:include href="code/triangle-intro.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-triangle-intro"/>.</caption>

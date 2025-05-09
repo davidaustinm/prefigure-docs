@@ -27,8 +27,8 @@
 
     <listing xml:id="listing-circle">
       <program>
-	<input><xi:include href="code/circle.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/circle.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-circle"/>.</caption> 
@@ -61,8 +61,8 @@
 
     <listing xml:id="listing-arc">
       <program>
-	<input><xi:include href="code/arc.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/arc.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-arc"/>.</caption> 
@@ -114,8 +114,8 @@
 
     <listing xml:id="listing-angle-marker">
       <program>
-	<input><xi:include href="code/angle-marker.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/angle-marker.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-angle-marker"/>.</caption> 
@@ -177,8 +177,8 @@
 
     <listing xml:id="listing-rectangle">
       <program>
-	<input><xi:include href="code/rectangle.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/rectangle.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-rectangle"/>.</caption> 

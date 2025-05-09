@@ -45,7 +45,7 @@
 
     <listing xml:id="listing-paths">
       <program line-numbers="yes">
-	<input><xi:include href="code/paths.xml" parse="text"/></input>
+	<code><xi:include href="code/paths.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the paths in
       <xref ref="diagram-paths"/></caption> 
@@ -155,7 +155,7 @@
 
 	<listing xml:id="listing-bezier">
 	  <program line-numbers="yes">
-	    <input><xi:include href="code/bezier-edit.xml" parse="text"/></input>
+	    <code><xi:include href="code/bezier-edit.xml" parse="text"/></code>
 	  </program>
 	  <caption>The PreFigure source for the B&#x00E9;zier curves in
 	  <xref ref="diagram-bezier"/></caption> 
@@ -192,7 +192,7 @@
 
 	<listing xml:id="listing-more-paths">
 	  <program line-numbers="yes">
-	    <input><xi:include href="code/more-paths.xml" parse="text"/></input>
+	    <code><xi:include href="code/more-paths.xml" parse="text"/></code>
 	  </program>
 	  <caption>The PreFigure source for the B&#x00E9;zier curves in
 	  <xref ref="diagram-bezier"/></caption> 
@@ -232,7 +232,7 @@
     
     <listing xml:id="listing-path-decorations">
       <program line-numbers="yes">
-	<input><xi:include href="code/path_decorations.xml" parse="text"/></input>
+	<code><xi:include href="code/path_decorations.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the coils in
       <xref ref="diagram-path-decorations"/>.</caption> 
@@ -269,7 +269,7 @@
     
     <listing xml:id="listing-coils">
       <program line-numbers="yes">
-	<input><xi:include href="code/coils.xml" parse="text"/></input>
+	<code><xi:include href="code/coils.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the coils in
       <xref ref="diagram-coils"/>.</caption> 
@@ -292,7 +292,7 @@
 
     <listing xml:id="listing-mass-spring">
       <program line-numbers="yes">
-	<input><xi:include href="code/mass-spring.xml" parse="text"/></input>
+	<code><xi:include href="code/mass-spring.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for 
       <xref ref="diagram-mass-spring"/>.</caption> 
@@ -317,7 +317,7 @@
     
     <listing xml:id="listing-rcl-circuit">
       <program line-numbers="yes">
-	<input><xi:include href="code/rcl-circuit.xml" parse="text"/></input>
+	<code><xi:include href="code/rcl-circuit.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for 
       <xref ref="diagram-rcl-circuit"/>.</caption> 

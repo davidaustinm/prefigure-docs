@@ -33,7 +33,7 @@
 
     <listing xml:id="listing-shape-start">
       <program line-numbers="yes">
-	<input><xi:include href="code/shape_start.xml" parse="text"/></input>
+	<code><xi:include href="code/shape_start.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the diagram in
       <xref ref="diagram-shape-start"/></caption> 
@@ -80,7 +80,7 @@
 
     <listing xml:id="listing-shape-difference">
       <program line-numbers="yes">
-	<input><xi:include href="code/shape_difference.xml" parse="text"/></input>
+	<code><xi:include href="code/shape_difference.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the diagram in
       <xref ref="diagram-shape-difference"/></caption> 
@@ -139,7 +139,7 @@
 
     <listing xml:id="listing-shape-convex">
       <program>
-	<input><xi:include href="code/shape_convex.xml" parse="text"/></input>
+	<code><xi:include href="code/shape_convex.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the diagram in
       <xref ref="diagram-shape-convex"/></caption> 
@@ -165,7 +165,7 @@
 
     <listing xml:id="listing-shape-clip">
       <program>
-	<input><xi:include href="code/shape_clip.xml" parse="text"/></input>
+	<code><xi:include href="code/shape_clip.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the diagram in
       <xref ref="diagram-shape-clip"/></caption> 

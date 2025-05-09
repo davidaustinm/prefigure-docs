@@ -122,9 +122,9 @@
 
     <listing xml:id="listing-sidebyside">
       <program>
-	<input><xi:include href="code/sidebyside.xml"
+	<code><xi:include href="code/sidebyside.xml"
 	parse="text"/>
-	</input>
+	</code>
       </program>
       <caption> The PreFigure source for <xref
       ref="diagram-sidebyside"/>
@@ -173,9 +173,9 @@
     
     <listing xml:id="listing-zoom">
       <program line-numbers="yes">
-	<input><xi:include href="code/zoom.xml"
+	<code><xi:include href="code/zoom.xml"
 	parse="text"/>
-	</input>
+	</code>
       </program>
       <caption> The PreFigure source for <xref
       ref="diagram-zoom"/>
@@ -199,9 +199,9 @@
 
     <listing xml:id="listing-triangle">
       <program line-numbers="yes">
-	<input><xi:include href="code/triangle.xml"
+	<code><xi:include href="code/triangle.xml"
 	parse="text"/>
-	</input>
+	</code>
       </program>
       <caption> The PreFigure source for <xref
       ref="diagram-triangle"/>
@@ -309,8 +309,8 @@
 
     <listing xml:id="listing-linear-comb">
       <program line-numbers="yes">
-	<input><xi:include href="code/linear-comb.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/linear-comb.xml" parse="text"/>
+	</code>
       </program>
       <caption> The PreFigure source for <xref
       ref="diagram-linear-comb"/>
@@ -331,8 +331,8 @@
 
     <listing xml:id="listing-derivative">
       <program>
-	<input><xi:include href="code/derivative.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/derivative.xml" parse="text"/>
+	</code>
       </program>
       <caption> The PreFigure source for <xref
       ref="diagram-derivative"/>

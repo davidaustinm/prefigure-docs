@@ -36,7 +36,7 @@
 
      <listing xml:id="listing-slope-field">
        <program>
-	 <input><xi:include href="code/slope-field.xml" parse="text"/></input>
+	 <code><xi:include href="code/slope-field.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for the slope field of a
        1-variable differential equation</caption> 
@@ -57,7 +57,7 @@
      
      <listing xml:id="listing-slope-field-2">
        <program>
-	 <input><xi:include href="code/slope-field-2.xml" parse="text"/></input>
+	 <code><xi:include href="code/slope-field-2.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for the slope field of an
        autonomous sytem.</caption>
@@ -88,7 +88,7 @@
 
      <listing xml:id="listing-de-plot">
        <program line-numbers="yes">
-	 <input><xi:include href="code/de-plot.xml" parse="text"/></input>
+	 <code><xi:include href="code/de-plot.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for <xref
        ref="diagram-de-plot"/>.</caption> 
@@ -126,7 +126,7 @@
 
      <listing xml:id="listing-de-plot-2">
        <program line-numbers="yes">
-	 <input><xi:include href="code/de-plot-2.xml" parse="text"/></input>
+	 <code><xi:include href="code/de-plot-2.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for <xref
        ref="diagram-de-plot-2"/>.</caption> 
@@ -169,7 +169,7 @@
 
      <listing xml:id="listing-de-phase">
        <program line-numbers="yes">
-	 <input><xi:include href="code/de-phase.xml" parse="text"/></input>
+	 <code><xi:include href="code/de-phase.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for <xref
        ref="diagram-de-phase"/>.</caption> 
@@ -243,7 +243,7 @@
 
      <listing xml:id="listing-de-pulse">
        <program line-numbers="no">
-	 <input><xi:include href="code/de-pulse.xml" parse="text"/></input>
+	 <code><xi:include href="code/de-pulse.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for <xref
        ref="diagram-de-pulse"/>.</caption> 
@@ -281,7 +281,7 @@
 
      <listing xml:id="listing-de-delta">
        <program line-numbers="no">
-	 <input><xi:include href="code/delta.xml" parse="text"/></input>
+	 <code><xi:include href="code/delta.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for <xref
        ref="diagram-de-delta"/>.</caption> 
@@ -315,7 +315,7 @@
 
      <listing xml:id="listing-eulers-method">
        <program line-numbers="no">
-	 <input><xi:include href="code/eulers_method.xml" parse="text"/></input>
+	 <code><xi:include href="code/eulers_method.xml" parse="text"/></code>
        </program>
        <caption>The PreFigure source for <xref
        ref="diagram-eulers-method"/>.</caption> 

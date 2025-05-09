@@ -31,7 +31,7 @@
 
     <listing xml:id="listing-network-intro">
       <program line-numbers="yes">
-	<input><xi:include href="code/network-intro.xml" parse="text"/></input>
+	<code><xi:include href="code/network-intro.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref ref="diagram-network-intro"/>.
       </caption>
@@ -245,7 +245,7 @@
 
     <listing xml:id="listing-network-manual">
       <program line-numbers="no">
-	<input><xi:include href="code/network-manual.xml" parse="text"/></input>
+	<code><xi:include href="code/network-manual.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref ref="diagram-network-manual"/>.
       </caption>
@@ -260,7 +260,7 @@
       
     <listing xml:id="listing-network-manual-2">
       <program line-numbers="no">
-	<input><xi:include href="code/network-manual-2.xml" parse="text"/></input>
+	<code><xi:include href="code/network-manual-2.xml" parse="text"/></code>
       </program>
       <caption>A second source for <xref ref="diagram-network-manual"/>.
       </caption>
@@ -304,7 +304,7 @@
 
     <listing xml:id="listing-network-tree">
       <program line-numbers="no">
-	<input><xi:include href="code/network-tree.xml" parse="text"/></input>
+	<code><xi:include href="code/network-tree.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref ref="diagram-network-tree"/>.
       </caption>
@@ -358,7 +358,7 @@
 
     <listing xml:id="listing-network-spanning">
       <program line-numbers="no">
-	<input><xi:include href="code/network-spanning-1.xml" parse="text"/></input>
+	<code><xi:include href="code/network-spanning-1.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the left of
       <xref ref="diagram-network-spanning"/>.
@@ -378,7 +378,7 @@
 
     <listing xml:id="listing-network-spanning-2">
       <program line-numbers="no">
-	<input><xi:include href="code/network-spanning-2.xml" parse="text"/></input>
+	<code><xi:include href="code/network-spanning-2.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for the right of
       <xref ref="diagram-network-spanning"/>.

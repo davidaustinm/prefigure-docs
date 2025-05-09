@@ -32,8 +32,8 @@
 
     <listing>
       <program>
-	<input><xi:include href="code/grid-axes.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/grid-axes.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-grid-axes"/>.</caption> 
@@ -64,8 +64,8 @@
 
     <listing>
       <program>
-	<input><xi:include href="code/pi-format.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/pi-format.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-pi-format"/>.</caption> 
@@ -98,8 +98,8 @@
 
     <listing>
       <program>
-	<input><xi:include href="code/axes-framed.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/axes-framed.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-axes-framed"/>.</caption> 
@@ -138,8 +138,8 @@
 
     <listing>
       <program>
-	<input><xi:include href="code/grid.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/grid.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-grid"/>.</caption> 
@@ -248,8 +248,8 @@
 
     <listing>
       <program>
-	<input><xi:include href="code/axes-example.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/axes-example.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-axes-example"/>.</caption> 
@@ -279,8 +279,8 @@
 
     <listing>
       <program>
-	<input><xi:include href="code/axes-x-y-label.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/axes-x-y-label.xml" parse="text"/>
+	</code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-axes-x-y-label"/>.</caption> 

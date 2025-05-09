@@ -35,8 +35,8 @@
 
     <listing xml:id="listing-outline">
       <program>
-	<input><xi:include href="code/outline.xml"
-	parse="text"/></input>
+	<code><xi:include href="code/outline.xml"
+	parse="text"/></code>
       </program>
       <caption>
 	The PreFigure source for <xref ref="diagram-outline"/>.
@@ -107,8 +107,8 @@
 
     <listing xml:id="listing-outline-group">
       <program>
-	<input><xi:include href="code/outline-group.xml"
-	parse="text"/></input>
+	<code><xi:include href="code/outline-group.xml"
+	parse="text"/></code>
       </program>
       <caption>
 	The PreFigure source for <xref ref="diagram-outline-group"/>.
@@ -124,8 +124,8 @@
     </p>
     <listing xml:id="listing-group-handle">
       <program>
-	<input><xi:include href="code/group-handle.xml" parse="text"/>
-	</input>
+	<code><xi:include href="code/group-handle.xml" parse="text"/>
+	</code>
       </program>
     </listing>
 

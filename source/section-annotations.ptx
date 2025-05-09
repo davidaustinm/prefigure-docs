@@ -103,7 +103,7 @@
 
     <listing xml:id="listing-tangent-3">
       <program line-numbers="no">
-	<input><xi:include href="code/tangent-3.xml" parse="text"/></input>
+	<code><xi:include href="code/tangent-3.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-tangent-3"/>.</caption>
@@ -239,7 +239,7 @@
 
     <listing xml:id="listing-repeat-annotate">
       <program line-numbers="no">
-	<input><xi:include href="code/repeat-annotate.xml" parse="text"/></input>
+	<code><xi:include href="code/repeat-annotate.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-repeat-annotate"/>.</caption>

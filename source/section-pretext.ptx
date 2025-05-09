@@ -34,8 +34,8 @@
   
   <listing xml:id="listing-pretext">
     <program>
-      <input><xi:include href="code/pretext-example.xml" parse="text"/>
-      </input>
+      <code><xi:include href="code/pretext-example.xml" parse="text"/>
+      </code>
     </program>
     <caption> <prefigure/> source inside a <pretext/> document.
     </caption>
@@ -50,8 +50,8 @@
 
   <listing xml:id="listing-docinfo">
     <program>
-      <input><xi:include href="code/pretext-docinfo.xml" parse="text"/>
-      </input>
+      <code><xi:include href="code/pretext-docinfo.xml" parse="text"/>
+      </code>
     </program>
     <caption> Within a <pretext/> document, <prefigure/> publication
     data is included inside <tag>docinfo</tag>.
