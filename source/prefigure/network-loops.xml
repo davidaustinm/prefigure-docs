@@ -14,8 +14,8 @@
       </node>
       <edge vertices="(1,0)">0</edge>
       <edge vertices="(0,1)">0</edge>
-      <edge vertices="(0,0)" loop-scale="(0.6,0.6)">1</edge>
-      <edge vertices="(1,1)" loop-scale="(0.6,0.6)">1</edge>
+      <edge vertices="(0,0)" loop-scale="(0.6,0.5)">1</edge>
+      <edge vertices="(1,1)" loop-scale="(0.6,0.5)">1</edge>
     </network>
   </coordinates>
 </diagram>

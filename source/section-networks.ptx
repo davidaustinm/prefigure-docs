@@ -387,5 +387,49 @@
 
   </subsection>
 
+  <subsection>
+    <title>Annotating networks</title>
+
+    <p>Handles are automatically given to the nodes and edges in a
+    <tag>network</tag> so that the network can be annotated.  For
+    instance,
+    <ul>
+      <li><p>when a node is defined with the label <q>a</q>, its
+      handle becomes <q>node-a</q>.</p></li>
+      <li><p>an edge from node <q>a</q> to node <q>b</q> has the
+      handle <q>edge-a-b</q>.</p></li>
+      <li><p>a loop at node <q>a</q> has the handle
+      <q>loop-a</q>.</p></li>
+      <li><p>if there are multiple edges from node <q>a</q> to node
+      <q>b</q>, they acquire the handles <q>node-a-b-0</q>,
+      <q>node-a-b-1</q>, and so forth.  The same is true for loops.
+      </p></li>
+    </ul>
+    </p>
+
+    <p><xref ref="diagram-network-annotations"/> demonstrates an
+    annotated network.</p>
+    
+    <figure xml:id="diagram-network-annotations">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="network-annotations">
+          <xi:include href="code/network-annotations.xml"/>
+        </prefigure>
+      </image>
+      <caption>An annotated network whose source is given in <xref
+      ref="listing-network-annotations"/>.</caption> 
+    </figure>
+
+    <listing xml:id="listing-network-annotations">
+      <program line-numbers="no">
+	<code><xi:include href="code/network-annotations.xml" parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for 
+      <xref ref="diagram-network-annotations"/>.
+      </caption>
+    </listing>
+  </subsection>
+
 </section>
 
