@@ -100,14 +100,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.6.2';
+eBookConfig.runestone_version = '7.6.3';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.11f2df1b38a61a3f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.1dbf799015a9933a.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
 <script src="_static/pretext/js/diagcess/diagcess.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
@@ -250,6 +250,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-4" class="internal"><span class="codenumber">3.9.2</span> <span class="title">A more verbose network</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-5" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Positioning the nodes</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-6" class="internal"><span class="codenumber">3.9.4</span> <span class="title">Putting everything together</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-7" class="internal"><span class="codenumber">3.9.5</span> <span class="title">Annotating networks</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -423,8 +424,8 @@ eBookConfig.enable_chatcodes =  false;
       &lt;/node&gt;
       &lt;edge vertices="(1,0)"&gt;0&lt;/edge&gt;
       &lt;edge vertices="(0,1)"&gt;0&lt;/edge&gt;
-      &lt;edge vertices="(0,0)" loop-scale="(0.6,0.6)"&gt;1&lt;/edge&gt;
-      &lt;edge vertices="(1,1)" loop-scale="(0.6,0.6)"&gt;1&lt;/edge&gt;
+      &lt;edge vertices="(0,0)" loop-scale="(0.6,0.5)"&gt;1&lt;/edge&gt;
+      &lt;edge vertices="(1,1)" loop-scale="(0.6,0.5)"&gt;1&lt;/edge&gt;
     &lt;/network&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
@@ -531,7 +532,164 @@ eBookConfig.enable_chatcodes =  false;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.9.15<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the right of <a href="sec-networks.html#diagram-network-spanning" class="xref" data-knowl="./knowl/xref/diagram-network-spanning.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.13">Figure 3.9.13</a>.</figcaption></figure></section></section></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.9.15<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the right of <a href="sec-networks.html#diagram-network-spanning" class="xref" data-knowl="./knowl/xref/diagram-network-spanning.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.13">Figure 3.9.13</a>.</figcaption></figure></section><section class="subsection" id="sec-networks-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.9.5</span><span class="space"> </span><span class="title">Annotating networks</span>
+</h3>
+<div class="para logical" id="sec-networks-7-2">
+<div class="para">Handles are automatically given to the nodes and edges in a <code class="code-inline tex2jax_ignore">&lt;network&gt;</code> so that the network can be annotated.  For instance,</div>
+<ul class="disc" id="sec-networks-7-2-2">
+<li id="sec-networks-7-2-2-1"><div class="para" id="sec-networks-7-2-2-1-1">when a node is defined with the label “a”, its handle becomes “node-a”.</div></li>
+<li id="sec-networks-7-2-2-2"><div class="para" id="sec-networks-7-2-2-2-1">an edge from node “a” to node “b” has the handle “edge-a-b”.</div></li>
+<li id="sec-networks-7-2-2-3"><div class="para" id="sec-networks-7-2-2-3-1">a loop at node “a” has the handle “loop-a”.</div></li>
+<li id="sec-networks-7-2-2-4"><div class="para" id="sec-networks-7-2-2-4-1">if there are multiple edges from node “a” to node “b”, they acquire the handles “node-a-b-0”, “node-a-b-1”, and so forth.  The same is true for loops.</div></li>
+</ul>
+</div>
+<div class="para" id="sec-networks-7-3">
+<a href="sec-networks.html#diagram-network-annotations" class="xref" data-knowl="./knowl/xref/diagram-network-annotations.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.16">Figure 3.9.16</a> demonstrates an annotated network.</div>
+<figure class="figure figure-like" id="diagram-network-annotations"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/network-annotations.svg" data-cml="generated/prefigure/network-annotations-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.9.16<span class="period">.</span></span><span class="space"> </span>An annotated network whose source is given in <a href="sec-networks.html#listing-network-annotations" class="xref" data-knowl="./knowl/xref/listing-network-annotations.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.17">Listing 3.9.17</a>.</figcaption></figure><figure class="listing figure-like" id="listing-network-annotations"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org"&gt; 
+  &lt;definition&gt;graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}&lt;/definition&gt;
+  &lt;network directed="yes" graph="graph" scale="0.7"
+	   node-fill="#fcf" node-stroke="black"
+           node-style="circle" node-size="15"
+           arrows="end" seed="1" labels="yes"
+	   tactile-node-size="45"&gt;
+    &lt;edge vertices="(1,2)"&gt;4&lt;/edge&gt;
+    &lt;edge vertices="(2,2)" label-location="0.3"
+          loop-scale="(0.8,0.8)"&gt;
+      &lt;m&gt;\alpha&lt;/m&gt;
+    &lt;/edge&gt;
+    &lt;node at="2" style="double-circle"/&gt;
+  &lt;/network&gt;
+  
+  &lt;annotations&gt;
+    &lt;annotation ref="figure" text="A directed network with nodes and edges"&gt;
+      &lt;annotation ref="node-1" text="The node 1"&gt;
+        &lt;annotation ref="edge-1-3" text="An edge from node 1 to node 3"/&gt;
+        &lt;annotation ref="edge-1-4" text="An edge from node 1 to node 4"/&gt;
+        &lt;annotation ref="edge-1-5-0" text="An edge from node 1 to node 5"/&gt;
+        &lt;annotation ref="edge-1-5-1" text="A second edge from node 1 to node 5"/&gt;
+      &lt;/annotation&gt;
+      &lt;annotation ref="node-2" text="The node 2"&gt;
+        &lt;annotation ref="edge-2-4" text="An edge from node 2 to node 4"/&gt;
+        &lt;annotation ref="edge-2-5" text="An edge from node 2 to node 5"/&gt;
+        &lt;annotation ref="loop-2" text="A loop from node 2 to itself"/&gt;
+      &lt;/annotation&gt;
+      &lt;annotation ref="node-3" text="The node 2"&gt;
+        &lt;annotation ref="edge-1-3" text="An incoming edge from node 1"/&gt;
+        &lt;annotation ref="edge-3-4" text="An edge from node 3 to node 4"/&gt;
+        &lt;annotation ref="edge-3-5" text="An edge from node 3 to node 5"/&gt;
+      &lt;/annotation&gt;
+      &lt;annotation ref="node-5" text="The node 5 and four incoming edges"&gt;
+        &lt;annotation ref="edge-1-5-0" text="An incoming edge from node 1"/&gt;
+        &lt;annotation ref="edge-1-5-1" text="A second incoming edge from node 1"/&gt;
+        &lt;annotation ref="edge-2-5" text="An incoming edge from node 2"/&gt;
+        &lt;annotation ref="edge-3-5" text="An incoming edge from node 3"/&gt;
+      &lt;/annotation&gt;
+      &lt;annotation ref="node-6" text="The node 2"&gt;
+        &lt;annotation ref="edge-6-2" text="An edge from node 6 to node 2"/&gt;
+        &lt;annotation ref="edge-6-4" text="An edge from node 6 to node 4"/&gt;
+      &lt;/annotation&gt;
+    &lt;/annotation&gt;
+  &lt;/annotations&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.9.17<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-networks.html#diagram-network-annotations" class="xref" data-knowl="./knowl/xref/diagram-network-annotations.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.16">Figure 3.9.16</a>.</figcaption></figure></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-diffeqs.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-paths.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
