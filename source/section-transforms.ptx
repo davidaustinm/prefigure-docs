@@ -8,128 +8,301 @@
   translates between the mathematical coordinates used to describe
   graphical components and the underlying SVG coordinate system.  In
   some situations, it can be convenient to temporarily modify this
-  coordinate transformation.  This is accomplished
-  using the <tag>transform</tag> element.</p>
+  coordinate transformation.  This section outlines two ways in which
+  this may be accomplished.</p>
 
-  <p><xref ref="diagram-transform-1"/> illustrates the use of the
-  <tag>transform</tag> and related elements.</p>
+  <subsection xml:id="subsec-transforms">
+    <title>The <tag>transform</tag> element</title>
 
-  <figure xml:id="diagram-transform-1">
-    <caption>Changing the coordinate transformation with a
-    <tag>transform</tag> and a <tag>translate</tag> element.
-    </caption>
-    <image width="60%" source="images/transform-1"/>
-  </figure>
+    <p>The first is accomplished
+    using the <tag>transform</tag> element, which is demonstrated in 
+    <xref ref="diagram-transform-1"/>.</p>
 
-  <listing xml:id="listing-transform-1">
-    <program line-numbers="yes">
-      <code><xi:include href="code/transform-1.xml" parse="text"/></code>
-    </program>
-    <caption>The <prefigure/> source for <xref
-    ref="diagram-transform-1"/>.</caption>
-  </listing>
-
-  <p>In line 4, we first fill a blue rectangle whose lower-left corner
-  is at the point <m>(2,2)</m>.  Notice that Lines 6-10 are within a
-  <tag>transform</tag> element.  The following line, Line 7, uses a
-  <tag>translate</tag> element to move the origin of the coordinate
-  system to the former point <m>(2,4)</m>.  We then fill a green
-  rectangle having the same lower-left corner <m>(2,2)</m>.  Because
-  we have translated the coordinate system, the green rectangle has
-  been translated by <m>(2,4)</m>.  When we are outside of the
-  <tag>transform</tag> element, then the original coordinate
-  transformation is applied.  Therefore, the circle defined in Line 11
-  is drawn in the original coordinate system.</p>
-
-  <p>The following elements will produce changes in the coordinate
-  system.
-  <dl>
-    <li><title><tag>translate</tag></title>
-    <p>This produces a translation by the value of the
-    <attr>by</attr> attribute.</p></li>
-    <li><title><tag>rotate</tag></title>
-    <p>This produces a rotation about the origin by an angle given by
-    the <attr>by</attr> attribute.  By default, the angle is
-    interpreted to be in degrees, but this can be changed by setting
-    <attr>degrees="no"</attr>.  To
-    rotate about a point other than the origin, such as <m>(-1,2)</m>,
-    use <attr>about="(-1,2)"</attr>.</p></li>
-    <li><title><tag>scale</tag></title>
-    <p>This scales the axes by the value of the <attr>by</attr>
-    attribute.  For instance, <attr>scale="(1,2)"</attr> produces a
-    vertical stretch by a factor of 2.</p></li>
-  </dl>
-  </p>
-
-  <p>In <xref ref="diagram-transform-2"/>, the same rectangle is drawn
-  three times in three different coordinate systems.  Notice that
-  multiple uses of the <tag>transform</tag> element are shown.
-  </p>
+    <figure xml:id="diagram-transform-1">
+      <caption>Changing the coordinate transformation with a
+      <tag>transform</tag> and a <tag>translate</tag> element.
+      </caption>
+      <image width="60%" source="images/transform-1"/>
+    </figure>
     
-  <figure xml:id="diagram-transform-2">
-    <caption>Using <tag>translate</tag>, <tag>rotate</tag>, and
-    <tag>scale</tag>. </caption>
-    <image width="60%" source="images/transform-2"/>
-  </figure>
+    <listing xml:id="listing-transform-1">
+      <program line-numbers="yes">
+        <code><xi:include href="code/transform-1.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-transform-1"/>.</caption>
+    </listing>
 
-  <listing xml:id="listing-transform-2">
-    <program line-numbers="no">
-      <code><xi:include href="code/transform-2.xml" parse="text"/></code>
-    </program>
-    <caption>The <prefigure/> source for <xref
-    ref="diagram-transform-2"/>.</caption>
-  </listing>
+    <p>In line 4, we first fill a blue rectangle whose lower-left corner
+    is at the point <m>(2,2)</m>.  Notice that Lines 6-10 are within a
+    <tag>transform</tag> element.  The following line, Line 7, uses a
+    <tag>translate</tag> element to move the origin of the coordinate
+    system to the former point <m>(2,4)</m>.  We then fill a green
+    rectangle having the same lower-left corner <m>(2,2)</m>.  Because
+    we have translated the coordinate system, the green rectangle has
+    been translated by <m>(2,4)</m>.  When we are outside of the
+    <tag>transform</tag> element, then the original coordinate
+    transformation is applied.  Therefore, the circle defined in Line 11
+    is drawn in the original coordinate system.</p>
+    
+    <p>The following elements will produce changes in the coordinate
+    system.
+    <dl>
+      <li><title><tag>translate</tag></title>
+      <p>This produces a translation by the value of the
+      <attr>by</attr> attribute.</p></li>
+      <li><title><tag>rotate</tag></title>
+      <p>This produces a rotation about the origin by an angle given by
+      the <attr>by</attr> attribute.  By default, the angle is
+      interpreted to be in degrees, but this can be changed by setting
+      <attr>degrees="no"</attr>.  To
+      rotate about a point other than the origin, such as <m>(-1,2)</m>,
+      use <attr>about="(-1,2)"</attr>.</p></li>
+      <li><title><tag>scale</tag></title>
+      <p>This scales the axes by the value of the <attr>by</attr>
+      attribute.  For instance, <attr>scale="(1,2)"</attr> produces a
+      vertical stretch by a factor of 2.</p></li>
+    </dl>
+    </p>
+    
+    <p>In <xref ref="diagram-transform-2"/>, the same rectangle is drawn
+    three times in three different coordinate systems.  Notice that
+    multiple uses of the <tag>transform</tag> element are shown.
+    </p>
+    
+    <figure xml:id="diagram-transform-2">
+      <caption>Using <tag>translate</tag>, <tag>rotate</tag>, and
+      <tag>scale</tag>. </caption>
+      <image width="60%" source="images/transform-2"/>
+    </figure>
+    
+    <listing xml:id="listing-transform-2">
+      <program line-numbers="no">
+        <code><xi:include href="code/transform-2.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-transform-2"/>.</caption>
+    </listing>
+    
+    <p>The following two diagrams illustrate how the use of coordinate
+    changes can be useful.  First is a proof of the Pythagorean theorem
+    in <xref ref="diagram-pythagoras"/>.</p>
 
-  <p>The following two diagrams illustrate how the use of coordinate
-  changes can be useful.  First is a proof of the Pythagorean theorem
-  in <xref ref="diagram-pythagoras"/>.</p>
+    <figure xml:id="diagram-pythagoras">
+      <caption>This illustration of the Pythagorean is made easier by
+      the use of a <tag>rotate</tag> element.</caption>
+      <image width="50%" source="images/pythagoras"/>
+    </figure>
+    
+    <listing xml:id="listing-pythagoras">
+      <program line-numbers="no">
+        <code><xi:include href="code/pythagoras.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-pythagoras"/>.</caption>
+    </listing>
+    
+    <p>It sometimes happens that we want to create many copies of the
+    same graphical component with different coordinate transformations
+    applied.  Using transform elements inside a <tag>repeat</tag> element
+    can be a simple way to do that.  Consider <xref
+    ref="diagram-fibonacci-tiling"/>, which illustrates three Fibonacci
+    tilings, with each tiling obtained by a process called deflation,
+    from the one above.  Here are two important facts:
+    <ul>
+      <li><p>Within each tiling, there are two types a tiling, a long
+      tile and a short tile, and the ratio of their lengths is the
+      golden ratio <m>\phi</m>.</p></li>
+      <li><p>The lengths of the tiles in one tiling are scaled by
+      <m>\phi</m> compared to the tiles in the tiling below.</p></li>
+    </ul>
+    </p>
+    
+    <figure xml:id="diagram-fibonacci-tiling">
+      <caption>A sequence of three Fibonacci tilings in the inflation
+      hierarchy.</caption>
+      <image width="50%" source="images/fibonacci"/>
+    </figure>
+    
+    <listing xml:id="listing-fibonacci">
+      <program line-numbers="no">
+        <code><xi:include href="code/fibonacci.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-fibonacci-tiling"/>.</caption>
+    </listing>
+  </subsection>
 
-  <figure xml:id="diagram-pythagoras">
-    <caption>This illustration of the Pythagorean is made easier by
-    the use of a <tag>rotate</tag> element.</caption>
-    <image width="50%" source="images/pythagoras"/>
-  </figure>
+  <subsection xml:id="subsec-group-transform">
+    <title>Transforming a <tag>group</tag></title>
 
-  <listing xml:id="listing-pythagoras">
-    <program line-numbers="no">
-      <code><xi:include href="code/pythagoras.xml" parse="text"/></code>
-    </program>
-    <caption>The <prefigure/> source for <xref
-    ref="diagram-pythagoras"/>.</caption>
-  </listing>
+    <p>A second way in which the coordinate system can be modified is
+    by adding a <attr>transform</attr> element to a group.  While the
+    effect is somewhat similar to the <tag>transform</tag> element,
+    there is an important difference.</p>
 
-  <p>It sometimes happens that we want to create many copies of the
-  same graphical component with different coordinate transformations
-  applied.  Using transform elements inside a <tag>repeat</tag> element
-  can be a simple way to do that.  Consider <xref
-  ref="diagram-fibonacci-tiling"/>, which illustrates three Fibonacci
-  tilings, with each tiling obtained by a process called deflation,
-  from the one above.  Here are two important facts:
-  <ul>
-    <li><p>Within each tiling, there are two types a tiling, a long
-    tile and a short tile, and the ratio of their lengths is the
-    golden ratio <m>\phi</m>.</p></li>
-    <li><p>The lengths of the tiles in one tiling are scaled by
-    <m>\phi</m> compared to the tiles in the tiling below.</p></li>
-  </ul>
-  </p>
+    <p>Roughly speaking, a mathematical diagram created by
+    <prefigure/> has two
+    general types of objects: mathematical graphical elements, which are
+    visual representations of an idealized mathematical object such as
+    a rectangle, and purely visual elements, such as labels.
+    <prefigure/> encourages authors to think mostly in terms of the
+    mathematical graphical elements used to express an idea and
+    then automates the behavior of the visual elements.
+    For instance, unless explicitly requested, labels are 
+    drawn with a horizontal baseline, 
+    even if the coordinate system has been rotated.</p>
 
-  <figure xml:id="diagram-fibonacci-tiling">
-    <caption>A sequence of three Fibonacci tilings in the inflation
-    hierarchy.</caption>
-    <image width="50%" source="images/fibonacci"/>
-  </figure>
+    <p>There may be occassions, however, when you may want the
+    coordinate transform to be applied to all the elements in a
+    portion of the diagram.  To do this, we will collect a group of
+    elements inside a <tag>group</tag> and supply the <tag>group</tag>
+    with a <attr>transform</attr> attribute. </p>
 
-  <listing xml:id="listing-fibonacci">
-    <program line-numbers="no">
-      <code><xi:include href="code/fibonacci.xml" parse="text"/></code>
-    </program>
-    <caption>The <prefigure/> source for <xref
-    ref="diagram-fibonacci-tiling"/>.</caption>
-  </listing>
+    <p>To illustrate, <xref ref="diagram-group-transforms-1"/>
+    demonstrates several elements, including a rectangle, points, and
+    labels, collected together in a <tag>group</tag>.</p>
 
+    <figure xml:id="diagram-group-transforms-1">
+      <caption>A collection of elements inside a <tag>group</tag>.</caption>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="group-transforms-1">
+          <xi:include href="code/group_transforms_1.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+    
+    <listing xml:id="listing-group-transforms-1">
+      <program line-numbers="no">
+        <code><xi:include href="code/group_transforms_1.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-group-transforms-1"/>.</caption>
+    </listing>
 
+    <p>We may rotate all of these elements about the center, which is
+    the point <m>(5,5)</m>, by giving the <tag>group</tag> element an
+    attribute <attr>transform="rotate(90,(5,5))"</attr> as illustrated
+    in <xref ref="diagram-group-transforms-2"/>.  Notice that the
+    rectangle, points, and labels have all been rotated together as if
+    they were a single object.  The label on the center point is not
+    rotated since it is not in the <tag>group</tag>.
+    </p>
 
-  
+    <figure xml:id="diagram-group-transforms-2">
+      <caption>A rotation applied to elements in a
+      <tag>group</tag>.</caption> 
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="group-transforms-2">
+          <xi:include href="code/group_transforms_2.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+    
+    <listing xml:id="listing-group-transforms-2">
+      <program line-numbers="no">
+        <code><xi:include href="code/group_transforms_2.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-group-transforms-2"/>.</caption>
+    </listing>
+
+    <p>There are three types of transformations that may be created in
+    this way:
+    <dl>
+      <li><title>Translations</title>
+      <p><attr>transform="translate(a,b)"</attr> will translate all
+      the elements by <m>(a,b)</m>.</p></li>
+      <li><title>Rotations</title>
+      <p>Use <attr>transform="rotate(angle,(a,b))"</attr> to rotate the
+      elements by an <c>angle</c>, expressed in degrees, about the
+      point <m>(a,b)</m>.  Using
+      <attr>transform="rotate(angle)"</attr> rotates about the origin
+      <m>(0,0)</m>. </p></li>
+      <li><title>Reflections</title>
+      <p>To define a reflection, we need to define a line, and there
+      are two ways to do this.  We could give two points on the line
+      so <attr>transform="reflect((1,2),(3,4))"</attr> defines a
+      reflection in the line passing through the points <m>(1,2)</m>
+      and <m>(3,4)</m>.</p>
+      <p>Alternatively, every line can be written in the form
+      <m>Ax+By=C</m> so reflections can also be defined as
+      <attr>transform="reflect(A,B,C)"</attr>.
+      </p>
+      <p>For instance, to reflect in the line <m>x=5</m>, one could
+      use with <attr>transform="reflect((5,0), (5,3))"</attr> or
+      <attr>transform="reflect(1,0,5)"</attr>.  
+      Also, <attr>transform="reflect(1,1,10)"</attr> will reflect in
+      the line
+      <m>x+y=10</m> as illustrated in <xref
+      ref="diagram-group-transforms-3"/>.
+      </p>
+      </li>
+    </dl>
+    </p>
+    
+    <figure xml:id="diagram-group-transforms-3">
+      <caption>A reflection applied to elements in a
+      <tag>group</tag>.</caption> 
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="group-transforms-3">
+          <xi:include href="code/group_transforms_3.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+    
+    <listing xml:id="listing-group-trpansforms-3">
+      <program line-numbers="no">
+        <code><xi:include href="code/group_transforms_3.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-group-transforms-3"/>.</caption>
+    </listing>
+
+    <p>
+      <dl>
+        <li><title>Scaling</title>
+        <p>We can scale about a point <c>center</c> using
+        <attr>transform="scale(sx, sy, center)"</attr> or
+        <attr>transform="scale(x, center)"</attr>.</p></li>
+
+        <li><title>Matrix</title>
+        <p>More generally, we can apply a <m>2\times2</m> matrix about
+        a <c>center></c>. For instance, a horizontal shear can be
+        realized as
+        <attr>transform="matrix([[1,0.5],[0,1]], center)"</attr>, as
+        illustrated in <xref
+        ref="diagram-group-transforms-4"/>.</p>
+        </li>
+      </dl>
+    </p>
+
+    <figure xml:id="diagram-group-transforms-4">
+      <caption>Applying a <c>matrix</c> to a
+      <tag>group</tag>.</caption> 
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="group-transforms-4">
+          <xi:include href="code/group_transforms_4.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+    
+    <listing xml:id="listing-group-trpansforms-4">
+      <program line-numbers="no">
+        <code><xi:include href="code/group_transforms_4.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-group-transforms-4"/>.</caption>
+    </listing>
+
+    <p>These effects do not work in the same way for tactile diagrams
+    since labels will always need to be placed at the appropriate size
+    and orientation.</p>
+
+  </subsection>
 </section>
 
