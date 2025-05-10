@@ -84,6 +84,53 @@
   <tag>macros</tag> includes the <latex/> macro to create the label
   <m>\frac{dy}{dx}</m>. 
   </p>
+
+  <assemblage>
+    <title>Workflow</title>
+
+    <p>
+      When you first create a <prefigure/> diagram, you will most
+      likely build it several times to get some details
+      straightened out.  If the diagram sits inside a lengthy
+      <pretext/> document, it would be inconvenient to recompile the
+      entire document just to see the effect of some changes on a single
+      diagram.  For this reason, you may wish to use <prefigure/> as a
+      standalone application to go through several build cycles
+      before including it in the <pretext/> source.  Here are some
+      suggestions for easing this process.
+    </p>
+
+    <p>Within your <pretext/> source, create a <c>prefigure</c>
+    directory that will contain a separate file for each of your
+    <prefigure/> diagrams.  Within the <tag>diagram</tag> tag in each
+    source file, include
+    the namespace attribute
+    <attr>xmlns="https://prefigure.org"</attr>.  You may build
+    <prefigure/> output directly from the source until you are mostly
+    satisfied with the result.
+    </p>
+
+    <p>To include this into your <pretext/> source, you will need to
+    do a couple of things.
+    <ul>
+      <li><p>First, make sure the root XML element in
+      the file that will include the diagram has the attribute
+      <attr>xmlns:xi="http://www.w3.org/2001/XInclude"</attr>.</p></li>
+
+      <li><p>Within
+      an <tag>image</tag> element, include a child <tag>prefigure</tag>
+      element with 
+      the namespace <attr>xmlns</attr> and 
+      <attr>label</attr> attributes, as described above.</p></li>
+
+      <li><p>Finally, 
+      within the <prefigure/> element, include a child to include your
+      <prefigure/> source, such as
+      <tag>xi:include href="prefigure/my_diagram.xml"</tag>.
+      </p></li>
+    </ul>
+    </p>
+  </assemblage>
   
 </section>
 
