@@ -282,7 +282,13 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Arrows</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-transforms.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Transforms</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-transforms.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Transforms</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transforms.html#subsec-transforms" class="internal"><span class="codenumber">5.3.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transforms.html#subsec-group-transform" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Transforming a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code></span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
@@ -319,9 +325,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-transforms"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">5.3</span><span class="space"> </span><span class="title">Transforms</span>
 </h2>
-<div class="para" id="sec-transforms-2">The <code class="code-inline tex2jax_ignore">&lt;coordinates&gt;</code> element, as described in <a href="sec-coordinates.html" class="internal" title="Section 2.2: The &lt;coordinates&gt; element">Section 2.2</a>, sets up a coordinate transformation that translates between the mathematical coordinates used to describe graphical components and the underlying SVG coordinate system.  In some situations, it can be convenient to temporarily modify this coordinate transformation.  This is accomplished using the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element.</div>
-<div class="para" id="sec-transforms-3">
-<a href="sec-transforms.html#diagram-transform-1" class="xref" data-knowl="./knowl/xref/diagram-transform-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.1">Figure 5.3.1</a> illustrates the use of the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> and related elements.</div>
+<div class="para" id="sec-transforms-2">The <code class="code-inline tex2jax_ignore">&lt;coordinates&gt;</code> element, as described in <a href="sec-coordinates.html" class="internal" title="Section 2.2: The &lt;coordinates&gt; element">Section 2.2</a>, sets up a coordinate transformation that translates between the mathematical coordinates used to describe graphical components and the underlying SVG coordinate system.  In some situations, it can be convenient to temporarily modify this coordinate transformation.  This section outlines two ways in which this may be accomplished.</div>
+<section class="subsection" id="subsec-transforms"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="space"> </span><span class="title">The <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element</span>
+</h3>
+<div class="para" id="subsec-transforms-2">The first is accomplished using the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element, which is demonstrated in <a href="sec-transforms.html#diagram-transform-1" class="xref" data-knowl="./knowl/xref/diagram-transform-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.1">Figure 5.3.1</a>.</div>
 <figure class="figure figure-like" id="diagram-transform-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/transform-1.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.1<span class="period">.</span></span><span class="space"> </span>Changing the coordinate transformation with a <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> and a <code class="code-inline tex2jax_ignore">&lt;translate&gt;</code> element.</figcaption></figure><figure class="listing figure-like" id="listing-transform-1"><div class="code-box"><pre class="program line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,10,10)"&gt;
@@ -338,19 +346,19 @@ eBookConfig.enable_chatcodes =  false;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-transform-1" class="xref" data-knowl="./knowl/xref/diagram-transform-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.1">Figure 5.3.1</a>.</figcaption></figure><div class="para" id="sec-transforms-6">In line 4, we first fill a blue rectangle whose lower-left corner is at the point <span class="process-math">\((2,2)\text{.}\)</span>  Notice that Lines 6-10 are within a <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element.  The following line, Line 7, uses a <code class="code-inline tex2jax_ignore">&lt;translate&gt;</code> element to move the origin of the coordinate system to the former point <span class="process-math">\((2,4)\text{.}\)</span>  We then fill a green rectangle having the same lower-left corner <span class="process-math">\((2,2)\text{.}\)</span>  Because we have translated the coordinate system, the green rectangle has been translated by <span class="process-math">\((2,4)\text{.}\)</span>  When we are outside of the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element, then the original coordinate transformation is applied.  Therefore, the circle defined in Line 11 is drawn in the original coordinate system.</div>
-<div class="para logical" id="sec-transforms-7">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-transform-1" class="xref" data-knowl="./knowl/xref/diagram-transform-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.1">Figure 5.3.1</a>.</figcaption></figure><div class="para" id="subsec-transforms-5">In line 4, we first fill a blue rectangle whose lower-left corner is at the point <span class="process-math">\((2,2)\text{.}\)</span>  Notice that Lines 6-10 are within a <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element.  The following line, Line 7, uses a <code class="code-inline tex2jax_ignore">&lt;translate&gt;</code> element to move the origin of the coordinate system to the former point <span class="process-math">\((2,4)\text{.}\)</span>  We then fill a green rectangle having the same lower-left corner <span class="process-math">\((2,2)\text{.}\)</span>  Because we have translated the coordinate system, the green rectangle has been translated by <span class="process-math">\((2,4)\text{.}\)</span>  When we are outside of the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element, then the original coordinate transformation is applied.  Therefore, the circle defined in Line 11 is drawn in the original coordinate system.</div>
+<div class="para logical" id="subsec-transforms-6">
 <div class="para">The following elements will produce changes in the coordinate system.</div>
 <dl class="description-list">
-<dt id="sec-transforms-7-1-1"><code class="code-inline tex2jax_ignore">&lt;translate&gt;</code></dt>
-<dd><div class="para" id="sec-transforms-7-1-1-2">This produces a translation by the value of the <code class="code-inline tex2jax_ignore">@by</code> attribute.</div></dd>
-<dt id="sec-transforms-7-1-2"><code class="code-inline tex2jax_ignore">&lt;rotate&gt;</code></dt>
-<dd><div class="para" id="sec-transforms-7-1-2-2">This produces a rotation about the origin by an angle given by the <code class="code-inline tex2jax_ignore">@by</code> attribute.  By default, the angle is interpreted to be in degrees, but this can be changed by setting <code class="code-inline tex2jax_ignore">@degrees="no"</code>.  To rotate about a point other than the origin, such as <span class="process-math">\((-1,2)\text{,}\)</span> use <code class="code-inline tex2jax_ignore">@about="(-1,2)"</code>.</div></dd>
-<dt id="sec-transforms-7-1-3"><code class="code-inline tex2jax_ignore">&lt;scale&gt;</code></dt>
-<dd><div class="para" id="sec-transforms-7-1-3-2">This scales the axes by the value of the <code class="code-inline tex2jax_ignore">@by</code> attribute.  For instance, <code class="code-inline tex2jax_ignore">@scale="(1,2)"</code> produces a vertical stretch by a factor of 2.</div></dd>
+<dt id="subsec-transforms-6-1-1"><code class="code-inline tex2jax_ignore">&lt;translate&gt;</code></dt>
+<dd><div class="para" id="subsec-transforms-6-1-1-2">This produces a translation by the value of the <code class="code-inline tex2jax_ignore">@by</code> attribute.</div></dd>
+<dt id="subsec-transforms-6-1-2"><code class="code-inline tex2jax_ignore">&lt;rotate&gt;</code></dt>
+<dd><div class="para" id="subsec-transforms-6-1-2-2">This produces a rotation about the origin by an angle given by the <code class="code-inline tex2jax_ignore">@by</code> attribute.  By default, the angle is interpreted to be in degrees, but this can be changed by setting <code class="code-inline tex2jax_ignore">@degrees="no"</code>.  To rotate about a point other than the origin, such as <span class="process-math">\((-1,2)\text{,}\)</span> use <code class="code-inline tex2jax_ignore">@about="(-1,2)"</code>.</div></dd>
+<dt id="subsec-transforms-6-1-3"><code class="code-inline tex2jax_ignore">&lt;scale&gt;</code></dt>
+<dd><div class="para" id="subsec-transforms-6-1-3-2">This scales the axes by the value of the <code class="code-inline tex2jax_ignore">@by</code> attribute.  For instance, <code class="code-inline tex2jax_ignore">@scale="(1,2)"</code> produces a vertical stretch by a factor of 2.</div></dd>
 </dl>
 </div>
-<div class="para" id="sec-transforms-8">In <a href="sec-transforms.html#diagram-transform-2" class="xref" data-knowl="./knowl/xref/diagram-transform-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.3">Figure 5.3.3</a>, the same rectangle is drawn three times in three different coordinate systems.  Notice that multiple uses of the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element are shown.</div>
+<div class="para" id="subsec-transforms-7">In <a href="sec-transforms.html#diagram-transform-2" class="xref" data-knowl="./knowl/xref/diagram-transform-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.3">Figure 5.3.3</a>, the same rectangle is drawn three times in three different coordinate systems.  Notice that multiple uses of the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element are shown.</div>
 <figure class="figure figure-like" id="diagram-transform-2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/transform-2.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span>Using <code class="code-inline tex2jax_ignore">&lt;translate&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;rotate&gt;</code>, and <code class="code-inline tex2jax_ignore">&lt;scale&gt;</code>.</figcaption></figure><figure class="listing figure-like" id="listing-transform-2"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,10,10)"&gt;
@@ -376,7 +384,7 @@ eBookConfig.enable_chatcodes =  false;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-transform-2" class="xref" data-knowl="./knowl/xref/diagram-transform-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.3">Figure 5.3.3</a>.</figcaption></figure><div class="para" id="sec-transforms-11">The following two diagrams illustrate how the use of coordinate changes can be useful.  First is a proof of the Pythagorean theorem in <a href="sec-transforms.html#diagram-pythagoras" class="xref" data-knowl="./knowl/xref/diagram-pythagoras.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.5">Figure 5.3.5</a>.</div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-transform-2" class="xref" data-knowl="./knowl/xref/diagram-transform-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.3">Figure 5.3.3</a>.</figcaption></figure><div class="para" id="subsec-transforms-10">The following two diagrams illustrate how the use of coordinate changes can be useful.  First is a proof of the Pythagorean theorem in <a href="sec-transforms.html#diagram-pythagoras" class="xref" data-knowl="./knowl/xref/diagram-pythagoras.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.5">Figure 5.3.5</a>.</div>
 <figure class="figure figure-like" id="diagram-pythagoras"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/pythagoras.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span>This illustration of the Pythagorean is made easier by the use of a <code class="code-inline tex2jax_ignore">&lt;rotate&gt;</code> element.</figcaption></figure><figure class="listing figure-like" id="listing-pythagoras"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(250,270)" margins="5"&gt;
   &lt;definition&gt;a=3&lt;/definition&gt;
@@ -404,12 +412,12 @@ eBookConfig.enable_chatcodes =  false;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-pythagoras" class="xref" data-knowl="./knowl/xref/diagram-pythagoras.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.5">Figure 5.3.5</a>.</figcaption></figure><div class="para logical" id="sec-transforms-14">
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-pythagoras" class="xref" data-knowl="./knowl/xref/diagram-pythagoras.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.5">Figure 5.3.5</a>.</figcaption></figure><div class="para logical" id="subsec-transforms-13">
 <div class="para">It sometimes happens that we want to create many copies of the same graphical component with different coordinate transformations applied.  Using transform elements inside a <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element can be a simple way to do that.  Consider <a href="sec-transforms.html#diagram-fibonacci-tiling" class="xref" data-knowl="./knowl/xref/diagram-fibonacci-tiling.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.7">Figure 5.3.7</a>, which illustrates three Fibonacci tilings, with each tiling obtained by a process called deflation, from the one above.  Here are two important facts:</div>
-<ul class="disc" id="sec-transforms-14-3">
-<li id="sec-transforms-14-3-1"><div class="para" id="sec-transforms-14-3-1-1">Within each tiling, there are two types a tiling, a long tile and a short tile, and the ratio of their lengths is the golden ratio <span class="process-math">\(\phi\text{.}\)</span>
+<ul class="disc" id="subsec-transforms-13-3">
+<li id="subsec-transforms-13-3-1"><div class="para" id="subsec-transforms-13-3-1-1">Within each tiling, there are two types a tiling, a long tile and a short tile, and the ratio of their lengths is the golden ratio <span class="process-math">\(\phi\text{.}\)</span>
 </div></li>
-<li id="sec-transforms-14-3-2"><div class="para" id="sec-transforms-14-3-2-1">The lengths of the tiles in one tiling are scaled by <span class="process-math">\(\phi\)</span> compared to the tiles in the tiling below.</div></li>
+<li id="subsec-transforms-13-3-2"><div class="para" id="subsec-transforms-13-3-2-1">The lengths of the tiles in one tiling are scaled by <span class="process-math">\(\phi\)</span> compared to the tiles in the tiling below.</div></li>
 </ul>
 </div>
 <figure class="figure figure-like" id="diagram-fibonacci-tiling"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/fibonacci.svg" role="img" class="contained"></div>
@@ -441,7 +449,108 @@ eBookConfig.enable_chatcodes =  false;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-fibonacci-tiling" class="xref" data-knowl="./knowl/xref/diagram-fibonacci-tiling.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.7">Figure 5.3.7</a>.</figcaption></figure></section></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-fibonacci-tiling" class="xref" data-knowl="./knowl/xref/diagram-fibonacci-tiling.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.7">Figure 5.3.7</a>.</figcaption></figure></section><section class="subsection" id="subsec-group-transform"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="space"> </span><span class="title">Transforming a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code></span>
+</h3>
+<div class="para" id="subsec-group-transform-2">A second way in which the coordinate system can be modified is by adding a <code class="code-inline tex2jax_ignore">@transform</code> element to a group.  While the effect is somewhat similar to the <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element, there is an important difference.</div>
+<div class="para" id="subsec-group-transform-3">Roughly speaking, a mathematical diagram created by PreFigure has two general types of objects: mathematical graphical elements, which are visual representations of an idealized mathematical object such as a rectangle, and purely visual elements, such as labels. PreFigure encourages authors to think mostly in terms of the mathematical graphical elements used to express an idea and then automates the behavior of the visual elements. For instance, unless explicitly requested, labels are drawn with a horizontal baseline, even if the coordinate system has been rotated.</div>
+<div class="para" id="subsec-group-transform-4">There may be occassions, however, when you may want the coordinate transform to be applied to all the elements in a portion of the diagram.  To do this, we will collect a group of elements inside a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> and supply the <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> with a <code class="code-inline tex2jax_ignore">@transform</code> attribute.</div>
+<div class="para" id="subsec-group-transform-5">To illustrate, <a href="sec-transforms.html#diagram-group-transforms-1" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.9">Figure 5.3.9</a> demonstrates several elements, including a rectangle, points, and labels, collected together in a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>.</div>
+<figure class="figure figure-like" id="diagram-group-transforms-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/group-transforms-1.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.9<span class="period">.</span></span><span class="space"> </span>A collection of elements inside a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>.</figcaption></figure><figure class="listing figure-like" id="listing-group-transforms-1"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org"&gt;
+  &lt;coordinates bbox="(0,0,10,10)"&gt;
+    &lt;grid/&gt;
+    &lt;group&gt;
+      &lt;rectangle center="(5,5)" dimensions="(6,8)" thickness="2"
+                 stroke="black" fill="none"/&gt;
+      &lt;point p="(2,1)" alignment="ne" fill="red"&gt;&lt;m&gt;A&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,1)" alignment="nw" fill="blue"&gt;&lt;m&gt;B&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,9)" alignment="sw" fill="green"&gt;&lt;m&gt;C&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(2,9)" alignment="se" fill="orange"&gt;&lt;m&gt;D&lt;/m&gt;&lt;/point&gt;
+    &lt;/group&gt;
+    &lt;point p="(5,5)" alignment="ne"&gt;Center&lt;/point&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.10<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-group-transforms-1" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.9">Figure 5.3.9</a>.</figcaption></figure><div class="para" id="subsec-group-transform-8">We may rotate all of these elements about the center, which is the point <span class="process-math">\((5,5)\text{,}\)</span> by giving the <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> element an attribute <code class="code-inline tex2jax_ignore">@transform="rotate(90,(5,5))"</code> as illustrated in <a href="sec-transforms.html#diagram-group-transforms-2" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.11">Figure 5.3.11</a>.  Notice that the rectangle, points, and labels have all been rotated together as if they were a single object.  The label on the center point is not rotated since it is not in the <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>.</div>
+<figure class="figure figure-like" id="diagram-group-transforms-2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/group-transforms-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.11<span class="period">.</span></span><span class="space"> </span>A rotation applied to elements in a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>.</figcaption></figure><figure class="listing figure-like" id="listing-group-transforms-2"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org"&gt;
+  &lt;coordinates bbox="(0,0,10,10)"&gt;
+    &lt;grid/&gt;
+    &lt;group transform="rotate(90,(5,5))"&gt;
+      &lt;rectangle center="(5,5)" dimensions="(6,8)" thickness="2"
+                 stroke="black" fill="none"/&gt;
+      &lt;point p="(2,1)" alignment="ne" fill="red"&gt;&lt;m&gt;A&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,1)" alignment="nw" fill="blue"&gt;&lt;m&gt;B&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,9)" alignment="sw" fill="green"&gt;&lt;m&gt;C&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(2,9)" alignment="se" fill="orange"&gt;&lt;m&gt;D&lt;/m&gt;&lt;/point&gt;
+    &lt;/group&gt;
+    &lt;point p="(5,5)" alignment="ne"&gt;Center&lt;/point&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.12<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-group-transforms-2" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.11">Figure 5.3.11</a>.</figcaption></figure><div class="para logical" id="subsec-group-transform-11">
+<div class="para">There are three types of transformations that may be created in this way:</div>
+<dl class="description-list">
+<dt id="subsec-group-transform-11-1-1">Translations</dt>
+<dd><div class="para" id="subsec-group-transform-11-1-1-2">
+<code class="code-inline tex2jax_ignore">@transform="translate(a,b)"</code> will translate all the elements by <span class="process-math">\((a,b)\text{.}\)</span>
+</div></dd>
+<dt id="subsec-group-transform-11-1-2">Rotations</dt>
+<dd><div class="para" id="subsec-group-transform-11-1-2-2">Use <code class="code-inline tex2jax_ignore">@transform="rotate(angle,(a,b))"</code> to rotate the elements by an <code class="code-inline tex2jax_ignore">angle</code>, expressed in degrees, about the point <span class="process-math">\((a,b)\text{.}\)</span>  Using <code class="code-inline tex2jax_ignore">@transform="rotate(angle)"</code> rotates about the origin <span class="process-math">\((0,0)\text{.}\)</span>
+</div></dd>
+<dt id="subsec-group-transform-11-1-3">Reflections</dt>
+<dd>
+<div class="para" id="subsec-group-transform-11-1-3-2">To define a reflection, we need to define a line, and there are two ways to do this.  We could give two points on the line so <code class="code-inline tex2jax_ignore">@transform="reflect((1,2),(3,4))"</code> defines a reflection in the line passing through the points <span class="process-math">\((1,2)\)</span> and <span class="process-math">\((3,4)\text{.}\)</span>
+</div>
+<div class="para" id="subsec-group-transform-11-1-3-3">Alternatively, every line can be written in the form <span class="process-math">\(Ax+By=C\)</span> so reflections can also be defined as <code class="code-inline tex2jax_ignore">@transform="reflect(A,B,C)"</code>.</div>
+<div class="para" id="subsec-group-transform-11-1-3-4">For instance, to reflect in the line <span class="process-math">\(x=5\text{,}\)</span> one could use with <code class="code-inline tex2jax_ignore">@transform="reflect((5,0), (5,3))"</code> or <code class="code-inline tex2jax_ignore">@transform="reflect(1,0,5)"</code>. Also, <code class="code-inline tex2jax_ignore">@transform="reflect(1,1,10)"</code> will reflect in the line <span class="process-math">\(x+y=10\)</span> as illustrated in <a href="sec-transforms.html#diagram-group-transforms-3" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.13">Figure 5.3.13</a>.</div>
+</dd>
+</dl>
+</div>
+<figure class="figure figure-like" id="diagram-group-transforms-3"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/group-transforms-3.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.13<span class="period">.</span></span><span class="space"> </span>A reflection applied to elements in a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>.</figcaption></figure><figure class="listing figure-like" id="listing-group-trpansforms-3"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org"&gt;
+  &lt;coordinates bbox="(0,0,10,10)"&gt;
+    &lt;grid/&gt;
+    &lt;group transform="reflect(1,1,10)"&gt;
+      &lt;rectangle center="(5,5)" dimensions="(6,8)" thickness="2"
+                 stroke="black" fill="none"/&gt;
+      &lt;point p="(2,1)" alignment="ne" fill="red"&gt;&lt;m&gt;A&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,1)" alignment="nw" fill="blue"&gt;&lt;m&gt;B&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,9)" alignment="sw" fill="green"&gt;&lt;m&gt;C&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(2,9)" alignment="se" fill="orange"&gt;&lt;m&gt;D&lt;/m&gt;&lt;/point&gt;
+    &lt;/group&gt;
+    &lt;point p="(5,5)" alignment="ne"&gt;Center&lt;/point&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.14<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-group-transforms-3" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.13">Figure 5.3.13</a>.</figcaption></figure><div class="para logical" id="subsec-group-transform-14"><dl class="description-list">
+<dt id="subsec-group-transform-14-1-1">Scaling</dt>
+<dd><div class="para" id="subsec-group-transform-14-1-1-2">We can scale about a point <code class="code-inline tex2jax_ignore">center</code> using <code class="code-inline tex2jax_ignore">@transform="scale(sx, sy, center)"</code> or <code class="code-inline tex2jax_ignore">@transform="scale(x, center)"</code>.</div></dd>
+<dt id="subsec-group-transform-14-1-2">Matrix</dt>
+<dd><div class="para" id="subsec-group-transform-14-1-2-2">More generally, we can apply a <span class="process-math">\(2\times2\)</span> matrix about a <code class="code-inline tex2jax_ignore">center&gt;</code>. For instance, a horizontal shear can be realized as <code class="code-inline tex2jax_ignore">@transform="matrix([[1,0.5],[0,1]], center)"</code>, as illustrated in <a href="sec-transforms.html#diagram-group-transforms-4" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.15">Figure 5.3.15</a>.</div></dd>
+</dl></div>
+<figure class="figure figure-like" id="diagram-group-transforms-4"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/group-transforms-4.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.15<span class="period">.</span></span><span class="space"> </span>Applying a <code class="code-inline tex2jax_ignore">matrix</code> to a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>.</figcaption></figure><figure class="listing figure-like" id="listing-group-trpansforms-4"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org"&gt;
+  &lt;coordinates bbox="(0,0,10,10)"&gt;
+    &lt;grid/&gt;
+    &lt;group transform="matrix([[1,0.5],[0,1]], (5,5))"&gt;
+      &lt;rectangle center="(5,5)" dimensions="(6,8)" thickness="2"
+                 stroke="black" fill="none"/&gt;
+      &lt;point p="(2,1)" alignment="ne" fill="red"&gt;&lt;m&gt;A&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,1)" alignment="nw" fill="blue"&gt;&lt;m&gt;B&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(8,9)" alignment="sw" fill="green"&gt;&lt;m&gt;C&lt;/m&gt;&lt;/point&gt;
+      &lt;point p="(2,9)" alignment="se" fill="orange"&gt;&lt;m&gt;D&lt;/m&gt;&lt;/point&gt;
+    &lt;/group&gt;
+    &lt;point p="(5,5)" alignment="ne"&gt;Center&lt;/point&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.3.16<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-transforms.html#diagram-group-transforms-4" class="xref" data-knowl="./knowl/xref/diagram-group-transforms-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.15">Figure 5.3.15</a>.</figcaption></figure></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-arrows.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-math.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
