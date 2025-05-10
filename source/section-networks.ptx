@@ -283,16 +283,11 @@
     more options.
     </p>
 
-    <p>By default, PreFigure will use the <c>spring</c> layout defined
-    by <c>networkx</c>.  Two other options are <c>bfs</c>, a shorthand
-    for breadth-first, and <c>spectral</c>.  Interested authors are
-    encouraged to consult the <c>networkx</c> documentation for more
-    information.  </p>
-
     <p>We can prescribe a different layout method using the
-    <attr>layout</attr> of the <tag>network</tag> element.  The
-    diagram in <xref ref="diagram-network-tree"/> illustrates how the
-    <attr>layout="bfs"</attr> can be used to illustrate a binary tree.
+    <attr>layout</attr> attribute of the <tag>network</tag> element.
+    The diagram in <xref ref="diagram-network-tree"/> illustrates how
+    the <attr>layout="bfs"</attr> can be used to illustrate a binary
+    tree.
     </p>
 
     <figure xml:id="diagram-network-tree">
@@ -327,6 +322,60 @@
     the appearance of a particular edge that has already been added
     to the graph structure.  If the edge has not been added
     previously, then it will be added to the structure of the graph.
+    </p>
+
+    <p>Here are the possible values of the <attr>layout</attr> attribute.
+    <dl>
+      <li><title>spring</title>
+      <p>This is the default if <attr>layout</attr> is not
+      specifically defined.  This algorithm begins by randomly
+      positioning the nodes, and an optional <attr>seed</attr>
+      attribute declares the seed for the algorithm.</p>
+      </li>
+
+      <li><title>bfs</title>
+      <p>This is the breadth-first search algorithm demonstrated
+      above.  The root of the tree needs to be declared with the
+      <attr>start</attr> attribute.</p>
+      </li>
+
+      <li><title>circular</title>
+      <p>The nodes are equally spaced around a circle.</p>
+      </li>
+
+      <li><title>random</title>
+      <p>Nodes are randomly positioned using the value of the
+      <attr>seed</attr> attribute, which is 1 by default.</p>
+      </li>
+
+      <li><title>bipartite</title>
+      <p>Used for bipartite graphs.  The <attr>bipartite-set</attr>
+      attribute, whose value is a list of handles describing the nodes
+      in one of the two sets, is required.  The <attr>alignment</attr>
+      attribute can be set to <q>vertical</q> or <q>horizontal</q>,
+      which is the default.</p>
+      </li>
+      
+      <li><title>planar</title>
+      <p>Lays out planar graphs so that edges do not cross.</p>
+      </li>
+      
+      <li><title>spectral</title>
+      <p>See the <c>networkx</c>documentation.</p>
+      </li>
+
+    </dl>
+    </p>
+
+    <p>After the nodes are positioned by <c>networkx</c>, <prefigure/>
+    sets up a coordinate transformation so that the nodes will be
+    positioned in the current bounding box.  Because a
+    <tag>network</tag> may have loops or nodes drawn with a large size,
+    an author may wish to pull the nodes into the center
+    of the bounding box so that, say, a loop does not leave the bounding
+    box.  The <attr>scale</attr> attribute of the <tag>network</tag>,
+    which is 0.8 by default, determines the degree to which nodes are
+    pulled into the center.
     </p>
 
   </subsection>
