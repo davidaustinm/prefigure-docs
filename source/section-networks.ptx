@@ -99,8 +99,22 @@
       </p>
       </li>
 
+      <li><title>loop-scale</title>
+      <p>As described in more detail below, this attribute provides
+      some control over how the shape of loops.
+      </p>
+      </li>
+
+      <li><title>label-dictionary</title>
+      <p>If the value of this attribute is a dictionary <c>{0:'a',
+      1:'b'}</c>, then the node whose handle is <c>0</c> will be given
+      the label <m>a</m>.  Similarly, the node whose handle is
+      <c>1</c> will be given the label <m>b</m>.  This is demonstrated
+      in <xref ref="diagram-network-combination"/>.</p>
+      </li>
+
       <li><title>seed</title>
-      <p>The algorithm that determines the positions of the nodes uses
+      <p>Some algorithms that determine the positions of the nodes uses
       a random seed.  To ensure consistent behavior while you are
       developing a diagram, set the value of the <attr>seed</attr>
       attribute so that the nodes will stay in the same position from
@@ -137,9 +151,12 @@
     </p>
 
     <figure xml:id="diagram-network-combination">
-      <sidebyside width="60%">
-	<image source="images/network-combination"/>
-      </sidebyside>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="network-combination">
+          <xi:include href="code/network-combination.xml"/>
+        </prefigure>
+      </image>
       <caption>Using different features to define the network
       structure.</caption> 
     </figure>
@@ -200,13 +217,16 @@
     <attr>loop-scale</attr> attribute of the <tag>edge</tag> element.
     The value of this attribute is an ordered pair of scaling factors,
     with the first scaling radially and the second tranversally, that
-    are applied to the loop.</p>
+    are applied to the loop.  This attribute may be added to the
+    <tag>network</tag> in which case the value is applied to every
+    loop that does not have a <attr>loop-scale</attr> attribute in its
+    <tag>edge</tag> element.</p>
 
     <p>These last two attributes are demonstrated in <xref
     ref="diagram-network-loops"/>.</p>
 
     <figure xml:id="diagram-network-loops">
-      <image width="60%">
+      <image width="80%">
         <prefigure xmlns="https://prefigure.org"
                    label="network-loops">
           <xi:include href="prefigure/network-loops.xml"/>

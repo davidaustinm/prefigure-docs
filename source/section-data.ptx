@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-data" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Working with data</title>
+
+  <introduction>
+    <p>It is possible to read in an external file and access its
+    content from within a <prefigure/> source file.  This can be used
+    to create, for example, some common statistical diagrams, such as
+    scatter plots and histograms.</p>
+  </introduction>
+
+  <subsection>
+    <title>Reading an external file</title>
+
+    <p>The <tag>read</tag> element is used for reading in an external
+    file.  The name of the file needs to be supplied with the
+    <attr>filename</attr> attribute, and the contents can later be
+    referenced with the <attr>name</attr> attribute.  Here are some
+    additional attributes
+    <dl>
+      <li>
+        <title>type</title>
+        <p>This describes the type of file to be read.  At present,
+        the only possible file type is CSV though additional
+        file types are expected to be added.  The default is therefore
+        <attr>type="csv"</attr>. </p>
+      </li>
+      <li>
+        <title>delimiter</title>
+        <p>For reading a CSV, the value of this attribute defines the
+        file's delimiter.  By default, the delimiter is a single
+        comma.
+        </p>
+      </li>
+      <li>
+        <title>quotechar</title>
+        <p>The value of this attribute tells the CVS reader what
+        character to view as quotation marks, whose enclosed content
+        is read as a single entry. By default, the delimiter is a
+        single quote.
+        </p>
+      </li>
+      <li>
+        <title>string-columns</title>
+        <p>When reading a CSV file, the value of this parameter can be
+        a list of headers in the file whose columns should be
+        interpreted as strings rather than numbers.
+        </p>
+      </li>
+    </dl>
+    </p>
+
+    <assemblage>
+      <p>Note that this feature is not yet implemented in <pretext/>,
+      but it will be soon.
+      </p>
+    </assemblage>
+
+    <p>In the simplest case, <prefigure/> looks for the file in the
+    file structure relative to the current <prefigure/> source.  This
+    can be modified using an <tag>external-root</tag> element in a
+    <prefigure/> publication file.  If this element has the attribute
+    <attr>name="/home/data"</attr>, and the <tag>read</tag> element has
+    <attr>name="input.csv"</attr>, then <prefigure/> will expect the
+    file to be located at <c>/home/data/input.csv</c>.</p>
+
+    <p>Inside a <pretext/> document, the <tag>external-root</tag>
+    element should be included in the <tag>prefigure-preamble</tag>
+    element inside <tag>docinfo</tag>.</p>
+
+    <p><prefigure/> expects CSV files to have some structure.  In
+    particular, the first line of the file will be interpreted as headers
+    for the columns.  If first line is <c>0,1,2</c>, then the headers
+    will be referenced later as <q>0</q>, <q>1</q>, and <q>2</q>.  It
+    is then assumed that each subsequent row has at least as many
+    entries as headers.  If a header appears in the list defined by
+    the <attr>string-columns</attr> attribute, then the entries in
+    that column are interpreted as strings.  Otherwise, they are
+    interpreted as numerical data.</p>
+
+    <p>A well-known dataset contains measurements of 150 irises along
+    with the species they belong to.  The first two lines of the file are
+    <cd>
+      <cline>  sepal length,sepal width,petal length,petal width,species</cline>
+      <cline>  5.1,3.5,1.4,0.2,Iris-setosa</cline>
+    </cd>
+    The element 
+    <tag>read name="data" filename="iris.csv"</tag>
+    will read this file with the results later referenced as
+    <c>data</c>.  For instance, <c>data['sepal length']</c> contains
+    the list of sepal lengths of 150 irises.  <c>data['species']</c>
+    contains a list of the species each flower belongs to.  You may
+    notice that we did not need to specify that the last column
+    consists of strings since this is automatically detected by
+    <prefigure/>. 
+    </p>
+
+    <p>There are two useful operations.
+    <dl>
+      <li><title>filter</title>
+      <p>The <c>filter</c> function can be used to trim a column of
+      the dataset by some criterion.  For instance,
+      <c>filter(df['sepal length', 'species', 'Iris-setosa'])</c>
+      returns a list of the sepal lengths of the flowers whose
+      <c>species</c> attribute is <q>Iris-setosa</q>.</p>
+      </li>
+
+      <li><title>zip_lists</title>
+
+      <p>If we have two lists with the same number of entries, this
+      function returns a list of points whose entries come from the
+      two lists.  For instance, <c>zip_lists(df['sepal length'],
+      df['sepal width'])</c> will be a list of 150 points whose first
+      entry is the sepal length and whose second is the sepal width of
+      each flower.</p>
+      </li>
+    </dl>
+    </p>
+
+    <p>Next we will see some things we can do with data like this.</p>
+
+  </subsection>
+
+  <subsection>
+    <title>Scatter plots</title>
+
+    <p>We can create scatter plots in <prefigure/>.  Of course, we
+    don't need to use data that is loaded from an external source, but
+    that might be the most common use case.  This is demonstrated in
+    <xref ref="diagram-scatter-plot-1"/>.</p>
+
+    <figure xml:id="diagram-scatter-plot-1">
+      <image width="80%">
+        <image source="images/iris_scatter_1"/>
+      </image>
+      <caption> A scatter plot built from the source in 
+      <xref ref="listing-scatter-plot-1"/>.
+      </caption>
+    </figure>
+
+    <listing xml:id="listing-scatter-plot-1">
+      <program>
+        <code><xi:include href="code/iris_scatter_1.xml" parse="text"/>
+        </code>
+      </program>
+      <caption> The <prefigure/> source for <xref
+      ref="diagram-scatter-plot-1"/>. 
+      </caption>
+    </listing>
+
+    <p>Notice that we read the data using a <tag>read</tag> element
+    and then form a set of points using the <c>filter</c> and
+    <c>zip_lists</c> functions.  These points are given to the
+    <tag>scatter</tag> element through the <attr>name</attr>
+    attribute.  Each point will be plotted using a
+    <tag>point</tag> element, which is internally created using
+    attributes supplied by the <tag>scatter</tag> element.  In this
+    example, the <tag>scatter</tag> element simply defined the fill of
+    those points to be <q>blue</q>.
+    </p>
+
+    <p>As a convenience, the <tag>scatter</tag> element offers a more
+    direct way to build scatter plots directly from the data source.
+    This is demonstrated in <xref ref="diagram-scatter-plot-2"/>.</p>
+
+    <figure xml:id="diagram-scatter-plot-2">
+      <image width="80%">
+        <image source="images/iris_scatter"/>
+      </image>
+      <caption> A scatter plot built from the source in 
+      <xref ref="listing-scatter-plot-2"/>.
+      </caption>
+    </figure>
+
+    <listing xml:id="listing-scatter-plot-2">
+      <program>
+        <code><xi:include href="code/iris_scatter.xml" parse="text"/>
+        </code>
+      </program>
+      <caption> The <prefigure/> source for <xref
+      ref="diagram-scatter-plot-2"/>. 
+      </caption>
+    </listing>
+
+    <p>Notice that the <tag>scatter</tag> element has an attribute
+    <attr>data</attr> that points to the dataset read in earlier.  We
+    then state the headers of the columns of the data set that we intend
+    to plot using the <attr>x</attr> and <attr>y</attr> attributes.
+    An optional <attr>filter</attr> attribute can be supplied to
+    filter the data, which is then zipped together internally.
+    </p>
+
+    <p>This example also demonstrates a few more features, some of
+    which we will explore in more detail later.  For now, notice that
+    the <tag>legend</tag> needs the handle of a point.  The handle of
+    the second <tag>scatter</tag> element is <q>versicolor</q> so the
+    handle of the points created by <prefigure/> are
+    <q>versicolor-point</q>;  that is <q>-point</q> is appended to the
+    handle of the <tag>scatter</tag> element.
+    </p>
+
+    <p>Each scatter plot is annotated by setting
+    <attr>annotate="yes"</attr>, specifying the text for the group
+    using <attr>text</attr>, and declaring the text for each point
+    using <attr>point-text</attr>.  More details about annotating a
+    group of objects like this is included in <xref
+    ref="sec-annotations"/>. </p>
+    
+  </subsection>
+  
+  <subsection>
+    <title>Histograms</title>
+
+    <p>The <tag>histogram</tag> element is used to create histograms as
+    demonstrated in
+    <xref ref="diagram-histogram"/>.</p>
+
+    <figure xml:id="diagram-histogram">
+      <image width="80%">
+        <image source="images/iris_histogram"/>
+      </image>
+      <caption> A histogram built from the source in 
+      <xref ref="listing-histogram"/>.
+      </caption>
+    </figure>
+  
+    <listing xml:id="listing-histogram">
+      <program>
+        <code><xi:include href="code/iris_histogram.xml" parse="text"/>
+        </code>
+      </program>
+      <caption> The <prefigure/> source for <xref
+      ref="diagram-histogram"/>. 
+      </caption>
+    </listing>
+
+    <p>Notice that the histogram is defined through a
+    <attr>data</attr> attribute, which is one column of the dataset,
+    along with the attributes <attr>min</attr>, <attr>max</attr>, and
+    <attr>bins</attr>, which is the number of bins.</p>
+
+    <p>Once again, some more advanced annotation features are
+    demonstrated.  There are two lists created internally,
+    <c>__histogram_x</c> and <c>__histogram_y</c>, that describe the
+    upper-left corner of each bar.  There is a parameter
+    <c>bin_num</c> that iterates through each bin and that can be used
+    for annotating.  Another quantity <c>delta_x</c> is also defined
+    as the width of the bins.</p>
+
+    <p>The handle of a bar created by the <tag>histogram</tag> is
+    <q>-bin</q> appended to the handle of the
+    <tag>histogram</tag>.</p>
+    
+  </subsection>
+
+  <subsection>
+    <title>Plotting a trajectory</title>
+
+    <p>There may be times when one generates data in some way and then
+    wants to plot it.  Perhaps you have solved a differential equation
+    using a specialized or novel technique and saved the results in a
+    CSV file.  <xref ref="diagram-gragg"/> illustrates a solution to
+    the three-body problem found using an adaptive method.</p>
+  
+    <figure xml:id="diagram-gragg">
+      <image width="60%">
+        <image source="images/gragg"/>
+      </image>
+      <caption> Plotting the solution to a differential equation
+      solved externally.
+      </caption>
+    </figure>
+  
+    <listing xml:id="listing-gragg">
+      <program>
+        <code><xi:include href="code/gragg.xml" parse="text"/>
+        </code>
+      </program>
+      <caption> The <prefigure/> source for <xref
+      ref="diagram-gragg"/>. 
+      </caption>
+    </listing>
+  </subsection>
+
+</section>
+

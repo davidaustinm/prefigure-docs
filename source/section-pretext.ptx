@@ -14,9 +14,9 @@
   </p>
   
   <figure xml:id="diagram-pretext">
-    <sidebyside width="60%">
+    <image width="60%">
       <image source="images/pretext-example"/>
-    </sidebyside>
+    </image>
     <caption> A <prefigure/> diagram created inside a <pretext/>
     document as shown in <xref ref="listing-pretext"/>.
     </caption>
@@ -131,6 +131,6 @@
     </ul>
     </p>
   </assemblage>
-  
+
 </section>
 
