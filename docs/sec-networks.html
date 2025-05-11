@@ -268,6 +268,15 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-5" class="internal"><span class="codenumber">3.11.3</span> <span class="title">Clipping</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-data.html" class="internal"><span class="codenumber">3.12</span> <span class="title">Working with data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-3" class="internal"><span class="codenumber">3.12.1</span> <span class="title">Reading an external file</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-4" class="internal"><span class="codenumber">3.12.2</span> <span class="title">Scatter plots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-5" class="internal"><span class="codenumber">3.12.3</span> <span class="title">Histograms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-6" class="internal"><span class="codenumber">3.12.4</span> <span class="title">Plotting a trajectory</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -361,8 +370,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec-networks-3-5-2-6-2">The <code class="code-inline tex2jax_ignore">@node-fill</code> attribute defines the color to use when filling the nodes.  This is part of a collection of attributes that control the visual appearance of the network. Each <code class="code-inline tex2jax_ignore">&lt;node&gt;</code> will generate a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> so other attributes include <code class="code-inline tex2jax_ignore">@node-stroke</code>, <code class="code-inline tex2jax_ignore">@node-thickness</code>, <code class="code-inline tex2jax_ignore">@node-size</code>, <code class="code-inline tex2jax_ignore">@node-style</code>.</div>
 <div class="para" id="sec-networks-3-5-2-6-3">Similarly, an edge will generate a <code class="code-inline tex2jax_ignore">&lt;path&gt;</code> so some path attributes can be applied, such as <code class="code-inline tex2jax_ignore">@edge-stroke</code>, <code class="code-inline tex2jax_ignore">@edge-thickness</code>, and <code class="code-inline tex2jax_ignore">@edge-dash</code>.</div>
 </dd>
-<dt id="sec-networks-3-5-2-7">seed</dt>
-<dd><div class="para" id="sec-networks-3-5-2-7-2">The algorithm that determines the positions of the nodes uses a random seed.  To ensure consistent behavior while you are developing a diagram, set the value of the <code class="code-inline tex2jax_ignore">@seed</code> attribute so that the nodes will stay in the same position from one compilation to the next.  If you are not satisfied with the appearance of the network, you could try using a different seed.</div></dd>
+<dt id="sec-networks-3-5-2-7">loop-scale</dt>
+<dd><div class="para" id="sec-networks-3-5-2-7-2">As described in more detail below, this attribute provides some control over how the shape of loops.</div></dd>
+<dt id="sec-networks-3-5-2-8">label-dictionary</dt>
+<dd><div class="para" id="sec-networks-3-5-2-8-2">If the value of this attribute is a dictionary <code class="code-inline tex2jax_ignore">{0:'a',
+      1:'b'}</code>, then the node whose handle is <code class="code-inline tex2jax_ignore">0</code> will be given the label <span class="process-math">\(a\text{.}\)</span>  Similarly, the node whose handle is <code class="code-inline tex2jax_ignore">1</code> will be given the label <span class="process-math">\(b\text{.}\)</span>  This is demonstrated in <a href="sec-networks.html#diagram-network-combination" class="xref" data-knowl="./knowl/xref/diagram-network-combination.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.4">Figure 3.9.4</a>.</div></dd>
+<dt id="sec-networks-3-5-2-9">seed</dt>
+<dd><div class="para" id="sec-networks-3-5-2-9-2">Some algorithms that determine the positions of the nodes uses a random seed.  To ensure consistent behavior while you are developing a diagram, set the value of the <code class="code-inline tex2jax_ignore">@seed</code> attribute so that the nodes will stay in the same position from one compilation to the next.  If you are not satisfied with the appearance of the network, you could try using a different seed.</div></dd>
 </dl>
 </div></section><section class="subsection" id="sec-networks-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.9.2</span><span class="space"> </span><span class="title">A more verbose network</span>
@@ -385,13 +399,15 @@ eBookConfig.enable_chatcodes =  false;
 &lt;/diagram&gt;
 </code></pre></div>
 <figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.9.3<span class="period">.</span></span><span class="space"> </span>Another PreFigure source for <a href="sec-networks.html#diagram-network-intro" class="xref" data-knowl="./knowl/xref/diagram-network-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.1">Figure 3.9.1</a>.</figcaption></figure><div class="para" id="sec-networks-4-4">In fact, we can mix these two approaches to defining the network for more flexibility as demonstrated by the next example.</div>
-<figure class="figure figure-like" id="diagram-network-combination"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/network-combination.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.9.4<span class="period">.</span></span><span class="space"> </span>Using different features to define the network structure.</figcaption></figure><figure class="listing figure-like" id="listing-network-combination"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(250,250)" margins="5"&gt;
+<figure class="figure figure-like" id="diagram-network-combination"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/network-combination.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.9.4<span class="period">.</span></span><span class="space"> </span>Using different features to define the network structure.</figcaption></figure><figure class="listing figure-like" id="listing-network-combination"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(250,250)" margins="5"
+         xmlns="https://prefigure.org"&gt;
   &lt;coordinates bbox="(-1,-1,1,1)"&gt;
     &lt;definition&gt;graph={0:[0,1], 1:[0]}&lt;/definition&gt;
+    &lt;definition&gt;labels={0:'a', 1:'b'}&lt;/definition&gt;
     &lt;network directed="yes" graph="graph" arrows="middle"
              seed="1" node-size="15" scale="0.5" node-fill="white"
-             labels="yes"&gt;
+             labels="yes" label-dictionary="labels"&gt;
       &lt;node at="2" style="double-circle"&gt;&lt;m&gt;S&lt;/m&gt;&lt;/node&gt;
       &lt;edge vertices="(2,2)"&gt;1&lt;/edge&gt;
       &lt;edge vertices="(2,1)"/&gt;
@@ -411,9 +427,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </div>
 <div class="para" id="sec-networks-4-9">A loop is just an edge that connects a node with itself. By default, a loop will be drawn approximately as a circle whose radius depends on the size of the node.  As demonstrated in <a href="sec-networks.html#diagram-network-combination" class="xref" data-knowl="./knowl/xref/diagram-network-combination.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.4">Figure 3.9.4</a>, loops will be drawn centered in the largest gap between a node’s outgoing and incoming edges. However, the <code class="code-inline tex2jax_ignore">@loop-orientation</code> attribute of a node can be used to change this behavior.  The value of this attribute is an angle, given in degrees.</div>
-<div class="para" id="sec-networks-4-10">The dimensions of a loop can be controlled using the <code class="code-inline tex2jax_ignore">@loop-scale</code> attribute of the <code class="code-inline tex2jax_ignore">&lt;edge&gt;</code> element. The value of this attribute is an ordered pair of scaling factors, with the first scaling radially and the second tranversally, that are applied to the loop.</div>
+<div class="para" id="sec-networks-4-10">The dimensions of a loop can be controlled using the <code class="code-inline tex2jax_ignore">@loop-scale</code> attribute of the <code class="code-inline tex2jax_ignore">&lt;edge&gt;</code> element. The value of this attribute is an ordered pair of scaling factors, with the first scaling radially and the second tranversally, that are applied to the loop.  This attribute may be added to the <code class="code-inline tex2jax_ignore">&lt;network&gt;</code> in which case the value is applied to every loop that does not have a <code class="code-inline tex2jax_ignore">@loop-scale</code> attribute in its <code class="code-inline tex2jax_ignore">&lt;edge&gt;</code> element.</div>
 <div class="para" id="sec-networks-4-11">These last two attributes are demonstrated in <a href="sec-networks.html#diagram-network-loops" class="xref" data-knowl="./knowl/xref/diagram-network-loops.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.6">Figure 3.9.6</a>.</div>
-<figure class="figure figure-like" id="diagram-network-loops"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/network-loops.svg" role="img" class="contained"></div>
+<figure class="figure figure-like" id="diagram-network-loops"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/prefigure/network-loops.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.9.6<span class="period">.</span></span><span class="space"> </span>Some attributes to control the appearance of loops.</figcaption></figure><figure class="listing figure-like" id="listing-network-loops"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,150)"
          xmlns="https://prefigure.org"&gt;
   &lt;coordinates bbox="(-1,-1,1,2)"&gt;

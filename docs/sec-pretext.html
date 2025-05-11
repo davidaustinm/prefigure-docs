@@ -268,6 +268,15 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-5" class="internal"><span class="codenumber">3.11.3</span> <span class="title">Clipping</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-data.html" class="internal"><span class="codenumber">3.12</span> <span class="title">Working with data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-3" class="internal"><span class="codenumber">3.12.1</span> <span class="title">Reading an external file</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-4" class="internal"><span class="codenumber">3.12.2</span> <span class="title">Scatter plots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-5" class="internal"><span class="codenumber">3.12.3</span> <span class="title">Histograms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-6" class="internal"><span class="codenumber">3.12.4</span> <span class="title">Plotting a trajectory</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -327,7 +336,9 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <div class="para" id="sec-pretext-2">PreTeXt authors will notice that the design of PreFigure is very much inspired by PreTeXt.  In fact, it is possible to write PreFigure source directly inside a PreTeXt document. There are just a few things to be aware of.</div>
 <div class="para" id="sec-pretext-3">The diagram in <a href="sec-pretext.html#diagram-pretext" class="xref" data-knowl="./knowl/xref/diagram-pretext.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.1">Figure 4.2.1</a> was created inside a PreTeXt document, as we will explain.</div>
-<figure class="figure figure-like" id="diagram-pretext"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/pretext-example.svg" role="img" class="contained"></div></div></div>
+<figure class="figure figure-like" id="diagram-pretext"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+      <img src="external/images/pretext-example.svg" role="img" class="contained">
+    </div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span>A PreFigure diagram created inside a PreTeXt document as shown in <a href="sec-pretext.html#listing-pretext" class="xref" data-knowl="./knowl/xref/listing-pretext.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 4.2.2">Listing 4.2.2</a>.</figcaption></figure><div class="para" id="sec-pretext-5">
 <a href="sec-pretext.html#listing-pretext" class="xref" data-knowl="./knowl/xref/listing-pretext.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 4.2.2">Listing 4.2.2</a> shows a portion of a PreTeXt document containing PreFigure source.  First, notice that we use a PreTeXt <code class="code-inline tex2jax_ignore">&lt;image&gt;</code> element and place a PreTeXt <code class="code-inline tex2jax_ignore">&lt;prefigure&gt;</code> element inside of it.  The <code class="code-inline tex2jax_ignore">&lt;prefigure&gt;</code> element needs to have the attribute <code class="code-inline tex2jax_ignore">@xmlns="https://prefigure.org"</code>, which serves to effectively isolate any PreFigure source from the rest of the document, and a <code class="code-inline tex2jax_ignore">@label</code> giving the diagram a name.</div>
 <figure class="listing figure-like" id="listing-pretext"><div class="code-box"><pre class="program"><code class="language-none">&lt;image width="60%"&gt;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(400,300)"
+         margins="(30,30,5,5)"&gt;
+  &lt;read name="df" filename="iris.data"
+        string-columns="['species']"/&gt;
+  &lt;coordinates bbox="(3,0,9,25)"&gt;
+    &lt;grid-axes&gt;
+      &lt;ylabel alignment="se"&gt;Sepal length&lt;/ylabel&gt;
+    &lt;/grid-axes&gt;
+
+    &lt;histogram at="histogram" data="df['sepal length']" outline="tactile"
+               min="4" max="9" bins="20"
+               fill="lightskyblue" stroke="black"
+               annotate="yes"
+               text="The histogram with 20 bins"
+               bin-text="A bin from ${__histogram_x[bin_num]}"/&gt;
+
+  &lt;/coordinates&gt;
+
+  &lt;annotations&gt;
+    &lt;annotation ref="figure"
+                text="A histogram of irises with 30 bins grouped by sepal length"&gt;
+      &lt;annotation ref="histogram"/&gt;
+    &lt;/annotation&gt;
+  &lt;/annotations&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption xmlns:xlink="http://www.w3.org/1999/xlink"><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.12.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-data.html#diagram-histogram" class="xref" data-knowl="./knowl/xref/diagram-histogram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.5">Figure 3.12.5</a>.</figcaption></figure><span class="incontext"><a class="internal" href="sec-data.html#listing-histogram">in-context</a></span>
+</body>
+</html>

@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="ruby_turquoise">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Points, lines, and polygons</title>
+<title>Working with data</title>
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -135,7 +135,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-labels.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap-graphical.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-circles.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-shapes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap-graphical.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap-project.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -203,9 +203,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-labels.html#sec-labels-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Legends</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section contains-active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simple.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Points, lines, and polygons</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#subsec-points" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Points</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-4" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Lines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#subsec-vectors" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Vectors</span></a></div></li>
@@ -268,9 +268,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-5" class="internal"><span class="codenumber">3.11.3</span> <span class="title">Clipping</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-data.html" class="internal"><span class="codenumber">3.12</span> <span class="title">Working with data</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-3" class="internal"><span class="codenumber">3.12.1</span> <span class="title">Reading an external file</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-4" class="internal"><span class="codenumber">3.12.2</span> <span class="title">Scatter plots</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-5" class="internal"><span class="codenumber">3.12.3</span> <span class="title">Histograms</span></a></div></li>
@@ -331,221 +331,187 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-simple"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Points, lines, and polygons</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-data"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.12</span><span class="space"> </span><span class="title">Working with data</span>
 </h2>
-<section class="introduction" id="sec-simple-2"><div class="para" id="sec-simple-2-1">In this section, we will begin to introduce some simple graphical components, such as points, lines, vectors, and polygons.</div></section><section class="subsection" id="subsec-points"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="space"> </span><span class="title">Points</span>
+<section class="introduction" id="sec-data-2"><div class="para" id="sec-data-2-1">It is possible to read in an external file and access its content from within a PreFigure source file.  This can be used to create, for example, some common statistical diagrams, such as scatter plots and histograms.</div></section><section class="subsection" id="sec-data-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.12.1</span><span class="space"> </span><span class="title">Reading an external file</span>
 </h3>
-<div class="para" id="subsec-points-2">
-<a href="sec-simple.html#diagram-points" class="xref" data-knowl="./knowl/xref/diagram-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> shows a collection of points and various attributes describing them.  The PreFigure source follows in <a href="sec-simple.html#listing-points" class="xref" data-knowl="./knowl/xref/listing-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.2">Listing 3.5.2</a>.</div>
-<figure class="figure figure-like" id="diagram-points"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/points.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span>A collection of points.</figcaption></figure><figure class="listing figure-like" id="listing-points"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
-  &lt;coordinates bbox="(0, 0,5, 5)"&gt;
-    &lt;point p="(1,4)" size="20" style="box"
-	   fill="green" stroke="black" thickness="4"/&gt;
-    &lt;point p="(2.5, 2.5)" size="15" style="diamond"
-	   fill="blue" stroke="none"/&gt;
-    &lt;point p="(3,1)" size="10"&gt; &lt;m&gt;(a,(f(a))&lt;/m&gt; &lt;/point&gt;
-    &lt;point p="(1,1)" style="cross" thickness="3"/&gt;
-    &lt;point p="(4,4)" style="plus" thickness="3"/&gt;
-  &lt;/coordinates&gt;
-&lt;/diagram&gt;
-</code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-points" class="xref" data-knowl="./knowl/xref/diagram-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a>.</figcaption></figure><div class="para logical" id="subsec-points-5">
-<div class="para">In the usual way, a point will have stroke and fill attributes.  There are additional attributes that specify its appearance.</div>
+<div class="para logical" id="sec-data-3-2">
+<div class="para">The <code class="code-inline tex2jax_ignore">&lt;read&gt;</code> element is used for reading in an external file.  The name of the file needs to be supplied with the <code class="code-inline tex2jax_ignore">@filename</code> attribute, and the contents can later be referenced with the <code class="code-inline tex2jax_ignore">@name</code> attribute.  Here are some additional attributes</div>
 <dl class="description-list">
-<dt id="subsec-points-5-1-1">p</dt>
-<dd><div class="para" id="subsec-points-5-1-1-2">The <code class="code-inline tex2jax_ignore">@p</code> gives the location at which the point will be centered.</div></dd>
-<dt id="subsec-points-5-1-2">style</dt>
-<dd><div class="para logical" id="subsec-points-5-1-2-2">
-<div class="para">This attribute controls the shape of the point.  There are six options:</div>
-<ul class="disc" id="subsec-points-5-1-2-2-1">
-<li id="subsec-points-5-1-2-2-1-1"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-1">"box"</div></li>
-<li id="subsec-points-5-1-2-2-1-2"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-2">"diamond"</div></li>
-<li id="subsec-points-5-1-2-2-1-3"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-3">"circle"</div></li>
-<li id="subsec-points-5-1-2-2-1-4"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-4">"double-circle"</div></li>
-<li id="subsec-points-5-1-2-2-1-5"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-5">"cross"</div></li>
-<li id="subsec-points-5-1-2-2-1-6"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-6">"plus"</div></li>
-</ul>
-<div class="para">with "circle" being the default.</div>
-</div></dd>
-<dt id="subsec-points-5-1-3">size</dt>
-<dd><div class="para" id="subsec-points-5-1-3-2">This attribute specifies the size of the point in SVG units.</div></dd>
+<dt id="sec-data-3-2-4-1">type</dt>
+<dd><div class="para" id="sec-data-3-2-4-1-2">This describes the type of file to be read.  At present, the only possible file type is CSV though additional file types are expected to be added.  The default is therefore <code class="code-inline tex2jax_ignore">@type="csv"</code>.</div></dd>
+<dt id="sec-data-3-2-4-2">delimiter</dt>
+<dd><div class="para" id="sec-data-3-2-4-2-2">For reading a CSV, the value of this attribute defines the file’s delimiter.  By default, the delimiter is a single comma.</div></dd>
+<dt id="sec-data-3-2-4-3">quotechar</dt>
+<dd><div class="para" id="sec-data-3-2-4-3-2">The value of this attribute tells the CVS reader what character to view as quotation marks, whose enclosed content is read as a single entry. By default, the delimiter is a single quote.</div></dd>
+<dt id="sec-data-3-2-4-4">string-columns</dt>
+<dd><div class="para" id="sec-data-3-2-4-4-2">When reading a CSV file, the value of this parameter can be a list of headers in the file whose columns should be interpreted as strings rather than numbers.</div></dd>
 </dl>
 </div>
-<div class="para" id="subsec-points-6">Notice that a label may be attached to a point by including the label’s text within the <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> element.  In this case, attributes may be added to the point, such as <code class="code-inline tex2jax_ignore">@alignment</code> and <code class="code-inline tex2jax_ignore">@offset</code>, to control the positioning of the label.  Behind the scenes, the label and point are placed within a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> element, and the point’s handle transferred to the <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> for annotating.</div></section><section class="subsection" id="sec-simple-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="space"> </span><span class="title">Lines</span>
-</h3>
-<div class="para" id="sec-simple-4-2">A few lines are shown in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> with the PreFigure source presented in <a href="sec-simple.html#listing-lines" class="xref" data-knowl="./knowl/xref/listing-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.4">Listing 3.5.4</a>.  Please note that a <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> element can be used for including vectors in a diagram, as explained in <a href="sec-simple.html#subsec-vectors" class="internal" title="Subsection 3.5.3: Vectors">Subsection 3.5.3</a>.</div>
-<figure class="figure figure-like" id="diagram-lines"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/lines.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span>A collection of lines.</figcaption></figure><figure class="listing figure-like" id="listing-lines"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
-  &lt;coordinates bbox="(0,0,5,5)"&gt;
-    &lt;grid/&gt;
-    &lt;line endpoints="((1,4), (4,4.5))" stroke="blue"
-	  thickness="5" arrows="1"/&gt;
-    &lt;line p1="(1,3)" p2="(4,2.5)" stroke="lightgray" thickness="20"/&gt;
-    &lt;line p1="(1,3)" p2="(4,2.5)" endpoint-offsets="(10, -5)" thickness="5"/&gt;
-
-    &lt;line endpoints="((1,1.5),(4,2))" stroke="green" infinite="yes"/&gt;
-    &lt;definition&gt;p1=(1,1)&lt;/definition&gt;
-    &lt;definition&gt;p2=(4.5,0.5)&lt;/definition&gt;
-    &lt;line endpoints="(p1,p2)" endpoint-offsets="((10,0), (-10,0))"/&gt;
-    &lt;label p="p1" clear-background="yes"&gt;&lt;m&gt;a&lt;/m&gt;&lt;/label&gt;
-    &lt;label p="p2" clear-background="yes"&gt;&lt;m&gt;b&lt;/m&gt;&lt;/label&gt;
-  &lt;/coordinates&gt;
-&lt;/diagram&gt;
-</code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a>.</figcaption></figure><div class="para logical" id="sec-simple-4-5">
-<div class="para">It is important to remember that lines, along with the other components introduced in this and later sections, support the graphical attributes explained in <a href="sec-graphical-attr.html" class="internal" title="Section 3.1: Stroke, fill, and other graphical attributes">Section 3.1</a>.  In particular, any stroke attributes can be added to a line though fill attributes do not apply.</div>
+<article class="assemblage assemblage-like" id="sec-data-3-3"><div class="para" id="sec-data-3-3-1">Note that this feature is not yet implemented in PreTeXt, but it will be soon.</div></article><div class="para" id="sec-data-3-4">In the simplest case, PreFigure looks for the file in the file structure relative to the current PreFigure source.  This can be modified using an <code class="code-inline tex2jax_ignore">&lt;external-root&gt;</code> element in a PreFigure publication file.  If this element has the attribute <code class="code-inline tex2jax_ignore">@name="/home/data"</code>, and the <code class="code-inline tex2jax_ignore">&lt;read&gt;</code> element has <code class="code-inline tex2jax_ignore">@name="input.csv"</code>, then PreFigure will expect the file to be located at <code class="code-inline tex2jax_ignore">/home/data/input.csv</code>.</div>
+<div class="para" id="sec-data-3-5">Inside a PreTeXt document, the <code class="code-inline tex2jax_ignore">&lt;external-root&gt;</code> element should be included in the <code class="code-inline tex2jax_ignore">&lt;prefigure-preamble&gt;</code> element inside <code class="code-inline tex2jax_ignore">&lt;docinfo&gt;</code>.</div>
+<div class="para" id="sec-data-3-6">PreFigure expects CSV files to have some structure.  In particular, the first line of the file will be interpreted as headers for the columns.  If first line is <code class="code-inline tex2jax_ignore">0,1,2</code>, then the headers will be referenced later as “0”, “1”, and “2”.  It is then assumed that each subsequent row has at least as many entries as headers.  If a header appears in the list defined by the <code class="code-inline tex2jax_ignore">@string-columns</code> attribute, then the entries in that column are interpreted as strings.  Otherwise, they are interpreted as numerical data.</div>
+<div class="para logical" id="sec-data-3-7">
+<div class="para">A well-known dataset contains measurements of 150 irises along with the species they belong to.  The first two lines of the file are</div>
+<pre class="code-display tex2jax_ignore">  sepal length,sepal width,petal length,petal width,species
+  5.1,3.5,1.4,0.2,Iris-setosa
+</pre>
+<div class="para">The element <code class="code-inline tex2jax_ignore">&lt;read name="data" filename="iris.csv"&gt;</code> will read this file with the results later referenced as <code class="code-inline tex2jax_ignore">data</code>.  For instance, <code class="code-inline tex2jax_ignore">data['sepal length']</code> contains the list of sepal lengths of 150 irises.  <code class="code-inline tex2jax_ignore">data['species']</code> contains a list of the species each flower belongs to.  You may notice that we did not need to specify that the last column consists of strings since this is automatically detected by PreFigure.</div>
+</div>
+<div class="para logical" id="sec-data-3-8">
+<div class="para">There are two useful operations.</div>
 <dl class="description-list">
-<dt id="sec-simple-4-5-2-1">endpoints</dt>
-<dd><div class="para" id="sec-simple-4-5-2-1-2">The endpoints of a line may be specified together using the <code class="code-inline tex2jax_ignore">@endpoints</code> attribute or separately using <code class="code-inline tex2jax_ignore">@p1</code> and <code class="code-inline tex2jax_ignore">@p2</code>.</div></dd>
-<dt id="sec-simple-4-5-2-2">infinite</dt>
-<dd><div class="para" id="sec-simple-4-5-2-2-2">If <code class="code-inline tex2jax_ignore">@infinite="yes"</code>, then the line is drawn as if it were infinite in extent.</div></dd>
-<dt id="sec-simple-4-5-2-3">arrows</dt>
-<dd><div class="para" id="sec-simple-4-5-2-3-2">If <code class="code-inline tex2jax_ignore">@arrows="1"</code>, then an arrow is drawn at the second endpoint.  If <code class="code-inline tex2jax_ignore">@arrows="2"</code>, then an arrow is drawn at both endpoints.</div></dd>
-<dt id="sec-simple-4-5-2-4">reverse</dt>
-<dd><div class="para" id="sec-simple-4-5-2-4-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the line when adding arrows.</div></dd>
-<dt id="sec-simple-4-5-2-5">endpoint-offsets</dt>
-<dd>
-<div class="para" id="sec-simple-4-5-2-5-2">Sometimes you may want the line to begin or end near, but not exactly, at the given endpoints.  The bottom line in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> is an example in that the line is connecting two labels placed at two endpoints.  We move the endpoints slightly so that the line does not interfere with the label.  In this case, the endpoint offsets are a pair of vectors, each of which moves an endpoint by the given vector in SVG units.</div>
-<div class="para" id="sec-simple-4-5-2-5-3">Another line in the figure shows a second use of offsets.  In this case, the offsets are a single pair of SVG units.  The direction of the line is preserved but each endpoint is moved along the line by the given offset.  This could be helpful when drawing arrows since the arrow head will extend slightly beyond the endpoint of the line.</div>
-</dd>
+<dt id="sec-data-3-8-1-1">filter</dt>
+<dd><div class="para" id="sec-data-3-8-1-1-2">The <code class="code-inline tex2jax_ignore">filter</code> function can be used to trim a column of the dataset by some criterion.  For instance, <code class="code-inline tex2jax_ignore">filter(df['sepal length', 'species', 'Iris-setosa'])</code> returns a list of the sepal lengths of the flowers whose <code class="code-inline tex2jax_ignore">species</code> attribute is “Iris-setosa”.</div></dd>
+<dt id="sec-data-3-8-1-2">zip_lists</dt>
+<dd><div class="para" id="sec-data-3-8-1-2-2">If we have two lists with the same number of entries, this function returns a list of points whose entries come from the two lists.  For instance, <code class="code-inline tex2jax_ignore">zip_lists(df['sepal length'],
+      df['sepal width'])</code> will be a list of 150 points whose first entry is the sepal length and whose second is the sepal width of each flower.</div></dd>
 </dl>
-</div></section><section class="subsection" id="subsec-vectors"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="space"> </span><span class="title">Vectors</span>
+</div>
+<div class="para" id="sec-data-3-9">Next we will see some things we can do with data like this.</div></section><section class="subsection" id="sec-data-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.12.2</span><span class="space"> </span><span class="title">Scatter plots</span>
 </h3>
-<div class="para" id="subsec-vectors-2">In some sense, <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code>s are a redundant element since we can always draw lines and attach arrows.  However, a goal of PreFigure is to facilitate authors thinking mathematically about the exposition so <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> should be used when including a vector in a diagram.  Vectors are also drawn with a default thickness that differentiates them from lines drawn with their default attributes.</div>
-<figure class="figure figure-like" id="diagram-vectors"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/vectors.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>A collection of vectors.</figcaption></figure><figure class="listing figure-like" id="listing-vectors"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
-  &lt;coordinates bbox="(-1,-1,5,5)"&gt;
-    &lt;grid-axes decorations="no"/&gt;
-    &lt;vector v="(3,4)"/&gt;
-    &lt;vector v="(1,3/2)" tail="(2,1)" scale="2" stroke="blue"/&gt;
-    &lt;vector v="(1,3)" tail="(3.5,1)" head-location="0.8"/&gt;
-  &lt;/coordinates&gt;
-&lt;/diagram&gt;
-</code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-vectors" class="xref" data-knowl="./knowl/xref/diagram-vectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.5">Figure 3.5.5</a>.</figcaption></figure><div class="para logical" id="subsec-vectors-5">
-<div class="para">In addition to stroke attributes, a vector supports the following attributes.</div>
-<dl class="description-list">
-<dt id="subsec-vectors-5-1-1">v</dt>
-<dd><div class="para" id="subsec-vectors-5-1-1-2">The attribute <code class="code-inline tex2jax_ignore">@v</code> is the 2-dimensional mathematical vector.</div></dd>
-<dt id="subsec-vectors-5-1-2">tail</dt>
-<dd><div class="para" id="subsec-vectors-5-1-2-2">The attribute <code class="code-inline tex2jax_ignore">@tail</code> represents the tail of the vector.</div></dd>
-<dt id="subsec-vectors-5-1-3">scale</dt>
-<dd><div class="para" id="subsec-vectors-5-1-3-2">The value of <code class="code-inline tex2jax_ignore">@scale</code> acts as scalar multiplication on <code class="code-inline tex2jax_ignore">@v</code>.</div></dd>
-<dt id="subsec-vectors-5-1-4">head-location</dt>
-<dd><div class="para" id="subsec-vectors-5-1-4-2">Usually, the head of a vector is placed at the tip of the vector.  There may be occasions, however, when you want to place the head somewhere else along the shaft.  Specifying <code class="code-inline tex2jax_ignore">@head-location="0.8"</code> places the arrow head at a location 80% of the way from the tail to the tip.</div></dd>
-</dl>
-</div></section><section class="subsection" id="sec-simple-6"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="space"> </span><span class="title">Polygons</span>
-</h3>
-<div class="para" id="sec-simple-6-2">Polygons are paths drawn by connecting a set of points by line segments.  The effect is different from drawing a set of line segments, however, since the ends of the line segments will be joined to form a whole.  For example, the shape on the left of <a href="sec-simple.html#diagram-polygon-v-line" class="xref" data-knowl="./knowl/xref/diagram-polygon-v-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.7">Figure 3.5.7</a> is drawn with two <code class="code-inline tex2jax_ignore">&lt;line&gt;</code>s while that on the right is a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>.</div>
-<figure class="figure figure-like" id="diagram-polygon-v-line"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/polygon-v-line.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.7<span class="period">.</span></span><span class="space"> </span>Two line segments on the left and a polygon on the right.</figcaption></figure><div class="para" id="sec-simple-6-4">
-<code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>s are quite versatile and should more properly be thought of as a polygonal path having both stroke and fill attributes.  <a href="sec-simple.html#diagram-polygon" class="xref" data-knowl="./knowl/xref/diagram-polygon.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.8">Figure 3.5.8</a> demonstrates some possibilities with the PreFigure soure given in <a href="sec-simple.html#listing-polygon" class="xref" data-knowl="./knowl/xref/listing-polygon.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.9">Listing 3.5.9</a>.</div>
-<figure class="figure figure-like" id="diagram-polygon"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/polygon.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.8<span class="period">.</span></span><span class="space"> </span>Some sample polygons.</figcaption></figure><figure class="listing figure-like" id="listing-polygon"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
-  &lt;coordinates bbox="(-5,-5,5,5)"&gt;
-    &lt;grid/&gt;
-    &lt;polygon points="((-2,-1),(-4,-1),(-4,2))" closed="yes"
-	     fill="blue"/&gt;
-    &lt;polygon points="(2,1)+2*(cos(k*pi/4),sin(k*pi/4))"
-	     parameter="k=0..7" closed="yes"
-	     stroke="red" thickness="4"/&gt;
-    &lt;polygon points="((-4,4),(-1,4),(-1,-3),(3,-3))"
-	     corner-radius="10" arrows="1" thickness="5"
-	     stroke="green"/&gt;
-  &lt;/coordinates&gt;
-&lt;/diagram&gt;
-</code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.9<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-polygon" class="xref" data-knowl="./knowl/xref/diagram-polygon.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.8">Figure 3.5.8</a>.</figcaption></figure><div class="para logical" id="sec-simple-6-7">
-<div class="para">A <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code> requires a set of points given by the <code class="code-inline tex2jax_ignore">@points</code> attributes.  While you may simply list the points, PreFigure also allows you to provide a rule for generating the list of points.</div>
-<dl class="description-list">
-<dt id="sec-simple-6-7-3-1">points</dt>
-<dd><div class="para" id="sec-simple-6-7-3-1-2">The value of the <code class="code-inline tex2jax_ignore">@points</code> attribute may be a list of points or a single point containing a named parameter.</div></dd>
-<dt id="sec-simple-6-7-3-2">parameter</dt>
-<dd><div class="para" id="sec-simple-6-7-3-2-2">The <code class="code-inline tex2jax_ignore">@parameter</code> attribute gives a range of values for generating the list of points.  The format is <code class="code-inline tex2jax_ignore">@parameter="parameter_name=start..stop"</code>.</div></dd>
-<dt id="sec-simple-6-7-3-3">closed</dt>
-<dd><div class="para" id="sec-simple-6-7-3-3-2">By default, polygons are not closed, but <code class="code-inline tex2jax_ignore">@closed="yes"</code> will close a polygon.</div></dd>
-<dt id="sec-simple-6-7-3-4">arrows</dt>
-<dd><div class="para" id="sec-simple-6-7-3-4-2">To place arrows at the end of a polygonal path, use <code class="code-inline tex2jax_ignore">@arrows="1"</code> to add an arrow at the end and <code class="code-inline tex2jax_ignore">@arrows="2"</code> to also add an arrow at the beginning.</div></dd>
-<dt id="sec-simple-6-7-3-5">reverse</dt>
-<dd><div class="para" id="sec-simple-6-7-3-5-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the polygonal path when attaching arrows.</div></dd>
-<dt id="sec-simple-6-7-3-6">corner-radius</dt>
-<dd><div class="para" id="sec-simple-6-7-3-6-2">A polygonal path can be smoothed out using the <code class="code-inline tex2jax_ignore">@corner-radius</code> attribute.  The value of this attribute should be a positive number of SVG units.</div></dd>
-</dl>
-</div></section><section class="subsection" id="subsec-splines"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="space"> </span><span class="title">Splines</span>
-</h3>
-<div class="para" id="subsec-splines-2">PreFigure can create cubic splines from a sequence of points. <a href="sec-simple.html#diagram-splines" class="xref" data-knowl="./knowl/xref/diagram-splines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.10">Figure 3.5.10</a> illustrates a number of possibilities.</div>
-<figure class="figure figure-like" id="diagram-splines"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/splines.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.10<span class="period">.</span></span><span class="space"> </span>A number of cubic splines</figcaption></figure><figure class="listing figure-like" id="listing-splines"><div class="code-box"><pre class="program line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
-  &lt;coordinates bbox="(-4,-4,4,4)"&gt;
-    &lt;definition&gt;f(k)=3*(cos(pi*k/2), sin(pi*k/2))&lt;/definition&gt;
-    
-    &lt;grid-axes xlabel="t" ylabel="y"/&gt;
-    &lt;spline points="(0,2,1,2,4)" stroke="red"/&gt;
-    &lt;spline points="((1,0),(2,0),(2,1),(1,2),(-1,2),(-2,0),(-1,-2),(1,0))"
-            t-values="(0,2,3,3.5,4,5,7,9)"
-            closed="yes" stroke="blue"/&gt;
-    &lt;spline points="f(k)" parameter="k=0..4" closed="yes" stroke="orange"/&gt;
-    &lt;circle center="(0,0)" radius="3" stroke="green"/&gt;
-  &lt;/coordinates&gt;
-&lt;/diagram&gt;
-</code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.11<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-splines" class="xref" data-knowl="./knowl/xref/diagram-splines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.10">Figure 3.5.10</a>.</figcaption></figure><div class="para" id="subsec-splines-5">The <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> defined in line 6 is a simple one-dimensional spline formed from a sequence of <span class="process-math">\(y\)</span>-values. By default, PreFigure assumes that the corresponding <span class="process-math">\(t\)</span> values are 0, 1, 2, 3, 4.  This can be modified using the <code class="code-inline tex2jax_ignore">@t-values</code> attribute.</div>
-<div class="para" id="subsec-splines-6">The second <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> defined on lines 7-9 is given by a sequence of 2-dimensional points.  An accompanying sequence of <code class="code-inline tex2jax_ignore">@t-values</code> is also defined.  The attribute <code class="code-inline tex2jax_ignore">@closed="yes"</code> asks that the spline be closed and a periodic boundary condition imposed.  In this case, it is important that the last point agree with the first point.</div>
-<div class="para" id="subsec-splines-7">If the spline is not to be closed, then boundary conditions can be specified using the <code class="code-inline tex2jax_ignore">@bc</code> attribute.  The default value is <code class="code-inline tex2jax_ignore">not-a-knot</code>, but other possibilities can be found in the <code class="code-inline tex2jax_ignore">scipy.interpolar.CubicSpline</code> documentation.</div>
-<div class="para" id="subsec-splines-8">Since a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> is constructed from a sequence of points, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> shares many attributes with a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>.  For instance, the spline defined in line 10 shows how the sequence of points can be defined using a <code class="code-inline tex2jax_ignore">@parameter</code>.  In addition, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> can have a <code class="code-inline tex2jax_ignore">@stroke</code> and <code class="code-inline tex2jax_ignore">@fill</code> attribute, and <code class="code-inline tex2jax_ignore">@arrows</code> can be used to add arrows.</div>
-<div class="para" id="subsec-splines-9">It can be helpful to remember that splines are parametrized curves, which presents two opportunities.  First, you can specify a portion of the spline using the <code class="code-inline tex2jax_ignore">@domain</code> attribute. Second, the location of an ending arrow, requested with <code class="code-inline tex2jax_ignore">@arrows="1"</code>, can be moved to another location with <code class="code-inline tex2jax_ignore">@arrow-location</code>.  This can be particularly helpful when the spline is closed, since the direction of the arrow is not well defined in this case.  These features are illustrated in <a href="sec-simple.html#diagram-spline-domain" class="xref" data-knowl="./knowl/xref/diagram-spline-domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.12">Figure 3.5.12</a>.</div>
-<figure class="figure figure-like" id="diagram-spline-domain"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/spline-domain.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.12<span class="period">.</span></span><span class="space"> </span>Specifying the domain of a spline and moving an arrow.</figcaption></figure><figure class="listing figure-like" id="listing-spline-domain"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(250,250)" margins="5"
-         xmlns="https://prefigure.org"&gt;
-  &lt;definition&gt;points=((8,6),(6.5,7),(5,7.5),(3,8),(1.5,8),(0.5,7),(0.75,5),(2,3),(5,1),(7,0.5),(9,1),(9.5,2),(9.5,3),(9,4.5),(8,6))&lt;/definition&gt;
-  &lt;coordinates bbox="(0,0,10,10)"&gt;
-    &lt;grid/&gt;
-    &lt;spline points="points" arrows="1" arrow-location="2.5"
-            stroke="blue" thickness="4" closed="yes"/&gt;
+<div class="para" id="sec-data-4-2">We can create scatter plots in PreFigure.  Of course, we don’t need to use data that is loaded from an external source, but that might be the most common use case.  This is demonstrated in <a href="sec-data.html#diagram-scatter-plot-1" class="xref" data-knowl="./knowl/xref/diagram-scatter-plot-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.1">Figure 3.12.1</a>.</div>
+<figure class="figure figure-like" id="diagram-scatter-plot-1"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;">
+        <img src="external/images/iris_scatter_1.svg" role="img" class="contained">
+      </div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.12.1<span class="period">.</span></span><span class="space"> </span>A scatter plot built from the source in <a href="sec-data.html#listing-scatter-plot-1" class="xref" data-knowl="./knowl/xref/listing-scatter-plot-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.12.2">Listing 3.12.2</a>.</figcaption></figure><figure class="listing figure-like" id="listing-scatter-plot-1"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(300,300)"
+         margins="(30,30,5,5)"&gt;
+  &lt;read name="df" filename="iris.data"
+        string-columns="['species']"/&gt;
+  &lt;definition&gt;x=filter(df, 'sepal length', 'species', 'Iris-versicolor')&lt;/definition&gt;
+  &lt;definition&gt;y=filter(df, 'petal width', 'species', 'Iris-versicolor')&lt;/definition&gt;
+  &lt;definition&gt;points=zip_lists(x, y)&lt;/definition&gt;
+  
+  &lt;coordinates bbox="(4,0,9,3)"&gt;
+    &lt;grid-axes&gt;
+      &lt;xlabel alignment="nw"&gt;Sepal length&lt;/xlabel&gt;
+      &lt;ylabel alignment="se"&gt;Petal width&lt;/ylabel&gt;
+    &lt;/grid-axes&gt;
 
-    &lt;spline points="points" domain="(4,10)" 
-            thickness="2" stroke="red"/&gt;
+    &lt;scatter points="points" fill="blue"/&gt;
 
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.13<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-spline-domain" class="xref" data-knowl="./knowl/xref/diagram-spline-domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.12">Figure 3.5.12</a>.</figcaption></figure></section><section class="subsection" id="sec-simple-8"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.6</span><span class="space"> </span><span class="title">Triangles</span>
-</h3>
-<div class="para" id="sec-simple-8-2">For convenience, PreFigure offers a <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code> as illustrated in <a href="sec-simple.html#diagram-triangle-intro" class="xref" data-knowl="./knowl/xref/diagram-triangle-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.14">Figure 3.5.14</a>.</div>
-<figure class="figure figure-like" id="diagram-triangle-intro"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/triangle-intro.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.14<span class="period">.</span></span><span class="space"> </span>Two triangles</figcaption></figure><figure class="listing figure-like" id="listing-triangle-intro"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
-  &lt;coordinates bbox="(0,0,10,10)"&gt;
-    &lt;grid-axes decorations="no"/&gt;
-    &lt;triangle vertices="((1,1),(3,2),(1,5))" labels="A,B,C"
-	      show-vertices="yes" point-fill="orange" /&gt;
-    &lt;definition&gt;vertices=((4,4), (8,1),(7,8))&lt;/definition&gt;
-    &lt;triangle vertices="vertices" labels="D,E,F"
-	      angle-markers="yes"/&gt;
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.12.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-data.html#diagram-scatter-plot-1" class="xref" data-knowl="./knowl/xref/diagram-scatter-plot-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.1">Figure 3.12.1</a>.</figcaption></figure><div class="para" id="sec-data-4-5">Notice that we read the data using a <code class="code-inline tex2jax_ignore">&lt;read&gt;</code> element and then form a set of points using the <code class="code-inline tex2jax_ignore">filter</code> and <code class="code-inline tex2jax_ignore">zip_lists</code> functions.  These points are given to the <code class="code-inline tex2jax_ignore">&lt;scatter&gt;</code> element through the <code class="code-inline tex2jax_ignore">@name</code> attribute.  Each point will be plotted using a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> element, which is internally created using attributes supplied by the <code class="code-inline tex2jax_ignore">&lt;scatter&gt;</code> element.  In this example, the <code class="code-inline tex2jax_ignore">&lt;scatter&gt;</code> element simply defined the fill of those points to be “blue”.</div>
+<div class="para" id="sec-data-4-6">As a convenience, the <code class="code-inline tex2jax_ignore">&lt;scatter&gt;</code> element offers a more direct way to build scatter plots directly from the data source. This is demonstrated in <a href="sec-data.html#diagram-scatter-plot-2" class="xref" data-knowl="./knowl/xref/diagram-scatter-plot-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.3">Figure 3.12.3</a>.</div>
+<figure class="figure figure-like" id="diagram-scatter-plot-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;">
+        <img src="external/images/iris_scatter.svg" role="img" class="contained">
+      </div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.12.3<span class="period">.</span></span><span class="space"> </span>A scatter plot built from the source in <a href="sec-data.html#listing-scatter-plot-2" class="xref" data-knowl="./knowl/xref/listing-scatter-plot-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.12.4">Listing 3.12.4</a>.</figcaption></figure><figure class="listing figure-like" id="listing-scatter-plot-2"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(400,300)"
+         margins="(30,30,5,5)"&gt;
+  &lt;read name="df" filename="iris.data"
+        string-columns="['species']"/&gt;
+  &lt;coordinates bbox="(4,0,9,3)"&gt;
+    &lt;grid-axes&gt;
+      &lt;xlabel alignment="nw"&gt;Sepal length&lt;/xlabel&gt;
+      &lt;ylabel alignment="se"&gt;Petal width&lt;/ylabel&gt;
+    &lt;/grid-axes&gt;
 
+    &lt;scatter at="setosa" data="df"
+             x="sepal length" y="petal width"
+             filter="('species','Iris-setosa')"
+             fill="blue"
+             annotate="yes" text="Data from 50 Iris setosas"
+             point-text="An iris setosa"/&gt;
+
+    &lt;scatter at="versicolor" data="df"
+             x="sepal length" y="petal width"
+             filter="('species','Iris-versicolor')"
+             fill="red" style="box" size="4"
+             annotate="yes" text="Data from 50 Iris versicolor"
+             point-text="An iris versicolor"/&gt;
+
+    &lt;scatter at="virginica" data="df"
+             x="sepal length" y="petal width"
+             filter="('species','Iris-virginica')"
+             fill="green" style="diamond" size="4"
+             annotate="yes" text="Data from 50 Iris virginica"
+             point-text="An iris virginica"/&gt;
+
+    &lt;legend anchor="(bbox[2],0.3)"
+            alignment="nw" opacity="0.9"&gt;
+      &lt;item ref="setosa-point"&gt;Iris-setosa&lt;/item&gt;
+      &lt;item ref="versicolor-point"&gt;Iris-versicolor&lt;/item&gt;
+      &lt;item ref="virginica-point"&gt;Iris-virginica&lt;/item&gt;
+    &lt;/legend&gt;
+
+  &lt;/coordinates&gt;
+
+  &lt;annotations&gt;
+    &lt;annotation ref="figure"
+                text="Scatter plot of the iris data set"&gt;
+      &lt;annotation ref="setosa"/&gt;
+      &lt;annotation ref="versicolor"/&gt;
+      &lt;annotation ref="virginica"/&gt;
+    &lt;/annotation&gt;
+  &lt;/annotations&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.12.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-data.html#diagram-scatter-plot-2" class="xref" data-knowl="./knowl/xref/diagram-scatter-plot-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.3">Figure 3.12.3</a>.</figcaption></figure><div class="para" id="sec-data-4-9">Notice that the <code class="code-inline tex2jax_ignore">&lt;scatter&gt;</code> element has an attribute <code class="code-inline tex2jax_ignore">@data</code> that points to the dataset read in earlier.  We then state the headers of the columns of the data set that we intend to plot using the <code class="code-inline tex2jax_ignore">@x</code> and <code class="code-inline tex2jax_ignore">@y</code> attributes. An optional <code class="code-inline tex2jax_ignore">@filter</code> attribute can be supplied to filter the data, which is then zipped together internally.</div>
+<div class="para" id="sec-data-4-10">This example also demonstrates a few more features, some of which we will explore in more detail later.  For now, notice that the <code class="code-inline tex2jax_ignore">&lt;legend&gt;</code> needs the handle of a point.  The handle of the second <code class="code-inline tex2jax_ignore">&lt;scatter&gt;</code> element is “versicolor” so the handle of the points created by PreFigure are “versicolor-point”;  that is “-point” is appended to the handle of the <code class="code-inline tex2jax_ignore">&lt;scatter&gt;</code> element.</div>
+<div class="para" id="sec-data-4-11">Each scatter plot is annotated by setting <code class="code-inline tex2jax_ignore">@annotate="yes"</code>, specifying the text for the group using <code class="code-inline tex2jax_ignore">@text</code>, and declaring the text for each point using <code class="code-inline tex2jax_ignore">@point-text</code>.  More details about annotating a group of objects like this is included in <a href="sec-annotations.html" class="internal" title="Section 6.1: Annotating a diagram">Section 6.1</a>.</div></section><section class="subsection" id="sec-data-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.12.3</span><span class="space"> </span><span class="title">Histograms</span>
+</h3>
+<div class="para" id="sec-data-5-2">The <code class="code-inline tex2jax_ignore">&lt;histogram&gt;</code> element is used to create histograms as demonstrated in <a href="sec-data.html#diagram-histogram" class="xref" data-knowl="./knowl/xref/diagram-histogram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.5">Figure 3.12.5</a>.</div>
+<figure class="figure figure-like" id="diagram-histogram"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;">
+        <img src="external/images/iris_histogram.svg" role="img" class="contained">
+      </div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.12.5<span class="period">.</span></span><span class="space"> </span>A histogram built from the source in <a href="sec-data.html#listing-histogram" class="xref" data-knowl="./knowl/xref/listing-histogram.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.12.6">Listing 3.12.6</a>.</figcaption></figure><figure class="listing figure-like" id="listing-histogram"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(400,300)"
+         margins="(30,30,5,5)"&gt;
+  &lt;read name="df" filename="iris.data"
+        string-columns="['species']"/&gt;
+  &lt;coordinates bbox="(3,0,9,25)"&gt;
+    &lt;grid-axes&gt;
+      &lt;ylabel alignment="se"&gt;Sepal length&lt;/ylabel&gt;
+    &lt;/grid-axes&gt;
+
+    &lt;histogram at="histogram" data="df['sepal length']" outline="tactile"
+               min="4" max="9" bins="20"
+               fill="lightskyblue" stroke="black"
+               annotate="yes"
+               text="The histogram with 20 bins"
+               bin-text="A bin from ${__histogram_x[bin_num]}"/&gt;
+
+  &lt;/coordinates&gt;
+
+  &lt;annotations&gt;
+    &lt;annotation ref="figure"
+                text="A histogram of irises with 30 bins grouped by sepal length"&gt;
+      &lt;annotation ref="histogram"/&gt;
+    &lt;/annotation&gt;
+  &lt;/annotations&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.12.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-data.html#diagram-histogram" class="xref" data-knowl="./knowl/xref/diagram-histogram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.5">Figure 3.12.5</a>.</figcaption></figure><div class="para" id="sec-data-5-5">Notice that the histogram is defined through a <code class="code-inline tex2jax_ignore">@data</code> attribute, which is one column of the dataset, along with the attributes <code class="code-inline tex2jax_ignore">@min</code>, <code class="code-inline tex2jax_ignore">@max</code>, and <code class="code-inline tex2jax_ignore">@bins</code>, which is the number of bins.</div>
+<div class="para" id="sec-data-5-6">Once again, some more advanced annotation features are demonstrated.  There are two lists created internally, <code class="code-inline tex2jax_ignore">__histogram_x</code> and <code class="code-inline tex2jax_ignore">__histogram_y</code>, that describe the upper-left corner of each bar.  There is a parameter <code class="code-inline tex2jax_ignore">bin_num</code> that iterates through each bin and that can be used for annotating.  Another quantity <code class="code-inline tex2jax_ignore">delta_x</code> is also defined as the width of the bins.</div>
+<div class="para" id="sec-data-5-7">The handle of a bar created by the <code class="code-inline tex2jax_ignore">&lt;histogram&gt;</code> is “-bin” appended to the handle of the <code class="code-inline tex2jax_ignore">&lt;histogram&gt;</code>.</div></section><section class="subsection" id="sec-data-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.12.4</span><span class="space"> </span><span class="title">Plotting a trajectory</span>
+</h3>
+<div class="para" id="sec-data-6-2">There may be times when one generates data in some way and then wants to plot it.  Perhaps you have solved a differential equation using a specialized or novel technique and saved the results in a CSV file.  <a href="sec-data.html#diagram-gragg" class="xref" data-knowl="./knowl/xref/diagram-gragg.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.7">Figure 3.12.7</a> illustrates a solution to the three-body problem found using an adaptive method.</div>
+<figure class="figure figure-like" id="diagram-gragg"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+        <img src="external/images/gragg.svg" role="img" class="contained">
+      </div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.12.7<span class="period">.</span></span><span class="space"> </span>Plotting the solution to a differential equation solved externally.</figcaption></figure><figure class="listing figure-like" id="listing-gragg"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+  &lt;read filename="gragg_data.csv" name="data" delimiter=' '/&gt;
+  &lt;definition&gt;x = data['x']&lt;/definition&gt;
+  &lt;definition&gt;y = data['y']&lt;/definition&gt;
+  &lt;definition&gt;points=zip_lists(x,y)&lt;/definition&gt;
+  &lt;coordinates bbox="(-15,-8,15,8)"&gt;
+    &lt;grid-axes xlabel="x" ylabel="y"/&gt;
+    &lt;polygon points="points" stroke="blue"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div>
-<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.15<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-simple.html#diagram-triangle-intro" class="xref" data-knowl="./knowl/xref/diagram-triangle-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.14">Figure 3.5.14</a>.</figcaption></figure><div class="para" id="sec-simple-8-5">A <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code> has the same attributes as a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>, except that the vertices are listed with the <code class="code-inline tex2jax_ignore">@vertices</code> attribute and the attribute <code class="code-inline tex2jax_ignore">@closed</code> is always set to <code class="code-inline tex2jax_ignore">"yes"</code> for a <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code>.  There are some additional attributes of note.</div>
-<div class="para logical" id="sec-simple-8-6"><dl class="description-list">
-<dt id="sec-simple-8-6-1-1">labels</dt>
-<dd><div class="para" id="sec-simple-8-6-1-1-2">You may provide labels for each of the vertices by setting this attribute to a comma-separated list of three labels. Each label will be wrapped in an <code class="code-inline tex2jax_ignore">&lt;m&gt;</code> tag and processed by MathJax.</div></dd>
-<dt id="sec-simple-8-6-1-2">angle-markers</dt>
-<dd><div class="para" id="sec-simple-8-6-1-2-2">Set this to <code class="code-inline tex2jax_ignore">"yes"</code> to place an <code class="code-inline tex2jax_ignore">&lt;angle-marker&gt;</code> in each of the interior angles.</div></dd>
-<dt id="sec-simple-8-6-1-3">show-vertices</dt>
-<dd><div class="para" id="sec-simple-8-6-1-3-2">This attribute will place a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> on each vertex if set to <code class="code-inline tex2jax_ignore">"yes"</code>.</div></dd>
-<dt id="sec-simple-8-6-1-4">point-fill</dt>
-<dd><div class="para" id="sec-simple-8-6-1-4-2">Use this to specify the fill of each <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> if <code class="code-inline tex2jax_ignore">@show-vertices="yes"</code>.</div></dd>
-</dl></div></section></section></div>
+<figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.12.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-data.html#diagram-gragg" class="xref" data-knowl="./knowl/xref/diagram-gragg.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.12.7">Figure 3.12.7</a>.</figcaption></figure></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-labels.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-circles.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-shapes.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chap-project.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

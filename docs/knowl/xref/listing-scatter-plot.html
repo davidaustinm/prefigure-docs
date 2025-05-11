@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(400,300)"
+         margins="(30,30,5,5)"&gt;
+  &lt;read name="df" filename="iris.data"
+        string-columns="['species']"/&gt;
+  &lt;coordinates bbox="(4,0,9,3)"&gt;
+    &lt;grid-axes&gt;
+      &lt;xlabel alignment="nw"&gt;Sepal length&lt;/xlabel&gt;
+      &lt;ylabel alignment="se"&gt;Petal width&lt;/ylabel&gt;
+    &lt;/grid-axes&gt;
+
+    &lt;scatter at="setosa" data="df"
+             x="sepal length" y="petal width"
+             filter="('species','Iris-setosa')"
+             fill="blue"
+             annotate="yes" text="Data from 50 Iris setosas"
+             point-text="An iris setosa"/&gt;
+
+    &lt;scatter at="versicolor" data="df"
+             x="sepal length" y="petal width"
+             filter="('species','Iris-versicolor')"
+             fill="red" style="box" size="4"
+             annotate="yes" text="Data from 50 Iris versicolor"
+             point-text="An iris versicolor"/&gt;
+
+    &lt;scatter at="virginica" data="df"
+             x="sepal length" y="petal width"
+             filter="('species','Iris-virginica')"
+             fill="green" style="diamond" size="4"
+             annotate="yes" text="Data from 50 Iris virginica"
+             point-text="An iris virginica"/&gt;
+
+    &lt;legend anchor="(bbox[2],0.3)"
+            alignment="nw" opacity="0.9"&gt;
+      &lt;item ref="setosa-point"&gt;Iris-setosa&lt;/item&gt;
+      &lt;item ref="versicolor-point"&gt;Iris-versicolor&lt;/item&gt;
+      &lt;item ref="virginica-point"&gt;Iris-virginica&lt;/item&gt;
+    &lt;/legend&gt;
+
+  &lt;/coordinates&gt;
+
+  &lt;annotations&gt;
+    &lt;annotation ref="figure"
+                text="Scatter plot of the iris data set"&gt;
+      &lt;annotation ref="setosa"/&gt;
+      &lt;annotation ref="versicolor"/&gt;
+      &lt;annotation ref="virginica"/&gt;
+    &lt;/annotation&gt;
+  &lt;/annotations&gt;
+&lt;/diagram&gt;
+</code></pre></div>
+<figcaption xmlns:xlink="http://www.w3.org/1999/xlink"><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.10.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for <a href="sec-data.html#diagram-scatter-plot" class="xref" data-knowl="./knowl/xref/diagram-scatter-plot.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.10.1">Figure 3.10.1</a>.</figcaption></figure><span class="incontext"><a class="internal" href="sec-data.html#listing-scatter-plot">in-context</a></span>
+</body>
+</html>
