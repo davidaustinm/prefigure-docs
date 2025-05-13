@@ -126,7 +126,7 @@
       <li><p>Finally, 
       within the <prefigure/> element, include a child to include your
       <prefigure/> source, such as
-      <tag>xi:include href="prefigure/my_diagram.xml"</tag>.
+      <tag>xi:include href="prefigure/my_diagram.xml"/</tag>.
       </p></li>
     </ul>
     </p>
