@@ -33,7 +33,7 @@ var ptx_lunr_docs = [
   "url": "sec-example.html#listing-tangent",
   "type": "Listing",
   "number": "1.1.2",
-  "title": "",
+  "title": "The PreFigure source to produce Figure 1.1.1",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x)=exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph function=\"f\"\/> <tangent-line function=\"f\" point=\"a\"\/> <point p=\"(a, f(a))\"> <m>(a,f(a))<\/m> <\/point> <\/coordinates> <\/diagram>   The PreFigure source to produce   "
 },
 {
@@ -60,7 +60,7 @@ var ptx_lunr_docs = [
   "url": "sec-accessibility.html#listing-tangent-annotate",
   "type": "Listing",
   "number": "1.2.2",
-  "title": "",
+  "title": "The PreFigure source for the annotated diagram",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x) = exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"graph\" function='f' \/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <point at=\"point\" p=\"(a, f(a))\"> <m>(a,f(a))<\/m> <\/point> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"graph\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for the annotated diagram  "
 },
 {
@@ -150,7 +150,7 @@ var ptx_lunr_docs = [
   "url": "sec-coordinates.html#listing-sidebyside",
   "type": "Listing",
   "number": "2.2.3",
-  "title": "",
+  "title": "The PreFigure source for Figure 2.2.4",
   "body": "  <diagram dimensions=\"(410, 200)\" margins=\"5\"> <coordinates bbox=\"(0,0,1,1)\" destination=\"(0,0,200,200)\"> <rectangle lower-left=\"(0,0)\" dimensions=\"(1,1)\" fill=\"blue\"\/> <\/coordinates> <coordinates bbox=\"(0,0,1,1)\" destination=\"(210,0,410,200)\"> <rectangle lower-left=\"(0,0)\" dimensions=\"(1,1)\" fill=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for   "
 },
 {
@@ -177,7 +177,7 @@ var ptx_lunr_docs = [
   "url": "sec-coordinates.html#listing-zoom",
   "type": "Listing",
   "number": "2.2.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 2.2.5",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=3-x^2\/2<\/definition> <definition>a=1<\/definition> <definition>side=0.5<\/definition> <coordinates bbox=\"(0,0,4,4)\"> <grid-axes decorations=\"no\"\/> <graph function=\"f\"\/> <tangent-line function=\"f\" point=\"a\"\/> <point p=\"(a,f(a))\"\/> <rectangle center=\"(a,f(a))\" dimensions=\"(side, side)\" stroke=\"gray\"\/> <coordinates bbox=\"(a-side\/2,f(a)-side\/2,a+side\/2,f(a)+side\/2)\" destination=\"(2.25,2.25,3.75,3.75)\"> <rectangle center=\"(a,f(a))\" dimensions=\"(side, side)\" stroke=\"gray\" fill=\"white\"\/> <graph function=\"f\"\/> <tangent-line function=\"f\" point=\"a\"\/> <point p=\"(a,f(a))\"\/> <\/coordinates> <\/coordinates> <\/diagram>   The PreFigure source for   "
 },
 {
@@ -195,7 +195,7 @@ var ptx_lunr_docs = [
   "url": "sec-coordinates.html#listing-triangle",
   "type": "Listing",
   "number": "2.2.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 2.2.7",
   "body": "  <diagram dimensions=\"(300,270)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\" aspect-ratio=\"1\"> <grid-axes decorations=\"no\"\/> <circle center=\"(2,2)\" radius=\"1.5\" stroke=\"blue\"\/> <definition>vertices=((4,4), (8,1),(7,8))<\/definition> <triangle vertices=\"vertices\" labels=\"D,E,F\" angle-markers=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for   "
 },
 {
@@ -222,7 +222,7 @@ var ptx_lunr_docs = [
   "url": "sec-definition.html#listing-tangent-2",
   "type": "Listing",
   "number": "2.3.2",
-  "title": "",
+  "title": "The PreFigure source",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x)=exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph function=\"f\"\/> <tangent-line function=\"f\" point=\"a\"\/> <point p=\"(a, f(a))\"> <m>(a,f(a))<\/m> <\/point> <\/coordinates> <\/diagram>   The PreFigure source  "
 },
 {
@@ -240,7 +240,7 @@ var ptx_lunr_docs = [
   "url": "sec-definition.html#listing-linear-comb",
   "type": "Listing",
   "number": "2.3.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 2.3.3",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>v=(2,-1)<\/definition> <definition>w=(-2,3)<\/definition> <definition>comb=2*v+w<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes\/> <vector v=\"v\"\/> <vector v=\"w\"\/> <vector v=\"comb\" stroke=\"red\"\/> <label p=\"v\" alignment=\"se\"><m>{\\mathbf v}<\/m><\/label> <label p=\"w\" alignment=\"ne\"><m>{\\mathbf w}<\/m><\/label> <label p=\"comb\" alignment=\"ne\"><m>2{\\mathbf v}+{\\mathbf w}<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for   "
 },
 {
@@ -258,7 +258,7 @@ var ptx_lunr_docs = [
   "url": "sec-definition.html#listing-derivative",
   "type": "Listing",
   "number": "2.3.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 2.3.5",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=x^3-3*x+1<\/definition> <derivative name=\"fp\" function=\"f\"\/> <coordinates bbox=\"(-3,-3,3,3)\"> <grid-axes\/> <graph function=\"f\"\/> <graph function=\"fp\" stroke=\"green\"\/> <label p=\"(1.8,f(1.8))\" alignment=\"se\"><m>f(x)<\/m><\/label> <label p=\"(0.5,fp(0.5))\" alignment=\"se\"><m>f'(x)<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for   "
 },
 {
@@ -384,7 +384,7 @@ var ptx_lunr_docs = [
   "url": "sec-outlining.html#listing-outline",
   "type": "Listing",
   "number": "3.2.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.2.1.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>a=1<\/definition> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <rectangle center=\"(0,0)\" dimensions=\"(8,8)\" fill=\"lightgray\"\/> <graph function=\"f\" outline=\"yes\"\/> <point p=\"(a,f(a))\" size=\"10\" outline=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -420,7 +420,7 @@ var ptx_lunr_docs = [
   "url": "sec-outlining.html#listing-outline-group",
   "type": "Listing",
   "number": "3.2.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.2.5.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(y,t)=t-y<\/definition> <coordinates bbox=\"(-1,-1,4,4)\"> <grid-axes\/> <group outline=\"always\"> <plot-de-solution function=\"f\" t0=\"0\" y0=\"0\" domain=\"[0,4]\" outline=\"yes\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"2\" domain=\"[0,4]\" outline=\"yes\"\/> <\/group> <point p=\"(0,2)\"\/> <point p=\"(0,0)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -456,7 +456,7 @@ var ptx_lunr_docs = [
   "url": "sec-grid-axes.html#subsec-grid-axes-4",
   "type": "Listing",
   "number": "3.3.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.3.1.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-2,-2,5,5)\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -474,7 +474,7 @@ var ptx_lunr_docs = [
   "url": "sec-grid-axes.html#subsec-grid-axes-8",
   "type": "Listing",
   "number": "3.3.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.3.3.",
   "body": "  <diagram dimensions=\"(300,250)\" margins=\"(30,5,5,5)\"> <coordinates bbox=\"(-pi, -pi, 10*pi, pi)\"> <definition>f(x)=2*cos(x\/4-1)<\/definition> <grid-axes h-pi-format=\"yes\" v-pi-format=\"yes\"\/> <graph function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -492,7 +492,7 @@ var ptx_lunr_docs = [
   "url": "sec-grid-axes.html#subsec-grid-axes-12",
   "type": "Listing",
   "number": "3.3.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.3.5.",
   "body": "  <diagram dimensions=\"(300,250)\" margins=\"(35,30,50,30)\"> <coordinates bbox=\"(-4, -4, 4, 4)\"> <grid-axes h-frame=\"bottom\" v-frame=\"left\"\/> <axes decorations=\"no\"> <xlabel>Time <m>t<\/m><\/xlabel> <ylabel alignment=\"ne\">Temperature <m>F<\/m><\/ylabel> <\/axes> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -510,7 +510,7 @@ var ptx_lunr_docs = [
   "url": "sec-grid-axes.html#subsec-grid-4",
   "type": "Listing",
   "number": "3.3.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.3.7.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid spacings=\"((0,1,10),(0,1\/2,10))\" stroke=\"blue\" thickness=\"2\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -546,7 +546,7 @@ var ptx_lunr_docs = [
   "url": "sec-grid-axes.html#subsec-axes-7",
   "type": "Listing",
   "number": "3.3.12",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.3.11.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-2,-2,5,5)\"> <axes xlabel=\"\\alpha\" ylabel=\"g(\\alpha)\" hticks=\"(-2,1,5)\" hlabels=\"(-2,1,5)\" arrows=\"1\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -564,7 +564,7 @@ var ptx_lunr_docs = [
   "url": "sec-grid-axes.html#subsec-axes-11",
   "type": "Listing",
   "number": "3.3.14",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.3.13.",
   "body": "  <diagram dimensions=\"(300,250)\" margins=\"(35,30,50,30)\"> <coordinates bbox=\"(-4, -4, 4, 4)\"> <axes decorations=\"no\"> <xlabel>Time <m>t<\/m><\/xlabel> <ylabel alignment=\"ne\">Temperature <m>F<\/m><\/ylabel> <\/axes> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -591,7 +591,7 @@ var ptx_lunr_docs = [
   "url": "sec-labels.html#listing-label-example",
   "type": "Listing",
   "number": "3.4.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.4.1.",
   "body": "  <diagram dimensions=\"(250,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\"> <label anchor=\"(1,3)\" alignment=\"east\"> <m>\\displaystyle f(a)=\\frac{1}{2\\pi i}\\oint_C \\frac{f(z)}{z-a}~dz<\/m> <\/label> <label anchor=\"(1,2)\" alignment=\"east\"> Temperature <\/label> <label anchor=\"(0.5,1)\" alignment=\"east\" rotate=\"90\" scale=\"1.5\"> Time <m>t<\/m> (sec) <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -609,7 +609,7 @@ var ptx_lunr_docs = [
   "url": "sec-labels.html#listing-labels-lines",
   "type": "Listing",
   "number": "3.4.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.4.1.",
   "body": "  <diagram dimensions=\"(350,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,5)\"> <grid\/> <label anchor=\"(1,4)\" alignment=\"e\" justify=\"left\" clear-background=\"yes\"> This is a <b>bold<\/b> statement <newline\/> but we can have <it>itatics<\/it> <newline\/> and <it>italicized <b>bold<\/b><\/it> as well <\/label> <label anchor=\"(5,2)\" alignment=\"c\" justify=\"center\" clear-background=\"yes\" interline=\"10\"> Math can still appear: <newline\/> The <it>derivative<\/it> of <m>e^x<\/m> is <m>e^x<\/m> <\/label> <label anchor=\"(1,1)\" alignment=\"se\" scale=\"0.6\" clear-background=\"yes\"> Use the @scale attribute to change the font size. <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -645,7 +645,7 @@ var ptx_lunr_docs = [
   "url": "sec-labels.html#listing-color-labels",
   "type": "Listing",
   "number": "3.4.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.4.7.",
   "body": "  <diagram dimensions=\"(400,150)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,3)\"> <grid-axes decorations=\"no\"\/> <label anchor=\"(1,2)\" alignment=\"east\" color=\"red\" scale=\"1.5\" clear-background=\"yes\"> Everything <it>is in <b>red<\/b><\/it>: <m>\\int_0^1 e^x~dx<\/m> <\/label> <label anchor=\"(1,1)\" alignment=\"east\" scale=\"1.5\" clear-background=\"yes\"> <plain color=\"blue\">Individual<\/plain> parts <it color=\"green\">are<\/it> <b color=\"red\">colored:<\/b> <m color=\"magenta\">e^x<\/m> <\/label> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -663,7 +663,7 @@ var ptx_lunr_docs = [
   "url": "sec-labels.html#listing-legend",
   "type": "Listing",
   "number": "3.4.10",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.4.9.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=sin(x)<\/definition> <definition>g(x)=cos(x)<\/definition> <coordinates bbox=\"(-1,-1.5,10,2)\"> <grid-axes xlabel=\"t\"\/> <graph at=\"sin\" function=\"f\"\/> <graph at=\"cos\" function=\"g\" stroke=\"red\" dash=\"4 4\" tactile-dash=\"9 9\"\/> <point at=\"point\" p=\"(4,1)\" style=\"cross\" stroke=\"green\"\/> <rectangle at=\"rectangle\" center=\"(2,1.5)\" dimensions=\"(2,0.5)\" fill=\"magenta\" stroke=\"gray\"\/> <legend anchor=\"(bbox[2], bbox[3])\" alignment=\"sw\" opacity=\"0.9\" scale=\"0.9\" vertical-skip=\"10\"> <item ref=\"sin\"><m>x(t)<\/m><\/item> <item ref=\"cos\"><m>x'(t)<\/m><\/item> <item ref=\"point\">Point<\/item> <item ref=\"rectangle\">Rectangle<\/item> <\/legend> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -690,7 +690,7 @@ var ptx_lunr_docs = [
   "url": "sec-simple.html#listing-points",
   "type": "Listing",
   "number": "3.5.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.5.1.",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <coordinates bbox=\"(0, 0,5, 5)\"> <point p=\"(1,4)\" size=\"20\" style=\"box\" fill=\"green\" stroke=\"black\" thickness=\"4\"\/> <point p=\"(2.5, 2.5)\" size=\"15\" style=\"diamond\" fill=\"blue\" stroke=\"none\"\/> <point p=\"(3,1)\" size=\"10\"> <m>(a,(f(a))<\/m> <\/point> <point p=\"(1,1)\" style=\"cross\" thickness=\"3\"\/> <point p=\"(4,4)\" style=\"plus\" thickness=\"3\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -708,7 +708,7 @@ var ptx_lunr_docs = [
   "url": "sec-simple.html#listing-lines",
   "type": "Listing",
   "number": "3.5.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.5.3.",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,5)\"> <grid\/> <line endpoints=\"((1,4), (4,4.5))\" stroke=\"blue\" thickness=\"5\" arrows=\"1\"\/> <line p1=\"(1,3)\" p2=\"(4,2.5)\" stroke=\"lightgray\" thickness=\"20\"\/> <line p1=\"(1,3)\" p2=\"(4,2.5)\" endpoint-offsets=\"(10, -5)\" thickness=\"5\"\/> <line endpoints=\"((1,1.5),(4,2))\" stroke=\"green\" infinite=\"yes\"\/> <definition>p1=(1,1)<\/definition> <definition>p2=(4.5,0.5)<\/definition> <line endpoints=\"(p1,p2)\" endpoint-offsets=\"((10,0), (-10,0))\"\/> <label p=\"p1\" clear-background=\"yes\"><m>a<\/m><\/label> <label p=\"p2\" clear-background=\"yes\"><m>b<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -726,7 +726,7 @@ var ptx_lunr_docs = [
   "url": "sec-simple.html#listing-vectors",
   "type": "Listing",
   "number": "3.5.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.5.5.",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,5,5)\"> <grid-axes decorations=\"no\"\/> <vector v=\"(3,4)\"\/> <vector v=\"(1,3\/2)\" tail=\"(2,1)\" scale=\"2\" stroke=\"blue\"\/> <vector v=\"(1,3)\" tail=\"(3.5,1)\" head-location=\"0.8\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -753,7 +753,7 @@ var ptx_lunr_docs = [
   "url": "sec-simple.html#listing-polygon",
   "type": "Listing",
   "number": "3.5.9",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.5.8.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-5,-5,5,5)\"> <grid\/> <polygon points=\"((-2,-1),(-4,-1),(-4,2))\" closed=\"yes\" fill=\"blue\"\/> <polygon points=\"(2,1)+2*(cos(k*pi\/4),sin(k*pi\/4))\" parameter=\"k=0..7\" closed=\"yes\" stroke=\"red\" thickness=\"4\"\/> <polygon points=\"((-4,4),(-1,4),(-1,-3),(3,-3))\" corner-radius=\"10\" arrows=\"1\" thickness=\"5\" stroke=\"green\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -771,7 +771,7 @@ var ptx_lunr_docs = [
   "url": "sec-simple.html#listing-splines",
   "type": "Listing",
   "number": "3.5.11",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.5.10.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-4,-4,4,4)\"> <definition>f(k)=3*(cos(pi*k\/2), sin(pi*k\/2))<\/definition> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <spline points=\"(0,2,1,2,4)\" stroke=\"red\"\/> <spline points=\"((1,0),(2,0),(2,1),(1,2),(-1,2),(-2,0),(-1,-2),(1,0))\" t-values=\"(0,2,3,3.5,4,5,7,9)\" closed=\"yes\" stroke=\"blue\"\/> <spline points=\"f(k)\" parameter=\"k=0..4\" closed=\"yes\" stroke=\"orange\"\/> <circle center=\"(0,0)\" radius=\"3\" stroke=\"green\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -789,7 +789,7 @@ var ptx_lunr_docs = [
   "url": "sec-simple.html#listing-spline-domain",
   "type": "Listing",
   "number": "3.5.13",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.5.12.",
   "body": "  <diagram dimensions=\"(250,250)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <definition>points=((8,6),(6.5,7),(5,7.5),(3,8),(1.5,8),(0.5,7),(0.75,5),(2,3),(5,1),(7,0.5),(9,1),(9.5,2),(9.5,3),(9,4.5),(8,6))<\/definition> <coordinates bbox=\"(0,0,10,10)\"> <grid\/> <spline points=\"points\" arrows=\"1\" arrow-location=\"2.5\" stroke=\"blue\" thickness=\"4\" closed=\"yes\"\/> <spline points=\"points\" domain=\"(4,10)\" thickness=\"2\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -807,7 +807,7 @@ var ptx_lunr_docs = [
   "url": "sec-simple.html#listing-triangle-intro",
   "type": "Listing",
   "number": "3.5.15",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.5.14.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <triangle vertices=\"((1,1),(3,2),(1,5))\" labels=\"A,B,C\" show-vertices=\"yes\" point-fill=\"orange\" \/> <definition>vertices=((4,4), (8,1),(7,8))<\/definition> <triangle vertices=\"vertices\" labels=\"D,E,F\" angle-markers=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -834,7 +834,7 @@ var ptx_lunr_docs = [
   "url": "sec-circles.html#listing-circle",
   "type": "Listing",
   "number": "3.6.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.6.1.",
   "body": "  <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(-5,0,5,6)\"> <grid\/> <circle center=\"(-2,3)\" radius=\"2\" fill=\"blue\" thickness=\"5\"\/> <ellipse center=\"(2,3)\" axes=\"(1,2)\" stroke=\"red\" rotate=\"pi\/6\" degrees=\"no\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -852,7 +852,7 @@ var ptx_lunr_docs = [
   "url": "sec-circles.html#listing-arc",
   "type": "Listing",
   "number": "3.6.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.6.3.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-5,-5,5,5)\"> <grid\/> <arc center=\"(-2,2)\" radius=\"2\" range=\"(270,45)\" arrows=\"1\" stroke=\"orange\" thickness=\"5\" reverse=\"yes\"\/> <definition>points=((4,-2),(1,-2),(3,2))<\/definition> <arc points=\"points\" radius=\"2\" sector=\"yes\" fill=\"lightgray\"\/> <polygon points=\"points\" stroke=\"black\"\/> <arc center=\"(-2,-3)\" radius=\"1\" range=\"(-2*pi\/3, 2*pi\/3)\" degrees=\"no\" stroke=\"blue\" thickness=\"5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -870,7 +870,7 @@ var ptx_lunr_docs = [
   "url": "sec-circles.html#listing-angle-marker",
   "type": "Listing",
   "number": "3.6.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.6.5.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-5,-5,5,5)\"> <grid\/> <definition>points=((-2,1),(-4,2),(-1,4))<\/definition> <angle-marker points=\"points\" radius=\"20\" arrow=\"yes\"> <m>\\theta_1<\/m> <\/angle-marker> <polygon points=\"points\" stroke=\"black\"\/> <definition>points=((5,4),(2,2),(4,1))<\/definition> <angle-marker points=\"points\" radius=\"20\"> <m>\\theta_2<\/m> <\/angle-marker> <polygon points=\"points\" stroke=\"black\"\/> <definition>points=((3,-3),(-1,-4),(-3,0))<\/definition> <angle-marker points=\"points\" stroke=\"red\"\/> <angle-marker points=\"roll(points)\" stroke=\"red\"\/> <angle-marker points=\"roll(roll(points))\" stroke=\"red\"\/> <polygon points=\"points\" stroke=\"blue\" closed=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -888,7 +888,7 @@ var ptx_lunr_docs = [
   "url": "sec-circles.html#listing-rectangle",
   "type": "Listing",
   "number": "3.6.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.6.7.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-5,-5,5,5)\"> <grid\/> <rectangle lower-left=\"(-4,0)\" dimensions=\"(4,3)\" fill=\"green\"\/> <rectangle center=\"(2,-2)\" dimensions=\"(2,4)\" rotate=\"60\" stroke=\"blue\" thickness=\"5\" fill=\"white\" corner-radius=\"10\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -915,7 +915,7 @@ var ptx_lunr_docs = [
   "url": "sec-calculus.html#listing-graph",
   "type": "Listing",
   "number": "3.7.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.7.1.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=x^3\/8 - 1.5*x<\/definition> <definition>g(s)=-sqrt(s+2)-1<\/definition> <coordinates bbox=\"(-5,-5,5,5)\"> <grid-axes decorations=\"no\"\/> <graph function=\"f\"\/> <graph function=\"g\" domain=\"(-2,5)\" stroke=\"green\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -933,7 +933,7 @@ var ptx_lunr_docs = [
   "url": "sec-calculus.html#listing-tangent-line",
   "type": "Listing",
   "number": "3.7.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.7.3.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=x^3\/8 - 1.5*x<\/definition> <coordinates bbox=\"(-5,-5,5,5)\"> <grid-axes decorations=\"no\"\/> <graph function=\"f\"\/> <tangent-line function=\"f\" point=\"-1.5\"\/> <tangent-line function=\"f\" point=\"1.5\" domain=\"(0,3)\" stroke=\"green\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -951,7 +951,7 @@ var ptx_lunr_docs = [
   "url": "sec-calculus.html#listing-parametric",
   "type": "Listing",
   "number": "3.7.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.7.5.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t)=3*(cos(t), sin(t)) + (cos(10*t),sin(10*t))<\/definition> <definition>g(t)=(t^2,t^3)<\/definition> <coordinates bbox=\"(-5,-5,5,5)\"> <grid-axes decorations=\"no\"\/> <parametric-curve function=\"f\" domain=\"(0,2*pi)\" N=\"200\" closed=\"yes\"\/> <parametric-curve function=\"g\" domain=\"(-2,2)\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -969,7 +969,7 @@ var ptx_lunr_docs = [
   "url": "sec-calculus.html#listing-implicit-curve",
   "type": "Listing",
   "number": "3.7.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.7.7.",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition>f(x,y) = y^2 - x^3 + x<\/definition> <coordinates bbox=\"[-2,-2,2,2]\"> <grid-axes \/> <implicit-curve function=\"f\" k=\"-1\" stroke=\"orange\" \/> <implicit-curve function=\"f\" k=\"1\" stroke=\"orange\" \/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -987,7 +987,7 @@ var ptx_lunr_docs = [
   "url": "sec-calculus.html#listing-area",
   "type": "Listing",
   "number": "3.7.10",
-  "title": "",
+  "title": "The PreFigure source for the diagrams inFigure 3.7.9.",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition>f(x)=2*sqrt(x)<\/definition> <coordinates bbox=\"[-1,-1,5,5]\"> <grid-axes \/> <area-under-curve function=\"f\" domain=\"(1,4)\" fill=\"lightgray\" stroke=\"black\"\/> <graph function=\"f\" domain=\"(0,5)\"\/> <\/coordinates> <\/diagram>    <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition>f(x)=sqrt(x)<\/definition> <definition>g(x)=-2*atan(x)<\/definition> <coordinates bbox=\"[-1,-3,5,3]\"> <grid-axes \/> <area-between-curves function1=\"f\" function2=\"g\" domain=\"(1,3)\" fill=\"lightgray\" stroke=\"black\"\/> <graph function=\"f\" domain=\"(0,5)\"\/> <graph function=\"g\" domain=\"(0,5)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagrams in .  "
 },
 {
@@ -1005,7 +1005,7 @@ var ptx_lunr_docs = [
   "url": "sec-calculus.html#listing-riemann-sum",
   "type": "Listing",
   "number": "3.7.12",
-  "title": "",
+  "title": "The PreFigure source for the diagrams inFigure 3.7.11.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x) = 2*log(x+2)<\/definition> <coordinates bbox=\"[-1,-1,5,5]\"> <grid-axes\/> <riemann-sum function=\"f\" domain=\"(1,4)\" rule=\"right\" N=\"6\" fill=\"lawngreen\" stroke=\"black\" width=\"1\"\/> <graph function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagrams in .  "
 },
 {
@@ -1032,7 +1032,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-slope-field",
   "type": "Listing",
   "number": "3.8.2",
-  "title": "",
+  "title": "The PreFigure source for the slope field of a 1-variable differential equation",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of a 1-variable differential equation  "
 },
 {
@@ -1041,7 +1041,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-slope-field-2",
   "type": "Listing",
   "number": "3.8.3",
-  "title": "",
+  "title": "The PreFigure source for the slope field of an autonomous sytem.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"10\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" arrows=\"yes\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the slope field of an autonomous sytem.  "
 },
 {
@@ -1059,7 +1059,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-de-plot",
   "type": "Listing",
   "number": "3.8.5",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.8.4.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes\/> <slope-field function=\"f\"\/> <de-solve function=\"f\" t0=\"0\" y0=\"3\" t1=\"4\" name=\"linear\"\/> <plot-de-solution solution=\"linear\" stroke=\"red\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"-2\" t1=\"4\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1077,7 +1077,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-de-plot-2",
   "type": "Listing",
   "number": "3.8.7",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.8.6.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-1,-4,6,4]\"> <grid-axes\/> <de-solve function=\"f\" t0=\"0\" t1=\"6\" y0=\"(3,0)\" name=\"oscillator\"\/> <plot-de-solution solution=\"oscillator\" axes=\"(t,y0)\"\/> <plot-de-solution solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1095,7 +1095,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-de-phase",
   "type": "Listing",
   "number": "3.8.9",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.8.8.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"12\"> <definition>f(t,y) = (y[1],-y[0])<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"y_0\" ylabel=\"y_1\"\/> <slope-field function=\"f\" system=\"yes\" stroke=\"darkorange\" arrows=\"yes\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" y0=\"(1,0)\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" method=\"RK23\" y0=\"(2,0)\" axes=\"(y0,y1)\"\/> <plot-de-solution function=\"f\" t0=\"0\" t1=\"2*pi\" method=\"LSODA\" y0=\"(3,0)\" axes=\"(y0,y1)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1113,7 +1113,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-de-pulse",
   "type": "Listing",
   "number": "3.8.11",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.8.10.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"(20,5,20,25)\"> <coordinates bbox=\"[-0.5,-2,8,20]\"> <definition>f(t,y)=chi_oc(-inf,4,t)*10-y<\/definition> <grid-axes \/> <slope-field function=\"f\" arrows=\"yes\" stroke=\"gray\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"0\" t1=\"bbox[2]\" max-step=\"0.1\"\/> <plot-de-solution function=\"f\" t0=\"0\" y0=\"20\" t1=\"bbox[2]\" max-step=\"0.1\" stroke=\"red\"\/> <label anchor=\"(bbox[2],0)\" alignment=\"ne\" offset=\"(4,0)\"> <m>t<\/m> <\/label> <label anchor=\"(0,bbox[3])\" alignment=\"ne\"><m>y(t)<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1131,7 +1131,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-de-delta",
   "type": "Listing",
   "number": "3.8.13",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.8.12.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes decorations=\"yes\" xlabel=\"t\" ylabel=\"y\"\/> <definition> f(t,y)=(y[1],-y[0]-y[1]+5*delta(t,-2)+3*delta(t,1)) <\/definition> <plot-de-solution function=\"f\" t0=\"-4\" t1=\"4\" y0=\"(0,0)\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1149,7 +1149,7 @@ var ptx_lunr_docs = [
   "url": "sec-diffeqs.html#listing-eulers-method",
   "type": "Listing",
   "number": "3.8.15",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.8.14.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"20\"> <coordinates bbox=\"(-1,-1,10,8)\"> <definition>f(t,y) = 0.1*y*(6-y)<\/definition> <definition>N=5<\/definition> <definition>points = eulers_method(f,0,1,bbox[2],N)<\/definition> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\" stroke=\"cornflowerblue\"\/> <polygon points=\"points\" stroke=\"red\"\/> <repeat parameter=\"k=0..N\"> <point p=\"points[k]\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1159,7 +1159,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.9",
   "title": "Networks",
-  "body": " Networks   PreFigure enables authors to create diagrams of networks, such as that shown in . Mathematicians sometimes refer to these as graphs , but we will use the term network to distinguish them from graphs of functions. There is quite a bit of flexibility as will be explained in the remainder of this section.      A simple network.     Getting started  Let's begin by discussing . Notice that it is a directed network and that there are multiple edges between two of the vertices. The PreFigure source is in .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" graph=\"graph\" arrows=\"end\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   The network is defined by the dictionary in line 2 where each key in the dictionary defines a node in the network and the corresponding value lists the nodes connected by edges. Notice that node 1 is connected to node 5 by two edges, as seen in the diagram.  The <network> element then constructs the graphical representation of the network. There are quite a few attributes for that element so let's take a moment to consider them.  graph  The graph attribute tells PreFigure about the dictionary that defines the structure of the network.   directed  The attribute directed=\"yes\" declares this to be a directed network, which means that the edges have a direction indicated by arrows. If this attribute is set to \"no\" , which is the default, then no arrows are placed on the edges.   arrows  For a directed graph, this attribute controls where the arrowheads appear. There are two values, arrows=\"end\" and arrows=\"middle\" with middle being the default.  labels  Use labels=\"yes\" to include labels inside the nodes.   scale  The nodes will fit just inside the bounding box defined by the current coordinate system so the value of scale can be used to pull the nodes in toward the center. The default is scale=\"0.8\" .   node-fill  The node-fill attribute defines the color to use when filling the nodes. This is part of a collection of attributes that control the visual appearance of the network. Each <node> will generate a <point> so other attributes include node-stroke , node-thickness , node-size , node-style .  Similarly, an edge will generate a <path> so some path attributes can be applied, such as edge-stroke , edge-thickness , and edge-dash .   loop-scale  As described in more detail below, this attribute provides some control over how the shape of loops.   label-dictionary  If the value of this attribute is a dictionary {0:'a', 1:'b'} , then the node whose handle is 0 will be given the label . Similarly, the node whose handle is 1 will be given the label . This is demonstrated in .   seed  Some algorithms that determine the positions of the nodes uses a random seed. To ensure consistent behavior while you are developing a diagram, set the value of the seed attribute so that the nodes will stay in the same position from one compilation to the next. If you are not satisfied with the appearance of the network, you could try using a different seed.       A more verbose network  A second way of defining the same network is shown in . In this case, we do not define the structure of the network using a dictionary. Instead, we include <node> elements as children of <network> . The edges attribute for each node defines the edges connecting that node to others. .   <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <node at=\"1\" edges=\"[3,4,5,5]\"\/> <node at=\"2\" edges=\"[4,5]\"\/> <node at=\"3\" edges=\"[4,5]\"\/> <node at=\"4\"\/> <node at=\"5\"\/> <node at=\"6\" edges=\"[2,4]\"\/> <\/network> <\/coordinates> <\/diagram>   Another PreFigure source for .   In fact, we can mix these two approaches to defining the network for more flexibility as demonstrated by the next example.       graph={0:[0,1], 1:[0]}  labels={0:'a', 1:'b'}   S  1    1       Using different features to define the network structure.     <diagram dimensions=\"(250,250)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[0,1], 1:[0]}<\/definition> <definition>labels={0:'a', 1:'b'}<\/definition> <network directed=\"yes\" graph=\"graph\" arrows=\"middle\" seed=\"1\" node-size=\"15\" scale=\"0.5\" node-fill=\"white\" labels=\"yes\" label-dictionary=\"labels\"> <node at=\"2\" style=\"double-circle\"><m>S<\/m><\/node> <edge vertices=\"(2,2)\">1<\/edge> <edge vertices=\"(2,1)\"\/> <edge vertices=\"(2,0)\"\/> <edge vertices=\"(0,0)\" label-location=\"0.6\">1<\/edge> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   First notice that a subgraph is defined by the graph attribute of the <network> element. Furthermore, a third node is defined using a <node> , which enables us to change some properties of this node, such as its style and its label. Some edges are added using <edge> elements, and one edge, which was added to the graph through the graph attribute, is given a label and the location of the label specified by the label-location attribute, which is a value between 0 and 1.  There are some general principles at play:  Nodes and edges can be defined through the network's graph attribute. Network features defined in this way inherit the properties, such as node style, defined as an attribute of the <network> element.  A <node> element should be defined with a handle given by its at attribute. If the handle already exists in the graph as defined through the network's graph attribute, then this element will act as a replacement. If the handle is a new one, then this element is added to the graph structure. Edges defined through a node's edges attribute are considered to be new edges and so are added to the graph and drawn with the default appearance.  An <edge> element also obeys the previous principle. This provides a way to override the appearance of previously defined edges or to define new edges and their appearance.    A loop is just an edge that connects a node with itself. By default, a loop will be drawn approximately as a circle whose radius depends on the size of the node. As demonstrated in , loops will be drawn centered in the largest gap between a node's outgoing and incoming edges. However, the loop-orientation attribute of a node can be used to change this behavior. The value of this attribute is an angle, given in degrees.  The dimensions of a loop can be controlled using the loop-scale attribute of the <edge> element. The value of this attribute is an ordered pair of scaling factors, with the first scaling radially and the second tranversally, that are applied to the loop. This attribute may be added to the <network> in which case the value is applied to every loop that does not have a loop-scale attribute in its <edge> element.  These last two attributes are demonstrated in .         S_0    S_1   0  0  1  1       Some attributes to control the appearance of loops.     <diagram dimensions=\"(300,150)\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(-1,-1,1,2)\"> <network directed=\"yes\" arrows=\"end\" node-fill=\"lightskyblue\" node-stroke=\"black\" node-size=\"25\" tactile-node-size=\"60\" labels=\"yes\"> <node at=\"0\" p=\"(-0.5,0)\" style=\"double-circle\" loop-orientation=\"90\"> <m>S_0<\/m> <\/node> <node at=\"1\" p=\"(0.5,0)\" loop-orientation=\"90\"> <m>S_1<\/m> <\/node> <edge vertices=\"(1,0)\">0<\/edge> <edge vertices=\"(0,1)\">0<\/edge> <edge vertices=\"(0,0)\" loop-scale=\"(0.6,0.5)\">1<\/edge> <edge vertices=\"(1,1)\" loop-scale=\"(0.6,0.5)\">1<\/edge> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .     Positioning the nodes  PreFigure relies on the Python package networkx to determine the positions of the nodes, a process referred to as layout . This subsection shows some examples that demonstrate the possibilities.  First, we may explicitly declare where we would like the nodes to be by including a p attribute for each node.      The complete graph on 5 vertices.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\" edges=\"[1,2,3,4]\"\/> <node at=\"1\" p=\"f(1)\" edges=\"[2,3,4]\"\/> <node at=\"2\" p=\"f(2)\" edges=\"[3,4]\"\/> <node at=\"3\" p=\"f(3)\" edges=\"[4]\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   Alternatively, we can define the structure of the graph by including a graph attribute inside the <network> element and then using <node> elements to set the positions. This is seen in .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[1,2,3,4], 1:[2,3,4], 2:[3,4], 3:[4]}<\/definition> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" graph=\"graph\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\"\/> <node at=\"1\" p=\"f(1)\"\/> <node at=\"2\" p=\"f(2)\"\/> <node at=\"3\" p=\"f(3)\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   A second source for .   Nodes are created when they are referenced in the dictionary defined by the graph attribute. When a <node> element is encountered inside the <network> element, PreFigure checks to see if the node has already been defined. If not, it will add it to the graph using the edges attribute to append more structure to the network. While this is allowed, it is not necessary and could be confusing to author and maintain a network defined like this.  In these last two examples, we have specified the position of the nodes as an attribute inside the <node> element. If we would like networkx to position the nodes, we have some more options.  We can prescribe a different layout method using the layout attribute of the <network> element. The diagram in illustrates how the layout=\"bfs\" can be used to illustrate a binary tree.      A binary tree.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition> graph={0:[1,2],1:[3,4],2:[5,6],3:[7,8],4:[9,10],5:[11,12],6:[13,14]} <\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <rectangle center=\"(0,0)\" dimensions=\"(2,2)\" stroke=\"black\"\/> <network layout=\"bfs\" start=\"0\" graph=\"graph\" node-fill=\"orange\" rotate=\"-90\" scale=\"0.8\"> <node at=\"0\" fill=\"red\"\/> <edge vertices=\"[0,1]\" stroke=\"blue\" thickness=\"4\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   There are a couple of features to notice here. If we use the bfs algorithm for the layout, we need to specify a node at which to start . This is an attribute of the <network> element.  The bfs algorithm produces a tree that moves from left to right. To depict the tree with the root at the top, we use rotate=\"-90\" to rotate the graph.  Since we would like the root to be colored differently, we use a <node> element to specify the color of that node.  In the same way, we use an <edge> element to modify the appearance of a particular edge that has already been added to the graph structure. If the edge has not been added previously, then it will be added to the structure of the graph.  Here are the possible values of the layout attribute.  spring  This is the default if layout is not specifically defined. This algorithm begins by randomly positioning the nodes, and an optional seed attribute declares the seed for the algorithm.   bfs  This is the breadth-first search algorithm demonstrated above. The root of the tree needs to be declared with the start attribute.   circular  The nodes are equally spaced around a circle.   random  Nodes are randomly positioned using the value of the seed attribute, which is 1 by default.   bipartite  Used for bipartite graphs. The bipartite-set attribute, whose value is a list of handles describing the nodes in one of the two sets, is required. The alignment attribute can be set to vertical or horizontal , which is the default.   planar  Lays out planar graphs so that edges do not cross.   spectral  See the networkx documentation.     After the nodes are positioned by networkx , sets up a coordinate transformation so that the nodes will be positioned in the current bounding box. Because a <network> may have loops or nodes drawn with a large size, an author may wish to pull the nodes into the center of the bounding box so that, say, a loop does not leave the bounding box. The scale attribute of the <network> , which is 0.8 by default, determines the degree to which nodes are pulled into the center.    Putting everything together  Networks have a lot of features so it may be worthwhile to show an example that illustrates how these features can be used in mathematical exposition. Suppose that we would like to explain the idea of a spanning tree as a subgraph of a graph . On the left of is the graph with a collection of dashed edges. If we remove those edges, we obtain a spanning tree as shown on the right. To make the point clear, we would like the nodes to be in the same positions in both diagrams.       A graph with some edges indicated on the left. When those edges are removed, we have a spanning tree as seen on the right.     <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" dash=\"9 9\"\/> <edge vertices=\"[1,4]\" dash=\"9 9\"\/> <edge vertices=\"[4,6]\" dash=\"9 9\"\/> <edge vertices=\"[2,4]\" dash=\"9 9\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the left of .   The PreFigure source for is shown in . Notice how the structure of the graph is defined using a dictionary with instructions given to draw some edges as dashed lines.  The PreFigure source to create the diagram on the right is quite similar except that we replace dash=\"9 9\" in the <edge> elements with stroke=\"none\" .    <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" stroke=\"none\"\/> <edge vertices=\"[1,4]\" stroke=\"none\"\/> <edge vertices=\"[4,6]\" stroke=\"none\"\/> <edge vertices=\"[2,4]\" stroke=\"none\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the right of .     Annotating networks  Handles are automatically given to the nodes and edges in a <network> so that the network can be annotated. For instance,  when a node is defined with the label a , its handle becomes node-a .  an edge from node a to node b has the handle edge-a-b .  a loop at node a has the handle loop-a .  if there are multiple edges from node a to node b , they acquire the handles node-a-b-0 , node-a-b-1 , and so forth. The same is true for loops.    demonstrates an annotated network.      graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}   4   \\alpha                                      An annotated network whose source is given in .     <diagram dimensions=\"(300,300)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <network directed=\"yes\" graph=\"graph\" scale=\"0.7\" node-fill=\"#fcf\" node-stroke=\"black\" node-style=\"circle\" node-size=\"15\" arrows=\"end\" seed=\"1\" labels=\"yes\" tactile-node-size=\"45\"> <edge vertices=\"(1,2)\">4<\/edge> <edge vertices=\"(2,2)\" label-location=\"0.3\" loop-scale=\"(0.8,0.8)\"> <m>\\alpha<\/m> <\/edge> <node at=\"2\" style=\"double-circle\"\/> <\/network> <annotations> <annotation ref=\"figure\" text=\"A directed network with nodes and edges\"> <annotation ref=\"node-1\" text=\"The node 1\"> <annotation ref=\"edge-1-3\" text=\"An edge from node 1 to node 3\"\/> <annotation ref=\"edge-1-4\" text=\"An edge from node 1 to node 4\"\/> <annotation ref=\"edge-1-5-0\" text=\"An edge from node 1 to node 5\"\/> <annotation ref=\"edge-1-5-1\" text=\"A second edge from node 1 to node 5\"\/> <\/annotation> <annotation ref=\"node-2\" text=\"The node 2\"> <annotation ref=\"edge-2-4\" text=\"An edge from node 2 to node 4\"\/> <annotation ref=\"edge-2-5\" text=\"An edge from node 2 to node 5\"\/> <annotation ref=\"loop-2\" text=\"A loop from node 2 to itself\"\/> <\/annotation> <annotation ref=\"node-3\" text=\"The node 2\"> <annotation ref=\"edge-1-3\" text=\"An incoming edge from node 1\"\/> <annotation ref=\"edge-3-4\" text=\"An edge from node 3 to node 4\"\/> <annotation ref=\"edge-3-5\" text=\"An edge from node 3 to node 5\"\/> <\/annotation> <annotation ref=\"node-5\" text=\"The node 5 and four incoming edges\"> <annotation ref=\"edge-1-5-0\" text=\"An incoming edge from node 1\"\/> <annotation ref=\"edge-1-5-1\" text=\"A second incoming edge from node 1\"\/> <annotation ref=\"edge-2-5\" text=\"An incoming edge from node 2\"\/> <annotation ref=\"edge-3-5\" text=\"An incoming edge from node 3\"\/> <\/annotation> <annotation ref=\"node-6\" text=\"The node 2\"> <annotation ref=\"edge-6-2\" text=\"An edge from node 6 to node 2\"\/> <annotation ref=\"edge-6-4\" text=\"An edge from node 6 to node 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .    "
+  "body": " Networks   PreFigure enables authors to create diagrams of networks, such as that shown in . Mathematicians sometimes refer to these as graphs , but we will use the term network to distinguish them from graphs of functions. There is quite a bit of flexibility as will be explained in the remainder of this section.      A simple network.     Getting started  Let's begin by discussing . Notice that it is a directed network and that there are multiple edges between two of the vertices. The PreFigure source is in .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" graph=\"graph\" arrows=\"end\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   The network is defined by the dictionary in line 2 where each key in the dictionary defines a node in the network and the corresponding value lists the nodes connected by edges. Notice that node 1 is connected to node 5 by two edges, as seen in the diagram.  The <network> element then constructs the graphical representation of the network. There are quite a few attributes for that element so let's take a moment to consider them.  graph  The graph attribute tells PreFigure about the dictionary that defines the structure of the network.   directed  The attribute directed=\"yes\" declares this to be a directed network, which means that the edges have a direction indicated by arrows. If this attribute is set to \"no\" , which is the default, then no arrows are placed on the edges.   arrows  For a directed graph, this attribute controls where the arrowheads appear. There are two values, arrows=\"end\" and arrows=\"middle\" with middle being the default.  labels  Use labels=\"yes\" to include labels inside the nodes.   scale  The nodes will fit just inside the bounding box defined by the current coordinate system so the value of scale can be used to pull the nodes in toward the center. The default is scale=\"0.8\" .   node-fill  The node-fill attribute defines the color to use when filling the nodes. This is part of a collection of attributes that control the visual appearance of the network. Each <node> will generate a <point> so other attributes include node-stroke , node-thickness , node-size , node-style .  Similarly, an edge will generate a <path> so some path attributes can be applied, such as edge-stroke , edge-thickness , and edge-dash .   loop-scale  As described in more detail below, this attribute provides some control over how the shape of loops.   label-dictionary  If the value of this attribute is a dictionary {0:'a', 1:'b'} , then the node whose handle is 0 will be given the label . Similarly, the node whose handle is 1 will be given the label . This is demonstrated in .   seed  Some algorithms that determine the positions of the nodes uses a random seed. To ensure consistent behavior while you are developing a diagram, set the value of the seed attribute so that the nodes will stay in the same position from one compilation to the next. If you are not satisfied with the appearance of the network, you could try using a different seed.       A more verbose network  A second way of defining the same network is shown in . In this case, we do not define the structure of the network using a dictionary. Instead, we include <node> elements as children of <network> . The edges attribute for each node defines the edges connecting that node to others. .   <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <node at=\"1\" edges=\"[3,4,5,5]\"\/> <node at=\"2\" edges=\"[4,5]\"\/> <node at=\"3\" edges=\"[4,5]\"\/> <node at=\"4\"\/> <node at=\"5\"\/> <node at=\"6\" edges=\"[2,4]\"\/> <\/network> <\/coordinates> <\/diagram>   Another PreFigure source for .   In fact, we can mix these two approaches to defining the network for more flexibility as demonstrated by the next example.       graph={0:[0,1], 1:[0]}  labels={0:'a', 1:'b'}   S  1    1       Using different features to define the network structure.     <diagram dimensions=\"(250,250)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[0,1], 1:[0]}<\/definition> <definition>labels={0:'a', 1:'b'}<\/definition> <network directed=\"yes\" graph=\"graph\" arrows=\"middle\" seed=\"1\" node-size=\"15\" scale=\"0.5\" node-fill=\"white\" labels=\"yes\" label-dictionary=\"labels\"> <node at=\"2\" style=\"double-circle\"><m>S<\/m><\/node> <edge vertices=\"(2,2)\">1<\/edge> <edge vertices=\"(2,1)\"\/> <edge vertices=\"(2,0)\"\/> <edge vertices=\"(0,0)\" label-location=\"0.6\">1<\/edge> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   First notice that a subgraph is defined by the graph attribute of the <network> element. Furthermore, a third node is defined using a <node> , which enables us to change some properties of this node, such as its style and its label. Some edges are added using <edge> elements, and one edge, which was added to the graph through the graph attribute, is given a label and the location of the label specified by the label-location attribute, which is a value between 0 and 1.  There are some general principles at play:  Nodes and edges can be defined through the network's graph attribute. Network features defined in this way inherit the properties, such as node style, defined as an attribute of the <network> element.  A <node> element should be defined with a handle given by its at attribute. If the handle already exists in the graph as defined through the network's graph attribute, then this element will act as a replacement. If the handle is a new one, then this element is added to the graph structure. Edges defined through a node's edges attribute are considered to be new edges and so are added to the graph and drawn with the default appearance.  An <edge> element also obeys the previous principle. This provides a way to override the appearance of previously defined edges or to define new edges and their appearance.    A loop is just an edge that connects a node with itself. By default, a loop will be drawn approximately as a circle whose radius depends on the size of the node. As demonstrated in , loops will be drawn centered in the largest gap between a node's outgoing and incoming edges. However, the loop-orientation attribute of a node can be used to change this behavior. The value of this attribute is an angle, given in degrees.  The dimensions of a loop can be controlled using the loop-scale attribute of the <edge> element. The value of this attribute is an ordered pair of scaling factors, with the first scaling radially and the second tranversally, that are applied to the loop. This attribute may be added to the <network> in which case the value is applied to every loop that does not have a loop-scale attribute in its <edge> element.  These last two attributes are demonstrated in .         S_0    S_1   0  0  1  1       Some attributes to control the appearance of loops.     <diagram dimensions=\"(300,150)\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(-1,-1,1,2)\"> <network directed=\"yes\" arrows=\"end\" node-fill=\"lightskyblue\" node-stroke=\"black\" node-size=\"25\" tactile-node-size=\"60\" labels=\"yes\"> <node at=\"0\" p=\"(-0.5,0)\" style=\"double-circle\" loop-orientation=\"90\"> <m>S_0<\/m> <\/node> <node at=\"1\" p=\"(0.5,0)\" loop-orientation=\"90\"> <m>S_1<\/m> <\/node> <edge vertices=\"(1,0)\">0<\/edge> <edge vertices=\"(0,1)\">0<\/edge> <edge vertices=\"(0,0)\" loop-scale=\"(0.6,0.5)\">1<\/edge> <edge vertices=\"(1,1)\" loop-scale=\"(0.6,0.5)\">1<\/edge> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .     Positioning the nodes  PreFigure relies on the Python package networkx to determine the positions of the nodes, a process referred to as layout . This subsection shows some examples that demonstrate the possibilities.  First, we may explicitly declare where we would like the nodes to be by including a p attribute for each node.      The complete graph on 5 vertices.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\" edges=\"[1,2,3,4]\"\/> <node at=\"1\" p=\"f(1)\" edges=\"[2,3,4]\"\/> <node at=\"2\" p=\"f(2)\" edges=\"[3,4]\"\/> <node at=\"3\" p=\"f(3)\" edges=\"[4]\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   Alternatively, we can define the structure of the graph by including a graph attribute inside the <network> element and then using <node> elements to set the positions. This is seen in .    <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[1,2,3,4], 1:[2,3,4], 2:[3,4], 3:[4]}<\/definition> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" graph=\"graph\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\"\/> <node at=\"1\" p=\"f(1)\"\/> <node at=\"2\" p=\"f(2)\"\/> <node at=\"3\" p=\"f(3)\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   A second source for .   Nodes are created when they are referenced in the dictionary defined by the graph attribute. When a <node> element is encountered inside the <network> element, PreFigure checks to see if the node has already been defined. If not, it will add it to the graph using the edges attribute to append more structure to the network. While this is allowed, it is not necessary and could be confusing to author and maintain a network defined like this.  In these last two examples, we have specified the position of the nodes as an attribute inside the <node> element. If we would like networkx to position the nodes, we have some more options.  We can prescribe a different layout method using the layout attribute of the <network> element. The diagram in illustrates how the layout=\"bfs\" can be used to illustrate a binary tree.      A binary tree.     <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition> graph={0:[1,2],1:[3,4],2:[5,6],3:[7,8],4:[9,10],5:[11,12],6:[13,14]} <\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <rectangle center=\"(0,0)\" dimensions=\"(2,2)\" stroke=\"black\"\/> <network layout=\"bfs\" start=\"0\" graph=\"graph\" node-fill=\"orange\" rotate=\"-90\" scale=\"0.8\"> <node at=\"0\" fill=\"red\"\/> <edge vertices=\"[0,1]\" stroke=\"blue\" thickness=\"4\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .   There are a couple of features to notice here. If we use the bfs algorithm for the layout, we need to specify a node at which to start . This is an attribute of the <network> element.  The bfs algorithm produces a tree that moves from left to right. To depict the tree with the root at the top, we use rotate=\"-90\" to rotate the graph.  Since we would like the root to be colored differently, we use a <node> element to specify the color of that node.  In the same way, we use an <edge> element to modify the appearance of a particular edge that has already been added to the graph structure. If the edge has not been added previously, then it will be added to the structure of the graph.  Here are the possible values of the layout attribute.  spring  This is the default if layout is not specifically defined. This algorithm begins by randomly positioning the nodes, and an optional seed attribute declares the seed for the algorithm.   bfs  This is the breadth-first search algorithm demonstrated above. The root of the tree needs to be declared with the start attribute.   circular  The nodes are equally spaced around a circle.   random  Nodes are randomly positioned using the value of the seed attribute, which is 1 by default.   bipartite  Used for bipartite graphs. The bipartite-set attribute, whose value is a list of handles describing the nodes in one of the two sets, is required. The alignment attribute can be set to vertical or horizontal , which is the default.   planar  Lays out planar graphs so that edges do not cross.   spectral  See the networkx documentation.     After the nodes are positioned by networkx , sets up a coordinate transformation so that the nodes will be positioned in the current bounding box. Because a <network> may have loops or nodes drawn with a large size, an author may wish to pull the nodes into the center of the bounding box so that, say, a loop does not leave the bounding box. The scale attribute of the <network> , which is 0.8 by default, determines the degree to which nodes are pulled into the center.    Putting everything together  Networks have a lot of features so it may be worthwhile to show an example that illustrates how these features can be used in mathematical exposition. Suppose that we would like to explain the idea of a spanning tree as a subgraph of a graph . On the left of is the graph with a collection of dashed edges. If we remove those edges, we obtain a spanning tree as shown on the right. To make the point clear, we would like the nodes to be in the same positions in both diagrams.       A graph with some edges indicated on the left. When those edges are removed, we have a spanning tree as seen on the right.     <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" dash=\"9 9\"\/> <edge vertices=\"[1,4]\" dash=\"9 9\"\/> <edge vertices=\"[4,6]\" dash=\"9 9\"\/> <edge vertices=\"[2,4]\" dash=\"9 9\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the left of .   The PreFigure source for is shown in . Notice how the structure of the graph is defined using a dictionary with instructions given to draw some edges as dashed lines.  The PreFigure source to create the diagram on the right is quite similar except that we replace dash=\"9 9\" in the <edge> elements with stroke=\"none\" .    <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" stroke=\"none\"\/> <edge vertices=\"[1,4]\" stroke=\"none\"\/> <edge vertices=\"[4,6]\" stroke=\"none\"\/> <edge vertices=\"[2,4]\" stroke=\"none\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the right of .     Annotating networks  Handles are automatically given to the nodes and edges in a <network> so that the network can be annotated. For instance,  when a node is defined with the label a , its handle becomes node-a .  an edge from node a to node b has the handle edge-a-b .  a loop at node a has the handle loop-a .  if there are multiple edges from node a to node b , they acquire the handles edge-a-b-0 , edge-a-b-1 , and so forth. The same is true for loops.    demonstrates an annotated network.      graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}   4   \\alpha                                      An annotated network whose source is given in .     <diagram dimensions=\"(300,300)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <network directed=\"yes\" graph=\"graph\" scale=\"0.7\" node-fill=\"#fcf\" node-stroke=\"black\" node-style=\"circle\" node-size=\"15\" arrows=\"end\" seed=\"1\" labels=\"yes\" tactile-node-size=\"45\"> <edge vertices=\"(1,2)\">4<\/edge> <edge vertices=\"(2,2)\" label-location=\"0.3\" loop-scale=\"(0.8,0.8)\"> <m>\\alpha<\/m> <\/edge> <node at=\"2\" style=\"double-circle\"\/> <\/network> <annotations> <annotation ref=\"figure\" text=\"A directed network with nodes and edges\"> <annotation ref=\"node-1\" text=\"The node 1\"> <annotation ref=\"edge-1-3\" text=\"An edge from node 1 to node 3\"\/> <annotation ref=\"edge-1-4\" text=\"An edge from node 1 to node 4\"\/> <annotation ref=\"edge-1-5-0\" text=\"An edge from node 1 to node 5\"\/> <annotation ref=\"edge-1-5-1\" text=\"A second edge from node 1 to node 5\"\/> <\/annotation> <annotation ref=\"node-2\" text=\"The node 2\"> <annotation ref=\"edge-2-4\" text=\"An edge from node 2 to node 4\"\/> <annotation ref=\"edge-2-5\" text=\"An edge from node 2 to node 5\"\/> <annotation ref=\"loop-2\" text=\"A loop from node 2 to itself\"\/> <\/annotation> <annotation ref=\"node-3\" text=\"The node 2\"> <annotation ref=\"edge-1-3\" text=\"An incoming edge from node 1\"\/> <annotation ref=\"edge-3-4\" text=\"An edge from node 3 to node 4\"\/> <annotation ref=\"edge-3-5\" text=\"An edge from node 3 to node 5\"\/> <\/annotation> <annotation ref=\"node-5\" text=\"The node 5 and four incoming edges\"> <annotation ref=\"edge-1-5-0\" text=\"An incoming edge from node 1\"\/> <annotation ref=\"edge-1-5-1\" text=\"A second incoming edge from node 1\"\/> <annotation ref=\"edge-2-5\" text=\"An incoming edge from node 2\"\/> <annotation ref=\"edge-3-5\" text=\"An incoming edge from node 3\"\/> <\/annotation> <annotation ref=\"node-6\" text=\"The node 2\"> <annotation ref=\"edge-6-2\" text=\"An edge from node 6 to node 2\"\/> <annotation ref=\"edge-6-4\" text=\"An edge from node 6 to node 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .    "
 },
 {
   "id": "diagram-network-intro",
@@ -1176,7 +1176,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-intro",
   "type": "Listing",
   "number": "3.9.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.9.1.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" graph=\"graph\" arrows=\"end\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1185,7 +1185,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-verbose",
   "type": "Listing",
   "number": "3.9.3",
-  "title": "",
+  "title": "Another PreFigure source for Figure 3.9.1.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <node at=\"1\" edges=\"[3,4,5,5]\"\/> <node at=\"2\" edges=\"[4,5]\"\/> <node at=\"3\" edges=\"[4,5]\"\/> <node at=\"4\"\/> <node at=\"5\"\/> <node at=\"6\" edges=\"[2,4]\"\/> <\/network> <\/coordinates> <\/diagram>   Another PreFigure source for .  "
 },
 {
@@ -1203,7 +1203,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-combination",
   "type": "Listing",
   "number": "3.9.5",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.9.4.",
   "body": "  <diagram dimensions=\"(250,250)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[0,1], 1:[0]}<\/definition> <definition>labels={0:'a', 1:'b'}<\/definition> <network directed=\"yes\" graph=\"graph\" arrows=\"middle\" seed=\"1\" node-size=\"15\" scale=\"0.5\" node-fill=\"white\" labels=\"yes\" label-dictionary=\"labels\"> <node at=\"2\" style=\"double-circle\"><m>S<\/m><\/node> <edge vertices=\"(2,2)\">1<\/edge> <edge vertices=\"(2,1)\"\/> <edge vertices=\"(2,0)\"\/> <edge vertices=\"(0,0)\" label-location=\"0.6\">1<\/edge> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1221,7 +1221,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-loops",
   "type": "Listing",
   "number": "3.9.7",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.9.6.",
   "body": "  <diagram dimensions=\"(300,150)\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(-1,-1,1,2)\"> <network directed=\"yes\" arrows=\"end\" node-fill=\"lightskyblue\" node-stroke=\"black\" node-size=\"25\" tactile-node-size=\"60\" labels=\"yes\"> <node at=\"0\" p=\"(-0.5,0)\" style=\"double-circle\" loop-orientation=\"90\"> <m>S_0<\/m> <\/node> <node at=\"1\" p=\"(0.5,0)\" loop-orientation=\"90\"> <m>S_1<\/m> <\/node> <edge vertices=\"(1,0)\">0<\/edge> <edge vertices=\"(0,1)\">0<\/edge> <edge vertices=\"(0,0)\" loop-scale=\"(0.6,0.5)\">1<\/edge> <edge vertices=\"(1,1)\" loop-scale=\"(0.6,0.5)\">1<\/edge> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1239,7 +1239,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-manual",
   "type": "Listing",
   "number": "3.9.9",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.9.8.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\" edges=\"[1,2,3,4]\"\/> <node at=\"1\" p=\"f(1)\" edges=\"[2,3,4]\"\/> <node at=\"2\" p=\"f(2)\" edges=\"[3,4]\"\/> <node at=\"3\" p=\"f(3)\" edges=\"[4]\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1248,7 +1248,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-manual-2",
   "type": "Listing",
   "number": "3.9.10",
-  "title": "",
+  "title": "A second source for Figure 3.9.8.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,1,1)\"> <definition>graph={0:[1,2,3,4], 1:[2,3,4], 2:[3,4], 3:[4]}<\/definition> <definition>N=5<\/definition> <definition>f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))<\/definition> <network scale=\"0.8\" labels=\"yes\" graph=\"graph\" node-fill=\"#ccf\" node-stroke=\"black\" tactile-node-size=\"40\"> <node at=\"0\" p=\"f(0)\"\/> <node at=\"1\" p=\"f(1)\"\/> <node at=\"2\" p=\"f(2)\"\/> <node at=\"3\" p=\"f(3)\"\/> <node at=\"4\" p=\"f(4)\"\/> <\/network> <\/coordinates> <\/diagram>   A second source for .  "
 },
 {
@@ -1266,7 +1266,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-tree",
   "type": "Listing",
   "number": "3.9.12",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.9.11.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition> graph={0:[1,2],1:[3,4],2:[5,6],3:[7,8],4:[9,10],5:[11,12],6:[13,14]} <\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <rectangle center=\"(0,0)\" dimensions=\"(2,2)\" stroke=\"black\"\/> <network layout=\"bfs\" start=\"0\" graph=\"graph\" node-fill=\"orange\" rotate=\"-90\" scale=\"0.8\"> <node at=\"0\" fill=\"red\"\/> <edge vertices=\"[0,1]\" stroke=\"blue\" thickness=\"4\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1284,7 +1284,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-spanning",
   "type": "Listing",
   "number": "3.9.14",
-  "title": "",
+  "title": "The PreFigure source for the left of Figure 3.9.13.",
   "body": "  <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" dash=\"9 9\"\/> <edge vertices=\"[1,4]\" dash=\"9 9\"\/> <edge vertices=\"[4,6]\" dash=\"9 9\"\/> <edge vertices=\"[2,4]\" dash=\"9 9\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the left of .  "
 },
 {
@@ -1293,7 +1293,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-spanning-2",
   "type": "Listing",
   "number": "3.9.15",
-  "title": "",
+  "title": "The PreFigure source for the right of Figure 3.9.13.",
   "body": "  <diagram dimensions=\"(250,250)\" margins=\"5\"> <definition>graph={1:[3,4,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network graph=\"graph\" scale=\"0.8\" node-fill=\"#fcf\" node-stroke=\"black\" seed=\"1\" labels=\"yes\" node-style=\"box\" tactile-node-size=\"40\"> <edge vertices=\"[3,5]\" stroke=\"none\"\/> <edge vertices=\"[1,4]\" stroke=\"none\"\/> <edge vertices=\"[4,6]\" stroke=\"none\"\/> <edge vertices=\"[2,4]\" stroke=\"none\"\/> <\/network> <\/coordinates> <\/diagram>   The PreFigure source for the right of .  "
 },
 {
@@ -1311,7 +1311,7 @@ var ptx_lunr_docs = [
   "url": "sec-networks.html#listing-network-annotations",
   "type": "Listing",
   "number": "3.9.17",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.9.16.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <network directed=\"yes\" graph=\"graph\" scale=\"0.7\" node-fill=\"#fcf\" node-stroke=\"black\" node-style=\"circle\" node-size=\"15\" arrows=\"end\" seed=\"1\" labels=\"yes\" tactile-node-size=\"45\"> <edge vertices=\"(1,2)\">4<\/edge> <edge vertices=\"(2,2)\" label-location=\"0.3\" loop-scale=\"(0.8,0.8)\"> <m>\\alpha<\/m> <\/edge> <node at=\"2\" style=\"double-circle\"\/> <\/network> <annotations> <annotation ref=\"figure\" text=\"A directed network with nodes and edges\"> <annotation ref=\"node-1\" text=\"The node 1\"> <annotation ref=\"edge-1-3\" text=\"An edge from node 1 to node 3\"\/> <annotation ref=\"edge-1-4\" text=\"An edge from node 1 to node 4\"\/> <annotation ref=\"edge-1-5-0\" text=\"An edge from node 1 to node 5\"\/> <annotation ref=\"edge-1-5-1\" text=\"A second edge from node 1 to node 5\"\/> <\/annotation> <annotation ref=\"node-2\" text=\"The node 2\"> <annotation ref=\"edge-2-4\" text=\"An edge from node 2 to node 4\"\/> <annotation ref=\"edge-2-5\" text=\"An edge from node 2 to node 5\"\/> <annotation ref=\"loop-2\" text=\"A loop from node 2 to itself\"\/> <\/annotation> <annotation ref=\"node-3\" text=\"The node 2\"> <annotation ref=\"edge-1-3\" text=\"An incoming edge from node 1\"\/> <annotation ref=\"edge-3-4\" text=\"An edge from node 3 to node 4\"\/> <annotation ref=\"edge-3-5\" text=\"An edge from node 3 to node 5\"\/> <\/annotation> <annotation ref=\"node-5\" text=\"The node 5 and four incoming edges\"> <annotation ref=\"edge-1-5-0\" text=\"An incoming edge from node 1\"\/> <annotation ref=\"edge-1-5-1\" text=\"A second incoming edge from node 1\"\/> <annotation ref=\"edge-2-5\" text=\"An incoming edge from node 2\"\/> <annotation ref=\"edge-3-5\" text=\"An incoming edge from node 3\"\/> <\/annotation> <annotation ref=\"node-6\" text=\"The node 2\"> <annotation ref=\"edge-6-2\" text=\"An edge from node 6 to node 2\"\/> <annotation ref=\"edge-6-4\" text=\"An edge from node 6 to node 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1347,7 +1347,7 @@ var ptx_lunr_docs = [
   "url": "sec-paths.html#listing-paths",
   "type": "Listing",
   "number": "3.10.3",
-  "title": "",
+  "title": "The PreFigure source for the paths in Figure 3.10.2",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <path start=\"(1,1)\" stroke=\"blue\" arrows=\"1\"> <lineto point=\"(3,2)\"\/> <moveto point=\"(4,2)\"\/> <horizontal distance=\"2\"\/> <vertical distance=\"4\"\/> <arc center=\"(7.5,6)\" radius=\"1.5\" range=\"(180,0)\"\/> <cubic-bezier controls=\"((9,2), (8,2), (7,2))\"\/> <\/path> <path start=\"(1,5)\" stroke=\"red\" arrows=\"2\"> <quadratic-bezier controls=\"((1,8),(5,8))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the paths in  "
 },
 {
@@ -1365,7 +1365,7 @@ var ptx_lunr_docs = [
   "url": "sec-paths.html#listing-bezier",
   "type": "Listing",
   "number": "3.10.5",
-  "title": "",
+  "title": "The PreFigure source for the Bézier curves in Figure 3.10.4",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <path start=\"(1,3)\" stroke=\"blue\"> <cubic-bezier controls=\"((2,5),(4,5),(5,3))\"\/> <cubic-bezier controls=\"((6,1),(8,1),(9,3))\"\/> <\/path> <path start=\"(5,7)\" stroke=\"red\"> <quadratic-bezier controls=\"((4,9),(8,9))\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in  "
 },
 {
@@ -1383,7 +1383,7 @@ var ptx_lunr_docs = [
   "url": "sec-paths.html#listing-more-paths",
   "type": "Listing",
   "number": "3.10.7",
-  "title": "",
+  "title": "The PreFigure source for the Bézier curves in Figure 3.10.4",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <definition>f(x)=3*sin((x-1)\/8*pi)+5<\/definition> <path start=\"(1,1)\" stroke=\"blue\" closed=\"yes\"> <vertical distance=\"4\"\/> <graph function=\"f\" domain=\"(1,5)\"\/> <lineto point=\"(5,1)\"\/> <\/path> <definition>f(t)=(8-0.25*sin(2*(t-1)*pi),t)<\/definition> <path start=\"(8,1)\" stroke=\"red\"> <parametric-curve function=\"f\" domain=\"(1,6)\"\/> <polygon points=\"((8,6),(9,8),(8,9),(7,8),(8,6))\"\/> <moveto point=\"(7,8)\"\/> <horizontal distance=\"2\"\/> <moveto point=\"(8,6)\"\/> <vertical distance=\"3\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the Bézier curves in  "
 },
 {
@@ -1401,7 +1401,7 @@ var ptx_lunr_docs = [
   "url": "sec-paths.html#listing-path-decorations",
   "type": "Listing",
   "number": "3.10.9",
-  "title": "",
+  "title": "The PreFigure source for the coils in Figure 3.10.8.",
   "body": "  <diagram dimensions=\"(400,200)\" margins=\"5\"> <coordinates bbox=\"(-3,2,10,10)\"> <path start=\"(1,9)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"coil; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,9)\" alignment=\"w\">coil<\/label> <path start=\"(1,7)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"wave; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,7)\" alignment=\"w\">wave<\/label> <path start=\"(1,5)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"capacitor; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,5)\" alignment=\"w\">capacitor<\/label> <path start=\"(1,3)\" closed=\"no\" arrows=\"2\" stroke=\"blue\"> <rlineto point=\"(8,0)\" decoration=\"zigzag; number=10; dimensions=(10,10)\"\/> <\/path> <label anchor=\"(0,3)\" alignment=\"w\">zigzag<\/label> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .  "
 },
 {
@@ -1419,7 +1419,7 @@ var ptx_lunr_docs = [
   "url": "sec-paths.html#listing-coils",
   "type": "Listing",
   "number": "3.10.11",
-  "title": "",
+  "title": "The PreFigure source for the coils in Figure 3.10.10.",
   "body": "  <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,-0.5,5,2.5)\"> <path start=\"(0,0)\" stroke=\"black\"> <lineto point=\"(5,0)\" decoration=\"coil; number=5; dimensions=(10,10); center=0.7\"\/> <\/path> <path start=\"(0,1)\" stroke=\"black\"> <horizontal distance=\"5\" decoration=\"coil; number=10; dimensions=(10,5)\"\/> <\/path> <path start=\"(0,2)\" stroke=\"black\"> <lineto point=\"(5,2)\" decoration=\"coil; number=5; dimensions=(5,10)\"\/> <\/path> <\/coordinates> <\/diagram>   The PreFigure source for the coils in .  "
 },
 {
@@ -1437,7 +1437,7 @@ var ptx_lunr_docs = [
   "url": "sec-paths.html#listing-mass-spring",
   "type": "Listing",
   "number": "3.10.13",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.10.12.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,160,300,300)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(3.5,1)\" decoration=\"coil; number=5 ; dimensions=(15,10)\"\/> <\/path> <rectangle center=\"(4,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <coordinates bbox=\"(0,0,5,4)\" destination=\"(10,10,300,150)\"> <polygon points=\"((0,4),(0,0),(5,0))\" stroke=\"black\"\/> <path start=\"(0,1)\" stroke=\"black\"> <lineto point=\"(2,1)\" decoration=\"coil; number=5 ; dimensions=(6,10)\"\/> <\/path> <rectangle center=\"(2.5,1)\" dimensions=\"(1,2)\" fill=\"lightblue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1455,7 +1455,7 @@ var ptx_lunr_docs = [
   "url": "sec-paths.html#listing-rcl-circuit",
   "type": "Listing",
   "number": "3.10.15",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.10.14.",
   "body": "  <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,9)\"> <path start=\"(1,1)\" stroke=\"black\"> <lineto point=\"(1,8)\"\/> <lineto point=\"(9,8)\" decoration=\"coil; number=5; dimensions=(10,10)\"\/> <lineto point=\"(9,1)\" decoration=\"capacitor; dimensions=(12,15)\"\/> <lineto point=\"(1,1)\" decoration=\"zigzag; number=5; dimensions=(10,10)\"\/> <\/path> <point p=\"(1,4.5)\" size=\"20\" fill=\"white\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1482,7 +1482,7 @@ var ptx_lunr_docs = [
   "url": "sec-shapes.html#listing-shape-start",
   "type": "Listing",
   "number": "3.11.2",
-  "title": "",
+  "title": "The PreFigure source for the diagram in Figure 3.11.1",
   "body": "  <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <\/define-shapes> <shape shape=\"A\" fill=\"magenta\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
 {
@@ -1500,7 +1500,7 @@ var ptx_lunr_docs = [
   "url": "sec-shapes.html#listing-shape-difference",
   "type": "Listing",
   "number": "3.11.4",
-  "title": "",
+  "title": "The PreFigure source for the diagram in Figure 3.11.3",
   "body": "  <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <circle at=\"B\" center=\"(6,3)\" radius=\"2\"\/> <\/define-shapes> <shape shapes=\"A,B\" operation=\"difference\" fill=\"magenta\" stroke=\"black\"\/> <shape shape=\"A\" stroke=\"black\"\/> <shape shape=\"B\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <label anchor=\"(2,3)\" alignment=\"nw\"><m>A<\/m><\/label> <label anchor=\"(8,3)\" alignment=\"ne\"><m>B<\/m><\/label> <label anchor=\"(5,0.5)\"><m>A\\setminus B<\/m><\/label> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
 {
@@ -1527,7 +1527,7 @@ var ptx_lunr_docs = [
   "url": "sec-shapes.html#listing-shape-convex",
   "type": "Listing",
   "number": "3.11.7",
-  "title": "",
+  "title": "The PreFigure source for the diagram in Figure 3.11.6",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <circle at=\"circle\" center=\"(6,7)\" radius=\"2\"\/> <rectangle at=\"lower-rectangle\" center=\"(4,4)\" dimensions=\"(5,4)\" corner-radius=\"10\"\/> <rectangle at=\"upper-rectangle\" center=\"(4,7.5)\" dimensions=\"(5,1)\" corner-radius=\"10\"\/> <shape shapes=\"circle,lower-rectangle,upper-rectangle\" operation=\"sym-diff\" at=\"sym-diff\"\/> <circle at=\"right-circle\" center=\"(8.5,8.5)\" radius=\"1\"\/> <\/define-shapes> <grid-axes decorations=\"no\"\/> <shape shapes=\"sym-diff,right-circle\" operation=\"convex-hull\" stroke=\"red\" thickness=\"8\"\/> <shape shapes=\"sym-diff\" fill=\"magenta\" stroke=\"black\"\/> <shape shapes=\"circle\" stroke=\"black\"\/> <shape shapes=\"upper-rectangle\" stroke=\"black\"\/> <shape shapes=\"lower-rectangle\" stroke=\"black\"\/> <shape shape=\"right-circle\" fill=\"blue\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
 {
@@ -1545,7 +1545,7 @@ var ptx_lunr_docs = [
   "url": "sec-shapes.html#listing-shape-clip",
   "type": "Listing",
   "number": "3.11.9",
-  "title": "",
+  "title": "The PreFigure source for the diagram in Figure 3.11.8",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <define-shapes> <rectangle at=\"square1\" center=\"(4,4)\" dimensions=\"(3,3)\" corner-radius=\"10\"\/> <rectangle at=\"square2\" center=\"(3,6)\" dimensions=\"(2,2)\" corner-radius=\"5\"\/> <shape at=\"clip\" shapes=\"square1, square2\" operation=\"union\"\/> <circle at=\"circle\" center=\"(6,6)\" radius=\"3\"\/> <\/define-shapes> <shape shape=\"circle\" fill=\"lightgray\" stroke=\"gray\"\/> <clip shape=\"clip\"> <shape shape=\"circle\" fill=\"blue\" stroke=\"black\"\/> <\/clip> <shape shape=\"clip\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,10)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The PreFigure source for the diagram in  "
 },
 {
@@ -1572,7 +1572,7 @@ var ptx_lunr_docs = [
   "url": "sec-data.html#listing-scatter-plot-1",
   "type": "Listing",
   "number": "3.12.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.12.1.",
   "body": "  <diagram xmlns=\"https:\/\/prefigure.org\" dimensions=\"(300,300)\" margins=\"(30,30,5,5)\"> <read name=\"df\" filename=\"iris.data\" string-columns=\"['species']\"\/> <definition>x=filter(df, 'sepal length', 'species', 'Iris-versicolor')<\/definition> <definition>y=filter(df, 'petal width', 'species', 'Iris-versicolor')<\/definition> <definition>points=zip_lists(x, y)<\/definition> <coordinates bbox=\"(4,0,9,3)\"> <grid-axes> <xlabel alignment=\"nw\">Sepal length<\/xlabel> <ylabel alignment=\"se\">Petal width<\/ylabel> <\/grid-axes> <scatter points=\"points\" fill=\"blue\"\/> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1590,7 +1590,7 @@ var ptx_lunr_docs = [
   "url": "sec-data.html#listing-scatter-plot-2",
   "type": "Listing",
   "number": "3.12.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.12.3.",
   "body": "  <diagram xmlns=\"https:\/\/prefigure.org\" dimensions=\"(400,300)\" margins=\"(30,30,5,5)\"> <read name=\"df\" filename=\"iris.data\" string-columns=\"['species']\"\/> <coordinates bbox=\"(4,0,9,3)\"> <grid-axes> <xlabel alignment=\"nw\">Sepal length<\/xlabel> <ylabel alignment=\"se\">Petal width<\/ylabel> <\/grid-axes> <scatter at=\"setosa\" data=\"df\" x=\"sepal length\" y=\"petal width\" filter=\"('species','Iris-setosa')\" fill=\"blue\" annotate=\"yes\" text=\"Data from 50 Iris setosas\" point-text=\"An iris setosa\"\/> <scatter at=\"versicolor\" data=\"df\" x=\"sepal length\" y=\"petal width\" filter=\"('species','Iris-versicolor')\" fill=\"red\" style=\"box\" size=\"4\" annotate=\"yes\" text=\"Data from 50 Iris versicolor\" point-text=\"An iris versicolor\"\/> <scatter at=\"virginica\" data=\"df\" x=\"sepal length\" y=\"petal width\" filter=\"('species','Iris-virginica')\" fill=\"green\" style=\"diamond\" size=\"4\" annotate=\"yes\" text=\"Data from 50 Iris virginica\" point-text=\"An iris virginica\"\/> <legend anchor=\"(bbox[2],0.3)\" alignment=\"nw\" opacity=\"0.9\"> <item ref=\"setosa-point\">Iris-setosa<\/item> <item ref=\"versicolor-point\">Iris-versicolor<\/item> <item ref=\"virginica-point\">Iris-virginica<\/item> <\/legend> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Scatter plot of the iris data set\"> <annotation ref=\"setosa\"\/> <annotation ref=\"versicolor\"\/> <annotation ref=\"virginica\"\/> <\/annotation> <\/annotations> <\/diagram>   The source for .  "
 },
 {
@@ -1608,7 +1608,7 @@ var ptx_lunr_docs = [
   "url": "sec-data.html#listing-histogram",
   "type": "Listing",
   "number": "3.12.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.12.5.",
   "body": "  <diagram xmlns=\"https:\/\/prefigure.org\" dimensions=\"(400,300)\" margins=\"(30,30,5,5)\"> <read name=\"df\" filename=\"iris.data\" string-columns=\"['species']\"\/> <coordinates bbox=\"(3,0,9,25)\"> <grid-axes> <ylabel alignment=\"se\">Sepal length<\/ylabel> <\/grid-axes> <histogram at=\"histogram\" data=\"df['sepal length']\" outline=\"tactile\" min=\"4\" max=\"9\" bins=\"20\" fill=\"lightskyblue\" stroke=\"black\" annotate=\"yes\" text=\"The histogram with 20 bins\" bin-text=\"A bin from ${__histogram_x[bin_num]}\"\/> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"A histogram of irises with 30 bins grouped by sepal length\"> <annotation ref=\"histogram\"\/> <\/annotation> <\/annotations> <\/diagram>   The source for .  "
 },
 {
@@ -1626,7 +1626,7 @@ var ptx_lunr_docs = [
   "url": "sec-data.html#listing-gragg",
   "type": "Listing",
   "number": "3.12.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.12.7.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <read filename=\"gragg_data.csv\" name=\"data\" delimiter=' '\/> <definition>x = data['x']<\/definition> <definition>y = data['y']<\/definition> <definition>points=zip_lists(x,y)<\/definition> <coordinates bbox=\"(-15,-8,15,8)\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <polygon points=\"points\" stroke=\"blue\"\/> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1644,7 +1644,7 @@ var ptx_lunr_docs = [
   "url": "sec-publication.html#listing-pub-file",
   "type": "Listing",
   "number": "4.1.1",
-  "title": "",
+  "title": "A sample publication file",
   "body": "  <prefigure> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <\/prefigure>   A sample publication file  "
 },
 {
@@ -1662,7 +1662,7 @@ var ptx_lunr_docs = [
   "url": "sec-publication.html#listing-publication",
   "type": "Listing",
   "number": "4.1.3",
-  "title": "",
+  "title": "The PreFigure source for Figure 4.1.2.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=exp(x\/3)*cos(x)<\/definition> <coordinates bbox=\"(-4,-4,4,4)\"> <grid-axes ylabel=\"\\real^2\"\/> <graph function=\"f\"\/> <repeat parameter=\"k=-3..3\"> <point p=\"(k,f(k))\"\/> <\/repeat> <label p=\"(2,2)\" clear-background=\"yes\"> <m>\\deriv{y}{x}<\/m> <\/label> <point p=\"(-2,2)\" fill=\"red\" size=\"4\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1689,7 +1689,7 @@ var ptx_lunr_docs = [
   "url": "sec-pretext.html#listing-pretext",
   "type": "Listing",
   "number": "4.2.2",
-  "title": "",
+  "title": "PreFigure source inside a PreTeXt document.",
   "body": "  <image width=\"60%\"> <prefigure xmlns=\"https:\/\/prefigure.org\" label=\"prefigure-rectangle\"> <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes\/> <rectangle center=\"(5,5)\" dimensions=\"(6,6)\"\/> <label anchor=\"(0.5,0.5)\" alignment=\"ne\" clear-background=\"yes\"> The derivative is <m>\\deriv{y}{x}<\/m>. <\/label> <\/coordinates> <\/diagram> <\/prefigure> <\/image>    source inside a PreTeXt document.  "
 },
 {
@@ -1698,7 +1698,7 @@ var ptx_lunr_docs = [
   "url": "sec-pretext.html#listing-docinfo",
   "type": "Listing",
   "number": "4.2.3",
-  "title": "",
+  "title": "Within a PreTeXt document, PreFigure publication data is included inside <code class=\"code-inline tex2jax_ignore\"><docinfo><\/code>.",
   "body": "  <docinfo> <macros> \\newcommand{\\deriv}[2]{\\displaystyle \\frac{d#1}{d#2}} \\newcommand{\\real}{\\Bbb R} <\/macros> <prefigure-preamble xmlns=\"https:\/\/prefigure.org\"> <graph stroke=\"green\"\/> <point style=\"diamond\" size=\"5\" fill=\"blue\" outline=\"yes\"\/> <\/prefigure-preamble> <\/docinfo>   Within a PreTeXt document, publication data is included inside <docinfo> .  "
 },
 {
@@ -1725,7 +1725,7 @@ var ptx_lunr_docs = [
   "url": "sec-repeat.html#listing-diffeq-repeat",
   "type": "Listing",
   "number": "5.1.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.1.1.",
   "body": "  <diagram width=\"300\" height=\"300\" margins=\"10\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\"\/> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" domain=\"[0,4]\" stroke=\"orange\" \/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\" \/> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"Solutions to the differential equation dy dt = t - y\"> <annotation ref=\"grid\" text=\"The coordinate grid\"\/> <annotation ref=\"axes\" text=\"The coordinate axes\"\/> <annotation ref=\"slope-field\" text=\"The slope field\"\/> <annotation ref=\"solutions\" text=\"A collection of solution curves\"> <annotation ref=\"solution-k=-4\" text=\"The solution with initial value -4\"\/> <annotation ref=\"solution-k=-3\" text=\"The solution with initial value -3\"\/> <annotation ref=\"solution-k=-2\" text=\"The solution with initial value -2\"\/> <annotation ref=\"solution-k=-1\" text=\"The solution with initial value -1\"\/> <annotation ref=\"solution-k=0\" text=\"The solution with initial value 0\"\/> <annotation ref=\"solution-k=1\" text=\"The solution with initial value 1\"\/> <annotation ref=\"solution-k=2\" text=\"The solution with initial value 2\"\/> <annotation ref=\"solution-k=3\" text=\"The solution with initial value 3\"\/> <annotation ref=\"solution-k=4\" text=\"The solution with initial value 4\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1743,7 +1743,7 @@ var ptx_lunr_docs = [
   "url": "sec-repeat.html#listing-unity",
   "type": "Listing",
   "number": "5.1.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.1.3.",
   "body": "  <diagram width=\"300\" height=\"300\" margins=\"5\"> <definition> alignments=['ne','ne','ne','nw','nw','sw','se','se'] <\/definition> <definition substitution=\"no\"> labels=['1','\\omega','i','\\omega^3','-1','\\omega^5','-i','\\omega^7'] <\/definition> <definition>f(t)=(cos(pi*t\/4),sin(pi*t\/4))<\/definition> <coordinates bbox=\"[-1.4,-1.4,1.4,1.4]\"> <grid at=\"grid\" \/> <axes at=\"axes\" labels=\"no\" \/> <circle at=\"unit-circle\" center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <repeat parameter=\"k=0..7\"> <point at=\"point\" p=\"f(k)\" alignment=\"alignments[k]\"> <m>${labels[k]}<\/m> <\/point> <\/repeat> <\/coordinates> <annotations> <annotation id=\"figure\" text=\"The eighth roots of unity\"> <annotation id=\"axes\" text=\"The coordinate axes\" \/> <annotation id=\"grid\" text=\"The coordinate grid\" \/> <annotation id=\"unit-circle\" text=\"The unit circle\" circular=\"true\"> <annotation id=\"point-k=0\" text=\"The primitive eighth root of unity to the power zero\" speech=\"one\"\/> <annotation id=\"point-k=1\" text=\"The primitive eighth root of unity\" speech=\"omega\"\/> <annotation id=\"point-k=2\" text=\"The primitive eighth root of unity squared\" speech=\"i\"\/> <annotation id=\"point-k=3\" text=\"The primitive eighth root of unity cubed\" speech=\"omega cubed\"\/> <annotation id=\"point-k=4\" text=\"The primitive eighth root of unity to the fourth\" speech=\"minus one\"\/> <annotation id=\"point-k=5\" text=\"The primitive eighth root of unity to the fifth\" speech=\"omega to the fifth\"\/> <annotation id=\"point-k=6\" text=\"The primitive eighth root of unity to the sixth\" speech=\"minus i\"\/> <annotation id=\"point-k=7\" text=\"The primitive eighth root of unity to the seventh\" speech=\"omega to the seventh\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1761,7 +1761,7 @@ var ptx_lunr_docs = [
   "url": "sec-repeat.html#listing-repeat-iterator",
   "type": "Listing",
   "number": "5.1.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.1.5.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <definition>centers=((2,2),(3,7),(6,4),(8,7))<\/definition> <grid-axes decorations=\"no\"\/> <repeat parameter=\"center in centers\"> <circle center=\"center\" radius=\"1\" fill=\"springgreen\" stroke=\"black\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1779,7 +1779,7 @@ var ptx_lunr_docs = [
   "url": "sec-repeat.html#listing-nested-repeat",
   "type": "Listing",
   "number": "5.1.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.1.7.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"[-1,-1,5,5]\"> <grid\/> <repeat parameter=\"row=0..4\"> <repeat parameter=\"col=0..4\"> <rectangle at=\"rectangle\" center=\"(col, row)\" dimensions=\"(3\/4,3\/4)\" fill=\"blue\"\/> <\/repeat> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1824,7 +1824,7 @@ var ptx_lunr_docs = [
   "url": "sec-arrows.html#listing-arrow-properties",
   "type": "Listing",
   "number": "5.2.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.2.3.",
   "body": "  <diagram dimensions=\"(400,400)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes labels=\"no\"\/> <!-- left side arrows --> <line endpoints=\"((1,9),(4,9))\" arrows=\"2\"\/> <line endpoints=\"((1,8),(4,8))\" arrows=\"2\" arrow-width=\"5\"\/> <line endpoints=\"((1,7),(4,7))\" arrows=\"2\" arrow-width=\"6\"\/> <line endpoints=\"((1,6),(4,6))\" arrows=\"2\" arrow-width=\"7\"\/> <line endpoints=\"((1,5),(4,5))\" arrows=\"2\" arrow-width=\"8\"\/> <line endpoints=\"((1,4),(4,4))\" arrows=\"2\" arrow-width=\"9\"\/> <!-- right side arrows --> <line endpoints=\"((6,9),(9,9))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(35,60)\"\/> <line endpoints=\"((6,8),(9,8))\" arrows=\"2\" arrow-width=\"5\" arrow-angles=\"(40,60)\"\/> <line endpoints=\"((6,7),(9,7))\" arrows=\"2\" arrow-width=\"6\" arrow-angles=\"(45,60)\"\/> <line endpoints=\"((6,6),(9,6))\" arrows=\"2\" arrow-width=\"7\" arrow-angles=\"(35,80)\"\/> <line endpoints=\"((6,5),(9,5))\" arrows=\"2\" arrow-width=\"8\" arrow-angles=\"(40,80)\"\/> <line endpoints=\"((6,4),(9,4))\" stroke=\"red\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(40,80)\"\/> <!-- longer line at the bottom --> <line endpoints=\"((1,3),(9,3))\" arrows=\"2\" additional-arrows=\"(0.7,0.5)\" arrow-width=\"9\" arrow-angles=\"(60,90)\"\/> <line endpoints=\"((1,2),(9,2))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(30,80)\"\/> <line endpoints=\"((1,1),(9,1))\" arrows=\"2\" arrow-width=\"9\" arrow-angles=\"(10,90)\" additional-arrows=\"0.5\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -1869,7 +1869,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-transform-1",
   "type": "Listing",
   "number": "5.3.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.1.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <rectangle lower-left=\"(2,2)\" dimensions=\"(4,2)\" fill=\"blue\" stroke=\"black\"\/> <transform> <translate by=\"(2,4)\"\/> <rectangle lower-left=\"(2,2)\" dimensions=\"(4,2)\" fill=\"green\" stroke=\"black\"\/> <\/transform> <circle center=\"(8,4)\" radius=\"1\" fill=\"red\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1887,7 +1887,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-transform-2",
   "type": "Listing",
   "number": "5.3.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.3.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <transform> <translate by=\"(1,6)\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(1,2)\" fill=\"green\" stroke=\"black\"\/> <\/transform> <definition>p=(4,3)<\/definition> <transform> <rotate by=\"135\" about=\"p\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(1,2)\" fill=\"blue\" stroke=\"black\"\/> <\/transform> <point p=\"p\"\/> <transform> <translate by=\"(6,6)\"\/> <scale by=\"(3,1.5)\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(1,2)\" fill=\"red\" stroke=\"black\"\/> <\/transform> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1905,7 +1905,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-pythagoras",
   "type": "Listing",
   "number": "5.3.6",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.5.",
   "body": "  <diagram dimensions=\"(250,270)\" margins=\"5\"> <definition>a=3<\/definition> <definition>b=4<\/definition> <definition>c=sqrt(a^2+b^2)<\/definition> <definition>phi=acos(a\/c)<\/definition> <definition>d=a*cos(phi)<\/definition> <definition>p=a*(cos(phi), sin(phi))<\/definition> <coordinates bbox=\"(-2.5,-5,7.5,6)\" aspect-ratio=\"1\"> <rectangle lower-left=\"(0,-c)\" dimensions=\"(d,c)\" fill=\"skyblue\"\/> <rectangle lower-left=\"(d,-c)\" dimensions=\"(c-d,c)\" fill=\"springgreen\"\/> <transform> <rotate by=\"phi-pi\/2\" degrees=\"no\"\/> <rectangle lower-left=\"(-a,0)\" dimensions=\"(a,a)\" fill=\"skyblue\" stroke=\"black\"\/> <rectangle lower-left=\"(0,a)\" dimensions=\"(b,b)\" fill=\"springgreen\" stroke=\"black\"\/> <\/transform> <rectangle lower-left=\"(0,-c)\" dimensions=\"(c,c)\" stroke=\"black\"\/> <line endpoints=\"(p,(d,-c))\" dash=\"8 8\" stroke=\"black\"\/> <triangle at=\"triangle\" vertices=\"((0,0),(c,0),p)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1923,7 +1923,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-fibonacci",
   "type": "Listing",
   "number": "5.3.8",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.7.",
   "body": "  <diagram dimensions=\"(300, 200)\" margins=\"5\"> <definition>phi=(sqrt(5)+1)\/2<\/definition> <definition>height=0.25<\/definition> <definition>width=5+8*phi<\/definition> <definition>colors={0:'blue', 1:'red'}<\/definition> <definition>widths={0:phi, 1:1}<\/definition> <definition>tiling2=[0,1,0,0,1]<\/definition> <definition>tiling1=[0,1,0,0,1,0,1,0]<\/definition> <definition>tiling0=[0,1,0,0,1,0,1,0,0,1,0,0,1]<\/definition> <definition>tilings=[tiling0, tiling1, tiling2]<\/definition> <coordinates bbox=\"(0,-0.5,width,2.5)\"> <transform> <repeat parameter=\"tiling in tilings\"> <transform> <repeat parameter=\"type in tiling\"> <rectangle lower-left=\"(0,0)\" dimensions=\"(widths[type], height)\" fill=\"${colors[type]}\" stroke=\"black\"\/> <translate by=\"(widths[type],0)\"\/> <\/repeat> <\/transform> <scale by=\"(phi, 1)\"\/> <translate by=\"(0,1)\"\/> <\/repeat> <\/transform> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1941,7 +1941,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-group-transforms-1",
   "type": "Listing",
   "number": "5.3.10",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.9.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(0,0,10,10)\"> <grid\/> <group> <rectangle center=\"(5,5)\" dimensions=\"(6,8)\" thickness=\"2\" stroke=\"black\" fill=\"none\"\/> <point p=\"(2,1)\" alignment=\"ne\" fill=\"red\"><m>A<\/m><\/point> <point p=\"(8,1)\" alignment=\"nw\" fill=\"blue\"><m>B<\/m><\/point> <point p=\"(8,9)\" alignment=\"sw\" fill=\"green\"><m>C<\/m><\/point> <point p=\"(2,9)\" alignment=\"se\" fill=\"orange\"><m>D<\/m><\/point> <\/group> <point p=\"(5,5)\" alignment=\"ne\">Center<\/point> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1959,7 +1959,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-group-transforms-2",
   "type": "Listing",
   "number": "5.3.12",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.11.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(0,0,10,10)\"> <grid\/> <group transform=\"rotate(90,(5,5))\"> <rectangle center=\"(5,5)\" dimensions=\"(6,8)\" thickness=\"2\" stroke=\"black\" fill=\"none\"\/> <point p=\"(2,1)\" alignment=\"ne\" fill=\"red\"><m>A<\/m><\/point> <point p=\"(8,1)\" alignment=\"nw\" fill=\"blue\"><m>B<\/m><\/point> <point p=\"(8,9)\" alignment=\"sw\" fill=\"green\"><m>C<\/m><\/point> <point p=\"(2,9)\" alignment=\"se\" fill=\"orange\"><m>D<\/m><\/point> <\/group> <point p=\"(5,5)\" alignment=\"ne\">Center<\/point> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1977,7 +1977,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-group-trpansforms-3",
   "type": "Listing",
   "number": "5.3.14",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.13.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(0,0,10,10)\"> <grid\/> <group transform=\"reflect(1,1,10)\"> <rectangle center=\"(5,5)\" dimensions=\"(6,8)\" thickness=\"2\" stroke=\"black\" fill=\"none\"\/> <point p=\"(2,1)\" alignment=\"ne\" fill=\"red\"><m>A<\/m><\/point> <point p=\"(8,1)\" alignment=\"nw\" fill=\"blue\"><m>B<\/m><\/point> <point p=\"(8,9)\" alignment=\"sw\" fill=\"green\"><m>C<\/m><\/point> <point p=\"(2,9)\" alignment=\"se\" fill=\"orange\"><m>D<\/m><\/point> <\/group> <point p=\"(5,5)\" alignment=\"ne\">Center<\/point> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -1995,7 +1995,7 @@ var ptx_lunr_docs = [
   "url": "sec-transforms.html#listing-group-trpansforms-4",
   "type": "Listing",
   "number": "5.3.16",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.3.15.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\" xmlns=\"https:\/\/prefigure.org\"> <coordinates bbox=\"(0,0,10,10)\"> <grid\/> <group transform=\"matrix([[1,0.5],[0,1]], (5,5))\"> <rectangle center=\"(5,5)\" dimensions=\"(6,8)\" thickness=\"2\" stroke=\"black\" fill=\"none\"\/> <point p=\"(2,1)\" alignment=\"ne\" fill=\"red\"><m>A<\/m><\/point> <point p=\"(8,1)\" alignment=\"nw\" fill=\"blue\"><m>B<\/m><\/point> <point p=\"(8,9)\" alignment=\"sw\" fill=\"green\"><m>C<\/m><\/point> <point p=\"(2,9)\" alignment=\"se\" fill=\"orange\"><m>D<\/m><\/point> <\/group> <point p=\"(5,5)\" alignment=\"ne\">Center<\/point> <\/coordinates> <\/diagram>   The source for .  "
 },
 {
@@ -2022,7 +2022,7 @@ var ptx_lunr_docs = [
   "url": "sec-math.html#listing-euler",
   "type": "Listing",
   "number": "5.4.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.4.1.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"20\"> <coordinates bbox=\"(-1,-1,10,8)\"> <definition>f(t,y) = 0.1*y*(6-y)<\/definition> <definition>N=5<\/definition> <definition>h=10\/N<\/definition> <definition>points = [[0,1]]<\/definition> <repeat parameter=\"k=1..N\"> <definition>t=points[-1][0]<\/definition> <definition>y=points[-1][1]<\/definition> <definition>points=append(points, [t+h, y+h*f(t,y)])<\/definition> <\/repeat> <grid-axes xlabel=\"t\" ylabel=\"y\"\/> <slope-field function=\"f\" stroke=\"orange\"\/> <polygon points=\"points\" stroke=\"blue\"\/> <repeat parameter=\"k=0..N\"> <point p=\"points[k]\"\/> <\/repeat> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -2040,7 +2040,7 @@ var ptx_lunr_docs = [
   "url": "sec-math.html#listing-roll",
   "type": "Listing",
   "number": "5.4.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 5.4.3.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <definition>points = ((1,1),(2,6),(6,9),(9,5),(7,2))<\/definition> <grid-axes decorations=\"no\"\/> <repeat parameter=\"k=1..5\"> <angle-marker points=\"points\"\/> <definition>points=roll(points)<\/definition> <\/repeat> <polygon points=\"points\" closed=\"yes\" stroke=\"blue\"\/> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -2067,7 +2067,7 @@ var ptx_lunr_docs = [
   "url": "sec-annotations.html#listing-tangent-3",
   "type": "Listing",
   "number": "6.1.2",
-  "title": "",
+  "title": "The PreFigure source for Figure 6.1.1.",
   "body": "  <diagram dimensions=\"(300, 300)\" margins=\"5\"> <definition> a=1 <\/definition> <definition> f(x)=exp(x\/3)*cos(x) <\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph at=\"function\" function=\"f\"\/> <tangent-line at=\"tangent\" function=\"f\" point=\"a\"\/> <group at=\"point\"> <point p=\"(a, f(a))\"\/> <label anchor=\"(a,f(a))\" alignment=\"ne\"> <m>(a,f(a))<\/m> <\/label> <\/group> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"The graph of a function and its tangent line at the point a equals 1\"> <annotation ref=\"graph-tangent\" text=\"The graph and its tangent line\"> <annotation ref=\"function\" text=\"The graph of the function f\" sonify=\"yes\"\/> <annotation ref=\"point\" text=\"The point a comma f of a\"\/> <annotation ref=\"tangent\" text=\"The tangent line to the graph of f at the point\" sonify=\"yes\" speech=\"This line is y equals f of a plus the derivative at a times the quantity x minus a\"\/> <\/annotation> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -2085,7 +2085,7 @@ var ptx_lunr_docs = [
   "url": "sec-annotations.html#listing-repeat-annotate",
   "type": "Listing",
   "number": "6.1.4",
-  "title": "",
+  "title": "The PreFigure source for Figure 6.1.3.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,5,5)\"> <definition>ordinals=['first', 'second', 'third', 'fourth', 'fifth']<\/definition> <grid at=\"grid\"\/> <repeat at=\"array\" parameter=\"col=0..4\" annotate=\"yes\" text=\"The array of squares\"> <repeat at=\"column\" parameter=\"row=0..4-col\" annotate=\"yes\" circular=\"yes\" text=\"A column of ${5-col} squares\"> <rectangle at=\"square\" center=\"(col, row)\" dimensions=\"(0.5,0.5)\" stroke=\"black\" fill=\"green\" annotate=\"yes\" text=\"The ${ordinals[row]} square in the ${ordinals[col]} column\"\/> <\/repeat> <\/repeat> <\/coordinates> <annotations> <annotation ref=\"figure\" text=\"A triangular array of squares\"> <annotation ref=\"grid\" text=\"A rectangular grid\"\/> <annotation ref=\"array\"\/> <\/annotation> <\/annotations> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -2121,7 +2121,7 @@ var ptx_lunr_docs = [
   "url": "sec-tactile.html#listing-judson-system",
   "type": "Listing",
   "number": "6.2.3",
-  "title": "",
+  "title": "The PreFigure source for Figure 6.2.2.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t,y) = (0.4*y[0] - 0.01*y[0]*y[1],-0.3*y[1] + 0.005*y[0]*y[1])<\/definition> <coordinates bbox=\"[-15,-15,70,100]\"> <grid-axes xlabel=\"t\"\/> <de-solve function=\"f\" t0=\"0\" t1=\"100\" y0=\"(70,50)\" name=\"oscillator\" N=\"200\"\/> <plot-de-solution at=\"lynx\" solution=\"oscillator\" axes=\"(t,y0)\" \/> <plot-de-solution at=\"snowshoe\" tactile-dash=\"9 9\" solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\"\/> <legend at=\"legend\" anchor=\"(bbox[2], bbox[3])\" alignment=\"sw\" scale=\"0.8\" opacity=\"0.5\"> <item ref=\"lynx\"><m>F(t)<\/m><\/item> <item ref=\"snowshoe\"><m>H(t)<\/m><\/item> <\/legend> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -2139,7 +2139,7 @@ var ptx_lunr_docs = [
   "url": "sec-tactile.html#listing-outline-tactile",
   "type": "Listing",
   "number": "6.2.5",
-  "title": "",
+  "title": "The PreFigure source for Figure 3.2.3.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(-1,-1,5,5)\"> <definition>f(x) = exp(-x) + 2<\/definition> <definition>g(x) = -exp(-x) + 2<\/definition> <grid-axes\/> <group outline=\"tactile\"> <graph function=\"f\"\/> <graph function=\"g\"\/> <\/group> <\/coordinates> <\/diagram>   The PreFigure source for .  "
 },
 {
@@ -2157,8 +2157,323 @@ var ptx_lunr_docs = [
   "url": "sec-tactile.html#listing-tactile-caption",
   "type": "Listing",
   "number": "6.2.7",
-  "title": "",
+  "title": "The PreFigure source for Figure 6.2.6.",
   "body": "  <diagram dimensions=\"(300,300)\" margins=\"5\"> <caption>Figure 3.2.1<\/caption> <definition>f(t,y) = (y[1], -pi*y[0]-0.3*y[1])<\/definition> <coordinates bbox=\"[-1,-3,6,3]\"> <grid-axes xlabel=\"t\"\/> <de-solve function=\"f\" t0=\"0\" t1=\"bbox[2]\" y0=\"(0,2)\" name=\"oscillator\" N=\"200\"\/> <plot-de-solution at=\"x\" solution=\"oscillator\" axes=\"(t,y0)\" \/> <plot-de-solution at=\"xprime\" solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\" tactile-dash=\"9 9\"\/> <legend at=\"legend\" anchor=\"(bbox[2], bbox[3])\" alignment=\"sw\" scale=\"0.9\" opacity=\"0.5\"> <item ref=\"x\"><m>x(t)<\/m><\/item> <item ref=\"xprime\"><m>x'(t)<\/m><\/item> <\/legend> <\/coordinates> <\/diagram>   The PreFigure source for .  "
+},
+{
+  "id": "chap-examples",
+  "level": "1",
+  "url": "chap-examples.html",
+  "type": "Chapter",
+  "number": "7",
+  "title": "Examples with source",
+  "body": " Examples with source  This chapter presents a series of diagrams along with their source. These examples may provide a starting point for authors to explore in the  Playground.    The definition of slope     x1=1  x2=4  y1=1  y2=5  p=(x1,y1)  q=(x2,y2)  r=(x2,y1)       \\theta      \\Delta x    \\Delta y           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>x1=1<\/definition> <definition>x2=4<\/definition> <definition>y1=1<\/definition> <definition>y2=5<\/definition> <definition>p=(x1,y1)<\/definition> <definition>q=(x2,y2)<\/definition> <definition>r=(x2,y1)<\/definition> <coordinates bbox=\"(-1,-1,6,6)\"> <axes decorations=\"no\" xlabel=\"x\" ylabel=\"y\"\/> <group outline=\"none\"> <polygon points=\"(p,r,q)\" stroke=\"red\"\/> <angle-marker points=\"(r,p,q)\" stroke=\"black\"> <m>\\theta<\/m> <\/angle-marker> <line endpoints=\"(p, q)\" stroke=\"blue\" infinite=\"yes\"\/> <\/group> <label anchor=\"((x1+x2)\/2,y1)\" alignment=\"south\"> <m>\\Delta x<\/m> <\/label> <label anchor=\"(x2,(y1+y2)\/2)\" alignment=\"east\"> <m>\\Delta y<\/m> <\/label> <\/coordinates> <\/diagram>   The source for     Intersections of lines       p1=(1,2)  p2=(8,8)  L1=(p1,p2)  q1=(1,7)  q2=(8,4)  L2=(q1,q2)    p=intersect((L1,L2))   \\theta            <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <definition>p1=(1,2)<\/definition> <definition>p2=(8,8)<\/definition> <definition>L1=(p1,p2)<\/definition> <definition>q1=(1,7)<\/definition> <definition>q2=(8,4)<\/definition> <definition>L2=(q1,q2)<\/definition> <line endpoints=\"L1\" stroke=\"blue\" infinite=\"yes\"\/> <line endpoints=\"L2\" stroke=\"blue\" infinite=\"yes\"\/> <definition>p=intersect((L1,L2))<\/definition> <angle-marker points=\"(q2,p,p2)\" clear-background=\"yes\"> <m>\\theta<\/m> <\/angle-marker> <point p=\"p\"\/> <\/coordinates> <\/diagram>   The source for     Sample triangles        vertices=((4,4), (8,1),(7,8))           <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <triangle vertices=\"((1,1),(3,2),(1,5))\" labels=\"A,B,C\" show-vertices=\"yes\" point-fill=\"orange\"\/> <definition>vertices=((4,4), (8,1),(7,8))<\/definition> <triangle vertices=\"vertices\" labels=\"D,E,F\" angle-markers=\"yes\"\/> <\/coordinates> <\/diagram>   The source for     Graphing functions with asymptotes     f(x)=(x^2-1)\/(x^2-4)                <diagram dimensions=\"(300,300)\" margins=\"0\"> <definition>f(x)=(x^2-1)\/(x^2-4)<\/definition> <coordinates bbox=\"(-5,-5,5,5)\"> <grid-axes\/> <graph function=\"f\"\/> <line endpoints=\"((-2,-4),(-2,4))\" infinite=\"yes\" stroke=\"red\"\/> <line endpoints=\"((2,4),(2,-4))\" infinite=\"yes\" stroke=\"red\"\/> <line endpoints=\"((4,1),(-4,1))\" infinite=\"yes\" stroke=\"green\"\/> <\/coordinates> <\/diagram>   The source for     A trigonometric identity     theta=radians(80)  p=(cos(theta),sin(theta))  q=(cos(theta),-sin(theta))  origin=(0,0)  one=(1,0)        (\\cos(\\theta),\\sin(\\theta))    (\\cos(\\theta),-\\sin(\\theta))    \\theta    -\\theta           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>theta=radians(80)<\/definition> <definition>p=(cos(theta),sin(theta))<\/definition> <definition>q=(cos(theta),-sin(theta))<\/definition> <definition>origin=(0,0)<\/definition> <definition>one=(1,0)<\/definition> <coordinates bbox=\"(-1.5,-1.5,1.5,1.5)\"> <grid-axes decorations=\"no\"\/> <polygon points=\"(one,origin,p)\" stroke=\"red\"\/> <polygon points=\"(one,origin,q)\" stroke=\"red\"\/> <circle center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <point p=\"p\"> <m>(\\cos(\\theta),\\sin(\\theta))<\/m> <\/point> <point p=\"q\" alignment=\"se\"> <m>(\\cos(\\theta),-\\sin(\\theta))<\/m> <\/point> <angle-marker points=\"(one,origin,p)\" stroke=\"black\"> <m>\\theta<\/m> <\/angle-marker> <angle-marker points=\"(q,origin,one)\" stroke=\"black\"> <m>-\\theta<\/m> <\/angle-marker> <\/coordinates> <\/diagram>   The source for     The Pythagorean theorem     a=3  b=4  c=sqrt(a^2+b^2)  phi=acos(a\/c)  d=a*cos(phi)  p=a*(cos(phi), sin(phi))                     <diagram dimensions=\"(250,270)\" margins=\"5\"> <definition>a=3<\/definition> <definition>b=4<\/definition> <definition>c=sqrt(a^2+b^2)<\/definition> <definition>phi=acos(a\/c)<\/definition> <definition>d=a*cos(phi)<\/definition> <definition>p=a*(cos(phi), sin(phi))<\/definition> <coordinates bbox=\"(-2.5,-5,7.5,6)\" aspect-ratio=\"1\"> <rectangle lower-left=\"(0,-c)\" dimensions=\"(d,c)\" fill=\"skyblue\"\/> <rectangle lower-left=\"(d,-c)\" dimensions=\"(c-d,c)\" fill=\"springgreen\"\/> <transform> <rotate by=\"phi-pi\/2\" degrees=\"no\"\/> <rectangle lower-left=\"(-a,0)\" dimensions=\"(a,a)\" fill=\"skyblue\" stroke=\"black\"\/> <rectangle lower-left=\"(0,a)\" dimensions=\"(b,b)\" fill=\"springgreen\" stroke=\"black\"\/> <\/transform> <rectangle lower-left=\"(0,-c)\" dimensions=\"(c,c)\" stroke=\"black\"\/> <line endpoints=\"(p,(d,-c))\" dash=\"8 8\" stroke=\"black\"\/> <triangle at=\"triangle\" vertices=\"((0,0),(c,0),p)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The source for     Graphing derivativees     f(x)=0.1*(x^4-10*x^2)  fp(x)=deriv(f, x)  fpp(x)=deriv(fp,x)      f     f'     f''           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition> f(x)=0.1*(x^4-10*x^2)<\/definition> <definition> fp(x)=deriv(f, x)<\/definition> <definition> fpp(x)=deriv(fp,x)<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph function=\"f\"\/> <label p=\"(3.3,1)\" alignment=\"center\" clear-background=\"yes\"> <m>f<\/m> <\/label> <graph function=\"fp\" stroke=\"red\"\/> <label p=\"(2.5,1)\" alignment=\"center\" clear-background=\"yes\"> <m>f'<\/m> <\/label> <graph function=\"fpp\" stroke=\"green\"\/> <label p=\"(1.6,1)\" alignment=\"center\" clear-background=\"yes\"> <m>f''<\/m> <\/label> <\/coordinates> <\/diagram>   The source for     Newton's method     f(x)=7-(x+1)^2\/2  x0 = 1       x1 = intersect(tan,-1)      x_0    x_1           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=7-(x+1)^2\/2<\/definition> <definition>x0 = 1<\/definition> <coordinates bbox=\"(-8,-8,8,8)\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph function=\"f\"\/> <tangent-line function=\"f\" point=\"x0\" name=\"tan\"\/> <point p=\"(x0,f(x0))\" alignment=\"se\"\/> <definition>x1 = intersect(tan,-1)<\/definition> <repeat parameter=\"x in (x0, x1)\"> <line endpoints=\"((x,0),(x,0))\" endpoint-offsets=\"((0,-3),(0,3))\" stroke=\"black\"\/> <\/repeat> <label anchor=\"(x0,0)\" alignment=\"north\"> <m>x_0<\/m> <\/label> <label anchor=\"(x1,0)\" alignment=\"ne\"> <m>x_1<\/m> <\/label> <\/coordinates> <\/diagram>   The source for     An intergral measuring area     f(x)=sin(x)  g(x)=cos(x)  a=intersect((f,g),1)  b=intersect((f,g),4)         a     b           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=sin(x)<\/definition> <definition>g(x)=cos(x)<\/definition> <definition>a=intersect((f,g),1)<\/definition> <definition>b=intersect((f,g),4)<\/definition> <coordinates bbox=\"(-1,-1.5,5,1.5)\"> <grid-axes decorations=\"no\"\/> <area-between-curves functions=\"(f,g)\" domain=\"(a,b)\" fill=\"lightgray\"\/> <graph function=\"f\"\/> <graph function=\"g\"\/> <line endpoints=\"((a,0),(a,0))\" endpoint-offsets=\"((0,-3),(0,3))\"\/> <label anchor=\"(a,0)\" alignment=\"south\" offset=\"(0,-4)\"> <m>a<\/m> <\/label> <line endpoints=\"((b,0),(b,0))\" endpoint-offsets=\"((0,-3),(0,3))\"\/> <label anchor=\"(b,0)\" alignment=\"north\" offset=\"(0,4)\"> <m>b<\/m> <\/label> <\/coordinates> <\/diagram>   The source for     Solutions to a differential equation     f(t,y) = t-y                    <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\" outline=\"yes\"\/> <group at=\"solutions\" outline=\"tactile\"> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" t1=\"4\" stroke=\"orange\"\/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\"\/> <\/repeat> <\/group> <\/coordinates> <\/diagram>   The source for     A system of differential equations     f(t,y) = (y[1], -pi*y[0]-0.3*y[1])        x(t)  x'(t)           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t,y) = (y[1], -pi*y[0]-0.3*y[1])<\/definition> <coordinates bbox=\"[-1,-3,6,3]\"> <grid-axes xlabel=\"t\"\/> <de-solve function=\"f\" t0=\"0\" t1=\"bbox[2]\" y0=\"(0,2)\" name=\"oscillator\" N=\"200\"\/> <plot-de-solution at=\"x\" solution=\"oscillator\" axes=\"(t,y0)\"\/> <plot-de-solution at=\"xprime\" solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\" tactile-dash=\"9 9\"\/> <legend at=\"legend\" anchor=\"(bbox[2], bbox[3])\" alignment=\"sw\" scale=\"0.9\" opacity=\"0.5\"> <item ref=\"x\"><m>x(t)<\/m><\/item> <item ref=\"xprime\"><m>x'(t)<\/m><\/item> <\/legend> <\/coordinates> <\/diagram>   The source for     The linear combination of vectors     v1 = (2,1)  v2 = (-1,1)  a=3  b=2  w=a*v1+b*v2           {\\mathbf v}_1    {\\mathbf v}_2    ${a}{\\mathbf v}_1+${b}{\\mathbf v}_2           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>v1 = (2,1)<\/definition> <definition>v2 = (-1,1)<\/definition> <definition>a=3<\/definition> <definition>b=2<\/definition> <definition>w=a*v1+b*v2<\/definition> <coordinates bbox=\"(-3,-3,8,8)\"> <axes decorations=\"no\"\/> <grid basis=\"(v1,v2)\" stroke=\"lightgray\"\/> <group outline=\"tactile\"> <vector v=\"v1\" stroke=\"blue\"\/> <vector v=\"v2\" stroke=\"blue\"\/> <vector v=\"w\" stroke=\"red\"\/> <\/group> <label anchor=\"v1\" alignment=\"e\" clear-background=\"yes\" offset=\"(5,0)\"> <m>{\\mathbf v}_1<\/m> <\/label> <label anchor=\"v2\" alignment=\"n\" clear-background=\"yes\" offset=\"(0,5)\"> <m>{\\mathbf v}_2<\/m> <\/label> <label anchor=\"w\" alignment=\"n\" clear-background=\"yes\" offset=\"(0,5)\"> <m>${a}{\\mathbf v}_1+${b}{\\mathbf v}_2<\/m> <\/label> <\/coordinates> <\/diagram>   The source for     Orthgonal projection     v=(2,1)  b=(2,4)  bhat=dot(v,b)\/dot(v,v)* v  bperp=b- bhat      L    {\\mathbf b}^\\perp      {\\mathbf b}     \\widehat{\\mathbf b}     {\\mathbf v}           <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>v=(2,1)<\/definition> <definition>b=(2,4)<\/definition> <definition>bhat=dot(v,b)\/dot(v,v)* v<\/definition> <definition>bperp=b- bhat<\/definition> <coordinates bbox=\"[-1,-1,5,5]\"> <grid-axes at=\"grid-axes\"\/> <line p1=\"(0,0)\" p2=\"v\" infinite=\"yes\" stroke=\"blue\" thickness=\"2\"\/> <label anchor=\"(4.4,2.5)\"> <m>L<\/m> <\/label> <label anchor=\"midpoint(b,bhat)\" alignment=\"ne\" clear-background=\"yes\"> <m>{\\mathbf b}^\\perp<\/m> <\/label> <vector v=\"bperp\" tail=\"bhat\" stroke=\"gray\"\/> <vector v=\"b\"\/> <label anchor=\"b\" alignment=\"nw\"> <m>{\\mathbf b}<\/m> <\/label> <vector v=\"bhat\" stroke=\"red\"\/> <label anchor=\"bhat\" alignment=\"se\"> <m>\\widehat{\\mathbf b}<\/m> <\/label> <vector v=\"v\"\/> <label anchor=\"v\" alignment=\"se\"> <m>{\\mathbf v}<\/m> <\/label> <\/coordinates> <\/diagram>   The source for     A simple network     graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}             <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" graph=\"graph\" arrows=\"middle\" scale=\"0.8\" node-fill=\"#fcf\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <\/network> <\/coordinates> <\/diagram>   The source for     Another network     graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}   4   \\alpha            <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <network directed=\"yes\" graph=\"graph\" scale=\"0.7\" node-fill=\"#fcf\" node-stroke=\"black\" node-style=\"circle\" node-size=\"15\" arrows=\"end\" seed=\"1\" labels=\"yes\" tactile-node-size=\"45\"> <edge vertices=\"(1,2)\">4<\/edge> <edge vertices=\"(2,2)\" label-location=\"0.3\" loop-scale=\"(0.8,0.8)\"> <m>\\alpha<\/m> <\/edge> <node at=\"2\" style=\"double-circle\"\/> <\/network> <\/diagram>   The source for     A Venn diagram              A  B  A\\setminus B          <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <circle at=\"B\" center=\"(6,3)\" radius=\"2\"\/> <\/define-shapes> <shape shapes=\"A,B\" operation=\"difference\" fill=\"#fcf\" stroke=\"black\"\/> <shape shape=\"A\" stroke=\"black\"\/> <shape shape=\"B\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <label anchor=\"(2,3)\" alignment=\"nw\"><m>A<\/m><\/label> <label anchor=\"(8,3)\" alignment=\"ne\"><m>B<\/m><\/label> <label anchor=\"(5,0.5)\"><m>A\\setminus B<\/m><\/label> <\/coordinates> <\/diagram>   The source for     An circuit             +  -   C    R    L           <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,9)\"> <path start=\"(1,1)\" stroke=\"black\"> <lineto point=\"(1,8)\"\/> <lineto point=\"(9,8)\" decoration=\"coil; number=5; dimensions=(10,10)\"\/> <lineto point=\"(9,1)\" decoration=\"capacitor; dimensions=(12,15)\"\/> <lineto point=\"(1,1)\" decoration=\"zigzag; number=5; dimensions=(10,10)\"\/> <\/path> <point p=\"(1,4.5)\" size=\"20\" fill=\"white\" stroke=\"black\"\/> <label anchor=\"(1,4.5)\" alignment=\"nw\" offset=\"(-5,15)\" tactile-offset=\"(-20,20)\"><m>+<\/m><\/label> <label anchor=\"(1,4.5)\" alignment=\"sw\" offset=\"(-5,-15)\" tactile-offset=\"(-20,-20)\"><m>-<\/m><\/label> <label anchor=\"(9,4.5)\" alignment=\"west\" offset=\"(-15,0)\"> <m>C<\/m> <\/label> <label anchor=\"(5,1)\" alignment=\"north\" offset=\"(0,15)\"> <m>R<\/m> <\/label> <label anchor=\"(5,8)\" alignment=\"south\" offset=\"(0,-15)\"> <m>L<\/m> <\/label> <\/coordinates> <\/diagram>   The source for    "
+},
+{
+  "id": "diagram-slope",
+  "level": "2",
+  "url": "chap-examples.html#diagram-slope",
+  "type": "Figure",
+  "number": "7.0.1",
+  "title": "",
+  "body": " The definition of slope     x1=1  x2=4  y1=1  y2=5  p=(x1,y1)  q=(x2,y2)  r=(x2,y1)       \\theta      \\Delta x    \\Delta y       "
+},
+{
+  "id": "chap-examples-4",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-4",
+  "type": "Source",
+  "number": "7.1",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>x1=1<\/definition> <definition>x2=4<\/definition> <definition>y1=1<\/definition> <definition>y2=5<\/definition> <definition>p=(x1,y1)<\/definition> <definition>q=(x2,y2)<\/definition> <definition>r=(x2,y1)<\/definition> <coordinates bbox=\"(-1,-1,6,6)\"> <axes decorations=\"no\" xlabel=\"x\" ylabel=\"y\"\/> <group outline=\"none\"> <polygon points=\"(p,r,q)\" stroke=\"red\"\/> <angle-marker points=\"(r,p,q)\" stroke=\"black\"> <m>\\theta<\/m> <\/angle-marker> <line endpoints=\"(p, q)\" stroke=\"blue\" infinite=\"yes\"\/> <\/group> <label anchor=\"((x1+x2)\/2,y1)\" alignment=\"south\"> <m>\\Delta x<\/m> <\/label> <label anchor=\"(x2,(y1+y2)\/2)\" alignment=\"east\"> <m>\\Delta y<\/m> <\/label> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-intersections",
+  "level": "2",
+  "url": "chap-examples.html#diagram-intersections",
+  "type": "Figure",
+  "number": "7.0.3",
+  "title": "",
+  "body": " Intersections of lines       p1=(1,2)  p2=(8,8)  L1=(p1,p2)  q1=(1,7)  q2=(8,4)  L2=(q1,q2)    p=intersect((L1,L2))   \\theta        "
+},
+{
+  "id": "chap-examples-6",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-6",
+  "type": "Source",
+  "number": "7.2",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <definition>p1=(1,2)<\/definition> <definition>p2=(8,8)<\/definition> <definition>L1=(p1,p2)<\/definition> <definition>q1=(1,7)<\/definition> <definition>q2=(8,4)<\/definition> <definition>L2=(q1,q2)<\/definition> <line endpoints=\"L1\" stroke=\"blue\" infinite=\"yes\"\/> <line endpoints=\"L2\" stroke=\"blue\" infinite=\"yes\"\/> <definition>p=intersect((L1,L2))<\/definition> <angle-marker points=\"(q2,p,p2)\" clear-background=\"yes\"> <m>\\theta<\/m> <\/angle-marker> <point p=\"p\"\/> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-triangles",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-triangles",
+  "type": "Figure",
+  "number": "7.0.5",
+  "title": "",
+  "body": " Sample triangles        vertices=((4,4), (8,1),(7,8))       "
+},
+{
+  "id": "chap-examples-8",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-8",
+  "type": "Source",
+  "number": "7.3",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,10)\"> <grid-axes decorations=\"no\"\/> <triangle vertices=\"((1,1),(3,2),(1,5))\" labels=\"A,B,C\" show-vertices=\"yes\" point-fill=\"orange\"\/> <definition>vertices=((4,4), (8,1),(7,8))<\/definition> <triangle vertices=\"vertices\" labels=\"D,E,F\" angle-markers=\"yes\"\/> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-asymptotes",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-asymptotes",
+  "type": "Figure",
+  "number": "7.0.7",
+  "title": "",
+  "body": " Graphing functions with asymptotes     f(x)=(x^2-1)\/(x^2-4)            "
+},
+{
+  "id": "chap-examples-10",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-10",
+  "type": "Source",
+  "number": "7.4",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"0\"> <definition>f(x)=(x^2-1)\/(x^2-4)<\/definition> <coordinates bbox=\"(-5,-5,5,5)\"> <grid-axes\/> <graph function=\"f\"\/> <line endpoints=\"((-2,-4),(-2,4))\" infinite=\"yes\" stroke=\"red\"\/> <line endpoints=\"((2,4),(2,-4))\" infinite=\"yes\" stroke=\"red\"\/> <line endpoints=\"((4,1),(-4,1))\" infinite=\"yes\" stroke=\"green\"\/> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-trig-identity",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-trig-identity",
+  "type": "Figure",
+  "number": "7.0.9",
+  "title": "",
+  "body": " A trigonometric identity     theta=radians(80)  p=(cos(theta),sin(theta))  q=(cos(theta),-sin(theta))  origin=(0,0)  one=(1,0)        (\\cos(\\theta),\\sin(\\theta))    (\\cos(\\theta),-\\sin(\\theta))    \\theta    -\\theta       "
+},
+{
+  "id": "chap-examples-12",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-12",
+  "type": "Source",
+  "number": "7.5",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>theta=radians(80)<\/definition> <definition>p=(cos(theta),sin(theta))<\/definition> <definition>q=(cos(theta),-sin(theta))<\/definition> <definition>origin=(0,0)<\/definition> <definition>one=(1,0)<\/definition> <coordinates bbox=\"(-1.5,-1.5,1.5,1.5)\"> <grid-axes decorations=\"no\"\/> <polygon points=\"(one,origin,p)\" stroke=\"red\"\/> <polygon points=\"(one,origin,q)\" stroke=\"red\"\/> <circle center=\"(0,0)\" radius=\"1\" stroke=\"blue\"\/> <point p=\"p\"> <m>(\\cos(\\theta),\\sin(\\theta))<\/m> <\/point> <point p=\"q\" alignment=\"se\"> <m>(\\cos(\\theta),-\\sin(\\theta))<\/m> <\/point> <angle-marker points=\"(one,origin,p)\" stroke=\"black\"> <m>\\theta<\/m> <\/angle-marker> <angle-marker points=\"(q,origin,one)\" stroke=\"black\"> <m>-\\theta<\/m> <\/angle-marker> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-pythagoras",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-pythagoras",
+  "type": "Figure",
+  "number": "7.0.11",
+  "title": "",
+  "body": " The Pythagorean theorem     a=3  b=4  c=sqrt(a^2+b^2)  phi=acos(a\/c)  d=a*cos(phi)  p=a*(cos(phi), sin(phi))                 "
+},
+{
+  "id": "chap-examples-14",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-14",
+  "type": "Source",
+  "number": "7.6",
+  "title": "",
+  "body": "   <diagram dimensions=\"(250,270)\" margins=\"5\"> <definition>a=3<\/definition> <definition>b=4<\/definition> <definition>c=sqrt(a^2+b^2)<\/definition> <definition>phi=acos(a\/c)<\/definition> <definition>d=a*cos(phi)<\/definition> <definition>p=a*(cos(phi), sin(phi))<\/definition> <coordinates bbox=\"(-2.5,-5,7.5,6)\" aspect-ratio=\"1\"> <rectangle lower-left=\"(0,-c)\" dimensions=\"(d,c)\" fill=\"skyblue\"\/> <rectangle lower-left=\"(d,-c)\" dimensions=\"(c-d,c)\" fill=\"springgreen\"\/> <transform> <rotate by=\"phi-pi\/2\" degrees=\"no\"\/> <rectangle lower-left=\"(-a,0)\" dimensions=\"(a,a)\" fill=\"skyblue\" stroke=\"black\"\/> <rectangle lower-left=\"(0,a)\" dimensions=\"(b,b)\" fill=\"springgreen\" stroke=\"black\"\/> <\/transform> <rectangle lower-left=\"(0,-c)\" dimensions=\"(c,c)\" stroke=\"black\"\/> <line endpoints=\"(p,(d,-c))\" dash=\"8 8\" stroke=\"black\"\/> <triangle at=\"triangle\" vertices=\"((0,0),(c,0),p)\" stroke=\"black\"\/> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-derivatives",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-derivatives",
+  "type": "Figure",
+  "number": "7.0.13",
+  "title": "",
+  "body": " Graphing derivativees     f(x)=0.1*(x^4-10*x^2)  fp(x)=deriv(f, x)  fpp(x)=deriv(fp,x)      f     f'     f''       "
+},
+{
+  "id": "chap-examples-16",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-16",
+  "type": "Source",
+  "number": "7.7",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition> f(x)=0.1*(x^4-10*x^2)<\/definition> <definition> fp(x)=deriv(f, x)<\/definition> <definition> fpp(x)=deriv(fp,x)<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph function=\"f\"\/> <label p=\"(3.3,1)\" alignment=\"center\" clear-background=\"yes\"> <m>f<\/m> <\/label> <graph function=\"fp\" stroke=\"red\"\/> <label p=\"(2.5,1)\" alignment=\"center\" clear-background=\"yes\"> <m>f'<\/m> <\/label> <graph function=\"fpp\" stroke=\"green\"\/> <label p=\"(1.6,1)\" alignment=\"center\" clear-background=\"yes\"> <m>f''<\/m> <\/label> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-newtons-method",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-newtons-method",
+  "type": "Figure",
+  "number": "7.0.15",
+  "title": "",
+  "body": " Newton's method     f(x)=7-(x+1)^2\/2  x0 = 1       x1 = intersect(tan,-1)      x_0    x_1       "
+},
+{
+  "id": "chap-examples-18",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-18",
+  "type": "Source",
+  "number": "7.8",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=7-(x+1)^2\/2<\/definition> <definition>x0 = 1<\/definition> <coordinates bbox=\"(-8,-8,8,8)\"> <grid-axes xlabel=\"x\" ylabel=\"y\"\/> <graph function=\"f\"\/> <tangent-line function=\"f\" point=\"x0\" name=\"tan\"\/> <point p=\"(x0,f(x0))\" alignment=\"se\"\/> <definition>x1 = intersect(tan,-1)<\/definition> <repeat parameter=\"x in (x0, x1)\"> <line endpoints=\"((x,0),(x,0))\" endpoint-offsets=\"((0,-3),(0,3))\" stroke=\"black\"\/> <\/repeat> <label anchor=\"(x0,0)\" alignment=\"north\"> <m>x_0<\/m> <\/label> <label anchor=\"(x1,0)\" alignment=\"ne\"> <m>x_1<\/m> <\/label> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-area-integral",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-area-integral",
+  "type": "Figure",
+  "number": "7.0.17",
+  "title": "",
+  "body": " An intergral measuring area     f(x)=sin(x)  g(x)=cos(x)  a=intersect((f,g),1)  b=intersect((f,g),4)         a     b       "
+},
+{
+  "id": "chap-examples-20",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-20",
+  "type": "Source",
+  "number": "7.9",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(x)=sin(x)<\/definition> <definition>g(x)=cos(x)<\/definition> <definition>a=intersect((f,g),1)<\/definition> <definition>b=intersect((f,g),4)<\/definition> <coordinates bbox=\"(-1,-1.5,5,1.5)\"> <grid-axes decorations=\"no\"\/> <area-between-curves functions=\"(f,g)\" domain=\"(a,b)\" fill=\"lightgray\"\/> <graph function=\"f\"\/> <graph function=\"g\"\/> <line endpoints=\"((a,0),(a,0))\" endpoint-offsets=\"((0,-3),(0,3))\"\/> <label anchor=\"(a,0)\" alignment=\"south\" offset=\"(0,-4)\"> <m>a<\/m> <\/label> <line endpoints=\"((b,0),(b,0))\" endpoint-offsets=\"((0,-3),(0,3))\"\/> <label anchor=\"(b,0)\" alignment=\"north\" offset=\"(0,4)\"> <m>b<\/m> <\/label> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-diffeq-ordinary",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-diffeq-ordinary",
+  "type": "Figure",
+  "number": "7.0.19",
+  "title": "",
+  "body": " Solutions to a differential equation     f(t,y) = t-y                "
+},
+{
+  "id": "chap-examples-22",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-22",
+  "type": "Source",
+  "number": "7.10",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t,y) = t-y<\/definition> <coordinates bbox=\"[-4,-4,4,4]\"> <grid at=\"grid\"\/> <axes at=\"axes\" xlabel=\"t\" ylabel=\"y\"\/> <slope-field at=\"slope-field\" function=\"f\" outline=\"yes\"\/> <group at=\"solutions\" outline=\"tactile\"> <repeat parameter=\"k=-4..4\"> <plot-de-solution at=\"solution\" function=\"f\" t0=\"0\" y0=\"k\" t1=\"4\" stroke=\"orange\"\/> <point at=\"initial-value\" p=\"(0,k)\" size=\"4\" fill=\"orange\"\/> <\/repeat> <\/group> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-diffeq-system",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-diffeq-system",
+  "type": "Figure",
+  "number": "7.0.21",
+  "title": "",
+  "body": " A system of differential equations     f(t,y) = (y[1], -pi*y[0]-0.3*y[1])        x(t)  x'(t)       "
+},
+{
+  "id": "chap-examples-24",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-24",
+  "type": "Source",
+  "number": "7.11",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>f(t,y) = (y[1], -pi*y[0]-0.3*y[1])<\/definition> <coordinates bbox=\"[-1,-3,6,3]\"> <grid-axes xlabel=\"t\"\/> <de-solve function=\"f\" t0=\"0\" t1=\"bbox[2]\" y0=\"(0,2)\" name=\"oscillator\" N=\"200\"\/> <plot-de-solution at=\"x\" solution=\"oscillator\" axes=\"(t,y0)\"\/> <plot-de-solution at=\"xprime\" solution=\"oscillator\" axes=\"(t,y1)\" stroke=\"red\" tactile-dash=\"9 9\"\/> <legend at=\"legend\" anchor=\"(bbox[2], bbox[3])\" alignment=\"sw\" scale=\"0.9\" opacity=\"0.5\"> <item ref=\"x\"><m>x(t)<\/m><\/item> <item ref=\"xprime\"><m>x'(t)<\/m><\/item> <\/legend> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-linear-combinations",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-linear-combinations",
+  "type": "Figure",
+  "number": "7.0.23",
+  "title": "",
+  "body": " The linear combination of vectors     v1 = (2,1)  v2 = (-1,1)  a=3  b=2  w=a*v1+b*v2           {\\mathbf v}_1    {\\mathbf v}_2    ${a}{\\mathbf v}_1+${b}{\\mathbf v}_2       "
+},
+{
+  "id": "chap-examples-26",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-26",
+  "type": "Source",
+  "number": "7.12",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>v1 = (2,1)<\/definition> <definition>v2 = (-1,1)<\/definition> <definition>a=3<\/definition> <definition>b=2<\/definition> <definition>w=a*v1+b*v2<\/definition> <coordinates bbox=\"(-3,-3,8,8)\"> <axes decorations=\"no\"\/> <grid basis=\"(v1,v2)\" stroke=\"lightgray\"\/> <group outline=\"tactile\"> <vector v=\"v1\" stroke=\"blue\"\/> <vector v=\"v2\" stroke=\"blue\"\/> <vector v=\"w\" stroke=\"red\"\/> <\/group> <label anchor=\"v1\" alignment=\"e\" clear-background=\"yes\" offset=\"(5,0)\"> <m>{\\mathbf v}_1<\/m> <\/label> <label anchor=\"v2\" alignment=\"n\" clear-background=\"yes\" offset=\"(0,5)\"> <m>{\\mathbf v}_2<\/m> <\/label> <label anchor=\"w\" alignment=\"n\" clear-background=\"yes\" offset=\"(0,5)\"> <m>${a}{\\mathbf v}_1+${b}{\\mathbf v}_2<\/m> <\/label> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-projection",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-projection",
+  "type": "Figure",
+  "number": "7.0.25",
+  "title": "",
+  "body": " Orthgonal projection     v=(2,1)  b=(2,4)  bhat=dot(v,b)\/dot(v,v)* v  bperp=b- bhat      L    {\\mathbf b}^\\perp      {\\mathbf b}     \\widehat{\\mathbf b}     {\\mathbf v}       "
+},
+{
+  "id": "chap-examples-28",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-28",
+  "type": "Source",
+  "number": "7.13",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>v=(2,1)<\/definition> <definition>b=(2,4)<\/definition> <definition>bhat=dot(v,b)\/dot(v,v)* v<\/definition> <definition>bperp=b- bhat<\/definition> <coordinates bbox=\"[-1,-1,5,5]\"> <grid-axes at=\"grid-axes\"\/> <line p1=\"(0,0)\" p2=\"v\" infinite=\"yes\" stroke=\"blue\" thickness=\"2\"\/> <label anchor=\"(4.4,2.5)\"> <m>L<\/m> <\/label> <label anchor=\"midpoint(b,bhat)\" alignment=\"ne\" clear-background=\"yes\"> <m>{\\mathbf b}^\\perp<\/m> <\/label> <vector v=\"bperp\" tail=\"bhat\" stroke=\"gray\"\/> <vector v=\"b\"\/> <label anchor=\"b\" alignment=\"nw\"> <m>{\\mathbf b}<\/m> <\/label> <vector v=\"bhat\" stroke=\"red\"\/> <label anchor=\"bhat\" alignment=\"se\"> <m>\\widehat{\\mathbf b}<\/m> <\/label> <vector v=\"v\"\/> <label anchor=\"v\" alignment=\"se\"> <m>{\\mathbf v}<\/m> <\/label> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-simple-network",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-simple-network",
+  "type": "Figure",
+  "number": "7.0.27",
+  "title": "",
+  "body": " A simple network     graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}         "
+},
+{
+  "id": "chap-examples-30",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-30",
+  "type": "Source",
+  "number": "7.14",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <coordinates bbox=\"(-1,-1,1,1)\"> <network directed=\"yes\" graph=\"graph\" arrows=\"middle\" scale=\"0.8\" node-fill=\"#fcf\" seed=\"1\" labels=\"yes\" tactile-node-size=\"40\"> <\/network> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-network",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-network",
+  "type": "Figure",
+  "number": "7.0.29",
+  "title": "",
+  "body": " Another network     graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}   4   \\alpha        "
+},
+{
+  "id": "chap-examples-32",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-32",
+  "type": "Source",
+  "number": "7.15",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,300)\" margins=\"5\"> <definition>graph={1:[3,4,5,5],2:[4,5],3:[4,5],6:[2,4]}<\/definition> <network directed=\"yes\" graph=\"graph\" scale=\"0.7\" node-fill=\"#fcf\" node-stroke=\"black\" node-style=\"circle\" node-size=\"15\" arrows=\"end\" seed=\"1\" labels=\"yes\" tactile-node-size=\"45\"> <edge vertices=\"(1,2)\">4<\/edge> <edge vertices=\"(2,2)\" label-location=\"0.3\" loop-scale=\"(0.8,0.8)\"> <m>\\alpha<\/m> <\/edge> <node at=\"2\" style=\"double-circle\"\/> <\/network> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-venn-diagram",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-venn-diagram",
+  "type": "Figure",
+  "number": "7.0.31",
+  "title": "",
+  "body": " A Venn diagram              A  B  A\\setminus B      "
+},
+{
+  "id": "chap-examples-34",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-34",
+  "type": "Source",
+  "number": "7.16",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,180)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,6)\"> <define-shapes> <circle at=\"A\" center=\"(4,3)\" radius=\"2\"\/> <circle at=\"B\" center=\"(6,3)\" radius=\"2\"\/> <\/define-shapes> <shape shapes=\"A,B\" operation=\"difference\" fill=\"#fcf\" stroke=\"black\"\/> <shape shape=\"A\" stroke=\"black\"\/> <shape shape=\"B\" stroke=\"black\"\/> <rectangle lower-left=\"(0,0)\" dimensions=\"(10,6)\" stroke=\"black\"\/> <label anchor=\"(2,3)\" alignment=\"nw\"><m>A<\/m><\/label> <label anchor=\"(8,3)\" alignment=\"ne\"><m>B<\/m><\/label> <label anchor=\"(5,0.5)\"><m>A\\setminus B<\/m><\/label> <\/coordinates> <\/diagram>   The source for   "
+},
+{
+  "id": "diagram-sample-LCR-circuit",
+  "level": "2",
+  "url": "chap-examples.html#diagram-sample-LCR-circuit",
+  "type": "Figure",
+  "number": "7.0.33",
+  "title": "",
+  "body": " An circuit             +  -   C    R    L       "
+},
+{
+  "id": "chap-examples-36",
+  "level": "2",
+  "url": "chap-examples.html#chap-examples-36",
+  "type": "Source",
+  "number": "7.17",
+  "title": "",
+  "body": "   <diagram dimensions=\"(300,200)\" margins=\"5\"> <coordinates bbox=\"(0,0,10,9)\"> <path start=\"(1,1)\" stroke=\"black\"> <lineto point=\"(1,8)\"\/> <lineto point=\"(9,8)\" decoration=\"coil; number=5; dimensions=(10,10)\"\/> <lineto point=\"(9,1)\" decoration=\"capacitor; dimensions=(12,15)\"\/> <lineto point=\"(1,1)\" decoration=\"zigzag; number=5; dimensions=(10,10)\"\/> <\/path> <point p=\"(1,4.5)\" size=\"20\" fill=\"white\" stroke=\"black\"\/> <label anchor=\"(1,4.5)\" alignment=\"nw\" offset=\"(-5,15)\" tactile-offset=\"(-20,20)\"><m>+<\/m><\/label> <label anchor=\"(1,4.5)\" alignment=\"sw\" offset=\"(-5,-15)\" tactile-offset=\"(-20,-20)\"><m>-<\/m><\/label> <label anchor=\"(9,4.5)\" alignment=\"west\" offset=\"(-15,0)\"> <m>C<\/m> <\/label> <label anchor=\"(5,1)\" alignment=\"north\" offset=\"(0,15)\"> <m>R<\/m> <\/label> <label anchor=\"(5,8)\" alignment=\"south\" offset=\"(0,-15)\"> <m>L<\/m> <\/label> <\/coordinates> <\/diagram>   The source for   "
 },
 {
   "id": "backmatter-2",
