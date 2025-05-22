@@ -470,8 +470,8 @@
       <li><p>a loop at node <q>a</q> has the handle
       <q>loop-a</q>.</p></li>
       <li><p>if there are multiple edges from node <q>a</q> to node
-      <q>b</q>, they acquire the handles <q>node-a-b-0</q>,
-      <q>node-a-b-1</q>, and so forth.  The same is true for loops.
+      <q>b</q>, they acquire the handles <q>edge-a-b-0</q>,
+      <q>edge-a-b-1</q>, and so forth.  The same is true for loops.
       </p></li>
     </ul>
     </p>

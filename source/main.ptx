@@ -17,6 +17,7 @@
     <xi:include href="./chapter-project.ptx" />
     <xi:include href="./chapter-next-steps.ptx" />
     <xi:include href="./chapter-accessibility.ptx" />
+    <xi:include href="./chapter-examples.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />

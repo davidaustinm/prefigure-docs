@@ -1,0 +1,21 @@
+<diagram dimensions="(300,300)" margins="5">
+  <coordinates bbox="(0,0,10,10)">
+    <grid-axes decorations="no"/>
+    <definition>p1=(1,2)</definition>
+    <definition>p2=(8,8)</definition>
+    <definition>L1=(p1,p2)</definition>
+    <definition>q1=(1,7)</definition>
+    <definition>q2=(8,4)</definition>
+    <definition>L2=(q1,q2)</definition>
+    <line endpoints="L1" stroke="blue"
+      infinite="yes"/>
+    <line endpoints="L2" stroke="blue"
+      infinite="yes"/>
+    <definition>p=intersect((L1,L2))</definition>
+    <angle-marker points="(q2,p,p2)"
+      clear-background="yes">
+      <m>\theta</m>
+    </angle-marker>
+    <point p="p"/>
+  </coordinates>
+</diagram>

@@ -45,4 +45,6 @@
     <external-root name="external"/>
   </prefigure-preamble>
 
+  <rename element="proof">Source</rename>
+
 </docinfo>

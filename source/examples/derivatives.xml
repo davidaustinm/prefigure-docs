@@ -1,0 +1,28 @@
+<diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org">
+  <definition> f(x)=0.1*(x^4-10*x^2)</definition>
+  <definition> fp(x)=deriv(f, x)</definition>
+  <definition> fpp(x)=deriv(fp,x)</definition>
+  <coordinates bbox="[-4,-4,4,4]">
+
+    <grid-axes xlabel="x" ylabel="y"/>
+    <graph function="f" />
+    <label p="(3.3,1)" alignment="center" 
+           clear-background="yes">
+      <m>f</m>
+    </label>
+    
+    <graph function="fp" stroke="red" />
+    <label p="(2.5,1)" alignment="center" 
+           clear-background="yes">
+      <m>f'</m>
+    </label>
+    
+    <graph function="fpp" stroke="green" />
+    <label p="(1.6,1)" alignment="center" 
+           clear-background="yes">
+      <m>f''</m>
+    </label>
+    
+  </coordinates>
+</diagram>

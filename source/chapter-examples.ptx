@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chap-examples" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Examples with source</title>
+
+  <p>This chapter presents a series of <prefigure/> diagrams along
+  with their source.  These examples may provide a starting point for
+  authors to explore in the
+  <url href="https://davidaustinm.github.io/prefigure">
+    <prefigure/> Playground.
+  </url>
+  </p>
+
+  <figure xml:id="diagram-slope">
+    <caption>The definition of slope</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-slope">
+        <xi:include href="examples/slope.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-slope">
+      <program>
+        <code><xi:include href="examples/include/slope.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-slope"/></caption>
+    </listing>
+  </proof>
+
+  <figure xml:id="diagram-intersections">
+    <caption>Intersections of lines</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-intersections">
+        <xi:include href="examples/intersections.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-intersections">
+      <program>
+        <code><xi:include href="examples/include/intersections.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-intersections"/></caption>
+    </listing>
+  </proof>
+
+
+  <figure xml:id="diagram-sample-triangles">
+    <caption>Sample triangles</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-triangles">
+        <xi:include href="examples/triangles.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-triangles">
+      <program>
+        <code><xi:include href="examples/include/triangles.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-triangles"/></caption>
+    </listing>
+  </proof>
+
+
+  <figure xml:id="diagram-sample-asymptotes">
+    <caption>Graphing functions with asymptotes</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-asymptotes">
+        <xi:include href="examples/asymptotes.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-asymptotes">
+      <program>
+        <code><xi:include href="examples/include/asymptotes.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-asymptotes"/></caption>
+    </listing>
+  </proof>
+
+
+  <figure xml:id="diagram-sample-trig-identity">
+    <caption>A trigonometric identity</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-trig-identity">
+        <xi:include href="examples/trig_identity.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-trig-identity">
+      <program>
+        <code><xi:include href="examples/include/trig_identity.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-trig-identity"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-pythagoras">
+    <caption>The Pythagorean theorem</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-pythagoras">
+        <xi:include href="examples/pythagoras.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-pythagoras">
+      <program>
+        <code><xi:include href="examples/include/pythagoras.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-pythagoras"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-derivatives">
+    <caption>Graphing derivativees</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-derivatives">
+        <xi:include href="examples/derivatives.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-derivatives">
+      <program>
+        <code><xi:include href="examples/include/derivatives.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-derivatives"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-newtons-method">
+    <caption>Newton's method</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-newtons-method">
+        <xi:include href="examples/newtons_method.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-newtons-method">
+      <program>
+        <code><xi:include href="examples/include/newtons_method.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-newtons-method"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-area-integral">
+    <caption>An intergral measuring area</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-area-integral">
+        <xi:include href="examples/area-integral.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-area-integral">
+      <program>
+        <code><xi:include href="examples/include/area-integral.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-area-integral"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-diffeq-ordinary">
+    <caption>Solutions to a differential equation</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-diffeq-ordinary">
+        <xi:include href="examples/diffeq-ordinary.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-diffeq-ordinary">
+      <program>
+        <code><xi:include href="examples/include/diffeq-ordinary.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-diffeq-ordinary"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-diffeq-system">
+    <caption>A system of differential equations</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-diffeq-system">
+        <xi:include href="examples/diffeq-system.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-diffeq-system">
+      <program>
+        <code><xi:include href="examples/include/diffeq-system.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-diffeq-system"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-linear-combinations">
+    <caption>The linear combination of vectors</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-linear-combination">
+        <xi:include href="examples/linear_combinations.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-linear-combinations">
+      <program>
+        <code><xi:include href="examples/include/linear_combinations.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-linear-combinations"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-projection">
+    <caption>Orthgonal projection</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-projection">
+        <xi:include href="examples/projection.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-projection">
+      <program>
+        <code><xi:include href="examples/include/projection.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-projection"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-simple-network">
+    <caption>A simple network</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-simple-network">
+        <xi:include href="examples/simple-network.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-simple-network">
+      <program>
+        <code><xi:include href="examples/include/simple-network.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-simple-network"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-network">
+    <caption>Another network</caption>
+    <image width="60%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-network">
+        <xi:include href="examples/network.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-network">
+      <program>
+        <code><xi:include href="examples/include/network.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-network"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-venn-diagram">
+    <caption>A Venn diagram</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-venn-diagram">
+        <xi:include href="examples/venn_diagram.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-venn-diagram">
+      <program>
+        <code><xi:include href="examples/include/venn_diagram.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-venn-diagram"/></caption>
+    </listing>
+  </proof>
+
+  
+  <figure xml:id="diagram-sample-LCR-circuit">
+    <caption>An <m>LCR</m> circuit</caption>
+    <image width="60%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-LCR-circuit">
+        <xi:include href="examples/LCR_circuit.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-LCR-circuit">
+      <program>
+        <code><xi:include href="examples/include/LCR_circuit.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-LCR-circuit"/></caption>
+    </listing>
+  </proof>
+
+</chapter>
