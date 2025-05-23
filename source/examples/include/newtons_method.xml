@@ -9,7 +9,9 @@
     <definition>x1 = intersect(tan,-1)</definition>
 
     <repeat parameter="x in (x0, x1)">
-      <line endpoints="((x,0),(x,0))" endpoint-offsets="((0,-3),(0,3))"
+      <line endpoints="((x,0),(x,0))"
+            endpoint-offsets="((0,-3),(0,3))"
+            tactile-endpoint-offsets="((0,-18),(0,0))"
             stroke="black"/>
     </repeat>
     <label anchor="(x0,0)" alignment="north">
