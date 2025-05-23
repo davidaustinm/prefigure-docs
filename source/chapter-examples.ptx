@@ -130,6 +130,26 @@
   </proof>
 
   
+  <figure xml:id="diagram-sample-roots-of-unity">
+    <caption>Eighth roots of unity</caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-sample-roots-of-unity">
+        <xi:include href="examples/roots_of_unity.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <proof>
+    <listing xml:id="listing-sample-roots-of-unity">
+      <program>
+        <code><xi:include href="examples/include/roots_of_unity.xml" parse="text"/></code>
+      </program>
+      <caption>The source for <xref ref="diagram-sample-roots-of-unity"/></caption>
+    </listing>
+  </proof>
+
+  
   <figure xml:id="diagram-sample-derivatives">
     <caption>Graphing derivativees</caption>
     <image width="50%">
