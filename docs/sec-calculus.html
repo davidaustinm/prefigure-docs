@@ -308,8 +308,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Intersections</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-6" class="internal"><span class="codenumber">5.4.4</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -368,12 +369,48 @@ eBookConfig.enable_chatcodes =  false;
 		  domain="(0,3)" stroke="green"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure></section><section class="subsection" id="sec-calculus-4"><h3 class="heading hide-type">
+</code></pre></div></div></figure><div class="para logical" id="subsec-graph-9">
+<div class="para">A <code class="code-inline tex2jax_ignore">&lt;tangent-line&gt;</code> element can be given a <code class="code-inline tex2jax_ignore">@name</code> attribute so that one might refer later to the linear function that defines the tangent line.  For instance, if <code class="code-inline tex2jax_ignore">@name="L"</code>, then <code class="code-inline tex2jax_ignore">L</code> defines the function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/diagram-newton.html">
+\begin{equation*}
+L(x) = f(a)+f'(a)(x-a)\text{.}
+\end{equation*}
+</div>
+<div class="para">
+<a href="sec-calculus.html#diagram-newton" class="xref" data-knowl="./knowl/xref/diagram-newton.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.5">Figure 3.7.5</a> demonstrates this feature by illustrating one step of Newton’s method.</div>
+</div>
+<figure class="figure figure-like" id="diagram-newton"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/prefigure/prefigure-newton.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span>An author can reference the linear function defined by a <code class="code-inline tex2jax_ignore">&lt;tangent-line&gt;</code>.</figcaption></figure><div class="para" id="subsec-graph-11">Note the use of the <code class="code-inline tex2jax_ignore">intersect</code> function in the PreFigure source.  In this case, <code class="code-inline tex2jax_ignore">intersect(L, -1)</code> finds the solution of the equation <span class="process-math">\(L(x)=0\)</span> using <span class="process-math">\(x_0=-1\)</span> as a starting point.</div>
+<figure class="listing figure-like" id="listing-newton"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.7.5.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+  &lt;definition&gt;f(x)=7-(x+1)^2/2&lt;/definition&gt;
+  &lt;definition&gt;x0 = 1&lt;/definition&gt;
+  &lt;coordinates bbox="(-8,-8,8,8)"&gt;
+    &lt;grid-axes xlabel="x" ylabel="y"/&gt;
+    &lt;graph function="f"/&gt;
+    &lt;tangent-line function="f" point="x0" name="L"/&gt;
+    &lt;point p="(x0,f(x0))" alignment="se"/&gt;
+    &lt;definition&gt;x1 = intersect(L,-1)&lt;/definition&gt;
+
+    &lt;repeat parameter="x in (x0, x1)"&gt;
+      &lt;line endpoints="((x,0),(x,0))"
+            endpoint-offsets="((0,-3),(0,3))"
+            tactile-endpoint-offsets="((0,-18),(0,0))"
+            stroke="black"/&gt;
+    &lt;/repeat&gt;
+    &lt;label anchor="(x0,0)" alignment="north"&gt;
+      &lt;m&gt;x_0&lt;/m&gt;
+    &lt;/label&gt;
+    &lt;label anchor="(x1,0)" alignment="ne"&gt;
+      &lt;m&gt;x_1&lt;/m&gt;
+    &lt;/label&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div></div></figure><div class="para" id="subsec-graph-13">It is possible to include arrows on the right and/or left ends of a <code class="code-inline tex2jax_ignore">&lt;graph&gt;</code> using either <code class="code-inline tex2jax_ignore">@arrows="1" or "2"</code> though this practice is discouraged due to the visual clutter it can create.</div></section><section class="subsection" id="sec-calculus-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.7.2</span><span class="space"> </span><span class="title">Parametric curves</span>
 </h3>
 <div class="para" id="sec-calculus-4-2">The <code class="code-inline tex2jax_ignore">&lt;parametric-curve&gt;</code> tag includes the plot of a function defined parametrically.</div>
 <figure class="figure figure-like" id="diagram-parametric"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/parametric.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.5<span class="period">.</span></span><span class="space"> </span>Two parametric curves.</figcaption></figure><figure class="listing figure-like" id="listing-parametric"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.7.5.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span>Two parametric curves.</figcaption></figure><figure class="listing figure-like" id="listing-parametric"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.7.7.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;definition&gt;f(t)=3*(cos(t), sin(t)) + (cos(10*t),sin(10*t))&lt;/definition&gt;
   &lt;definition&gt;g(t)=(t^2,t^3)&lt;/definition&gt;
   &lt;coordinates bbox="(-5,-5,5,5)"&gt;
@@ -389,7 +426,7 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="sec-calculus-5-2">The solutions to an equation <span class="process-math">\(f(x,y)=k\)</span> can be plotted with the <code class="code-inline tex2jax_ignore">&lt;implicit-curve&gt;</code> tag.</div>
 <figure class="figure figure-like" id="diagram-implicit-curve"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/implicit-curve.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.7<span class="period">.</span></span><span class="space"> </span>Two implicit curves defined by <span class="process-math">\(f(x,y)=y^2-x^3+x=k.\)</span></figcaption></figure><figure class="listing figure-like" id="listing-implicit-curve"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.7.7.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.9<span class="period">.</span></span><span class="space"> </span>Two implicit curves defined by <span class="process-math">\(f(x,y)=y^2-x^3+x=k.\)</span></figcaption></figure><figure class="listing figure-like" id="listing-implicit-curve"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.10<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.7.9.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
   &lt;definition&gt;f(x,y) = y^2 - x^3 + x&lt;/definition&gt;
   &lt;coordinates bbox="[-2,-2,2,2]"&gt;
     &lt;grid-axes /&gt;
@@ -406,7 +443,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/area-under.svg" role="img" class="contained"></div>
 <div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/images/area-between.svg" role="img" class="contained"></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.9<span class="period">.</span></span><span class="space"> </span>The area under a curve and between two curves</figcaption></figure><figure class="listing figure-like" id="listing-area"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.10<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the diagrams inFigure 3.7.9.</figcaption><div class="listing__contents">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.11<span class="period">.</span></span><span class="space"> </span>The area under a curve and between two curves</figcaption></figure><figure class="listing figure-like" id="listing-area"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.12<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the diagrams in Figure 3.7.11.</figcaption><div class="listing__contents">
 <div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
   &lt;definition&gt;f(x)=2*sqrt(x)&lt;/definition&gt;
   &lt;coordinates bbox="[-1,-1,5,5]"&gt;
@@ -431,12 +468,37 @@ eBookConfig.enable_chatcodes =  false;
   
 &lt;/diagram&gt;
 </code></pre></div>
-</div></figure><div class="para" id="sec-calculus-6-5">As with the other graphs we have seen in this section, the value of <code class="code-inline tex2jax_ignore">@N</code> can be increased to produce smoother graphs, in some cases.</div></section><section class="subsection" id="sec-calculus-7"><h3 class="heading hide-type">
+</div></figure><div class="para" id="sec-calculus-6-5">As with the other graphs we have seen in this section, the value of <code class="code-inline tex2jax_ignore">@N</code> can be increased to produce smoother graphs, in some cases.</div>
+<div class="para" id="sec-calculus-6-6">As demonstrated in <a href="sec-calculus.html#diagram-area-integral" class="xref" data-knowl="./knowl/xref/diagram-area-integral.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.7.13">Figure 3.7.13</a>, there is another version of the <code class="code-inline tex2jax_ignore">intersect</code> function that can be helpful.</div>
+<figure class="figure figure-like" id="diagram-area-integral"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/prefigure/prefigure-area-integral.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.13<span class="period">.</span></span><span class="space"> </span>The <code class="code-inline tex2jax_ignore">intersect</code> function finds the intersection of two graphs.</figcaption></figure><div class="para" id="sec-calculus-6-8">In this case, we use <code class="code-inline tex2jax_ignore">intersect( (f,g), 1)</code> to find the intersection point starting with <span class="process-math">\(x_0=1\text{.}\)</span>  Notice that the two functions are included inside parentheses.</div>
+<figure class="listing figure-like" id="listing-area-integral"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.14<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.7.13.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+  &lt;definition&gt;f(x)=sin(x)&lt;/definition&gt;
+  &lt;definition&gt;g(x)=cos(x)&lt;/definition&gt;
+  &lt;definition&gt;a=intersect((f,g),1)&lt;/definition&gt;
+  &lt;definition&gt;b=intersect((f,g),4)&lt;/definition&gt;
+  &lt;coordinates bbox="(-1,-1.5,5,1.5)"&gt;
+    &lt;grid-axes decorations="no"/&gt;
+    &lt;area-between-curves functions="(f,g)" domain="(a,b)" fill="lightgray"/&gt;
+    &lt;graph function="f"/&gt;
+    &lt;graph function="g"/&gt;
+    &lt;line endpoints="((a,0),(a,0))" endpoint-offsets="((0,-3),(0,3))"/&gt;
+    &lt;label anchor="(a,0)" alignment="south" offset="(0,-7)"&gt;
+      &lt;m&gt;a&lt;/m&gt;
+    &lt;/label&gt;
+    &lt;line endpoints="((b,0),(b,0))" endpoint-offsets="((0,-3),(0,3))"/&gt;
+    &lt;label anchor="(b,0)" alignment="south" offset="(0,-4)"&gt;
+      &lt;m&gt;b&lt;/m&gt;
+    &lt;/label&gt;
+
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div></div></figure></section><section class="subsection" id="sec-calculus-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.7.5</span><span class="space"> </span><span class="title">Riemann sums</span>
 </h3>
 <div class="para" id="sec-calculus-7-2">Finally, there is a <code class="code-inline tex2jax_ignore">&lt;riemann-sum&gt;</code> element.</div>
 <figure class="figure figure-like" id="diagram-riemann-sum"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/riemann-sum.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.11<span class="period">.</span></span><span class="space"> </span>A Riemann sum</figcaption></figure><figure class="listing figure-like" id="listing-riemann-sum"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.12<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the diagrams inFigure 3.7.11.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.7.15<span class="period">.</span></span><span class="space"> </span>A Riemann sum</figcaption></figure><figure class="listing figure-like" id="listing-riemann-sum"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.16<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the diagrams inFigure 3.7.15.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;definition&gt;f(x) = 2*log(x+2)&lt;/definition&gt;
   &lt;coordinates bbox="[-1,-1,5,5]"&gt;
     &lt;grid-axes/&gt;

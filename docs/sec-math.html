@@ -308,8 +308,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Mathematical operations</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-3" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Math operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Vector operations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">List operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Intersections</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-6" class="internal"><span class="codenumber">5.4.4</span> <span class="title">List operations</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -347,39 +348,50 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec-math-3-2">PreFigure provides access to Python’s <code class="code-inline tex2jax_ignore">math</code> module, which means that constants such as <code class="code-inline tex2jax_ignore">pi</code> and <code class="code-inline tex2jax_ignore">e</code> are available, as well as functions such as <code class="code-inline tex2jax_ignore">sin</code>, <code class="code-inline tex2jax_ignore">cos</code>, <code class="code-inline tex2jax_ignore">acos</code>, <code class="code-inline tex2jax_ignore">atan</code>, and <code class="code-inline tex2jax_ignore">atan2</code>.  By default, any trigonometric functions use radians, but the functions <code class="code-inline tex2jax_ignore">degrees</code> and <code class="code-inline tex2jax_ignore">radians</code> will convert back and forth.</div>
 <div class="para" id="sec-math-3-3">Some operations from discrete math, such as <code class="code-inline tex2jax_ignore">comb(n,k)</code> for <span class="process-math">\(n\choose k\text{,}\)</span> are also available.</div>
 <div class="para" id="sec-math-3-4">These functions are available without the <code class="code-inline tex2jax_ignore">math.</code> prefix so that we could say, for instance, <code class="code-inline tex2jax_ignore">cos(pi/6)</code>. See the <a class="external" href="https://docs.python.org/3/library/math.html" target="_blank">Python documentation</a><details class="ptx-footnote" aria-live="polite" id="sec-math-3-4-4"><summary class="ptx-footnote__number" title="Footnote 5.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-math-3-4-4"><code class="code-inline tex2jax_ignore">docs.python.org/3/library/math.html</code></div></details> for a full list of functions that are available.</div></section><section class="subsection" id="sec-math-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.2</span><span class="space"> </span><span class="title">Vector operations</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.2</span><span class="space"> </span><span class="title">Intersections</span>
 </h3>
-<div class="para" id="sec-math-4-2">Vector operations may be defined on previously-defined lists or tuples.  For instance, if we define <code class="code-inline tex2jax_ignore">u=(1,2)</code> and <code class="code-inline tex2jax_ignore">v=(-2,4)</code>, we can later say <code class="code-inline tex2jax_ignore">u+v</code> and <code class="code-inline tex2jax_ignore">-3*u</code>. (Behind the scenes, any list or tuple that is defined is interpreted as a <code class="code-inline tex2jax_ignore">numpy</code> array.)</div>
-<div class="para logical" id="sec-math-4-3">
+<div class="para logical" id="sec-math-4-2">
+<div class="para">The <code class="code-inline tex2jax_ignore">intersect</code> function is overloaded to handle a variety of cases.  While this may seem confusing, the syntax is meant to be natural within specific applications.</div>
+<ul class="disc" id="sec-math-4-2-2">
+<li id="sec-math-4-2-2-1"><div class="para" id="sec-math-4-2-2-1-1">The intersection of two lines <code class="code-inline tex2jax_ignore">L1</code> and <code class="code-inline tex2jax_ignore">L2</code>, defined by pairs of points is given by <code class="code-inline tex2jax_ignore">intersect( (L1, L2) )</code>.  This variant will return a two-dimensional point, as demonstrated in <a href="sec-simple.html#listing-line-intersections" class="xref" data-knowl="./knowl/xref/listing-line-intersections.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.6: The PreFigure source for Figure 3.5.5.">Listing 3.5.6</a>.</div></li>
+<li id="sec-math-4-2-2-2"><div class="para" id="sec-math-4-2-2-2-1">The intersection of two graphs defined by functions <code class="code-inline tex2jax_ignore">f</code> and <code class="code-inline tex2jax_ignore">g</code> is found by <code class="code-inline tex2jax_ignore">intersect( (f,g), x0)</code> where <code class="code-inline tex2jax_ignore">x0</code> is a point relatively close to the desired intersection point.  This variant of the function returns the value of <span class="process-math">\(x\)</span> for which <span class="process-math">\(f(x)=g(x)\text{.}\)</span>  One use is illustrated in <a href="sec-calculus.html#listing-area-integral" class="xref" data-knowl="./knowl/xref/listing-area-integral.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.7.14: The PreFigure source for Figure 3.7.13.">Listing 3.7.14</a>.</div></li>
+<li id="sec-math-4-2-2-3"><div class="para" id="sec-math-4-2-2-3-1">To find a value of <span class="process-math">\(x\)</span> where <span class="process-math">\(f(x)=y_0\text{,}\)</span> use <code class="code-inline tex2jax_ignore">intersect( (f, y0), x0)</code> where <code class="code-inline tex2jax_ignore">x0</code> is a point relatively near the solution.</div></li>
+<li id="sec-math-4-2-2-4"><div class="para" id="sec-math-4-2-2-4-1">To find a zero <span class="process-math">\(f(x)=0\text{,}\)</span> one may use the previous construction <code class="code-inline tex2jax_ignore">intersect( (f,0), x0)</code> or <code class="code-inline tex2jax_ignore">intersect(f, x0)</code>, as demonstrated in <a href="sec-calculus.html#listing-newton" class="xref" data-knowl="./knowl/xref/listing-newton.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.7.6: The PreFigure source for Figure 3.7.5.">Listing 3.7.6</a>.</div></li>
+</ul>
+</div></section><section class="subsection" id="sec-math-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="space"> </span><span class="title">Vector operations</span>
+</h3>
+<div class="para" id="sec-math-5-2">Vector operations may be defined on previously-defined lists or tuples.  For instance, if we define <code class="code-inline tex2jax_ignore">u=(1,2)</code> and <code class="code-inline tex2jax_ignore">v=(-2,4)</code>, we can later say <code class="code-inline tex2jax_ignore">u+v</code> and <code class="code-inline tex2jax_ignore">-3*u</code>. (Behind the scenes, any list or tuple that is defined is interpreted as a <code class="code-inline tex2jax_ignore">numpy</code> array.)</div>
+<div class="para logical" id="sec-math-5-3">
 <div class="para">Similarly, a <span class="process-math">\(2\times2\)</span> matrix may be defined with</div>
 <pre class="code-display tex2jax_ignore">
 A = [[1,2],[2,1]]      
     </pre>
 <div class="para">and then used to multiply a vector with <code class="code-inline tex2jax_ignore">A @ v</code>.</div>
 </div>
-<div class="para logical" id="sec-math-4-4">
+<div class="para logical" id="sec-math-5-4">
 <div class="para">Some additional operations include:</div>
 <dl class="description-list">
-<dt id="sec-math-4-4-1-1">length</dt>
-<dd><div class="para" id="sec-math-4-4-1-1-2">
+<dt id="sec-math-5-4-1-1">length</dt>
+<dd><div class="para" id="sec-math-5-4-1-1-2">
 <code class="code-inline tex2jax_ignore">length(u)</code> finds the length of the vector <code class="code-inline tex2jax_ignore">u</code>.</div></dd>
-<dt id="sec-math-4-4-1-2">normalize</dt>
-<dd><div class="para" id="sec-math-4-4-1-2-2">
+<dt id="sec-math-5-4-1-2">normalize</dt>
+<dd><div class="para" id="sec-math-5-4-1-2-2">
 <code class="code-inline tex2jax_ignore">normalize(u)</code> gives a vector paralle to <code class="code-inline tex2jax_ignore">u</code> and having unit length.</div></dd>
-<dt id="sec-math-4-4-1-3">dot</dt>
-<dd><div class="para" id="sec-math-4-4-1-3-2">
+<dt id="sec-math-5-4-1-3">dot</dt>
+<dd><div class="para" id="sec-math-5-4-1-3-2">
 <code class="code-inline tex2jax_ignore">dot(u, v)</code> finds the dot product of <code class="code-inline tex2jax_ignore">u</code> and <code class="code-inline tex2jax_ignore">v</code>.</div></dd>
-<dt id="sec-math-4-4-1-4">midpoint</dt>
-<dd><div class="para" id="sec-math-4-4-1-4-2">
+<dt id="sec-math-5-4-1-4">midpoint</dt>
+<dd><div class="para" id="sec-math-5-4-1-4-2">
 <code class="code-inline tex2jax_ignore">midpoint(u, v)</code> gives the midpoint of the line segment from <code class="code-inline tex2jax_ignore">u</code> to <code class="code-inline tex2jax_ignore">v</code>.</div></dd>
-<dt id="sec-math-4-4-1-5">angle</dt>
-<dd><div class="para" id="sec-math-4-4-1-5-2">
+<dt id="sec-math-5-4-1-5">angle</dt>
+<dd><div class="para" id="sec-math-5-4-1-5-2">
 <code class="code-inline tex2jax_ignore">angle(u)</code> finds the angle, in radians, between the vector and the positive <span class="process-math">\(x\)</span>-axis.</div></dd>
 </dl>
-</div></section><section class="subsection" id="sec-math-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="space"> </span><span class="title">List operations</span>
+</div></section><section class="subsection" id="sec-math-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="space"> </span><span class="title">List operations</span>
 </h3>
-<div class="para" id="sec-math-5-2">It can be convenient to modify existing lists.  For instance, to add an element <code class="code-inline tex2jax_ignore">a</code> to an existing <code class="code-inline tex2jax_ignore">list</code>, we could say <code class="code-inline tex2jax_ignore">append(list, a)</code>.  This could be used, for instance, to implement Euler’s method, as shown in <a href="sec-math.html#diagram-euler" class="xref" data-knowl="./knowl/xref/diagram-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.4.1">Figure 5.4.1</a>. Of course, <a href="sec-diffeqs.html#subsec-euler" class="internal" title="Subsection 3.8.5: Euler’s method">Subsection 3.8.5</a> provides an easier way to illustrate Euler’s method, but authors will undoubtedly find uses for the <code class="code-inline tex2jax_ignore">append</code> function.</div>
+<div class="para" id="sec-math-6-2">It can be convenient to modify existing lists.  For instance, to add an element <code class="code-inline tex2jax_ignore">a</code> to an existing <code class="code-inline tex2jax_ignore">list</code>, we could say <code class="code-inline tex2jax_ignore">append(list, a)</code>.  This could be used, for instance, to implement Euler’s method, as shown in <a href="sec-math.html#diagram-euler" class="xref" data-knowl="./knowl/xref/diagram-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.4.1">Figure 5.4.1</a>. Of course, <a href="sec-diffeqs.html#subsec-euler" class="internal" title="Subsection 3.8.5: Euler’s method">Subsection 3.8.5</a> provides an easier way to illustrate Euler’s method, but authors will undoubtedly find uses for the <code class="code-inline tex2jax_ignore">append</code> function.</div>
 <figure class="figure figure-like" id="diagram-euler"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/euler.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.4.1<span class="period">.</span></span><span class="space"> </span>An implementation of Euler’s method</figcaption></figure><figure class="listing figure-like" id="listing-euler"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.4.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 5.4.1.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="20"&gt;
   &lt;coordinates bbox="(-1,-1,10,8)"&gt;
@@ -401,7 +413,7 @@ A = [[1,2],[2,1]]
     &lt;/repeat&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="sec-math-5-5">If <code class="code-inline tex2jax_ignore">list=(a,b,c)</code>, then <code class="code-inline tex2jax_ignore">roll(list)</code> will be the list <code class="code-inline tex2jax_ignore">(b,c,a)</code>.  This can be useful for visiting each of the vertices in a polygon, for instance, as shown in <a href="sec-math.html#diagram-roll" class="xref" data-knowl="./knowl/xref/diagram-roll.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.4.3">Figure 5.4.3</a>.</div>
+</code></pre></div></div></figure><div class="para" id="sec-math-6-5">If <code class="code-inline tex2jax_ignore">list=(a,b,c)</code>, then <code class="code-inline tex2jax_ignore">roll(list)</code> will be the list <code class="code-inline tex2jax_ignore">(b,c,a)</code>.  This can be useful for visiting each of the vertices in a polygon, for instance, as shown in <a href="sec-math.html#diagram-roll" class="xref" data-knowl="./knowl/xref/diagram-roll.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.4.3">Figure 5.4.3</a>.</div>
 <figure class="figure figure-like" id="diagram-roll"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/roll.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.4.3<span class="period">.</span></span><span class="space"> </span>Adding angle markers to a polygon</figcaption></figure><figure class="listing figure-like" id="listing-roll"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">5.4.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 5.4.3.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,10,10)"&gt;
