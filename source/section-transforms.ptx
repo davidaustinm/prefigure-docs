@@ -3,14 +3,16 @@
 <section xml:id="sec-transforms" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Transforms</title>
 
-  <p>The <tag>coordinates</tag> element, as described in <xref
-  ref="sec-coordinates"/>, sets up a coordinate transformation that
-  translates between the mathematical coordinates used to describe
-  graphical components and the underlying SVG coordinate system.  In
-  some situations, it can be convenient to temporarily modify this
-  coordinate transformation.  This section outlines two ways in which
-  this may be accomplished.</p>
-
+  <introduction>
+    <p>The <tag>coordinates</tag> element, as described in <xref
+    ref="sec-coordinates"/>, sets up a coordinate transformation that
+    translates between the mathematical coordinates used to describe
+    graphical components and the underlying SVG coordinate system.  In
+    some situations, it can be convenient to temporarily modify this
+    coordinate transformation.  This section outlines two ways in which
+    this may be accomplished.</p>
+  </introduction>
+    
   <subsection xml:id="subsec-transforms">
     <title>The <tag>transform</tag> element</title>
 

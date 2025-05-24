@@ -37,6 +37,43 @@
   </subsection>
 
   <subsection>
+    <title>Intersections</title>
+
+    <p>The <c>intersect</c> function is overloaded to handle a variety
+    of cases.  While this may seem confusing, the syntax is meant to
+    be natural within specific applications.
+    <ul>
+      <li><p>The intersection of two lines <c>L1</c> and <c>L2</c>,
+      defined by pairs of points is given by
+      <c>intersect( (L1, L2) )</c>.  This variant will return a
+      two-dimensional point, as 
+      demonstrated in <xref ref="listing-line-intersections"/>.</p>
+      </li>
+
+      <li><p>The intersection of two graphs defined by functions
+      <c>f</c> and <c>g</c> is found by <c>intersect( (f,g), x0)</c>
+      where <c>x0</c> is a point relatively close to the desired
+      intersection point.  This variant of the function returns the
+      value of <m>x</m> for which <m>f(x)=g(x)</m>.  One use is
+      illustrated in <xref ref="listing-area-integral"/>.</p>
+      </li>
+
+      <li><p>To find a value of <m>x</m> where <m>f(x)=y_0</m>, use
+      <c>intersect( (f, y0), x0)</c> where <c>x0</c> is a point
+      relatively near the solution.</p>
+      </li>
+
+      <li><p>To find a zero <m>f(x)=0</m>, one may use the previous
+      construction <c>intersect( (f,0), x0)</c> or
+      <c>intersect(f, x0)</c>, as demonstrated in
+      <xref ref="listing-newton"/>.</p> 
+      </li>
+    </ul>
+    </p>
+  </subsection>
+  
+
+  <subsection>
     <title>Vector operations</title>
 
     <p>Vector operations may be defined on previously-defined lists or

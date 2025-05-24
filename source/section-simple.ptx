@@ -139,6 +139,38 @@
       </li>
     </dl>
     </p>
+
+    <p>We can find the intersection of a pair of lines with the
+    <c>intersect</c> function as demonstrated in <xref
+    ref="diagram-line-intersections"/>.</p>
+
+    <figure xml:id="diagram-line-intersections">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="line-intersections">
+          <xi:include href="examples/intersections.xml"/>
+        </prefigure>
+      </image>
+      <caption>The intersection of two lines.</caption>
+    </figure>
+
+    <p>In the source given in <xref
+    ref="listing-line-intersections"/>, notice that we define a line
+    by a pair of points, such as <c>L1=(p1, p2)</c>.  The intersection
+    point is then given by <c>intersect( (L1, L2) )</c> where the two
+    lines are included in parentheses.</p>
+
+    <listing xml:id="listing-line-intersections">
+      <program>
+	<code><xi:include href="examples/include/intersections.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-line-intersections"/>.</caption> 
+    </listing>
+
+
+    
   </subsection>
 
   <subsection xml:id="subsec-vectors">

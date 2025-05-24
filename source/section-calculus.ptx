@@ -61,6 +61,48 @@
       ref="diagram-tangent-line"/>.</caption> 
     </listing>
 
+    <p>A <tag>tangent-line</tag> element can be given a
+    <attr>name</attr> attribute so that one might refer later to the
+    linear function that defines the tangent line.  For instance, if
+    <attr>name="L"</attr>, then <c>L</c> defines the function
+    <me>
+      L(x) = f(a)+f'(a)(x-a)
+    </me>.
+    <xref ref="diagram-newton"/> demonstrates this feature by
+    illustrating one step of Newton's method.
+    </p>
+
+    <figure xml:id="diagram-newton">
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-newton">
+          <xi:include href="examples/newtons_method.xml"/>
+        </prefigure>
+      </image>
+      <caption>An author can reference the linear function defined by
+      a <tag>tangent-line</tag>.</caption>
+    </figure>
+
+    <p>Note the use of the <c>intersect</c> function in the
+    <prefigure/> source.  In this case, <c>intersect(L, -1)</c>
+    finds the solution of the equation <m>L(x)=0</m> using
+    <m>x_0=-1</m> as a starting point.
+    </p>
+
+    <listing xml:id="listing-newton">
+      <program>
+	<code><xi:include href="examples/include/newtons_method.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-newton"/>.</caption> 
+    </listing>
+
+    <p>It is possible to include arrows on the right and/or left ends
+    of a <tag>graph</tag> using either <attr>arrows="1" or "2"</attr>
+    though this practice is discouraged due to the visual clutter it
+    can create.</p>
+    
   </subsection>
 
   <subsection>
@@ -152,13 +194,43 @@
       <program>
 	<code><xi:include href="code/area-between.xml" parse="text"/></code>
       </program>
-      <caption>The PreFigure source for the diagrams in<xref
+      <caption>The PreFigure source for the diagrams in <xref
       ref="diagram-area"/>.</caption> 
     </listing>
 
     <p>As with the other graphs we have seen in this section, the value
     of <attr>N</attr> can be increased to produce smoother graphs, in
     some cases.  </p>
+
+    <p>As demonstrated in <xref ref="diagram-area-integral"/>, there
+    is another version of the <c>intersect</c> function that 
+    can be helpful.</p>
+
+    <figure xml:id="diagram-area-integral">
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-area-integral">
+          <xi:include href="examples/area-integral.xml"/>
+        </prefigure>
+      </image>
+      <caption>The <c>intersect</c> function finds the intersection of
+      two graphs.</caption>
+    </figure>
+
+    <p>In this case, we use <c>intersect( (f,g), 1)</c> to find the
+    intersection point starting with <m>x_0=1</m>.  Notice that the
+    two functions are included inside parentheses.</p>
+	
+    <listing xml:id="listing-area-integral">
+      <program>
+	<code><xi:include href="examples/include/area-integral.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-area-integral"/>.</caption> 
+    </listing>
+
+    
   </subsection>
 
   <subsection>

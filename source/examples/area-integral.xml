@@ -12,12 +12,12 @@
     <graph function="g"/>
     <line endpoints="((a,0),(a,0))"
       endpoint-offsets="((0,-3),(0,3))"/>
-    <label anchor="(a,0)" alignment="south" offset="(0,-4)">
+    <label anchor="(a,0)" alignment="south" offset="(0,-7)">
       <m>a</m>
     </label>
     <line endpoints="((b,0),(b,0))"
       endpoint-offsets="((0,-3),(0,3))"/>
-    <label anchor="(b,0)" alignment="north" offset="(0,4)">
+    <label anchor="(b,0)" alignment="south" offset="(0,-4)">
       <m>b</m>
     </label>
 

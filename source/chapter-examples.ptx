@@ -14,6 +14,8 @@
   <figure xml:id="diagram-slope">
     <caption>The definition of slope</caption>
     <image width="50%">
+      <shortdescription>Two points on a line with the horizontal and
+      vertical changes indicated.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-slope">
         <xi:include href="examples/slope.xml"/>
@@ -33,6 +35,8 @@
   <figure xml:id="diagram-intersections">
     <caption>Intersections of lines</caption>
     <image width="50%">
+      <shortdescription>Two lines intersect in a point with the angle
+      between the lines indicated.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-intersections">
         <xi:include href="examples/intersections.xml"/>
@@ -53,6 +57,8 @@
   <figure xml:id="diagram-sample-triangles">
     <caption>Sample triangles</caption>
     <image width="50%">
+      <shortdescription>Two triangles, one of which is a right
+      triangle.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-triangles">
         <xi:include href="examples/triangles.xml"/>
@@ -73,6 +79,8 @@
   <figure xml:id="diagram-sample-asymptotes">
     <caption>Graphing functions with asymptotes</caption>
     <image width="50%">
+      <shortdescription>The graph of a function with two vertical and
+      one horizontal asymptotes.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-asymptotes">
         <xi:include href="examples/asymptotes.xml"/>
@@ -93,6 +101,8 @@
   <figure xml:id="diagram-sample-trig-identity">
     <caption>A trigonometric identity</caption>
     <image width="50%">
+      <shortdescription>A point on the unit circle with its reflection
+      in the horizontal axis.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-trig-identity">
         <xi:include href="examples/trig_identity.xml"/>
@@ -113,6 +123,8 @@
   <figure xml:id="diagram-sample-pythagoras">
     <caption>The Pythagorean theorem</caption>
     <image width="50%">
+      <shortdescription>A right triangle with squares built on each of
+      the sides.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-pythagoras">
         <xi:include href="examples/pythagoras.xml"/>
@@ -133,6 +145,8 @@
   <figure xml:id="diagram-sample-roots-of-unity">
     <caption>Eighth roots of unity</caption>
     <image width="50%">
+      <shortdescription>The eight roots of unity plotted on the unit
+      circle.</shortdescription> 
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-roots-of-unity">
         <xi:include href="examples/roots_of_unity.xml"/>
@@ -153,6 +167,8 @@
   <figure xml:id="diagram-sample-derivatives">
     <caption>Graphing derivativees</caption>
     <image width="50%">
+      <shortdescription>The graphs of a function, its derivative, and
+      its second derivative.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-derivatives">
         <xi:include href="examples/derivatives.xml"/>
@@ -173,6 +189,9 @@
   <figure xml:id="diagram-sample-newtons-method">
     <caption>Newton's method</caption>
     <image width="50%">
+      <shortdescription>The graph of a function, a tangent line, and
+      the intersection of the tangent line with the horizontal
+      axis.</shortdescription> 
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-newtons-method">
         <xi:include href="examples/newtons_method.xml"/>
@@ -193,6 +212,8 @@
   <figure xml:id="diagram-sample-area-integral">
     <caption>An intergral measuring area</caption>
     <image width="50%">
+      <shortdescription>The graphs of the sine and cosine functions
+      with the area between them indicated.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-area-integral">
         <xi:include href="examples/area-integral.xml"/>
@@ -213,6 +234,9 @@
   <figure xml:id="diagram-sample-diffeq-ordinary">
     <caption>Solutions to a differential equation</caption>
     <image width="50%">
+      <shortdescription>The slope field of an ordinary differential
+      equation and solutions corresponding to several initial values.
+      </shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-diffeq-ordinary">
         <xi:include href="examples/diffeq-ordinary.xml"/>
@@ -233,6 +257,8 @@
   <figure xml:id="diagram-sample-diffeq-system">
     <caption>A system of differential equations</caption>
     <image width="50%">
+      <shortdescription>The solution to a system of differential
+      equations. </shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-diffeq-system">
         <xi:include href="examples/diffeq-system.xml"/>
@@ -253,6 +279,8 @@
   <figure xml:id="diagram-sample-linear-combinations">
     <caption>The linear combination of vectors</caption>
     <image width="50%">
+      <shortdescription>Two two-dimensional vectors v1 and v2 and a
+      linear combination of them.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-linear-combination">
         <xi:include href="examples/linear_combinations.xml"/>
@@ -273,6 +301,8 @@
   <figure xml:id="diagram-sample-projection">
     <caption>Orthgonal projection</caption>
     <image width="50%">
+      <shortdescription>The orthogonal projection of a vector onto
+      the line defined by another vector.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-projection">
         <xi:include href="examples/projection.xml"/>
@@ -293,6 +323,8 @@
   <figure xml:id="diagram-sample-simple-network">
     <caption>A simple network</caption>
     <image width="50%">
+      <shortdescription>A directed network with six nodes and ten
+      edges.</shortdescription> 
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-simple-network">
         <xi:include href="examples/simple-network.xml"/>
@@ -313,6 +345,8 @@
   <figure xml:id="diagram-sample-network">
     <caption>Another network</caption>
     <image width="60%">
+      <shortdescription>The previous directed network with a loop
+      added and some labels on edges.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-network">
         <xi:include href="examples/network.xml"/>
@@ -333,6 +367,8 @@
   <figure xml:id="diagram-sample-venn-diagram">
     <caption>A Venn diagram</caption>
     <image width="50%">
+      <shortdescription>A Venn diagram showing the difference in two
+      sets.</shortdescription> 
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-venn-diagram">
         <xi:include href="examples/venn_diagram.xml"/>
@@ -353,6 +389,8 @@
   <figure xml:id="diagram-sample-LCR-circuit">
     <caption>An <m>LCR</m> circuit</caption>
     <image width="60%">
+      <shortdescription>An electric circuit with a voltage source, 
+      resistor, capacitor, and inductor.</shortdescription>
       <prefigure xmlns="https://prefigure.org"
                  label="prefigure-sample-LCR-circuit">
         <xi:include href="examples/LCR_circuit.xml"/>
