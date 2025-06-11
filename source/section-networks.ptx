@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-networks" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-networks" xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:pf="https://prefigure.org">
   <title>Networks</title>
 
   <introduction>
@@ -152,10 +153,9 @@
 
     <figure xml:id="diagram-network-combination">
       <image width="60%">
-        <prefigure xmlns="https://prefigure.org"
-                   label="network-combination">
+        <pf:prefigure label="network-combination">
           <xi:include href="code/network-combination.xml"/>
-        </prefigure>
+        </pf:prefigure>
       </image>
       <caption>Using different features to define the network
       structure.</caption> 

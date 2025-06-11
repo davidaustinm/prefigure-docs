@@ -27,6 +27,41 @@
     available at that level.
     </p>
 
+    <!--
+    <figure>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="test-annotation-1">
+          <diagram dimensions="(300,300)">
+            <rectangle at="rect" lower-left="(0,0)"
+                       dimensions="(300,300)" fill="#ccc"/>
+          </diagram>
+        </prefigure>
+      </image>
+    </figure>
+
+    <p>Now some text.</p>
+
+    <figure>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="test-annotation-2">
+          <diagram dimensions="(300,300)">
+            <rectangle at="rect" lower-left="(0,0)"
+                       dimensions="(300,300)" fill="#ccc"/>
+            <annotations>
+              <annotation ref="figure"
+                          text="A test diagram with annotations">
+                <annotation ref="rect"
+                            text="A rectangle"/>
+              </annotation>
+            </annotations>
+          </diagram>
+        </prefigure>
+      </image>
+    </figure>
+    -->
+
     <p>The two most common key presses are <q>O</q>, which will sonify
     an element if the author has enabled this feature, and <q>X</q>,
     which toggles expert mode, about which more will be said later.

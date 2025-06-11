@@ -250,7 +250,7 @@
       <program>
 	<code><xi:include href="code/riemann-sum.xml" parse="text"/></code>
       </program>
-      <caption>The PreFigure source for the diagrams in<xref
+      <caption>The PreFigure source for the diagram in <xref
       ref="diagram-riemann-sum"/>.</caption> 
     </listing>
 
@@ -258,6 +258,127 @@
     <attr>rule="left", "right", "mid"</attr>.
     </p>
     
+  </subsection>
+
+  <subsection>
+    <title>Polar coordinates</title>
+
+    <p>There are a few components that we have already met and that
+    can be adapted for use in polar coordinates.  These include
+    <ul>
+      <li><tag>grid</tag></li>
+      <li><tag>grid-axes</tag></li>
+      <li><tag>graph</tag></li>
+      <li><tag>area-under-curve</tag></li>
+      <li><tag>area-between-curves</tag></li>
+    </ul>
+    </p>
+
+    <p><xref ref="figure-polar-grids"/> demonstrates some examples of
+    polar grids.  The grid on the left is formed simply by adding
+    <attr>coordinates="polar"</attr> to the <tag>grid-axes</tag>
+    element.  In this case, the spacings of the grid lines are
+    automatically determined.  The radial spacing is determined by the
+    size of the bounding box while the angular spacing gives a
+    separation of <m>30^\circ</m> in the grid lines drawn radially.
+    </p>
+
+    <figure xml:id="figure-polar-grids">
+      <caption>Polar grids are created by adding
+      <attr>coordinates="polar"</attr> to either a <tag>grid</tag> or
+      <tag>grid-axes</tag> elements.</caption>
+      <sidebyside widths="45% 45%">
+        <image>
+          <prefigure xmlns="https://prefigure.org"
+                     label="polar-grid-1">
+            <xi:include href="prefigure/polar-grid-1.xml"/>
+          </prefigure>
+        </image>
+        <image>
+          <prefigure xmlns="https://prefigure.org"
+                     label="polar-grid-2">
+            <xi:include href="prefigure/polar-grid-2.xml"/>
+          </prefigure>
+        </image>
+      </sidebyside>
+    </figure>
+
+    <p>The diagram on the right of <xref ref="figure-polar-grids"/>
+    shows two polar grids with the spacings of the grid lines
+    specified in the source, which is given in <xref
+    ref="listing-polar-grid-2"/>.  Notice that the
+    <attr>spacings</attr> attribute is used with the first triplet
+    describing the radial spacing and the second triplet describing
+    the angular spacing.  By default, the angular spacing is expected
+    to be expressed in radians, but this can be modified with
+    <attr>spacing-degrees="yes"</attr>.
+    </p>
+
+    <listing xml:id="listing-polar-grid-2">
+      <program>
+	<code><xi:include href="prefigure/include/polar-grid-2.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for the diagram on the right of
+      <xref ref="figure-polar-grids"/>.</caption>
+    </listing>
+
+    <p>Graphs of polar functions can be added to a diagram using a
+    <tag>graph</tag> element with the attribute
+    <attr>coordinates="polar"</attr>, as illustrated in
+    <xref ref="figure-polar-graphs"/> and its <prefigure/> source in
+    <xref ref="listing-polar-graphs"/>.
+    </p>
+
+    <figure xml:id="figure-polar-graphs">
+      <caption>Graphing polar curves</caption>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="polar-graphs">
+          <xi:include href="prefigure/polar-graphs.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <p>By default, the domain of a polar graph is <m>[0,2\pi]</m>, but
+    another domain can be specified using the <attr>domain</attr>
+    and <attr>domain-degrees</attr> attributes.  Polar graphs can also
+    be closed with <attr>closed="yes"</attr> and filled.</p>
+
+    <listing xml:id="listing-polar-graphs">
+      <program>
+	<code><xi:include href="prefigure/include/polar-graphs.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for
+      <xref ref="figure-polar-graphs"/>.</caption>
+    </listing>
+
+    <p>Polar areas can also be included using
+    <attr>area-under-curve</attr> and <attr>area-between-curves</attr>
+    by adding the <attr>coordinates="polar"</attr> attribute.  This is
+    illustrated in <xref ref="figure-polar-areas"/>
+    </p>
+
+    <figure xml:id="figure-polar-areas">
+      <caption>Illustrating polar areas</caption>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="polar-areas">
+          <xi:include href="prefigure/polar-areas.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-polar-areas">
+      <program>
+	<code><xi:include href="prefigure/include/polar-areas.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for
+      <xref ref="figure-polar-areas"/>.</caption>
+    </listing>
+
   </subsection>
 
 </section>
