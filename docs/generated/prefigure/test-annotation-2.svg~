@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="diagram" width="100%" height="auto"
+     viewBox="0 0 300 300">
+  <defs>
+    <clipPath id="clipPath-0">
+      <rect x="0.0" y="0.0" width="300.0" height="300.0"/>
+    </clipPath>
+  </defs>
+  <path id="rect" d="M 0.0 300.0 L 300.0 300.0 L 300.0 0.0 L 0.0 0.0 Z" stroke="none" stroke-width="2" fill="#ccc"/>
+</svg>
