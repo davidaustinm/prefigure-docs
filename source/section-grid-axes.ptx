@@ -288,5 +288,62 @@
 
   </subsection>
 
+  <subsection>
+    <title>Tick marks</title>
+
+    <p>One may wish to add tick marks to axes, or some other
+    component, to call attention to special locations.  As illustrated
+    in <xref ref="diagram-tick-marks"/>, the <tag>tick-mark</tag>
+    element accomplishes this.
+    </p>
+
+    <figure xml:id="diagram-tick-marks">
+      <caption>A diagram with several tick marks</caption>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-tick-marks">
+          <xi:include href="prefigure/tick-marks.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing>
+      <program>
+	<code><xi:include href="prefigure/include/tick-marks.xml" parse="text"/>
+	</code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-tick-marks"/>.</caption> 
+    </listing>
+
+    <p>A <tag>tick-mark</tag> element has an <attr>axis</attr>
+    attribute, whose value is either <c>"horizontal"</c>, the default,
+    or <c>"vertical"</c>, depending on whether the tick mark should be
+    drawn on the horizontal or vertical axis.  
+    If the diagram has
+    previously added an <tag>axes</tag> or <tag>grid-axes</tag>
+    element, then the tick mark will be drawn using the properties,
+    such as the framing, of
+    that element.</p>
+
+    <p>The location of the
+    mark is given by <attr>location</attr>.
+    If a single number is
+    given for the <attr>location</attr>, then the tick mark will be
+    drawn on the specified axis.  However, if the value of
+    <attr>location</attr> is a point, then the tick mark will be drawn
+    at that location.</p>
+
+    <p>For a non-tactile diagram, the length of the tick mark can be
+    specified using the <attr>size</attr> attribute.  The value of the
+    <attr>size</attr> attribute is a pair that describes how far above
+    and below (or left and right) of the <attr>location</attr> the
+    tick mark should extend.</p>
+
+    <p>Notice also that a <tag>tick-mark</tag> element can contain a
+    label and accompanying attributes.</p>
+        
+  </subsection>
+
 </section>
 

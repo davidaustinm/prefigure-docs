@@ -1,0 +1,37 @@
+<diagram dimensions="(300,300)" margins="5">
+  <definition>x0 = 1</definition>
+  <definition>x1 = 2.5</definition>
+  <definition>f(x)=3-(x+0.5)^2/4</definition>
+  <definition>y0 = f(x0)</definition>
+  <definition>y1 = f(x1)</definition>
+  <definition>scale_x=3.2</definition>
+  <coordinates bbox="(-1,-1,4,4)">
+    <axes decorations="no" xlabel="x" ylabel="y"/>
+    <tick-mark location="x0">
+      <m>x_0</m>
+    </tick-mark>
+    <tick-mark location="x1">
+      <m>x_1</m>
+    </tick-mark>
+    <tick-mark location="y0" axis="vertical">
+      <m>y_0</m>
+    </tick-mark>
+    <tick-mark location="y1" axis="vertical">
+      <m>y_1</m>
+    </tick-mark>
+    <line endpoints="((x0,y0),(x1,y1))" stroke="red" infinite="yes"/>
+    <graph function="f"/>
+    <point p="(x0,y0)"/>
+    <point p="(x1,y1)"/>
+    <line endpoints="((scale_x,y0),(scale_x,y1))" stroke="black"/>
+    <tick-mark location="(scale_x, y0)" axis="vertical" size="(5,5)"
+               alignment="east" offset="(8,0)">
+      <m>y_0</m>
+    </tick-mark>
+    <tick-mark location="(scale_x, y1)" axis="vertical" size="(5,5)"
+               alignment="east" offset="(8,0)">
+      <m>y_1</m>
+    </tick-mark>
+  </coordinates>
+</diagram>
+    
