@@ -106,14 +106,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.7.5';
+eBookConfig.runestone_version = '7.8.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.107bf2d9be20d9c4.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c7bf407f76a97812.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.242116c5bc6b6581.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c7bf407f76a97812.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
 <script src="_static/pretext/js/diagcess/diagcess.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
@@ -200,6 +200,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#subsec-grid-axes" class="internal"><span class="codenumber">3.3.1</span> <span class="title"><code class="code-inline tex2jax_ignore">&lt;grid-axes&gt;</code></span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#subsec-grid" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Grids</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#subsec-axes" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Axes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#sec-grid-axes-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Tick marks</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -431,7 +432,51 @@ eBookConfig.enable_chatcodes =  false;
     &lt;/axes&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure></section></section></div>
+</code></pre></div></div></figure></section><section class="subsection" id="sec-grid-axes-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="space"> </span><span class="title">Tick marks</span>
+</h3>
+<div class="para" id="sec-grid-axes-6-2">One may wish to add tick marks to axes, or some other component, to call attention to special locations.  As illustrated in <a href="sec-grid-axes.html#diagram-tick-marks" class="xref" data-knowl="./knowl/xref/diagram-tick-marks.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3.15">Figure 3.3.15</a>, the <code class="code-inline tex2jax_ignore">&lt;tick-mark&gt;</code> element accomplishes this.</div>
+<figure class="figure figure-like" id="diagram-tick-marks"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/prefigure-tick-marks.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.15<span class="period">.</span></span><span class="space"> </span>A diagram with several tick marks</figcaption></figure><figure class="listing figure-like" id="sec-grid-axes-6-4"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.3.16<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.3.15.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+  &lt;definition&gt;x0 = 1&lt;/definition&gt;
+  &lt;definition&gt;x1 = 2.5&lt;/definition&gt;
+  &lt;definition&gt;f(x)=3-(x+0.5)^2/4&lt;/definition&gt;
+  &lt;definition&gt;y0 = f(x0)&lt;/definition&gt;
+  &lt;definition&gt;y1 = f(x1)&lt;/definition&gt;
+  &lt;definition&gt;scale_x=3.2&lt;/definition&gt;
+  &lt;coordinates bbox="(-1,-1,4,4)"&gt;
+    &lt;axes decorations="no" xlabel="x" ylabel="y"/&gt;
+    &lt;tick-mark location="x0"&gt;
+      &lt;m&gt;x_0&lt;/m&gt;
+    &lt;/tick-mark&gt;
+    &lt;tick-mark location="x1"&gt;
+      &lt;m&gt;x_1&lt;/m&gt;
+    &lt;/tick-mark&gt;
+    &lt;tick-mark location="y0" axis="vertical"&gt;
+      &lt;m&gt;y_0&lt;/m&gt;
+    &lt;/tick-mark&gt;
+    &lt;tick-mark location="y1" axis="vertical"&gt;
+      &lt;m&gt;y_1&lt;/m&gt;
+    &lt;/tick-mark&gt;
+    &lt;line endpoints="((x0,y0),(x1,y1))" stroke="red" infinite="yes"/&gt;
+    &lt;graph function="f"/&gt;
+    &lt;point p="(x0,y0)"/&gt;
+    &lt;point p="(x1,y1)"/&gt;
+    &lt;line endpoints="((scale_x,y0),(scale_x,y1))" stroke="black"/&gt;
+    &lt;tick-mark location="(scale_x, y0)" axis="vertical" size="(5,5)"
+               alignment="east" offset="(8,0)"&gt;
+      &lt;m&gt;y_0&lt;/m&gt;
+    &lt;/tick-mark&gt;
+    &lt;tick-mark location="(scale_x, y1)" axis="vertical" size="(5,5)"
+               alignment="east" offset="(8,0)"&gt;
+      &lt;m&gt;y_1&lt;/m&gt;
+    &lt;/tick-mark&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div></div></figure><div class="para" id="sec-grid-axes-6-5">A <code class="code-inline tex2jax_ignore">&lt;tick-mark&gt;</code> element has an <code class="code-inline tex2jax_ignore">@axis</code> attribute, whose value is either <code class="code-inline tex2jax_ignore">"horizontal"</code>, the default, or <code class="code-inline tex2jax_ignore">"vertical"</code>, depending on whether the tick mark should be drawn on the horizontal or vertical axis. If the diagram has previously added an <code class="code-inline tex2jax_ignore">&lt;axes&gt;</code> or <code class="code-inline tex2jax_ignore">&lt;grid-axes&gt;</code> element, then the tick mark will be drawn using the properties, such as the framing, of that element.</div>
+<div class="para" id="sec-grid-axes-6-6">The location of the mark is given by <code class="code-inline tex2jax_ignore">@location</code>. If a single number is given for the <code class="code-inline tex2jax_ignore">@location</code>, then the tick mark will be drawn on the specified axis.  However, if the value of <code class="code-inline tex2jax_ignore">@location</code> is a point, then the tick mark will be drawn at that location.</div>
+<div class="para" id="sec-grid-axes-6-7">For a non-tactile diagram, the length of the tick mark can be specified using the <code class="code-inline tex2jax_ignore">@size</code> attribute.  The value of the <code class="code-inline tex2jax_ignore">@size</code> attribute is a pair that describes how far above and below (or left and right) of the <code class="code-inline tex2jax_ignore">@location</code> the tick mark should extend.</div>
+<div class="para" id="sec-grid-axes-6-8">Notice also that a <code class="code-inline tex2jax_ignore">&lt;tick-mark&gt;</code> element can contain a label and accompanying attributes.</div></section></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-outlining.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-labels.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
