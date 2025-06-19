@@ -24,11 +24,11 @@
     <point p="(x0,y0)"/>
     <point p="(x1,y1)"/>
     <line endpoints="((scale_x,y0),(scale_x,y1))" stroke="black"/>
-    <tick-mark location="(scale_x, y0)" axis="vertical" size="(5,5)"
+    <tick-mark location="(scale_x, y0)" axis="vertical" size="5"
                alignment="east" offset="(8,0)">
       <m>y_0</m>
     </tick-mark>
-    <tick-mark location="(scale_x, y1)" axis="vertical" size="(5,5)"
+    <tick-mark location="(scale_x, y1)" axis="vertical" size="5"
                alignment="east" offset="(8,0)">
       <m>y_1</m>
     </tick-mark>

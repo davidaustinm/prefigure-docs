@@ -213,12 +213,39 @@
       </p>
       </li>
 
+      <li xml:id="li-attr-tick-size"><title>tick-size</title>
+
+      <p>This attribute controls the length of the tick marks.  If a
+      single number is given, such as <attr>tick-size="5"</attr>, then
+      the tick mark will extend 5 SVG units on either side of the
+      axis.  If a pair is given, such as
+      <attr>tick-size="(10,5)"</attr>, then the mark extends 10 units
+      below or to the left of the axis and 5 units above or to the
+      right of the axis.</p>
+      </li>
+
       <li><title>hlabels and vlabels</title>
 
       <p>These attributes are similar to <attr>hticks</attr> and
       <attr>vticks</attr> except they specify the position of labels
       on the axes.  
       </p>
+      </li>
+
+      <li><title>axes</title>
+
+      <p>This attribute, whose possible values are <c>"all"</c>, which
+      is the default, <c>"horizontal"</c>, and <c>"vertical"</c>
+      controls which axes are drawn.  For instance, using
+      <attr>axes="horizontal"</attr> simply provides a horizontal
+      number line decorated according to the values of the other
+      attributes. </p>
+      </li>
+
+      <li><title>bounding-box</title>
+
+      <p>Setting <attr>bounding-box="yes"</attr> draws the current box
+      in addition to the axes.</p>
       </li>
 
       <li><title>arrows</title>
@@ -229,6 +256,12 @@
       coordinates.  <attr>arrows="2"</attr> includes arrows at each
       end of the axes.
       </p>
+      </li>
+
+      <li><title>stroke and thickness</title>
+
+      <p>These attributes determine, in the usual way, the color and
+      thickness with which the axes are drawn.</p>
       </li>
 
     </dl>
@@ -254,6 +287,27 @@
       <caption>The PreFigure source for <xref
       ref="diagram-axes-example"/>.</caption> 
     </listing>
+
+    <figure xml:id="diagram-axes-more-examples">
+      <caption>The diagram on the left is constructed with
+      <attr>axes="horizontal"</attr> while the diagram on the right
+      sets <attr>tick-size="(6,0)"</attr> and adds
+      <attr>bounding-box="yes"</attr>. </caption>
+      <sidebyside widths="45% 45%">
+        <image>
+          <prefigure xmlns="https://prefigure.org"
+                     label="prefigure-number-line">
+            <xi:include href="prefigure/number-line.xml"/>
+          </prefigure>
+        </image>
+        <image>
+          <prefigure xmlns="https://prefigure.org"
+                     label="prefigure-ticks-bbox">
+            <xi:include href="prefigure/ticks-bbox.xml"/>
+          </prefigure>
+        </image>
+      </sidebyside>
+    </figure>
 
     <p>As with grids, these attributes may be included in a
     <tag>grid-axes</tag> element and inherited by the resulting axes.
@@ -336,7 +390,9 @@
 
     <p>For a non-tactile diagram, the length of the tick mark can be
     specified using the <attr>size</attr> attribute.  The value of the
-    <attr>size</attr> attribute is a pair that describes how far above
+    <attr>size</attr> attribute is either a single number that
+    describes how far the tick mark extends on either side of the axis
+    or a pair that describes how far above
     and below (or left and right) of the <attr>location</attr> the
     tick mark should extend.</p>
 
