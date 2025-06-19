@@ -1,54 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="diagram" width="300" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" id="diagram" width="260" height="260">
   <defs>
     <clipPath id="clipPath-0">
-      <rect x="0.0" y="0.0" width="300.0" height="300.0"/>
+      <rect x="5.0" y="5.0" width="250.0" height="250.0"/>
     </clipPath>
     <clipPath id="clipPath-1">
-      <rect x="0.0" y="0.0" width="300.0" height="300.0"/>
+      <rect x="5.0" y="5.0" width="250.0" height="250.0"/>
     </clipPath>
   </defs>
   <g id="grid-axes">
     <g id="grid" stroke="#ccc" stroke-width="1">
-      <line id="line-0" x1="0.0" y1="300.0" x2="0.0" y2="0.0"/>
-      <line id="line-1" x1="30.0" y1="300.0" x2="30.0" y2="0.0"/>
-      <line id="line-2" x1="60.0" y1="300.0" x2="60.0" y2="0.0"/>
-      <line id="line-3" x1="90.0" y1="300.0" x2="90.0" y2="0.0"/>
-      <line id="line-4" x1="120.0" y1="300.0" x2="120.0" y2="0.0"/>
-      <line id="line-5" x1="150.0" y1="300.0" x2="150.0" y2="0.0"/>
-      <line id="line-6" x1="180.0" y1="300.0" x2="180.0" y2="0.0"/>
-      <line id="line-7" x1="210.0" y1="300.0" x2="210.0" y2="0.0"/>
-      <line id="line-8" x1="240.0" y1="300.0" x2="240.0" y2="0.0"/>
-      <line id="line-9" x1="270.0" y1="300.0" x2="270.0" y2="0.0"/>
-      <line id="line-10" x1="300.0" y1="300.0" x2="300.0" y2="0.0"/>
-      <line id="line-11" x1="0.0" y1="300.0" x2="300.0" y2="300.0"/>
-      <line id="line-12" x1="0.0" y1="270.0" x2="300.0" y2="270.0"/>
-      <line id="line-13" x1="0.0" y1="240.0" x2="300.0" y2="240.0"/>
-      <line id="line-14" x1="0.0" y1="210.0" x2="300.0" y2="210.0"/>
-      <line id="line-15" x1="0.0" y1="180.0" x2="300.0" y2="180.0"/>
-      <line id="line-16" x1="0.0" y1="150.0" x2="300.0" y2="150.0"/>
-      <line id="line-17" x1="0.0" y1="120.0" x2="300.0" y2="120.0"/>
-      <line id="line-18" x1="0.0" y1="90.0" x2="300.0" y2="90.0"/>
-      <line id="line-19" x1="0.0" y1="60.0" x2="300.0" y2="60.0"/>
-      <line id="line-20" x1="0.0" y1="30.0" x2="300.0" y2="30.0"/>
-      <line id="line-21" x1="0.0" y1="0.0" x2="300.0" y2="0.0"/>
+      <line id="line-0" x1="5.0" y1="255.0" x2="5.0" y2="5.0"/>
+      <line id="line-1" x1="30.0" y1="255.0" x2="30.0" y2="5.0"/>
+      <line id="line-2" x1="55.0" y1="255.0" x2="55.0" y2="5.0"/>
+      <line id="line-3" x1="80.0" y1="255.0" x2="80.0" y2="5.0"/>
+      <line id="line-4" x1="105.0" y1="255.0" x2="105.0" y2="5.0"/>
+      <line id="line-5" x1="130.0" y1="255.0" x2="130.0" y2="5.0"/>
+      <line id="line-6" x1="155.0" y1="255.0" x2="155.0" y2="5.0"/>
+      <line id="line-7" x1="180.0" y1="255.0" x2="180.0" y2="5.0"/>
+      <line id="line-8" x1="205.0" y1="255.0" x2="205.0" y2="5.0"/>
+      <line id="line-9" x1="230.0" y1="255.0" x2="230.0" y2="5.0"/>
+      <line id="line-10" x1="255.0" y1="255.0" x2="255.0" y2="5.0"/>
+      <line id="line-11" x1="5.0" y1="255.0" x2="255.0" y2="255.0"/>
+      <line id="line-12" x1="5.0" y1="230.0" x2="255.0" y2="230.0"/>
+      <line id="line-13" x1="5.0" y1="205.0" x2="255.0" y2="205.0"/>
+      <line id="line-14" x1="5.0" y1="180.0" x2="255.0" y2="180.0"/>
+      <line id="line-15" x1="5.0" y1="155.0" x2="255.0" y2="155.0"/>
+      <line id="line-16" x1="5.0" y1="130.0" x2="255.0" y2="130.0"/>
+      <line id="line-17" x1="5.0" y1="105.0" x2="255.0" y2="105.0"/>
+      <line id="line-18" x1="5.0" y1="80.0" x2="255.0" y2="80.0"/>
+      <line id="line-19" x1="5.0" y1="55.0" x2="255.0" y2="55.0"/>
+      <line id="line-20" x1="5.0" y1="30.0" x2="255.0" y2="30.0"/>
+      <line id="line-21" x1="5.0" y1="5.0" x2="255.0" y2="5.0"/>
     </g>
     <g id="axes" stroke="black" stroke-width="2">
-      <line id="line-22" x1="0.0" y1="150.0" x2="300.0" y2="150.0" stroke="black" stroke-width="2"/>
+      <rect x="5.0" y="5.0" width="250.0" height="250.0" fill="none"/>
+      <line id="line-22" x1="5.0" y1="130.0" x2="255.0" y2="130.0" stroke="black" stroke-width="2"/>
       <g>
-        <line id="line-23" x1="30.0" y1="153.0" x2="30.0" y2="147.0"/>
-        <line id="line-24" x1="90.0" y1="153.0" x2="90.0" y2="147.0"/>
-        <line id="line-25" x1="210.0" y1="153.0" x2="210.0" y2="147.0"/>
-        <line id="line-26" x1="270.0" y1="153.0" x2="270.0" y2="147.0"/>
+        <line id="line-23" x1="30.0" y1="136.0" x2="30.0" y2="130.0"/>
+        <line id="line-24" x1="80.0" y1="136.0" x2="80.0" y2="130.0"/>
+        <line id="line-25" x1="180.0" y1="136.0" x2="180.0" y2="130.0"/>
+        <line id="line-26" x1="230.0" y1="136.0" x2="230.0" y2="130.0"/>
       </g>
-      <line id="line-27" x1="150.0" y1="300.0" x2="150.0" y2="0.0" stroke="black" stroke-width="2"/>
+      <line id="line-27" x1="130.0" y1="255.0" x2="130.0" y2="5.0" stroke="black" stroke-width="2"/>
       <g>
-        <line id="line-28" x1="147.0" y1="270.0" x2="153.0" y2="270.0"/>
-        <line id="line-29" x1="147.0" y1="210.0" x2="153.0" y2="210.0"/>
-        <line id="line-30" x1="147.0" y1="90.0" x2="153.0" y2="90.0"/>
-        <line id="line-31" x1="147.0" y1="30.0" x2="153.0" y2="30.0"/>
+        <line id="line-28" x1="124.0" y1="230.0" x2="130.0" y2="230.0"/>
+        <line id="line-29" x1="124.0" y1="180.0" x2="130.0" y2="180.0"/>
+        <line id="line-30" x1="124.0" y1="80.0" x2="130.0" y2="80.0"/>
+        <line id="line-31" x1="124.0" y1="30.0" x2="130.0" y2="30.0"/>
       </g>
     </g>
-    <g id="label-0" transform="translate(30.0,161.0) translate(-7.5,-0.0)">
+    <g id="label-0" transform="translate(30.0,141.0) translate(-7.5,-0.0)">
       <g id="g-0">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="15.080px" height="12.256px" role="img" focusable="false" viewBox="0 -677 833 677" x="0.0" y="0.0">
           <defs>
@@ -66,7 +67,7 @@
         </svg>
       </g>
     </g>
-    <g id="label-1" transform="translate(90.0,161.0) translate(-7.5,-0.0)">
+    <g id="label-1" transform="translate(80.0,141.0) translate(-7.5,-0.0)">
       <g id="g-1">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="15.080px" height="12.056px" role="img" focusable="false" viewBox="0 -666 833 666" x="0.0" y="0.0">
           <defs>
@@ -84,7 +85,7 @@
         </svg>
       </g>
     </g>
-    <g id="label-2" transform="translate(210.0,161.0) translate(-4.5,-0.0)">
+    <g id="label-2" transform="translate(180.0,141.0) translate(-4.5,-0.0)">
       <g id="g-2">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
           <defs>
@@ -100,7 +101,7 @@
         </svg>
       </g>
     </g>
-    <g id="label-3" transform="translate(270.0,161.0) translate(-4.5,-0.0)">
+    <g id="label-3" transform="translate(230.0,141.0) translate(-4.5,-0.0)">
       <g id="g-3">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.256px" role="img" focusable="false" viewBox="0 -677 500 677" x="0.0" y="0.0">
           <defs>
@@ -116,7 +117,7 @@
         </svg>
       </g>
     </g>
-    <g id="label-4" transform="translate(139.0,270.0) translate(-15.1,-6.1)">
+    <g id="label-4" transform="translate(119.0,230.0) translate(-15.1,-6.1)">
       <g id="g-4">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="15.080px" height="12.256px" role="img" focusable="false" viewBox="0 -677 833 677" x="0.0" y="0.0">
           <defs>
@@ -134,7 +135,7 @@
         </svg>
       </g>
     </g>
-    <g id="label-5" transform="translate(139.0,210.0) translate(-15.1,-6.0)">
+    <g id="label-5" transform="translate(119.0,180.0) translate(-15.1,-6.0)">
       <g id="g-5">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="15.080px" height="12.056px" role="img" focusable="false" viewBox="0 -666 833 666" x="0.0" y="0.0">
           <defs>
@@ -152,7 +153,7 @@
         </svg>
       </g>
     </g>
-    <g id="label-6" transform="translate(139.0,90.0) translate(-9.0,-6.0)">
+    <g id="label-6" transform="translate(119.0,80.0) translate(-9.0,-6.0)">
       <g id="g-6">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
           <defs>
@@ -168,7 +169,7 @@
         </svg>
       </g>
     </g>
-    <g id="label-7" transform="translate(139.0,30.0) translate(-9.0,-6.1)">
+    <g id="label-7" transform="translate(119.0,30.0) translate(-9.0,-6.1)">
       <g id="g-7">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.256px" role="img" focusable="false" viewBox="0 -677 500 677" x="0.0" y="0.0">
           <defs>
@@ -185,8 +186,4 @@
       </g>
     </g>
   </g>
-  <path id="graph-0" stroke="blue" stroke-width="2" fill="none" d="M 0.0 115.7 L 3.0 115.5 L 6.0 115.3 L 9.0 115.0 L 12.0 114.8 L 15.0 114.5 L 18.0 114.1 L 21.0 113.8 L 24.0 113.4 L 27.0 113.0 L 30.0 112.5 L 33.0 112.0 L 36.0 111.4 L 39.0 110.7 L 42.0 110.0 L 45.0 109.1 L 48.0 108.1 L 51.0 106.9 L 54.0 105.6 L 57.0 104.0 L 60.0 102.0 L 63.0 99.6 L 66.0 96.6 L 69.0 92.6 L 72.0 87.4 L 75.0 80.0 L 78.0 68.9 L 81.0 50.2 L 84.0 12.9 L 87.0 -99.5 M 91.4 597.8 L 93.0 350.8 L 96.0 238.4 L 99.0 201.1 L 102.0 182.5 L 105.0 171.4 L 108.0 164.1 L 111.0 159.0 L 114.0 155.2 L 117.0 152.3 L 120.0 150.0 L 123.0 148.2 L 126.0 146.8 L 129.0 145.6 L 132.0 144.7 L 135.0 144.0 L 138.0 143.4 L 141.0 143.0 L 144.0 142.7 L 147.0 142.6 L 150.0 142.5 L 153.0 142.6 L 156.0 142.7 L 159.0 143.0 L 162.0 143.4 L 165.0 144.0 L 168.0 144.7 L 171.0 145.6 L 174.0 146.8 L 177.0 148.2 L 180.0 150.0 L 183.0 152.3 L 186.0 155.2 L 189.0 159.0 L 192.0 164.1 L 195.0 171.4 L 198.0 182.5 L 201.0 201.1 L 204.0 238.4 L 207.0 350.8 M 211.6 -298.0 L 213.0 -99.5 L 216.0 12.9 L 219.0 50.2 L 222.0 68.9 L 225.0 80.0 L 228.0 87.4 L 231.0 92.6 L 234.0 96.6 L 237.0 99.6 L 240.0 102.0 L 243.0 104.0 L 246.0 105.6 L 249.0 106.9 L 252.0 108.1 L 255.0 109.1 L 258.0 110.0 L 261.0 110.7 L 264.0 111.4 L 267.0 112.0 L 270.0 112.5 L 273.0 113.0 L 276.0 113.4 L 279.0 113.8 L 282.0 114.1 L 285.0 114.5 L 288.0 114.8 L 291.0 115.0 L 294.0 115.3 L 297.0 115.5 L 300.0 115.7" clip-path="url(#clipPath-1)"/>
-  <line id="line-32" x1="90.0" y1="300.0" x2="90.0" y2="0.0" stroke="red" stroke-width="2" fill="none"/>
-  <line id="line-33" x1="210.0" y1="0.0" x2="210.0" y2="300.0" stroke="red" stroke-width="2" fill="none"/>
-  <line id="line-34" x1="300.0" y1="120.0" x2="0.0" y2="120.0" stroke="green" stroke-width="2" fill="none"/>
 </svg>

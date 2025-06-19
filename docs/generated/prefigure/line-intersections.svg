@@ -35,16 +35,14 @@
     <g id="axes" stroke="black" stroke-width="2">
       <line id="line-22" x1="5.0" y1="305.0" x2="305.0" y2="305.0" stroke="black" stroke-width="2"/>
       <line id="line-23" x1="5.0" y1="305.0" x2="5.0" y2="5.0" stroke="black" stroke-width="2"/>
-      <g id="g-0"/>
-      <g id="g-1"/>
     </g>
   </g>
   <line id="line-24" x1="5.0" y1="270.7" x2="305.0" y2="13.6" stroke="blue" stroke-width="2" fill="none"/>
   <line id="line-25" x1="5.0" y1="82.1" x2="305.0" y2="210.7" stroke="blue" stroke-width="2" fill="none"/>
-  <g id="g-2">
+  <g id="g-0">
     <g transform="translate(179.4,141.4) translate(0.0,-6.5)">
       <rect x="-6" y="-6" width="20.488" height="24.944000000000003" stroke="none" fill="white"/>
-      <g id="g-3">
+      <g id="g-1">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.184px" width="8.488px" height="12.944px" role="img" focusable="false" viewBox="0 -705 469 715" x="0.0" y="0.0">
           <defs>
             <path id="MJX-2-TEX-I-1D703" d="M35 200Q35 302 74 415T180 610T319 704Q320 704 327 704T339 705Q393 701 423 656Q462 596 462 495Q462 380 417 261T302 66T168 -10H161Q125 -10 99 10T60 63T41 130T35 200ZM383 566Q383 668 330 668Q294 668 260 623T204 521T170 421T157 371Q206 370 254 370L351 371Q352 372 359 404T375 484T383 566ZM113 132Q113 26 166 26Q181 26 198 36T239 74T287 161T335 307L340 324H145Q145 321 136 286T120 208T113 132Z"/>

@@ -22,18 +22,16 @@
   <g id="axes" stroke="black" stroke-width="2">
     <line id="line-0" x1="5.0" y1="223.2" x2="305.0" y2="223.2" stroke="black" stroke-width="2"/>
     <line id="line-1" x1="86.8" y1="305.0" x2="86.8" y2="5.0" stroke="black" stroke-width="2"/>
-    <g id="g-0"/>
-    <g id="g-1"/>
   </g>
   <path id="path-0" stroke="#ccc" stroke-width="2" fill="none" d="M 168.6 305.0 L 5.0 141.4 M 250.5 305.0 L 5.0 59.5 M 305.0 277.7 L 32.3 5.0 M 305.0 195.9 L 114.1 5.0 M 305.0 114.1 L 195.9 5.0 M 305.0 32.3 L 277.7 5.0 M 86.8 305.0 L 5.0 223.2 M 5.0 305.0 L 5.0 305.0 M 5.0 264.1 L 305.0 114.1 M 5.0 223.2 L 305.0 73.2 M 5.0 182.3 L 305.0 32.3 M 5.0 141.4 L 277.7 5.0 M 5.0 100.5 L 195.9 5.0 M 5.0 59.5 L 114.1 5.0 M 5.0 18.6 L 32.3 5.0 M 5.0 305.0 L 305.0 155.0 M 86.8 305.0 L 305.0 195.9 M 168.6 305.0 L 305.0 236.8 M 250.5 305.0 L 305.0 277.7"/>
-  <g id="g-2">
+  <g id="g-0">
     <path id="path-1" stroke="blue" stroke-width="4" fill="none" d="M 86.8 223.2 L 141.4 195.9" marker-end="url(#arrow-head-end-4_None_24_60-blue)"/>
     <path id="path-2" stroke="blue" stroke-width="4" fill="none" d="M 86.8 223.2 L 59.5 195.9" marker-end="url(#arrow-head-end-4_None_24_60-blue)"/>
     <path id="path-3" stroke="red" stroke-width="4" fill="none" d="M 86.8 223.2 L 195.9 86.8" marker-end="url(#arrow-head-end-4_None_24_60-red)"/>
   </g>
   <g id="label-0" transform="translate(150.4,195.9) translate(0.0,-5.4)">
     <rect x="-6" y="-6" width="30.888" height="22.752000000000002" stroke="none" fill="white"/>
-    <g id="g-3">
+    <g id="g-1">
       <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -2.712px" width="18.888px" height="10.752px" role="img" focusable="false" viewBox="0 -444 1043.6 594" x="0.0" y="0.0">
         <defs>
           <path id="MJX-2-TEX-B-1D42F" d="M401 444Q413 441 495 441Q568 441 574 444H580V382H510L409 156Q348 18 339 6Q331 -4 320 -4Q318 -4 313 -4T303 -3H288Q273 -3 264 12T221 102Q206 135 197 156L96 382H26V444H34Q49 441 145 441Q252 441 270 444H279V382H231L284 264Q335 149 338 149Q338 150 389 264T442 381Q442 382 418 382H394V444H401Z"/>
@@ -60,7 +58,7 @@
   </g>
   <g id="label-1" transform="translate(59.5,186.9) translate(-9.4,-10.8)">
     <rect x="-6" y="-6" width="30.888" height="22.752000000000002" stroke="none" fill="white"/>
-    <g id="g-4">
+    <g id="g-2">
       <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -2.712px" width="18.888px" height="10.752px" role="img" focusable="false" viewBox="0 -444 1043.6 594" x="0.0" y="0.0">
         <defs>
           <path id="MJX-3-TEX-B-1D42F" d="M401 444Q413 441 495 441Q568 441 574 444H580V382H510L409 156Q348 18 339 6Q331 -4 320 -4Q318 -4 313 -4T303 -3H288Q273 -3 264 12T221 102Q206 135 197 156L96 382H26V444H34Q49 441 145 441Q252 441 270 444H279V382H231L284 264Q335 149 338 149Q338 150 389 264T442 381Q442 382 418 382H394V444H401Z"/>
@@ -87,7 +85,7 @@
   </g>
   <g id="label-2" transform="translate(195.9,77.8) translate(-39.0,-14.8)">
     <rect x="-6" y="-6" width="90.0" height="26.768" stroke="none" fill="white"/>
-    <g id="g-5">
+    <g id="g-3">
       <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -2.712px" width="78.000px" height="14.768px" role="img" focusable="false" viewBox="0 -666 4309.6 816" x="0.0" y="0.0">
         <defs>
           <path id="MJX-4-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
