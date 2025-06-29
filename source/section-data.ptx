@@ -283,5 +283,72 @@
     </listing>
   </subsection>
 
+  <subsection>
+    <title>Log plots</title>
+
+    <p>Some diagrams are best expressed using a logarithmic scale on
+    one or both axes.  One may do this by adding the attribute
+    <attr>scales</attr> to a <tag>coordinates</tag> element 
+    defining a bounding box.  Possible values are
+    <attr>scales="linear", "semilogx", "semilogy", "loglog"</attr>.
+    This is demonstrated in <xref ref="diagram-log-log"/>.</p>
+
+    <figure xml:id="diagram-log-log">
+      <caption>A log-log plot made by setting
+      <attr>scales="loglog"</attr> on the <tag>coordinates</tag>
+      element</caption> 
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-log-log">
+          <xi:include href="prefigure/loglog.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-log-log">
+      <program>
+        <code><xi:include href="prefigure/include/loglog.xml" parse="text"/>
+        </code>
+      </program>
+      <caption> The <prefigure/> source for
+      <xref ref="diagram-log-log"/>. 
+      </caption>
+    </listing>
+
+    <p>As seen in <xref ref="listing-log-log"/>, <prefigure/>
+    generates default grid spacings and label positions.  This
+    behavior can be modified using the attributes described in <xref
+    ref="subsec-grid"/>, with one difference.  With a linear scale,
+    the spacing of grid lines is described with a triple <c>(start,
+    space, end)</c>.  If using a logarithmic scale, the middle
+    quantity should be the number of grid lines per decade, as shown
+    in <xref ref="diagram-log-log-spacing"/>.  Possible values are <c>1/n,
+    1, 2, 5, 10</c>.</p>
+
+    <figure xml:id="diagram-log-log-spacing">
+      <caption>Setting the spacing on grid lines and labels on a
+      log-log plot</caption> 
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-log-log-spacing">
+          <xi:include href="prefigure/loglog-spacing.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-log-log-spacing">
+      <program>
+        <code><xi:include href="prefigure/include/loglog-spacing.xml"
+        parse="text"/>
+        </code>
+      </program>
+      <caption> The <prefigure/> source for
+      <xref ref="diagram-log-log-spacing"/>. 
+      </caption>
+    </listing>
+
+    
+    
+  </subsection>
 </section>
 

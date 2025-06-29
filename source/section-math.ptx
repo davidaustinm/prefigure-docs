@@ -70,6 +70,14 @@
       </li>
     </ul>
     </p>
+
+    <p>When solving an equation <m>f(x)=g(x)</m>, <prefigure/> looks
+    for a solution within the current bounding box.  For this reason,
+    it is usually wise to use the <c>intersect</c> function within the
+    relevant <tag>coordinates</tag> element.  However, an 
+    interval can be provided as an optional argument, as in
+    <c>intersect((f,g), x0, (-2,1))</c>, to override this behavior.
+    </p>
   </subsection>
   
 
