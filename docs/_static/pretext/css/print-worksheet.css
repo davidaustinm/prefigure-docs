@@ -703,7 +703,6 @@ dl:is(.description-list, .glossary) {
   margin-top: 1em;
   margin-left: 0;
   margin-bottom: 0;
-  overflow: hidden;
 }
 dl:is(.description-list, .glossary) dt {
   font-weight: bold;
@@ -1377,6 +1376,9 @@ a[href^="mailto:"] {
   width: fit-content;
   max-width: calc(100% - 60px);
   border: 2px solid var(--knowl-border-color);
+  color: var(--body-text-color);
+  font-weight: normal;
+  font-size: var(1rem);
 }
 .navbar .indexnav {
   position: absolute;
@@ -1880,8 +1882,13 @@ mjx-msub mjx-utext {
 }
 section,
 article,
+li,
+blockquote,
+figcaption,
+dt,
 .exercisegroup,
 .discussion-like,
+.solution-like,
 .para {
   position: relative;
 }
@@ -1895,41 +1902,65 @@ article,
   transition: opacity 0.2s;
   margin-top: 0 !important;
 }
-li > .para > .autopermalink {
-  left: -3.4em;
-  top: 0;
+li > .autopermalink {
+  left: -3.5em;
 }
 .autopermalink > * {
   padding-left: 0.2em;
   padding-right: 0.2em;
 }
-:target {
-  scroll-margin-top: 45px;
-}
-.para > .autopermalink {
-  margin-top: 0.2em;
-}
-.exercises > .autopermalink,
-.introduction > .autopermalink,
-.glossary > .autopermalink {
-  margin-top: 0.3em;
-}
 .appendix > .autopermalink,
 .chapter > .autopermalink,
 .index > .autopermalink,
-.section > .autopermalink {
-  margin-top: 0.3em;
-}
+.section > .autopermalink,
 .subsection > .autopermalink,
 .references > .autopermalink,
 .exercises > .autopermalink {
-  margin-top: 0.3em;
+  top: 1.5ex;
 }
-.subsubsection > .autopermalink {
-  margin-top: 0;
+.assemblage-like > .para > .autopermalink,
+.example-like > .para > .autopermalink,
+.example-like > .exercise-like > .autopermalink,
+.project-like > .para > .autopermalink,
+.project-like > .exercise-like > .autopermalink,
+.project-like > .exercise-like > .introduction > .para > .autopermalink,
+.project-like > .exercise-like > .conclusion > .para > .autopermalink,
+.remark-like > .para > .autopermalink {
+  left: -2.9em;
 }
-.exercisegroup > .autopermalink {
-  margin-top: 1.4em;
+.axiom-like > .para:first-of-type > .autopermalink,
+.example-like > .para:first-of-type > .autopermalink,
+.exercise-like > .para:first-of-type > .autopermalink,
+.solution-like > .para:first-of-type > .autopermalink,
+.assemblage-like > .para:first-of-type > .autopermalink,
+.definition-like > .para:first-of-type > .autopermalink,
+.remark-like > .para:first-of-type > .autopermalink,
+.project-like > .para:first-of-type > .autopermalink,
+.openproblem-like > .para:first-of-type > .autopermalink,
+.computation-like > .para:first-of-type > .autopermalink,
+.theorem-like > .para:first-of-type > .autopermalink,
+.proof > .para:first-of-type > .autopermalink,
+.case > .para:first-of-type > .autopermalink,
+li > .para:first-of-type > .autopermalink,
+dd > .para:first-of-type > .autopermalink {
+  display: none;
+}
+.axiom-like > .introduction > .para:first-of-type > .autopermalink,
+.example-like > .introduction > .para:first-of-type > .autopermalink,
+.exercise-like > .introduction > .para:first-of-type > .autopermalink,
+.solution-like > .introduction > .para:first-of-type > .autopermalink,
+.assemblage-like > .introduction > .para:first-of-type > .autopermalink,
+.definition-like > .introduction > .para:first-of-type > .autopermalink,
+.remark-like > .introduction > .para:first-of-type > .autopermalink,
+.project-like > .introduction > .para:first-of-type > .autopermalink,
+.openproblem-like > .introduction > .para:first-of-type > .autopermalink,
+.computation-like > .introduction > .para:first-of-type > .autopermalink,
+.theorem-like > .introduction > .para:first-of-type > .autopermalink,
+.proof > .introduction > .para:first-of-type > .autopermalink,
+.case > .introduction > .para:first-of-type > .autopermalink,
+li > .introduction > .para:first-of-type > .autopermalink,
+dd > .introduction > .para:first-of-type > .autopermalink {
+  display: none;
 }
 .ptx-content:has(.autopermalink:hover) .autopermalink {
   opacity: 0.2;
@@ -1950,6 +1981,7 @@ li > .para > .autopermalink {
   z-index: 2001;
 }
 :target {
+  scroll-margin-top: 45px;
   animation: target-fade 10s 1;
 }
 @keyframes target-fade {
@@ -2112,34 +2144,66 @@ article.theorem-like .emphasis {
   }
 }
 .heading .print-links {
-  display: inline-block;
   float: right;
-  vertical-align: top;
-  width: 19%;
-  text-align: right;
+  vertical-align: bottom;
 }
-.heading .print-links > a {
+.heading .print-links .print-link {
   font-family: var(--font-body);
-  font-size: 0.6em;
-  font-weight: bold;
   padding: 0.1em 0.2em;
-  background: #ffa;
-  border: 2px solid green;
 }
-.heading .print-links > a.us {
-  background: #eef;
-  color: #9b1c2c;
-  border-color: #041E42;
-}
-.heading .print-links > a + a {
-  margin-left: 0.25em;
+.heading .print-links .material-symbols-outlined {
+  margin-top: 5pt;
 }
 .print-button {
-  position: relative;
-  right: 2px;
-  background-color: LightGreen;
+  font: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+  min-height: 34px;
+  color: var(--button-text-color);
+  background-color: var(--button-background);
+  border-width: 1px;
+  border-color: var(--button-border-color);
+  border-style: solid;
+  border-radius: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  user-select: none;
+}
+.print-button:hover:not(.disabled) {
+  color: var(--button-hover-text-color);
+  background-color: var(--button-hover-background);
+}
+.print-button:focus-visible {
+  outline: 2px solid var(--button-text-color);
+  outline-offset: -2px;
+}
+.print-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.print-button.hidden {
+  display: none;
+}
+.print-button.open {
+  color: var(--button-hover-text-color);
+  background-color: var(--button-hover-background);
+}
+.papersize-select {
   z-index: 1;
-  float: right;
+}
+.papersize-select .name::after {
+  content: ": ";
+}
+.ws-page-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
 }
 .standalone.worksheet .print-links {
   display: none;
@@ -2748,6 +2812,9 @@ section > h3.heading {
     monospace;
 }
 .standalone.worksheet .print-button {
+  display: none;
+}
+.standalone.worksheet .papersize-select {
   display: none;
 }
 .standalone.worksheet [data-knowl]:hover,

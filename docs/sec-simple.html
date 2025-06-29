@@ -106,14 +106,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.1';
+eBookConfig.runestone_version = '7.8.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.242116c5bc6b6581.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c7bf407f76a97812.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
 <script src="_static/pretext/js/diagcess/diagcess.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
@@ -283,6 +283,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-4" class="internal"><span class="codenumber">3.12.2</span> <span class="title">Scatter plots</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-5" class="internal"><span class="codenumber">3.12.3</span> <span class="title">Histograms</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-6" class="internal"><span class="codenumber">3.12.4</span> <span class="title">Plotting a trajectory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-7" class="internal"><span class="codenumber">3.12.5</span> <span class="title">Log plots</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -344,13 +345,15 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simple"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Points, lines, and polygons</span>
 </h2>
-<section class="introduction" id="sec-simple-2"><div class="para" id="sec-simple-2-1">In this section, we will begin to introduce some simple graphical components, such as points, lines, vectors, and polygons.</div></section><section class="subsection" id="subsec-points"><h3 class="heading hide-type">
+<section class="introduction" id="sec-simple-2"><div class="para" id="sec-simple-2-1">In this section, we will begin to introduce some simple graphical components, such as points, lines, vectors, and polygons.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-points"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="space"> </span><span class="title">Points</span>
 </h3>
 <div class="para" id="subsec-points-2">
-<a href="sec-simple.html#diagram-points" class="xref" data-knowl="./knowl/xref/diagram-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> shows a collection of points and various attributes describing them.  The PreFigure source follows in <a href="sec-simple.html#listing-points" class="xref" data-knowl="./knowl/xref/listing-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.2: The PreFigure source for Figure 3.5.1.">Listing 3.5.2</a>.</div>
+<a href="sec-simple.html#diagram-points" class="xref" data-knowl="./knowl/xref/diagram-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.1">Figure 3.5.1</a> shows a collection of points and various attributes describing them.  The PreFigure source follows in <a href="sec-simple.html#listing-points" class="xref" data-knowl="./knowl/xref/listing-points.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.2: The PreFigure source for Figure 3.5.1.">Listing 3.5.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-points-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-points"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/points.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span>A collection of points.</figcaption></figure><figure class="listing figure-like" id="listing-points"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.1.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span>A collection of points.<div class="autopermalink" data-description="Figure 3.5.1"><a href="#diagram-points" title="Copy heading and permalink for Figure 3.5.1">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-points"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.1.<div class="autopermalink" data-description="Listing 3.5.2: The PreFigure source for Figure 3.5.1."><a href="#listing-points" title="Copy heading and permalink for Listing 3.5.2: The PreFigure source for Figure 3.5.1.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
   &lt;coordinates bbox="(0, 0,5, 5)"&gt;
     &lt;point p="(1,4)" size="20" style="box"
 	   fill="green" stroke="black" thickness="4"/&gt;
@@ -364,31 +367,59 @@ eBookConfig.enable_chatcodes =  false;
 </code></pre></div></div></figure><div class="para logical" id="subsec-points-5">
 <div class="para">In the usual way, a point will have stroke and fill attributes.  There are additional attributes that specify its appearance.</div>
 <dl class="description-list">
-<dt id="subsec-points-5-1-1">p</dt>
-<dd><div class="para" id="subsec-points-5-1-1-2">The <code class="code-inline tex2jax_ignore">@p</code> gives the location at which the point will be centered.</div></dd>
-<dt id="subsec-points-5-1-2">style</dt>
+<dt id="subsec-points-5-1-1">p<div class="autopermalink" data-description="Item: p"><a href="#subsec-points-5-1-1" title="Copy heading and permalink for Item: p">🔗</a></div>
+</dt>
+<dd><div class="para" id="subsec-points-5-1-1-2">The <code class="code-inline tex2jax_ignore">@p</code> gives the location at which the point will be centered.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-points-5-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="subsec-points-5-1-2">style<div class="autopermalink" data-description="Item: style"><a href="#subsec-points-5-1-2" title="Copy heading and permalink for Item: style">🔗</a></div>
+</dt>
 <dd><div class="para logical" id="subsec-points-5-1-2-2">
 <div class="para">This attribute controls the shape of the point.  There are six options:</div>
 <ul class="disc" id="subsec-points-5-1-2-2-1">
-<li id="subsec-points-5-1-2-2-1-1"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-1">"box"</div></li>
-<li id="subsec-points-5-1-2-2-1-2"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-2">"diamond"</div></li>
-<li id="subsec-points-5-1-2-2-1-3"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-3">"circle"</div></li>
-<li id="subsec-points-5-1-2-2-1-4"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-4">"double-circle"</div></li>
-<li id="subsec-points-5-1-2-2-1-5"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-5">"cross"</div></li>
-<li id="subsec-points-5-1-2-2-1-6"><div class="para" id="p-derived-subsec-points-5-1-2-2-1-6">"plus"</div></li>
+<li id="subsec-points-5-1-2-2-1-1">
+<div class="para" id="p-derived-subsec-points-5-1-2-2-1-1">"box"</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-points-5-1-2-2-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-points-5-1-2-2-1-2">
+<div class="para" id="p-derived-subsec-points-5-1-2-2-1-2">"diamond"</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-points-5-1-2-2-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-points-5-1-2-2-1-3">
+<div class="para" id="p-derived-subsec-points-5-1-2-2-1-3">"circle"</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-points-5-1-2-2-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-points-5-1-2-2-1-4">
+<div class="para" id="p-derived-subsec-points-5-1-2-2-1-4">"double-circle"</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-points-5-1-2-2-1-4" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-points-5-1-2-2-1-5">
+<div class="para" id="p-derived-subsec-points-5-1-2-2-1-5">"cross"</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-points-5-1-2-2-1-5" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-points-5-1-2-2-1-6">
+<div class="para" id="p-derived-subsec-points-5-1-2-2-1-6">"plus"</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-points-5-1-2-2-1-6" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
 <div class="para">with "circle" being the default.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-points-5-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></dd>
-<dt id="subsec-points-5-1-3">size</dt>
-<dd><div class="para" id="subsec-points-5-1-3-2">This attribute specifies the size of the point in SVG units.</div></dd>
+<dt id="subsec-points-5-1-3">size<div class="autopermalink" data-description="Item: size"><a href="#subsec-points-5-1-3" title="Copy heading and permalink for Item: size">🔗</a></div>
+</dt>
+<dd><div class="para" id="subsec-points-5-1-3-2">This attribute specifies the size of the point in SVG units.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-points-5-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
 </dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-points-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-points-6">Notice that a label may be attached to a point by including the label’s text within the <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> element.  In this case, attributes may be added to the point, such as <code class="code-inline tex2jax_ignore">@alignment</code> and <code class="code-inline tex2jax_ignore">@offset</code>, to control the positioning of the label.  Behind the scenes, the label and point are placed within a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> element, and the point’s handle transferred to the <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> for annotating.</div></section><section class="subsection" id="sec-simple-4"><h3 class="heading hide-type">
+<div class="para" id="subsec-points-6">Notice that a label may be attached to a point by including the label’s text within the <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> element.  In this case, attributes may be added to the point, such as <code class="code-inline tex2jax_ignore">@alignment</code> and <code class="code-inline tex2jax_ignore">@offset</code>, to control the positioning of the label.  Behind the scenes, the label and point are placed within a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> element, and the point’s handle transferred to the <code class="code-inline tex2jax_ignore">&lt;group&gt;</code> for annotating.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-points-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.1: Points"><a href="#subsec-points" title="Copy heading and permalink for Subsection 3.5.1: Points">🔗</a></div></section><section class="subsection" id="sec-simple-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="space"> </span><span class="title">Lines</span>
 </h3>
-<div class="para" id="sec-simple-4-2">A few lines are shown in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> with the PreFigure source presented in <a href="sec-simple.html#listing-lines" class="xref" data-knowl="./knowl/xref/listing-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.4: The PreFigure source for Figure 3.5.3.">Listing 3.5.4</a>.  Please note that a <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> element can be used for including vectors in a diagram, as explained in <a href="sec-simple.html#subsec-vectors" class="internal" title="Subsection 3.5.3: Vectors">Subsection 3.5.3</a>.</div>
+<div class="para" id="sec-simple-4-2">A few lines are shown in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> with the PreFigure source presented in <a href="sec-simple.html#listing-lines" class="xref" data-knowl="./knowl/xref/listing-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.4: The PreFigure source for Figure 3.5.3.">Listing 3.5.4</a>.  Please note that a <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> element can be used for including vectors in a diagram, as explained in <a href="sec-simple.html#subsec-vectors" class="internal" title="Subsection 3.5.3: Vectors">Subsection 3.5.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-lines"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/lines.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span>A collection of lines.</figcaption></figure><figure class="listing figure-like" id="listing-lines"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.3.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span>A collection of lines.<div class="autopermalink" data-description="Figure 3.5.3"><a href="#diagram-lines" title="Copy heading and permalink for Figure 3.5.3">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-lines"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.3.<div class="autopermalink" data-description="Listing 3.5.4: The PreFigure source for Figure 3.5.3."><a href="#listing-lines" title="Copy heading and permalink for Listing 3.5.4: The PreFigure source for Figure 3.5.3.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,5,5)"&gt;
     &lt;grid/&gt;
     &lt;line endpoints="((1,4), (4,4.5))" stroke="blue"
@@ -407,25 +438,39 @@ eBookConfig.enable_chatcodes =  false;
 </code></pre></div></div></figure><div class="para logical" id="sec-simple-4-5">
 <div class="para">It is important to remember that lines, along with the other components introduced in this and later sections, support the graphical attributes explained in <a href="sec-graphical-attr.html" class="internal" title="Section 3.1: Stroke, fill, and other graphical attributes">Section 3.1</a>.  In particular, any stroke attributes can be added to a line though fill attributes do not apply.</div>
 <dl class="description-list">
-<dt id="sec-simple-4-5-2-1">endpoints</dt>
-<dd><div class="para" id="sec-simple-4-5-2-1-2">The endpoints of a line may be specified together using the <code class="code-inline tex2jax_ignore">@endpoints</code> attribute or separately using <code class="code-inline tex2jax_ignore">@p1</code> and <code class="code-inline tex2jax_ignore">@p2</code>.</div></dd>
-<dt id="sec-simple-4-5-2-2">infinite</dt>
-<dd><div class="para" id="sec-simple-4-5-2-2-2">If <code class="code-inline tex2jax_ignore">@infinite="yes"</code>, then the line is drawn as if it were infinite in extent.</div></dd>
-<dt id="sec-simple-4-5-2-3">arrows</dt>
-<dd><div class="para" id="sec-simple-4-5-2-3-2">If <code class="code-inline tex2jax_ignore">@arrows="1"</code>, then an arrow is drawn at the second endpoint.  If <code class="code-inline tex2jax_ignore">@arrows="2"</code>, then an arrow is drawn at both endpoints.</div></dd>
-<dt id="sec-simple-4-5-2-4">reverse</dt>
-<dd><div class="para" id="sec-simple-4-5-2-4-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the line when adding arrows.</div></dd>
-<dt id="sec-simple-4-5-2-5">endpoint-offsets</dt>
+<dt id="sec-simple-4-5-2-1">endpoints<div class="autopermalink" data-description="Item: endpoints"><a href="#sec-simple-4-5-2-1" title="Copy heading and permalink for Item: endpoints">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-4-5-2-1-2">The endpoints of a line may be specified together using the <code class="code-inline tex2jax_ignore">@endpoints</code> attribute or separately using <code class="code-inline tex2jax_ignore">@p1</code> and <code class="code-inline tex2jax_ignore">@p2</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-5-2-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-4-5-2-2">infinite<div class="autopermalink" data-description="Item: infinite"><a href="#sec-simple-4-5-2-2" title="Copy heading and permalink for Item: infinite">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-4-5-2-2-2">If <code class="code-inline tex2jax_ignore">@infinite="yes"</code>, then the line is drawn as if it were infinite in extent.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-5-2-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-4-5-2-3">arrows<div class="autopermalink" data-description="Item: arrows"><a href="#sec-simple-4-5-2-3" title="Copy heading and permalink for Item: arrows">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-4-5-2-3-2">If <code class="code-inline tex2jax_ignore">@arrows="1"</code>, then an arrow is drawn at the second endpoint.  If <code class="code-inline tex2jax_ignore">@arrows="2"</code>, then an arrow is drawn at both endpoints.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-5-2-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-4-5-2-4">reverse<div class="autopermalink" data-description="Item: reverse"><a href="#sec-simple-4-5-2-4" title="Copy heading and permalink for Item: reverse">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-4-5-2-4-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the line when adding arrows.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-5-2-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-4-5-2-5">endpoint-offsets<div class="autopermalink" data-description="Item: endpoint-offsets"><a href="#sec-simple-4-5-2-5" title="Copy heading and permalink for Item: endpoint-offsets">🔗</a></div>
+</dt>
 <dd>
-<div class="para" id="sec-simple-4-5-2-5-2">Sometimes you may want the line to begin or end near, but not exactly, at the given endpoints.  The bottom line in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> is an example in that the line is connecting two labels placed at two endpoints.  We move the endpoints slightly so that the line does not interfere with the label.  In this case, the endpoint offsets are a pair of vectors, each of which moves an endpoint by the given vector in SVG units.</div>
-<div class="para" id="sec-simple-4-5-2-5-3">Another line in the figure shows a second use of offsets.  In this case, the offsets are a single pair of SVG units.  The direction of the line is preserved but each endpoint is moved along the line by the given offset.  This could be helpful when drawing arrows since the arrow head will extend slightly beyond the endpoint of the line.</div>
+<div class="para" id="sec-simple-4-5-2-5-2">Sometimes you may want the line to begin or end near, but not exactly, at the given endpoints.  The bottom line in <a href="sec-simple.html#diagram-lines" class="xref" data-knowl="./knowl/xref/diagram-lines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.3">Figure 3.5.3</a> is an example in that the line is connecting two labels placed at two endpoints.  We move the endpoints slightly so that the line does not interfere with the label.  In this case, the endpoint offsets are a pair of vectors, each of which moves an endpoint by the given vector in SVG units.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-5-2-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-simple-4-5-2-5-3">Another line in the figure shows a second use of offsets.  In this case, the offsets are a single pair of SVG units.  The direction of the line is preserved but each endpoint is moved along the line by the given offset.  This could be helpful when drawing arrows since the arrow head will extend slightly beyond the endpoint of the line.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-5-2-5-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 </dd>
 </dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-simple-4-6">We can find the intersection of a pair of lines with the <code class="code-inline tex2jax_ignore">intersect</code> function as demonstrated in <a href="sec-simple.html#diagram-line-intersections" class="xref" data-knowl="./knowl/xref/diagram-line-intersections.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.5">Figure 3.5.5</a>.</div>
+<div class="para" id="sec-simple-4-6">We can find the intersection of a pair of lines with the <code class="code-inline tex2jax_ignore">intersect</code> function as demonstrated in <a href="sec-simple.html#diagram-line-intersections" class="xref" data-knowl="./knowl/xref/diagram-line-intersections.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.5">Figure 3.5.5</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-line-intersections"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/line-intersections.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>The intersection of two lines.</figcaption></figure><div class="para" id="sec-simple-4-8">In the source given in <a href="sec-simple.html#listing-line-intersections" class="xref" data-knowl="./knowl/xref/listing-line-intersections.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.6: The PreFigure source for Figure 3.5.5.">Listing 3.5.6</a>, notice that we define a line by a pair of points, such as <code class="code-inline tex2jax_ignore">L1=(p1, p2)</code>.  The intersection point is then given by <code class="code-inline tex2jax_ignore">intersect( (L1, L2) )</code> where the two lines are included in parentheses.</div>
-<figure class="listing figure-like" id="listing-line-intersections"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.5.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>The intersection of two lines.<div class="autopermalink" data-description="Figure 3.5.5"><a href="#diagram-line-intersections" title="Copy heading and permalink for Figure 3.5.5">🔗</a></div></figcaption></figure><div class="para" id="sec-simple-4-8">In the source given in <a href="sec-simple.html#listing-line-intersections" class="xref" data-knowl="./knowl/xref/listing-line-intersections.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.6: The PreFigure source for Figure 3.5.5.">Listing 3.5.6</a>, notice that we define a line by a pair of points, such as <code class="code-inline tex2jax_ignore">L1=(p1, p2)</code>.  The intersection point is then given by <code class="code-inline tex2jax_ignore">intersect( (L1, L2) )</code> where the two lines are included in parentheses.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-4-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="listing figure-like" id="listing-line-intersections"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.6<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.5.<div class="autopermalink" data-description="Listing 3.5.6: The PreFigure source for Figure 3.5.5."><a href="#listing-line-intersections" title="Copy heading and permalink for Listing 3.5.6: The PreFigure source for Figure 3.5.5.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,10,10)"&gt;
     &lt;grid-axes decorations="no"/&gt;
     &lt;definition&gt;p1=(1,2)&lt;/definition&gt;
@@ -446,12 +491,13 @@ eBookConfig.enable_chatcodes =  false;
     &lt;point p="p"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure></section><section class="subsection" id="subsec-vectors"><h3 class="heading hide-type">
+</code></pre></div></div></figure><div class="autopermalink" data-description="Subsection 3.5.2: Lines"><a href="#sec-simple-4" title="Copy heading and permalink for Subsection 3.5.2: Lines">🔗</a></div></section><section class="subsection" id="subsec-vectors"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="space"> </span><span class="title">Vectors</span>
 </h3>
-<div class="para" id="subsec-vectors-2">In some sense, <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code>s are a redundant element since we can always draw lines and attach arrows.  However, a goal of PreFigure is to facilitate authors thinking mathematically about the exposition so <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> should be used when including a vector in a diagram.  Vectors are also drawn with a default thickness that differentiates them from lines drawn with their default attributes.</div>
+<div class="para" id="subsec-vectors-2">In some sense, <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code>s are a redundant element since we can always draw lines and attach arrows.  However, a goal of PreFigure is to facilitate authors thinking mathematically about the exposition so <code class="code-inline tex2jax_ignore">&lt;vector&gt;</code> should be used when including a vector in a diagram.  Vectors are also drawn with a default thickness that differentiates them from lines drawn with their default attributes.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vectors-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-vectors"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/vectors.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.7<span class="period">.</span></span><span class="space"> </span>A collection of vectors.</figcaption></figure><figure class="listing figure-like" id="listing-vectors"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.7.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.7<span class="period">.</span></span><span class="space"> </span>A collection of vectors.<div class="autopermalink" data-description="Figure 3.5.7"><a href="#diagram-vectors" title="Copy heading and permalink for Figure 3.5.7">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-vectors"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.8<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.7.<div class="autopermalink" data-description="Listing 3.5.8: The PreFigure source for Figure 3.5.7."><a href="#listing-vectors" title="Copy heading and permalink for Listing 3.5.8: The PreFigure source for Figure 3.5.7.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
   &lt;coordinates bbox="(-1,-1,5,5)"&gt;
     &lt;grid-axes decorations="no"/&gt;
     &lt;vector v="(3,4)"/&gt;
@@ -462,24 +508,36 @@ eBookConfig.enable_chatcodes =  false;
 </code></pre></div></div></figure><div class="para logical" id="subsec-vectors-5">
 <div class="para">In addition to stroke attributes, a vector supports the following attributes.</div>
 <dl class="description-list">
-<dt id="subsec-vectors-5-1-1">v</dt>
-<dd><div class="para" id="subsec-vectors-5-1-1-2">The attribute <code class="code-inline tex2jax_ignore">@v</code> is the 2-dimensional mathematical vector.</div></dd>
-<dt id="subsec-vectors-5-1-2">tail</dt>
-<dd><div class="para" id="subsec-vectors-5-1-2-2">The attribute <code class="code-inline tex2jax_ignore">@tail</code> represents the tail of the vector.</div></dd>
-<dt id="subsec-vectors-5-1-3">scale</dt>
-<dd><div class="para" id="subsec-vectors-5-1-3-2">The value of <code class="code-inline tex2jax_ignore">@scale</code> acts as scalar multiplication on <code class="code-inline tex2jax_ignore">@v</code>.</div></dd>
-<dt id="subsec-vectors-5-1-4">head-location</dt>
-<dd><div class="para" id="subsec-vectors-5-1-4-2">Usually, the head of a vector is placed at the tip of the vector.  There may be occasions, however, when you want to place the head somewhere else along the shaft.  Specifying <code class="code-inline tex2jax_ignore">@head-location="0.8"</code> places the arrow head at a location 80% of the way from the tail to the tip.</div></dd>
+<dt id="subsec-vectors-5-1-1">v<div class="autopermalink" data-description="Item: v"><a href="#subsec-vectors-5-1-1" title="Copy heading and permalink for Item: v">🔗</a></div>
+</dt>
+<dd><div class="para" id="subsec-vectors-5-1-1-2">The attribute <code class="code-inline tex2jax_ignore">@v</code> is the 2-dimensional mathematical vector.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vectors-5-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="subsec-vectors-5-1-2">tail<div class="autopermalink" data-description="Item: tail"><a href="#subsec-vectors-5-1-2" title="Copy heading and permalink for Item: tail">🔗</a></div>
+</dt>
+<dd><div class="para" id="subsec-vectors-5-1-2-2">The attribute <code class="code-inline tex2jax_ignore">@tail</code> represents the tail of the vector.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vectors-5-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="subsec-vectors-5-1-3">scale<div class="autopermalink" data-description="Item: scale"><a href="#subsec-vectors-5-1-3" title="Copy heading and permalink for Item: scale">🔗</a></div>
+</dt>
+<dd><div class="para" id="subsec-vectors-5-1-3-2">The value of <code class="code-inline tex2jax_ignore">@scale</code> acts as scalar multiplication on <code class="code-inline tex2jax_ignore">@v</code>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vectors-5-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="subsec-vectors-5-1-4">head-location<div class="autopermalink" data-description="Item: head-location"><a href="#subsec-vectors-5-1-4" title="Copy heading and permalink for Item: head-location">🔗</a></div>
+</dt>
+<dd><div class="para" id="subsec-vectors-5-1-4-2">Usually, the head of a vector is placed at the tip of the vector.  There may be occasions, however, when you want to place the head somewhere else along the shaft.  Specifying <code class="code-inline tex2jax_ignore">@head-location="0.8"</code> places the arrow head at a location 80% of the way from the tail to the tip.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vectors-5-1-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
 </dl>
-</div></section><section class="subsection" id="sec-simple-6"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vectors-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.3: Vectors"><a href="#subsec-vectors" title="Copy heading and permalink for Subsection 3.5.3: Vectors">🔗</a></div></section><section class="subsection" id="sec-simple-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="space"> </span><span class="title">Polygons</span>
 </h3>
-<div class="para" id="sec-simple-6-2">Polygons are paths drawn by connecting a set of points by line segments.  The effect is different from drawing a set of line segments, however, since the ends of the line segments will be joined to form a whole.  For example, the shape on the left of <a href="sec-simple.html#diagram-polygon-v-line" class="xref" data-knowl="./knowl/xref/diagram-polygon-v-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.9">Figure 3.5.9</a> is drawn with two <code class="code-inline tex2jax_ignore">&lt;line&gt;</code>s while that on the right is a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>.</div>
+<div class="para" id="sec-simple-6-2">Polygons are paths drawn by connecting a set of points by line segments.  The effect is different from drawing a set of line segments, however, since the ends of the line segments will be joined to form a whole.  For example, the shape on the left of <a href="sec-simple.html#diagram-polygon-v-line" class="xref" data-knowl="./knowl/xref/diagram-polygon-v-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.9">Figure 3.5.9</a> is drawn with two <code class="code-inline tex2jax_ignore">&lt;line&gt;</code>s while that on the right is a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-polygon-v-line"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/polygon-v-line.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.9<span class="period">.</span></span><span class="space"> </span>Two line segments on the left and a polygon on the right.</figcaption></figure><div class="para" id="sec-simple-6-4">
-<code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>s are quite versatile and should more properly be thought of as a polygonal path having both stroke and fill attributes.  <a href="sec-simple.html#diagram-polygon" class="xref" data-knowl="./knowl/xref/diagram-polygon.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.10">Figure 3.5.10</a> demonstrates some possibilities with the PreFigure soure given in <a href="sec-simple.html#listing-polygon" class="xref" data-knowl="./knowl/xref/listing-polygon.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.11: The PreFigure source for Figure 3.5.10.">Listing 3.5.11</a>.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.9<span class="period">.</span></span><span class="space"> </span>Two line segments on the left and a polygon on the right.<div class="autopermalink" data-description="Figure 3.5.9"><a href="#diagram-polygon-v-line" title="Copy heading and permalink for Figure 3.5.9">🔗</a></div></figcaption></figure><div class="para" id="sec-simple-6-4">
+<code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>s are quite versatile and should more properly be thought of as a polygonal path having both stroke and fill attributes.  <a href="sec-simple.html#diagram-polygon" class="xref" data-knowl="./knowl/xref/diagram-polygon.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.10">Figure 3.5.10</a> demonstrates some possibilities with the PreFigure soure given in <a href="sec-simple.html#listing-polygon" class="xref" data-knowl="./knowl/xref/listing-polygon.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.5.11: The PreFigure source for Figure 3.5.10.">Listing 3.5.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-polygon"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/polygon.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.10<span class="period">.</span></span><span class="space"> </span>Some sample polygons.</figcaption></figure><figure class="listing figure-like" id="listing-polygon"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.11<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.10.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.10<span class="period">.</span></span><span class="space"> </span>Some sample polygons.<div class="autopermalink" data-description="Figure 3.5.10"><a href="#diagram-polygon" title="Copy heading and permalink for Figure 3.5.10">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-polygon"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.11<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.10.<div class="autopermalink" data-description="Listing 3.5.11: The PreFigure source for Figure 3.5.10."><a href="#listing-polygon" title="Copy heading and permalink for Listing 3.5.11: The PreFigure source for Figure 3.5.10.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(-5,-5,5,5)"&gt;
     &lt;grid/&gt;
     &lt;polygon points="((-2,-1),(-4,-1),(-4,2))" closed="yes"
@@ -495,25 +553,40 @@ eBookConfig.enable_chatcodes =  false;
 </code></pre></div></div></figure><div class="para logical" id="sec-simple-6-7">
 <div class="para">A <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code> requires a set of points given by the <code class="code-inline tex2jax_ignore">@points</code> attributes.  While you may simply list the points, PreFigure also allows you to provide a rule for generating the list of points.</div>
 <dl class="description-list">
-<dt id="sec-simple-6-7-3-1">points</dt>
-<dd><div class="para" id="sec-simple-6-7-3-1-2">The value of the <code class="code-inline tex2jax_ignore">@points</code> attribute may be a list of points or a single point containing a named parameter.</div></dd>
-<dt id="sec-simple-6-7-3-2">parameter</dt>
-<dd><div class="para" id="sec-simple-6-7-3-2-2">The <code class="code-inline tex2jax_ignore">@parameter</code> attribute gives a range of values for generating the list of points.  The format is <code class="code-inline tex2jax_ignore">@parameter="parameter_name=start..stop"</code>.</div></dd>
-<dt id="sec-simple-6-7-3-3">closed</dt>
-<dd><div class="para" id="sec-simple-6-7-3-3-2">By default, polygons are not closed, but <code class="code-inline tex2jax_ignore">@closed="yes"</code> will close a polygon.</div></dd>
-<dt id="sec-simple-6-7-3-4">arrows</dt>
-<dd><div class="para" id="sec-simple-6-7-3-4-2">To place arrows at the end of a polygonal path, use <code class="code-inline tex2jax_ignore">@arrows="1"</code> to add an arrow at the end and <code class="code-inline tex2jax_ignore">@arrows="2"</code> to also add an arrow at the beginning.</div></dd>
-<dt id="sec-simple-6-7-3-5">reverse</dt>
-<dd><div class="para" id="sec-simple-6-7-3-5-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the polygonal path when attaching arrows.</div></dd>
-<dt id="sec-simple-6-7-3-6">corner-radius</dt>
-<dd><div class="para" id="sec-simple-6-7-3-6-2">A polygonal path can be smoothed out using the <code class="code-inline tex2jax_ignore">@corner-radius</code> attribute.  The value of this attribute should be a positive number of SVG units.</div></dd>
+<dt id="sec-simple-6-7-3-1">points<div class="autopermalink" data-description="Item: points"><a href="#sec-simple-6-7-3-1" title="Copy heading and permalink for Item: points">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-6-7-3-1-2">The value of the <code class="code-inline tex2jax_ignore">@points</code> attribute may be a list of points or a single point containing a named parameter.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-7-3-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-6-7-3-2">parameter<div class="autopermalink" data-description="Item: parameter"><a href="#sec-simple-6-7-3-2" title="Copy heading and permalink for Item: parameter">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-6-7-3-2-2">The <code class="code-inline tex2jax_ignore">@parameter</code> attribute gives a range of values for generating the list of points.  The format is <code class="code-inline tex2jax_ignore">@parameter="parameter_name=start..stop"</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-7-3-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-6-7-3-3">closed<div class="autopermalink" data-description="Item: closed"><a href="#sec-simple-6-7-3-3" title="Copy heading and permalink for Item: closed">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-6-7-3-3-2">By default, polygons are not closed, but <code class="code-inline tex2jax_ignore">@closed="yes"</code> will close a polygon.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-7-3-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-6-7-3-4">arrows<div class="autopermalink" data-description="Item: arrows"><a href="#sec-simple-6-7-3-4" title="Copy heading and permalink for Item: arrows">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-6-7-3-4-2">To place arrows at the end of a polygonal path, use <code class="code-inline tex2jax_ignore">@arrows="1"</code> to add an arrow at the end and <code class="code-inline tex2jax_ignore">@arrows="2"</code> to also add an arrow at the beginning.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-7-3-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-6-7-3-5">reverse<div class="autopermalink" data-description="Item: reverse"><a href="#sec-simple-6-7-3-5" title="Copy heading and permalink for Item: reverse">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-6-7-3-5-2">Setting <code class="code-inline tex2jax_ignore">@reverse="yes"</code> changes the direction of the polygonal path when attaching arrows.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-7-3-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-6-7-3-6">corner-radius<div class="autopermalink" data-description="Item: corner-radius"><a href="#sec-simple-6-7-3-6" title="Copy heading and permalink for Item: corner-radius">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-6-7-3-6-2">A polygonal path can be smoothed out using the <code class="code-inline tex2jax_ignore">@corner-radius</code> attribute.  The value of this attribute should be a positive number of SVG units.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-7-3-6-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
 </dl>
-</div></section><section class="subsection" id="subsec-splines"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-6-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.4: Polygons"><a href="#sec-simple-6" title="Copy heading and permalink for Subsection 3.5.4: Polygons">🔗</a></div></section><section class="subsection" id="subsec-splines"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="space"> </span><span class="title">Splines</span>
 </h3>
-<div class="para" id="subsec-splines-2">PreFigure can create cubic splines from a sequence of points. <a href="sec-simple.html#diagram-splines" class="xref" data-knowl="./knowl/xref/diagram-splines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.12">Figure 3.5.12</a> illustrates a number of possibilities.</div>
+<div class="para" id="subsec-splines-2">PreFigure can create cubic splines from a sequence of points. <a href="sec-simple.html#diagram-splines" class="xref" data-knowl="./knowl/xref/diagram-splines.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.12">Figure 3.5.12</a> illustrates a number of possibilities.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-splines"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/splines.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.12<span class="period">.</span></span><span class="space"> </span>A number of cubic splines</figcaption></figure><figure class="listing figure-like" id="listing-splines"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.13<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.12.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.12<span class="period">.</span></span><span class="space"> </span>A number of cubic splines<div class="autopermalink" data-description="Figure 3.5.12"><a href="#diagram-splines" title="Copy heading and permalink for Figure 3.5.12">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-splines"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.13<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.12.<div class="autopermalink" data-description="Listing 3.5.13: The PreFigure source for Figure 3.5.12."><a href="#listing-splines" title="Copy heading and permalink for Listing 3.5.13: The PreFigure source for Figure 3.5.12.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(-4,-4,4,4)"&gt;
     &lt;definition&gt;f(k)=3*(cos(pi*k/2), sin(pi*k/2))&lt;/definition&gt;
     
@@ -526,13 +599,18 @@ eBookConfig.enable_chatcodes =  false;
     &lt;circle center="(0,0)" radius="3" stroke="green"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="subsec-splines-5">The <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> defined in line 6 is a simple one-dimensional spline formed from a sequence of <span class="process-math">\(y\)</span>-values. By default, PreFigure assumes that the corresponding <span class="process-math">\(t\)</span> values are 0, 1, 2, 3, 4.  This can be modified using the <code class="code-inline tex2jax_ignore">@t-values</code> attribute.</div>
-<div class="para" id="subsec-splines-6">The second <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> defined on lines 7-9 is given by a sequence of 2-dimensional points.  An accompanying sequence of <code class="code-inline tex2jax_ignore">@t-values</code> is also defined.  The attribute <code class="code-inline tex2jax_ignore">@closed="yes"</code> asks that the spline be closed and a periodic boundary condition imposed.  In this case, it is important that the last point agree with the first point.</div>
-<div class="para" id="subsec-splines-7">If the spline is not to be closed, then boundary conditions can be specified using the <code class="code-inline tex2jax_ignore">@bc</code> attribute.  The default value is <code class="code-inline tex2jax_ignore">not-a-knot</code>, but other possibilities can be found in the <code class="code-inline tex2jax_ignore">scipy.interpolar.CubicSpline</code> documentation.</div>
-<div class="para" id="subsec-splines-8">Since a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> is constructed from a sequence of points, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> shares many attributes with a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>.  For instance, the spline defined in line 10 shows how the sequence of points can be defined using a <code class="code-inline tex2jax_ignore">@parameter</code>.  In addition, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> can have a <code class="code-inline tex2jax_ignore">@stroke</code> and <code class="code-inline tex2jax_ignore">@fill</code> attribute, and <code class="code-inline tex2jax_ignore">@arrows</code> can be used to add arrows.</div>
-<div class="para" id="subsec-splines-9">It can be helpful to remember that splines are parametrized curves, which presents two opportunities.  First, you can specify a portion of the spline using the <code class="code-inline tex2jax_ignore">@domain</code> attribute. Second, the location of an ending arrow, requested with <code class="code-inline tex2jax_ignore">@arrows="1"</code>, can be moved to another location with <code class="code-inline tex2jax_ignore">@arrow-location</code>.  This can be particularly helpful when the spline is closed, since the direction of the arrow is not well defined in this case.  These features are illustrated in <a href="sec-simple.html#diagram-spline-domain" class="xref" data-knowl="./knowl/xref/diagram-spline-domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.14">Figure 3.5.14</a>.</div>
+</code></pre></div></div></figure><div class="para" id="subsec-splines-5">The <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> defined in line 6 is a simple one-dimensional spline formed from a sequence of <span class="process-math">\(y\)</span>-values. By default, PreFigure assumes that the corresponding <span class="process-math">\(t\)</span> values are 0, 1, 2, 3, 4.  This can be modified using the <code class="code-inline tex2jax_ignore">@t-values</code> attribute.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-splines-6">The second <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> defined on lines 7-9 is given by a sequence of 2-dimensional points.  An accompanying sequence of <code class="code-inline tex2jax_ignore">@t-values</code> is also defined.  The attribute <code class="code-inline tex2jax_ignore">@closed="yes"</code> asks that the spline be closed and a periodic boundary condition imposed.  In this case, it is important that the last point agree with the first point.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-splines-7">If the spline is not to be closed, then boundary conditions can be specified using the <code class="code-inline tex2jax_ignore">@bc</code> attribute.  The default value is <code class="code-inline tex2jax_ignore">not-a-knot</code>, but other possibilities can be found in the <code class="code-inline tex2jax_ignore">scipy.interpolar.CubicSpline</code> documentation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-splines-8">Since a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> is constructed from a sequence of points, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> shares many attributes with a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>.  For instance, the spline defined in line 10 shows how the sequence of points can be defined using a <code class="code-inline tex2jax_ignore">@parameter</code>.  In addition, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> can have a <code class="code-inline tex2jax_ignore">@stroke</code> and <code class="code-inline tex2jax_ignore">@fill</code> attribute, and <code class="code-inline tex2jax_ignore">@arrows</code> can be used to add arrows.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-splines-9">It can be helpful to remember that splines are parametrized curves, which presents two opportunities.  First, you can specify a portion of the spline using the <code class="code-inline tex2jax_ignore">@domain</code> attribute. Second, the location of an ending arrow, requested with <code class="code-inline tex2jax_ignore">@arrows="1"</code>, can be moved to another location with <code class="code-inline tex2jax_ignore">@arrow-location</code>.  This can be particularly helpful when the spline is closed, since the direction of the arrow is not well defined in this case.  These features are illustrated in <a href="sec-simple.html#diagram-spline-domain" class="xref" data-knowl="./knowl/xref/diagram-spline-domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.14">Figure 3.5.14</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-spline-domain"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/spline-domain.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.14<span class="period">.</span></span><span class="space"> </span>Specifying the domain of a spline and moving an arrow.</figcaption></figure><figure class="listing figure-like" id="listing-spline-domain"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.15<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.14.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(250,250)" margins="5"
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.14<span class="period">.</span></span><span class="space"> </span>Specifying the domain of a spline and moving an arrow.<div class="autopermalink" data-description="Figure 3.5.14"><a href="#diagram-spline-domain" title="Copy heading and permalink for Figure 3.5.14">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-spline-domain"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.15<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.14.<div class="autopermalink" data-description="Listing 3.5.15: The PreFigure source for Figure 3.5.14."><a href="#listing-spline-domain" title="Copy heading and permalink for Listing 3.5.15: The PreFigure source for Figure 3.5.14.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(250,250)" margins="5"
          xmlns="https://prefigure.org"&gt;
   &lt;definition&gt;points=((8,6),(6.5,7),(5,7.5),(3,8),(1.5,8),(0.5,7),(0.75,5),(2,3),(5,1),(7,0.5),(9,1),(9.5,2),(9.5,3),(9,4.5),(8,6))&lt;/definition&gt;
   &lt;coordinates bbox="(0,0,10,10)"&gt;
@@ -545,12 +623,13 @@ eBookConfig.enable_chatcodes =  false;
 
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure></section><section class="subsection" id="sec-simple-8"><h3 class="heading hide-type">
+</code></pre></div></div></figure><div class="autopermalink" data-description="Subsection 3.5.5: Splines"><a href="#subsec-splines" title="Copy heading and permalink for Subsection 3.5.5: Splines">🔗</a></div></section><section class="subsection" id="sec-simple-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.6</span><span class="space"> </span><span class="title">Triangles</span>
 </h3>
-<div class="para" id="sec-simple-8-2">For convenience, PreFigure offers a <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code> as illustrated in <a href="sec-simple.html#diagram-triangle-intro" class="xref" data-knowl="./knowl/xref/diagram-triangle-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.16">Figure 3.5.16</a>.</div>
+<div class="para" id="sec-simple-8-2">For convenience, PreFigure offers a <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code> as illustrated in <a href="sec-simple.html#diagram-triangle-intro" class="xref" data-knowl="./knowl/xref/diagram-triangle-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.16">Figure 3.5.16</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-8-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="diagram-triangle-intro"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/triangle-intro.svg" role="img" class="contained"></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.16<span class="period">.</span></span><span class="space"> </span>Two triangles</figcaption></figure><figure class="listing figure-like" id="listing-triangle-intro"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.17<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.16.</figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.16<span class="period">.</span></span><span class="space"> </span>Two triangles<div class="autopermalink" data-description="Figure 3.5.16"><a href="#diagram-triangle-intro" title="Copy heading and permalink for Figure 3.5.16">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-triangle-intro"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.17<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.16.<div class="autopermalink" data-description="Listing 3.5.17: The PreFigure source for Figure 3.5.16."><a href="#listing-triangle-intro" title="Copy heading and permalink for Listing 3.5.17: The PreFigure source for Figure 3.5.16.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(0,0,10,10)"&gt;
     &lt;grid-axes decorations="no"/&gt;
     &lt;triangle vertices="((1,1),(3,2),(1,5))" labels="A,B,C"
@@ -561,17 +640,30 @@ eBookConfig.enable_chatcodes =  false;
 
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="sec-simple-8-5">A <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code> has the same attributes as a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>, except that the vertices are listed with the <code class="code-inline tex2jax_ignore">@vertices</code> attribute and the attribute <code class="code-inline tex2jax_ignore">@closed</code> is always set to <code class="code-inline tex2jax_ignore">"yes"</code> for a <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code>.  There are some additional attributes of note.</div>
-<div class="para logical" id="sec-simple-8-6"><dl class="description-list">
-<dt id="sec-simple-8-6-1-1">labels</dt>
-<dd><div class="para" id="sec-simple-8-6-1-1-2">You may provide labels for each of the vertices by setting this attribute to a comma-separated list of three labels. Each label will be wrapped in an <code class="code-inline tex2jax_ignore">&lt;m&gt;</code> tag and processed by MathJax.</div></dd>
-<dt id="sec-simple-8-6-1-2">angle-markers</dt>
-<dd><div class="para" id="sec-simple-8-6-1-2-2">Set this to <code class="code-inline tex2jax_ignore">"yes"</code> to place an <code class="code-inline tex2jax_ignore">&lt;angle-marker&gt;</code> in each of the interior angles.</div></dd>
-<dt id="sec-simple-8-6-1-3">show-vertices</dt>
-<dd><div class="para" id="sec-simple-8-6-1-3-2">This attribute will place a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> on each vertex if set to <code class="code-inline tex2jax_ignore">"yes"</code>.</div></dd>
-<dt id="sec-simple-8-6-1-4">point-fill</dt>
-<dd><div class="para" id="sec-simple-8-6-1-4-2">Use this to specify the fill of each <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> if <code class="code-inline tex2jax_ignore">@show-vertices="yes"</code>.</div></dd>
-</dl></div></section></section></div>
+</code></pre></div></div></figure><div class="para" id="sec-simple-8-5">A <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code> has the same attributes as a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>, except that the vertices are listed with the <code class="code-inline tex2jax_ignore">@vertices</code> attribute and the attribute <code class="code-inline tex2jax_ignore">@closed</code> is always set to <code class="code-inline tex2jax_ignore">"yes"</code> for a <code class="code-inline tex2jax_ignore">&lt;triangle&gt;</code>.  There are some additional attributes of note.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-8-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-simple-8-6">
+<dl class="description-list">
+<dt id="sec-simple-8-6-1-1">labels<div class="autopermalink" data-description="Item: labels"><a href="#sec-simple-8-6-1-1" title="Copy heading and permalink for Item: labels">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-8-6-1-1-2">You may provide labels for each of the vertices by setting this attribute to a comma-separated list of three labels. Each label will be wrapped in an <code class="code-inline tex2jax_ignore">&lt;m&gt;</code> tag and processed by MathJax.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-8-6-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-8-6-1-2">angle-markers<div class="autopermalink" data-description="Item: angle-markers"><a href="#sec-simple-8-6-1-2" title="Copy heading and permalink for Item: angle-markers">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-8-6-1-2-2">Set this to <code class="code-inline tex2jax_ignore">"yes"</code> to place an <code class="code-inline tex2jax_ignore">&lt;angle-marker&gt;</code> in each of the interior angles.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-8-6-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-8-6-1-3">show-vertices<div class="autopermalink" data-description="Item: show-vertices"><a href="#sec-simple-8-6-1-3" title="Copy heading and permalink for Item: show-vertices">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-8-6-1-3-2">This attribute will place a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> on each vertex if set to <code class="code-inline tex2jax_ignore">"yes"</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-8-6-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt id="sec-simple-8-6-1-4">point-fill<div class="autopermalink" data-description="Item: point-fill"><a href="#sec-simple-8-6-1-4" title="Copy heading and permalink for Item: point-fill">🔗</a></div>
+</dt>
+<dd><div class="para" id="sec-simple-8-6-1-4-2">Use this to specify the fill of each <code class="code-inline tex2jax_ignore">&lt;point&gt;</code> if <code class="code-inline tex2jax_ignore">@show-vertices="yes"</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-8-6-1-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-simple-8-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.5.6: Triangles"><a href="#sec-simple-8" title="Copy heading and permalink for Subsection 3.5.6: Triangles">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Points, lines, and polygons"><a href="#sec-simple" title="Copy heading and permalink for Section 3.5: Points, lines, and polygons">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-labels.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-circles.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
