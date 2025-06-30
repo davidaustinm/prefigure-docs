@@ -1,6 +1,6 @@
 <diagram dimensions="(300,300)" margins="(40,40,5,5)"
          xmlns="https://prefigure.org">
-  <coordinates bbox="(10^-1,10^-2,10^1, 10^14)" scales="loglog">
+  <coordinates bbox="(0.05,10^-2,10^1, 10^14)" scales="loglog">
     <grid-axes xlabel="x" ylabel="y"
                spacings="((10^-1,10,10^1),(10^-2,1/2,10^14))"
                vlabels="(10^0,1/2,10^12)"/>
