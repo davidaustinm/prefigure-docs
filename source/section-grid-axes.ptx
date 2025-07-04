@@ -232,6 +232,24 @@
       </p>
       </li>
 
+      <li><title>h-zero-label, v-zero-label</title>
+
+      <p>Labels on an axis that would appear at zero are removed by
+      default to prevent a collision with the other axis.  This
+      removal can be prevented using the attributes
+      <attr>h-zero-label="yes"</attr> and
+      <attr>v-zero-label="yes"</attr>.
+      </p>
+      </li>
+
+      <li><title>label-commas</title>
+
+      <p>Labels corresponding to large numbers will, by default,
+      represented using commas, such as <q>1,234,567</q>.  To disable
+      this, using <attr>label-commas="no"</attr>.
+      </p>
+      </li>
+
       <li><title>axes</title>
 
       <p>This attribute, whose possible values are <c>"all"</c>, which
@@ -309,9 +327,33 @@
       </sidebyside>
     </figure>
 
-    <p>As with grids, these attributes may be included in a
-    <tag>grid-axes</tag> element and inherited by the resulting axes.
+    <p>In <xref ref="diagram-axes-big-zero-include"/>, labels on the
+    axes at the zero position are included using the attributes
+    <attr>h-zero-label</attr> and 
+    <attr>v-zero-label</attr>.  The commas included in the labels can
+    be removed by setting <attr>label-commas="no"</attr>.
     </p>
+
+    <figure xml:id="diagram-axes-big-zero-include">
+      <caption>Including labels at the zero position</caption>
+      <sidebyside widths="80%">
+        <image>
+          <prefigure xmlns="https://prefigure.org"
+                     label="prefigure-big-zero-include">
+            <xi:include href="prefigure/big-zero-include.xml"/>
+          </prefigure>
+        </image>
+      </sidebyside>
+    </figure>
+
+    <listing xml:id="listing-axes-big-zero-include">
+      <program>
+	<code><xi:include href="prefigure/include/big-zero-include.xml" parse="text"/>
+	</code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-axes-big-zero-include"/>.</caption> 
+    </listing>
 
     <p>The <attr>xlabel</attr> and <attr>ylabel</attr> attributes are
     included so that simple labels may be added to the axes with ease.
@@ -339,6 +381,10 @@
       <caption>The PreFigure source for <xref
       ref="diagram-axes-x-y-label"/>.</caption> 
     </listing>
+
+    <p>As with grids, these attributes may be included in a
+    <tag>grid-axes</tag> element and inherited by the resulting axes.
+    </p>
 
   </subsection>
 
