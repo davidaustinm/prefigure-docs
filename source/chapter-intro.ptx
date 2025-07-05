@@ -247,8 +247,13 @@
     <title> Installation and use </title>
 
     <p>
-      PreFigure may be used in two different ways.
+      PreFigure may be used in several different ways.
       <ol>
+        <li>
+          <p>The <url href="https://davidaustinm.github.io/prefigure">
+          <prefigure/> Playground</url> is a web-based environment in
+          which might easily begin constructing diagrams.</p>
+        </li>
 	<li>
 	  <p>PreFigure is available in a
 	  <url href="https://github.com/davidaustinm/prefigure-codespace"

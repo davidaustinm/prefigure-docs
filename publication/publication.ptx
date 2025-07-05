@@ -72,7 +72,7 @@
     <worksheets formatted="yes" />
   </latex>
 
-  <html>
+  <html favicon="simple">
     <platform host="web"/>
     <!-- The host above could also be "runestone" -->
 
@@ -103,14 +103,17 @@
     <!-- put <css style="oscarlevin"/>                         -->
     <!-- See also                                              -->
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-    <css
+
+    <css theme="default-modern" palette="blue-red"/>
+    <!--
         style="default"
         colors="ruby_turquoise"
         knowls="default"
         toc="default"
         banner="default"
         navbar="default"
-    />
+        />
+    -->
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default" />
