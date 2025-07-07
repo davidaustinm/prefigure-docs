@@ -351,7 +351,7 @@
     </p>
 
     <p>If the spline is not to be closed, then boundary conditions can
-    be specified using the <attr>bc</attr> attribute.  The default
+    be specified using the <attr>bc-type</attr> attribute.  The default
     value is <c>not-a-knot</c>, but other possibilities can be found
     in the <c>scipy.interpolar.CubicSpline</c> documentation.
     </p>
