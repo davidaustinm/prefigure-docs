@@ -74,6 +74,8 @@
 
   <html favicon="simple">
     <platform host="web"/>
+    <tableofcontents preexpanded-levels="2"/>
+
     <!-- The host above could also be "runestone" -->
 
     <!-- Whether to knowl a particular elements is set here    -->
