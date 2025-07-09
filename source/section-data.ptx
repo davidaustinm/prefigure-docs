@@ -51,23 +51,30 @@
     </dl>
     </p>
 
-    <assemblage>
-      <p>Note that this feature is not yet implemented in <pretext/>,
-      but it will be soon.
-      </p>
-    </assemblage>
-
-    <p>In the simplest case, <prefigure/> looks for the file in the
+    <p>In the simplest case, <prefigure/> looks for the data file in the
     file structure relative to the current <prefigure/> source.  This
-    can be modified using an <tag>external-root</tag> element in a
+    can be modified using a <tag>directories</tag> element in a
     <prefigure/> publication file.  If this element has the attribute
-    <attr>name="/home/data"</attr>, and the <tag>read</tag> element has
+    <attr>data="/home/data"</attr>, and the <tag>read</tag> element has
     <attr>name="input.csv"</attr>, then <prefigure/> will expect the
-    file to be located at <c>/home/data/input.csv</c>.</p>
+    file to be located at <c>/home/data/input.csv</c>.  If the
+    publication and source files are in different directories, 
+    specify the location of the data directory with
+    an absolute path.
+    </p>
 
-    <p>Inside a <pretext/> document, the <tag>external-root</tag>
-    element should be included in the <tag>prefigure-preamble</tag>
-    element inside <tag>docinfo</tag>.</p>
+    <p>Inside a <pretext/> document, the <tag>directories</tag>
+    element should be included in the document's <tag>docinfo</tag>
+    element.  Note that the value of the <attr>data</attr> attribute is
+    relative to <c>source</c> in a project managed by the
+    <pretext/>-CLI.  For example, if we have a data file in
+    <c>source/data_files/input.csv</c>, then include the attribute
+    <attr>data="data_files"</attr> in <tag>docinfo/directories</tag>
+    and use <tag>read name="input.csv"</tag> in the <prefigure/>
+    source.  Describing the data file's location with an absolute path
+    will fail in a <pretext/> build.
+    </p>
+
 
     <p><prefigure/> expects CSV files to have some structure.  In
     particular, the first line of the file will be interpreted as headers
@@ -132,8 +139,11 @@
 
     <figure xml:id="diagram-scatter-plot-1">
       <image width="80%">
-        <image source="images/iris_scatter_1"/>
-      </image>
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-iris-scatter-1">
+          <xi:include href="prefigure/iris_scatter_1.xml"/>
+        </prefigure>
+        </image>
       <caption> A scatter plot built from the source in 
       <xref ref="listing-scatter-plot-1"/>.
       </caption>
@@ -141,7 +151,7 @@
 
     <listing xml:id="listing-scatter-plot-1">
       <program>
-        <code><xi:include href="code/iris_scatter_1.xml" parse="text"/>
+        <code><xi:include href="prefigure/include/iris_scatter_1.xml" parse="text"/>
         </code>
       </program>
       <caption> The <prefigure/> source for <xref
