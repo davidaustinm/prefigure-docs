@@ -261,6 +261,80 @@
   </subsection>
 
   <subsection>
+    <title>Vector fields and gradients</title>
+
+    <p><prefigure/> can plot two-dimensional vector fields and
+    gradients of two-variable functions as demonstrated in the next
+    series of examples.
+    </p>
+
+    <figure xml:id="diagram-vector-field">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-vector-field">
+          <xi:include href="prefigure/vector-field.xml"/>
+        </prefigure>
+      </image>
+      <caption>The vector field <m>{\mathbf
+      F}(x,y)=(-y,x)</m></caption>
+    </figure>
+
+    <listing xml:id="listing-vector-field">
+      <program>
+	<code><xi:include href="prefigure/include/vector-field.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for the diagram in <xref
+      ref="diagram-vector-field"/>.</caption>
+    </listing>
+
+    <p>Notice that the vector field is defined by the value of the
+    <attr>function</attr> attribute.
+      The grid on which the vector field is drawn can be changed
+     using the <attr>spacings</attr> attribute similar to that of the
+     <xref ref="subsec-grid" text="custom">grid element</xref>.
+    </p>
+
+    <p>If the lengths of some of the vectors exceed the size of a cell
+    in the grid, then all the vectors will be scaled by some
+    appropriate factor.  This behavior
+    can be changed by setting the <attr>scale</attr> attribute so that
+    the vector field plotted is <m>sf(x,y)</m> where <m>s</m> is the
+    value of the <attr>scale</attr> attribute.</p>
+
+    <p>The size and shape of arrows can be controlled using
+    <attr>arrow-width</attr> and <attr>arrow-angles</attr> as
+    described in the <xref ref="sec-arrows" text="custom">
+    section on arrows.</xref></p>
+
+    <p>Gradients are included using the <tag>gradient</tag> element,
+    which differs from the <tag>vector-field</tag> element only in the
+    role of the <attr>function</attr> attribute.  Note the use of the
+    <attr>spacings</attr> attribute here.</p>
+
+    <figure xml:id="diagram-gradient">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-gradient">
+          <xi:include href="prefigure/gradient.xml"/>
+        </prefigure>
+      </image>
+      <caption>The gradient of the function
+      <m>f(x,y)=x^2+y^2</m>.</caption>
+    </figure>
+
+    <listing xml:id="listing-gradient">
+      <program>
+	<code><xi:include href="prefigure/include/gradient.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for the diagram in <xref
+      ref="diagram-gradient"/>.</caption>
+    </listing>
+
+  </subsection>
+
+  <subsection>
     <title>Polar coordinates</title>
 
     <p>There are a few components that we have already met and that

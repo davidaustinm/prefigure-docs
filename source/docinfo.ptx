@@ -41,9 +41,6 @@
 
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
-  <prefigure-preamble xmlns="https://prefigure.org">
-    <external-root name="external"/>
-  </prefigure-preamble>
 
   <rename element="proof">Source</rename>
 
