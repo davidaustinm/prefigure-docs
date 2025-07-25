@@ -10,7 +10,7 @@
   </introduction>
 
   <subsection xml:id="subsec-graph">
-    <title>Graphs and tangent lines</title>
+    <title>Graphs, derivatives, and tangent lines</title>
 
     <p>To include the graph of a function, the function first needs to
     be defined inside a <tag>definition</tag>.  By default, the domain
@@ -38,6 +38,11 @@
     short line segments.  You may sometimes need to increase
     <attr>N</attr> if the graph varies a lot.
     </p>
+
+    <p>As demonstrated in <xref ref="diagram-sample-derivatives"/>,
+    the <c>deriv</c> function can be used to define the derivative of
+    a function.  For instance, <c>fp(x) = deriv(f, x)</c> defines
+    <c>fp</c> to be the derivative.</p>
 
     <p>Tangent lines are similar except a <attr>point</attr> attribute
     should be included to define the point at which the tangent line
@@ -260,7 +265,7 @@
     
   </subsection>
 
-  <subsection>
+  <subsection xml:id="subsec-vf">
     <title>Vector fields and gradients</title>
 
     <p><prefigure/> can plot two-dimensional vector fields and
@@ -307,10 +312,11 @@
     described in the <xref ref="sec-arrows" text="custom">
     section on arrows.</xref></p>
 
-    <p>Gradients are included using the <tag>gradient</tag> element,
-    which differs from the <tag>vector-field</tag> element only in the
-    role of the <attr>function</attr> attribute.  Note the use of the
-    <attr>spacings</attr> attribute here.</p>
+    <p>The gradient of a function can be defined using the <c>grad</c>
+    operator.  For instance, <c>del_f(x,y) = grad(f, (x,y))</c>
+    defines a new function which is the gradient of <c>f</c>.  Notice
+    that the point <c>(x,y)</c> is enclosed in parentheses inside the
+    <c>grad</c> operator.</p>
 
     <figure xml:id="diagram-gradient">
       <image width="60%">
@@ -330,6 +336,56 @@
       </program>
       <caption>The PreFigure source for the diagram in <xref
       ref="diagram-gradient"/>.</caption>
+    </listing>
+
+    <p>Alternatively, one can plot a vector field along a curve by
+    modifying the attributes of the <tag>vector-field</tag> element.
+    If a function <m>{\mathbf r}(t)=(x(t),y(t))</m> is defined, then
+    we can include the attributes <attr>curve="r"</attr>,
+    <attr>domain="(a,b)"</attr>, and <attr>N="n"</attr> to plot the
+    vector field <m>n</m> times across the domain <m>(a,b)</m>.</p>
+
+    <figure xml:id="diagram-vec-field">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-vec-field">
+          <xi:include href="prefigure/vec-field.xml"/>
+        </prefigure>
+      </image>
+      <caption>A vector field plotted along a curve.</caption>
+    </figure>
+
+    <listing xml:id="listing-vec-field">
+      <program>
+	<code><xi:include href="prefigure/include/vec-field.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for the diagram in <xref
+      ref="diagram-vec-field"/>.</caption>
+    </listing>
+
+    <p>Notice that a <tag>spline</tag> can be given a
+    <attr>name</attr> attribute
+    to define a parametric curve.</p>
+
+    <figure xml:id="diagram-grad-field">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-grad-field">
+          <xi:include href="prefigure/grad-field.xml"/>
+        </prefigure>
+      </image>
+      <caption>The gradient of a function plotted along a
+      <tag>spline</tag>.</caption>
+    </figure>
+    
+    <listing xml:id="listing-grad-field">
+      <program>
+	<code><xi:include href="prefigure/include/grad-field.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for the diagram in <xref
+      ref="diagram-grad-field"/>.</caption>
     </listing>
 
   </subsection>

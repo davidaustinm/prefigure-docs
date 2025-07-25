@@ -375,6 +375,12 @@
     when the spline is closed, since the direction of the arrow is not
     well defined in this case.  These features are illustrated in
     <xref ref="diagram-spline-domain"/>.</p>
+
+    <p>To use the parametrized curve in another place, include a
+    <attr>name</attr> attribute.  For instance, adding the attribute
+    <attr>name="s"</attr> saves the function <c>s(t)</c> for later
+    use.  One use of this feature is demonstrated in
+    <xref ref="subsec-vf"/>.</p>
     
     <figure xml:id="diagram-spline-domain">
       <sidebyside width="60%">
