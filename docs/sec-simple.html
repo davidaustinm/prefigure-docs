@@ -101,14 +101,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.1';
+eBookConfig.runestone_version = '7.9.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.cc203fa52565b593.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="_static/pretext/js/diagcess/diagcess.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
@@ -225,12 +225,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-calculus.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Calculus components</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#subsec-graph" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Graphs and tangent lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#subsec-graph" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Graphs, derivatives, and tangent lines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Parametric curves</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-5" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Implicit curves</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-6" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Areas</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-7" class="internal"><span class="codenumber">3.7.5</span> <span class="title">Riemann sums</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-8" class="internal"><span class="codenumber">3.7.6</span> <span class="title">Vector fields and gradients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#subsec-vf" class="internal"><span class="codenumber">3.7.6</span> <span class="title">Vector fields and gradients</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-9" class="internal"><span class="codenumber">3.7.7</span> <span class="title">Polar coordinates</span></a></div></li>
 </ul>
 </li>
@@ -601,6 +601,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-splines-8">Since a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> is constructed from a sequence of points, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> shares many attributes with a <code class="code-inline tex2jax_ignore">&lt;polygon&gt;</code>.  For instance, the spline defined in line 10 shows how the sequence of points can be defined using a <code class="code-inline tex2jax_ignore">@parameter</code>.  In addition, a <code class="code-inline tex2jax_ignore">&lt;spline&gt;</code> can have a <code class="code-inline tex2jax_ignore">@stroke</code> and <code class="code-inline tex2jax_ignore">@fill</code> attribute, and <code class="code-inline tex2jax_ignore">@arrows</code> can be used to add arrows.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-splines-9">It can be helpful to remember that splines are parametrized curves, which presents two opportunities.  First, you can specify a portion of the spline using the <code class="code-inline tex2jax_ignore">@domain</code> attribute. Second, the location of an ending arrow, requested with <code class="code-inline tex2jax_ignore">@arrows="1"</code>, can be moved to another location with <code class="code-inline tex2jax_ignore">@arrow-location</code>.  This can be particularly helpful when the spline is closed, since the direction of the arrow is not well defined in this case.  These features are illustrated in <a href="sec-simple.html#diagram-spline-domain" class="xref" data-knowl="./knowl/xref/diagram-spline-domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.5.14">Figure 3.5.14</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-splines-10">To use the parametrized curve in another place, include a <code class="code-inline tex2jax_ignore">@name</code> attribute.  For instance, adding the attribute <code class="code-inline tex2jax_ignore">@name="s"</code> saves the function <code class="code-inline tex2jax_ignore">s(t)</code> for later use.  One use of this feature is demonstrated in <a href="sec-calculus.html#subsec-vf" class="internal" title="Subsection 3.7.6: Vector fields and gradients">Subsection 3.7.6</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-splines-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="diagram-spline-domain"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/spline-domain.svg" role="img" class="contained"></div></div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.14<span class="period">.</span></span><span class="space"> </span>Specifying the domain of a spline and moving an arrow.<div class="autopermalink" data-description="Figure 3.5.14"><a href="#diagram-spline-domain" title="Copy heading and permalink for Figure 3.5.14" aria-label="Copy heading and permalink for Figure 3.5.14">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-spline-domain"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.5.15<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.5.14.<div class="autopermalink" data-description="Listing 3.5.15: The PreFigure source for Figure 3.5.14."><a href="#listing-spline-domain" title="Copy heading and permalink for Listing 3.5.15: The PreFigure source for Figure 3.5.14." aria-label="Copy heading and permalink for Listing 3.5.15: The PreFigure source for Figure 3.5.14.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(250,250)" margins="5"
