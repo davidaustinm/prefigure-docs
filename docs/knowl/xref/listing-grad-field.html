@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.7.24<span class="period">.</span></span><span class="space"> </span>The PreFigure source for the diagram in Figure 3.7.23.<div class="autopermalink" data-description="Listing 3.7.24: The PreFigure source for the diagram in Figure 3.7.23."><a href="#listing-grad-field" title="Copy heading and permalink for Listing 3.7.24: The PreFigure source for the diagram in Figure 3.7.23." aria-label="Copy heading and permalink for Listing 3.7.24: The PreFigure source for the diagram in Figure 3.7.23.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org"&gt;
+  &lt;definition&gt;g(x,y)=x*y&lt;/definition&gt;
+  &lt;definition&gt;del_g(x,y)=grad(g, (x,y))&lt;/definition&gt;
+  &lt;coordinates bbox="(-1,-1,4,4)"&gt;
+    &lt;grid-axes decorations="no" spacings="((-1,1,4),(-1,1,4))"/&gt;
+    &lt;spline points="((-0.5,3),(1,3),(2,2.5),(3,1.5),(2,0))"
+            name="s" stroke="magenta" thickness="2"/&gt;
+    &lt;definition&gt;ds(t)=deriv(s,t)&lt;/definition&gt;
+    &lt;definition&gt;T(t)=1/length(ds(t))*ds(t)&lt;/definition&gt;
+    &lt;vector-field function="T" curve="s"
+                  domain="(0,4)" N="5"/&gt;
+    &lt;vector-field function="del_g" curve="s"
+                  domain="(0,4)" N="5" scale="0.2"/&gt;
+    &lt;definition&gt;p=s(3)&lt;/definition&gt;
+    &lt;definition&gt;g=0.2*del_g(*p)&lt;/definition&gt;
+    &lt;label anchor="p+T(3)" alignment="se"&gt;
+      &lt;m&gt;{\mathbf T}&lt;/m&gt;
+    &lt;/label&gt;
+    &lt;label anchor="p+g" alignment="n"&gt;
+      &lt;m&gt;\nabla f&lt;/m&gt;
+    &lt;/label&gt;
+    &lt;angle-marker points="(p+T(3),p,p+g)"&gt;
+      &lt;m&gt;\theta&lt;/m&gt;
+    &lt;/angle-marker&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div></div></figure><span class="incontext"><a class="internal" href="sec-calculus.html#listing-grad-field">in-context</a></span>
+</body>
+</html>
