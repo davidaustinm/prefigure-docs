@@ -13,7 +13,7 @@
     <vector-field function="del_g" curve="s"
                   domain="(0,4)" N="5" scale="0.2"/>
     <definition>p=s(3)</definition>
-    <definition>g=0.2*del_g(p[0],p[1])</definition>
+    <definition>g=0.2*del_g(*p)</definition>
     <label anchor="p+T(3)" alignment="se">
       <m>{\mathbf T}</m>
     </label>

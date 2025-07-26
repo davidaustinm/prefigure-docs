@@ -144,8 +144,10 @@
     <title>Implicit curves</title>
 
     <p>The solutions to an equation <m>f(x,y)=k</m> can be plotted
-    with the <tag>implicit-curve</tag> tag.
-    </p>
+    with the <tag>implicit-curve</tag> and <tag>contour</tag> tags.
+    These tags are functionally equivalent and are both provided since
+    one may be more aligned with an author's intent in a given
+    context.</p>
 
     <figure xml:id="diagram-implicit-curve">
       <sidebyside width="60%">
@@ -387,6 +389,10 @@
       <caption>The PreFigure source for the diagram in <xref
       ref="diagram-grad-field"/>.</caption>
     </listing>
+
+    <p>Note the use of the <c>*</c> operator as described in <xref
+    ref="subsec-math"/>.  Alternatively, one could have written
+    <c>g=del_g(p[0],p[1])</c>.</p>
 
   </subsection>
 

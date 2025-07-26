@@ -12,7 +12,7 @@
   </p>
   </introduction>
 
-  <subsection>
+  <subsection xml:id="subsec-math">
     <title>Math operations</title>
 
     <p>PreFigure provides access to Python's <c>math</c> module, which
@@ -23,16 +23,34 @@
     <c>degrees</c> and <c>radians</c> will convert back and forth.
     </p>
 
-    <p>Some operations from discrete math, such as <c>comb(n,k)</c>
-    for <m>n\choose k</m>, are also available.
-    </p>
-    
     <p> These functions are available without the <c>math.</c> prefix
-    so that we could say, for instance, <c>cos(pi/6)</c>.
+    so that we can say, for instance, <c>cos(pi/6)</c>.
     See the <url href="https://docs.python.org/3/library/math.html">
     Python documentation</url> for a full list of functions that are
     available.
     </p>
+
+    <p>The natural logarithm in Python is given by <c>log</c>, but
+    <prefigure/> also allows <c>ln</c>.  The base-10 logarithm is
+    <c>log10</c>.</p>
+
+    <p>Some operations from discrete math, such as <c>comb(n,k)</c>
+    for <m>n\choose k</m>, are also available.
+    </p>
+
+    <p>In addition, if a function <c>f(x)</c> has been previously
+    defined, then <c>fp(x)=deriv(f,x)</c> will be its derivative.  For
+    functions of several variables, say, <c>g(x,y)</c>, the gradient
+    is defined by <c>dg(x,y)=grad(g,(x,y))</c>.</p>
+
+    <p>There may be times when a diagram contains, say, a point
+    defined as <c>p=(2,-3)</c> and a two-variable function
+    <c>f(x,y)=x+y</c>.  Mathematically, it is natural to evaluate
+    <c>f</c> at the point <c>p</c>.  Ordinarily, this would have to be
+    represented as <c>f(p[0],p[1])</c>.  However, Python provides the
+    <c>*</c> operator, which does the work of <q>unpacking</q> the
+    coordinates so that <c>f(*p)</c> has the same effect.  This is
+    demonstrated in <xref ref="listing-grad-field"/>.</p>
 
   </subsection>
 
