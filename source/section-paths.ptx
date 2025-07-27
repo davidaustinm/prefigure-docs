@@ -219,20 +219,24 @@
     <attr>decoration</attr> attribute.  The value of this attribute is
     a set of parameters separated by semicolons, the first of which is
     the type of decoration, either <c>coil</c>, <c>wave</c>,
-    <c>zigzag</c>, or <c>capacitor</c>, as shown in <xref
+    <c>zigzag</c>, <c>ragged</c>, or <c>capacitor</c>, as shown in <xref
     ref="diagram-path-decorations"/> 
     </p>
 
     <figure xml:id="diagram-path-decorations">
-      <sidebyside width="60%">
-	<image source="images/path_decorations"/>
-      </sidebyside>
+      <image width="80%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-path-decorations">
+          <xi:include href="prefigure/path_decorations.xml"/>
+        </prefigure>
+      </image>
       <caption>Some <c>path</c> decorations.</caption>
     </figure>
     
     <listing xml:id="listing-path-decorations">
       <program line-numbers="yes">
-	<code><xi:include href="code/path_decorations.xml" parse="text"/></code>
+	<code><xi:include href="prefigure/include/path_decorations.xml"
+        parse="text"/></code>
       </program>
       <caption>The PreFigure source for the coils in
       <xref ref="diagram-path-decorations"/>.</caption> 
@@ -303,6 +307,15 @@
     parameter, which again defaults to 0.5, and a <c>dimensions</c>
     parameter, which controls the horizontal gap and vertical length
     </p>
+
+    <p>When adding a <c>ragged</c> decoration, the parameters
+    <c>step</c> and <c>offset</c> are required.  Measured in SVG
+    units, <c>step</c> describes how far to move along the line with
+    each step and <c>offset</c> describes how far away from the line
+    we can move in each step.  The steps are taken randomly so an
+    optional parameter <c>seed</c>, whose value is a positive integer,
+    can be given to initialize the random number generator.  In this
+    way, the results will be same every time the diagram is built.</p>
     
     <figure xml:id="diagram-rcl-circuit">
       <sidebyside width="60%">
