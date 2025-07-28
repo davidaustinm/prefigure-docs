@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-images" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Loading external images</title>
+
+  <p>Some diagrams may need to import an external image and then add
+  some features.  For instance, one may want to load a topographical
+  map and add a vector indicating the gradient of the elevation
+  function.  <prefigure/> supports importing PNG, JPEG, GIF, and SVG
+  images with the <tag>image</tag> element.  <xref
+  ref="diagram-wasatch"/> and the accompanying source <xref
+  ref="listing-wasatch"/> demonstrate.</p>
+
+  <figure xml:id="diagram-wasatch">
+    <image width="60%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-wasatch">
+        <xi:include href="prefigure/wasatch.xml"/>
+      </prefigure>
+    </image>
+    <caption>This diagram contains a PNG image that is loaded from an
+    external file.  Image courtesy of the United States Geological
+    Survey.</caption>
+  </figure>
+  
+  <listing xml:id="listing-wasatch">
+    <program>
+      <code><xi:include href="prefigure/wasatch.xml"
+      parse="text"/></code>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-wasatch"/>.</caption> 
+  </listing>
+
+  <p>The <attr>source</attr> attribute is the name of the file that
+  contains the image.  Finding this image file in the local file
+  system is handled in the same way that external data files are
+  found, as described in <xref ref="subsec-reading-file"/>.  That is
+  to say, if there is a <prefigure/> publication file, then the value
+  of the 
+  attribute <attr>directories/data</attr> is prepended to the value of
+  the <attr>image/source</attr> attribute.  For instance, if
+  <attr>source="images/my_image.jpg"</attr> and
+  <attr>directories/data="/home/user/projects/"</attr>, then
+  <prefigure/> will expect the image file to be in
+  <c>/home/user/projects/images/my_image.jpg"</c>.</p>
+
+  <p>If <attr>directories/data</attr> is not given in a <prefigure/>
+  publication file, then the value of <attr>source</attr> is
+  interpreted relative to the <prefigure/> source file.</p>
+
+  <p>Within a <pretext/> project, the value of
+  <attr>docinfo/data</attr> should be a directory that contains the
+  image file, possibly in a sub-directory as indicated by the value of
+  <attr>image/source</attr>.  For example, if
+  <attr>source="images/my_image.jpg"</attr> and
+  <attr>docinfo/data="/home/book/source/data"</attr>, then the file should
+  live at <c>/home/book/source/data/images/my_image.jpg</c>.  (Of
+  course, one would not 
+  likely give an absolute path in <attr>docinfo/data</attr>.)</p>
+
+  <p><prefigure/> attempts to identify the image format from the file
+  name's suffix.  For instance, <c>image.gif</c> is assumed to be a
+  GIF.  If the file name suffix does not properly denote the image
+  type, include the attribute <attr>filetype</attr>, whose value can
+  be <c>"svg"</c>, <c>"png"</c>, <c>"gif"</c>, <c>"jpg"</c>, or
+  <c>"jpeg"</c>.</p>
+
+  <p>The location and sizing of the image is determined by a rectangle
+  defined through the attributes <attr>center</attr>,
+  <attr>lower-left</attr>, and <attr>dimensions</attr>.  Only one of
+  <attr>center</attr> and <attr>lower-left</attr> needs to be given.
+  The image will be scaled in such a way so as to preserve its aspect
+  ratio and to fit inside the rectangle.</p>
+
+  <p>Additional attributes include <attr>rotate</attr>, which defines
+  an angle, epxressed in degrees, by which the image is to be rotated
+  about its center.  The attribute <attr>scale</attr> can be either a
+  single number or an ordered pair to scale by different amounts
+  horizontally and vertically.  Scaling is not strictly enforced,
+  however, since the image is already scaled to fit inside the
+  prescribed rectangle.  What may be most useful is
+  <attr>scale="(-1,1)"</attr> to flip the image.  Finally,
+  <attr>opacity</attr> gives a value for the opacity to use when
+  including the image, as demonstrated in <xref
+  ref="listing-wasatch"/>.</p>
+
+  <assemblage>
+    <title>Caution</title>
+
+    <p>Because <prefigure/> prioritizes accessible diagrams and
+    imported images will likely not render well in an embossed tactile
+    format, an <tag>image</tag> element must include elements intended
+    to replace the image in a tactile diagram.  Notice that the
+    <tag>image</tag> in <xref ref="listing-wasatch"/> contains a label
+    with a brief description.
+    </p>
+  </assemblage>
+
+  <p><xref ref="diagram-attack"/> illustrates a <prefigure/> version
+  of a diagram from the
+  <url
+      href="https://pretextbook.org/examples/sample-article/html/section-graphics.html#figure-shark-attack"
+      text="custom">
+    <pretext/> sample article.
+  </url>  Notice how the image of the shark is scaled to flip it
+  horizontally.  A rectangle is also drawn around the swimmer to
+  illuatrate how the image is scaled to fit inside its rectangle (and
+  to protect the swimmer from the shark).
+  Finally, note that the tactile replacements for these images each
+  consist of a labeled point showing the location of the shark and the
+  swimmer.  Thanks to Stephen Brown for permission to reproduce this
+  image.</p>
+
+  <figure xml:id="diagram-attack">
+    <image width="90%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-attack">
+          <xi:include href="prefigure/attack.xml"/>
+      </prefigure>
+    </image>
+    <caption>This diagram loads two images, one for the shark and one
+    for the swimmer.</caption>
+  </figure>
+
+  <listing xml:id="listing-attack">
+    <program>
+      <code><xi:include href="prefigure/attack.xml"
+      parse="text"/></code>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-attack"/>.</caption> 
+  </listing>
+
+</section>
+

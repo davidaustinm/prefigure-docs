@@ -27,5 +27,6 @@
   <xi:include href="section-paths.ptx"/>
   <xi:include href="section-shapes.ptx"/>
   <xi:include href="section-data.ptx"/>
+  <xi:include href="section-images.ptx"/>
 
 </chapter>

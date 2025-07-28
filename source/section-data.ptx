@@ -10,7 +10,7 @@
     scatter plots and histograms.</p>
   </introduction>
 
-  <subsection>
+  <subsection xml:id="subsec-reading-file">
     <title>Reading an external file</title>
 
     <p>The <tag>read</tag> element is used for reading in an external
