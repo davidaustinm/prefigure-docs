@@ -314,6 +314,36 @@
     described in the <xref ref="sec-arrows" text="custom">
     section on arrows.</xref></p>
 
+    <p>Illustrating vector fields can be challenging when there is
+    considerable variation in the lengths of the vectors.  For this
+    reason, one may add an <attr>exponent="p"</attr> attribute to the
+    <tag>vector-field</tag> element.  This causes a vector
+    <m>{\mathbf v}</m> to be scaled so that its new
+    length is <m>\left|{\mathbf v}\right|^p</m>.  With a value of
+    <m>0\lt p \lt 1</m>, the lengths will become more uniform, as
+    demonstrated in <xref ref="diagram-vector-exponent"/>, which can
+    help some features, such as critical points and circulation, to
+    appear more easily. </p>
+
+    <figure xml:id="diagram-vector-exponent">
+      <sidebyside widths="45% 45%">
+        <image>
+          <prefigure xmlns="https://prefigure.org"
+                     label="prefigure-vf-exponent-1">
+            <xi:include href="prefigure/vector-field-exponent-1.xml"/>
+          </prefigure>
+        </image>
+        <image>
+          <prefigure xmlns="https://prefigure.org"
+                     label="prefigure-vf-exponent-2">
+            <xi:include href="prefigure/vector-field-exponent-2.xml"/>
+          </prefigure>
+        </image>
+      </sidebyside>
+      <caption>The vector field shown on the left is redrawn on the
+      right with <attr>exponent="0.3"</attr>.</caption>
+    </figure>
+
     <p>The gradient of a function can be defined using the <c>grad</c>
     operator.  For instance, <c>del_f(x,y) = grad(f, (x,y))</c>
     defines a new function which is the gradient of <c>f</c>.  Notice
