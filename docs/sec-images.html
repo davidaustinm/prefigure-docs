@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Loading external images</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="PreFigure Author’s Guide">
+<meta property="book:author" content="David Austin">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.47a5fea5694fc0ae.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="prefigure" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://prefigure.org"><img src="external/images/logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="pr-guide.html"><span class="title">PreFigure Author’s Guide</span></a></h1>
+<p class="byline">David Austin</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-data.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap-graphical.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap-project.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\yvec}{\mathbf y}
+\newcommand{\twovec}[2]{\left[\begin{array}{r}#1 \\ #2
+\end{array}\right]}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chap-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-example.html" class="internal"><span class="codenumber">1.1</span> <span class="title">An example diagram</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-accessibility.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Accessibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-gallery.html" class="internal"><span class="codenumber">1.3</span> <span class="title">A gallery of diagrams</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-installation.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Installation and use</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chap-start.html" class="internal"><span class="codenumber">2</span> <span class="title">Getting Started</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagram.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;diagram&gt;</code>element</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-coordinates.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;coordinates&gt;</code> element</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-definition.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;definition&gt;</code> element and user namespace</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chap-graphical.html" class="internal"><span class="codenumber">3</span> <span class="title">Graphical components</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-graphical-attr.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Stroke, fill, and other graphical attributes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphical-attr.html#subsec-colors" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Colors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphical-attr.html#subsec-stroke-attributes" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Stroke attributes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphical-attr.html#sec-graphical-attr-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Fill attributes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-graphical-attr.html#sec-graphical-attr-6" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Handles</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-outlining.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Outlining and <code class="code-inline tex2jax_ignore">&lt;group&gt;</code>s</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outlining.html#sec-outlining-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Outlining</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-outlining.html#sec-outlining-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Groups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-grid-axes.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Grid and Axes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#subsec-grid-axes" class="internal"><span class="codenumber">3.3.1</span> <span class="title"><code class="code-inline tex2jax_ignore">&lt;grid-axes&gt;</code></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#subsec-grid" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Grids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#subsec-axes" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Axes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-grid-axes.html#sec-grid-axes-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Tick marks</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-labels.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Labels</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-labels.html#sec-labels-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Creating labels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-labels.html#sec-labels-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Legends</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-simple.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Points, lines, and polygons</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#subsec-points" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-4" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#subsec-vectors" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-6" class="internal"><span class="codenumber">3.5.4</span> <span class="title">Polygons</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#subsec-splines" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Splines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simple.html#sec-simple-8" class="internal"><span class="codenumber">3.5.6</span> <span class="title">Triangles</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-circles.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Circles, ellipses, and rectangles</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circles.html#subsec-circles" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Circles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circles.html#sec-circles-4" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Arcs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circles.html#sec-circles-5" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Angle markers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circles.html#sec-circles-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Rectangles</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-calculus.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Calculus components</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#subsec-graph" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Graphs, derivatives, and tangent lines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Parametric curves</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-5" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Implicit curves</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-6" class="internal"><span class="codenumber">3.7.4</span> <span class="title">Areas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-7" class="internal"><span class="codenumber">3.7.5</span> <span class="title">Riemann sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#subsec-vf" class="internal"><span class="codenumber">3.7.6</span> <span class="title">Vector fields and gradients</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-calculus.html#sec-calculus-9" class="internal"><span class="codenumber">3.7.7</span> <span class="title">Polar coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-diffeqs.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Differential equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-slope-field" class="internal"><span class="codenumber">3.8.1</span> <span class="title">Slope Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-de-solutions" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Solutions to differential equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#sec-diffeqs-5" class="internal"><span class="codenumber">3.8.3</span> <span class="title">Discontinuities</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-delta" class="internal"><span class="codenumber">3.8.4</span> <span class="title">Delta functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-diffeqs.html#subsec-euler" class="internal"><span class="codenumber">3.8.5</span> <span class="title">Euler’s method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-networks.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Networks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-3" class="internal"><span class="codenumber">3.9.1</span> <span class="title">Getting started</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-4" class="internal"><span class="codenumber">3.9.2</span> <span class="title">A more verbose network</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-5" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Positioning the nodes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-6" class="internal"><span class="codenumber">3.9.4</span> <span class="title">Putting everything together</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-7" class="internal"><span class="codenumber">3.9.5</span> <span class="title">Annotating networks</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-paths.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Paths</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paths.html#sec-paths-3" class="internal"><span class="codenumber">3.10.1</span> <span class="title">Defining paths</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paths.html#sec-paths-4" class="internal"><span class="codenumber">3.10.2</span> <span class="title">Decorations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-shapes.html" class="internal"><span class="codenumber">3.11</span> <span class="title">Shape constructions and clipping</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-3" class="internal"><span class="codenumber">3.11.1</span> <span class="title">Defining shapes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-4" class="internal"><span class="codenumber">3.11.2</span> <span class="title">Shape Constructions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-shapes.html#sec-shapes-5" class="internal"><span class="codenumber">3.11.3</span> <span class="title">Clipping</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-data.html" class="internal"><span class="codenumber">3.12</span> <span class="title">Working with data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#subsec-reading-file" class="internal"><span class="codenumber">3.12.1</span> <span class="title">Reading an external file</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-4" class="internal"><span class="codenumber">3.12.2</span> <span class="title">Scatter plots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-5" class="internal"><span class="codenumber">3.12.3</span> <span class="title">Histograms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-6" class="internal"><span class="codenumber">3.12.4</span> <span class="title">Plotting a trajectory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-data.html#sec-data-7" class="internal"><span class="codenumber">3.12.5</span> <span class="title">Log plots</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-images.html" class="internal"><span class="codenumber">3.13</span> <span class="title">Loading external images</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chap-project.html" class="internal"><span class="codenumber">4</span> <span class="title">Managing a PreFigure project</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-publication.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The publication file</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pretext.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Authoring diagrams within PreTeXt</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chap-next-steps.html" class="internal"><span class="codenumber">5</span> <span class="title">Next steps</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-repeat.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;repeat&gt;</code> element</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-arrows.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Arrows</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-transforms.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Transforms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transforms.html#subsec-transforms" class="internal"><span class="codenumber">5.3.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">&lt;transform&gt;</code> element</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transforms.html#subsec-group-transform" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Transforming a <code class="code-inline tex2jax_ignore">&lt;group&gt;</code></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-math.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Mathematical operations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#subsec-math" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Math operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Intersections</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-math.html#sec-math-6" class="internal"><span class="codenumber">5.4.4</span> <span class="title">List operations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chap-accessibility.html" class="internal"><span class="codenumber">6</span> <span class="title">Accessibility</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-annotations.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Annotating a diagram</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annotations.html#sec-annotations-3" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The <code class="code-inline tex2jax_ignore">diagcess</code> library</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annotations.html#sec-annotations-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The annotation tree</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-annotations.html#sec-annotations-5" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Annotations within repeat elements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-tactile.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Tactile diagrams</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-tactile.html#sec-tactile-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Anatomy of a tactile diagram</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-tactile.html#sec-tactile-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">PreFigure considerations for tactile diagrams</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-tactile.html#subsec-tactile-captions" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Captions in tactile diagrams</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap-examples.html" class="internal"><span class="codenumber">7</span> <span class="title">Examples with source</span></a></div></li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-images"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.13</span><span class="space"> </span><span class="title">Loading external images</span>
+</h2>
+<div class="para" id="sec-images-2">Some diagrams may need to import an external image and then add some features.  For instance, one may want to load a topographical map and add a vector indicating the gradient of the elevation function.  PreFigure supports importing PNG, JPEG, GIF, and SVG images with the <code class="code-inline tex2jax_ignore">&lt;image&gt;</code> element.  <a href="sec-images.html#diagram-wasatch" class="xref" data-knowl="./knowl/xref/diagram-wasatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.13.1">Figure 3.13.1</a> and the accompanying source <a href="sec-images.html#listing-wasatch" class="xref" data-knowl="./knowl/xref/listing-wasatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.13.2: The PreFigure source for Figure 3.13.1.">Listing 3.13.2</a> demonstrate.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diagram-wasatch"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/prefigure/prefigure-wasatch.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.13.1<span class="period">.</span></span><span class="space"> </span>This diagram contains a PNG image that is loaded from an external file.  Image courtesy of the United States Geological Survey.<div class="autopermalink" data-description="Figure 3.13.1"><a href="#diagram-wasatch" title="Copy heading and permalink for Figure 3.13.1" aria-label="Copy heading and permalink for Figure 3.13.1">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-wasatch"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.13.2<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.13.1.<div class="autopermalink" data-description="Listing 3.13.2: The PreFigure source for Figure 3.13.1."><a href="#listing-wasatch" title="Copy heading and permalink for Listing 3.13.2: The PreFigure source for Figure 3.13.1." aria-label="Copy heading and permalink for Listing 3.13.2: The PreFigure source for Figure 3.13.1.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"
+         xmlns="https://prefigure.org"&gt;
+  &lt;coordinates bbox="(0,0,10,10)"&gt;
+    &lt;image lower-left="(0,0)" dimensions="(10,10)"
+           source="images/wasatch.png" opacity="0.6"&gt;
+      &lt;label anchor="(0,10)" alignment="se"&gt;
+        A topological map with a vector
+      &lt;/label&gt;
+    &lt;/image&gt;
+    &lt;definition&gt;tail=(4.6,5.6)&lt;/definition&gt;
+    &lt;vector tail="tail" v="(2,2.5)" stroke="blue"/&gt;
+    &lt;point p="tail"/&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div></div></figure><div class="para" id="sec-images-5">The <code class="code-inline tex2jax_ignore">@source</code> attribute is the name of the file that contains the image.  Finding this image file in the local file system is handled in the same way that external data files are found, as described in <a href="sec-data.html#subsec-reading-file" class="internal" title="Subsection 3.12.1: Reading an external file">Subsection 3.12.1</a>.  That is to say, if there is a PreFigure publication file, then the value of the attribute <code class="code-inline tex2jax_ignore">@directories/data</code> is prepended to the value of the <code class="code-inline tex2jax_ignore">@image/source</code> attribute.  For instance, if <code class="code-inline tex2jax_ignore">@source="images/my_image.jpg"</code> and <code class="code-inline tex2jax_ignore">@directories/data="/home/user/projects/"</code>, then PreFigure will expect the image file to be in <code class="code-inline tex2jax_ignore">/home/user/projects/images/my_image.jpg"</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-images-6">If <code class="code-inline tex2jax_ignore">@directories/data</code> is not given in a PreFigure publication file, then the value of <code class="code-inline tex2jax_ignore">@source</code> is interpreted relative to the PreFigure source file.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-images-7">Within a PreTeXt project, the value of <code class="code-inline tex2jax_ignore">@docinfo/data</code> should be a directory that contains the image file, possibly in a sub-directory as indicated by the value of <code class="code-inline tex2jax_ignore">@image/source</code>.  For example, if <code class="code-inline tex2jax_ignore">@source="images/my_image.jpg"</code> and <code class="code-inline tex2jax_ignore">@docinfo/data="/home/book/source/data"</code>, then the file should live at <code class="code-inline tex2jax_ignore">/home/book/source/data/images/my_image.jpg</code>.  (Of course, one would not likely give an absolute path in <code class="code-inline tex2jax_ignore">@docinfo/data</code>.)<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-images-8">PreFigure attempts to identify the image format from the file name’s suffix.  For instance, <code class="code-inline tex2jax_ignore">image.gif</code> is assumed to be a GIF.  If the file name suffix does not properly denote the image type, include the attribute <code class="code-inline tex2jax_ignore">@filetype</code>, whose value can be <code class="code-inline tex2jax_ignore">"svg"</code>, <code class="code-inline tex2jax_ignore">"png"</code>, <code class="code-inline tex2jax_ignore">"gif"</code>, <code class="code-inline tex2jax_ignore">"jpg"</code>, or <code class="code-inline tex2jax_ignore">"jpeg"</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-images-9">The location and sizing of the image is determined by a rectangle defined through the attributes <code class="code-inline tex2jax_ignore">@center</code>, <code class="code-inline tex2jax_ignore">@lower-left</code>, and <code class="code-inline tex2jax_ignore">@dimensions</code>.  Only one of <code class="code-inline tex2jax_ignore">@center</code> and <code class="code-inline tex2jax_ignore">@lower-left</code> needs to be given. The image will be scaled in such a way so as to preserve its aspect ratio and to fit inside the rectangle.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-images-10">Additional attributes include <code class="code-inline tex2jax_ignore">@rotate</code>, which defines an angle, epxressed in degrees, by which the image is to be rotated about its center.  The attribute <code class="code-inline tex2jax_ignore">@scale</code> can be either a single number or an ordered pair to scale by different amounts horizontally and vertically.  Scaling is not strictly enforced, however, since the image is already scaled to fit inside the prescribed rectangle.  What may be most useful is <code class="code-inline tex2jax_ignore">@scale="(-1,1)"</code> to flip the image.  Finally, <code class="code-inline tex2jax_ignore">@opacity</code> gives a value for the opacity to use when including the image, as demonstrated in <a href="sec-images.html#listing-wasatch" class="xref" data-knowl="./knowl/xref/listing-wasatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.13.2: The PreFigure source for Figure 3.13.1.">Listing 3.13.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="sec-images-11"><h3 class="heading"><span class="title">Caution.</span></h3>
+<div class="para" id="sec-images-11-2">Because PreFigure prioritizes accessible diagrams and imported images will likely not render well in an embossed tactile format, an <code class="code-inline tex2jax_ignore">&lt;image&gt;</code> element must include elements intended to replace the image in a tactile diagram.  Notice that the <code class="code-inline tex2jax_ignore">&lt;image&gt;</code> in <a href="sec-images.html#listing-wasatch" class="xref" data-knowl="./knowl/xref/listing-wasatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.13.2: The PreFigure source for Figure 3.13.1.">Listing 3.13.2</a> contains a label with a brief description.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Caution"><a href="#sec-images-11" title="Copy heading and permalink for Assemblage: Caution" aria-label="Copy heading and permalink for Assemblage: Caution">🔗</a></div></article><div class="para" id="sec-images-12">
+<a href="sec-images.html#diagram-attack" class="xref" data-knowl="./knowl/xref/diagram-attack.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.13.3">Figure 3.13.3</a> illustrates a PreFigure version of a diagram from the <a class="external" href="https://pretextbook.org/examples/sample-article/html/section-graphics.html#figure-shark-attack" target="_blank">PreTeXt sample article.</a><details class="ptx-footnote" aria-live="polite" id="sec-images-12-4"><summary class="ptx-footnote__number" title="Footnote 3.13.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-images-12-4"><code class="code-inline tex2jax_ignore">pretextbook.org/examples/sample-article/html/section-graphics.html#figure-shark-attack</code></div></details>  Notice how the image of the shark is scaled to flip it horizontally.  A rectangle is also drawn around the swimmer to illuatrate how the image is scaled to fit inside its rectangle (and to protect the swimmer from the shark). Finally, note that the tactile replacements for these images each consist of a labeled point showing the location of the shark and the swimmer.  Thanks to Stephen Brown for permission to reproduce this image.<div class="autopermalink" data-description="Paragraph"><a href="#sec-images-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diagram-attack"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/prefigure/prefigure-attack.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.13.3<span class="period">.</span></span><span class="space"> </span>This diagram loads two images, one for the shark and one for the swimmer.<div class="autopermalink" data-description="Figure 3.13.3"><a href="#diagram-attack" title="Copy heading and permalink for Figure 3.13.3" aria-label="Copy heading and permalink for Figure 3.13.3">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-attack"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">3.13.4<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 3.13.3.<div class="autopermalink" data-description="Listing 3.13.4: The PreFigure source for Figure 3.13.3."><a href="#listing-attack" title="Copy heading and permalink for Listing 3.13.4: The PreFigure source for Figure 3.13.3." aria-label="Copy heading and permalink for Listing 3.13.4: The PreFigure source for Figure 3.13.3.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(540, 240)" margins="5"
+         xmlns="https://prefigure.org"&gt;
+  &lt;coordinates bbox="(0,0,9,4)"&gt; 
+    &lt;rectangle lower-left="(8,0)" dimensions="(1,2)"
+               fill="yellow" stroke="none" fill-opacity="0.3"/&gt;
+    &lt;path start="(0,0)" closed="yes" fill="lightsteelblue"&gt;
+      &lt;lineto point="(0,2)"/&gt;
+      &lt;lineto point="(8.1,2)"
+              decoration="ragged; step=7; offset=4; seed=1"/&gt;
+      &lt;lineto point="(8.1,0)"
+              decoration="ragged; step=7; offset=4; seed=1"/&gt;
+    &lt;/path&gt;
+    &lt;image center="(1.5,1)" dimensions="(3,1)"
+           source="images/shark.png" scale="(-1,1)"&gt;
+      &lt;point p="(1.5,1)"&gt;
+        Shark
+      &lt;/point&gt;
+    &lt;/image&gt;
+    &lt;image center="(5,1)" dimensions="(1,2)"
+           source="images/swimmer.png"&gt;
+      &lt;point p="(5,1)"&gt;
+        Swimmer
+      &lt;/point&gt;
+    &lt;/image&gt;
+    &lt;rectangle center="(5,1)" dimensions="(1,2)"
+               dash="9 9" stroke="gray"/&gt;
+    &lt;line endpoints="((1.5,3),(8,3))" stroke="black"/&gt;
+    &lt;tick-mark location="(1.5,3)" size="(5,5)"
+               alignment="n" offset="(0,4)"&gt;
+      &lt;m&gt;70 \mathrm{ m}&lt;/m&gt;
+    &lt;/tick-mark&gt;
+    &lt;tick-mark location="(5,3)" size="(5,5)"
+               alignment="n" offset="(0,4)"&gt;
+      &lt;m&gt;50 \mathrm{ m}&lt;/m&gt;
+    &lt;/tick-mark&gt;
+    &lt;tick-mark location="(8,3)" size="(5,5)"
+               alignment="n" offset="(0,4)"&gt;
+      &lt;m&gt;0 \mathrm{ m}&lt;/m&gt;
+    &lt;/tick-mark&gt;
+  &lt;/coordinates&gt;
+&lt;/diagram&gt;
+</code></pre></div></div></figure><div class="autopermalink" data-description="Section 3.13: Loading external images"><a href="#sec-images" title="Copy heading and permalink for Section 3.13: Loading external images" aria-label="Copy heading and permalink for Section 3.13: Loading external images">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-data.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chap-project.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<script>diagcess.Base.init()</script>
+</body>
+</html>
