@@ -105,7 +105,7 @@
     <pretext/> sample article.
   </url>  Notice how the image of the shark is scaled to flip it
   horizontally.  A rectangle is also drawn around the swimmer to
-  illuatrate how the image is scaled to fit inside its rectangle (and
+  illustrate how the image is scaled to fit inside its rectangle (and
   to protect the swimmer from the shark).
   Finally, note that the tactile replacements for these images each
   consist of a labeled point showing the location of the shark and the
