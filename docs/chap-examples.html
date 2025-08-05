@@ -470,12 +470,11 @@ eBookConfig.enable_chatcodes =  false;
     alignments=['ne','ne','ne','nw','nw','sw','se','se']
   &lt;/definition&gt;
   &lt;definition substitution="no"&gt;
-    labels=['1','\omega','i','\omega^3','-1','\omega^5','-i','\omega^7']
+    labels=['1',r'\omega','i',r'\omega^3','-1',r'\omega^5','-i',r'\omega^7']
   &lt;/definition&gt;
   &lt;definition&gt;f(t)=(cos(pi*t/4),sin(pi*t/4))&lt;/definition&gt;
   &lt;coordinates bbox="[-1.4,-1.4,1.4,1.4]"&gt;
-    &lt;grid at="grid" /&gt;
-    &lt;axes at="axes" labels="no" /&gt;
+    &lt;grid-axes decorations="no"/&gt;
     &lt;circle at="unit-circle" center="(0,0)" radius="1" stroke="blue"/&gt;
     &lt;repeat parameter="k=0..7"&gt;
       &lt;point at="point" p="f(k)" alignment="alignments[k]"&gt;
