@@ -27,7 +27,7 @@
   we use a <pretext/> <tag>image</tag> element and place a
   <pretext/> <tag>prefigure</tag> element inside of it.  The
   <tag>prefigure</tag> element needs to have the attribute
-  <attr>xmlns="https://prefigure.org"</attr>, which serves to
+  <c>xmlns="https://prefigure.org"</c>, which serves to
   effectively isolate any <prefigure/> source from the rest of the
   document, and a <attr>label</attr> giving the diagram a name.
   </p>
@@ -59,7 +59,7 @@
   </listing>
   
   <p>Notice that the <latex/> macros defined inside
-  <tag>docinfo/macros</tag>, which are available throughout the entire
+  <c>docinfo/macros</c>, which are available throughout the entire
   <pretext/> document, are also made available 
   for creating <prefigure/> labels.  In addition, three more macros
   will be automatically added:
@@ -73,7 +73,7 @@
   <tag>docinfo</tag> to change the default appearance of specified
   graphical components.  The <tag>prefigure-preamble</tag> element
   needs the same namespace attribute
-  <attr>xmlns="https://prefigure.org"</attr> as the
+  <c>xmlns="https://prefigure.org"</c> as the
   <tag>prefigure</tag> element.
   </p>
   
@@ -105,7 +105,7 @@
     <prefigure/> diagrams.  Within the <tag>diagram</tag> tag in each
     source file, include
     the namespace attribute
-    <attr>xmlns="https://prefigure.org"</attr>.  You may build
+    <c>xmlns="https://prefigure.org"</c>.  You may build
     <prefigure/> output directly from the source until you are mostly
     satisfied with the result.
     </p>
@@ -115,7 +115,7 @@
     <ul>
       <li><p>First, make sure the root XML element in
       the file that will include the diagram has the attribute
-      <attr>xmlns:xi="http://www.w3.org/2001/XInclude"</attr>.</p></li>
+      <c>xmlns:xi="http://www.w3.org/2001/XInclude"</c>.</p></li>
 
       <li><p>Within
       an <tag>image</tag> element, include a child <tag>prefigure</tag>
@@ -126,7 +126,7 @@
       <li><p>Finally, 
       within the <prefigure/> element, include a child to include your
       <prefigure/> source, such as
-      <tag>xi:include href="prefigure/my_diagram.xml"/</tag>.
+      <c>xi:include href="prefigure/my_diagram.xml"/</c>.
       </p></li>
     </ul>
     </p>

@@ -8,11 +8,11 @@
     <tangent-line function="f" point="a"/>
     <point p="(a,f(a))"/>
     <rectangle center="(a,f(a))" dimensions="(side, side)"
-	       stroke="gray"/>
+               stroke="gray"/>
     <coordinates bbox="(a-side/2,f(a)-side/2,a+side/2,f(a)+side/2)"
-		 destination="(2.25,2.25,3.75,3.75)">
+                 destination="(2.25,2.25,3.75,3.75)">
       <rectangle center="(a,f(a))" dimensions="(side, side)"
-		 stroke="gray" fill="white"/>
+                 stroke="gray" fill="white"/>
       <graph function="f"/>
       <tangent-line function="f" point="a"/>
       <point p="(a,f(a))"/>

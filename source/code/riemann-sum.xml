@@ -3,7 +3,7 @@
   <coordinates bbox="[-1,-1,5,5]">
     <grid-axes/>
     <riemann-sum function="f" domain="(1,4)" rule="right"
-		 N="6" fill="lawngreen" stroke="black" width="1"/>
+                 N="6" fill="lawngreen" stroke="black" width="1"/>
     <graph function="f"/>
 
   </coordinates>

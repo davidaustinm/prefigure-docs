@@ -4,8 +4,8 @@
   <coordinates bbox="(-5,-5,5,5)">
     <grid-axes decorations="no"/>
     <parametric-curve function="f" domain="(0,2*pi)"
-		      N="200" closed="yes"/>
+                      N="200" closed="yes"/>
     <parametric-curve function="g" domain="(-2,2)"
-		      stroke="red"/>
+                      stroke="red"/>
   </coordinates>
 </diagram>

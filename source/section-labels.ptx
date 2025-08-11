@@ -52,7 +52,7 @@
     <sidebyside width="70%">
       <image source="images/labels-lines"/>
     </sidebyside>
-    <caption>Some sample labels.</caption>
+    <caption>Some multi-line labels.</caption>
   </figure>
 
   <listing xml:id="listing-labels-lines">
@@ -61,7 +61,7 @@
       parse="text"/></code>
     </program>
     <caption>The PreFigure source for <xref
-    ref="diagram-label-example"/>.</caption>
+    ref="diagram-labels-lines"/>.</caption>
   </listing>
 
   <p> Here are some important attributes that determine the placement

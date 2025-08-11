@@ -5,6 +5,6 @@
     <graph function="f"/>
     <tangent-line function="f" point="-1.5"/>
     <tangent-line function="f" point="1.5"
-		  domain="(0,3)" stroke="green"/>
+                  domain="(0,3)" stroke="green"/>
   </coordinates>
 </diagram>

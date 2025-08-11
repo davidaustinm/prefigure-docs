@@ -5,7 +5,7 @@
   <coordinates bbox="(-1,-1,1,1)">
     <rectangle center="(0,0)" dimensions="(2,2)" stroke="black"/>
     <network layout="bfs" start="0" graph="graph" node-fill="orange"
-	     rotate="-90" scale="0.8">
+             rotate="-90" scale="0.8">
       <node at="0" fill="red"/>
       <edge vertices="[0,1]" stroke="blue" thickness="4"/>
     </network>

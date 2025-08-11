@@ -4,7 +4,7 @@
   <coordinates bbox="[-1,-3,5,3]">
     <grid-axes />
     <area-between-curves function1="f" function2="g" domain="(1,3)"
-			 fill="lightgray" stroke="black"/>
+                         fill="lightgray" stroke="black"/>
     <graph function="f" domain="(0,5)"/>
     <graph function="g" domain="(0,5)"/>
   </coordinates>

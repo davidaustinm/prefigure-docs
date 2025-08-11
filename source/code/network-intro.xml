@@ -3,8 +3,8 @@
   <coordinates bbox="(-1,-1,1,1)">
     <network directed="yes" graph="graph" arrows="end"
              scale="0.8" node-fill="#fcf" node-stroke="black"
-	     seed="1" labels="yes"
-	     tactile-node-size="40">
+             seed="1" labels="yes"
+             tactile-node-size="40">
     </network>
   </coordinates>
 </diagram>

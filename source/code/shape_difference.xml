@@ -6,7 +6,7 @@
     </define-shapes>
 
     <shape shapes="A,B" operation="difference"
-	   fill="magenta" stroke="black"/>
+           fill="magenta" stroke="black"/>
     <shape shape="A" stroke="black"/>
     <shape shape="B" stroke="black"/>
     <rectangle lower-left="(0,0)" dimensions="(10,6)" stroke="black"/>

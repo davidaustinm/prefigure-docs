@@ -38,26 +38,26 @@
   found, as described in <xref ref="subsec-reading-file"/>.  That is
   to say, if there is a <prefigure/> publication file, then the value
   of the 
-  attribute <attr>directories/data</attr> is prepended to the value of
-  the <attr>image/source</attr> attribute.  For instance, if
-  <attr>source="images/my_image.jpg"</attr> and
-  <attr>directories/data="/home/user/projects/"</attr>, then
+  attribute <c>directories/data</c> is prepended to the value of
+  the <c>image/source</c> attribute.  For instance, if
+  <c>source="images/my_image.jpg"</c> and
+  <c>directories/data="/home/user/projects/"</c>, then
   <prefigure/> will expect the image file to be in
   <c>/home/user/projects/images/my_image.jpg"</c>.</p>
 
-  <p>If <attr>directories/data</attr> is not given in a <prefigure/>
+  <p>If <c>directories/data</c> is not given in a <prefigure/>
   publication file, then the value of <attr>source</attr> is
   interpreted relative to the <prefigure/> source file.</p>
 
   <p>Within a <pretext/> project, the value of
-  <attr>docinfo/data</attr> should be a directory that contains the
+  <c>docinfo/data</c> should be a directory that contains the
   image file, possibly in a sub-directory as indicated by the value of
-  <attr>image/source</attr>.  For example, if
-  <attr>source="images/my_image.jpg"</attr> and
-  <attr>docinfo/data="/home/book/source/data"</attr>, then the file should
+  <c>image/source</c>.  For example, if
+  <c>source="images/my_image.jpg"</c> and
+  <c>docinfo/data="/home/book/source/data"</c>, then the file should
   live at <c>/home/book/source/data/images/my_image.jpg</c>.  (Of
   course, one would not 
-  likely give an absolute path in <attr>docinfo/data</attr>.)</p>
+  likely give an absolute path in <c>docinfo/data</c>.)</p>
 
   <p><prefigure/> attempts to identify the image format from the file
   name's suffix.  For instance, <c>image.gif</c> is assumed to be a

@@ -9,7 +9,7 @@
               annotate="yes" circular="yes"
               text="A column of ${5-col} squares">
         <rectangle at="square" center="(col, row)"
-		   dimensions="(0.5,0.5)"
+                   dimensions="(0.5,0.5)"
                    stroke="black" fill="green"
                    annotate="yes"
                    text="The ${ordinals[row]} square in the ${ordinals[col]} column"/>

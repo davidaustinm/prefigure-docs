@@ -55,7 +55,7 @@
     file structure relative to the current <prefigure/> source.  This
     can be modified using a <tag>directories</tag> element in a
     <prefigure/> publication file.  If this element has the attribute
-    <attr>data="/home/data"</attr>, and the <tag>read</tag> element has
+    <c>data="/home/data"</c>, and the <tag>read</tag> element has
     <attr>name="input.csv"</attr>, then <prefigure/> will expect the
     file to be located at <c>/home/data/input.csv</c>.  If the
     publication and source files are in different directories, 
@@ -69,7 +69,7 @@
     relative to <c>source</c> in a project managed by the
     <pretext/>-CLI.  For example, if we have a data file in
     <c>source/data_files/input.csv</c>, then include the attribute
-    <attr>data="data_files"</attr> in <tag>docinfo/directories</tag>
+    <attr>data="data_files"</attr> in <c>docinfo/directories</c>
     and use <tag>read name="input.csv"</tag> in the <prefigure/>
     source.  Describing the data file's location with an absolute path
     will fail in a <pretext/> build.

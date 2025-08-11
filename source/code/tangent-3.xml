@@ -8,7 +8,7 @@
     <group at="point">
       <point p="(a, f(a))"/>
       <label anchor="(a,f(a))" alignment="ne">
-	<m>(a,f(a))</m>
+        <m>(a,f(a))</m>
       </label>
     </group>
   </coordinates>
@@ -17,21 +17,19 @@
     <annotation ref="figure"
                 text="The graph of a function and its tangent line at the point a equals 1">
       <annotation ref="graph-tangent"
-		  text="The graph and its tangent line">
+                  text="The graph and its tangent line">
         <annotation ref="function"
-		    text="The graph of the function f"
-		    sonify="yes"/>
+                    text="The graph of the function f"
+                    sonify="yes"/>
         <annotation ref="point"
-		    text="The point a comma f of a"/>
+                    text="The point a comma f of a"/>
         <annotation ref="tangent"
-		    text="The tangent line to the graph of f at the point"
-		    sonify="yes"
-		    speech="This line is y equals f of a plus the derivative at a times the quantity x minus a"/>
+                    text="The tangent line to the graph of f at the point"
+                    sonify="yes"
+                    speech="This line is y equals f of a plus the derivative at a times the quantity x minus a"/>
       </annotation>
     </annotation>
   </annotations>
-
-		
 </diagram>
 
 

@@ -23,31 +23,30 @@
       <annotation id="grid" text="The coordinate grid" />
       <annotation id="unit-circle" text="The unit circle" circular="true">
         <annotation id="point-k=0"
-		    text="The primitive eighth root of unity to the power zero"
-		    speech="one"/>
+                    text="The primitive eighth root of unity to the power zero"
+                    speech="one"/>
         <annotation id="point-k=1"
-		    text="The primitive eighth root of unity"
-		    speech="omega"/>
+                    text="The primitive eighth root of unity"
+                    speech="omega"/>
         <annotation id="point-k=2"
-		    text="The primitive eighth root of unity squared"
-		    speech="i"/>
+                    text="The primitive eighth root of unity squared"
+                    speech="i"/>
         <annotation id="point-k=3"
-		    text="The primitive eighth root of unity cubed"
-		    speech="omega cubed"/>
+                    text="The primitive eighth root of unity cubed"
+                    speech="omega cubed"/>
         <annotation id="point-k=4"
-		    text="The primitive eighth root of unity to the fourth"
-		    speech="minus one"/>
+                    text="The primitive eighth root of unity to the fourth"
+                    speech="minus one"/>
         <annotation id="point-k=5"
-		    text="The primitive eighth root of unity to the fifth"
-		    speech="omega to the fifth"/>
+                    text="The primitive eighth root of unity to the fifth"
+                    speech="omega to the fifth"/>
         <annotation id="point-k=6"
-		    text="The primitive eighth root of unity to the sixth"
-		    speech="minus i"/>
+                    text="The primitive eighth root of unity to the sixth"
+                    speech="minus i"/>
         <annotation id="point-k=7"
-		    text="The primitive eighth root of unity to the seventh"
-		    speech="omega to the seventh"/>
+                    text="The primitive eighth root of unity to the seventh"
+                    speech="omega to the seventh"/>
       </annotation>
     </annotation>
   </annotations>
-
 </diagram>

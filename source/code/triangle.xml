@@ -4,6 +4,6 @@
     <circle center="(2,2)" radius="1.5" stroke="blue"/>
     <definition>vertices=((4,4), (8,1),(7,8))</definition>
     <triangle vertices="vertices" labels="D,E,F"
-	      angle-markers="yes"/>
+              angle-markers="yes"/>
   </coordinates>
 </diagram>

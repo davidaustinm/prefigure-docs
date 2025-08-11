@@ -4,10 +4,10 @@
     <grid-axes />
     <slope-field function="f" arrows="yes" stroke="gray"/>
     <plot-de-solution function="f" t0="0" y0="0" t1="bbox[2]"
-		      max-step="0.1"/>
+                      max-step="0.1"/>
     <plot-de-solution function="f" t0="0" y0="20" t1="bbox[2]"
-		      max-step="0.1"
-		      stroke="red"/>
+                      max-step="0.1"
+                      stroke="red"/>
 
     <label anchor="(bbox[2],0)" alignment="ne" offset="(4,0)">
       <m>t</m>
