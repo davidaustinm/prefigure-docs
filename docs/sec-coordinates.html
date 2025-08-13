@@ -101,14 +101,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.4';
+eBookConfig.runestone_version = '7.9.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.879b99e54406967d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="_static/pretext/js/diagcess/diagcess.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
@@ -350,12 +350,14 @@ eBookConfig.enable_chatcodes =  false;
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>A mathematical coordinate system defined using a <code class="code-inline tex2jax_ignore">&lt;coordinates&gt;</code> element<div class="autopermalink" data-description="Figure 2.2.2"><a href="#diagram-coordinates-2" title="Copy heading and permalink for Figure 2.2.2" aria-label="Copy heading and permalink for Figure 2.2.2">🔗</a></div></figcaption></figure><div class="para" id="sec-coordinates-7">This use of <code class="code-inline tex2jax_ignore">&lt;coordinates&gt;</code> is possibly all you will ever use.  However, a <code class="code-inline tex2jax_ignore">&lt;coordinates&gt;</code> element can be given a <code class="code-inline tex2jax_ignore">@destination</code> attribute that describes a region inside the current bounding box where the new bounding box should reside.  For example, the PreFigure source in <a href="sec-coordinates.html#listing-sidebyside" class="xref" data-knowl="./knowl/xref/listing-sidebyside.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 2.2.3: The PreFigure source for Figure 2.2.4">Listing 2.2.3</a> produces two rectangles placed side by side as seen in <a href="sec-coordinates.html#diagram-sidebyside" class="xref" data-knowl="./knowl/xref/diagram-sidebyside.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.4">Figure 2.2.4</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-coordinates-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="listing figure-like" id="listing-sidebyside"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">2.2.3<span class="period">.</span></span><span class="space"> </span>The PreFigure source for Figure 2.2.4<div class="autopermalink" data-description="Listing 2.2.3: The PreFigure source for Figure 2.2.4"><a href="#listing-sidebyside" title="Copy heading and permalink for Listing 2.2.3: The PreFigure source for Figure 2.2.4" aria-label="Copy heading and permalink for Listing 2.2.3: The PreFigure source for Figure 2.2.4">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(410, 200)"
-	 margins="5"&gt;
+         margins="5"&gt;
   &lt;coordinates bbox="(0,0,1,1)" destination="(0,0,200,200)"&gt;
-    &lt;rectangle lower-left="(0,0)" dimensions="(1,1)" fill="blue"/&gt;
+    &lt;rectangle lower-left="(0,0)" dimensions="(1,1)"
+               fill="blue"/&gt;
   &lt;/coordinates&gt;
   &lt;coordinates bbox="(0,0,1,1)" destination="(210,0,410,200)"&gt;
-    &lt;rectangle lower-left="(0,0)" dimensions="(1,1)" fill="red"/&gt;
+    &lt;rectangle lower-left="(0,0)" dimensions="(1,1)"
+               fill="red"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div></div></figure><figure class="figure figure-like" id="diagram-sidebyside"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/images/sidebyside.svg" role="img" class="contained"></div></div></div>
@@ -376,11 +378,11 @@ eBookConfig.enable_chatcodes =  false;
     &lt;tangent-line function="f" point="a"/&gt;
     &lt;point p="(a,f(a))"/&gt;
     &lt;rectangle center="(a,f(a))" dimensions="(side, side)"
-	       stroke="gray"/&gt;
+               stroke="gray"/&gt;
     &lt;coordinates bbox="(a-side/2,f(a)-side/2,a+side/2,f(a)+side/2)"
-		 destination="(2.25,2.25,3.75,3.75)"&gt;
+                 destination="(2.25,2.25,3.75,3.75)"&gt;
       &lt;rectangle center="(a,f(a))" dimensions="(side, side)"
-		 stroke="gray" fill="white"/&gt;
+                 stroke="gray" fill="white"/&gt;
       &lt;graph function="f"/&gt;
       &lt;tangent-line function="f" point="a"/&gt;
       &lt;point p="(a,f(a))"/&gt;
@@ -396,7 +398,7 @@ eBookConfig.enable_chatcodes =  false;
     &lt;circle center="(2,2)" radius="1.5" stroke="blue"/&gt;
     &lt;definition&gt;vertices=((4,4), (8,1),(7,8))&lt;/definition&gt;
     &lt;triangle vertices="vertices" labels="D,E,F"
-	      angle-markers="yes"/&gt;
+              angle-markers="yes"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
 </code></pre></div></div></figure><div class="para" id="sec-coordinates-18">Notice that the height of the diagram is 90% of the width though the <code class="code-inline tex2jax_ignore">&lt;cooordinates&gt;</code> tag sets a mathematical bounding box having the same width and height. By specifying that <code class="code-inline tex2jax_ignore">@aspect-ratio="1"</code>, we request that the scales in horizontal and vertical directions be equal.<div class="autopermalink" data-description="Paragraph"><a href="#sec-coordinates-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
