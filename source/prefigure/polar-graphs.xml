@@ -10,6 +10,7 @@
     <graph function="g" coordinates="polar" arrows="1"
            domain="(-360,360)" domain-degrees="yes"
            stroke="red" thickness="4"/>
+    <point p="(4,60)" coordinates="polar" degrees="yes" size="5"/>
   </coordinates>
 </diagram>
    

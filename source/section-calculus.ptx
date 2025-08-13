@@ -489,7 +489,12 @@
       <xref ref="figure-polar-grids"/>.</caption>
     </listing>
 
-    <p>Graphs of polar functions can be added to a diagram using a
+    <p>The coordinates of a <tag>point</tag> may be given in polar
+    coordinates by using the attribute
+    <attr>coordinates="polar"</attr>.  By default, the polar angle is
+    assumed to be in radians, but this can be changed with
+    <attr>degrees="yes"</attr>.  Similarly, graphs of polar functions
+    can be added to a diagram using a
     <tag>graph</tag> element with the attribute
     <attr>coordinates="polar"</attr>, as illustrated in
     <xref ref="figure-polar-graphs"/> and its <prefigure/> source in
@@ -513,7 +518,7 @@
 
     <listing xml:id="listing-polar-graphs">
       <program>
-	<code><xi:include href="prefigure/include/polar-graphs.xml"
+	<code><xi:include href="prefigure/polar-graphs.xml"
         parse="text"/></code>
       </program>
       <caption>The PreFigure source for
