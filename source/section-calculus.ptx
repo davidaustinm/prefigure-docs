@@ -138,6 +138,13 @@
     smoother appearence.
     </p>
 
+    <p>Arrows can be added to a <tag>parametric-curve</tag>.  For
+    instance, <attr>arrows="1"</attr> adds an arrow at the end of the
+    curve, and <attr>arrows="2"</attr> adds arrows at both ends.  To
+    include an arrow in the middle of the curve, use the attribute
+    <attr>arrow-location</attr> whose value is a point in the
+    <attr>domain</attr> where the arrow should appear.</p>
+
   </subsection>
 
   <subsection>
