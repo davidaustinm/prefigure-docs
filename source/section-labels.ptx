@@ -117,6 +117,15 @@
     </figure>
     </li>
 
+    <li><title>Font choices</title>
+
+    <p>The font family used for plain text can be declared using the
+    <attr>font</attr> with possible values <c>sans-serif</c> (the
+    default), <c>serif</c>, and <c>monospace</c>.  The size of the
+    font given by <attr>font-size</attr> with <c>14</c> being the
+    default.</p>
+    </li>
+
     <li><title>scale, rotate</title>
 
     <p>As illustrated in <xref ref="diagram-label-example"/>, labels
@@ -143,6 +152,39 @@
     
   </dl>
   </p>
+
+  <p><xref ref="diagram-fonts"/> demonstrates the use of the
+  <attr>font</attr> and <attr>font-size</attr> attributes with the
+  <prefigure/> source given in <xref ref="listing-fonts"/>.  Notice
+  the use of the <tag>templates</tag> element, which allows an author
+  to define some default attributes for the use of an element, in this
+  case, a <tag>label</tag> element.  This can also be achieved using a
+  <prefigure/> publication file or the <tag>prefigure-preamble</tag>
+  element in a <pretext/> document, as explained in <xref
+  ref="chap-project"/>.  The defaults defined in a
+  <tag>templates</tag> element can be overridden by explicitly defining
+  the values of attributes.
+  </p>
+
+  <figure xml:id="diagram-fonts">
+    <image width="60%">
+      <prefigure label="prefigure-fonts"
+                 xmlns="https://prefigure.org">
+        <xi:include href="prefigure/fonts.xml"/>
+      </prefigure>
+    </image>
+    <caption>Fonts can be chosen with the <attr>font</attr> attribute
+    and the size of the font with <attr>font-size</attr>.</caption>
+  </figure>
+
+  <listing xml:id="listing-fonts">
+    <program>
+      <code><xi:include href="prefigure/fonts.xml"
+      parse="text"/></code>
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-fonts"/>.</caption>
+  </listing>
 
   <p> We remind authors of one exception in that the <attr>xlabel</attr>
   and <attr>ylabel</attr> attributes of an <tag>axes</tag> element are
