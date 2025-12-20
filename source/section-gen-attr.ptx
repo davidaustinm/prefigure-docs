@@ -259,7 +259,7 @@
     
   </subsection>
   
-  <subsection>
+  <subsection xml:id="subsec-handles">
     <title>Handles</title>
     
     <p> In <xref ref="sec-accessibility"/>, we described how
@@ -277,6 +277,13 @@
     attribute.  The <attr>at</attr> attribute is provided to avoid
     any confusion with <attr>xml:id</attr> attributes.
     </p>
+
+    <p>There are restrictions placed on the characters that can be
+    used to form a handle due to restrictions in the characters in an
+    <attr>id</attr> attribute in an EPUB document.  More specifically,
+    the only allowed characters are letters, either upper <c>A-Z</c>
+    or lower case <c>a-z</c>, decimal digits <c>0-9</c>, an underscore
+    <c>_</c>, or a hyphen <c>-</c>.</p>
     
     <p>As we now begin to describe different types of graphical
     components, we will occasionally need to describe how a component's

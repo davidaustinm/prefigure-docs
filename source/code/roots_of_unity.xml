@@ -22,28 +22,28 @@
       <annotation id="axes" text="The coordinate axes" />
       <annotation id="grid" text="The coordinate grid" />
       <annotation id="unit-circle" text="The unit circle" circular="true">
-        <annotation id="point-k=0"
+        <annotation id="point-k_0"
                     text="The primitive eighth root of unity to the power zero"
                     speech="one"/>
-        <annotation id="point-k=1"
+        <annotation id="point-k_1"
                     text="The primitive eighth root of unity"
                     speech="omega"/>
-        <annotation id="point-k=2"
+        <annotation id="point-k_2"
                     text="The primitive eighth root of unity squared"
                     speech="i"/>
-        <annotation id="point-k=3"
+        <annotation id="point-k_3"
                     text="The primitive eighth root of unity cubed"
                     speech="omega cubed"/>
-        <annotation id="point-k=4"
+        <annotation id="point-k_4"
                     text="The primitive eighth root of unity to the fourth"
                     speech="minus one"/>
-        <annotation id="point-k=5"
+        <annotation id="point-k_5"
                     text="The primitive eighth root of unity to the fifth"
                     speech="omega to the fifth"/>
-        <annotation id="point-k=6"
+        <annotation id="point-k_6"
                     text="The primitive eighth root of unity to the sixth"
                     speech="minus i"/>
-        <annotation id="point-k=7"
+        <annotation id="point-k_7"
                     text="The primitive eighth root of unity to the seventh"
                     speech="omega to the seventh"/>
       </annotation>

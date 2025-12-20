@@ -46,11 +46,30 @@
   generated.  If an element inside a <tat>repeat</tat> element has a
   handle <attr>at="handle"</attr>, then the graphical component
   generated when the parameter is, say, <c>param=value</c> is given
-  the handle <attr>at="handle-param=value"</attr>.  For example, when
+  the handle <attr>at="handle-param_value"</attr>.  For example, when
   <c>k=2</c>, the solution has the handle
-  <attr>at="solution-k=2"</attr>.  There is not yet a repeat feature
+  <attr>at="solution-k_2"</attr>.  There is not yet a repeat feature
   for annotations.
   </p>
+
+  <assemblage>
+    <title>Update:  2025-12-20</title>
+
+    <p>Long-time <prefigure/> authors may notice a change in how the
+    handles of elements formed within in a <tag>repeat</tag> element are
+    created as handles formerly had the form
+    <c>at="handle-param=value"</c>.  However, <c>=</c> is not an
+    allowed character in an <attr>id</attr> attribute in an SVG
+    included in an EPUB document.  This explains the change, which
+    happened in version <c>0.4.7</c> of the <c>prefig</c> module.</p>
+
+    <p>The <prefigure/> preprocessor should convert the old syntax to
+    the new while also generating an error message.  Authors are
+    encouraged to verify the results if they see such an error message
+    or, better, to update their <prefigure/> source.</p>
+
+    <p>See <xref ref="subsec-handles"/> for more information.</p>
+  </assemblage>
 
   <p>A second example, given in <xref ref="diagram-unity"/>, shows how
   labels can be managed within a 
@@ -107,7 +126,7 @@
   
 
   <p>We can also nest <tag>repeat</tag> elements as illustrated in
-  <xref ref="diagram-nested-repeat"/> and PreFigure source <xref
+  <xref ref="diagram-nested-repeat"/> and <prefigure/> source <xref
   ref="listing-nested-repeat"/>.
   </p>
 
@@ -128,7 +147,7 @@
   </listing>
 
   <p>A typical handle for one of these rectangles is
-  <attr>at="rectangle-row=2-col=1"</attr>.
+  <attr>at="rectangle-row_2-col_1"</attr>.
   </p>
 
 
