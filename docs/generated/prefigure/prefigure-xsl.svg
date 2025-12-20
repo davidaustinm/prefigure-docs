@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="diagram" width="310" height="210">
+  <defs>
+    <clipPath id="clipPath-0">
+      <rect x="5.0" y="5.0" width="300.0" height="200.0"/>
+    </clipPath>
+    <clipPath id="clipPath-1">
+      <rect x="5.0" y="5.0" width="300.0" height="200.0"/>
+    </clipPath>
+  </defs>
+  <path id="path-0" d="M 35.0 25.0 L 185.0 25.0 L 185.0 115.0 L 35.0 115.0 Z" stroke="blue" stroke-width="1" fill="#dff2ff"/>
+</svg>
