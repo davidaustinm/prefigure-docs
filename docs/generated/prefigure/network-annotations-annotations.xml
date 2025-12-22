@@ -41,7 +41,7 @@
         <grouped>figure</grouped>
       </parents>
     </annotation>
-    <annotation id="edge-1-2" speech2="An edge with label 2 from node 1 to node 2">
+    <annotation id="edge-1-2" speech2="An edge with label 4 from node 1 to node 2">
       <active>edge-1-2</active>
       <position>1</position>
       <parents>
