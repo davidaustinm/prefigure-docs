@@ -183,7 +183,7 @@
     perpendicularly away from the line.</p>
 
     <figure xml:id="diagram-line-labels">
-      <image width="60%">
+      <image width="80%">
         <prefigure xmlns="https://prefigure.org"
                    label="line-labels">
           <xi:include href="prefigure/labels_on_line.xml"/>
