@@ -169,8 +169,46 @@
       ref="diagram-line-intersections"/>.</caption> 
     </listing>
 
+    <p> Labels may be added to lines and will be rotated so that they
+    appear parallel to the line, as seen in <xref
+    ref="diagram-line-labels"/>.  If a finite line segment is added
+    with endpoints given as
+    <c>p1</c> and <c>p2</c>, then the label is anchored to the
+    midpoint of the endpoints and to the left of the line when walking
+    from <c>p1</c> to <c>p2</c>.  An <attr>offset</attr> applied to
+    the line is interpreted in a rotated coordinate system in which
+    the direction from <c>p1</c> to <c>p2</c> is the direction of the
+    positive horizontal coordinate.  Notice how <attr>offset="(0,
+    10)"</attr> applied to the first line moves the label 10 units
+    perpendicularly away from the line.</p>
 
-    
+    <figure xml:id="diagram-line-labels">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="line-labels">
+          <xi:include href="prefigure/labels_on_line.xml"/>
+        </prefigure>
+      </image>
+      <caption>Labels applied to lines.</caption>
+    </figure>
+
+    <p>The location of the label can be changed using the
+    <attr>label-location</attr> attribute.  For instance, the second
+    line has <attr>label-location="0.3"</attr> so the label appears
+    three-tenths of the way from <c>p1</c> to <c>p2</c>.  Giving a
+    negative value for <attr>label-location</attr> simply interchanges
+    the roles of <c>p1</c> and <c>p2</c>, as seen in the third line in
+    <xref ref="diagram-line-labels"/>.</p>
+
+    <listing xml:id="listing-line-labels">
+      <program>
+	<code><xi:include href="prefigure/labels_on_line.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-line-labels"/>.</caption>
+    </listing>
+
   </subsection>
 
   <subsection xml:id="subsec-vectors">
