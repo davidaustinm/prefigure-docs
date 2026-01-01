@@ -18,25 +18,25 @@
       <path id="edge-1-0" d="M 225.0 100.0 Q 187.5 92.5 150.0 92.5 Q 131.2 92.5 112.5 94.4 Q 107.8 94.8 103.1 95.4" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
       <g id="label-0" transform="translate(150.0,88.5) translate(-4.0,-10.3)">
         <g id="g-3">
-          <text font-family="sans-serif" font-size="14" x="0.0" y="10.2">0</text>
+          <text font-family="sans" font-size="14" x="0.0" y="10.2">0</text>
         </g>
       </g>
       <path id="edge-0-1" d="M 75.0 100.0 Q 112.5 107.5 150.0 107.5 Q 168.8 107.5 187.5 105.6 Q 192.2 105.2 196.9 104.6" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
       <g id="label-1" transform="translate(150.0,111.5) translate(-4.0,-0.0)">
         <g id="g-4">
-          <text font-family="sans-serif" font-size="14" x="0.0" y="10.2">0</text>
+          <text font-family="sans" font-size="14" x="0.0" y="10.2">0</text>
         </g>
       </g>
       <path id="loop-0" d="M 75.0 100.0 C 41.7 100.0 41.7 40.0 75.0 40.0 C 91.7 40.0 100.0 55.0 100.0 70.0 C 100.0 73.8 99.5 77.5 98.4 81.0 C 98.3 81.5 98.2 81.9 98.0 82.3" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
       <g id="label-2" transform="translate(75.0,36.0) translate(-4.0,-10.0)">
         <g id="g-5">
-          <text font-family="sans-serif" font-size="14" x="0.0" y="10.0">1</text>
+          <text font-family="sans" font-size="14" x="0.0" y="10.0">1</text>
         </g>
       </g>
       <path id="loop-1" d="M 225.0 100.0 C 191.7 100.0 191.7 40.0 225.0 40.0 C 241.7 40.0 250.0 55.0 250.0 70.0 C 250.0 73.8 249.5 77.5 248.4 81.0 C 248.3 81.5 248.2 81.9 248.0 82.3" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
       <g id="label-3" transform="translate(225.0,36.0) translate(-4.0,-10.0)">
         <g id="g-6">
-          <text font-family="sans-serif" font-size="14" x="0.0" y="10.0">1</text>
+          <text font-family="sans" font-size="14" x="0.0" y="10.0">1</text>
         </g>
       </g>
     </g>
