@@ -293,7 +293,7 @@
       <tag>annotation</tag>. </p></li>
 
       <li><p>In this case, the two <tag>repeat</tag> elements are both
-      given this attrbute along with the child <tag>rectangle</tag>
+      given this attribute along with the child <tag>rectangle</tag>
       element.  Behind the scenes, the <tag>repeat</tag> element
       creates a <tag>group</tag> with the resulting components added.
       Annotating the <tag>repeat</tag> element is therefore the same
