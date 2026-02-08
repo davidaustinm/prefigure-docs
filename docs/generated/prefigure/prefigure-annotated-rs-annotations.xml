@@ -1,0 +1,122 @@
+<diagram>
+  <annotations>
+    <annotation id="pf__figure" speech2="This diagram demonstrates how to annotate a Riemann sum">
+      <grouped>pf__figure</grouped>
+      <position>1</position>
+      <children>
+        <active>pf__grid-axes</active>
+        <active>pf__graph</active>
+        <active>pf__rs</active>
+      </children>
+      <components>
+        <active>pf__grid-axes</active>
+        <active>pf__graph</active>
+        <active>pf__rs</active>
+      </components>
+    </annotation>
+    <annotation id="pf__grid-axes" speech2="The coordinate grid and axes">
+      <grouped>pf__grid-axes</grouped>
+      <position>1</position>
+      <children>
+        <active>pf__grid</active>
+        <active>pf__axes</active>
+      </children>
+      <components>
+        <active>pf__grid</active>
+        <active>pf__axes</active>
+      </components>
+      <parents>
+        <grouped>pf__figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__grid" speech2="The coordinate grid">
+      <active>pf__grid</active>
+      <position>1</position>
+      <parents>
+        <grouped>pf__grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__axes" speech2="The coordinate axes">
+      <active>pf__axes</active>
+      <position>2</position>
+      <parents>
+        <grouped>pf__grid-axes</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__graph" speech2="The graph of the function f" sonify="yes">
+      <active>pf__graph</active>
+      <position>2</position>
+      <parents>
+        <grouped>pf__figure</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>pf__graph</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="pf__rs" speech2="A Riemann sum for the function f over the interval from                        -3 to 3 with six subintervals defined by the partition                        attribute." circular="yes">
+      <grouped>pf__rs</grouped>
+      <position>3</position>
+      <children>
+        <active>pf__rs_0</active>
+        <active>pf__rs_1</active>
+        <active>pf__rs_2</active>
+        <active>pf__rs_3</active>
+        <active>pf__rs_4</active>
+        <active>pf__rs_5</active>
+      </children>
+      <components>
+        <active>pf__rs_0</active>
+        <active>pf__rs_1</active>
+        <active>pf__rs_2</active>
+        <active>pf__rs_3</active>
+        <active>pf__rs_4</active>
+        <active>pf__rs_5</active>
+      </components>
+      <parents>
+        <grouped>pf__figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__rs_0" speech2="The first interval                                    starts at x=-3 and ends at                                    x=-2 with height 1.02655">
+      <active>pf__rs_0</active>
+      <position>1</position>
+      <parents>
+        <grouped>pf__rs</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__rs_1" speech2="The second interval                                    starts at x=-2 and ends at                                    x=-1.5 with height 0.918048">
+      <active>pf__rs_1</active>
+      <position>2</position>
+      <parents>
+        <grouped>pf__rs</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__rs_2" speech2="The third interval                                    starts at x=-1.5 and ends at                                    x=-1 with height -1.00079">
+      <active>pf__rs_2</active>
+      <position>3</position>
+      <parents>
+        <grouped>pf__rs</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__rs_3" speech2="The fourth interval                                    starts at x=-1 and ends at                                    x=0.5 with height 0.818768">
+      <active>pf__rs_3</active>
+      <position>4</position>
+      <parents>
+        <grouped>pf__rs</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__rs_4" speech2="The fifth interval                                    starts at x=0.5 and ends at                                    x=2 with height 2.33512">
+      <active>pf__rs_4</active>
+      <position>5</position>
+      <parents>
+        <grouped>pf__rs</grouped>
+      </parents>
+    </annotation>
+    <annotation id="pf__rs_5" speech2="The sixth interval                                    starts at x=2 and ends at                                    x=3 with height -2.54243">
+      <active>pf__rs_5</active>
+      <position>6</position>
+      <parents>
+        <grouped>pf__rs</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

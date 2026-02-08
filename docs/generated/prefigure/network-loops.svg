@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="diagram" width="300" height="150">
+<svg xmlns="http://www.w3.org/2000/svg" id="pf__figure" width="300" height="150" viewBox="0 0 300 150">
   <defs>
-    <clipPath id="clipPath-0">
+    <clipPath id="pf__clipPath-0">
       <rect x="0.0" y="0.0" width="300.0" height="150.0"/>
     </clipPath>
-    <clipPath id="clipPath-1">
+    <clipPath id="pf__clipPath-1">
       <rect x="0.0" y="0.0" width="300.0" height="150.0"/>
     </clipPath>
-    <marker id="arrow-head-end-2_None_24_60-black" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="6.5" refY="4.0">
+    <marker id="pf__arrow-head-end-2_None_24_60-black" markerWidth="9.0" markerHeight="8.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="6.5" refY="4.0">
       <path d="M 9.0 4.0L 0.0 8.0L 1.7 5.0L 1.7 3.0L 0.0 0.0Z" fill="black" stroke="none"/>
     </marker>
-    <marker id="arrow-head-end-2_None_24_60-black-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="8.5" refY="6.0">
+    <marker id="pf__arrow-head-end-2_None_24_60-black-outline" markerWidth="13.0" markerHeight="12.0" markerUnits="userSpaceOnUse" orient="auto-start-reverse" refX="8.5" refY="6.0">
       <path d="M 11.8 7.8 L 2.8 11.8 A 2 2 0 0 1 0.0 10.0 L 0.0 2.0 A 2 2 0 0 1 2.8 0.2 L 11.8 4.2 A 2 2 0 0 1 11.8 7.8 Z" fill="white" stroke="none"/>
     </marker>
   </defs>
-  <g id="g-0">
-    <g id="g-1">
-      <path id="edge-1-0" d="M 225.0 100.0 Q 187.5 92.5 150.0 92.5 Q 131.2 92.5 112.5 94.4 Q 107.8 94.8 103.1 95.4" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
-      <g id="label-0" transform="translate(150.0,88.5) translate(-4.0,-10.3)">
-        <g id="g-3">
-          <text font-family="sans" font-size="14" x="0.0" y="10.2">0</text>
+  <g id="pf__g-0">
+    <g id="pf__g-1">
+      <path id="pf__edge-1-0" d="M 225.0 100.0 Q 187.5 92.5 150.0 92.5 Q 131.2 92.5 112.5 94.4 Q 107.8 94.8 103.1 95.4" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#pf__clipPath-1)" marker-end="url(#pf__arrow-head-end-2_None_24_60-black)"/>
+      <g id="pf__label-0" transform="translate(150.0,88.5) translate(-4.0,-10.3)">
+        <g id="pf__g-3">
+          <text font-family="sans-serif" font-size="14" x="0.0" y="10.2">0</text>
         </g>
       </g>
-      <path id="edge-0-1" d="M 75.0 100.0 Q 112.5 107.5 150.0 107.5 Q 168.8 107.5 187.5 105.6 Q 192.2 105.2 196.9 104.6" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
-      <g id="label-1" transform="translate(150.0,111.5) translate(-4.0,-0.0)">
-        <g id="g-4">
-          <text font-family="sans" font-size="14" x="0.0" y="10.2">0</text>
+      <path id="pf__edge-0-1" d="M 75.0 100.0 Q 112.5 107.5 150.0 107.5 Q 168.8 107.5 187.5 105.6 Q 192.2 105.2 196.9 104.6" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#pf__clipPath-1)" marker-end="url(#pf__arrow-head-end-2_None_24_60-black)"/>
+      <g id="pf__label-1" transform="translate(150.0,111.5) translate(-4.0,-0.0)">
+        <g id="pf__g-4">
+          <text font-family="sans-serif" font-size="14" x="0.0" y="10.2">0</text>
         </g>
       </g>
-      <path id="loop-0" d="M 75.0 100.0 C 41.7 100.0 41.7 40.0 75.0 40.0 C 91.7 40.0 100.0 55.0 100.0 70.0 C 100.0 73.8 99.5 77.5 98.4 81.0 C 98.3 81.5 98.2 81.9 98.0 82.3" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
-      <g id="label-2" transform="translate(75.0,36.0) translate(-4.0,-10.0)">
-        <g id="g-5">
-          <text font-family="sans" font-size="14" x="0.0" y="10.0">1</text>
+      <path id="pf__loop-0" d="M 75.0 100.0 C 41.7 100.0 41.7 40.0 75.0 40.0 C 91.7 40.0 100.0 55.0 100.0 70.0 C 100.0 73.8 99.5 77.5 98.4 81.0 C 98.3 81.5 98.2 81.9 98.0 82.3" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#pf__clipPath-1)" marker-end="url(#pf__arrow-head-end-2_None_24_60-black)"/>
+      <g id="pf__label-2" transform="translate(75.0,36.0) translate(-4.0,-10.0)">
+        <g id="pf__g-5">
+          <text font-family="sans-serif" font-size="14" x="0.0" y="10.0">1</text>
         </g>
       </g>
-      <path id="loop-1" d="M 225.0 100.0 C 191.7 100.0 191.7 40.0 225.0 40.0 C 241.7 40.0 250.0 55.0 250.0 70.0 C 250.0 73.8 249.5 77.5 248.4 81.0 C 248.3 81.5 248.2 81.9 248.0 82.3" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)" marker-end="url(#arrow-head-end-2_None_24_60-black)"/>
-      <g id="label-3" transform="translate(225.0,36.0) translate(-4.0,-10.0)">
-        <g id="g-6">
-          <text font-family="sans" font-size="14" x="0.0" y="10.0">1</text>
+      <path id="pf__loop-1" d="M 225.0 100.0 C 191.7 100.0 191.7 40.0 225.0 40.0 C 241.7 40.0 250.0 55.0 250.0 70.0 C 250.0 73.8 249.5 77.5 248.4 81.0 C 248.3 81.5 248.2 81.9 248.0 82.3" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#pf__clipPath-1)" marker-end="url(#pf__arrow-head-end-2_None_24_60-black)"/>
+      <g id="pf__label-3" transform="translate(225.0,36.0) translate(-4.0,-10.0)">
+        <g id="pf__g-6">
+          <text font-family="sans-serif" font-size="14" x="0.0" y="10.0">1</text>
         </g>
       </g>
     </g>
-    <g id="g-2">
-      <path id="node-0" d="M 50.0 100.0A 25 25 0 0 0 100.0 100.0 A 25 25 0 0 0 50.0 100.0 Z M 56.2 100.0A 18.75 18.75 0 0 0 93.8 100.0 A 18.75 18.75 0 0 0 56.2 100.0 Z " stroke="black" stroke-width="1" fill="lightskyblue"/>
-      <g id="0" transform="translate(75.0,100.0) translate(-9.5,-7.9)">
-        <g id="g-7">
+    <g id="pf__g-2">
+      <path id="pf__node-0" d="M 50.0 100.0A 25 25 0 0 0 100.0 100.0 A 25 25 0 0 0 50.0 100.0 Z M 56.2 100.0A 18.75 18.75 0 0 0 93.8 100.0 A 18.75 18.75 0 0 0 56.2 100.0 Z " stroke="black" stroke-width="1" fill="lightskyblue"/>
+      <g id="pf__0" transform="translate(75.0,100.0) translate(-9.5,-7.9)">
+        <g id="pf__g-7">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -3.000px" width="19.000px" height="15.760px" role="img" focusable="false" viewBox="0 -705 1049.6 870.6" x="0.0" y="0.0">
             <defs>
               <path id="MJX-2-TEX-I-1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"/>
@@ -64,9 +64,9 @@
           </svg>
         </g>
       </g>
-      <circle id="node-1" cx="225.0" cy="100.0" r="25" stroke="black" stroke-width="1" fill="lightskyblue"/>
-      <g id="1" transform="translate(225.0,100.0) translate(-9.5,-7.7)">
-        <g id="g-8">
+      <circle id="pf__node-1" cx="225.0" cy="100.0" r="25" stroke="black" stroke-width="1" fill="lightskyblue"/>
+      <g id="pf__1" transform="translate(225.0,100.0) translate(-9.5,-7.7)">
+        <g id="pf__g-8">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -2.712px" width="19.000px" height="15.472px" role="img" focusable="false" viewBox="0 -705 1049.6 855" x="0.0" y="0.0">
             <defs>
               <path id="MJX-3-TEX-I-1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"/>
