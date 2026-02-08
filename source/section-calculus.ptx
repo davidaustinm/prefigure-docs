@@ -250,7 +250,10 @@
   <subsection>
     <title>Riemann sums</title>
 
-    <p>Finally, there is a <tag>riemann-sum</tag> element.
+    <p>The <tag>riemann-sum</tag> element
+    provides some flexibility for illustrating a Riemann sum.  <xref
+    ref="diagram-riemann-sum"/>, and the following source, offer a
+    demonstration.
     </p>
 
     <figure xml:id="diagram-riemann-sum">
@@ -268,10 +271,67 @@
       ref="diagram-riemann-sum"/>.</caption> 
     </listing>
 
-    <p>The possible values for <attr>rule</attr> are
-    <attr>rule="left", "right", "mid"</attr>.
-    </p>
+    <p>There are two ways to specify the subintervals of the Riemann
+    sum.  As shown in <xref ref="listing-riemann-sum"/>, one may state
+    the number of subintervals with the attribute <attr>N</attr>.
+    The <attr>domain</attr> attribute allows one to declare the bounds
+    of the sum.  If <attr>N</attr> is
+    defined without <attr>domain</attr>, then the domain is given by
+    the bounding box.</p>
+
+    <p>Alternatively, one may specify the subintervals with the
+    <attr>partition</attr> attribute.  For instance,
+    <attr>partition="(1, 1.5, 2.5, 3, 4)"</attr> defines four subintervals
+    of varying width.</p>
+
+    <p>The <attr>rule</attr> attribute declares how the terms in the
+    Riemann sum are to be constructed.  Possible values are
+    <c>left</c>, <c>right</c>, <c>midpoint</c>, <c>upper</c>,
+    <c>lower</c>, <c>trapezoidal</c>, and <c>simpsons</c>.
+    Alternatively, one may explicity state the values at which the
+    function is to be sampled with the <attr>samples</attr>, such as
+    <attr>samples="(1, 2, 2.75, 3.2)"</attr>.  The number of samples
+    given should equal the number of subintervals.</p>
+
+    <p>The <tag>riemann-sum</tag> element will generate several
+    graphical components, one for each subinterval.  As a result,
+    there are some special attributes provided to facilitate
+    annotating these elements.  (More details about annotating
+    diagrams are available
+    in <xref ref="sec-annotations"/>.)</p>
+
+    <p>To annotate a <tag>riemann-sum</tag>, include the attribute
+    <attr>annotate="yes"</attr>.  Then the value of the
+    <attr>text</attr> attribute is vocalized in an annotation
+    that gives an overview of the entire Riemann sum.</p>
+
+    <p>The text associated with each of the subintervals is given by
+    the attribute <attr>subinterval-text</attr>.  Some data about each
+    of the subintervals is stored in the variables: <c>_interval</c>,
+    which gives the number of the current subinterval; <c>_left</c>
+    and <c>_right</c>, which give the bounds of the subinterval, and
+    <c>_height</c>, which gives the height of the rectangle when the
+    value of <attr>rule</attr> is not <c>trapezoidal</c> or
+    <c>simpsons</c>.</p>
     
+    <figure xml:id="diagram-riemann-sum-annotated">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-annotated-rs">
+          <xi:include href="prefigure/annotated-rs.xml"/>
+        </prefigure>
+      </image>
+      <caption>An annotated Riemann sum</caption>
+    </figure>
+
+    <listing xml:id="listing-riemann-sum-annotated">
+      <program>
+	<code><xi:include href="prefigure/annotated-rs.xml" parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for the diagram in <xref
+      ref="diagram-riemann-sum-annotated"/>.</caption>
+    </listing>
+
   </subsection>
 
   <subsection xml:id="subsec-vf">
