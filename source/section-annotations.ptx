@@ -323,8 +323,35 @@
     of diagrams created with a <tag>repeat</tag> element.  As mentioned
     earlier, we encourage authors to separate the processes
     of illustrating and annotating.</p>
-      
+  </subsection>
 
+  <subsection>
+    <title>Embedding an annotated diagram in a web page</title>
+
+    <p>While <prefigure/> diagrams may be easily included in a
+    <pretext/> document, as described in <xref ref="sec-pretext"/>,
+    there may be times when one wants to include an annotated
+    <prefigure/> diagram in another web page.  This requires loading
+    the <c>diagcess</c> library as described on the
+    <url href="https://www.npmjs.com/package/diagcess">diagcess
+    page</url> and demonstrated below.
+    </p>
+
+    <p>For example, if one creates the <prefigure/> diagram
+    <c>tangent.svg</c> with accompanying annotations in
+    <c>tangent-annotations.xml</c>, the HTML source given in <xref
+    ref="listing-annotation-web-page"/> shows how to load and
+    initialize the <c>diagcess</c> library and include the
+    <prefigure/> output in the body of the document.
+    </p>
+
+    <listing xml:id="listing-annotation-web-page">
+      <program line-numbers="no">
+	<code><xi:include href="code/index.html" parse="text"/></code>
+      </program>
+      <caption>An HTML framework for including an annotated diagram on
+      a web page.</caption>
+    </listing>
   </subsection>
 
 </section>
