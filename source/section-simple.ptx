@@ -268,6 +268,29 @@
       </dl>
     </p>
 
+    <p>Labels can also be added to <tag>vector</tag> elements in the
+    same way that they can for points.  An example is given in
+    <xref ref="diagram-vector-labels"/>.
+    </p>
+
+    <figure xml:id="diagram-vector-labels">
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-vector-labels">
+          <xi:include href="prefigure/vector-labels.xml"/>
+        </prefigure>
+      </image>
+      <caption>Labels attached to Vectors.</caption>
+    </figure>
+
+    <listing xml:id="listing-vector-labels">
+      <program>
+	<code><xi:include href="prefigure/vector-labels.xml" parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-vector-labels"/>.</caption>
+    </listing>
+
   </subsection>
     
   <subsection>
