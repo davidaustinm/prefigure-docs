@@ -130,15 +130,18 @@
     </p>
 
     <figure xml:id="diagram-tangent-3">
-      <sidebyside width="60%">
-	<image source="images/tangent-3"/>
-      </sidebyside>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="prefigure-tangent-annotated">
+          <xi:include href="prefigure/tangent-annotated.xml"/>
+        </prefigure>
+      </image>
       <caption>A calculus diagram</caption>
     </figure>
 
     <listing xml:id="listing-tangent-3">
       <program line-numbers="no">
-	<code><xi:include href="code/tangent-3.xml" parse="text"/></code>
+	<code><xi:include href="prefigure/tangent-annotated.xml" parse="text"/></code>
       </program>
       <caption>The PreFigure source for <xref
       ref="diagram-tangent-3"/>.</caption>
@@ -146,31 +149,43 @@
 
     <p>This example illustrates some important points.
     <ul>
-      <li> <p>All the annotations are under a single
-      <tag>annotations</tag> element, and each nested
-      <tag>annotation</tag> element corresponds to a node in the
-      annotations tree.</p>
+      <li>
+        <p>All the annotations are under a single
+        <tag>annotations</tag> element.  The <attr>text</attr> attribute
+        of the <tag>annotations</tag> element should be thought of as an
+        overview of the diagram possibly similar to alt text.  This
+        will typically be a concise, yet thorough, description of the
+        diagram.
+        </p>
+      </li>
+      <li>
+        <p>
+          Each <tag>annotation</tag> element corresponds to a node
+          in the tree of annotations.
+          The <attr>ref</attr> attribute of an <tag>annotation</tag>
+          element typically points to a handle in the
+          tree of graphical components.  For instance, one of the
+          <tag>annotation</tag> elements in
+          <xref ref="listing-tangent-3"/> is associated to the graph
+          of the function, which is indicated by
+          <attr>ref="graph"</attr>. The <attr>text</attr> attribute
+          gives the text that will be vocalized and displayed when
+          that node of the annotations tree is explored.
+        </p>
       </li>
 
-      <li> <p>There is a single top-level <tag>annotation</tag> element,
-      which has the attribute <attr>ref="figure"</attr>.  In general,
-      the <attr>ref</attr> attribute should point to a handle in the
-      tree of graphical components.  The handle <c>"figure"</c> is
-      implicit in the top-level <tag>diagram</tag> element.  The
-      <attr>text</attr> attribute gives a piece of text that will be
-      displayed and vocalized when the focus goes to the diagram.  You
-      may view this as alt-text for the entire diagram so it should be
-      a concise, yet thorough, description of the diagram.
-      </p>
+      <li>
+        <p>
+          The <tag>grid-axes</tag> element does not have a handle
+          or an associated annotation node, but a set of annotations for
+          it will be automatically added to the annnotations tree, if such
+          a tree is included in the PreFigure source.  There is a node for
+          the <tag>grid-axes</tag> and then two child nodes, one for the
+          grid and one for the axes.  This default behavior can be
+          disabled by adding <attr>annotate="no"</attr> to the
+          <tag>grid-axes</tag> element.
+        </p>
       </li>
-
-      <li><p>The <tag>grid-axes</tag> element does not have a handle
-      or an associated annotation node, but a set of annotations for
-      it will be automatically added to the annnotations tree, if such
-      a tree is included in the PreFigure source.  There is a node for
-      the <tag>grid-axes</tag> and then two child nodes, one for the
-      grid and one for the axes.  </p></li>
-
       <li><p>The second node that is on the same level as the
       <tag>grid-axes</tag> annotation has
       <attr>ref="graph-tangent</attr>.  In this case, there is no
@@ -216,12 +231,13 @@
     </ul>
     </p>
 
-    <p>Authors should note that everything that is visible is
-    annotated and will, at some point, be highlighted.  This is a good
-    practice that should generally be adopted.  Suppose, for instance,
+    <p>Authors should note that everything that all the visible
+    components are
+    annotated and will, at some point, be highlighted.  This is a
+    practice that one should general adopt.  Suppose, for instance,
     that the <tag>graph-axes</tag> element is not annotated.  A
     low-vision reader may percevie the presence of these components
-    without being provided an explanation of their purpose.
+    without an explanation of their purpose being provided.
     </p>
 
     <p>Also notice how the tree-like structure of the annotations
@@ -229,6 +245,21 @@
     detail.  This allows the reader to skip over a branch of the
     tree, if desired, and go on to features that are of greater
     interest. </p>
+
+    <assemblage>
+      <title>Update: April 2026</title>
+      <p>
+        The structure of the annotations tree, as described above in
+        <xref ref="listing-tangent-3"/>, was
+        added in April 2026.  More specifically,
+        the <tag>annotations</tag> element was modified to serve as
+        the top-level <tag>annotation</tag> since this behavior better
+        reflects the structure of the annotations and more naturally
+        enforces the <prefigure/> schema.  This change,
+        however, is backwards compatible, and examples of the previous
+        behavior are likely to appear in this documentation.
+      </p>
+    </assemblage>
 
   </subsection>
 
