@@ -18,7 +18,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 6.1.1.<div class="autopermalink" data-description="Listing 6.1.2: The PreFigure source for Figure 6.1.1."><a href="#listing-tangent-3" title="Copy heading and permalink for Listing 6.1.2: The PreFigure source for Figure 6.1.1." aria-label="Copy heading and permalink for Listing 6.1.2: The PreFigure source for Figure 6.1.1.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300, 300)" margins="5"&gt;
+<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 6.1.1.<div class="autopermalink" data-description="Listing 6.1.2: The PreFigure source for Figure 6.1.1."><a href="#listing-tangent-3" title="Copy heading and permalink for Listing 6.1.2: The PreFigure source for Figure 6.1.1." aria-label="Copy heading and permalink for Listing 6.1.2: The PreFigure source for Figure 6.1.1.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="5"&gt;
   &lt;definition&gt; a=1 &lt;/definition&gt;
   &lt;definition&gt; f(x)=exp(x/3)*cos(x) &lt;/definition&gt;
   &lt;coordinates bbox="[-4,-4,4,4]"&gt;
@@ -27,27 +28,25 @@
     &lt;tangent-line at="tangent" function="f" point="a"/&gt;
     &lt;group at="point"&gt;
       &lt;point p="(a, f(a))"/&gt;
-      &lt;label anchor="(a,f(a))" alignment="ne"&gt;
+      &lt;label anchor="(a, f(a))" alignment="ne"&gt;
         &lt;m&gt;(a,f(a))&lt;/m&gt;
       &lt;/label&gt;
     &lt;/group&gt;
   &lt;/coordinates&gt;
 
-  &lt;annotations&gt;
-    &lt;annotation ref="figure"
-                text="The graph of a function and its tangent line at the point a equals 1"&gt;
-      &lt;annotation ref="graph-tangent"
-                  text="The graph and its tangent line"&gt;
-        &lt;annotation ref="function"
-                    text="The graph of the function f"
-                    sonify="yes"/&gt;
-        &lt;annotation ref="point"
-                    text="The point a comma f of a"/&gt;
-        &lt;annotation ref="tangent"
-                    text="The tangent line to the graph of f at the point"
-                    sonify="yes"
-                    speech="This line is y equals f of a plus the derivative at a times the quantity x minus a"/&gt;
-      &lt;/annotation&gt;
+  &lt;annotations
+      text="The graph of a function and its tangent line at the point a equals 1"&gt;
+    &lt;annotation ref="graph-tangent"
+                text="The graph and its tangent line"&gt;
+      &lt;annotation ref="function"
+                  text="The graph of the function f"
+                  sonify="yes"/&gt;
+      &lt;annotation ref="point"
+                  text="The point a comma f of a"/&gt;
+      &lt;annotation ref="tangent"
+                  text="The tangent line to the graph of f at the point"
+                  sonify="yes"
+                  speech="This line is y equals f of a plus the derivative at a times the quantity x minus a"/&gt;
     &lt;/annotation&gt;
   &lt;/annotations&gt;
 &lt;/diagram&gt;
