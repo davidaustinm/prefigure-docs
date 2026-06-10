@@ -19,66 +19,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:title" content="PreFigure Author’s Guide">
+<meta property="og:title" content="PreFigure Author’s Guide">
 <meta property="book:title" content="PreFigure Author’s Guide">
-<meta property="book:author" content="David Austin">
+<meta name="twitter:description" content="PreFigure documentation">
+<meta property="og:description" content="PreFigure documentation">
+<meta name="twitter:card" content="summary">
 <script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -101,18 +57,18 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.3';
+eBookConfig.runestone_version = '8.1.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
+<script src="_static/prefix-runtime.dcab57465a404e85.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.79fbb790b185d712.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="prefigure" class="pretext book ignore-math">
@@ -337,11 +293,16 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="chap-examples.html" class="internal"><span class="codenumber">7</span> <span class="title">Examples with source</span></a></div></li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-diffeqs"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-diffeqs">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differential equations</span>
 </h2>
-<section class="introduction" id="sec-diffeqs-2"><div class="para" id="sec-diffeqs-2-1">There are a few elements for creating diagrams containing solutions to differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="subsec-slope-field"><h3 class="heading hide-type">
+<section class="introduction" id="sec-diffeqs-2">
+<div class="para" id="sec-diffeqs-2-1">There are a few elements for creating diagrams containing solutions to differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsec-slope-field">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Slope Fields</span>
 </h3>
 <div class="para logical" id="subsec-slope-field-2">
@@ -359,11 +320,16 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-slope-field-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="diagram-slope-field"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<figure class="figure figure-like" id="diagram-slope-field">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/slope-field.svg" role="img" class="contained"></div></div>
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/slope-field-2.svg" role="img" class="contained"></div></div>
-</div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The slope fields for two differential equations.<div class="autopermalink" data-description="Figure 3.8.1"><a href="#diagram-slope-field" title="Copy heading and permalink for Figure 3.8.1" aria-label="Copy heading and permalink for Figure 3.8.1">🔗</a></div></figcaption></figure><div class="para" id="subsec-slope-field-4">The PreFigure source input for the left diagram in <a href="sec-diffeqs.html#diagram-slope-field" class="xref" data-knowl="./knowl/xref/diagram-slope-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.1">Figure 3.8.1</a> is given in <a href="sec-diffeqs.html#listing-slope-field" class="xref" data-knowl="./knowl/xref/listing-slope-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.8.2: The PreFigure source for the slope field of a 1-variable differential equation">Listing 3.8.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-slope-field-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The slope fields for two differential equations.<div class="autopermalink" data-description="Figure 3.8.1"><a href="#diagram-slope-field" title="Copy heading and permalink for Figure 3.8.1" aria-label="Copy heading and permalink for Figure 3.8.1">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="subsec-slope-field-4">The PreFigure source input for the left diagram in <a href="sec-diffeqs.html#diagram-slope-field" class="xref" data-knowl="./knowl/xref/diagram-slope-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.1">Figure 3.8.1</a> is given in <a href="sec-diffeqs.html#listing-slope-field" class="xref" data-knowl="./knowl/xref/listing-slope-field.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.8.2: The PreFigure source for the slope field of a 1-variable differential equation">Listing 3.8.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-slope-field-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="listing figure-like" id="listing-slope-field"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for the slope field of a 1-variable differential equation<div class="autopermalink" data-description="Listing 3.8.2: The PreFigure source for the slope field of a 1-variable differential equation"><a href="#listing-slope-field" title="Copy heading and permalink for Listing 3.8.2: The PreFigure source for the slope field of a 1-variable differential equation" aria-label="Copy heading and permalink for Listing 3.8.2: The PreFigure source for the slope field of a 1-variable differential equation">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="10"&gt;
   &lt;definition&gt;f(t,y) = t-y&lt;/definition&gt;
@@ -372,7 +338,9 @@ eBookConfig.enable_chatcodes =  false;
     &lt;slope-field function="f"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="subsec-slope-field-6">The grid on which the slope field is drawn can be changed using the <code class="code-inline tex2jax_ignore">@spacings</code> attribute similar to that of the <a href="sec-grid-axes.html#subsec-grid" class="internal" title="Subsection 3.3.2: Grids">grid element</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-slope-field-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-slope-field-6">The grid on which the slope field is drawn can be changed using the <code class="code-inline tex2jax_ignore">@spacings</code> attribute similar to that of the <a href="sec-grid-axes.html#subsec-grid" class="internal" title="Subsection 3.3.2: Grids">grid element</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-slope-field-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-slope-field-7">To obtain the slope field for an autonomous system, include the attribute <code class="code-inline tex2jax_ignore">@system="yes"</code> in the <code class="code-inline tex2jax_ignore">&lt;slope-field&gt;</code> element.  Also, arrows are added to the <code class="code-inline tex2jax_ignore">&lt;slope-field&gt;</code> using the <code class="code-inline tex2jax_ignore">@arrows="yes"</code> attribute.  Notice that the function defining the differential equation is naturally vector-valued now.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-slope-field-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -383,15 +351,26 @@ eBookConfig.enable_chatcodes =  false;
     &lt;slope-field function="f" system="yes" arrows="yes"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="autopermalink" data-description="Subsection 3.8.1: Slope Fields"><a href="#subsec-slope-field" title="Copy heading and permalink for Subsection 3.8.1: Slope Fields" aria-label="Copy heading and permalink for Subsection 3.8.1: Slope Fields">🔗</a></div></section><section class="subsection" id="subsec-de-solutions"><h3 class="heading hide-type">
+</code></pre></div></div>
+</figure><div class="autopermalink" data-description="Subsection 3.8.1: Slope Fields"><a href="#subsec-slope-field" title="Copy heading and permalink for Subsection 3.8.1: Slope Fields" aria-label="Copy heading and permalink for Subsection 3.8.1: Slope Fields">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-de-solutions">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solutions to differential equations</span>
 </h3>
 <div class="para" id="subsec-de-solutions-2">PreFigure provides an element <code class="code-inline tex2jax_ignore">&lt;de-solve&gt;</code> that generates and saves the solution of a differential equation.  You could think of this as a definition that can be reused possibly several times.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-de-solutions-3">Solutions are then plotted using the <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> element.  <a href="sec-diffeqs.html#diagram-de-plot" class="xref" data-knowl="./knowl/xref/diagram-de-plot.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.4">Figure 3.8.4</a> demonstrates how to use these elements.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="diagram-de-plot"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-plot.svg" role="img" class="contained"></div></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Some solutions to a differential equation.<div class="autopermalink" data-description="Figure 3.8.4"><a href="#diagram-de-plot" title="Copy heading and permalink for Figure 3.8.4" aria-label="Copy heading and permalink for Figure 3.8.4">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-de-plot"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.4.<div class="autopermalink" data-description="Listing 3.8.5: The PreFigure source for Figure 3.8.4."><a href="#listing-de-plot" title="Copy heading and permalink for Listing 3.8.5: The PreFigure source for Figure 3.8.4." aria-label="Copy heading and permalink for Listing 3.8.5: The PreFigure source for Figure 3.8.4.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="12"&gt;
+<figure class="figure figure-like" id="diagram-de-plot">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-plot.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Some solutions to a differential equation.<div class="autopermalink" data-description="Figure 3.8.4"><a href="#diagram-de-plot" title="Copy heading and permalink for Figure 3.8.4" aria-label="Copy heading and permalink for Figure 3.8.4">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-de-plot"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.4.<div class="autopermalink" data-description="Listing 3.8.5: The PreFigure source for Figure 3.8.4."><a href="#listing-de-plot" title="Copy heading and permalink for Listing 3.8.5: The PreFigure source for Figure 3.8.4." aria-label="Copy heading and permalink for Listing 3.8.5: The PreFigure source for Figure 3.8.4.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="12"&gt;
   &lt;definition&gt;f(t,y) = t-y&lt;/definition&gt;
   &lt;coordinates bbox="[-4,-4,4,4]"&gt;
     &lt;grid-axes/&gt;
@@ -401,15 +380,24 @@ eBookConfig.enable_chatcodes =  false;
     &lt;plot-de-solution function="f" t0="0" y0="-2" t1="4" stroke="red"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="subsec-de-solutions-6">
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-de-solutions-6">
 <a href="sec-diffeqs.html#listing-de-plot" class="xref" data-knowl="./knowl/xref/listing-de-plot.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.8.5: The PreFigure source for Figure 3.8.4.">Listing 3.8.5</a> shows two ways in which a solution to the differential equation can be plotted.  In Line 5, we solve the differential equation with initial value <span class="process-math">\(y(t_0)=y_0\)</span> over the interval <span class="process-math">\(t_0\leq t\leq t_1\text{.}\)</span> This interval is broken into <code class="code-inline tex2jax_ignore">@N=100</code> steps by default, but this value can be modified using the <code class="code-inline tex2jax_ignore">@N</code> attribute.  This solution is also given an attribute <code class="code-inline tex2jax_ignore">@name="linear"</code>. To plot the solution, we use a <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> element in Line 7 passing the name of the solution as an attribute.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-de-solutions-7">Alernatively, these two elements can be combined into a single <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> element, as shown in Line 8.  Most likely, you will use this second method more frequently since it involves a single element.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-de-solutions-8">There are more possibilities when solving a system.  <a href="sec-diffeqs.html#diagram-de-plot-2" class="xref" data-knowl="./knowl/xref/diagram-de-plot-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.6">Figure 3.8.6</a> shows a solution to a <span class="process-math">\(2\times2\)</span> autonomous system.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="diagram-de-plot-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-plot-2.svg" role="img" class="contained"></div></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Solutions <span class="process-math">\(y_0(t)\)</span> and <span class="process-math">\(y_1(t)\)</span> to a system of differential equations.<div class="autopermalink" data-description="Figure 3.8.6"><a href="#diagram-de-plot-2" title="Copy heading and permalink for Figure 3.8.6" aria-label="Copy heading and permalink for Figure 3.8.6">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-de-plot-2"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.6.<div class="autopermalink" data-description="Listing 3.8.7: The PreFigure source for Figure 3.8.6."><a href="#listing-de-plot-2" title="Copy heading and permalink for Listing 3.8.7: The PreFigure source for Figure 3.8.6." aria-label="Copy heading and permalink for Listing 3.8.7: The PreFigure source for Figure 3.8.6.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="12"&gt;
+<figure class="figure figure-like" id="diagram-de-plot-2">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-plot-2.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Solutions <span class="process-math">\(y_0(t)\)</span> and <span class="process-math">\(y_1(t)\)</span> to a system of differential equations.<div class="autopermalink" data-description="Figure 3.8.6"><a href="#diagram-de-plot-2" title="Copy heading and permalink for Figure 3.8.6" aria-label="Copy heading and permalink for Figure 3.8.6">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-de-plot-2"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.6.<div class="autopermalink" data-description="Listing 3.8.7: The PreFigure source for Figure 3.8.6."><a href="#listing-de-plot-2" title="Copy heading and permalink for Listing 3.8.7: The PreFigure source for Figure 3.8.6." aria-label="Copy heading and permalink for Listing 3.8.7: The PreFigure source for Figure 3.8.6.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="12"&gt;
   &lt;definition&gt;f(t,y) = (y[1],-y[0])&lt;/definition&gt;
   &lt;coordinates bbox="[-1,-4,6,4]"&gt;
     &lt;grid-axes/&gt;
@@ -418,12 +406,21 @@ eBookConfig.enable_chatcodes =  false;
     &lt;plot-de-solution solution="oscillator" axes="(t,y1)" stroke="red"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="subsec-de-solutions-11">Notice how we generate a solution in Line 5 of <a href="sec-diffeqs.html#listing-de-plot-2" class="xref" data-knowl="./knowl/xref/listing-de-plot-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.8.7: The PreFigure source for Figure 3.8.6.">Listing 3.8.7</a> and save it with the <code class="code-inline tex2jax_ignore">@name="oscillator"</code>.  Then we reuse this solution to plot the components <span class="process-math">\(y_0\)</span> and <span class="process-math">\(y_1\)</span> as functions of <span class="process-math">\(t\)</span> in Line 6 and 7.  There are now three quantities involved, <span class="process-math">\(t\text{,}\)</span> <span class="process-math">\(y_0\text{,}\)</span> and <span class="process-math">\(y_1\text{,}\)</span> so we use the <code class="code-inline tex2jax_ignore">@axes</code> attribute to state which of these quantities will appear on the horizontal and vertical axis.  This notation for the axes holds no matter what variables are used to define the function <span class="process-math">\(f\)</span> on the right side of the differential equation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-de-solutions-11">Notice how we generate a solution in Line 5 of <a href="sec-diffeqs.html#listing-de-plot-2" class="xref" data-knowl="./knowl/xref/listing-de-plot-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.8.7: The PreFigure source for Figure 3.8.6.">Listing 3.8.7</a> and save it with the <code class="code-inline tex2jax_ignore">@name="oscillator"</code>.  Then we reuse this solution to plot the components <span class="process-math">\(y_0\)</span> and <span class="process-math">\(y_1\)</span> as functions of <span class="process-math">\(t\)</span> in Line 6 and 7.  There are now three quantities involved, <span class="process-math">\(t\text{,}\)</span> <span class="process-math">\(y_0\text{,}\)</span> and <span class="process-math">\(y_1\text{,}\)</span> so we use the <code class="code-inline tex2jax_ignore">@axes</code> attribute to state which of these quantities will appear on the horizontal and vertical axis.  This notation for the axes holds no matter what variables are used to define the function <span class="process-math">\(f\)</span> on the right side of the differential equation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-de-solutions-12">We can also create phase portraits as in <a href="sec-diffeqs.html#diagram-de-phase" class="xref" data-knowl="./knowl/xref/diagram-de-phase.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.8">Figure 3.8.8</a>.  The source code demonstrates how a <code class="code-inline tex2jax_ignore">@method</code> can be supplied to the differential equation solver.  Differential equations are solved numerically using a <a class="external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html" target="_blank">Python package</a> that presents a choice of methods.  Most of the time, the default "RK45" method will suffice, but "LSODA" may be helpful when working with stiff equations.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="diagram-de-phase"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-phase.svg" role="img" class="contained"></div></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A few trajectories in the phase plane of an autonomous system.<div class="autopermalink" data-description="Figure 3.8.8"><a href="#diagram-de-phase" title="Copy heading and permalink for Figure 3.8.8" aria-label="Copy heading and permalink for Figure 3.8.8">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-de-phase"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.8.<div class="autopermalink" data-description="Listing 3.8.9: The PreFigure source for Figure 3.8.8."><a href="#listing-de-phase" title="Copy heading and permalink for Listing 3.8.9: The PreFigure source for Figure 3.8.8." aria-label="Copy heading and permalink for Listing 3.8.9: The PreFigure source for Figure 3.8.8.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="12"&gt;
+<figure class="figure figure-like" id="diagram-de-phase">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-phase.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A few trajectories in the phase plane of an autonomous system.<div class="autopermalink" data-description="Figure 3.8.8"><a href="#diagram-de-phase" title="Copy heading and permalink for Figure 3.8.8" aria-label="Copy heading and permalink for Figure 3.8.8">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-de-phase"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.8.<div class="autopermalink" data-description="Listing 3.8.9: The PreFigure source for Figure 3.8.8."><a href="#listing-de-phase" title="Copy heading and permalink for Listing 3.8.9: The PreFigure source for Figure 3.8.8." aria-label="Copy heading and permalink for Listing 3.8.9: The PreFigure source for Figure 3.8.8.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable line-numbers"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="12"&gt;
   &lt;definition&gt;f(t,y) = (y[1],-y[0])&lt;/definition&gt;
   &lt;coordinates bbox="[-4,-4,4,4]"&gt;
     &lt;grid-axes xlabel="y_0" ylabel="y_1"/&gt;
@@ -437,9 +434,14 @@ eBookConfig.enable_chatcodes =  false;
                       y0="(3,0)" axes="(y0,y1)"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="subsec-de-solutions-15">To place an arrow at the end of a trajectory, add the attribute <code class="code-inline tex2jax_ignore">@arrow="yes"</code> to the <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> element.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-de-solutions-15">To place an arrow at the end of a trajectory, add the attribute <code class="code-inline tex2jax_ignore">@arrow="yes"</code> to the <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> element.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-de-solutions-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.8.2: Solutions to differential equations"><a href="#subsec-de-solutions" title="Copy heading and permalink for Subsection 3.8.2: Solutions to differential equations" aria-label="Copy heading and permalink for Subsection 3.8.2: Solutions to differential equations">🔗</a></div></section><section class="subsection" id="sec-diffeqs-5"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Subsection 3.8.2: Solutions to differential equations"><a href="#subsec-de-solutions" title="Copy heading and permalink for Subsection 3.8.2: Solutions to differential equations" aria-label="Copy heading and permalink for Subsection 3.8.2: Solutions to differential equations">🔗</a></div>
+</section>
+<section class="subsection" id="sec-diffeqs-5">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Discontinuities</span>
 </h3>
 <div class="para logical" id="sec-diffeqs-5-2">
@@ -460,35 +462,50 @@ eBookConfig.enable_chatcodes =  false;
 <dt id="sec-diffeqs-5-3-4-1">
 <code class="code-inline tex2jax_ignore">chi_oo</code><div class="autopermalink" data-description="Item: chi_oo"><a href="#sec-diffeqs-5-3-4-1" title="Copy heading and permalink for Item: chi_oo" aria-label="Copy heading and permalink for Item: chi_oo">🔗</a></div>
 </dt>
-<dd><div class="para" id="sec-diffeqs-5-3-4-1-2">
+<dd>
+<div class="para" id="sec-diffeqs-5-3-4-1-2">
 <code class="code-inline tex2jax_ignore">chi_oo(a,b,t)</code> is 1 if <span class="process-math">\(a \lt t \lt b\)</span> and 0 otherwise.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-3-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
+</div>
+</dd>
 <dt id="sec-diffeqs-5-3-4-2">
 <code class="code-inline tex2jax_ignore">chi_oc</code><div class="autopermalink" data-description="Item: chi_oc"><a href="#sec-diffeqs-5-3-4-2" title="Copy heading and permalink for Item: chi_oc" aria-label="Copy heading and permalink for Item: chi_oc">🔗</a></div>
 </dt>
-<dd><div class="para" id="sec-diffeqs-5-3-4-2-2">
+<dd>
+<div class="para" id="sec-diffeqs-5-3-4-2-2">
 <code class="code-inline tex2jax_ignore">chi_oc(a,b,t)</code> is 1 if <span class="process-math">\(a \lt t \leq b\)</span> and 0 otherwise.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-3-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
+</div>
+</dd>
 <dt id="sec-diffeqs-5-3-4-3">
 <code class="code-inline tex2jax_ignore">chi_co</code><div class="autopermalink" data-description="Item: chi_co"><a href="#sec-diffeqs-5-3-4-3" title="Copy heading and permalink for Item: chi_co" aria-label="Copy heading and permalink for Item: chi_co">🔗</a></div>
 </dt>
-<dd><div class="para" id="sec-diffeqs-5-3-4-3-2">
+<dd>
+<div class="para" id="sec-diffeqs-5-3-4-3-2">
 <code class="code-inline tex2jax_ignore">chi_co(a,b,t)</code> is 1 if <span class="process-math">\(a \leq t \lt b\)</span> and 0 otherwise.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-3-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
+</div>
+</dd>
 <dt id="sec-diffeqs-5-3-4-4">
 <code class="code-inline tex2jax_ignore">chi_cc</code><div class="autopermalink" data-description="Item: chi_cc"><a href="#sec-diffeqs-5-3-4-4" title="Copy heading and permalink for Item: chi_cc" aria-label="Copy heading and permalink for Item: chi_cc">🔗</a></div>
 </dt>
-<dd><div class="para" id="sec-diffeqs-5-3-4-4-2">
+<dd>
+<div class="para" id="sec-diffeqs-5-3-4-4-2">
 <code class="code-inline tex2jax_ignore">chi_cc(a,b,t)</code> is 1 if <span class="process-math">\(a \leq t \leq b\)</span> and 0 otherwise.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-3-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
+</div>
+</dd>
 </dl>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-diffeqs-5-4">
 <a href="sec-diffeqs.html#diagram-de-pulse" class="xref" data-knowl="./knowl/xref/diagram-de-pulse.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.10">Figure 3.8.10</a> illustrates how this could be used.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="diagram-de-pulse"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-pulse.svg" role="img" class="contained"></div></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Solving a differential equation with a discontinuity.<div class="autopermalink" data-description="Figure 3.8.10"><a href="#diagram-de-pulse" title="Copy heading and permalink for Figure 3.8.10" aria-label="Copy heading and permalink for Figure 3.8.10">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-de-pulse"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.10.<div class="autopermalink" data-description="Listing 3.8.11: The PreFigure source for Figure 3.8.10."><a href="#listing-de-pulse" title="Copy heading and permalink for Listing 3.8.11: The PreFigure source for Figure 3.8.10." aria-label="Copy heading and permalink for Listing 3.8.11: The PreFigure source for Figure 3.8.10.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="(20,5,20,25)"&gt;
+<figure class="figure figure-like" id="diagram-de-pulse">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/de-pulse.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Solving a differential equation with a discontinuity.<div class="autopermalink" data-description="Figure 3.8.10"><a href="#diagram-de-pulse" title="Copy heading and permalink for Figure 3.8.10" aria-label="Copy heading and permalink for Figure 3.8.10">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-de-pulse"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.10.<div class="autopermalink" data-description="Listing 3.8.11: The PreFigure source for Figure 3.8.10."><a href="#listing-de-pulse" title="Copy heading and permalink for Listing 3.8.11: The PreFigure source for Figure 3.8.10." aria-label="Copy heading and permalink for Listing 3.8.11: The PreFigure source for Figure 3.8.10.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="(20,5,20,25)"&gt;
   &lt;coordinates bbox="[-0.5,-2,8,20]"&gt;
     &lt;definition&gt;f(t,y)=chi_oc(-inf,4,t)*10-y&lt;/definition&gt;
     &lt;grid-axes /&gt;
@@ -505,9 +522,14 @@ eBookConfig.enable_chatcodes =  false;
     &lt;label anchor="(0,bbox[3])" alignment="ne"&gt;&lt;m&gt;y(t)&lt;/m&gt;&lt;/label&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="sec-diffeqs-5-7">There are two additional things to note.  First, <code class="code-inline tex2jax_ignore">inf</code> can be used to represent <span class="process-math">\(\infty\text{,}\)</span> which allows us to define the interval <span class="process-math">\((-\infty, 4)\text{.}\)</span>  Second, the differential solver used by PreFigure has a hard time with discontinuities unless we specify a maximum step size for the solver to take. Notice the attribute <code class="code-inline tex2jax_ignore">@max-step="0.1"</code> in the <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> elements.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</code></pre></div></div>
+</figure>
+<div class="para" id="sec-diffeqs-5-7">There are two additional things to note.  First, <code class="code-inline tex2jax_ignore">inf</code> can be used to represent <span class="process-math">\(\infty\text{,}\)</span> which allows us to define the interval <span class="process-math">\((-\infty, 4)\text{.}\)</span>  Second, the differential solver used by PreFigure has a hard time with discontinuities unless we specify a maximum step size for the solver to take. Notice the attribute <code class="code-inline tex2jax_ignore">@max-step="0.1"</code> in the <code class="code-inline tex2jax_ignore">&lt;plot-de-solution&gt;</code> elements.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diffeqs-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.8.3: Discontinuities"><a href="#sec-diffeqs-5" title="Copy heading and permalink for Subsection 3.8.3: Discontinuities" aria-label="Copy heading and permalink for Subsection 3.8.3: Discontinuities">🔗</a></div></section><section class="subsection" id="subsec-delta"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Subsection 3.8.3: Discontinuities"><a href="#sec-diffeqs-5" title="Copy heading and permalink for Subsection 3.8.3: Discontinuities" aria-label="Copy heading and permalink for Subsection 3.8.3: Discontinuities">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-delta">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Delta functions</span>
 </h3>
 <div class="para logical" id="subsec-delta-2">
@@ -521,8 +543,15 @@ y'(-4) \amp = 0
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-delta-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="diagram-de-delta"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/delta.svg" role="img" class="contained"></div></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Solving a differential equation with delta functions.<div class="autopermalink" data-description="Figure 3.8.12"><a href="#diagram-de-delta" title="Copy heading and permalink for Figure 3.8.12" aria-label="Copy heading and permalink for Figure 3.8.12">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-de-delta"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.12.<div class="autopermalink" data-description="Listing 3.8.13: The PreFigure source for Figure 3.8.12."><a href="#listing-de-delta" title="Copy heading and permalink for Listing 3.8.13: The PreFigure source for Figure 3.8.12." aria-label="Copy heading and permalink for Listing 3.8.13: The PreFigure source for Figure 3.8.12.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
+<figure class="figure figure-like" id="diagram-de-delta">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/delta.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Solving a differential equation with delta functions.<div class="autopermalink" data-description="Figure 3.8.12"><a href="#diagram-de-delta" title="Copy heading and permalink for Figure 3.8.12" aria-label="Copy heading and permalink for Figure 3.8.12">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-de-delta"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.12.<div class="autopermalink" data-description="Listing 3.8.13: The PreFigure source for Figure 3.8.12."><a href="#listing-de-delta" title="Copy heading and permalink for Listing 3.8.13: The PreFigure source for Figure 3.8.12." aria-label="Copy heading and permalink for Listing 3.8.13: The PreFigure source for Figure 3.8.12.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="5"&gt;
   &lt;coordinates bbox="(-4,-4,4,4)"&gt;
     &lt;grid-axes decorations="yes" xlabel="t" ylabel="y"/&gt;
     &lt;definition&gt;
@@ -531,15 +560,27 @@ y'(-4) \amp = 0
     &lt;plot-de-solution function="f" t0="-4" t1="4" y0="(0,0)"/&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="para" id="subsec-delta-5">Notice that the delta function takes two arguments, the first of which should correspond to the time variable and the second of which should describe the support of the delta function in the time variable.  Unpredictable, and most likely incorrect, behavior will result if the second parameter involves the value of <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-delta-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-delta-5">Notice that the delta function takes two arguments, the first of which should correspond to the time variable and the second of which should describe the support of the delta function in the time variable.  Unpredictable, and most likely incorrect, behavior will result if the second parameter involves the value of <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-delta-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.8.4: Delta functions"><a href="#subsec-delta" title="Copy heading and permalink for Subsection 3.8.4: Delta functions" aria-label="Copy heading and permalink for Subsection 3.8.4: Delta functions">🔗</a></div></section><section class="subsection" id="subsec-euler"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Subsection 3.8.4: Delta functions"><a href="#subsec-delta" title="Copy heading and permalink for Subsection 3.8.4: Delta functions" aria-label="Copy heading and permalink for Subsection 3.8.4: Delta functions">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-euler">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler’s method</span>
 </h3>
 <div class="para" id="subsec-euler-2">There is a function <code class="code-inline tex2jax_ignore">eulers_method(f, t0, y0, t1, N)</code> that returns the set of points that are the result of applying Euler’s method with the given parameters.  <a href="sec-diffeqs.html#diagram-eulers-method" class="xref" data-knowl="./knowl/xref/diagram-eulers-method.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.14">Figure 3.8.14</a> demonstrates.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-euler-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="diagram-eulers-method"><div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/eulers_method.svg" role="img" class="contained"></div></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Demonstrating Euler’s method.<div class="autopermalink" data-description="Figure 3.8.14"><a href="#diagram-eulers-method" title="Copy heading and permalink for Figure 3.8.14" aria-label="Copy heading and permalink for Figure 3.8.14">🔗</a></div></figcaption></figure><figure class="listing figure-like" id="listing-eulers-method"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.14.<div class="autopermalink" data-description="Listing 3.8.15: The PreFigure source for Figure 3.8.14."><a href="#listing-eulers-method" title="Copy heading and permalink for Listing 3.8.15: The PreFigure source for Figure 3.8.14." aria-label="Copy heading and permalink for Listing 3.8.15: The PreFigure source for Figure 3.8.14.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="20"&gt;
+<figure class="figure figure-like" id="diagram-eulers-method">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/images/eulers_method.svg" role="img" class="contained"></div></div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Demonstrating Euler’s method.<div class="autopermalink" data-description="Figure 3.8.14"><a href="#diagram-eulers-method" title="Copy heading and permalink for Figure 3.8.14" aria-label="Copy heading and permalink for Figure 3.8.14">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-eulers-method"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.8.14.<div class="autopermalink" data-description="Listing 3.8.15: The PreFigure source for Figure 3.8.14."><a href="#listing-eulers-method" title="Copy heading and permalink for Listing 3.8.15: The PreFigure source for Figure 3.8.14." aria-label="Copy heading and permalink for Listing 3.8.15: The PreFigure source for Figure 3.8.14.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram dimensions="(300,300)" margins="20"&gt;
   &lt;coordinates bbox="(-1,-1,10,8)"&gt;
     &lt;definition&gt;f(t,y) = 0.1*y*(6-y)&lt;/definition&gt;
     &lt;definition&gt;N=5&lt;/definition&gt;
@@ -554,7 +595,11 @@ y'(-4) \amp = 0
     &lt;/repeat&gt;
   &lt;/coordinates&gt;
 &lt;/diagram&gt;
-</code></pre></div></div></figure><div class="autopermalink" data-description="Subsection 3.8.5: Euler’s method"><a href="#subsec-euler" title="Copy heading and permalink for Subsection 3.8.5: Euler’s method" aria-label="Copy heading and permalink for Subsection 3.8.5: Euler’s method">🔗</a></div></section><div class="autopermalink" data-description="Section 3.8: Differential equations"><a href="#sec-diffeqs" title="Copy heading and permalink for Section 3.8: Differential equations" aria-label="Copy heading and permalink for Section 3.8: Differential equations">🔗</a></div></section></div>
+</code></pre></div></div>
+</figure><div class="autopermalink" data-description="Subsection 3.8.5: Euler’s method"><a href="#subsec-euler" title="Copy heading and permalink for Subsection 3.8.5: Euler’s method" aria-label="Copy heading and permalink for Subsection 3.8.5: Euler’s method">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 3.8: Differential equations"><a href="#sec-diffeqs" title="Copy heading and permalink for Section 3.8: Differential equations" aria-label="Copy heading and permalink for Section 3.8: Differential equations">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-calculus.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-networks.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
