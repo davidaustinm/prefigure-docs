@@ -265,6 +265,13 @@
 	the way from the tail to the tip.
 	</p>
 	</li>
+        <li><title>label-location</title>
+        <p>A label attached to a vector is usually anchored at the
+        head of the vector.  This can be changed with the
+        <attr>label-location</attr> attribute.  For instance,
+        <attr>label-location="0.7"</attr> will anchor the label 70% of
+        the way between the tail and tip of the vector.</p>
+        </li>
       </dl>
     </p>
 

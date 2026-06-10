@@ -86,6 +86,10 @@
       <c>intersect(f, x0)</c>, as demonstrated in
       <xref ref="listing-newton"/>.</p> 
       </li>
+
+      <li><p>More generally, to find the solution of an equation
+      <m>f(x)=y</m>, one may use <c>solve(f, y, x0)</c>.</p>
+      </li>
     </ul>
     </p>
 

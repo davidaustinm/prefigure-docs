@@ -64,6 +64,10 @@
       <p>This scales the axes by the value of the <attr>by</attr>
       attribute.  For instance, <attr>scale="(1,2)"</attr> produces a
       vertical stretch by a factor of 2.</p></li>
+      <li><title><tag>change-basis</tag></title>
+      <p>The attribute <attr>basis=((1,1),(-1,1))</attr> changes the
+      basis from the standard basis <m>(1,0)</m> and <m>(0,1)</m> to
+      the value of this attribute.</p></li>
     </dl>
     </p>
     
@@ -85,7 +89,30 @@
       <caption>The <prefigure/> source for <xref
       ref="diagram-transform-2"/>.</caption>
     </listing>
+
+    <p><xref ref="diagram-transform-3"/>, and its listing <xref
+    ref="listing-transform-3"/>, illustrates the
+    <tag>change-basis</tag> element.</p>
+
+    <figure xml:id="diagram-transform-3">
+      <caption>An example of the <tag>change-basis</tag>
+      element</caption>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="pf-transform-3">
+          <xi:include href="prefigure/transform-3.xml"/>
+        </prefigure>
+      </image>
+    </figure>
     
+    <listing xml:id="listing-transform-3">
+      <program line-numbers="no">
+        <code><xi:include href="prefigure/transform-3.xml" parse="text"/></code>
+      </program>
+      <caption>The <prefigure/> source for <xref
+      ref="diagram-transform-3"/>.</caption>
+    </listing>
+
     <p>The following two diagrams illustrate how the use of coordinate
     changes can be useful.  First is a proof of the Pythagorean theorem
     in <xref ref="diagram-pythagoras"/>.</p>

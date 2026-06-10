@@ -91,7 +91,9 @@
     <p>Note the use of the <c>intersect</c> function in the
     <prefigure/> source.  In this case, <c>intersect(L, -1)</c>
     finds the solution of the equation <m>L(x)=0</m> using
-    <m>x_0=-1</m> as a starting point.
+    <m>x_0=-1</m> as a starting point.  In the same way, <c>solve(f,
+    y, x0)</c> finds the solution of the equation <m>f(x)=y</m> using
+    <m>x_0</m> as a starting point.
     </p>
 
     <listing xml:id="listing-newton">
