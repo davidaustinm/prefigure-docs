@@ -251,8 +251,8 @@
 	vector.
 	</p>
 	</li>
-	<li><title>scale</title>
-	<p>The value of <attr>scale</attr> acts as scalar
+	<li><title>scale-length</title>
+	<p>The value of <attr>scale-length</attr> acts as scalar
 	multiplication on <attr>v</attr>.
 	</p>
 	</li>
