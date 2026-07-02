@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-graphical-attr">
+<section xml:id="sec-graphical-attr"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
   <title> Stroke, fill, and other graphical attributes</title>
 
   <introduction>  
@@ -256,7 +257,49 @@
       </li>
       
     </dl>
+
+    <p>A region can be filled with a pattern using the
+    <attr>fill-pattern</attr> attribute.  This is demonstrated in
+    <xref ref="diagram-fill-pattern"/> and its program listing
+    <xref ref="listing-fill-pattern"/>.  Notice that the color of the
+    pattern is determined by the value of the <attr>fill</attr>
+    attribute.  The possible values of this attribute are
+    <ul>
+      <li><c>horizontal</c></li>
+      <li><c>vertical</c></li>
+      <li><c>diagonal</c></li>
+      <li><c>backdiagonal</c></li>
+      <li><c>dot</c></li>
+      <li><c>diamond</c>.</li>
+    </ul>
+    </p>
     
+    <figure xml:id="diagram-fill-pattern">
+      <image width="70%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="pf-fill-pattern">
+          <xi:include href="prefigure/fill-patterns.xml"/>
+        </prefigure>
+      </image>
+      <caption>
+        Shapes filled with the
+        <attr>fill-pattern</attr> attribute.
+      </caption>
+    </figure>
+
+    <p>By default, a fill pattern does not cover anything that has
+    already been painted as seen by the axis passing behind the
+    rightmost circle in <xref ref="diagram-fill-pattern"/>.  The
+    leftmost circle, however, demonstrates one way to change this
+    behavior.</p>
+
+    <listing xml:id="listing-fill-pattern">
+      <program>
+	<code><xi:include href="prefigure/fill-patterns.xml" parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-fill-pattern"/>.</caption>
+    </listing>
   </subsection>
   
   <subsection xml:id="subsec-handles">
