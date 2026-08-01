@@ -70,9 +70,9 @@
     <attr>name</attr> attribute so that one might refer later to the
     linear function that defines the tangent line.  For instance, if
     <attr>name="L"</attr>, then <c>L</c> defines the function
-    <me>
+    <md>
       L(x) = f(a)+f'(a)(x-a)
-    </me>.
+    </md>.
     <xref ref="diagram-newton"/> demonstrates this feature by
     illustrating one step of Newton's method.
     </p>

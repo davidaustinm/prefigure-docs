@@ -16,9 +16,9 @@
       for autonomous <m>2\times2</m> systems can be drawn using the
       <tag>slope-field</tag> element.  On the left of <xref
       ref="diagram-slope-field"/> is shown a slope field for the equation
-      <me>\frac{dy}{dt}=t-y</me> while the right shows the slope field
+      <md>\frac{dy}{dt}=t-y</me> while the right shows the slope field
       for the autonomous system
-      <me>\frac{d}{dt}\twovec{y_0}{y_1} = \twovec{y_1}{-y_0}.
+      <md>\frac{d}{dt}\twovec{y_0}{y_1} = \twovec{y_1}{-y_0}.
       </me>
     </p>
 
@@ -190,12 +190,12 @@
      <m>\frac{dy}{dt}=f(t,y)</m> for which the defining function
      <m>f(t,y)</m> is discontinuous.  Here's an example that could
      model an electric circuit with a switch.
-     <me>
+     <md>
        \frac{dy}{dt} = \begin{cases}
        10 - y \amp \text{if } 0\leq t \leq 4 \\
        -y \amp \text{if } t > 4
        \end{cases}
-     </me>.
+     </md>.
      </p>
 
      <p>To define <m>f(t,y)</m> in such a case, we can use

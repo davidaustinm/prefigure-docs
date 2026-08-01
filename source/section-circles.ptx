@@ -36,9 +36,9 @@
 
     <p>If an ellipse has the attribute <attr>axes="(a,b)"</attr>, then
     the ellipse is a translate of
-    <me>
+    <md>
       \frac{x^2}{a^2} + \frac{y^2}{b^2}=1
-    </me>.  Notice that ellipse may be rotated with the
+    </md>.  Notice that ellipse may be rotated with the
     <attr>rotate</attr> attribute.
     </p>
 
