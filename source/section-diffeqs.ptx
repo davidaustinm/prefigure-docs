@@ -16,10 +16,10 @@
       for autonomous <m>2\times2</m> systems can be drawn using the
       <tag>slope-field</tag> element.  On the left of <xref
       ref="diagram-slope-field"/> is shown a slope field for the equation
-      <md>\frac{dy}{dt}=t-y</me> while the right shows the slope field
+      <md>\frac{dy}{dt}=t-y</md> while the right shows the slope field
       for the autonomous system
       <md>\frac{d}{dt}\twovec{y_0}{y_1} = \twovec{y_1}{-y_0}.
-      </me>
+      </md>
     </p>
 
      <figure xml:id="diagram-slope-field">
