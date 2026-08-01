@@ -1,6 +1,6 @@
     <group at="line-L1">
       <line endpoints="((-2,1),(2,2))"/>
-      <label p="(2,2)"> <m>L_1</m> </label>
+      <label anchor="(2,2)"> <m>L_1</m> </label>
     </group>
     ...
 

@@ -7,18 +7,18 @@
 		 N="4" fill="lawngreen" stroke="black" width="1"/>
     <graph id="graph" function="f"/>
 
-    <label id="a1" p="(1.25, 0.5*f(1))" clear-background="yes" background-margin="3">
+    <label id="a1" anchor="(1.25, 0.5*f(1))" clear-background="yes" background-margin="3">
       <m>A_1</m>
     </label>
-    <label id="a2" p="(1.75, 0.5*f(1.5))" 
+    <label id="a2" anchor="(1.75, 0.5*f(1.5))" 
 	   clear-background="yes" background-margin="3">
       <m>A_2</m>
     </label>
-    <label id="a3" p="(2.25, 0.5*f(2))"
+    <label id="a3" anchor="(2.25, 0.5*f(2))"
 	   clear-background="yes" background-margin="3">
       <m>A_3</m>
     </label>
-    <label id="a4" p="(2.75, 0.5*f(2.5))"
+    <label id="a4" anchor="(2.75, 0.5*f(2.5))"
 	   clear-background="yes" background-margin="3">
       <m>A_4</m>
     </label>

@@ -8,21 +8,21 @@
     <group id="graph-derivatives">
       <group id="f">
 	<graph function="f" />
-	<label p="(3.3,1)" alignment="center" clear-background="yes">
+	<label anchor="(3.3,1)" alignment="center" clear-background="yes">
 	  <m>f</m>
 	</label>
       </group>
 
       <group id="fp">
 	<graph function="fp" stroke="red" cliptobbox="yes" />
-	<label p="(2.5,1)" alignment="center" clear-background="yes">
+	<label anchor="(2.5,1)" alignment="center" clear-background="yes">
 	  <m>f'</m>
 	</label>
       </group>
 
       <group id="fpp">
 	<graph function="fpp" stroke="lawngreen" />
-	<label p="(1.6,1)" alignment="center" clear-background="yes">
+	<label anchor="(1.6,1)" alignment="center" clear-background="yes">
 	  <m>f''</m>
 	</label>
       </group>
