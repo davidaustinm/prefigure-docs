@@ -5,22 +5,22 @@
   <coordinates bbox="[-4,-4,4,4]">
 
     <grid-axes xlabel="x" ylabel="y"/>
-    <group id="graph-derivatives">
-      <group id="f">
+    <group at="graph-derivatives">
+      <group at="f">
 	<graph function="f" />
 	<label anchor="(3.3,1)" alignment="center" clear-background="yes">
 	  <m>f</m>
 	</label>
       </group>
 
-      <group id="fp">
+      <group at="fp">
 	<graph function="fp" stroke="red" cliptobbox="yes" />
 	<label anchor="(2.5,1)" alignment="center" clear-background="yes">
 	  <m>f'</m>
 	</label>
       </group>
 
-      <group id="fpp">
+      <group at="fpp">
 	<graph function="fpp" stroke="lawngreen" />
 	<label anchor="(1.6,1)" alignment="center" clear-background="yes">
 	  <m>f''</m>
@@ -29,20 +29,17 @@
     </group>
   </coordinates>
 
-  <annotations>
-    <annotation id="figure" text="The graph of a function and its first two derivatives">
-      <annotation id="axes" text="The coordinate axes" />
-      <annotation id="grid" text="The coordinate grid" />
-      <annotation id="graph-derivatives"
-		  text="The graph of f, its derivative f prime, and its second derivative f double prime">
-	<annotation id="f" text="The graph of f" sonify="yes"/>
-	<annotation id="fp" text="The graph of the derivative of f"
-		    sonify="yes" />
-	<annotation id="fpp" text="The graph of the second derivative of f"
-		    sonify="yes"/>
-      </annotation>
+  <annotations text="The graph of a function and its first two derivatives">
+    <annotation ref="axes" text="The coordinate axes" />
+    <annotation ref="grid" text="The coordinate grid" />
+    <annotation ref="graph-derivatives"
+		text="The graph of f, its derivative f prime, and its second derivative f double prime">
+      <annotation ref="f" text="The graph of f" sonify="yes"/>
+      <annotation ref="fp" text="The graph of the derivative of f"
+		  sonify="yes" />
+      <annotation ref="fpp" text="The graph of the second derivative of f"
+		  sonify="yes"/>
     </annotation>
   </annotations>
 
 </diagram>
-
