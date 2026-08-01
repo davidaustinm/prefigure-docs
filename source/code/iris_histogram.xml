@@ -17,10 +17,7 @@
 
   </coordinates>
 
-  <annotations>
-    <annotation ref="figure"
-                text="A histogram of irises with 30 bins grouped by sepal length">
-      <annotation ref="histogram"/>
-    </annotation>
+  <annotations text="A histogram of irises with 30 bins grouped by sepal length">
+    <annotation ref="histogram"/>
   </annotations>
 </diagram>

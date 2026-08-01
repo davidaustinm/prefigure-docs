@@ -39,12 +39,9 @@
 
   </coordinates>
 
-  <annotations>
-    <annotation ref="figure"
-                text="Scatter plot of the iris data set">
-      <annotation ref="setosa"/>
-      <annotation ref="versicolor"/>
-      <annotation ref="virginica"/>
-    </annotation>
+  <annotations text="Scatter plot of the iris data set">
+    <annotation ref="setosa"/>
+    <annotation ref="versicolor"/>
+    <annotation ref="virginica"/>
   </annotations>
 </diagram>

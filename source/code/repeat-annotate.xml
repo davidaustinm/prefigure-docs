@@ -17,12 +17,9 @@
     </repeat>
   </coordinates>
 
-  <annotations>
-    <annotation ref="figure"
-                text="A triangular array of squares">
-      <annotation ref="grid"
-                  text="A rectangular grid"/>
-      <annotation ref="array"/>
-    </annotation>
+  <annotations text="A triangular array of squares">
+    <annotation ref="grid"
+                text="A rectangular grid"/>
+    <annotation ref="array"/>
   </annotations>
 </diagram>

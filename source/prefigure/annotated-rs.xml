@@ -21,13 +21,10 @@
     <graph at="graph" function="f"/>
   </coordinates>
 
-  <annotations>
-    <annotation ref="figure"
-                text="This diagram demonstrates how to annotate a Riemann sum">
-      <annotation ref="graph"
-                  text="The graph of the function f"
-                  sonify="yes"/>
-      <annotation ref="rs"/>
-    </annotation>
+  <annotations text="This diagram demonstrates how to annotate a Riemann sum">
+    <annotation ref="graph"
+                text="The graph of the function f"
+                sonify="yes"/>
+    <annotation ref="rs"/>
   </annotations>
 </diagram>
