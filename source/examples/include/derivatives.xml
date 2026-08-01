@@ -6,17 +6,17 @@
 
     <grid-axes xlabel="x" ylabel="y"/>
     <graph function="f"/>
-    <label p="(3.3,1)" alignment="center" clear-background="yes">
+    <label anchor="(3.3,1)" alignment="center" clear-background="yes">
       <m>f</m>
     </label>
     
     <graph function="fp" stroke="red"/>
-    <label p="(2.5,1)" alignment="center" clear-background="yes">
+    <label anchor="(2.5,1)" alignment="center" clear-background="yes">
       <m>f'</m>
     </label>
     
     <graph function="fpp" stroke="green"/>
-    <label p="(1.6,1)" alignment="center" clear-background="yes">
+    <label anchor="(1.6,1)" alignment="center" clear-background="yes">
       <m>f''</m>
     </label>
     
