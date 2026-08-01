@@ -20,7 +20,7 @@
   <annotations text="The eighth roots of unity">
     <annotation ref="axes" text="The coordinate axes" />
     <annotation ref="grid" text="The coordinate grid" />
-    <annotation ref="unit-circle" text="The unit circle" circular="true">
+    <annotation ref="unit-circle" text="The unit circle" circular="yes">
       <annotation ref="point-k_0"
                   text="The primitive eighth root of unity to the power zero"
                   speech="one"/>
