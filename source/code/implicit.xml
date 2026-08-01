@@ -1,4 +1,4 @@
-<diagram width="300" height="300" margins="5">
+<diagram dimensions="(300,300)" margins="5">
   <definition>f(x,y) = y^2 - x^3 + x</definition>
   <definition>g(x) = x^3 - x</definition>
 

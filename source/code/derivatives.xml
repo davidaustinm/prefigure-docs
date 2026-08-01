@@ -1,4 +1,4 @@
-<diagram width="300" height="300" margins="5">
+<diagram dimensions="(300,300)" margins="5">
   <definition> f(x)=0.1*(x^4-10*x^2)</definition>
   <derivative name="fp" function="f"/>
   <derivative name="fpp" function="fp"/>

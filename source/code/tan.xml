@@ -1,4 +1,4 @@
-<diagram width="300" height="300" margins="5">
+<diagram dimensions="(300,300)" margins="5">
   <definition>a=1</definition>
   <definition>f(x) = exp(x/3)*cos(x)</definition>
   <coordinates bbox="[-4,-4,4,4]">
