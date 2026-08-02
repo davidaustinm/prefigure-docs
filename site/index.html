@@ -5,46 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PreFigure</title>
     <link href="main.css" rel="stylesheet" />
+    <style>
+      /* Responsive: stack logo above title on small screens */
+      @media all and (max-width: 600px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .logo {
+          flex-basis: auto;
+          padding-left: 0;
+        }
+        .title {
+          padding-right: 20px;
+          padding-left: 20px;
+          align-items: center;
+          text-align: center;
+        }
+      }
+
+      /* Responsive: stack images vertically on small screens */
+      @media all and (max-width: 600px) {
+        .images {
+          flex-direction: column;
+        }
+        .images > div {
+          max-width: 100% !important;
+          flex-basis: 100% !important;
+        }
+      }
+
+      /* Scrollable code block on small screens */
+      pre {
+        overflow-x: auto;
+      }
+
+      /* Visible focus outline for keyboard navigation */
+      :focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+      }
+
+      /* Tagline styled to match the old h3 */
+      .tagline {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    </style>
   </head>
 
   <body style="display:flex; background:#eee">
- 
+
+    <a href="#main-content" class="skip-link"
+       style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden">
+      Skip to main content
+    </a>
+
     <!-- main div for content -->
     <div class="main">
-      <!-- div for top matter -->
-      <div class="container" style="padding-top:20px;
-				    padding-bottom:20px;
-				    border-bottom:2px solid">
+      <!-- header with logo and title -->
+      <header class="container" style="padding-top:20px;
+                                       padding-bottom:20px;
+                                       border-bottom:2px solid">
+        <div class="logo">
+          <img src="logo.svg" width="80%"
+               alt="PreFigure logo" />
+        </div>
+        <div class="title">
+          <div class="prefigure">
+            <h1 style="font-weight:bold; margin-top:0; margin-bottom:0">
+              PreFigure
+            </h1>
+          </div>
+          <div class="description">
+            <p class="tagline">
+              An authoring system for accessible mathematical diagrams
+            </p>
+          </div>
+        </div>
+      </header>
 
-	<div class="logo">
-	  <img src="logo.svg" width="80%"
-	       alt="PreFigure logo" />
-	</div>
-	<div class="title">
-	  <div class="prefigure">
-	    <h1 style="font-weight:bold; margin-top:0; margin-bottom:0">
-	      PreFigure
-	    </h1>
-	  </div>
-	  <div class="description">
-	    <h3 style="font-weight:normal;margin-top:0; margin-bottom:0">
-	      An authoring system for accessible mathematical diagrams
-	    </h3>
-	  </div>
-	</div>
-      </div>
+      <main id="main-content">
+        <div class="section" id="diagrams" style="padding-top:20px">
+          <p>PreFigure is a system for creating mathematical diagrams to
+            include in scholarly documents, such as research
+            articles, textbooks, and other instructional materials.
+            PreFigure is to figures what
+            <a href="https://pretextbook.org"
+               target="_blank"> PreTeXt</a> is to text.
+          </p>
 
-      <div class="section" id="diagrams" style="padding-top:20px">
-	<p>PreFigure is a system for creating mathematical diagrams to
-	  include in scholarly documents, such as research
-	  articles, textbooks, and other instructional materials.  
-	  PreFigure is to figures what 
-	  <a href="https://pretextbook.org"
-	     target="_blank"> PreTeXt</a> is to text.
-	</p>
-
-	<p>
-	  <ul>
+          <ul>
             <li>
               <a href="https://davidaustinm.github.io/prefigure/"
                  target="_blank">
@@ -59,118 +113,118 @@
                  target="_blank">
                 A GitHub codespace</a> for authoring PreFigure diagrams
             </li>
-	    <li>
-	      <a href="docs/index.html">Documentation</a>
-	    </li>
-	    <li>
-	      <a href="https://github.com/davidaustinm/prefigure">
-		Installing locally
-	      </a>
-	    </li>
-	  </ul>
-	</p>
+            <li>
+              <a href="docs/index.html">Documentation</a>
+            </li>
+            <li>
+              <a href="https://github.com/davidaustinm/prefigure">
+                Installing locally
+              </a>
+            </li>
+          </ul>
 
-	<p>
-	  Among its features, PreFigure:
-	  <ul style="margin-bottom:0">
-	    <li style="padding-bottom:10px">provides an intuitive
-	      language for describing diagrams so that authors focus
-	      on the meaning of their diagrams rather than the details
-	      of their construction and visual appearance,
-	    </li>
-	    <li style="padding-bottom:10px">encourages the use of
-	      established design principles for effective
-	      communication,</li>
-	    <li style="padding-bottom:10px">facilitates the creation
-	      of accessible diagrams that may be easily navigated with
-	      a screen reader or rendered in a tactile format,
-	    </li>
+          <p>
+            Among its features, PreFigure:
+          </p>
+          <ul style="margin-bottom:0">
+            <li style="padding-bottom:10px">provides an intuitive
+              language for describing diagrams so that authors focus
+              on the meaning of their diagrams rather than the details
+              of their construction and visual appearance,
+            </li>
+            <li style="padding-bottom:10px">encourages the use of
+              established design principles for effective
+              communication,</li>
+            <li style="padding-bottom:10px">facilitates the creation
+              of accessible diagrams that may be easily navigated with
+              a screen reader or rendered in a tactile format,
+            </li>
             <li style="padding-bottom:10px">is fully integrated into
               <a href="https://pretextbook.org/"
                  target="_blank">
                 PreTeXt</a> so that PreFigure diagrams can be easily
               included in PreTeXt documents, and
-	    <li style="margin-bottom:10px">will always be free to use
-	      and open-source.
-	    </li>
-	  </ul>
-	</p>
+            </li>
+            <li style="margin-bottom:10px">will always be free to use
+              and open-source.
+            </li>
+          </ul>
 
-	<p style="margin-bottom:10px">
-	  To illustrate, here is the type of diagram that could appear
-	  in a calculus textbook.  On the left is a typical image for
-	  including either on a web page or in print.  Annotations can
-	  easily be added to enable a screen reader to navigate
-	  through the diagram.  On the right is a tactile version of
-	  the diagram that could be embossed and included in a braille
-	  edition of the same document.
-	</p>
+          <p style="margin-bottom:10px">
+            To illustrate, here is the type of diagram that could appear
+            in a calculus textbook.  On the left is a typical image for
+            including either on a web page or in print.  Annotations can
+            easily be added to enable a screen reader to navigate
+            through the diagram.  On the right is a tactile version of
+            the diagram that could be embossed and included in a braille
+            edition of the same document.
+          </p>
 
-	<div class="images">
-	  <div style="max-width:50%;flex-basis:50%">
-	    <img src="tangent.svg"
-		 style="max-width:100%;margin:auto;display:block"/>
-	  </div>
-	  <div style="max-width:50%;flex-basis:50%">
-	    <img src="tangent-tactile.svg" 
-		 style="max-width:100%;margin:auto;display:block"/>
-	  </div>
-	</div>
+          <div class="images">
+            <div style="max-width:50%;flex-basis:50%">
+              <img src="tangent.svg"
+                   alt="Graph of a function with its tangent line at the point (a, f(a))"
+                   style="max-width:100%;margin:auto;display:block"/>
+            </div>
+            <div style="max-width:50%;flex-basis:50%">
+              <img src="tangent-tactile.svg"
+                   alt="Tactile version of the tangent line diagram, suitable for embossing"
+                   style="max-width:100%;margin:auto;display:block"/>
+            </div>
+          </div>
 
-	<p>Both images are created from the same PreFigure source.
-	  Notice how this source reflects the mathematial
-	  structure of the diagram rather than the visual appearance.
-	</p>
+          <p>Both images are created from the same PreFigure source.
+            Notice how this source reflects the mathematical
+            structure of the diagram rather than the visual appearance.
+          </p>
 
-	<div style="margin:left">
-	  <pre style="font-size:16px">
+          <div style="margin:left">
+            <pre style="font-size:16px">
 &lt;diagram dimensions="(300,300)" margins="5">
   &lt;definition> f(x) = exp(x/3)*cos(x) &lt;/definition>
   &lt;definition> a = 1 &lt;/definition>
   &lt;coordinates bbox="(-4,-4,4,4)">
-    &lt;grid-axes xlabel="x" ylabel="y"/>    
+    &lt;grid-axes xlabel="x" ylabel="y"/>
     &lt;graph function="f"/>
     &lt;tangent-line function="f" point="a"/>
     &lt;point p="(a,f(a))">
       &lt;m>(a,f(a))&lt;/m>
     &lt;/point>
   &lt;/coordinates>
-&lt/diagram>
-	  </pre>
-	</div>
+&lt;/diagram>
+            </pre>
+          </div>
 
-	<div style="border-top:2px solid; padding-bottom:20px">
-	  <h2>Additional resources</h2>
+          <div style="border-top:2px solid; padding-bottom:20px">
+            <h2>Additional resources</h2>
 
-	  <p>
-	    <ul>
-	      <li style="padding-bottom:10px">
-		<a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html">
-		  Authoring Web-accessible Mathematical Diagrams</a>, with
-		Volker Sorge.
-	      </li>
-	      <li>
-		<a href="https://raisedmathematics.org/"> Raised
-		mathematics</a>, Research and dissemination for
-		accessible STEM materials
-	      </li>
-	    </ul>
-	  </p>
-	</div>
+            <ul>
+              <li style="padding-bottom:10px">
+                <a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html">
+                  Authoring Web-accessible Mathematical Diagrams</a>, with
+                Volker Sorge.
+              </li>
+              <li>
+                <a href="https://raisedmathematics.org/"> Raised
+                mathematics</a>, Research and dissemination for
+                accessible STEM materials
+              </li>
+            </ul>
+          </div>
 
-	<div style="border-top:2px solid; padding-bottom:20px">
-	  <h2>Contact</h2>
+          <div style="border-top:2px solid; padding-bottom:20px">
+            <h2>Contact</h2>
 
-	  <p>
-	    <a href="https://davidaustinm.github.io"> David
-	      Austin</a>,
-	    austind at gvsu dot edu
-	  </p>
-	</div>
+            <p>
+              <a href="https://davidaustinm.github.io"> David
+                Austin</a>,
+              austind at gvsu dot edu
+            </p>
+          </div>
 
-      </div>
-	
+        </div>
+      </main>
+
     </div> <!-- main div-->
   </body>
 </html>
-
