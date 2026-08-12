@@ -5,8 +5,8 @@
   <title>Networks</title>
 
   <introduction>
-    <p>PreFigure enables authors to create diagrams of networks, such
-    as that shown in <xref ref="diagram-network-intro"/>.
+    <p>PreFigure enables authors to create diagrams of networks and
+    posets, such as that shown in <xref ref="diagram-network-intro"/>.
     Mathematicians sometimes refer to these as <em>graphs</em>, but we
     will use the term network to distinguish them from graphs of
     functions.  There is quite a bit of flexibility as will be
@@ -498,6 +498,199 @@
       <xref ref="diagram-network-annotations"/>.
       </caption>
     </listing>
+  </subsection>
+
+  <subsection xml:id="subsec-posets">
+    <title>Posets</title>
+
+    <p>
+      A poset is a set with a partial ordering in which some pairs of
+      elements are comparable, <m>x\lt y</m>, in which case we say
+      that <m>y</m> <term>covers</term> <m>x</m>.  Visual
+      representations of posets, often called <term>Hasse
+      diagrams,</term> are created in <prefigure/> with
+      the <tag>poset</tag> element, as demonstrated in
+      <xref ref="diagram-poset-1"/> and <xref ref="listing-poset-1"/>.
+      A partial set of annotations is included.
+    </p>
+
+    <figure xml:id="diagram-poset-1">
+      <caption>A poset whose source is given in <xref
+      ref="listing-poset-1"/>.</caption>
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="poset-1">
+          <xi:include href="prefigure/poset_1.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-poset-1">
+      <caption>The PreFigure source for
+      <xref ref="diagram-poset-1"/>.
+      </caption>
+      <program line-numbers="no">
+	<code><xi:include href="prefigure/poset_1.xml" parse="text"/></code>
+      </program>
+    </listing>
+
+    <p>
+      The structure of the poset is defined by a dictionary, which
+      consists of a set of comma-separated entries having the form
+      <c>a:[b,c]</c>, which defines the covering relations <m>a\lt
+      b</m> and <m>a\lt c</m>.  This dictionary forms the value of the
+      <attr>covers</attr> attribute.  This is the only required
+      attribute in a <tag>poset</tag>.  Notice that the positions of
+      the node in the diagram are automatically determined by the
+      structure of the poset though the author can change this
+      behavior.
+    </p>
+
+    <p>
+      The dictionary that forms the value of the <attr>covers</attr>
+      attributes defines handles for the nodes in the poset, as
+      reflected in the annotations.  The line segment connecting two
+      nodes has the handle <c>edge-a-b</c> where <m>a\lt b</m> is a
+      covering relation.
+    </p>
+
+    <p>
+      The labels on nodes appear due to the attribute
+      <attr>labels="yes"</attr>, and, by default, each node is labeled
+      by its handle and centered on the node.  <xref
+      ref="diagram-poset-2"/> demonstrates how a different set of
+      labels may be defined for the nodes.
+    </p>
+
+    <figure xml:id="diagram-poset-2">
+      <caption>A poset whose source is given in <xref
+      ref="listing-poset-2"/>.</caption>
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="poset-2">
+          <xi:include href="prefigure/poset_2.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-poset-2">
+      <caption>The PreFigure source for
+      <xref ref="diagram-poset-2"/>.
+      </caption>
+      <program line-numbers="no">
+	<code><xi:include href="prefigure/poset_2.xml" parse="text"/></code>
+      </program>
+    </listing>
+
+    <p>
+      In this example, a set of labels is given for each of
+      the nodes and defined by the <attr>labels</attr> attribute.
+      Also, we request that the labels be centered on the nodes with
+      the <attr>centered-labels="yes"</attr> attribute.
+    </p>
+
+    <p>
+      The algorithm for positioning nodes begins by placing all nodes
+      that do not cover another at <m>y=0</m> and proceeds recursively
+      positioning nodes one vertical unit and one horizontal unit
+      apart.  <xref ref="diagram-poset-3"/> illustrates.
+    </p>
+
+    <figure xml:id="diagram-poset-3">
+      <caption>
+        The coordinates defined by the automatic placement of nodes.
+      </caption>
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="poset-3">
+          <xi:include href="prefigure/poset_3.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <p>
+      The locations of the nodes can be changed using a dictionary as
+      demonstrated in <xref ref="diagram-poset-4"/> and its source
+      <xref ref="listing-poset-4"/>.  After all the nodes are
+      positioned, either algorithmically or by the author, the
+      bounding box of the set of nodes is determined and used to fill
+      the current bounding box.  This means there is no need to feel
+      constrained by the coordinate system determined by the
+      algorithmic layout.
+    </p>
+
+    <figure xml:id="diagram-poset-4">
+      <caption>A poset with some nodes and alignments defined by the
+      author.  The source is in <xref
+      ref="listing-poset-4"/>.</caption>
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="poset-4">
+          <xi:include href="prefigure/poset_4.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-poset-4">
+      <caption>The PreFigure source for
+      <xref ref="diagram-poset-4"/>.
+      </caption>
+      <program line-numbers="no">
+	<code><xi:include href="prefigure/poset_4.xml" parse="text"/></code>
+      </program>
+    </listing>
+
+    <p>
+      The <attr>alignment</attr> of labels is <c>center</c> by
+      default, but <xref ref="listing-poset-4"/> shows one way that
+      the alignment of labels can be change.
+    </p>
+
+    <p>
+      The <tag>poset</tag> element has certain default behaviors, but
+      almost everything can be changed.  Here is a list of attributes,
+      similar to those in the <tag>network</tag> element that apply to
+      styling the nodes and edges.
+      <ul>
+        <li><c>node-size</c></li>
+        <li><c>node-style</c></li>
+        <li><c>node-fill</c></li>
+        <li><c>node-stroke</c></li>
+        <li><c>edge-thickness</c></li>
+        <li><c>edge-stroke</c></li>
+      </ul>
+    </p>
+
+    <p>
+      Finally, one can include <tag>node</tag> elements inside a
+      <tag>poset</tag> to style nodes.  Internally, a
+      <tag>node</tag> is processed like a <tag>point</tag>, which
+      means that a node can have all the attributes of a point and can
+      define its own label.  This is demonstrated in
+      <xref ref="diagram-poset-5"/> and <xref ref="listing-poset-5"/>.
+    </p>
+
+    <figure xml:id="diagram-poset-5">
+      <caption>A poset with an author-defined <tag>node</tag> element.
+      The source is in <xref
+      ref="listing-poset-5"/>.</caption>
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="poset-5">
+          <xi:include href="prefigure/poset_5.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-poset-5">
+      <caption>The PreFigure source for
+      <xref ref="diagram-poset-5"/>.
+      </caption>
+      <program line-numbers="no">
+	<code><xi:include href="prefigure/poset_5.xml" parse="text"/></code>
+      </program>
+    </listing>
+
   </subsection>
 
 </section>
