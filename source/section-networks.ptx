@@ -541,7 +541,7 @@
       b</m> and <m>a\lt c</m>.  This dictionary forms the value of the
       <attr>covers</attr> attribute.  This is the only required
       attribute in a <tag>poset</tag>.  Notice that the positions of
-      the node in the diagram are automatically determined by the
+      the nodes in the diagram are automatically determined by the
       structure of the poset though the author can change this
       behavior.
     </p>
@@ -565,7 +565,7 @@
     <figure xml:id="diagram-poset-2">
       <caption>A poset whose source is given in <xref
       ref="listing-poset-2"/>.</caption>
-      <image width="50%">
+      <image width="60%">
         <prefigure xmlns="https://prefigure.org"
                    label="poset-2">
           <xi:include href="prefigure/poset_2.xml"/>
