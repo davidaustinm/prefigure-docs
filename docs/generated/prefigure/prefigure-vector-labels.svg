@@ -31,7 +31,7 @@
     <line id="prefigure-vector-labels-__line-11" x1="155.0" y1="305.0" x2="155.0" y2="5.0" stroke="black" stroke-width="2"/>
   </g>
   <g id="prefigure-vector-labels-__g-0">
-    <g transform="translate(221.0,131.0) translate(0.0,-0.0)">
+    <g id="prefigure-vector-labels-__label-0" transform="translate(221.0,131.0) translate(0.0,-0.0)">
       <g id="prefigure-vector-labels-__g-2">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -2.712px" width="18.888px" height="10.752px" role="img" focusable="false" viewBox="0 -444 1043.6 594" x="0.0" y="0.0">
           <defs>
@@ -60,7 +60,7 @@
     <path stroke="black" stroke-width="3" fill="none" marker-end="url(#prefigure-vector-labels-arrow-head-end-3_None_24_60-black)" d="M 155.0 155.0 L 211.7 126.6"/>
   </g>
   <g id="prefigure-vector-labels-__g-1">
-    <g transform="translate(179.0,89.0) translate(-18.9,-10.8)">
+    <g id="prefigure-vector-labels-__label-1" transform="translate(179.0,89.0) translate(-18.9,-10.8)">
       <g id="prefigure-vector-labels-__g-3">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -2.712px" width="18.888px" height="10.752px" role="img" focusable="false" viewBox="0 -444 1043.6 594" x="0.0" y="0.0">
           <defs>

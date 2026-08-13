@@ -1,0 +1,47 @@
+<diagram>
+  <annotations>
+    <annotation id="poset-2-figure" speech2="A poset formed by subset inclusion">
+      <grouped>poset-2-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>poset-2-empty</active>
+      </children>
+      <components>
+        <active>poset-2-empty</active>
+      </components>
+    </annotation>
+    <annotation id="poset-2-empty" speech2="The empty set is contained in all singletons">
+      <grouped>poset-2-empty</grouped>
+      <position>1</position>
+      <components>
+        <passive>poset-2-edge-empty-a</passive>
+        <passive>poset-2-edge-empty-b</passive>
+        <passive>poset-2-edge-empty-c</passive>
+      </components>
+      <parents>
+        <grouped>poset-2-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="poset-2-edge-empty-a">
+      <passive>poset-2-edge-empty-a</passive>
+      <position>0</position>
+      <parents>
+        <grouped>poset-2-empty</grouped>
+      </parents>
+    </annotation>
+    <annotation id="poset-2-edge-empty-b">
+      <passive>poset-2-edge-empty-b</passive>
+      <position>0</position>
+      <parents>
+        <grouped>poset-2-empty</grouped>
+      </parents>
+    </annotation>
+    <annotation id="poset-2-edge-empty-c">
+      <passive>poset-2-edge-empty-c</passive>
+      <position>0</position>
+      <parents>
+        <grouped>poset-2-empty</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

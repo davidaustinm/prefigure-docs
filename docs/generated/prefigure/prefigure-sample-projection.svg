@@ -163,8 +163,8 @@
       </svg>
     </g>
   </g>
-  <path id="prefigure-sample-projection-__path-0" stroke="#777" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-h777)" d="M 215.0 175.0 L 156.6 58.3"/>
-  <path id="prefigure-sample-projection-__path-1" stroke="black" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-black)" d="M 55.0 255.0 L 153.4 58.3"/>
+  <path stroke="#777" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-h777)" d="M 215.0 175.0 L 156.6 58.3" id="prefigure-sample-projection-__path-0"/>
+  <path stroke="black" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-black)" d="M 55.0 255.0 L 153.4 58.3" id="prefigure-sample-projection-__path-1"/>
   <g id="prefigure-sample-projection-__label-6" transform="translate(151.0,51.0) translate(-11.6,-12.7)">
     <g id="prefigure-sample-projection-__g-6">
       <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.112px" width="11.568px" height="12.672px" role="img" focusable="false" viewBox="0 -694 639 700" x="0.0" y="0.0">
@@ -185,7 +185,7 @@
       </svg>
     </g>
   </g>
-  <path id="prefigure-sample-projection-__path-2" stroke="red" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-red)" d="M 55.0 255.0 L 211.7 176.6"/>
+  <path stroke="red" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-red)" d="M 55.0 255.0 L 211.7 176.6" id="prefigure-sample-projection-__path-2"/>
   <g id="prefigure-sample-projection-__label-7" transform="translate(219.0,179.0) translate(0.0,-0.0)">
     <g id="prefigure-sample-projection-__g-7">
       <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.112px" width="11.568px" height="19.872px" role="img" focusable="false" viewBox="0 -1092 639 1098" x="0.0" y="0.0">
@@ -212,7 +212,7 @@
       </svg>
     </g>
   </g>
-  <path id="prefigure-sample-projection-__path-3" stroke="black" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-black)" d="M 55.0 255.0 L 151.7 206.6"/>
+  <path stroke="black" stroke-width="3" fill="none" marker-end="url(#prefigure-sample-projection-arrow-head-end-3_None_24_60-black)" d="M 55.0 255.0 L 151.7 206.6" id="prefigure-sample-projection-__path-3"/>
   <g id="prefigure-sample-projection-__label-8" transform="translate(159.0,209.0) translate(0.0,-0.0)">
     <g id="prefigure-sample-projection-__g-8">
       <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="10.984px" height="8.040px" role="img" focusable="false" viewBox="0 -444 607 444" x="0.0" y="0.0">

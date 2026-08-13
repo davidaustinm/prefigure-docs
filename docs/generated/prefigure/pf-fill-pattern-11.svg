@@ -6,34 +6,34 @@
     <clipPath id="pf-fill-pattern-__clipPath-1">
       <rect x="5.0" y="5.0" width="300.0" height="300.0"/>
     </clipPath>
-    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__horizontal_texture_orange" width="5" height="5">
-      <line x1="-1" y1="0" x2="6" y2="0" stroke="orange" stroke-width="1"/>
+    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__horizontal_texture_orange" width="7" height="7">
+      <line x1="-1" y1="0" x2="8" y2="0" stroke="orange" stroke-width="2"/>
     </pattern>
-    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__vertical_texture_red" width="5" height="5">
-      <line x1="0" y1="-1" x2="0" y2="6" stroke="red" stroke-width="1"/>
+    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__vertical_texture_red" width="7" height="7">
+      <line x1="0" y1="-1" x2="0" y2="8" stroke="red" stroke-width="2"/>
     </pattern>
-    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__diagonal_texture_magenta" width="7" height="7">
-      <line x1="-1" y1="1" x2="1" y2="-1" stroke="magenta" stroke-width="0.5"/>
-      <line x1="-1" y1="8" x2="8" y2="-1" stroke="magenta" stroke-width="0.5"/>
-      <line x1="6" y1="8" x2="8" y2="6" stroke="magenta" stroke-width="0.5"/>
+    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__diagonal_texture_magenta" width="9" height="9">
+      <line x1="-1" y1="1" x2="1" y2="-1" stroke="magenta" stroke-width="1"/>
+      <line x1="-1" y1="10" x2="10" y2="-1" stroke="magenta" stroke-width="1"/>
+      <line x1="8" y1="10" x2="10" y2="8" stroke="magenta" stroke-width="1"/>
     </pattern>
     <path id="pf-fill-pattern-c4" d="M 98.8 155.0 L 98.7 152.6 L 98.5 150.3 L 98.1 148.0 L 97.6 145.7 L 96.9 143.4 L 96.1 141.2 L 95.2 139.0 L 94.1 136.9 L 92.9 134.9 L 91.6 133.0 L 90.1 131.1 L 88.6 129.3 L 86.9 127.7 L 85.2 126.1 L 83.3 124.7 L 81.3 123.3 L 79.3 122.1 L 77.2 121.1 L 75.1 120.1 L 72.8 119.3 L 70.6 118.7 L 68.3 118.2 L 65.9 117.8 L 63.6 117.6 L 61.2 117.5 L 58.9 117.6 L 56.6 117.8 L 54.2 118.2 L 51.9 118.7 L 49.7 119.3 L 47.4 120.1 L 45.3 121.1 L 43.2 122.1 L 41.2 123.3 L 39.2 124.7 L 37.3 126.1 L 35.6 127.7 L 33.9 129.3 L 32.4 131.1 L 30.9 133.0 L 29.6 134.9 L 28.4 136.9 L 27.3 139.0 L 26.4 141.2 L 25.6 143.4 L 24.9 145.7 L 24.4 148.0 L 24.0 150.3 L 23.8 152.6 L 23.8 155.0 L 23.8 157.4 L 24.0 159.7 L 24.4 162.0 L 24.9 164.3 L 25.6 166.6 L 26.4 168.8 L 27.3 171.0 L 28.4 173.1 L 29.6 175.1 L 30.9 177.0 L 32.4 178.9 L 33.9 180.7 L 35.6 182.3 L 37.3 183.9 L 39.2 185.3 L 41.2 186.7 L 43.2 187.9 L 45.3 188.9 L 47.4 189.9 L 49.7 190.7 L 51.9 191.3 L 54.2 191.8 L 56.6 192.2 L 58.9 192.4 L 61.2 192.5 L 63.6 192.4 L 65.9 192.2 L 68.3 191.8 L 70.6 191.3 L 72.8 190.7 L 75.1 189.9 L 77.2 188.9 L 79.3 187.9 L 81.3 186.7 L 83.3 185.3 L 85.2 183.9 L 86.9 182.3 L 88.6 180.7 L 90.1 178.9 L 91.6 177.0 L 92.9 175.1 L 94.1 173.1 L 95.2 171.0 L 96.1 168.8 L 96.9 166.6 L 97.6 164.3 L 98.1 162.0 L 98.5 159.7 L 98.7 157.4 Z"/>
-    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__backdiagonal_texture_rgbp127c127c0q" width="7" height="7">
-      <line x1="6" y1="-1" x2="8" y2="1" stroke="rgb(127,127,0)" stroke-width="0.5"/>
-      <line x1="-1" y1="-1" x2="8" y2="8" stroke="rgb(127,127,0)" stroke-width="0.5"/>
-      <line x1="-1" y1="6" x2="1" y2="8" stroke="rgb(127,127,0)" stroke-width="0.5"/>
+    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__backdiagonal_texture_rgbp127c127c0q" width="9" height="9">
+      <line x1="8" y1="-1" x2="10" y2="1" stroke="rgb(127,127,0)" stroke-width="1"/>
+      <line x1="-1" y1="-1" x2="10" y2="10" stroke="rgb(127,127,0)" stroke-width="1"/>
+      <line x1="-1" y1="8" x2="1" y2="10" stroke="rgb(127,127,0)" stroke-width="1"/>
     </pattern>
-    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__dot_texture_h777" width="12" height="20.784609690826528">
-      <circle cx="1" cy="1" r="1" fill="#777"/>
-      <circle cx="1" cy="7.9282032302755105" r="1" fill="#777"/>
-      <circle cx="1" cy="14.856406460551021" r="1" fill="#777"/>
-      <circle cx="7" cy="4.464101615137755" r="1" fill="#777"/>
-      <circle cx="7" cy="18.320508075688778" r="1" fill="#777"/>
-      <circle cx="7" cy="11.392304845413266" r="1" fill="#777"/>
+    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__dot_texture_h777" width="16" height="27.712812921102035">
+      <circle cx="1.8" cy="1.8" r="1.8" fill="#777"/>
+      <circle cx="1.8" cy="11.037604307034014" r="1.8" fill="#777"/>
+      <circle cx="1.8" cy="20.275208614068028" r="1.8" fill="#777"/>
+      <circle cx="9.8" cy="6.418802153517007" r="1.8" fill="#777"/>
+      <circle cx="9.8" cy="24.894010767585034" r="1.8" fill="#777"/>
+      <circle cx="9.8" cy="15.656406460551022" r="1.8" fill="#777"/>
     </pattern>
-    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__diamond_texture_blue" width="8" height="13.856406460551018">
-      <path d="M 2 6.928203230275509 L 4 3.4641016151377544 L 2 0.0 L 0 3.4641016151377544 Z" fill="blue"/>
-      <path d="M 6 13.856406460551018 L 8 10.392304845413264 L 6 6.92820323027551 L 4 10.392304845413264 Z" fill="blue"/>
+    <pattern x="0" y="0" patternUnits="userSpaceOnUse" id="pf-fill-pattern-__diamond_texture_blue" width="10.0" height="17.32050807568877">
+      <path d="M 2.5 8.660254037844386 L 5.0 4.330127018922193 L 2.5 0.0 L 0.0 4.330127018922193 Z" fill="blue"/>
+      <path d="M 7.5 17.32050807568877 L 10.0 12.990381056766578 L 7.5 8.660254037844386 L 5.0 12.990381056766578 Z" fill="blue"/>
     </pattern>
   </defs>
   <g id="pf-fill-pattern-axes" stroke="black" stroke-width="2">

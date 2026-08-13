@@ -22,15 +22,15 @@
     <path id="network-combination-edge-2-1" x1="192.5" y1="67.5" x2="158.4" y2="192.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" d="M 192.5 67.5 L 175.4 130.0 L 158.4 192.5" marker-mid="url(#network-combination-arrow-head-mid-2_None_24_60-black)"/>
     <path id="network-combination-edge-2-0" x1="192.5" y1="67.5" x2="67.5" y2="100.4" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" d="M 192.5 67.5 L 130.0 84.0 L 67.5 100.4" marker-mid="url(#network-combination-arrow-head-mid-2_None_24_60-black)"/>
     <path id="network-combination-loop-0" d="M 67.5 100.4 C 52.6 137.5 -3.1 115.2 11.8 78.1 C 26.7 40.9 82.4 63.3 67.5 100.4" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#network-combination-__clipPath-2)" marker-mid="url(#network-combination-arrow-head-mid-2_None_24_60-black)"/>
-    <g id="network-combination-__label-0" transform="translate(20.7,58.6) translate(4.5,0.0)">
+    <g id="network-combination-__label-0" transform="translate(20.7,58.6) translate(-8.0,-10.0)">
       <g id="network-combination-__g-0">
-        <text font-family="sans-serif" font-size="14">1</text>
+        <text font-family="sans-serif" font-size="14" x="0.0" y="10.0">1</text>
       </g>
     </g>
     <path id="network-combination-loop-2" d="M 192.5 67.5 C 164.3 39.1 207.0 -3.1 235.1 25.3 C 263.3 53.7 220.7 95.9 192.5 67.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#network-combination-__clipPath-2)" marker-mid="url(#network-combination-arrow-head-mid-2_None_24_60-black)"/>
-    <g id="network-combination-__label-1" transform="translate(239.1,21.3) translate(-0.0,0.0)">
+    <g id="network-combination-__label-1" transform="translate(239.1,21.3) translate(0.0,-10.0)">
       <g id="network-combination-__g-1">
-        <text font-family="sans-serif" font-size="14">1</text>
+        <text font-family="sans-serif" font-size="14" x="0.0" y="10.0">1</text>
       </g>
     </g>
   </g>

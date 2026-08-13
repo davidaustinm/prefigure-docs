@@ -25,6 +25,7 @@ hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="PreFigure documentation">
 <meta property="og:description" content="PreFigure documentation">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.45"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.48"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.48"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -88,7 +89,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -228,6 +239,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-5" class="internal"><span class="codenumber">3.9.3</span> <span class="title">Positioning the nodes</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-6" class="internal"><span class="codenumber">3.9.4</span> <span class="title">Putting everything together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#sec-networks-7" class="internal"><span class="codenumber">3.9.5</span> <span class="title">Annotating networks</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networks.html#subsec-posets" class="internal"><span class="codenumber">3.9.6</span> <span class="title">Posets</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -322,7 +334,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Networks</span>
 </h1>
 <section class="introduction" id="sec-networks-2">
-<div class="para" id="sec-networks-2-1">PreFigure enables authors to create diagrams of networks, such as that shown in <a href="sec-networks.html#diagram-network-intro" class="xref" data-knowl="./knowl/xref/diagram-network-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.1">Figure 3.9.1</a>. Mathematicians sometimes refer to these as <em class="emphasis">graphs</em>, but we will use the term network to distinguish them from graphs of functions.  There is quite a bit of flexibility as will be explained in the remainder of this section.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-networks-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-networks-2-1">PreFigure enables authors to create diagrams of networks and posets, such as that shown in <a href="sec-networks.html#diagram-network-intro" class="xref" data-knowl="./knowl/xref/diagram-network-intro.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.1">Figure 3.9.1</a>. Mathematicians sometimes refer to these as <em class="emphasis">graphs</em>, but we will use the term network to distinguish them from graphs of functions.  There is quite a bit of flexibility as will be explained in the remainder of this section.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-networks-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="diagram-network-intro">
 <div class="sidebyside">
@@ -896,6 +908,353 @@ eBookConfig.enable_chatcodes =  false;
 &lt;/diagram&gt;
 </code></pre></div></div>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.9.5: Annotating networks"><a tabindex="-1" href="#sec-networks-7" title="Copy heading and permalink for Subsection 3.9.5: Annotating networks" aria-label="Copy heading and permalink for Subsection 3.9.5: Annotating networks">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-posets">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Posets</span>
+</h2>
+<div class="para" id="subsec-posets-2">A poset is a set with a partial ordering in which some pairs of elements are comparable, <span class="process-math">\(x\lt y\text{,}\)</span> in which case we say that <span class="process-math">\(y\)</span> <dfn class="terminology">covers</dfn> <span class="process-math">\(x\text{.}\)</span>  Visual representations of posets, often called <dfn class="terminology">Hasse diagrams,</dfn> are created in PreFigure with the <code class="code-inline tex2jax_ignore">&lt;poset&gt;</code> element, as demonstrated in <a href="sec-networks.html#diagram-poset-1" class="xref" data-knowl="./knowl/xref/diagram-poset-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.18">Figure 3.9.18</a> and <a href="sec-networks.html#listing-poset-1" class="xref" data-knowl="./knowl/xref/listing-poset-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.19: The PreFigure source for Figure 3.9.18.">Listing 3.9.19</a>. A partial set of annotations is included.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diagram-poset-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/poset-1-diagcess.svg" data-cml="generated/prefigure/poset-1-annotations.xml"></div>
+<details class="instructions diagcess__instructions"><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A poset whose source is given in <a href="sec-networks.html#listing-poset-1" class="xref" data-knowl="./knowl/xref/listing-poset-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.19: The PreFigure source for Figure 3.9.18.">Listing 3.9.19</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.9.18"><a tabindex="-1" href="#diagram-poset-1" title="Copy heading and permalink for Figure 3.9.18" aria-label="Copy heading and permalink for Figure 3.9.18">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-poset-1"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.9.18.<div class="autopermalink" aria-hidden="true" data-description="Listing 3.9.19: The PreFigure source for Figure 3.9.18."><a tabindex="-1" href="#listing-poset-1" title="Copy heading and permalink for Listing 3.9.19: The PreFigure source for Figure 3.9.18." aria-label="Copy heading and permalink for Listing 3.9.19: The PreFigure source for Figure 3.9.18.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="15"&gt;
+  &lt;definition&gt;
+    poset={0:[1,2,3], 1:[4,5], 2:[4,6], 3:[5,6], 4:[7], 5:[7], 6:[7]}
+  &lt;/definition&gt;
+  &lt;poset covers="poset" labeled="yes" node-size="12"/&gt;
+  
+  &lt;annotations text="A simple poset"&gt;
+    &lt;annotation ref="0"
+                text="The node labeled 0 "&gt;
+      &lt;annotation ref="edge-0-1"/&gt;
+      &lt;annotation ref="edge-0-2"/&gt;
+      &lt;annotation ref="edge-0-3"/&gt;
+    &lt;/annotation&gt;
+  &lt;/annotations&gt;
+&lt;/diagram&gt;
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-posets-5">The structure of the poset is defined by a dictionary, which consists of a set of comma-separated entries having the form <code class="code-inline tex2jax_ignore">a:[b,c]</code>, which defines the covering relations <span class="process-math">\(a\lt
+b\)</span> and <span class="process-math">\(a\lt c\text{.}\)</span>  This dictionary forms the value of the <code class="code-inline tex2jax_ignore">@covers</code> attribute.  This is the only required attribute in a <code class="code-inline tex2jax_ignore">&lt;poset&gt;</code>.  Notice that the positions of the nodes in the diagram are automatically determined by the structure of the poset though the author can change this behavior.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-posets-6">The dictionary that forms the value of the <code class="code-inline tex2jax_ignore">@covers</code> attributes defines handles for the nodes in the poset, as reflected in the annotations.  The line segment connecting two nodes has the handle <code class="code-inline tex2jax_ignore">edge-a-b</code> where <span class="process-math">\(a\lt b\)</span> is a covering relation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-posets-7">The labels on nodes appear due to the attribute <code class="code-inline tex2jax_ignore">@labels="yes"</code>, and, by default, each node is labeled by its handle and centered on the node.  <a href="sec-networks.html#diagram-poset-2" class="xref" data-knowl="./knowl/xref/diagram-poset-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.20">Figure 3.9.20</a> demonstrates how a different set of labels may be defined for the nodes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diagram-poset-2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/poset-2-diagcess.svg" data-cml="generated/prefigure/poset-2-annotations.xml"></div>
+<details class="instructions diagcess__instructions"><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A poset whose source is given in <a href="sec-networks.html#listing-poset-2" class="xref" data-knowl="./knowl/xref/listing-poset-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.21: The PreFigure source for Figure 3.9.20.">Listing 3.9.21</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.9.20"><a tabindex="-1" href="#diagram-poset-2" title="Copy heading and permalink for Figure 3.9.20" aria-label="Copy heading and permalink for Figure 3.9.20">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-poset-2"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.9.20.<div class="autopermalink" aria-hidden="true" data-description="Listing 3.9.21: The PreFigure source for Figure 3.9.20."><a tabindex="-1" href="#listing-poset-2" title="Copy heading and permalink for Listing 3.9.21: The PreFigure source for Figure 3.9.20." aria-label="Copy heading and permalink for Listing 3.9.21: The PreFigure source for Figure 3.9.20.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="(25,10,25,10)"&gt;
+  &lt;definition&gt;
+    poset={
+    'empty':['a', 'b', 'c'],
+    'a':['ab', 'ac'],
+    'b':['ab', 'bc'],
+    'c':['ac', 'bc'],
+    'ab':['abc'],
+    'ac':['abc'],
+    'bc':['abc']
+    }
+  &lt;/definition&gt;
+  &lt;definition&gt;
+    labels={
+    'empty':r'\emptyset',
+    'a':r'\{a\}',
+    'b':r'\{b\}',
+    'c':r'\{c\}',
+    'ab':r'\{a,b\}',
+    'ac':r'\{a,c\}',
+    'bc':r'\{b,c\}',
+    'abc':r'\{a,b,c\}'
+    }
+  &lt;/definition&gt;
+  &lt;poset covers="poset" labels="labels" centered-labels="yes"/&gt;
+  &lt;annotations text="A poset formed by subset inclusion"&gt;
+    &lt;annotation ref="empty"
+                text="The empty set is contained in all singletons"&gt;
+      &lt;annotation ref="edge-empty-a"/&gt;
+      &lt;annotation ref="edge-empty-b"/&gt;
+      &lt;annotation ref="edge-empty-c"/&gt;
+    &lt;/annotation&gt;
+  &lt;/annotations&gt;
+&lt;/diagram&gt;
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-posets-10">In this example, a set of labels is given for each of the nodes and defined by the <code class="code-inline tex2jax_ignore">@labels</code> attribute. Also, we request that the labels be centered on the nodes with the <code class="code-inline tex2jax_ignore">@centered-labels="yes"</code> attribute.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-posets-11">The algorithm for positioning nodes begins by placing all nodes that do not cover another at <span class="process-math">\(y=0\)</span> and proceeds recursively positioning nodes one vertical unit and one horizontal unit apart.  <a href="sec-networks.html#diagram-poset-3" class="xref" data-knowl="./knowl/xref/diagram-poset-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.22">Figure 3.9.22</a> illustrates.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diagram-poset-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/prefigure/poset-3.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The coordinates defined by the automatic placement of nodes.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.9.22"><a tabindex="-1" href="#diagram-poset-3" title="Copy heading and permalink for Figure 3.9.22" aria-label="Copy heading and permalink for Figure 3.9.22">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="subsec-posets-13">The locations of the nodes can be changed using a dictionary as demonstrated in <a href="sec-networks.html#diagram-poset-4" class="xref" data-knowl="./knowl/xref/diagram-poset-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.23">Figure 3.9.23</a> and its source <a href="sec-networks.html#listing-poset-4" class="xref" data-knowl="./knowl/xref/listing-poset-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.24: The PreFigure source for Figure 3.9.23.">Listing 3.9.24</a>.  After all the nodes are positioned, either algorithmically or by the author, the bounding box of the set of nodes is determined and used to fill the current bounding box.  This means there is no need to feel constrained by the coordinate system determined by the algorithmic layout.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diagram-poset-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/prefigure/poset-4.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A poset with some nodes and alignments defined by the author.  The source is in <a href="sec-networks.html#listing-poset-4" class="xref" data-knowl="./knowl/xref/listing-poset-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.24: The PreFigure source for Figure 3.9.23.">Listing 3.9.24</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.9.23"><a tabindex="-1" href="#diagram-poset-4" title="Copy heading and permalink for Figure 3.9.23" aria-label="Copy heading and permalink for Figure 3.9.23">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-poset-4"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.9.23.<div class="autopermalink" aria-hidden="true" data-description="Listing 3.9.24: The PreFigure source for Figure 3.9.23."><a tabindex="-1" href="#listing-poset-4" title="Copy heading and permalink for Listing 3.9.24: The PreFigure source for Figure 3.9.23." aria-label="Copy heading and permalink for Listing 3.9.24: The PreFigure source for Figure 3.9.23.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="25"&gt;
+  &lt;definition&gt;
+    poset={0:[1,2,3], 1:[4,5], 2:[4,6], 3:[5,6], 4:[7], 5:[7], 6:[7]}
+  &lt;/definition&gt;
+
+  &lt;definition&gt;
+    locations={4:(-0.7, 2.5), 5:(0.5,2), 7:(-0.5,3)}
+  &lt;/definition&gt;
+
+  &lt;definition&gt;
+    alignments={0:'se',1:'nw',2:'se',3:'ne',4:'nw',5:'e',6:'ne',7:'ne'}
+  &lt;/definition&gt;
+  
+  &lt;poset covers="poset" labeled="yes" node-style="box" node-size="6"
+         locations="locations" alignments="alignments"/&gt;
+&lt;/diagram&gt;
+</code></pre></div></div>
+</figure>
+<div class="para" id="subsec-posets-16">The <code class="code-inline tex2jax_ignore">@alignment</code> of labels is <code class="code-inline tex2jax_ignore">center</code> by default, but <a href="sec-networks.html#listing-poset-4" class="xref" data-knowl="./knowl/xref/listing-poset-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.24: The PreFigure source for Figure 3.9.23.">Listing 3.9.24</a> shows one way that the alignment of labels can be change.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-posets-17">
+<div class="para">The <code class="code-inline tex2jax_ignore">&lt;poset&gt;</code> element has certain default behaviors, but almost everything can be changed.  Here is a list of attributes, similar to those in the <code class="code-inline tex2jax_ignore">&lt;network&gt;</code> element that apply to styling the nodes and edges.</div>
+<ul class="disc" id="subsec-posets-17-3">
+<li id="subsec-posets-17-3-1">
+<div class="para" id="p-derived-subsec-posets-17-3-1"><code class="code-inline tex2jax_ignore">node-size</code></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-posets-17-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-posets-17-3-2">
+<div class="para" id="p-derived-subsec-posets-17-3-2"><code class="code-inline tex2jax_ignore">node-style</code></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-posets-17-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-posets-17-3-3">
+<div class="para" id="p-derived-subsec-posets-17-3-3"><code class="code-inline tex2jax_ignore">node-fill</code></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-posets-17-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-posets-17-3-4">
+<div class="para" id="p-derived-subsec-posets-17-3-4"><code class="code-inline tex2jax_ignore">node-stroke</code></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-posets-17-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-posets-17-3-5">
+<div class="para" id="p-derived-subsec-posets-17-3-5"><code class="code-inline tex2jax_ignore">edge-thickness</code></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-posets-17-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-posets-17-3-6">
+<div class="para" id="p-derived-subsec-posets-17-3-6"><code class="code-inline tex2jax_ignore">edge-stroke</code></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#subsec-posets-17-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-posets-18">Finally, one can include <code class="code-inline tex2jax_ignore">&lt;node&gt;</code> elements inside a <code class="code-inline tex2jax_ignore">&lt;poset&gt;</code> to style nodes.  Internally, a <code class="code-inline tex2jax_ignore">&lt;node&gt;</code> is processed like a <code class="code-inline tex2jax_ignore">&lt;point&gt;</code>, which means that a node can have all the attributes of a point and can define its own label.  This is demonstrated in <a href="sec-networks.html#diagram-poset-5" class="xref" data-knowl="./knowl/xref/diagram-poset-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.9.25">Figure 3.9.25</a> and <a href="sec-networks.html#listing-poset-5" class="xref" data-knowl="./knowl/xref/listing-poset-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.26: The PreFigure source for Figure 3.9.25.">Listing 3.9.26</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-posets-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diagram-poset-5"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/prefigure/poset-5.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A poset with an author-defined <code class="code-inline tex2jax_ignore">&lt;node&gt;</code> element. The source is in <a href="sec-networks.html#listing-poset-5" class="xref" data-knowl="./knowl/xref/listing-poset-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Listing 3.9.26: The PreFigure source for Figure 3.9.25.">Listing 3.9.26</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.9.25"><a tabindex="-1" href="#diagram-poset-5" title="Copy heading and permalink for Figure 3.9.25" aria-label="Copy heading and permalink for Figure 3.9.25">🔗</a></div></figcaption>
+</figure>
+<figure class="listing figure-like" id="listing-poset-5"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9.26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The PreFigure source for Figure 3.9.25.<div class="autopermalink" aria-hidden="true" data-description="Listing 3.9.26: The PreFigure source for Figure 3.9.25."><a tabindex="-1" href="#listing-poset-5" title="Copy heading and permalink for Listing 3.9.26: The PreFigure source for Figure 3.9.25." aria-label="Copy heading and permalink for Listing 3.9.26: The PreFigure source for Figure 3.9.25.">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">&lt;diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="25"&gt;
+  &lt;definition&gt;
+    poset={0:[1,2], 1:[4,5], 3:[4,5], 4:[5], 5:[6], 6:[7], 8:[]}
+  &lt;/definition&gt;
+
+  &lt;poset covers="poset" labeled="yes" node-style="box" node-size="12"
+         locations="{3:(1,0), 1:(-0.8,1), 2:(0.8,2), 8:(1,4)}"&gt;
+    &lt;node at="4" p="(-0.15,1.8)" alignment="s"
+          style="circle" size="20" fill="cornflowerblue"&gt;
+      Blue
+    &lt;/node&gt;
+  &lt;/poset&gt;
+&lt;/diagram&gt;
+</code></pre></div></div>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.9.6: Posets"><a tabindex="-1" href="#subsec-posets" title="Copy heading and permalink for Subsection 3.9.6: Posets" aria-label="Copy heading and permalink for Subsection 3.9.6: Posets">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 3.9: Networks"><a tabindex="-1" href="#sec-networks" title="Copy heading and permalink for Section 3.9: Networks" aria-label="Copy heading and permalink for Section 3.9: Networks">🔗</a></div>
 </section>
 </div>
