@@ -116,6 +116,15 @@
       drawn at both endpoints.
       </p>
       </li>
+      <li><title>decorations</title>
+      <p>We can place decorations on the ends of a line segment using
+      the <attr>decorations</attr> attribute, the value of which is a
+      sequence of characters from the set <q>[</q>, <q>]</q>,
+      <q>(</q>, and <q>)</q>.  The order of the characters does not
+      matter.  For instance, to denote the half-open interval
+      <m>(2,5]</m>, one could include the attribute
+      <attr>decorations="(]"</attr>.  Some examples are in <xref
+      ref="diagram-line-decorations"/>.</p></li>
       <li><title>reverse</title>
       <p>Setting <attr>reverse="yes"</attr>
       changes the direction of the line when adding arrows.</p></li>
@@ -139,6 +148,25 @@
       </li>
     </dl>
     </p>
+
+    <figure xml:id="diagram-line-decorations">
+      <caption>Decorations on lines.</caption>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="line-decorations">
+          <xi:include href="prefigure/line-decorations.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-line-decorations">
+      <program>
+	<code><xi:include href="prefigure/line-decorations.xml"
+        parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for <xref
+      ref="diagram-line-decorations"/>.</caption>
+    </listing>
 
     <p>We can find the intersection of a pair of lines with the
     <c>intersect</c> function as demonstrated in <xref
