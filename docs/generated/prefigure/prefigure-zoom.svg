@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefigure-zoom-figure" width="310" height="310" viewBox="0 0 310 310">
+  <defs>
+    <clipPath id="prefigure-zoom-__clipPath-0">
+      <rect x="5.0" y="5.0" width="300.0" height="300.0"/>
+    </clipPath>
+  </defs>
+  <path id="prefigure-zoom-__path-0" d="M 5.0 305.0 L 305.0 305.0 L 305.0 5.0 L 5.0 5.0 Z" stroke="black" stroke-width="2" fill="none"/>
+  <line id="prefigure-zoom-line" x1="155.0" y1="295.0" x2="155.0" y2="15.0" stroke="black" stroke-width="2" fill="none"/>
+</svg>
