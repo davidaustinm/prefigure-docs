@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="prefigure-zoom-figure" viewBox="0 0 310 310">
+<svg xmlns="http://www.w3.org/2000/svg" id="prefigure-zoom-figure" viewBox="0 0 310 310"
+     style="aspect-ratio: 310 / 310;">
   <defs>
     <clipPath id="prefigure-zoom-__clipPath-0">
       <rect x="5.0" y="5.0" width="300.0" height="300.0"/>

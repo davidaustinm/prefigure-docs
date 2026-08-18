@@ -650,9 +650,9 @@
   }
   function applyThemeChoice(theme) {
     if (theme === "system") {
-      setDarkMode(isDarkMode());
+      setDarkMode2(isDarkMode());
     } else {
-      setDarkMode(theme === "dark");
+      setDarkMode2(theme === "dark");
     }
   }
   function isDarkMode() {
@@ -665,7 +665,7 @@
       return false;
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
-  function setDarkMode(isDark) {
+  function setDarkMode2(isDark) {
     if (document.documentElement.dataset.darkmode === "disabled")
       return;
     const parentHtml = document.documentElement;
@@ -818,7 +818,7 @@
         }
       });
     }
-    setDarkMode(isDarkMode());
+    setDarkMode2(isDarkMode());
     const lineHeightInput = document.getElementById("ptx-readability-line-height");
     const lineHeightOutput = document.getElementById("ptx-readability-line-height-value");
     const defaultLineHeight = lineHeightInput ? lineHeightInput.defaultValue : null;
@@ -881,11 +881,11 @@
       });
     }
   });
-  setDarkMode(isDarkMode());
+  setDarkMode2(isDarkMode());
   applyLineHeight(getSavedLineHeight());
   applyFontSize(getSavedFontSize());
   window.isDarkMode = isDarkMode;
-  window.setDarkMode = setDarkMode;
+  window.setDarkMode = setDarkMode2;
 
   // ../../js/pretext.js
   function getOffsetTop(e2) {
@@ -2122,29 +2122,28 @@
       }
     }
   });
-  function applyEmbedTheme(embedValue) {
-    const instructorTheme = embedValue === "dark" ? "dark" : "light";
-    applyThemeChoice(instructorTheme);
-  }
   window.addEventListener("DOMContentLoaded", function(event2) {
     const urlParams = new URLSearchParams(window.location.search);
-    if (!urlParams.has("embed")) {
-      return;
-    }
-    document.body.classList.add("ptx-embedded");
-    const elemsToHide = [
-      "ptx-masthead",
-      "ptx-page-footer",
-      "ptx-sidebar",
-      "ptx-content-footer"
-    ];
-    for (let id of elemsToHide) {
-      const elem = document.getElementById(id);
-      if (elem) {
-        elem.classList.add("hidden");
+    if (urlParams.has("embed")) {
+      if (urlParams.get("embed") === "dark") {
+        setDarkMode(true);
+      } else {
+        setDarkMode(false);
+      }
+      const elemsToHide = [
+        "ptx-navbar",
+        "ptx-masthead",
+        "ptx-page-footer",
+        "ptx-sidebar",
+        "ptx-content-footer"
+      ];
+      for (let id of elemsToHide) {
+        const elem = document.getElementById(id);
+        if (elem) {
+          elem.classList.add("hidden");
+        }
       }
     }
-    applyEmbedTheme(urlParams.get("embed"));
   });
 
   // ../../js/src/pretext-core.js
