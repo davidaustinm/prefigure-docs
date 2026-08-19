@@ -68,8 +68,9 @@
 
     <p> Once the dimensions of the diagram are established in the
     opening <tag>diagram</tag> element, there is a default coordinate
-    system provided.  For instance, if we begin with <tag>diagram
-    dimensions="(300, 200)" margins="10"</tag>, we obtain a coordinate
+    system provided.  For instance, if we begin with
+    <tag>diagram dimensions="(300, 200)" margins="10"</tag>, we obtain
+    a coordinate
     system as shown in <xref ref="diagram-coordinates"/>.  
     </p>
 
