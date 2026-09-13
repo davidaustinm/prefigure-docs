@@ -398,6 +398,37 @@
     pulled into the center.
     </p>
 
+    <p>
+      A <tag>repeat</tag> element can be added to a <tag>network</tag>
+      to add <tag>node</tag>s and <tag>edge</tag>s more easily, as
+      illustrated in <xref ref="diagram-network-launch"/>.
+      Notice that the direction of individual edges can be controlled
+      with the <attr>launch-angle</attr> attribute, which describes
+      the angle, in degrees, that the initial direction differs from
+      the straight line connecting the <tag>node</tag>s.
+    </p>
+
+    <figure xml:id="diagram-network-launch">
+      <caption>A <tag>network</tag> formed using some
+      <tag>repeat</tag> elements.
+      </caption>
+      <image width="60%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="pf-network-launch">
+          <xi:include href="prefigure/network-launch.xml"/>
+        </prefigure>
+      </image>
+    </figure>
+
+    <listing xml:id="listing-network-launch">
+      <program line-numbers="no">
+	<code><xi:include href="prefigure/network-launch.xml" parse="text"/></code>
+      </program>
+      <caption>The PreFigure source for
+      <xref ref="diagram-network-launch"/>.
+      </caption>
+    </listing>
+
   </subsection>
 
   <subsection>
