@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-images" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Loading external images</title>
+  <title>Images</title>
+
+  <p>
+    <prefigure/> allows authors to include images in diagrams.  Most
+    images will be loaded from an external file, but <prefigure/> can
+    also create QR codes to include in a diagram.
+  </p>
+
+  <subsection>
+    <title>Loading external images</title>
 
   <p>Some diagrams may need to import an external image and then add
   some features.  For instance, one may want to load a topographical
@@ -131,6 +140,44 @@
     <caption>The PreFigure source for <xref
     ref="diagram-attack"/>.</caption> 
   </listing>
+
+</subsection>
+
+<subsection>
+  <title>QR codes</title>
+
+  <p>
+    A QR code can be created and embedded in a diagram using the
+    <tag>qr-code</tag> element.  This is demonstrated in
+    <xref ref="diagram-qr-code"/> and its following listing.  The main
+    things to note is that the text encoded is included within the
+    <tag>qr-code</tag> element, and the size and location of the code
+    is given by specifying the <attr>dimensions</attr> attribute and
+    <attr>lower-left</attr> or <attr>center</attr> similar to a
+    <tag>rectangle</tag> element.
+  </p>
+
+  <figure xml:id="diagram-qr-code">
+    <caption>
+      This diagram creates a QR code an places it in a diagram.
+    </caption>
+    <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="prefigure-qr-code">
+          <xi:include href="prefigure/qr_code.xml"/>
+      </prefigure>
+    </image>
+  </figure>
+
+  <listing xml:id="listing-qr-code">
+    <program>
+      <code><xi:include href="prefigure/qr_code.xml"
+      parse="text"/></code>n
+    </program>
+    <caption>The PreFigure source for <xref
+    ref="diagram-qr-code"/>.</caption>
+  </listing>
+</subsection>
 
 </section>
 
