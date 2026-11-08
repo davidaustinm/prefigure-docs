@@ -151,10 +151,26 @@
     </p>
 
     <figure xml:id="diagram-grid-basis">
-      <sidebyside width="60%">
-	<image source="images/grid-basis"/>
-      </sidebyside>
       <caption>The result of <attr>basis="((2,1),(1,2))"</attr>.</caption>
+      <image width="60%" source="images/grid-basis"/>
+    </figure>
+
+    <p>
+      In order to convey the infinite extent of the coordinate plane,
+      you may wish that the outside lines in a <tag>grid</tag>
+      element were not drawn.  You can use the attribute
+      <attr>border="no"</attr> as shown in <xref
+      ref="diagram-grid-border"/>.
+    </p>
+
+    <figure xml:id="diagram-grid-border">
+      <caption>The result of setting <attr>border="no"</attr>.</caption>
+      <image width="50%">
+        <prefigure xmlns="https://prefigure.org"
+                   label="pf-grid-border">
+          <xi:include href="prefigure/grid-border.xml"/>
+        </prefigure>
+      </image>
     </figure>
 
     <p>When included in a <tag>grid-axes</tag> element, these
